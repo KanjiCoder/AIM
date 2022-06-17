@@ -4,4 +4,4 @@
 
 		i_giv.end( "hello world" );
 
-	}).listen( process.env.PORT || 5000 );
+	}).listen( process.env.PORT );
