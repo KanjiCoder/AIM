@@ -18,7 +18,6 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
         i_giv.end( "world" );
     }else{
-
         i_giv.end( sob.m_url );
     };;
 
