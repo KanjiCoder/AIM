@@ -14,7 +14,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     sob.m_url = sob.m_url.toUpperCase();             //!#MRI#!//
 
-    i_giv.end( sob.m_url );
+    if( sob.m_url == "hello" ){
+
+        i_giv.end( "world" );
+    }else{
+
+        i_giv.end( sob.m_url );
+    };;
 
 }).listen(process.env.PORT);
 
@@ -23,6 +29,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     TUTORIAL PART 018 : https://pastebin.com/ZCFNxebJ
                       : tinyurl.com/SERVER-JS-PART-18
                       : git@github.com:KanjiCoder/AIM_018.git
+                      : https://github.com/KanjiCoder/AIM_018
 
 *** ***************************************** CHANGE_HISTORY **/
 /** PREFIXES *********************************************** ***
