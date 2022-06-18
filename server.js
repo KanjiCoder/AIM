@@ -15,13 +15,11 @@
 
 //:============================================:DATA_BOTHENDS://
 //:DATA_SERVER_BACKEND:======================================://
-if( yesnode ){
 
-    const LIB_F_S = require( "fs"  );
-    const LIB_URL = require( "url" );
-    const LIB_Q_S = require( "node:querystring" );
+    const LIB_F_S = yesnode ? require( "fs"  )              :{};
+    const LIB_URL = yesnode ? require( "url" )              :{};
+    const LIB_Q_S = yesnode ? require( "node:querystring" ) :{};
 
-};;
 //:======================================:DATA_SERVER_BACKEND://
 //:FUNCTION_SERVER_BACKEND:==================================://
 if( yesnode ){
