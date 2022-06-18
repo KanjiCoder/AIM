@@ -22,6 +22,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     TUTORIAL PART 018 : https://pastebin.com/ZCFNxebJ
                       : tinyurl.com/SERVER-JS-PART-18
+                      : git@github.com:KanjiCoder/AIM_018.git
 
 *** ***************************************** CHANGE_HISTORY **/
 /** PREFIXES *********************************************** ***
