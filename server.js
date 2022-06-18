@@ -9,7 +9,7 @@
     var webpage =( "" //:--------------------://
     +'      <!DOCTYPE HTML><head>              '
     +'      <meta charset="utf-8"><title>      '
-    +'          [ATOMIC_IVY_MMO(AIM)]          '
+    +'          [AIM]                          '
     +'      </title>                           '
     +'          <script                        '
     +'              src    ="./ATOMIC_IVY_MMO" '
