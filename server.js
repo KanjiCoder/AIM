@@ -33,6 +33,11 @@
     const LIB_Q_S = yesnode ? require( "node:querystring" ) :{};
 
 //:======================================:DATA_SERVER_BACKEND://
+//:FUNCTION_CLIENT_FRONTEND:=================================://
+
+    //: NEXT VIDEO : #28 HERE ://
+
+//:=================================:FUNCTION_CLIENT_FRONTEND://
 //:FUNCTION_SERVER_BACKEND:==================================://
 if( yesnode ){
 
