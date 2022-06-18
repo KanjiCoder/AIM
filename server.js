@@ -12,11 +12,14 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     ,   seg : [ "URL_PATH_SEGMENTS_NOT_LOADED_YET]" ]
     };;
 
-    //:MakeRoutingCaseInsensitive://
-
-    sob.url = sob.url.toUpperCase();
+    sob.url = sob.url.toUpperCase();                //:#MRCI#://
     
-    i_giv.setHeader( "Content-Type" , "application/json" );
-    i_giv.end( JSON.stringify( sob ) );
+    i_giv.end( sob.url );
 
 }).listen(process.env.PORT);
+
+/** COMMENTS_ARE_READ_LAST_OR_NEVER ************************ ***
+
+    #MRCI# : Make Routing Case Insensitive
+
+*** ******************************************************** **/
