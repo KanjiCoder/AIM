@@ -28,7 +28,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             }else{
                 sob.m_giv.writeHead( 200 , TXT );
             };;
-            sob.giv.end( cof , "utf-8" );
+            sob.m_giv.end( cof , "utf-8" );
         });;
     }else{
         sob.m_giv.end( sob.m_url );
