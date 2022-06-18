@@ -1,0 +1,9 @@
+
+    https://aim-kanji.herokuapp.com/fishing/grasshopper
+
+    https://    aim-kanji.herokuapp.com    /fishing/grasshopper
+    |           |                          |
+    PROTOCOL    DOMAIN                     PATH
+    
+
+    https://kanji-fan.herokuapp.com/fishing/grasshopper
