@@ -1,14 +1,30 @@
+//:ENVIRONMENT_DETECTION:====================================://
 
-const LIB_F_S = require( "fs"  );
-const LIB_URL = require( "url" );
-const LIB_Q_S = require( "node:querystring" );
+    var yesnode =( "undefined" === typeof window );
+    var notnode =( "undefined"  != typeof window );
 
-const TXT = { "Content-Type": "text/javascript"          } ;
-const PNG = { "Content-Type": "image/png"                } ;
-const HTM = { "Content-Type": "text/html"                } ;
-const J_S = { "Content-Type": "text/javascript"          } ;
-const EXE = { "Content-Type": "application/x-msdownload" } ;
-const CSS = { "Content-Type": "text/css"                 } ;
+//:====================================:ENVIRONMENT_DETECTION://
+//:DATA_BOTHENDS:============================================://
+
+    const TXT = { "Content-Type": "text/javascript"          } ;
+    const PNG = { "Content-Type": "image/png"                } ;
+    const HTM = { "Content-Type": "text/html"                } ;
+    const J_S = { "Content-Type": "text/javascript"          } ;
+    const EXE = { "Content-Type": "application/x-msdownload" } ;
+    const CSS = { "Content-Type": "text/css"                 } ;
+
+//:============================================:DATA_BOTHENDS://
+//:DATA_SERVER_BACKEND:======================================://
+if( yesnode ){
+
+    const LIB_F_S = require( "fs"  );
+    const LIB_URL = require( "url" );
+    const LIB_Q_S = require( "node:querystring" );
+
+};;
+//:======================================:DATA_SERVER_BACKEND://
+//:FUNCTION_SERVER_BACKEND:==================================://
+if( yesnode ){
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
@@ -42,6 +58,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     };;
 
 }).listen(process.env.PORT);
+
+};;
+//:==================================:FUNCTION_SERVER_BACKEND://
 
 /** CHANGE_HISTORY ***************************************** ***
 
