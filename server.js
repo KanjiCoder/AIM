@@ -6,6 +6,18 @@
 //:====================================:ENVIRONMENT_DETECTION://
 //:DATA_BOTHENDS:============================================://
 
+    var webpage =( "" //:--------------------://
+    +'      <!DOCTYPE HTML><head>              '
+    +'      <meta charset="utf-8"><title>      '
+    +'          [ATOMIC_IVY_MMO(AIM)]          '
+    +'      </title>                           '
+    +'          <script                        '
+    +'              src    ="./ATOMIC_IVY_MMO" '
+    +'              charset="UTF-8">           '
+    +'          </script>                      '
+    +'      </head>                            '
+    );; //:----------------------------------://
+
     const TXT = { "Content-Type": "text/javascript"          } ;
     const PNG = { "Content-Type": "image/png"                } ;
     const HTM = { "Content-Type": "text/html"                } ;
@@ -40,7 +52,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
         sob.m_giv.end( "WORLD" );
     }else
-    if( sob.m_url == "/SELF" ){
+    if( sob.m_url == "/ATOMIC_IVY_MMO" ){
 
         LIB_F_S.readFile( "./server.js" , function(err,cof){
 
@@ -52,7 +64,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             sob.m_giv.end( cof , "utf-8" );
         });;
     }else{
-        sob.m_giv.end( sob.m_url );
+
+        sob.m_giv.writeHead( 200 , HTM );
+        sob.m_giv.end( webpage , "utf-8" );
     };;
 
 }).listen(process.env.PORT);
