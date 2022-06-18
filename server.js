@@ -1,4 +1,5 @@
 
+const LIB_F_S = require( "fs"  );
 const LIB_URL = require( "url" );
 const LIB_Q_S = require( "node:querystring" );
 
@@ -17,6 +18,18 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     if( sob.m_url == "/HELLO" ){
 
         i_giv.end( "WORLD" );
+    }else
+    if( sob.m_url == "/SELF" ){
+
+        LIB_F_S.readFile( "./server.js" , function(err,cof){
+
+            if(err){
+                cof = "[we messed up]" ;
+            }else{
+                sob.m_giv.writeHead( 200 , TXT );
+            };;
+            sob.giv.end( cof , "utf-8" );
+        });;
     }else{
         i_giv.end( sob.m_url );
     };;
