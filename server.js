@@ -17,7 +17,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     if( sob.m_url == "/HELLO" ){
 
-        i_giv.end( "WORLD" );
+        sob.m_giv.end( "WORLD" );
     }else
     if( sob.m_url == "/SELF" ){
 
@@ -31,7 +31,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             sob.giv.end( cof , "utf-8" );
         });;
     }else{
-        i_giv.end( sob.m_url );
+        sob.m_giv.end( sob.m_url );
     };;
 
 }).listen(process.env.PORT);
