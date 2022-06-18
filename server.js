@@ -14,9 +14,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     sob.m_url = sob.m_url.toUpperCase();             //!#MRI#!//
 
-    if( sob.m_url == "hello" ){
+    if( sob.m_url == "/HELLO" ){
 
-        i_giv.end( "world" );
+        i_giv.end( "WORLD" );
     }else{
         i_giv.end( sob.m_url );
     };;
