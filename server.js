@@ -43,7 +43,7 @@ if( notnode ){
         alert( "[ERR]:" + i_msg );
         throw( "[ERR]:" + i_msg );
     };;
-    function LOG( i_any , i_msg ){
+    function LOG( i_msg , i_any ){
         console.log( i_msg , ":" , i_any );
     };;
     function HAS( i_obj ){
@@ -67,7 +67,7 @@ if( notnode ){
     var   dom_bod = document.body            ;   //:@dom_bod@://
     const dom_roo = document.documentElement ;   //:@dom_roo@://
     if( HAS( dom_roo ) ){
-        console.log( "[dom_roo]:" , dom_roo );
+        LOG( "[dom_roo]" , dom_roo );
     }else{
         ERR( "[dom_roo]" );
     };;
@@ -76,12 +76,12 @@ if( notnode ){
         /** Okay. Do nothing. Already Exists. **/
     }else{
         /** Create Document Element **/
-
-        //: dom_bod = document.createElement( "body" );
-        //: document.body = dom_bod ;
+        LOG( "[bef:dom_bod]" , dom_bod );
+        dom_bod = document.createElement( "body" );
+        document.body = dom_bod ;
     };;
 
-    LOG( dom_bod , "[dom_bod]" );
+    LOG( "[dom_bod]" , dom_bod );
 
     //:=======================================:HTML_DOM_SETUP://
 };;
