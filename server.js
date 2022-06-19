@@ -43,6 +43,9 @@ if( notnode ){
         alert( "[ERR]:" + i_msg );
         throw( "[ERR]:" + i_msg );
     };;
+    function LOG( i_any , i_msg ){
+        console.log( i_msg , ":" , i_any );
+    };;
     function HAS( i_obj ){
 
         var o_has =( 0 );                        //:  @has@  ://          
@@ -77,6 +80,8 @@ if( notnode ){
         dom_bod = document.createElement( "body" );
         document.body = dom_bod ;
     };;
+
+    LOG( dom_bod , "[dom_bod]" );
 
     //:=======================================:HTML_DOM_SETUP://
 };;
@@ -150,6 +155,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @pam@ : query parameters dictionary
     @seg@ : @url@ parts packed into an array
     @has@ : Has as in "does object exist" ?
+    @any@ : Any type
+    @obj@ : An object type. So NOT a number or BOOL or STRING.
 
     @dom_roo@ : DomainObjectModel - Root
     @dom_bod@ : DomainObjectModel - Body
