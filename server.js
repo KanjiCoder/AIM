@@ -49,9 +49,9 @@ if( notnode ){
         ||    undefined == i_obj                 //:#_P_N_C_#://
         ||               (!i_obj)                //:#_P_N_C_#://
         ){
-            o_has =( 1 );
+            o_has =( 0 );          //: Object _____NIL_____  ://
         }else{
-            o_has =( 0 );
+            o_has =( 1 );          //: Object __DOES__ Exist ://
         };;
         return( o_has );
     };;
