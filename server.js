@@ -36,6 +36,8 @@
 //:FUNCTION_CLIENT_FRONTEND:=================================://
 if( notnode ){
        
+    //:BOILERPLATE:==========================================://
+
     function ERR( i_msg ){
 
         alert( "[ERR]:" + i_msg );
@@ -56,6 +58,9 @@ if( notnode ){
         return( o_has );
     };;
 
+    //:==========================================:BOILERPLATE://
+    //:HTML_DOM_SETUP:=======================================://
+
     var   dom_bod = document.body            ;   //:@dom_bod@://
     const dom_roo = document.documentElement ;   //:@dom_roo@://
     if( HAS( dom_roo ) ){
@@ -63,9 +68,17 @@ if( notnode ){
     }else{
         ERR( "[dom_roo]" );
     };;
- 
+    if( HAS( dom_bod ) ){
 
-  
+        /** Okay. Do nothing. Already Exists. **/
+    }else{
+        /** Create Document Element **/
+
+        dom_bod = document.createElement( "body" );
+        document.body = dom_bod ;
+    };;
+
+    //:=======================================:HTML_DOM_SETUP://
 };;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
 //:FUNCTION_SERVER_BACKEND:==================================://
@@ -140,6 +153,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     @dom_roo@ : DomainObjectModel - Root
     @dom_bod@ : DomainObjectModel - Body
+    #doc_bod@ : Means[ document body ]USE[ dom_bod ]
 
     #MRI# : Make Routing ( case ) Insensitive 
 

@@ -1,0 +1,20 @@
+
+    function ERR( i_msg ){
+
+        alert( "[ERR]:" + i_msg );
+        throw( "[ERR]:" + i_msg );
+    };;
+    function HAS( i_obj ){
+
+        var o_has =( 0 );                        //:  @has@  ://          
+
+        if(   null      == i_obj                 //:#_P_N_C_#://
+        ||    undefined == i_obj                 //:#_P_N_C_#://
+        ||               (!i_obj)                //:#_P_N_C_#://
+        ){
+            o_has =( 0 );          //: Object _____NIL_____  ://
+        }else{
+            o_has =( 1 );          //: Object __DOES__ Exist ://
+        };;
+        return( o_has );
+    };;
