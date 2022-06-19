@@ -77,8 +77,8 @@ if( notnode ){
     }else{
         /** Create Document Element **/
 
-        dom_bod = document.createElement( "body" );
-        document.body = dom_bod ;
+        //: dom_bod = document.createElement( "body" );
+        //: document.body = dom_bod ;
     };;
 
     LOG( dom_bod , "[dom_bod]" );
