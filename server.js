@@ -34,9 +34,24 @@
 
 //:======================================:DATA_SERVER_BACKEND://
 //:FUNCTION_CLIENT_FRONTEND:=================================://
+if( notnode ){
+       
+    function ERR( i_msg ){
 
-    //: NEXT VIDEO : #28 HERE ://
+        alert( "[ERR]:" + i_msg );
+        throw( "[ERR]:" + i_msg );
+    };;
 
+    const dom_roo = document.documentElement ;   //:@dom_roo@://
+    if(   null      == dom_roo                   //:#_P_N_C_#://
+    ||    undefined == dom_roo                   //:#_P_N_C_#://
+    ||               (!dom_roo)                  //:#_P_N_C_#://
+    ){
+        ERR( "[UNABLE_TO_GET_DOCUMENT_ROOT]" );
+    }else{
+        console.log( "[dom_roo]:" , dom_roo );
+    };;
+};;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
 //:FUNCTION_SERVER_BACKEND:==================================://
 if( yesnode ){
@@ -106,6 +121,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @pam@ : query parameters dictionary
     @seg@ : @url@ parts packed into an array
 
+    @dom_roo@ : DomainObjectModel - Root
+
     #MRI# : Make Routing ( case ) Insensitive 
+
+    #_P_N_C_# : Paranoid_Null_Check
 
 *** ******************************************************** **/
