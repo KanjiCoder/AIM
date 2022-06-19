@@ -41,16 +41,31 @@ if( notnode ){
         alert( "[ERR]:" + i_msg );
         throw( "[ERR]:" + i_msg );
     };;
+    function HAS( i_obj ){
 
-    const dom_roo = document.documentElement ;   //:@dom_roo@://
-    if(   null      == dom_roo                   //:#_P_N_C_#://
-    ||    undefined == dom_roo                   //:#_P_N_C_#://
-    ||               (!dom_roo)                  //:#_P_N_C_#://
-    ){
-        ERR( "[UNABLE_TO_GET_DOCUMENT_ROOT]" );
-    }else{
-        console.log( "[dom_roo]:" , dom_roo );
+        var o_has =( 0 );                        //:  @has@  ://          
+
+        if(   null      == i_obj                 //:#_P_N_C_#://
+        ||    undefined == i_obj                 //:#_P_N_C_#://
+        ||               (!i_obj)                //:#_P_N_C_#://
+        ){
+            o_has =( 1 );
+        }else{
+            o_has =( 0 );
+        };;
+        return( o_has );
     };;
+
+    var   dom_bod = document.body            ;   //:@dom_bod@://
+    const dom_roo = document.documentElement ;   //:@dom_roo@://
+    if( HAS( dom_roo ) ){
+        console.log( "[dom_roo]:" , dom_roo );
+    }else{
+        ERR( "[dom_roo]" );
+    };;
+ 
+
+  
 };;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
 //:FUNCTION_SERVER_BACKEND:==================================://
@@ -106,7 +121,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     
     LIB_  : any library we got by using require function
     m_    : member variable prefix.
-    i_    : formal parameter argument ( i == input )
+    i_    : formal parameter argument ( i == input  )
+    o_    : output argument from func ( o == output )
 
 *** ******************************************************** **/
 /** COMMENTS_ARE_READ_LAST_OR_NEVER ************************ ***
@@ -120,8 +136,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @url@ : /URL/NOT/INCLUDING/ROOT/DOMAIN
     @pam@ : query parameters dictionary
     @seg@ : @url@ parts packed into an array
+    @has@ : Has as in "does object exist" ?
 
     @dom_roo@ : DomainObjectModel - Root
+    @dom_bod@ : DomainObjectModel - Body
 
     #MRI# : Make Routing ( case ) Insensitive 
 
