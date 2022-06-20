@@ -35,7 +35,12 @@
 //:======================================:DATA_SERVER_BACKEND://
 //:FUNCTION_CLIENT_FRONTEND:=================================://
 if( notnode ){  window.onload = function( /** [030] **/ ){
+
+    //:CLIENT_GLOBAL_DATA:[031]:=============================://
+
+        let dom_can = null ;                     //:@dom_can@://
        
+    //:=============================:CLIENT_GLOBAL_DATA:[031]://
     //:BOILERPLATE:[028]:====================================://
 
         function ERR( i_msg ){
@@ -88,10 +93,22 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 
     //:=================================:HTML_DOM_SETUP:[029]://
     //:HTML_DOM_SETUP:[031]:=================================://
+    {
+        dom_can = document.createElement( "canvas" ); 
+        dom_bod.appendChild( dom_can );
 
-        var dom_can = document.createElement( "canvas" );
-        dom_bod.append( dom_can );
+        let wid =( 0 - 333 /** wid : Client Width  **/ );
+        let hig =( 0 - 777 /** hig : Client Height **/ );
+        let   W = window                   ;
+        let   D = document.documentElement ;
+        let   B = document.body            ;
+        
+        wid = W.innerWidth ||D.clientWidth ||B.clientWidth || 0;
+        hig = W.innerHeight||D.clientHeight||B.clientHeight|| 0;
 
+        dom_can.width = wid ;
+        dom_can.height= hig ;
+    }
     //:=================================:HTML_DOM_SETUP:[031]://
 
 };; };;
@@ -167,10 +184,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @has@ : Has as in "does object exist" ?
     @any@ : Any type
     @obj@ : An object type. So NOT a number or BOOL or STRING.
+    @wid@ : The WIDTH  (usually pixels) of something.
+    @hig@ : The HEIGHT (usually pixels) of something.
 
     @dom_roo@ : DomainObjectModel - Root
     @dom_bod@ : DomainObjectModel - Body
-    #doc_bod@ : Means[ document body ]USE[ dom_bod ]
+    @doc_bod@ : Means[ document body ]USE[ dom_bod ]
+    @dom_can@ : DomainObjectModel - Canvas
 
     #MRI# : Make Routing ( case ) Insensitive 
 
