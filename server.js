@@ -64,6 +64,29 @@ if( notnode ){ window.onload = function(){
         };;
 
     //:==========================================:BOILERPLATE://
+    //:HTML_DOM_SETUP:=======================================://
+
+        var   dom_bod = document.body           ;//:@dom_bod@://
+        const dom_roo = document.documentElement;//:@dom_rom@://
+
+        if( HAS( dom_roo ) ){
+            LOG( "[dom_roo]" , dom_roo );
+        }else{
+            ERR( "[dom_roo]" );
+        };;
+        if( HAS( dom_bod ) ){
+
+            /** Okay. Do nothing. Already Exists. **/
+        }else{
+            /** Create Document Element **/
+            LOG( "[bef:dom_bod]" , dom_bod );
+            dom_bod = document.createElement( "body" );
+            document.body = dom_dom ;
+        };;
+
+        LOG( "[dom_dom]" , dom_bod );
+
+    //:=======================================:HTML_DOM_SETUP://
 
 };;};;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
