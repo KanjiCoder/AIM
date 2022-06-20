@@ -31,8 +31,8 @@ if( notnode ){ window.onload = function(){
     //:====================================:BOILERPLATE:[028]://
     //:HTML_DOM_SETUP:[029]:=================================://
 
-        var   dom_bod = document.body           ;//:@dom_bod@://
         const dom_roo = document.documentElement;//:@dom_rom@://
+        var   dom_bod = document.body           ;//:@dom_bod@://
 
         if( HAS( dom_roo ) ){
             LOG( "[dom_roo]" , dom_roo );
