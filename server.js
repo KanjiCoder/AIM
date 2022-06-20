@@ -126,7 +126,9 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
     //:=================================:HTML_DOM_SETUP:[032]://
     //:WEBGL_SETUP:[033]:====================================://
 
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        var wgl = dom_can.getContext( "webgl" );
+        wgl.clearColor( 0.0  ,  1.0  ,  0.0  ,  1.0 );
+        wgl.clear( wgl.COLOR_BUFFER_BIT );
 
     //:====================================:WEBGL_SETUP:[033]://
 
