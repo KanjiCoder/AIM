@@ -69,6 +69,25 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
         };;
 
     //:====================================:BOILERPLATE:[028]://
+    //:FUNCTION_CANVAS_RESIZE:[032]:=========================://
+
+        const RES_CAN = function PRIVATE_RES_CAN( ){
+        
+            let wid =( 0 - 333 /** wid : Client Width  **/ );
+            let hig =( 0 - 666 /** hig : Client Height **/ );
+            let   W = window ;
+            let   D = document.documentElement ;
+            let   B = document.body            ;
+        
+            wid =(W.innerWidth ||D.clientWidth ||
+                                 B.clientWidth || 0 );;
+            hig =(W.innerHeight||D.clientHeight||
+                                 B.clientHeight|| 0 );;
+        
+            dom_can.width = wid ;
+            dom_can.height= hig ;
+        };;
+    //:=========================:FUNCTION_CANVAS_RESIZE:[032]://
     //:HTML_DOM_SETUP:[029]:=================================://
 
         const dom_roo = document.documentElement;//:@dom_rom@://
@@ -97,19 +116,14 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
         dom_can = document.createElement( "canvas" );
         dom_bod.appendChild( dom_can );
 
-        let wid =( 0 - 333 /** wid : Client Width  **/ );
-        let hig =( 0 - 666 /** hig : Client Height **/ );
-        let   W = window ;
-        let   D = document.documentElement ;
-        let   B = document.body            ;
-
-        wid = W.innerWidth ||D.clientWidth ||B.clientWidth || 0;
-        hig = W.innerHeight||D.clientHeight||B.clientHeight|| 0; 
-
-        dom_can.width = wid ;
-        dom_can.height= hig ;
+        RES_CAN( );
     }
     //:=================================:HTML_DOM_SETUP:[031]://
+    //:HTML_DOM_SETUP:[032]:=================================://
+
+        window.addEventListener( 'resize' , RES_CAN );
+
+    //:=================================:HTML_DOM_SETUP:[032]://
 
 };; };;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
