@@ -38,7 +38,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 
     //:CLIENT_GLOBAL_DATA:[031]:=============================://
 
-        let dom_can = null ;                     //:@dom_can@://
+        let dom_can = null ;
        
     //:=============================:CLIENT_GLOBAL_DATA:[031]://
     //:BOILERPLATE:[028]:====================================://
@@ -94,17 +94,17 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
     //:=================================:HTML_DOM_SETUP:[029]://
     //:HTML_DOM_SETUP:[031]:=================================://
     {
-        dom_can = document.createElement( "canvas" ); 
+        dom_can = document.createElement( "canvas" );
         dom_bod.appendChild( dom_can );
 
         let wid =( 0 - 333 /** wid : Client Width  **/ );
-        let hig =( 0 - 777 /** hig : Client Height **/ );
-        let   W = window                   ;
+        let hig =( 0 - 666 /** hig : Client Height **/ );
+        let   W = window ;
         let   D = document.documentElement ;
         let   B = document.body            ;
-        
+
         wid = W.innerWidth ||D.clientWidth ||B.clientWidth || 0;
-        hig = W.innerHeight||D.clientHeight||B.clientHeight|| 0;
+        hig = W.innerHeight||D.clientHeight||B.clientHeight|| 0; 
 
         dom_can.width = wid ;
         dom_can.height= hig ;
