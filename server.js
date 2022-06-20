@@ -38,52 +38,33 @@ if( notnode ){ window.onload = function(){
        
     //:BOILERPLATE:==========================================://
 
-    function ERR( i_msg ){
+        function ERR( i_msg ){
 
-        alert( "[ERR]:" + i_msg );
-        throw( "[ERR]:" + i_msg );
-    };;
-    function LOG( i_msg , i_any ){
-        console.log( i_msg , ":" , i_any );
-    };;
-    function HAS( i_obj ){
-
-        var o_has =( 0 );                        //:  @has@  ://          
-
-        if(   null      == i_obj                 //:#_P_N_C_#://
-        ||    undefined == i_obj                 //:#_P_N_C_#://
-        ||               (!i_obj)                //:#_P_N_C_#://
-        ){
-            o_has =( 0 );          //: Object _____NIL_____  ://
-        }else{
-            o_has =( 1 );          //: Object __DOES__ Exist ://
+            alert( "[ERR]:" + i_msg );
+            throw( "[ERR]:" + i_msg );
         };;
-        return( o_has );
-    };;
+        function LOG( i_msg , i_any ){
+
+            console.log( i_msg , ":" , i_any );
+        };;
+        function HAS( i_obj ){
+
+            var o_has =( 0 );
+
+            if( null      == i_obj
+            ||  undefined == i_obj
+            ||            ( !i_obj )
+            || ""         == i_obj
+            ){
+                o_has =( 0 );
+            }else{
+                o_has =( 1 );
+            };;
+            return( o_has );
+        };;
 
     //:==========================================:BOILERPLATE://
-    //:HTML_DOM_SETUP:=======================================://
 
-    var   dom_bod = document.body            ;   //:@dom_bod@://
-    const dom_roo = document.documentElement ;   //:@dom_roo@://
-    if( HAS( dom_roo ) ){
-        LOG( "[dom_roo]" , dom_roo );
-    }else{
-        ERR( "[dom_roo]" );
-    };;
-    if( HAS( dom_bod ) ){
-
-        /** Okay. Do nothing. Already Exists. **/
-    }else{
-        /** Create Document Element **/
-        LOG( "[bef:dom_bod]" , dom_bod );
-        dom_bod = document.createElement( "body" );
-        document.body = dom_bod ;
-    };;
-
-    LOG( "[dom_bod]" , dom_bod );
-
-    //:=======================================:HTML_DOM_SETUP://
 };;};;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
 //:FUNCTION_SERVER_BACKEND:==================================://
