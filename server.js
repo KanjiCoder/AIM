@@ -87,6 +87,12 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
         LOG( "[dom_bod]" , dom_bod );
 
     //:=================================:HTML_DOM_SETUP:[029]://
+    //:HTML_DOM_SETUP:[031]:=================================://
+
+        var dom_can = document.createElement( "canvas" );
+        dom_bod.append( dom_can );
+
+    //:=================================:HTML_DOM_SETUP:[031]://
 
 };; };;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
