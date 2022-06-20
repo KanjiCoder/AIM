@@ -34,7 +34,7 @@
 
 //:======================================:DATA_SERVER_BACKEND://
 //:FUNCTION_CLIENT_FRONTEND:=================================://
-if( notnode ){ 
+if( notnode ){  window.onload = function( /** [030] **/ ){
        
     //:BOILERPLATE:[028]:====================================://
 
@@ -88,7 +88,7 @@ if( notnode ){
 
     //:=================================:HTML_DOM_SETUP:[029]://
 
-};;
+};; };;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
 //:FUNCTION_SERVER_BACKEND:==================================://
 if( yesnode ){
