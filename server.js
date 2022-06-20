@@ -72,18 +72,18 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
     //:FUNCTION_CANVAS_RESIZE:[032]:=========================://
 
         const RES_CAN = function PRIVATE_RES_CAN( ){
-        
+
             let wid =( 0 - 333 /** wid : Client Width  **/ );
             let hig =( 0 - 666 /** hig : Client Height **/ );
             let   W = window ;
             let   D = document.documentElement ;
             let   B = document.body            ;
-        
+            
             wid =(W.innerWidth ||D.clientWidth ||
                                  B.clientWidth || 0 );;
             hig =(W.innerHeight||D.clientHeight||
                                  B.clientHeight|| 0 );;
-        
+            
             dom_can.width = wid ;
             dom_can.height= hig ;
         };;
@@ -121,7 +121,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
     //:=================================:HTML_DOM_SETUP:[031]://
     //:HTML_DOM_SETUP:[032]:=================================://
 
-        window.addEventListener( 'resize' , RES_CAN );
+        window.addEventListener( "resize" , RES_CAN );
 
     //:=================================:HTML_DOM_SETUP:[032]://
 
@@ -205,6 +205,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @dom_bod@ : DomainObjectModel - Body
     @doc_bod@ : Means[ document body ]USE[ dom_bod ]
     @dom_can@ : DomainObjectModel - Canvas
+
+    @RES_CAN@ : RESize_CANvas
 
     #MRI# : Make Routing ( case ) Insensitive 
 
