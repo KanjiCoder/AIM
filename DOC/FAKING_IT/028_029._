@@ -1,7 +1,7 @@
 //:FUNCTION_CLIENT_FRONTEND:=================================://
 if( notnode ){ window.onload = function(){
        
-    //:BOILERPLATE:==========================================://
+    //:BOILERPLATE:[028]:====================================://
 
         function ERR( i_msg ){
 
@@ -28,8 +28,8 @@ if( notnode ){ window.onload = function(){
             return( o_has );
         };;
 
-    //:==========================================:BOILERPLATE://
-    //:HTML_DOM_SETUP:=======================================://
+    //:====================================:BOILERPLATE:[028]://
+    //:HTML_DOM_SETUP:[029]:=================================://
 
         var   dom_bod = document.body           ;//:@dom_bod@://
         const dom_roo = document.documentElement;//:@dom_rom@://
@@ -51,7 +51,7 @@ if( notnode ){ window.onload = function(){
 
         LOG( "[dom_bod]" , dom_bod );
 
-    //:=======================================:HTML_DOM_SETUP://
+    //:=================================:HTML_DOM_SETUP:[029]://
 
 };;};;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
