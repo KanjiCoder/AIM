@@ -124,6 +124,14 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
         window.addEventListener( "resize" , RES_CAN );
 
     //:=================================:HTML_DOM_SETUP:[032]://
+    //:WEBGL_SETUP:[033]:====================================://
+
+
+        var wgl = dom_can.getContext("webgl");
+        wgl.clearColor( 0.0  ,  1.0  , 0.0 , 1.0 );
+        wgl.clear( wgl.COLOR_BUFFER_BIT );
+
+    //:====================================:WEBGL_SETUP:[033]://
 
 };; };;
 //:=================================:FUNCTION_CLIENT_FRONTEND://
