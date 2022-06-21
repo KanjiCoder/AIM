@@ -1,0 +1,55 @@
+
+
+    D_T : Design Thoughts
+
+    Should Server Have State ? Or should it all be stored
+    on database? I think server state might be kind of
+    difficult, so lets stick to database holding information
+    for now.
+
+//:MOOD_LIGHTING_API:========================================://
+
+    We should make an API that allows a user to set the
+    "clear color" in the database to a color of their
+    choice. Maybe call it "Global Mood Lighting" or something.
+
+    The point is just to get something that a user of game
+    can do that effects everyone else in the game.
+
+    API_PUT_GML( "0x00220044" , "2022_06_20:8PM" );
+
+    Eventually have a "no spam" mode where if there is
+    already an entry in the mood lighting table, another
+    user cannot set it. So it is a first-come, first 
+    serve thing. Also make it so one user cannot
+    do this too many times. 
+
+//:========================================:MOOD_LIGHTING_API://
+
+
+******** Create Sections like this? ****************************
+
+//:MASTER_DATA_DECLARATION:==================================://
+
+    //: d_ : data
+    //: s_ : server only
+    //: c_ : client only
+    //: a_ : all sides have access
+
+    var d_txt = "[s:g_txt]" ;
+    var d_png = "[s:g_png]" ;
+    var d_htm = "[s:g_htm]" ;
+    var d_j_s = "[s:g_j_s]" ;
+    var d_exe = "[s:g_exe]" ;
+    var d_css = "[s:g_css]" ;
+ 
+    var d_can = "[c:g_can]" ; //: Html5 Canvas  ://
+    var d_wgl = "[c:g_wgl]" ; //: WebGL Context ://
+
+//:==================================:MASTER_DATA_DECLARATION://
+//:MASTER_FUNC_DECLARATION:==================================://
+
+
+
+
+//:==================================:MASTER_FUNC_DECLARATION://

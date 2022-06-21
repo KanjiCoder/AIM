@@ -129,7 +129,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
         var wgl = dom_can.getContext( "webgl" );     //:@wgl@://
         //:.clearColor( _R_  ,  _G_  ,  _B_  ,  _A_ );       ://
         wgl.clearColor( 0.0  ,  1.0  ,  0.0  ,  1.0 );
-        wgl.clear( wgl.COLOR_BUFFER_BIT );
+        wgl.clear( wgl.COLOR_BUFFER_BIT /**ScreenBuffer**/ );
 
     //:====================================:WEBGL_SETUP:[033]://
 
@@ -190,6 +190,16 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     m_    : member variable prefix.
     i_    : formal parameter argument ( i == input  )
     o_    : output argument from func ( o == output )
+
+    c_    : client - only 
+    s_    : server - only
+    b_    : BOTH ( known by both client and server )
+    g_    : global
+    d_    : data        ( GLOBAL data  )
+    f_    : function    ( GLOBAL func  )
+    m_    : macro       TRY_NOT_TO_USE_THIS
+    t_    : type        TRY_NOT_TO_USE_THIS
+    u_    : unit test   <<< Still good idea.
 
 *** ******************************************************** **/
 /** COMMENTS_ARE_READ_LAST_OR_NEVER ************************ ***
