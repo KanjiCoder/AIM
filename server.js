@@ -319,6 +319,11 @@ if( yesnode ){ //:-------------------------------------------://
         d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );
 
     //:--------------------------------:webgl_setup:[033]://
+    //:enter_infinite_loop:[036]:------------------------://
+
+        F_GUL(); //: @GUL@ : Game_Update_Loop ://
+
+    //:------------------------:enter_infinite_loop:[036]://
 
     };;
 //:=============================:FUNC_INITIALIZE_CLIENT:[035]://
