@@ -29,27 +29,30 @@
 
 ******** Create Sections like this? ****************************
 
-//:MASTER_DATA_DECLARATION:==================================://
 
-    //: d_ : data
-    //: s_ : server only
-    //: c_ : client only
-    //: a_ : all sides have access
+//:MASTER_DECLARATION_DATA:==================================://
 
-    var d_txt = "[s:g_txt]" ;
-    var d_png = "[s:g_png]" ;
-    var d_htm = "[s:g_htm]" ;
-    var d_j_s = "[s:g_j_s]" ;
-    var d_exe = "[s:g_exe]" ;
-    var d_css = "[s:g_css]" ;
+    //:--------------------------------------------------://
+    //:   !s!   : server only                            ://
+    //:   !c!   : client only                            ://
+    //:   !a!   : all sides have access                  ://
+    //: "[nil]" : explicit [ nil / null ]                ://
+    //:--------------------------------------------------://
+
+    var d_txt = "[nil][!s!:g_txt]" ;
+    var d_png = "[nil][!s!:g_png]" ;
+    var d_htm = "[nil][!s!:g_htm]" ;
+    var d_j_s = "[nil][!s!:g_j_s]" ;
+    var d_exe = "[nil][!s!:g_exe]" ;
+    var d_css = "[nil][!s!:g_css]" ;
  
-    var d_can = "[c:g_can]" ; //: Html5 Canvas  ://
-    var d_wgl = "[c:g_wgl]" ; //: WebGL Context ://
+    var d_can = "[nil][!c!:g_can]" ; //: Html5 Canvas  ://
+    var d_wgl = "[nil][!c!:g_wgl]" ; //: WebGL Context ://
 
-//:==================================:MASTER_DATA_DECLARATION://
-//:MASTER_FUNC_DECLARATION:==================================://
-
-
+//:==================================:MASTER_DECLARATION_DATA://
+//:MASTER_DECLARATION_FUNC:==================================://
 
 
-//:==================================:MASTER_FUNC_DECLARATION://
+
+
+//:==================================:MASTER_DECLARATION_FUNC://

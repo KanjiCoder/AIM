@@ -1,3 +1,70 @@
+//:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:=========================://
+/**----------------------------------------------------------:::
+
+    Tutorial Where We Build This File :
+
+        www.tinyurl.com/BOMB-GAME-TUTORIAL 
+
+:::----------------------------------------------------------:::
+
+    Git Repo With All Source Code :
+
+        github.com/KanjiCoder/AIM
+
+:::----------------------------------------------------------**/
+//:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
+//:DEPLOY_THIS_SERVER_YOURSELF:[034]:========================://
+/**----------------------------------------------------------:::
+
+    Atomic_Ivy_MMO (AIM) client _AND_ server.
+
+    If you are looking at this code in a debugger, 
+    you could copy+paste it and deploy it RIGHT NOW!
+
+    Deployment Steps :
+    
+    1. Copy Everything You See And Save As "server.js"
+    
+    2. create package.json that looks like this:
+
+        STEP 2 FOR PROGRAMMERS :
+
+            touch package.json
+            echo "{}" > package.json
+        
+        STEP 2 FOR ARTISTS :
+
+            +---------------------------------------+
+            | Notepad ++ : server.js        |[-]|[X]|
+            +---------------------------------------+
+            |         |                             |
+            | LINE 01 |  { }                        |
+            |         |                             |
+            +---------+-----------------------------+
+    
+    3. git init . && git add . && git commit -m "[AIM]"
+    
+    4. heroku apps:create my-atomic-ivy-server
+    
+    5. git push heroku master
+    
+:::----------------------------------------------------------**/
+//:========================:DEPLOY_THIS_SERVER_YOURSELF:[034]://
+//:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]:===================://
+/**----------------------------------------------------------:::
+
+    DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
+
+        d_    : data     ( GLOBAL ) 
+        f_    : function ( GLOBAL ) 
+        l_    : library  ( GLOBAL ) 
+        
+        m_    : member   ( LOCAL  )
+        i_    : input    ( LOCAL  )
+        o_    : output   ( LOCAL  )
+        
+:::----------------------------------------------------------**/
+//:===================:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]://
 //:ENVIRONMENT_DETECTION:====================================://
 
     var yesnode =( "undefined" === typeof window );
@@ -186,20 +253,32 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** ***************************************** CHANGE_HISTORY **/
 /** PREFIXES *********************************************** ***
     
+    GLOBAL SCOPE PREFIXES :
+
+        d_    : data        ( GLOBAL data  )
+        f_    : function    ( GLOBAL func  )
+        l_    : library     ( GLOBAL lib   )
+
+    LOCAL SCOPE PREFIXES :
+
+        m_    : member variable prefix.
+        i_    : formal parameter argument ( i == input  )
+        o_    : output argument from func ( o == output )
+
+*** ******************************************************** **/
+/** DONT_USE_THESE_AS_PREFIXES ***************************** ***
+
     LIB_  : any library we got by using require function
-    m_    : member variable prefix.
-    i_    : formal parameter argument ( i == input  )
-    o_    : output argument from func ( o == output )
+          : ( use l_ instead of LIB_ for terseness )
 
     c_    : client - only 
     s_    : server - only
     b_    : BOTH ( known by both client and server )
     g_    : global
-    d_    : data        ( GLOBAL data  )
-    f_    : function    ( GLOBAL func  )
-    m_    : macro       TRY_NOT_TO_USE_THIS
+
+    m_    : macro       NO MACROS IN JAVASCRIPT , simplify.
     t_    : type        TRY_NOT_TO_USE_THIS
-    u_    : unit test   <<< Still good idea.
+    u_    : unit test   Unit tests are functions ( f_ )
 
 *** ******************************************************** **/
 /** COMMENTS_ARE_READ_LAST_OR_NEVER ************************ ***
@@ -227,8 +306,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     @RES_CAN@ : RESize_CANvas
 
+    @DODS@ : Data_Oriented_Design'S
+
     #MRI# : Make Routing ( case ) Insensitive 
 
     #_P_N_C_# : Paranoid_Null_Check
+
+
 
 *** ******************************************************** **/
