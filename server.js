@@ -1,16 +1,19 @@
 //:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:=========================://
 /**----------------------------------------------------------:::
 
-    Tutorial Where We Build This File :
+    Tutorial Where We Build This File ::::::::::::::::::::::::::
 
-        www.tinyurl.com/BOMB-GAME-TUTORIAL 
+        www.tinyurl.com/BOMB-GAME-TUTORIAL        <<< Same_Place
+        www.tinyurl.com/GAME-TUTS                 <<< Same_Place
 
 :::----------------------------------------------------------:::
 
-    Git Repo With All Source Code :
+    Git Repo With All Source Code ::::::::::::::::::::::::::::::
 
-        github.com/KanjiCoder/AIM
-
+        github.com/KanjiCoder/AIM                 <<< Same_Place
+        tinyurl.com/ATOMIC-IVY-MMO-SOURCE-CODE    <<< Same_Place
+        tinyurl.com/GAME-CODE                     <<< Same_Place
+        
 :::----------------------------------------------------------**/
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:DEPLOY_THIS_SERVER_YOURSELF:[034]:========================://
