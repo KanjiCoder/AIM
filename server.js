@@ -74,7 +74,18 @@
     var notnode =( "undefined"  != typeof window );
 
 //:====================================:ENVIRONMENT_DETECTION://
-//:DATA_BOTHENDS:============================================://
+//:MASTER_DECLARATION_DATA:[035]:============================://
+
+    //:--------------------------------------------------://
+    //:   !s!   : server only                            ://
+    //:   !c!   : client only                            ://
+    //:   !a!   : all sides have access                  ://
+    //: "[nil]" : explicit [ nil / null ]                ://
+    //:--------------------------------------------------://
+
+if( yesnode ){ //:-------------------------------------------://
+
+
 
     var webpage =( "" //:--------------------://
     +'      <!DOCTYPE HTML><head>              '
@@ -88,44 +99,101 @@
     +'      </head>                            '
     );; //:----------------------------------://
 
-    const TXT = { "Content-Type": "text/javascript"          } ;
-    const PNG = { "Content-Type": "image/png"                } ;
-    const HTM = { "Content-Type": "text/html"                } ;
-    const J_S = { "Content-Type": "text/javascript"          } ;
-    const EXE = { "Content-Type": "application/x-msdownload" } ;
-    const CSS = { "Content-Type": "text/css"                 } ;
+    var d_txt = { "Content-Type": "text/plain"               } ;
+    var d_png = { "Content-Type": "image/png"                } ;
+    var d_htm = { "Content-Type": "text/html"                } ;
+    var d_js  = { "Content-Type": "text/javascript"          } ;
+    var d_exe = { "Content-Type": "application/x-msdownload" } ;
+    var d_css = { "Content-Type": "text/css"                 } ;
 
-//:============================================:DATA_BOTHENDS://
-//:DATA_SERVER_BACKEND:======================================://
+    var d_sob ={
+        m_ask : "[nil][!s!:m_ask]"    //: ask  == request    ://
+    ,   m_giv : "[nil][!s!:m_giv]"    //: give == response   ://
+    ,   m_url : "[nil][!s!:m_url]"    //: path(relative_url) ://
+    ,   m_pam : "[nil][!s!:m_pam]"    //: query params dict  ://
+    ,   m_seg : "[nil][!s!:m_seg]"    //: url segments array ://    
+    };;
 
-    const LIB_F_S = yesnode ? require( "fs"  )              :{};
-    const LIB_URL = yesnode ? require( "url" )              :{};
-    const LIB_Q_S = yesnode ? require( "node:querystring" ) :{};
 
-//:======================================:DATA_SERVER_BACKEND://
-//:FUNCTION_CLIENT_FRONTEND:=================================://
-if( notnode ){  window.onload = function( /** [030] **/ ){
+};; //:------------------------------------------------------://
+if( notnode ){ //:-------------------------------------------://
 
-    //:CLIENT_GLOBAL_DATA:[031]:=============================://
 
-        let dom_can = null ;
-       
-    //:=============================:CLIENT_GLOBAL_DATA:[031]://
-    //:BOILERPLATE:[028]:====================================://
+    
+    var d_can = "[nil][!c!:d_can]" ;  //: Html5 Canvas  [035]://
+    var d_wgl = "[nil][!c!:d_wgl]" ;  //: WebGL Context [035]://
 
-        function ERR( i_msg ){
 
-            alert( "[ERR]:" + i_msg );
-            throw( "[ERR]:" + i_msg );
-        };;
-        function LOG( i_msg , i_any ){
 
-            console.log( i_msg , ":" , i_any );
-        };;
-        function HAS( i_obj ){
+};; //:------------------------------------------------------://
+if( yesnode || notnode ){ //:--------------------------------://
 
-            var o_has =( 0 );
 
+
+    //:XXXXXXXXXXXXXXXXXXXX://
+
+
+
+};; //:------------------------------------------------------://
+//:============================:MASTER_DECLARATION_DATA:[035]://
+//:MASTER_DECLARATION_LIBS:[035]:============================://
+if( yesnode ){ //:-------------------------------------------://
+
+    /** ************************************************ **/
+    /** "l_" prefix is only for libraries gotten with    **/
+    /** "require". Canvas and WebGl could technically be **/
+    /** thought of as "libraries" as well. But decided   **/
+    /** categorizing them as "data" was better move.     **/
+    /** ************************************************ **/
+
+    var l_fs  = require( "fs"  )              :{};
+    var l_url = require( "url" )              :{};
+    var l_qs  = require( "node:querystring" ) :{};
+
+};; //:------------------------------------------------------://
+//:============================:MASTER_DECLARATION_LIBS:[035]://
+//:MASTER_DECLARATION_FUNC:[035]:============================://
+    
+    /** ************************************************ **/
+    /** This section was a BAD IDEA. Because functions   **/
+    /** end up too deeply nested. Just give each         **/
+    /** function it's own unique code section and        **/    
+    /** stack all functions in continguous strip         **/
+    /** within the sourc code. -KanjiCoder               **/
+    /** ************************************************ **/
+
+//:============================:MASTER_DECLARATION_FUNC:[035]://
+//:FUNC_BOILERPLATE:[028]+[035]:=============================://
+
+    function ERR( i_msg ){
+    
+        if( notnode ){ alert( "[ERR]:" + i_msg ); };
+                       throw( "[ERR]:" + i_msg );
+    };;
+    function LOG( i_msg , i_any ){
+    
+        console.log( i_msg , ":" , i_any );
+    };;
+    function HAS( i_obj ){
+    
+        var o_has =( 0 );
+    
+        if( typeof i_obj === "string" ){
+
+            /** Detect Custom Nil ( "[nil]" ) **/
+
+            if( 1
+            &&   ( "[" === i_obj[0] )
+            &&   ( "n" === i_obj[1] )
+            &&   ( "i" === i_obj[2] )
+            &&   ( "l" === i_obj[3] )
+            &&   ( "]" === i_obj[4] )
+            ){
+                o_has =( 0 );  
+            }else{
+                o_has =( 1 );
+            };;
+        }else{
             if( null      == i_obj
             ||  undefined == i_obj
             ||            ( !i_obj )
@@ -135,33 +203,53 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
             }else{
                 o_has =( 1 );
             };;
-            return( o_has );
         };;
 
-    //:====================================:BOILERPLATE:[028]://
-    //:FUNCTION_CANVAS_RESIZE:[032]:=========================://
+        return( o_has );
+    };;
+//:=============================:FUNC_BOILERPLATE:[028]+[035]://
+//:FUNC_RESIZE_CANVAS:[032]+[035]:===========================://
 
-        const RES_CAN = function PRIVATE_RES_CAN( ){
+    const F_RES_CAN = function PRIVATE_F_RES_CAN( ){
 
-            let wid =( 0 - 333 /** wid : Client Width  **/ );
-            let hig =( 0 - 666 /** hig : Client Height **/ );
-            let   W = window ;
-            let   D = document.documentElement ;
-            let   B = document.body            ;
-            
-            wid =(W.innerWidth ||D.clientWidth ||
-                                 B.clientWidth || 0 );;
-            hig =(W.innerHeight||D.clientHeight||
-                                 B.clientHeight|| 0 );;
-            
-            dom_can.width = wid ;
-            dom_can.height= hig ;
-        };;
-    //:=========================:FUNCTION_CANVAS_RESIZE:[032]://
-    //:HTML_DOM_SETUP:[029]:=================================://
+        let wid =( 0 - 333 /** wid : Client Width  **/ );
+        let hig =( 0 - 666 /** hig : Client Height **/ );
+        let   W = window ;
+        let   D = document.documentElement ;
+        let   B = document.body            ;
+        
+        wid =(W.innerWidth ||D.clientWidth ||
+                             B.clientWidth || 0 );;
+        hig =(W.innerHeight||D.clientHeight||
+                             B.clientHeight|| 0 );;
+        
+        d_can.width = wid ;
+        d_can.height= hig ;
+    };;
+//:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
+//:FUNC_INITIALIZE_CLIENT:[035]:=============================://
 
-        const dom_roo = document.documentElement;//:@dom_rom@://
-        var   dom_bod = document.body           ;//:@dom_bod@://
+    const F_INI_CLI = function PRIVATE_F_INI_CLI(){
+
+    //:client_global_data:[031]:-------------------------://
+
+        const dom_can = "[REFACTORED_TO:d_can:[035]]" ;
+       
+    //:-------------------------:client_global_data:[031]://
+    //:boilerplate:[028]:--------------------------------://
+
+        //:MOVED_TO:FUNC_BOILERPLATE://
+
+    //:--------------------------------:boilerplate:[028]://
+    //:function_canvas_resize:[032]:---------------------://
+
+        //:MOVED_TO:FUNC_RESIZE_CANVAS://
+
+    //:---------------------:function_canvas_resize:[032]://
+    //:html_dom_setup:[029]:-----------------------------://
+
+        const dom_roo = document.documentElement; 
+        var   dom_bod = document.body           ; 
 
         if( HAS( dom_roo ) ){
             LOG( "[dom_roo]" , dom_roo );
@@ -180,71 +268,100 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 
         LOG( "[dom_bod]" , dom_bod );
 
-    //:=================================:HTML_DOM_SETUP:[029]://
-    //:HTML_DOM_SETUP:[031]:=================================://
+    //:-----------------------------:html_dom_setup:[029]://
+    //:html_dom_setup:[031]:-----------------------------://    
     {
-        dom_can = document.createElement( "canvas" );
-        dom_bod.appendChild( dom_can );
+        d_can = document.createElement( "canvas" );
+        dom_bod.appendChild( d_can );
 
-        RES_CAN( );
+        F_RES_CAN( );
     }
-    //:=================================:HTML_DOM_SETUP:[031]://
-    //:HTML_DOM_SETUP:[032]:=================================://
+    //:-----------------------------:html_dom_setup:[031]://
+    //:html_dom_setup:[032]:-----------------------------://
 
-        window.addEventListener( "resize" , RES_CAN );
+        window.addEventListener( "resize" , F_RES_CAN );
 
-    //:=================================:HTML_DOM_SETUP:[032]://
-    //:WEBGL_SETUP:[033]:====================================://
+    //:-----------------------------:html_dom_setup:[032]://
+    //:webgl_setup:[033]:--------------------------------://
 
-        var wgl = dom_can.getContext( "webgl" );     //:@wgl@://
-        //:.clearColor( _R_  ,  _G_  ,  _B_  ,  _A_ );       ://
-        wgl.clearColor( 0.0  ,  1.0  ,  0.0  ,  1.0 );
-        wgl.clear( wgl.COLOR_BUFFER_BIT /**ScreenBuffer**/ );
+        const wgl = "[REFACTORED_TO:d_wgl:[035]]" ;
 
-    //:====================================:WEBGL_SETUP:[033]://
+        d_wgl = d_can.getContext( "webgl" );         
+        //:.clearColor( _R_  ,  _G_  ,  _B_  ,  _A_ );   ://
+        d_wgl.clearColor( 0.0  ,  1.0  ,  0.0  ,  1.0 );
+        d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );
+
+    //:--------------------------------:webgl_setup:[033]://
+
+    };;
+//:=============================:FUNC_INITIALIZE_CLIENT:[035]://
+//:DATA_BOTHENDS:============================================://
+
+    /** ************************************ **/
+    /** RELOCATED_TO:MASTER_DECLARATION_DATA **/
+    /** ************************************ **/
+
+    //! DELETE THIS SECTION IN FUTURE (tutorial 42 ) !//
+
+//:============================================:DATA_BOTHENDS://
+//:DATA_SERVER_BACKEND:======================================://
+
+    /** ************************************ **/
+    /** RELOCATED_TO:MASTER_DECLARATION_LIBS **/
+    /** ************************************ **/
+
+    //! DELETE THIS SECTION IN FUTURE (tutorial 42 ) !//
+
+//:======================================:DATA_SERVER_BACKEND://
+//:INIT_CLIENT_FRONTEND:[035]:===============================://
+if( notnode ){  window.onload = function( /** [030] **/ ){
+
+    F_INI_CLI(); //:INItialize_CLIent://
 
 };; };;
-//:=================================:FUNCTION_CLIENT_FRONTEND://
-//:FUNCTION_SERVER_BACKEND:==================================://
+//:===============================:INIT_CLIENT_FRONTEND:[035]://
+//:INIT_SERVER_BACKEND:[035]:================================://
 if( yesnode ){
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
-    var sob ={
-      m_ask : i_ask                                  //!@ask@!//
-    , m_giv : i_giv                                  //!@giv@!//
-    , m_url : LIB_URL.parse( i_ask.url , 1 ).pathname//!@url@!//
-    , m_pam : LIB_Q_S.parse( i_ask.url , 1 ).query   //!@pam@!//
-    , m_seg : [ "URLPATH_SEGMENTS_NOT_LOADED]" ]     //!@seg@!//
-    };;
+    //:load_state_object_bundle:-------------------------://
+                                                         ;;;
+    d_sob.m_ask = i_ask                                  ;;;
+    d_sob.m_giv = i_giv                                  ;;;
+    d_sob.m_url = l_url.parse( i_ask.url , 1 ).pathname  ;;;
+    d_sob.m_pam = l_qs .parse( i_ask.url , 1 ).query     ;;;
+    d_sob.m_seg = [ "URLPATH_SEGMENTS_NOT_LOADED]" ]     ;;;
+                                                         ;;;
+    //:-------------------------:load_state_object_bundle://
 
-    sob.m_url = sob.m_url.toUpperCase();             //!#MRI#!//
+    d_sob.m_url = d_sob.m_url.toUpperCase();         //!#MRI#!//
 
-    if( sob.m_url == "/HELLO" ){
+    if( d_sob.m_url == "/HELLO" ){
 
-        sob.m_giv.end( "WORLD" );
+        d_sob.m_giv.end( "WORLD" );
     }else
-    if( sob.m_url == "/ATOMIC_IVY_MMO" ){
+    if( d_sob.m_url == "/ATOMIC_IVY_MMO" ){
 
-        LIB_F_S.readFile( "./server.js" , function(err,cof){
+        l_fs.readFile( "./server.js" , function(i_err,i_cof){
 
-            if(err){
-                cof = "[we messed up]" ;
+            if(i_err){
+                i_cof = "[we messed up]" ;
             }else{
-                sob.m_giv.writeHead( 200 , TXT );
+                d_sob.m_giv.writeHead( 200 , d_js );
             };;
-            sob.m_giv.end( cof , "utf-8" );
+            d_sob.m_giv.end( i_cof , "utf-8" );
         });;
     }else{
 
-        sob.m_giv.writeHead( 200 , HTM );
-        sob.m_giv.end( webpage , "utf-8" );
+        d_sob.m_giv.writeHead( 200 ,  d_htm  );
+        d_sob.m_giv.end( d_webpage , "utf-8" );
     };;
 
 }).listen(process.env.PORT);
 
 };;
-//:==================================:FUNCTION_SERVER_BACKEND://
+//:================================:INIT_SERVER_BACKEND:[035]://
 
 /** CHANGE_HISTORY ***************************************** ***
 
