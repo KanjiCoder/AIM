@@ -229,13 +229,29 @@ if( yesnode ){ //:-------------------------------------------://
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
 //:FUNC_GAME_UPDATE_TICK:[036]:==============================://
 
-    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    const F_TIK = function PRIVATE_F_TIK( i_tim ){   //:@TIK@://
 
+        /** ************************************ **/
+        /** Games "Main" loop that updates both  **/
+        /** rendering and game logic.            **/
+        /** ************************************ **/
+
+        var _R_ = ( i_tim % 255.000 );
+        if( _R_ > 255.0 ){ ERR("[_R_]"); };
+            _R_ = ( _R_ / 255.0 );
+
+        d_wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );
+        d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );
+    };;
 //:==============================:FUNC_GAME_UPDATE_TICK:[036]://
 //:FUNC_GAME_UPDATE_LOOP:[036]:==============================://
 
-    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    const F_GUL = function PRIVATE_F_GUL( i_tim ){ //: @GUL@ ://
 
+        F_TIK( i_tim );
+
+        window.requestAnimationFrame( F_GUL );
+    };;
 //:==============================:FUNC_GAME_UPDATE_LOOP:[036]://
 //:FUNC_INITIALIZE_CLIENT:[035]:=============================://
 
@@ -304,7 +320,7 @@ if( yesnode ){ //:-------------------------------------------://
     //:--------------------------------:webgl_setup:[033]://
     //:enter_infinite_loop:[036]:------------------------://
 
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+        F_GUL( 0.0 ); 
 
     //:------------------------:enter_infinite_loop:[036]://
 
