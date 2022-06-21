@@ -227,6 +227,33 @@ if( yesnode ){ //:-------------------------------------------://
         d_can.height= hig ;
     };;
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
+//:FUNC_GAME_UPDATE_TICK:[036]:==============================://
+
+    const F_TIK = function PRIVATE_F_TIK( i_tim ){   //:@TIK@://
+
+        /** *********************************** **/
+        /** Games "Main" loop that updates both **/
+        /** rendering and game logic.           **/
+        /** *********************************** **/
+
+        var _R_ = ( i_tim % 256.000 );
+        if( _R_ > 255.0 ){ ERR("[not_what_i_expected]"); };
+            _R_ = ( _R_ / 255.0 );
+
+        //:.clearColor( _R_  ,  _G_  ,  _B_  ,  _A_ );   ://
+        d_wgl.clearColor( _R_  ,  1.0  ,  0.0  ,  1.0 );
+        d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );
+    };;
+//:==============================:FUNC_GAME_UPDATE_TICK:[036]://
+//:FUNC_GAME_UPDATE_LOOP:[036]:==============================://
+
+    const F_GUL = function PRIVATE_F_GUL( i_tim ){ //: @GUL@ ://
+
+        F_TIK( i_tim );
+
+        window.requestAnimationFrame( F_GUL );
+    };;
+//:==============================:FUNC_GAME_UPDATE_LOOP:[036]://
 //:FUNC_INITIALIZE_CLIENT:[035]:=============================://
 
     const F_INI_CLI = function PRIVATE_F_INI_CLI(){
@@ -423,6 +450,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @wid@ : The WIDTH  (usually pixels) of something.
     @hig@ : The HEIGHT (usually pixels) of something.
     @wgl@ : Web_GL ( context object )
+
+    @TIK@ : TICK ( as in update tick )
+    @GUL@ : Game_Update_Loop
 
     @dom_roo@ : DomainObjectModel - Root
     @dom_bod@ : DomainObjectModel - Body
