@@ -146,9 +146,9 @@ if( yesnode ){ //:-------------------------------------------://
     /** categorizing them as "data" was better move.     **/
     /** ************************************************ **/
 
-    var l_fs  = require( "fs"  )              :{};
-    var l_url = require( "url" )              :{};
-    var l_qs  = require( "node:querystring" ) :{};
+    var l_fs  = require( "fs"               );
+    var l_url = require( "url"              );
+    var l_qs  = require( "node:querystring" );
 
 };; //:------------------------------------------------------://
 //:============================:MASTER_DECLARATION_LIBS:[035]://
