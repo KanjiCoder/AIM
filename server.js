@@ -126,7 +126,8 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
     //:=================================:HTML_DOM_SETUP:[032]://
     //:WEBGL_SETUP:[033]:====================================://
 
-        var wgl = dom_can.getContext( "webgl" );
+        var wgl = dom_can.getContext( "webgl" );     //:@wgl@://
+        //:.clearColor( _R_  ,  _G_  ,  _B_  ,  _A_ );       ://
         wgl.clearColor( 0.0  ,  1.0  ,  0.0  ,  1.0 );
         wgl.clear( wgl.COLOR_BUFFER_BIT );
 
@@ -207,6 +208,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @obj@ : An object type. So NOT a number or BOOL or STRING.
     @wid@ : The WIDTH  (usually pixels) of something.
     @hig@ : The HEIGHT (usually pixels) of something.
+    @wgl@ : Web_GL ( context object )
 
     @dom_roo@ : DomainObjectModel - Root
     @dom_bod@ : DomainObjectModel - Body
