@@ -98,7 +98,7 @@ if( yesnode ){ //:-------------------------------------------://
     const n = "\n" ; //:@nlc@ : New_Line_Char://
                      //:const == block scope ://
 
-    var d_sqlmake_tab_hex =( "              "+n      //:[041]://
+    var d_cts_tab_hex =( "                  "+n      //:[041]://
     +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n      //:[041]://
     +"      iid SERIAL PRIMARY KEY          "+n      //:[041]://
     +"  ,   hex INT CHECK ( hex > 0 )       "+n      //:[041]://
@@ -498,7 +498,7 @@ if( yesnode ){
         
         //:Init_Sql_Table(@IST@):------------------------://
 
-            F_IST( d_sqlmak_hex , "[tab_hex]" );
+            F_IST( d_cts_tab_hex , "[tab_hex]" );
 
         //:------------------------:Init_Sql_Table(@IST@)://    
     };;                                                         
@@ -613,6 +613,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @ssl@ : Secure_Sockets_Layer
     @cts@ : Create_Table_Statement
     @tbm@ : Trace_Back_Message
+    @cts@ : Create_Table_Source
     
     @dbs@ / @d_dbs@ : WRONG[ data_base_string ]FIX[ dbu ]
 
