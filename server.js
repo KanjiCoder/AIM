@@ -65,6 +65,16 @@
         m_    : member   ( LOCAL  )
         i_    : input    ( LOCAL  )
         o_    : output   ( LOCAL  )
+
+    Table Prefixes :
+
+        @tab@ : tab_ : A normal Table
+        @col@ : col_ : Column Name
+        @lnk@ : lnk_ : A link table
+        @fid@ : fid_ : Foriegn_Key ( id )
+        @iid@ : iid  : Primary_Key , NOT A PREFIX
+
+         
         
 :::----------------------------------------------------------**/
 //:===================:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]://
@@ -84,6 +94,16 @@
     //:--------------------------------------------------://
 
 if( yesnode ){ //:-------------------------------------------://
+
+    const n = "\n" ; //:@nlc@ : New_Line_Char://
+                     //:const == block scope ://
+
+    var d_sqlmake_tab_hex =( "              "+n      //:[041]://
+    +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n      //:[041]://
+    +"      iid SERIAL PRIMARY KEY          "+n      //:[041]://
+    +"  ,   hex INT CHECK ( hex > 0 )       "+n      //:[041]://
+    +"  );;                                 "+n      //:[041]://
+
 
     var d_dbu = process.env.DATABASE_URL ;      //:[040]@dbu@://
     var d_cin ={                                //:[040]@cin@://
@@ -419,7 +439,27 @@ if( yesnode ){ //:-------------------------------------------://
         MSG( "[END:F_ISD]" );                        //:[040]://
     };;                                                         
 //:========================:FUNC_INITIALIZE_SERVER_DATA:[040]://
+//:FUNC_INIT_SQL_TABLE:[041]:================================://
+//:_____I____S___T___________________________________________://
 
+    const F_IST = function PRIVATE_F_IST( i_cts , i_tbm ){
+
+        d_dcp
+        .query( i_cts )
+        .then( function( i_res ){
+
+            LOG( "[ist_o_k:tbm]" , i_tbm );
+        })
+        .catch( function( i_err ){
+
+            LOG( "[ist_err:tbm]" , i_tbm );
+            ERR( "[ist_err:tbm]"         );
+        })
+        ;;
+    };;
+//:__________________________________________________________://
+//:______________________________________I____S___T__________://
+//:================================:FUNC_INIT_SQL_TABLE:[041]://
 //:DATA_BOTHENDS:============================================://
 
     /** ************************************ **/
@@ -449,11 +489,17 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 //:INIT_SERVER_BACKEND:[035]:================================://
 if( yesnode ){
 
-    if( NIL( d_dbu ) ){                        //:[040]://      
-        F_MSG_NIL_DBU();                       //:[040]://      
-    }else{                                     //:[040]://      
-        F_ISD();     //:Initialize_Server_Data   :[040]://      
-        F_TDC();     //:Test_Database_Connection :[040]://      
+    if( NIL( d_dbu ) ){                        //: [040] ://      
+        F_MSG_NIL_DBU();                       //: [040] ://      
+    }else{                                     //: [040] ://      
+        F_ISD();     //:Initialize_Server_Data   : [040] ://          
+        F_TDC();     //:Test_Database_Connection : [040] ://   
+        
+        //:Init_Sql_Table(@IST@):------------------------://
+
+            F_IST( d_sqlmak_hex , "[tab_hex]" );
+
+        //:------------------------:Init_Sql_Table(@IST@)://    
     };;                                                         
 
 require( "http" ).createServer( function( i_ask , i_giv ){
@@ -564,6 +610,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @don@ : Done   ( postgres "done" function pointer )
     @c_s@ : ConnectionString
     @ssl@ : Secure_Sockets_Layer
+    @cts@ : Create_Table_Statement
+    @tbm@ : Trace_Back_Message
     
     @dbs@ / @d_dbs@ : WRONG[ data_base_string ]FIX[ dbu ]
 
