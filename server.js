@@ -182,9 +182,9 @@ if( yesnode ){ //:-------------------------------------------://
     
         if( undefined != i_any ){                    //:[040]://
 
-            console.log( i_msg , ":" , i_any );
+            console.log( i_msg , ":" , i_any  );
         }else{
-            console.log( i_msg );                    //:[040]://
+            console.log( i_msg , ":" , "[UND]" );    //:[040]://
         };;
     };;
     function HAS( i_obj ){
