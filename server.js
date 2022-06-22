@@ -152,7 +152,7 @@ if( yesnode ){ //:-------------------------------------------://
     /** categorizing them as "data" was better move.     **/
     /** ************************************************ **/
 
-    var l_pg  = require( "pg"               );  //:PosgGreSQL://
+    var l_pg  = require( "pg"   /**[040]**/ );  //:PostGreSQL://
     var l_fs  = require( "fs"               );  //:FileSys   ://
     var l_url = require( "url"              );  //: U.R.L.   ://
     var l_qs  = require( "node:querystring" );  //:QueryStr  ://
@@ -174,10 +174,10 @@ if( yesnode ){ //:-------------------------------------------://
 
     function ERR( i_msg ){
     
-        if( 1 === 1 ){ console.log( "[ERR]:" + i_msg ); };
-        if( notnode ){       alert( "[ERR]:" + i_msg ); };
-        if( notnode ){       throw( "[ERR]:" + i_msg ); };
-        if( yesnode ){  process.exit( 40 /**[040]**/ ); }; 
+        if( 1 === 1 ){ console.log( "[ERR]:" + i_msg ); };      
+        if( notnode ){       alert( "[ERR]:" + i_msg ); };      
+        if( notnode ){       throw( "[ERR]:" + i_msg ); };      
+        if( yesnode ){  process.exit( 40 /**[040]**/ ); };      
     };;
     function LOG( i_msg , i_any ){
     
@@ -228,21 +228,20 @@ if( yesnode ){ //:-------------------------------------------://
 
         return( o_has );
     };;
-    function NIL( i_obj ){                       //:[040]://
-
-        /** ******************************************** **/
-        /** DONT: return( ! HAS( i_obj ) ) ************* **/
-        /** We want an integer , not bool "true"/"false" **/ 
-        /** ******************************************** **/
-
-        var o_nil = ( 666 );                     //:[040]://
-            o_has =( HAS( i_obj ) );             //:[040]://
-        if( 0 == o_has ){ o_nil =( 1 ); };       //:[040]://
-        if( 1 == o_has ){ o_nil =( 0 ); };       //:[040]://
-                                                 //:[040]://
-        return( o_nil );                         //:[040]://
-    };;
-
+    function NIL( i_obj ){                       //:[040]://    
+                                                                
+        /** ******************************************** **/    
+        /** DONT: return( ! HAS( i_obj ) ) ************* **/    
+        /** We want an integer , not bool "true"/"false" **/    
+        /** ******************************************** **/    
+                                                                
+        var o_nil = ( 666 );                     //:[040]://    
+        var   has =( HAS( i_obj ) );             //:[040]://    
+        if( 0 == has ){ o_nil =( 1 ); };         //:[040]://    
+        if( 1 == has ){ o_nil =( 0 ); };         //:[040]://    
+                                                 //:[040]://    
+        return( o_nil );                         //:[040]://    
+    };;                                                                                                                         
 //:=============================:FUNC_BOILERPLATE:[028]+[035]://
 //:FUNC_RESIZE_CANVAS:[032]+[035]:===========================://
 
@@ -363,7 +362,7 @@ if( yesnode ){ //:-------------------------------------------://
     };;
 //:=============================:FUNC_INITIALIZE_CLIENT:[035]://
 //:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]:=================://
-
+                                                                
     const F_TDC = function PRIVATE_F_TDC( ){   //:@TDC@:[040]://
                                                      //:[040]://
         d_dcp.connect( ( i_err , i_cli , i_don )=>{  //:[040]://
@@ -382,43 +381,43 @@ if( yesnode ){ //:-------------------------------------------://
     };;                                              //:[040]://
 //:=================:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]://
 //:FUNC_NIL_DATABASE_URL_MESSAGE:[040]:======================://
-
-    const F_MSG_NIL_DBU = function PRIVATE_F_MSG_NIL_DBU(){
-
-        MSG('[YOU_DONT_HAVE_A_DATABASE!!!!!!]'); //:[040]://
-        MSG('[THE_SOLUTION_IS_BELOW!!!!!!!!!]'); //:[040]://
-        MSG('                                '); //:[040]://
-        MSG('+------------------------------+'); //:[040]://
-        MSG('|  ## BELOW IS ONE LINE! ##    |'); //:[040]://
-        MSG('|                              |'); //:[040]://
-        MSG('|  heroku addons:create        |'); //:[040]://
-        MSG('|  heroku-postgresql:hobby-dev |'); //:[040]://
+                                                                
+    const F_MSG_NIL_DBU = function PRIVATE_F_MSG_NIL_DBU(){     
+                                                                
+        MSG('[YOU_DONT_HAVE_A_DATABASE!!!!!!]'); //:[040]://    
+        MSG('[THE_SOLUTION_IS_BELOW!!!!!!!!!]'); //:[040]://    
+        MSG('                                '); //:[040]://    
+        MSG('+------------------------------+'); //:[040]://    
+        MSG('|  ## BELOW IS ONE LINE! ##    |'); //:[040]://    
+        MSG('|                              |'); //:[040]://    
+        MSG('|  heroku addons:create        |'); //:[040]://    
+        MSG('|  heroku-postgresql:hobby-dev |'); //:[040]://    
         MSG('|  --version=14                |'); //:[040]://    
-        MSG('|  --app  "APPNAME"            |'); //:[040]://
-        MSG('|  --name "APPNAME-database"   |'); //:[040]://
-        MSG('|                              |'); //:[040]://
-        MSG('+------------------------------+'); //:[040]://
-    };;
+        MSG('|  --app  "APPNAME"            |'); //:[040]://    
+        MSG('|  --name "APPNAME-database"   |'); //:[040]://    
+        MSG('|                              |'); //:[040]://    
+        MSG('+------------------------------+'); //:[040]://    
+    };;                                                         
 //:======================:FUNC_NIL_DATABASE_URL_MESSAGE:[040]://
 //:FUNC_INITIALIZE_SERVER_DATA:[040]:========================://
-
+                                                                
     const F_ISD = function PRIVATE_F_ISD(){          //:[040]://
-
-        MSG( "[BEG:F_ISD]" );                        //:[040]:// 
-
+                                                                
+        MSG( "[BEG:F_ISD]" );                        //:[040]://
+                                                                
         if( NIL( d_dbu ) ){                          //:[040]://
             F_MSG_NIL_DBU(); //:NullDatabaseMessage    :[040]://
         }else{                                       //:[040]://
             d_dcp =( new ( l_pg.Pool )( d_cin ) );   //:[040]://
-
+                                                                
             d_dcp.on( "error" , ( i_err , i_cli ) =>{//:[040]://
-
+                                                                
                 ERR( "[oh_nooo_bro![040]!]" );       //:[040]://
             });;                                     //:[040]://
         };;                                          //:[040]://
-            
+                                                                
         MSG( "[END:F_ISD]" );                        //:[040]://
-    };;
+    };;                                                         
 //:========================:FUNC_INITIALIZE_SERVER_DATA:[040]://
 
 //:DATA_BOTHENDS:============================================://
@@ -450,12 +449,12 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 //:INIT_SERVER_BACKEND:[035]:================================://
 if( yesnode ){
 
-    if( NIL( d_dbu ) ){                        //:[040]://
-        F_MSG_NIL_DBU();                       //:[040]://
-    }else{                                     //:[040]://
-        F_ISD();     //:Initialize_Server_Data   :[040]://
-        F_TDC();     //:Test_Database_Connection :[040]://
-    };;
+    if( NIL( d_dbu ) ){                        //:[040]://      
+        F_MSG_NIL_DBU();                       //:[040]://      
+    }else{                                     //:[040]://      
+        F_ISD();     //:Initialize_Server_Data   :[040]://      
+        F_TDC();     //:Test_Database_Connection :[040]://      
+    };;                                                         
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
