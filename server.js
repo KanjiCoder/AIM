@@ -68,11 +68,13 @@
 
     SQL Table Prefixes :                             //:[041]://
                                                      //:[041]://
-        @tab@ : tab_ : A normal Table                //:[041]://
-        @col@ : col_ : Column Name                   //:[041]://
-        @lnk@ : lnk_ : A link table                  //:[041]://
-        @fid@ : fid_ : Foriegn_Key ( id )            //:[041]://
+        @tab@ : tab_ : A Normal Table                //:[041]://
+        @lnk@ : lnk_ : A Link   Table                //:[041]://
+        @col@ :   c_ : Column Name                   //:[041]://
+        @fid@ :   k_ : Foriegn_Key ( id )            //:[041]://
         @iid@ : iid  : Primary_Key , NOT A PREFIX    //:[041]://
+                                                     //:[041]://
+        NO MORE SQL PREFIXES THAN THAT!!!            //:[041]://
 
 :::----------------------------------------------------------**/
 //:===================:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]://
@@ -98,8 +100,8 @@ if( yesnode ){ //:-------------------------------------------://
 
     var d_cts_tab_hex =( "                  "+n      //:[041]://
     +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n      //:[041]://
-    +"      iid SERIAL PRIMARY KEY          "+n      //:[041]://
-    +"  ,   hex INT CHECK ( hex >= 0 )      "+n      //:[041]://
+    +"       iid SERIAL PRIMARY KEY         "+n      //:[041]://
+    +"  ,  c_hex INT CHECK ( c_hex >= 0 )   "+n      //:[041]://
     +"  );;                                 "+n      //:[041]://
     );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;      //:[041]://
 
@@ -496,11 +498,11 @@ if( yesnode ){
         F_ISD();     //:Initialize_Server_Data   : [040] ://          
         F_TDC();     //:Test_Database_Connection : [040] ://   
         
-        //:Init_Sql_Table(@IST@):------------------------://
-
-            F_CTS( d_cts_tab_hex , "[tab_hex]" );//:[041]://
-
-        //:------------------------:Init_Sql_Table(@IST@)://    
+        //:Create_Table_Statements:[041]:----------------://    
+                                                                
+            F_CTS( d_cts_tab_hex , "[tab_hex]" );//:[041]://    
+                                                                
+        //:----------------:Create_Table_Statements:[041]://    
     };;                                                         
 
 require( "http" ).createServer( function( i_ask , i_giv ){
@@ -611,10 +613,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @don@ : Done   ( postgres "done" function pointer )
     @c_s@ : ConnectionString
     @ssl@ : Secure_Sockets_Layer
-    @cts@ : Create_Table_Statement
+    @cts@ : Create_Table[ Statement | Source ]
     @tbm@ : Trace_Back_Message
-    @cts@ : Create_Table_Source
-    
     @dbs@ / @d_dbs@ : WRONG[ data_base_string ]FIX[ dbu ]
 
     @TIK@ : TICK ( as in update tick )
@@ -641,3 +641,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
 
 *** ******************************************************** **/
+/** I_TAKE_IT_BACK ***************************************** ***
+
+    @col@ : col_ , use c_ for column prefix instead.
+
+    @fid@ : fid_ : Foriegn_Key ( id ) , use "k_" instead.
+
+*** ***************************************** I_TAKE_IT_BACK **/
