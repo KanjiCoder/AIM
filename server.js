@@ -95,8 +95,8 @@
 
 if( yesnode ){ //:-------------------------------------------://
 
-    const n = "\n" ; //:@nlc@ : New_Line_Char://
-                     //:const == block scope ://
+    const n = "\n" ; //:@nlc@ : New_Line_Char ::::::::::[041]://
+                     //:const == block scope  ::::::::::[041]://
 
     var d_cts_tab_hex =( "                  "+n      //:[041]://
     +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n      //:[041]://
@@ -443,21 +443,23 @@ if( yesnode ){ //:-------------------------------------------://
 //:FUNC_INIT_SQL_TABLE:[041]:================================://
 //:_____I____S___T___________________________________________://
 
-    const F_IST = function PRIVATE_F_IST( i_cts , i_tbm ){
-
-        d_dcp
-        .query( i_cts )
-        .then( function( i_res ){
-
-            LOG( "[ist_o_k:tbm]" , i_tbm );
-        })
-        .catch( function( i_err ){
-
-            LOG( "[ist_err:tbm]" , i_tbm );
-            ERR( "[ist_err:tbm]"         );
-        })
-        ;;
-    };;
+    const F_IST = function PRIVATE_F_IST(            //:[041]://
+                                                     //:[041]://
+        i_cts ,i_tbm                                 //:[041]://
+    ){                                               //:[041]://
+        d_dcp                                        //:[041]://
+        .query( i_cts )                              //:[041]://
+        .then( function( i_res ){                    //:[041]://
+                                                     //:[041]://
+            LOG( "[ist_o_k:tbm]" , i_tbm );          //:[041]://
+        })                                           //:[041]://
+        .catch( function( i_err ){                   //:[041]://
+                                                     //:[041]://
+            LOG( "[ist_err:tbm]" , i_tbm );          //:[041]://
+            ERR( "[ist_err:tbm]"         );          //:[041]://
+        })                                           //:[041]://
+        ;;                                           //:[041]://
+    };;                                              //:[041]://
 //:__________________________________________________________://
 //:______________________________________I____S___T__________://
 //:================================:FUNC_INIT_SQL_TABLE:[041]://
@@ -498,7 +500,7 @@ if( yesnode ){
         
         //:Init_Sql_Table(@IST@):------------------------://
 
-            F_IST( d_cts_tab_hex , "[tab_hex]" );
+            F_IST( d_cts_tab_hex , "[tab_hex]" );//:[041]://
 
         //:------------------------:Init_Sql_Table(@IST@)://    
     };;                                                         
