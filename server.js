@@ -332,10 +332,20 @@ if( yesnode ){ //:-------------------------------------------://
 //:=============================:FUNC_INITIALIZE_CLIENT:[035]://
 //:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]:=================://
 
-    const F_TDC() = function PRIVATE_F_TDC( ){       //:@TDC@://
+    const F_TDC = function PRIVATE_F_TDC( ){   //:@TDC@:[040]://
 
-        
+        d_dcp.connect( ( i_err , i_cli , i_don )=> {
 
+            if( i_err ){ 
+                LOG( "[error_is]" , i_err );
+                ERR( "[sorry!!!]"         );
+            };;
+            /** Assert Client ( @i_cli@ ) Exists **/
+            if( HAS( i_cli ) ){ LOG( "[exists]" ); };
+            if(!HAS( i_cli ) ){ ERR( "[notcli]" ); };
+
+            i_don();         //: @don@ : PGSQL Done Function ://
+        });;
     };;
 //:=================:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]://
 //:DATA_BOTHENDS:============================================://
@@ -365,7 +375,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 //:===============================:INIT_CLIENT_FRONTEND:[035]://
 //:INIT_SERVER_GLOBAL_STATE:[040]:===========================://
 
-    const F_INI_SER() = function PRIVATE_F_INI_SER(){
+    const F_INI_SER = function PRIVATE_F_INI_SER(){
 
         LOG( "[BEG:F_INI_SER]" );
 
@@ -382,7 +392,9 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 //:INIT_SERVER_BACKEND:[035]:================================://
 if( yesnode ){
 
-    F_INI_SER(); //:INItialize_SERver://
+    F_INI_SER(); //:INItialize_SERver :------://
+
+    F_TDC();     //:Test_Database_Connection ://
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
@@ -486,6 +498,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @wgl@ : Web_GL ( context object )
     @dbu@ : Data_Base_URL
     @dcp@ : Database_Connection_Pool
+    @err@ : Error
+    @cli@ : Client ( postgres )
+    @don@ : Done   ( postgres "done" function pointer )
 
     @TIK@ : TICK ( as in update tick )
     @GUL@ : Game_Update_Loop
