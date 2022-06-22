@@ -365,21 +365,21 @@ if( yesnode ){ //:-------------------------------------------://
 //:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]:=================://
 
     const F_TDC = function PRIVATE_F_TDC( ){   //:@TDC@:[040]://
-
-        d_dcp.connect( ( i_err , i_cli , i_don )=> {
-
-            if( i_err ){ 
-                LOG( "[d_dbu...]" , d_dbu );
-                LOG( "[error_is]" , i_err );
-                ERR( "[sorry!!!]"         );
-            };;
-            /** Assert Client ( @i_cli@ ) Exists **/
-            if( HAS( i_cli ) ){ LOG( "[exists]" ); };
-            if(!HAS( i_cli ) ){ ERR( "[notcli]" ); };
-
-            i_don();         //: @don@ : PGSQL Done Function ://
-        });;
-    };;
+                                                     //:[040]://
+        d_dcp.connect( ( i_err , i_cli , i_don )=>{  //:[040]://
+                                                     //:[040]://
+            if( i_err ){                             //:[040]://
+                LOG( "[d_dbu...]" , d_dbu );         //:[040]://
+                LOG( "[error_is]" , i_err );         //:[040]://
+                ERR( "[sorry!!!]"         );         //:[040]://
+            };;                                      //:[040]://
+            /** Assert Client ( @i_cli@ ) Exists **/ //:[040]://
+            if( HAS( i_cli ) ){ LOG( "[exists]" ); };//:[040]://
+            if(!HAS( i_cli ) ){ ERR( "[notcli]" ); };//:[040]://
+                                                     //:[040]://
+            i_don();    //: @don@ : PGSQL Done Function [040]://
+        });;                                         //:[040]://
+    };;                                              //:[040]://
 //:=================:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]://
 //:FUNC_NIL_DATABASE_URL_MESSAGE:[040]:======================://
 
