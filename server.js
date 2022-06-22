@@ -188,6 +188,13 @@ if( yesnode ){ //:-------------------------------------------://
             console.log( i_msg , ":" , "[UND]" );    //:[040]://
         };;
     };;
+    function MSG( i_msg ){                           //:[040]://
+        if( typeof i_msg != "string" ){              //:[040]://
+            console.log( "[MSG_IS_FOR_STRINGS]" );   //:[040]://
+        }else{                                       //:[040]://
+            console.log( i_msg );                    //:[040]://
+        };;                                          //:[040]://
+    };;                                              //:[040]://
     function HAS( i_obj ){
     
         var o_has =( 0 );
@@ -221,6 +228,21 @@ if( yesnode ){ //:-------------------------------------------://
 
         return( o_has );
     };;
+    function NIL( i_obj ){                       //:[040]://
+
+        /** ******************************************** **/
+        /** DONT: return( ! HAS( i_obj ) ) ************* **/
+        /** We want an integer , not bool "true"/"false" **/ 
+        /** ******************************************** **/
+
+        var o_nil = ( 666 );                     //:[040]://
+            o_has =( HAS( i_obj ) );             //:[040]://
+        if( 0 == o_has ){ o_nil =( 1 ); };       //:[040]://
+        if( 1 == o_has ){ o_nil =( 0 ); };       //:[040]://
+                                                 //:[040]://
+        return( o_nil );                         //:[040]://
+    };;
+
 //:=============================:FUNC_BOILERPLATE:[028]+[035]://
 //:FUNC_RESIZE_CANVAS:[032]+[035]:===========================://
 
@@ -359,6 +381,48 @@ if( yesnode ){ //:-------------------------------------------://
         });;
     };;
 //:=================:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]://
+//:FUNC_NIL_DATABASE_URL_MESSAGE:[040]:======================://
+
+    const F_MSG_NIL_DBU = function PRIVATE_F_MSG_NIL_DBU(){
+
+        MSG("[YOU_DONT_HAVE_A_DATABASE!!!!!!]"); //:[040]://
+        MSG("[THE_SOLUTION_IS_BELOW!!!!!!!!!]"); //:[040]://
+        MSG("                                "); //:[040]://
+        MSG("+------------------------------+"); //:[040]://
+        MSG("|  ## BELOW IS ONE LINE! ##    |"); //:[040]://
+        MSG("|                              |"); //:[040]://
+        MSG("|  heroku addons:create        |"); //:[040]://
+        MSG("|  heroku-postgresql:hobby-dev |"); //:[040]://
+        MSG("|  --version=14                |"); //:[040]://    
+        MSG("|  --app "APPNAME"             |"); //:[040]://
+        MSG("|  --name "APPNAME-database"   |"); //:[040]://
+        MSG("|                              |"); //:[040]://
+        MSG("+------------------------------+"); //:[040]://
+    };;
+
+//:======================:FUNC_NIL_DATABASE_URL_MESSAGE:[040]://
+//:FUNC_INITIALIZE_SERVER_DATA:[040]:========================://
+
+    const F_ISD = function PRIVATE_F_ISD(){          //:[040]://
+
+        MSG( "[BEG:F_ISD]" );                        //:[040]:// 
+
+        if( NIL( d_dbu ) ){                          //:[040]://
+            F_MSG_NIL_DBU(); //:NullDatabaseMessage    :[040]://
+        }else{                                       //:[040]://
+            d_dcp =( new ( l_pg.Pool )( d_cin ) );   //:[040]://
+
+            d_dcp.on( "error" , ( i_err , i_cli ) =>{//:[040]://
+
+                ERR( "[oh_nooo_bro![040]!]" );       //:[040]://
+            });;                                     //:[040]://
+        };;                                          //:[040]://
+            
+
+        MSG( "[END:F_ISD]" );                        //:[040]://
+    };;
+//:========================:FUNC_INITIALIZE_SERVER_DATA:[040]://
+
 //:DATA_BOTHENDS:============================================://
 
     /** ************************************ **/
@@ -384,28 +448,16 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 
 };; };;
 //:===============================:INIT_CLIENT_FRONTEND:[035]://
-//:INIT_SERVER_GLOBAL_STATE:[040]:===========================://
 
-    const F_INI_SER = function PRIVATE_F_INI_SER(){
-
-        LOG( "[BEG:F_INI_SER]" );
-
-        d_dcp =( new ( l_pg.Pool )( d_cin ) );       //:[040]://
-
-        d_dcp.on( "error" , ( i_err , i_cli ) =>{    //:[040]://
-
-            ERR( "[oh_nooo_bro![040]!]" );           //:[040]://
-        });;
-
-        LOG( "[END:F_INI_SER]" );
-    };;
-//:===========================:INIT_SERVER_GLOBAL_STATE:[040]://
 //:INIT_SERVER_BACKEND:[035]:================================://
 if( yesnode ){
 
-    F_INI_SER(); //:INItialize_SERver :------:[040]://
-
-    F_TDC();     //:Test_Database_Connection :[040]://
+    if( NIL( d_dbu ) ){
+        F_MSG_NIL_DBU();
+    }else{
+        F_ISD();     //:Initialize_Server_Data   :[040]://
+        F_TDC();     //:Test_Database_Connection :[040]://
+    };;
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
@@ -515,6 +567,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @don@ : Done   ( postgres "done" function pointer )
     @c_s@ : ConnectionString
     @ssl@ : Secure_Sockets_Layer
+    
+    @dbs@ / @d_dbs@ : WRONG[ data_base_string ]FIX[ dbu ]
 
     @TIK@ : TICK ( as in update tick )
     @GUL@ : Game_Update_Loop
@@ -533,6 +587,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     #_P_N_C_# : Paranoid_Null_Check
 
+    @F_INI_SER@ : Initialize Server ( SEE[ F_ISD ] )
+    @F_ISD@     : Initialize Server Data
 
 
 *** ******************************************************** **/
