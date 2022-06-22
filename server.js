@@ -66,16 +66,14 @@
         i_    : input    ( LOCAL  )
         o_    : output   ( LOCAL  )
 
-    Table Prefixes :
+    SQL Table Prefixes :                             //:[041]://
+                                                     //:[041]://
+        @tab@ : tab_ : A normal Table                //:[041]://
+        @col@ : col_ : Column Name                   //:[041]://
+        @lnk@ : lnk_ : A link table                  //:[041]://
+        @fid@ : fid_ : Foriegn_Key ( id )            //:[041]://
+        @iid@ : iid  : Primary_Key , NOT A PREFIX    //:[041]://
 
-        @tab@ : tab_ : A normal Table
-        @col@ : col_ : Column Name
-        @lnk@ : lnk_ : A link table
-        @fid@ : fid_ : Foriegn_Key ( id )
-        @iid@ : iid  : Primary_Key , NOT A PREFIX
-
-         
-        
 :::----------------------------------------------------------**/
 //:===================:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]://
 //:ENVIRONMENT_DETECTION:====================================://
@@ -95,13 +93,13 @@
 
 if( yesnode ){ //:-------------------------------------------://
 
-    const n = "\n" ; //:@nlc@ : New_Line_Char ::::::::::[041]://
+    const n = "\n" ; //: @n@ : New_Line_Char  ::::::::::[041]://
                      //:const == block scope  ::::::::::[041]://
 
     var d_cts_tab_hex =( "                  "+n      //:[041]://
     +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n      //:[041]://
     +"      iid SERIAL PRIMARY KEY          "+n      //:[041]://
-    +"  ,   hex INT CHECK ( hex > 0 )       "+n      //:[041]://
+    +"  ,   hex INT CHECK ( hex >= 0 )      "+n      //:[041]://
     +"  );;                                 "+n      //:[041]://
     );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;      //:[041]://
 
@@ -440,10 +438,10 @@ if( yesnode ){ //:-------------------------------------------://
         MSG( "[END:F_ISD]" );                        //:[040]://
     };;                                                         
 //:========================:FUNC_INITIALIZE_SERVER_DATA:[040]://
-//:FUNC_INIT_SQL_TABLE:[041]:================================://
-//:_____I____S___T___________________________________________://
+//:FUNC_CREATE_TABLE_STATEMENT:[041]:========================://
+//:_____C______T_____S_______________________________________://
 
-    const F_IST = function PRIVATE_F_IST(            //:[041]://
+    const F_CTS = function PRIVATE_F_CTS(            //:[041]://
                                                      //:[041]://
         i_cts ,i_tbm                                 //:[041]://
     ){                                               //:[041]://
@@ -451,18 +449,18 @@ if( yesnode ){ //:-------------------------------------------://
         .query( i_cts )                              //:[041]://
         .then( function( i_res ){                    //:[041]://
                                                      //:[041]://
-            LOG( "[ist_o_k:tbm]" , i_tbm );          //:[041]://
+            LOG( "[cts_o_k:tbm]" , i_tbm );          //:[041]://
         })                                           //:[041]://
         .catch( function( i_err ){                   //:[041]://
                                                      //:[041]://
-            LOG( "[ist_err:tbm]" , i_tbm );          //:[041]://
-            ERR( "[ist_err:tbm]"         );          //:[041]://
+            LOG( "[cts_err:tbm]" , i_tbm );          //:[041]://
+            ERR( "[cts_err:tbm]"         );          //:[041]://
         })                                           //:[041]://
         ;;                                           //:[041]://
     };;                                              //:[041]://
 //:__________________________________________________________://
-//:______________________________________I____S___T__________://
-//:================================:FUNC_INIT_SQL_TABLE:[041]://
+//:______________________________C______T_____S______________://
+//:========================:FUNC_CREATE_TABLE_STATEMENT:[041]://
 //:DATA_BOTHENDS:============================================://
 
     /** ************************************ **/
@@ -500,7 +498,7 @@ if( yesnode ){
         
         //:Init_Sql_Table(@IST@):------------------------://
 
-            F_IST( d_cts_tab_hex , "[tab_hex]" );//:[041]://
+            F_CTS( d_cts_tab_hex , "[tab_hex]" );//:[041]://
 
         //:------------------------:Init_Sql_Table(@IST@)://    
     };;                                                         
@@ -638,6 +636,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     @F_INI_SER@ : Initialize Server ( SEE[ F_ISD ] )
     @F_ISD@     : Initialize Server Data
+    @F_CTS@     : Create_Table_Statement ( run the statement )
+    @F_IST@     : Init_SQL_Table
 
 
 *** ******************************************************** **/
