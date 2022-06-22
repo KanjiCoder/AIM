@@ -85,7 +85,8 @@
 
 if( yesnode ){ //:-------------------------------------------://
 
-
+    var d_dbu = process.env.DATABASE_URL ;      //:[040]@dbu@://
+    var d_dcp = "[nil][!s!:d_dcp]"       ;      //:[040]@dcp@://
 
     var d_webpage =( "" //:------------------://
     +'      <!DOCTYPE HTML><head>              '
@@ -146,9 +147,10 @@ if( yesnode ){ //:-------------------------------------------://
     /** categorizing them as "data" was better move.     **/
     /** ************************************************ **/
 
-    var l_fs  = require( "fs"               );
-    var l_url = require( "url"              );
-    var l_qs  = require( "node:querystring" );
+    var l_pg  = require( "pg"               );  //:PosgGreSQL://
+    var l_fs  = require( "fs"               );  //:FileSys   ://
+    var l_url = require( "url"              );  //: U.R.L.   ://
+    var l_qs  = require( "node:querystring" );  //:QueryStr  ://
 
 };; //:------------------------------------------------------://
 //:============================:MASTER_DECLARATION_LIBS:[035]://
@@ -167,8 +169,10 @@ if( yesnode ){ //:-------------------------------------------://
 
     function ERR( i_msg ){
     
-        if( notnode ){ alert( "[ERR]:" + i_msg ); };
-                       throw( "[ERR]:" + i_msg );
+        if( 1 === 1 ){ console.log( "[ERR]:" + i_msg ); };
+        if( notnode ){       alert( "[ERR]:" + i_msg ); };
+        if( notnode ){       throw( "[ERR]:" + i_msg ); };
+        if( yesnode ){  process.exit( 40 /**[040]**/ ); }; 
     };;
     function LOG( i_msg , i_any ){
     
@@ -326,6 +330,14 @@ if( yesnode ){ //:-------------------------------------------://
 
     };;
 //:=============================:FUNC_INITIALIZE_CLIENT:[035]://
+//:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]:=================://
+
+    const F_TDC() = function PRIVATE_F_TDC( ){       //:@TDC@://
+
+        
+
+    };;
+//:=================:FUNC_DATABASE_CONNECTION_SMOKETEST:[040]://
 //:DATA_BOTHENDS:============================================://
 
     /** ************************************ **/
@@ -351,8 +363,26 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 
 };; };;
 //:===============================:INIT_CLIENT_FRONTEND:[035]://
+//:INIT_SERVER_GLOBAL_STATE:[040]:===========================://
+
+    const F_INI_SER() = function PRIVATE_F_INI_SER(){
+
+        LOG( "[BEG:F_INI_SER]" );
+
+        d_dcp =( new ( l_pg.Pool )( ) );             //:[040]://
+
+        d_dcp.on( "error" , ( i_err , i_cli ) =>{    //:[040]://
+
+            ERR( "[oh_nooo_bro![040]!]" );           //:[040]://
+        });;
+
+        LOG( "[END:F_INI_SER]" );
+    };;
+//:===========================:INIT_SERVER_GLOBAL_STATE:[040]://
 //:INIT_SERVER_BACKEND:[035]:================================://
 if( yesnode ){
+
+    F_INI_SER(); //:INItialize_SERver://
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
@@ -454,9 +484,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @wid@ : The WIDTH  (usually pixels) of something.
     @hig@ : The HEIGHT (usually pixels) of something.
     @wgl@ : Web_GL ( context object )
+    @dbu@ : Data_Base_URL
+    @dcp@ : Database_Connection_Pool
 
     @TIK@ : TICK ( as in update tick )
     @GUL@ : Game_Update_Loop
+    @TDC@ : Test_Database_Connection
 
     @dom_roo@ : DomainObjectModel - Root
     @dom_bod@ : DomainObjectModel - Body
