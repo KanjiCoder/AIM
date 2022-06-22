@@ -86,6 +86,10 @@
 if( yesnode ){ //:-------------------------------------------://
 
     var d_dbu = process.env.DATABASE_URL ;      //:[040]@dbu@://
+    var d_cin ={                                //:[040]@cin@://
+        connectionString : d_dbu                //:[040]@c_s@://
+    ,   ssl : { rejectUnauthorized : false }    //:[040]@ssl@://
+    };;                                         //:[040] --- ://
     var d_dcp = "[nil][!s!:d_dcp]"       ;      //:[040]@dcp@://
 
     var d_webpage =( "" //:------------------://
@@ -176,7 +180,12 @@ if( yesnode ){ //:-------------------------------------------://
     };;
     function LOG( i_msg , i_any ){
     
-        console.log( i_msg , ":" , i_any );
+        if( undefined != i_any ){                    //:[040]://
+
+            console.log( i_msg , ":" , i_any );
+        }else{
+            console.log( i_msg );                    //:[040]://
+        };;
     };;
     function HAS( i_obj ){
     
@@ -379,7 +388,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 
         LOG( "[BEG:F_INI_SER]" );
 
-        d_dcp =( new ( l_pg.Pool )( ) );             //:[040]://
+        d_dcp =( new ( l_pg.Pool )( d_cin ) );       //:[040]://
 
         d_dcp.on( "error" , ( i_err , i_cli ) =>{    //:[040]://
 
@@ -392,9 +401,9 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 //:INIT_SERVER_BACKEND:[035]:================================://
 if( yesnode ){
 
-    F_INI_SER(); //:INItialize_SERver :------://
+    F_INI_SER(); //:INItialize_SERver :------:[040]://
 
-    F_TDC();     //:Test_Database_Connection ://
+    F_TDC();     //:Test_Database_Connection :[040]://
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
@@ -497,10 +506,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @hig@ : The HEIGHT (usually pixels) of something.
     @wgl@ : Web_GL ( context object )
     @dbu@ : Data_Base_URL
+    @cin@ : Connection_INformation
     @dcp@ : Database_Connection_Pool
     @err@ : Error
     @cli@ : Client ( postgres )
     @don@ : Done   ( postgres "done" function pointer )
+    @c_s@ : ConnectionString
+    @ssl@ : Secure_Sockets_Layer
 
     @TIK@ : TICK ( as in update tick )
     @GUL@ : Game_Update_Loop
