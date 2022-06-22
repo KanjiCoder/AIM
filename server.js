@@ -346,6 +346,7 @@ if( yesnode ){ //:-------------------------------------------://
         d_dcp.connect( ( i_err , i_cli , i_don )=> {
 
             if( i_err ){ 
+                LOG( "[d_dbu...]" , d_dbu );
                 LOG( "[error_is]" , i_err );
                 ERR( "[sorry!!!]"         );
             };;
