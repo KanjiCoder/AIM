@@ -537,7 +537,7 @@ if( yesnode ){ //:-------------------------------------------://
     PRIVATE_F_DABITCH_RUN_SQL(                       //:[044]://
                                                      //:[044]://
         i_sql                                        //:[044]://
-    ){                                               //:[044]://                                          
+    ){                                               //:[044]://
         var o_promise = new Promise( function        //:[044]://
         EXECUTO_F_DABITCH_RUN_SQL(                   //:[044]://
                                                      //:[044]://
@@ -859,9 +859,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** ***************************************** I_TAKE_IT_BACK **/
 /** MISC_DELTA_NOTES *************************************** ***
 
-    [044] : Will crash randomly if you supply correct 
-          : password. This is by design. We will fix it
-          : in future deltas.
+    [044] : Will crash randomly if you supply correct           
+          : password. This is by design. We will fix it         
+          : in future deltas.                                   
 
 
 
