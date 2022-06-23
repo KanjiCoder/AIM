@@ -471,7 +471,7 @@ if( yesnode ){ //:-------------------------------------------://
 //:                                                          ://
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 
-    const   F_ASERVER_END_O_K = 
+    const   F_ASERVER_END_O_K = function
     PRIVATE_F_ASERVER_END_O_K(
 
         i_sob 
@@ -490,7 +490,7 @@ if( yesnode ){ //:-------------------------------------------://
 //:                                                          ://
 //:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
 
-    const   F_DABITCH_DROPTAB_TAB_HEX =
+    const   F_DABITCH_DROPTAB_TAB_HEX = function
     PRIVATE_F_DABITCH_DROPTAB_TAB_HEX(
 
         /** No Argument List **/
