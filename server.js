@@ -507,9 +507,19 @@ if( yesnode ){ //:-------------------------------------------://
     PRIVATE_F_ASERVER_END_O_K(                       //:[042]://
                                                      //:[042]://
         i_sob                                        //:[042]://
+    ,   i_saywhat /**Optional**/                     //:[044]://
     ){                                               //:[042]://
         i_sob.m_giv.writeHead( 200 ,  d_txt     );   //:[042]://
-        i_sob.m_giv.end( "[O_K][K_THNX_BYE]" );      //:[042]://
+                                                     //:[044]://
+        if( HAS( i_saywhat ) ){                      //:[044]://
+            i_sob.m_giv.write(                       //:[044]://
+                "[OH_BTW:i_saywhat]"                 //:[044]://
+                       + i_saywhat                   //:[044]://
+                       + "\n"                        //:[044]://
+            );;                                      //:[044]://
+        };;                                          //:[044]://
+                                                     //:[044]://
+        i_sob.m_giv.end( "[O_K][K_THNX_BYE]" );      //:[044]://
     };;                                              //:[042]://
 
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
@@ -659,7 +669,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                                                      //:[044]://
         ).then( ( i_saywhat )=>{                     //:[044]://
                                                      //:[044]://
-            F_ASERVER_END_O_K( sob );                //:[042]://
+            F_ASERVER_END_O_K( sob , i_saywhat );    //:[044]://
                                                      //:[044]://
         }, F_NICEGUY );;                             //:[044]://
     }else{
