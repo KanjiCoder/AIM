@@ -96,6 +96,8 @@
     const d_dbp =( //:It's not "DataBase Pool"          [044]://
         "[FIX:d_dcp(Database_Client_Pool)]" );;      //:[044]://
 
+    const cantsay =( "[FIX:wontsay]" );              //:[045]://
+
 //:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
 //:MASTER_DECLARATION_DATA:[035]:============================://
 
@@ -537,25 +539,33 @@ if( yesnode ){ //:-------------------------------------------://
     PRIVATE_F_DABITCH_RUN_SQL(                       //:[044]://
                                                      //:[044]://
         i_sql                                        //:[044]://
+    ,   i_tbm                                        //:[045]://
     ){                                               //:[044]://
+                                                     //:[045]://
+        if( NIL( i_sql ) ){ ERR("#001#"); };         //:[045]://
+        if( NIL( i_tbm ) ){ ERR("#002#"); };         //:[045]://
+                                                     //:[045]://
         var o_promise = new Promise( function        //:[044]://
         EXECUTO_F_DABITCH_RUN_SQL(                   //:[044]://
                                                      //:[044]://
             o_k_yes //: resolve func , NOT_AN_ERROR  //:[044]://
-        ,   okbutno //: reject  func , NOT_AN_ERROR  //:[044]://
+        ,   wontsay //: reject  func , NOT_AN_ERROR  //:[044]://
         ){                                           //:[044]://
-                                                     //:[044]://
-            var saywhat =( "[nil][isaywhat]" );      //:[044]://
-                                                     //:[044]://
-            var bin = F_RANDBIN( );                  //:[044]://
-            if( 1 == bin ){                          //:[044]://
-                         saywhat =("[o_k_yes]");     //:[044]://
-                o_k_yes( saywhat );                  //:[044]://
-            };;                                      //:[044]://
-            if( 0 == bin ){                          //:[044]://
-                         saywhat =("[okbutno]");     //:[044]://
-                okbutno( saywhat  );                 //:[044]://
-            };;                                      //:[044]://
+                                                     //:[045]://
+            d_dcp                                    //:[045]://
+            .query( i_sql /**[ i_cts | i_dts ]**/ )  //:[045]://               
+            .then( function( i_saywhat ){            //:[045]://
+                                                     //:[045]://
+                LOG( "[run_sql:i_tbm]" , i_tbm );    //:[045]://
+                o_k_yes( i_saywhat );                //:[045]://
+            })                                       //:[045]://
+            .catch( function( i_err ){               //:[045]://
+                                                     //:[045]://
+                LOG( "[run_sql:i_tbm]" , i_tbm );    //:[045]://
+                LOG( "[run_sql:i_err]" , i_err );    //:[045]://
+                ERR( "[run_sql:i_tbm]"         );    //:[045]://
+            })                                       //:[045]://
+            ;;                                       //:[045]://
         });;return( o_promise );                     //:[044]://
     };;                                              //:[044]://                           
 
@@ -572,8 +582,12 @@ if( yesnode ){ //:-------------------------------------------://
         ){                                           //:[044]://
             if( "PLEASE_BITCH" === i_pas ){          //:[044]://
                                                      //:[044]://
-                F_DABITCH_RUN_SQL( d_dts_tab_hex )   //:[044]://
-                .then(                               //:[044]://
+                F_DABITCH_RUN_SQL(                   //:[044]://
+                                                     //:[045]://
+                      d_dts_tab_hex                  //:[045]://
+                ,   "[d_dts_tab_hex]"                //:[045]://
+                                                     //:[045]://
+                ).then(                              //:[044]://
                     (i_saywhat)=>{                   //:[044]://
                         o_k_yes( i_saywhat );        //:[044]://
                     }                                //:[044]://
@@ -783,6 +797,11 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
 
     @d_dcp@ : Database_Client_Pool ( d_ == global data ) 
+    
+    @o_k_yes@ : Resolver function for promise.
+    @okbutno@ : Reject   function for promise.
+    @wontsay@ : Reject   function for promise. (NEVER CALLED)
+    @cantsay@ : Mistake, I meant[ wontsay ]
 
     @TIK@ : TICK ( as in update tick )
     @GUL@ : Game_Update_Loop
@@ -792,6 +811,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @dom_bod@ : DomainObjectModel - Body
     @doc_bod@ : Means[ document body ]USE[ dom_bod ]
     @dom_can@ : DomainObjectModel - Canvas
+
+    @bla_bla@ : Someone is speaking, I am not listening.
 
     @RES_CAN@ : RESize_CANvas
 
@@ -867,3 +888,16 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
 
 *** *************************************** MISC_DELTA_NOTES **/
+/** ERRORS ************************************************* ***
+
+    Don't both documenting error numbers like #001# ,
+    this isn't Java , we give zero fucks about making
+    nice error messages. The only thing an error should
+    do is:
+
+        1. Crash the program.
+        2. Let us know exactly where the offending code is.
+
+        -KanjiCoder ( 2022_06_23 )
+
+*** ************************************************* ERRORS **/
