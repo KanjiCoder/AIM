@@ -546,9 +546,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     sob.m_seg = [ "URLPATH_SEGMENTS_NOT_LOADED]" ]       ;;;
                                                          ;;;
     //:-------------------------:load_state_object_bundle://
+    //:load_state_object_bundle:[043]:-------------------://
 
-    sob.m_url = sob.m_url.toUpperCase();         //!#MRI#!//
+    sob.m_url =( sob.m_url.toUpperCase() );      //!#MRI#!//
+	sob.m_seg =( sob.m_url.split( "/" ).filter( n => n ) );
 
+    //:-------------------:load_state_object_bundle:[043]://
+ 
     if( sob.m_url == "/HELLO" ){
 
         sob.m_giv.end( "WORLD" );
