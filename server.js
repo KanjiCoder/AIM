@@ -113,19 +113,50 @@ if( yesnode ){ //:-------------------------------------------://
     const n = "\n" ; //: @n@ : New_Line_Char  ::::::::::[041]://
                      //:const == block scope  ::::::::::[041]://
 
-    var d_dts_tab_hex =( "                  "+n      //:[044]://
-    +"                                      "+n      //:[044]://
-    +"  DROP TABLE IF EXISTS tab_hex ;      "+n      //:[044]://
-    +"                                      "+n      //:[044]://
-    );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;      //:[044]://
+    //:DABITCH_CRUD:[046]:-------------------------------://
+                                                 //:[046]://
+        var d_dabitch_c_tab_hex =( `         `+n //:[046]://
+        +`                                   `+n //:[046]://
+        +`INSERT INTO tab_hex                `+n //:[046]://
+        +`(    c_nam ,   c_hex )VALUES       `+n //:[046]://
+        +`( '${i_nam}', ${i_hex} )           `+n //:[046]://
+        +`ON CONFLICT c_nam DO NOTHING ;     `+n //:[046]://
+        +`                                   `+n //:[046]://
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //:[046]://
+        var d_dabitch_r_tab_hex =( `         `+n //:[046]://
+        +`                                   `+n //:[046]://
+        +`SELECT * FROM tab_hex              `+n //:[046]://    
+        +`WHERE c_nam = '${i_nam}' ;         `+n //:[046]://
+        +`                                   `+n //:[046]://
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //:[046]://
+        var d_dabitch_u_tab_hex =( `         `+n //:[046]://
+        +`                                   `+n //:[046]://
+        +`UPDATE tab_hex SET c_hex = ${i_hex}`+n //:[046]://
+        +`WHERE c_nam = '${i_nam}' ;         `+n //:[046]://
+        +`                                   `+n //:[046]://
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //:[046]://
+        var d_dabitch_d_tab_hex =( `         `+n //:[046]://
+        +`                                   `+n //:[046]://
+        +`DELETE FROM tab_hex                `+n //:[046]://
+        +`WHERE c_nam = '${c_nam}' ;         `+n //:[046]://
+        +`                                   `+n //:[046]://
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //:[046]://
+                                                 //:[046]://
+    //:-------------------------------:DABITCH_CRUD:[046]://
+
+    var d_dts_tab_hex =( "                  "+n  //:[044]://
+    +"                                      "+n  //:[044]://
+    +"  DROP TABLE IF EXISTS tab_hex ;      "+n  //:[044]://
+    +"                                      "+n  //:[044]://
+    );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  //:[044]://
  
-    var d_cts_tab_hex =( "                  "+n      //:[041]://
-    +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n      //:[041]://
-    +"       iid SERIAL PRIMARY KEY         "+n      //:[041]://
-    +"  ,  c_hex INT CHECK ( c_hex >= 0 )   "+n      //:[041]://
-    +"  ,  c_nam VARCHAR( 64 )              "+n      //:[042]://
-    +"  );;                                 "+n      //:[041]://
-    );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;      //:[041]://
+    var d_cts_tab_hex =( "                  "+n  //:[041]://
+    +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n  //:[041]://
+    +"       iid SERIAL PRIMARY KEY         "+n  //:[041]://
+    +"  ,  c_nam VARCHAR( 64 )              "+n  //:[046]://
+    +"  ,  c_hex INT CHECK ( c_hex >= 0 )   "+n  //:[046]://
+    +"  );;                                 "+n  //:[041]://
+    );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  //:[041]://
 
     var d_dbu = process.env.DATABASE_URL ;      //:[040]@dbu@://
     var d_cin ={                                //:[040]@cin@://
@@ -499,6 +530,23 @@ if( yesnode ){ //:-------------------------------------------://
     };;                                              //:[044]://
 
 //:=================:FUNC_NICEGUY_CANT_HANDLE_REJECTION:[044]://
+//:FUNC_PROMISE_TODO:[046]:==================================://
+                                                      
+    const F_PROTODO = function PRIVATE_F_PROTODO(    //:[046]://
+                                                     //:[046]://
+        i_todomsg                                    //:[046]://
+    ){                                               //:[046]://
+        var o_promise =( new Promise( function       //:[046]://
+        EXECUTO_F_PROTODO(                           //:[046]://
+            o_k_yes                                  //:[046]://
+        ,   wontsay                                  //:[046]://
+        ){                                           //:[046]://
+            o_k_yes( i_todomsg );                    //:[046]://
+                                                     //:[046]://
+        }));; return( o_promise );                   //:[046]://
+    };;                                              //:[046]://
+
+//:==================================:FUNC_PROMISE_TODO:[046]://
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 //:                                                          ://
 //:     SYSNAME_ASERVER ( A SERVER )                         ://
@@ -600,6 +648,37 @@ if( yesnode ){ //:-------------------------------------------://
         });;return( o_promise );                     //:[044]://
     };;                                              //:[042]://
 
+    const   F_DABITCH_C_TAB_HEX = function           //:[046]://
+    PRIVATE_F_DABITCH_C_TAB_HEX(                     //:[046]://
+                                                     //:[046]://
+        i_nam                                        //:[046]://
+    ,   i_hex                                        //:[046]://
+    ){                                               //:[046]://
+        return( F_PROTODO( "[TODO:C]" );             //:[046]://                 
+    };;                                              //:[046]://
+    const   F_DABITCH_R_TAB_HEX = function           //:[046]://
+    PRIVATE_F_DABITCH_R_TAB_HEX(                     //:[046]://
+                                                     //:[046]://
+        i_nam                                        //:[046]://
+    ){                                               //:[046]://
+        return( F_PROTODO( "[TODO:R]" );             //:[046]://   
+    };;                                              //:[046]://
+    const   F_DABITCH_U_TAB_HEX = function           //:[046]://
+    PRIVATE_F_DABITCH_U_TAB_HEX(                     //:[046]://
+                                                     //:[046]://
+        i_nam                                        //:[046]://
+    ,   i_hex                                        //:[046]://
+    ){                                               //:[046]://
+        return( F_PROTODO( "[TODO:U]" );             //:[046]://   
+    };;                                              //:[046]://
+    const   F_DABITCH_D_TAB_HEX = function           //:[046]://
+    PRIVATE_F_DABITCH_D_TAB_HEX(                     //:[046]://
+                                                     //:[046]://
+        i_nam                                        //:[046]://
+    ){                                               //:[046]://
+        return( F_PROTODO( "[TODO:D]" );             //:[046]://   
+    };;                                              //:[046]://
+
 //:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
 //:                                                          ://
 //:     SYSNAME_DABITCH ( DAtabase Bitch )                   ://
@@ -670,6 +749,37 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             sob.m_giv.end( i_cof , "utf-8" );
         });;
     }else
+    //:dabitch_crud:[046]:-----------------------------------://
+    if(  1                                           //:[046]://
+    &&   "DABITCH" === sob.m_seg[ 0 ]                //:[046]://
+                                                     //:[046]://
+    &&      (  0                                     //:[046]://
+            || "C" === sob.m_seg[ 1 ]  //: DABITCH/C/TAB_HEX ://
+            || "R" === sob.m_seg[ 1 ]  //: DABITCH/R/TAB_HEX ://
+            || "U" === sob.m_seg[ 1 ]  //: DABITCH/U/TAB_HEX ://
+            || "D" === sob.m_seg[ 1 ]  //: DABITCH/D/TAB_HEX ://
+            )                                        //:[046]://
+    &&   "TAB_HEX" === sob.m_seg[ 2 ]                //:[046]://
+    ){                                               //:[046]://
+        var     nam = sob.m_seg[ 3 ];                //:[046]://
+        var     hex = sob.m_seg[ 4 ];                //:[046]://
+        var c_r_u_d = sob.m_seg[ 1 ];                //:[046]://
+        var crud ={                                  //:[046]://
+            "C" : F_DABITCH_C_TAB_HEX  //: DABITCH/C/TAB_HEX ://
+        ,   "R" : F_DABITCH_R_TAB_HEX  //: DABITCH/R/TAB_HEX ://
+        ,   "U" : F_DABITCH_U_TAB_HEX  //: DABITCH/U/TAB_HEX ://
+        ,   "D" : F_DABITCH_D_TAB_HEX  //: DABITCH/D/TAB_HEX ://
+        };;                                          //:[046]://
+        (crud[ c_r_u_d ])(                           //:[046]://
+            nam                                      //:[046]://
+        ,   hex                                      //:[046]://
+        ).then( ( i_saywhat )=>{                     //:[046]://
+                                                     //:[046]://
+            F_ASERVER_END_O_K( sob , i_saywhat );    //:[046]://
+                                                     //:[046]://
+        }, F_NICEGUY );;                             //:[046]://
+    }else                                            //:[046]://
+    //:-----------------------------------:dabitch_crud:[046]://
     if(  1
     &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [042]://
     &&   "DROPTAB" === sob.m_seg[ 1 ] //: < < < < < < < [042]://
@@ -837,6 +947,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @m_pam@ : query params dict   
     @m_seg@ : url segments array  
 
+    @PROTODO@ : A promise used as a todo message.
 
 *** ******************************************************** **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
