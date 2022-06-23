@@ -1,0 +1,12 @@
+
+
+
+    some_function_returning_promise().then(
+
+        accept_handler( data )=>{ ... }
+
+        ,
+
+        reject_handler( data )=>{ ... }
+
+    };;

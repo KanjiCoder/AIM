@@ -1,0 +1,18 @@
+
+    var o_promise =(
+    new Promise( function my_inlined_executor_function(
+
+        /** ****************************************** **/
+        /** You do __NOT_DEFINE__ these two functions  **/
+        /** but you can __NAME__ them whatever         **/
+        /** you like.                                  **/
+        /** ****************************************** **/
+
+        JAVASCRIPT_PROVIDED_FUNCTION_resolve
+    ,   JAVASCRIPT_PROVIDED_FUNCTION_reject
+    ){
+
+        
+
+    }));;
+

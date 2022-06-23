@@ -839,10 +839,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             : bluntly cut him off and tell him to               
             : stop talking to you. Because, that is             
             : how SOCKETs are.                                                                
-
-
     
-
 
 *** *********************** CONCEPTUAL_SUB_SYSTEM_NAMESPACES **/
 /** I_TAKE_IT_BACK ***************************************** ***
@@ -860,3 +857,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
 
 *** ***************************************** I_TAKE_IT_BACK **/
+/** MISC_DELTA_NOTES *************************************** ***
+
+    [044] : Will crash randomly if you supply correct 
+          : password. This is by design. We will fix it
+          : in future deltas.
+
+
+
+
+*** *************************************** MISC_DELTA_NOTES **/
