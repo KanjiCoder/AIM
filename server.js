@@ -93,6 +93,9 @@
     +    "[FIXED_IN_TUTORIAL_042.......]" //: < < < < < [042]://
     );; ///////////////////////////////// //: < < < < < [042]://
 
+    const d_dbp =( //:It's not "DataBase Pool"          [044]://
+        "[FIX:d_dcp(Database_Client_Pool)]" );;      //:[044]://
+
 //:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
 //:MASTER_DECLARATION_DATA:[035]:============================://
 
@@ -108,6 +111,12 @@ if( yesnode ){ //:-------------------------------------------://
     const n = "\n" ; //: @n@ : New_Line_Char  ::::::::::[041]://
                      //:const == block scope  ::::::::::[041]://
 
+    var d_dts_tab_hex =( "                  "+n      //:[044]://
+    +"                                      "+n      //:[044]://
+    +"  DROP TABLE IF EXISTS tab_hex ;      "+n      //:[044]://
+    +"                                      "+n      //:[044]://
+    );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;      //:[044]://
+ 
     var d_cts_tab_hex =( "                  "+n      //:[041]://
     +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n      //:[041]://
     +"       iid SERIAL PRIMARY KEY         "+n      //:[041]://
@@ -465,6 +474,29 @@ if( yesnode ){ //:-------------------------------------------://
 //:__________________________________________________________://
 //:______________________________C______T_____S______________://
 //:========================:FUNC_CREATE_TABLE_STATEMENT:[041]://
+//:FUNC_RANDOM_ZERO_OR_ONE:[044]:============================://
+
+    const F_RANDBIN = function PRIVATE_F_RANDBIN(){  //:[044]://
+                                                     //:[044]://
+        var o_bin =( 666 );                          //:[044]://
+        var dec = Math.random( );                    //:[044]://
+        if( dec <  0.5 ){ o_bin =( 0 ); };           //:[044]://
+        if( dec >= 0.5 ){ o_bin =( 1 ); };           //:[044]://
+        return( o_bin );                             //:[044]://
+    };;                                              //:[044]://
+
+//:============================:FUNC_RANDOM_ZERO_OR_ONE:[044]://
+//:FUNC_NICEGUY_CANT_HANDLE_REJECTION:[044]:=================://
+
+    const F_NICEGUY = function PRIVATE_F_NICEGUY(    //:[044]://
+                                                     //:[044]://
+        i_saywhat                                    //:[044]://
+    ){                                               //:[044]://
+        LOG( "[she_said:i_saywhat]" , i_saywhat );   //:[044]://
+        ERR( "[Nice_Guy_Cant_Handle_Rejection]" );   //:[044]://
+    };;                                              //:[044]://
+
+//:=================:FUNC_NICEGUY_CANT_HANDLE_REJECTION:[044]://
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 //:                                                          ://
 //:     SYSNAME_ASERVER ( A SERVER )                         ://
@@ -491,12 +523,57 @@ if( yesnode ){ //:-------------------------------------------://
 //:                                                          ://
 //:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
 
+    const   F_DABITCH_RUN_SQL = function             //:[044]://
+    PRIVATE_F_DABITCH_RUN_SQL(                       //:[044]://
+                                                     //:[044]://
+        i_sql                                        //:[044]://
+    ){                                               //:[044]://                                          
+        var o_promise = new Promise( function        //:[044]://
+        EXECUTO_F_DABITCH_RUN_SQL(                   //:[044]://
+                                                     //:[044]://
+            o_k_yes //: resolve func , NOT_AN_ERROR  //:[044]://
+        ,   okbutno //: reject  func , NOT_AN_ERROR  //:[044]://
+        ){                                           //:[044]://
+                                                     //:[044]://
+            var saywhat =( "[nil][isaywhat]" );      //:[044]://
+                                                     //:[044]://
+            var bin = F_RANDBIN( );                  //:[044]://
+            if( 1 == bin ){                          //:[044]://
+                         saywhat =("[o_k_yes]");     //:[044]://
+                o_k_yes( saywhat );                  //:[044]://
+            };;                                      //:[044]://
+            if( 0 == bin ){                          //:[044]://
+                         saywhat =("[okbutno]");     //:[044]://
+                okbutno( saywhat  );                 //:[044]://
+            };;                                      //:[044]://
+        });;return( o_promise );                     //:[044]://
+    };;                                              //:[044]://                           
+
     const   F_DABITCH_DROPTAB_TAB_HEX = function     //:[042]://
     PRIVATE_F_DABITCH_DROPTAB_TAB_HEX(               //:[042]://
                                                      //:[042]://
-        /** No Argument List **/                     //:[042]://
+        i_pas                                        //:[044]://
     ){                                               //:[042]://
-        console.log( "[TODO:DROP_TABLE]" );          //:[042]://
+        var o_promise = new Promise( function        //:[044]://
+        EXECUTO_F_DABITCH_DROPTAB_TAB_HEX(           //:[044]://
+                                                     //:[044]://
+            o_k_yes //: resolve func , NOT_AN_ERROR  //:[044]://
+        ,   wontsay //: reject  func , NOT_AN_ERROR  //:[044]://
+        ){                                           //:[044]://
+            if( "PLEASE_BITCH" === i_pas ){          //:[044]://
+                                                     //:[044]://
+                F_DABITCH_RUN_SQL( d_dts_tab_hex )   //:[044]://
+                .then(                               //:[044]://
+                    (i_saywhat)=>{                   //:[044]://
+                        o_k_yes( i_saywhat );        //:[044]://
+                    }                                //:[044]://
+                    ,                                //:[044]://
+                    F_NICEGUY                        //:[044]://
+                );;                                  //:[044]://
+            }else{                                   //:[044]://
+                    o_k_yes( "[Invalid_Password]" ); //:[044]://
+            };;                                      //:[044]://
+        });;return( o_promise );                     //:[044]://
     };;                                              //:[042]://
 
 //:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
@@ -575,9 +652,16 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     &&   "TAB_HEX" === sob.m_seg[ 2 ] //: < < < < < < < [042]://
     ){   //: PATH :   DABITCH/DROPTAB/TAB_HEX < < < < < [042]://
          //: FUNC : F_DABITCH_DROPTAB_TAB_HEX < < < < < [042]://
-                                                     //:[042]://
-        F_DABITCH_DROPTAB_TAB_HEX( );                //:[042]://
-        F_ASERVER_END_O_K( sob );                    //:[042]://
+                                                  
+        F_DABITCH_DROPTAB_TAB_HEX(                   //:[042]://
+                                                     //:[044]://
+            sob.m_seg[ 3 ] //:Password://            //:[044]://
+                                                     //:[044]://
+        ).then( ( i_saywhat )=>{                     //:[044]://
+                                                     //:[044]://
+            F_ASERVER_END_O_K( sob );                //:[042]://
+                                                     //:[044]://
+        }, F_NICEGUY );;                             //:[044]://
     }else{
 
         sob.m_giv.writeHead( 200 ,  d_htm  );
@@ -682,8 +766,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @c_s@ : ConnectionString
     @ssl@ : Secure_Sockets_Layer
     @cts@ : Create_Table[ Statement | Source ]
+    @dts@ : Drop___Table[ Statement | Source ]
     @tbm@ : Trace_Back_Message
     @dbs@ / @d_dbs@ : WRONG[ data_base_string ]FIX[ dbu ]
+    @pas@ / @i_pas@ : PASsword
+
+
+    @d_dcp@ : Database_Client_Pool ( d_ == global data ) 
 
     @TIK@ : TICK ( as in update tick )
     @GUL@ : Game_Update_Loop
@@ -755,7 +844,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     DATA_BOTHENDS       : Section deleted in [042]              
     DATA_SERVER_BACKEND : Section deleted in [042]              
 
-
+    @d_dbp@ : No Such Thing As Data_Base_Pool
+            : Probably_Looking_For[ d_dcp ]
+            : dcp == Database_Client_Pool
 
 
 *** ***************************************** I_TAKE_IT_BACK **/
