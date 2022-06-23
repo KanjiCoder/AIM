@@ -69,9 +69,10 @@
     SQL Table Prefixes :                             //:[041]://
                                                      //:[041]://
         @tab@ : tab_ : A Normal Table                //:[041]://
-        @lnk@ : lnk_ : A Link   Table                //:[041]://
-        @col@ :   c_ : Column Name                   //:[041]://
-        @fid@ :   k_ : Foriegn_Key ( id )            //:[041]://
+        @lnk@ : lnk_ : A Link   Table                //:[041]://    
+        @con@ : con_ : A CONstraint                  //:[042]://
+         @c_@ :   c_ : Column Name                   //:[041]://
+         @k_@ :   k_ : Foriegn_Key ( id )            //:[041]://
         @iid@ : iid  : Primary_Key , NOT A PREFIX    //:[041]://
                                                      //:[041]://
         NO MORE SQL PREFIXES THAN THAT!!!            //:[041]://
@@ -80,10 +81,19 @@
 //:===================:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]://
 //:ENVIRONMENT_DETECTION:====================================://
 
-    var yesnode =( "undefined" === typeof window );
-    var notnode =( "undefined"  != typeof window );
+    const yesnode =( "undefined" === typeof window );//:[042]://
+    const notnode =( "undefined"  != typeof window );//:[042]://
 
 //:====================================:ENVIRONMENT_DETECTION://
+//:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
+
+    const d_sob =( "" /////////////////// //: < < < < < [042]://
+    +    "[WHAT_THE_FUCK_WAS_I_THINKING]" //: < < < < < [042]:// 
+    +    "[THIS_OBJECT_CANNOT_BE_GLOBAL]" //: < < < < < [042]:// 
+    +    "[FIXED_IN_TUTORIAL_042.......]" //: < < < < < [042]://
+    );; ///////////////////////////////// //: < < < < < [042]://
+
+//:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
 //:MASTER_DECLARATION_DATA:[035]:============================://
 
     //:--------------------------------------------------://
@@ -102,9 +112,9 @@ if( yesnode ){ //:-------------------------------------------://
     +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n      //:[041]://
     +"       iid SERIAL PRIMARY KEY         "+n      //:[041]://
     +"  ,  c_hex INT CHECK ( c_hex >= 0 )   "+n      //:[041]://
+    +"  ,  c_nam VARCHAR( 64 )              "+n      //:[042]://
     +"  );;                                 "+n      //:[041]://
     );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;      //:[041]://
-
 
     var d_dbu = process.env.DATABASE_URL ;      //:[040]@dbu@://
     var d_cin ={                                //:[040]@cin@://
@@ -131,14 +141,6 @@ if( yesnode ){ //:-------------------------------------------://
     var d_js  = { "Content-Type": "text/javascript"          } ;
     var d_exe = { "Content-Type": "application/x-msdownload" } ;
     var d_css = { "Content-Type": "text/css"                 } ;
-
-    var d_sob ={
-        m_ask : "[nil][!s!:m_ask]"    //: ask  == request    ://
-    ,   m_giv : "[nil][!s!:m_giv]"    //: give == response   ://
-    ,   m_url : "[nil][!s!:m_url]"    //: path(relative_url) ://
-    ,   m_pam : "[nil][!s!:m_pam]"    //: query params dict  ://
-    ,   m_seg : "[nil][!s!:m_seg]"    //: url segments array ://    
-    };;
 
     console.log( "[d_dbu]" , d_dbu );
 
@@ -463,24 +465,44 @@ if( yesnode ){ //:-------------------------------------------://
 //:__________________________________________________________://
 //:______________________________C______T_____S______________://
 //:========================:FUNC_CREATE_TABLE_STATEMENT:[041]://
-//:DATA_BOTHENDS:============================================://
+//:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
+//:                                                          ://
+//:     SYSNAME_ASERVER ( A SERVER )                         ://
+//:                                                          ://
+//:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 
-    /** ************************************ **/
-    /** RELOCATED_TO:MASTER_DECLARATION_DATA **/
-    /** ************************************ **/
+    const   F_ASERVER_END_O_K = 
+    PRIVATE_F_ASERVER_END_O_K(
 
-    //! DELETE THIS SECTION IN FUTURE (tutorial 42 ) !//
+        i_sob 
+    ){
+        i_sob.m_giv.writeHead( 200 ,  d_txt  );
+        i_sob.m_giv.end( "[O_K][WHATEVER_YOU_SAY_BRO]" );
+    };;
+//:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
+//:                                                          ://
+//:     SYSNAME_ASERVER ( A SERVER )                         ://
+//:                                                          ://
+//:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
+//:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
+//:                                                          ://
+//:     SYSNAME_DABITCH ( DAtabase Bitch )                   ://
+//:                                                          ://
+//:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
 
-//:============================================:DATA_BOTHENDS://
-//:DATA_SERVER_BACKEND:======================================://
+    const   F_DABITCH_DROPTAB_TAB_HEX =
+    PRIVATE_F_DABITCH_DROPTAB_TAB_HEX(
 
-    /** ************************************ **/
-    /** RELOCATED_TO:MASTER_DECLARATION_LIBS **/
-    /** ************************************ **/
+        /** No Argument List **/
+    ){
 
-    //! DELETE THIS SECTION IN FUTURE (tutorial 42 ) !//
-
-//:======================================:DATA_SERVER_BACKEND://
+        console.log( "[TODO:DROP_TABLE]" );
+    };;
+//:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
+//:                                                          ://
+//:     SYSNAME_DABITCH ( DAtabase Bitch )                   ://
+//:                                                          ://
+//:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
 //:INIT_CLIENT_FRONTEND:[035]:===============================://
 if( notnode ){  window.onload = function( /** [030] **/ ){
 
@@ -507,37 +529,54 @@ if( yesnode ){
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
+    const   sob ={  //:----------------------------------://
+        m_ask : "[nil][!s!:m_ask]"  //: < < < < < < [042]://
+    ,   m_giv : "[nil][!s!:m_giv]"  //: < < < < < < [042]://    
+    ,   m_url : "[nil][!s!:m_url]"  //: < < < < < < [042]://    
+    ,   m_pam : "[nil][!s!:m_pam]"  //: < < < < < < [042]://    
+    ,   m_seg : "[nil][!s!:m_seg]"  //: < < < < < < [042]://      
+    };; //:----------------------------------------------://
     //:load_state_object_bundle:-------------------------://
                                                          ;;;
-    d_sob.m_ask = i_ask                                  ;;;
-    d_sob.m_giv = i_giv                                  ;;;
-    d_sob.m_url = l_url.parse( i_ask.url , 1 ).pathname  ;;;
-    d_sob.m_pam = l_qs .parse( i_ask.url , 1 ).query     ;;;
-    d_sob.m_seg = [ "URLPATH_SEGMENTS_NOT_LOADED]" ]     ;;;
+    sob.m_ask = i_ask                                    ;;;
+    sob.m_giv = i_giv                                    ;;;
+    sob.m_url = l_url.parse( i_ask.url , 1 ).pathname    ;;;
+    sob.m_pam = l_qs .parse( i_ask.url , 1 ).query       ;;;
+    sob.m_seg = [ "URLPATH_SEGMENTS_NOT_LOADED]" ]       ;;;
                                                          ;;;
     //:-------------------------:load_state_object_bundle://
 
-    d_sob.m_url = d_sob.m_url.toUpperCase();         //!#MRI#!//
+    sob.m_url = sob.m_url.toUpperCase();         //!#MRI#!//
 
-    if( d_sob.m_url == "/HELLO" ){
+    if( sob.m_url == "/HELLO" ){
 
-        d_sob.m_giv.end( "WORLD" );
+        sob.m_giv.end( "WORLD" );
     }else
-    if( d_sob.m_url == "/ATOMIC_IVY_MMO" ){
+    if( sob.m_url == "/ATOMIC_IVY_MMO" ){
 
         l_fs.readFile( "./server.js" , function(i_err,i_cof){
 
             if(i_err){
                 i_cof = "[we messed up]" ;
             }else{
-                d_sob.m_giv.writeHead( 200 , d_js );
+                sob.m_giv.writeHead( 200 , d_js );
             };;
-            d_sob.m_giv.end( i_cof , "utf-8" );
+            sob.m_giv.end( i_cof , "utf-8" );
         });;
+    }else
+    if(  1
+    &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [042]://
+    &&   "DROPTAB" === sob.m_seg[ 1 ] //: < < < < < < < [042]://
+    &&   "TAB_HEX" === sob.m_seg[ 2 ] //: < < < < < < < [042]://
+    ){   //: PATH :   DABITCH/DROPTAB/TAB_HEX < < < < < [042]://
+         //: FUNC : F_DABITCH_DROPTAB_TAB_HEX < < < < < [042]://
+                                                     //:[042]://
+        F_DABITCH_DROPTAB_TAB_HEX( );                //:[042]://
+        F_ASERVER_END_O_K( sob );                    //:[042]://
     }else{
 
-        d_sob.m_giv.writeHead( 200 ,  d_htm  );
-        d_sob.m_giv.end( d_webpage , "utf-8" );
+        sob.m_giv.writeHead( 200 ,  d_htm  );
+        sob.m_giv.end( d_webpage , "utf-8" );
     };;
 
 }).listen(process.env.PORT);
@@ -558,6 +597,21 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     github.com/KanjiCoder/AIM_035    ( end of tutorial 35 code )
 
 *** ***************************************** SNAPSHOT_REPOS **/
+/** WEIRD_CODING_CONVENTIONS ******************************* ***
+
+       var          |
+       var_var      |  All tokens ( variables & functions )
+       varavar      |             ( & namespaces          )
+       var_var_var  |  Are clusters of 3 joined by "_"
+       varavaravar  |  or an alphanumeric character.
+       123_123_123  |
+       123_1234567  |  Exception is 1 letter hungarian
+                    |  notation prefixes. 
+                    +------------------------------------------+
+   
+
+
+*** ******************************* WEIRD_CODING_CONVENTIONS **/
 /** PREFIXES *********************************************** ***
     
     GLOBAL SCOPE PREFIXES :
@@ -586,6 +640,15 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     m_    : macro       NO MACROS IN JAVASCRIPT , simplify.
     t_    : type        TRY_NOT_TO_USE_THIS
     u_    : unit test   Unit tests are functions ( f_ )
+
+    dat_  : Too verbose for this coarse grain category.
+          : use "d_" prefix for "data".
+
+    fun_  : Too verbose for this coarse grain category.
+          : use "f_" prefix for "functions"
+
+    lib_  : Too verbose for this coarse grain category.
+          : use "l_" prefix for "libraries"
 
 *** ******************************************************** **/
 /** COMMENTS_ARE_READ_LAST_OR_NEVER ************************ ***
@@ -639,12 +702,55 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @F_CTS@     : Create_Table_Statement ( run the statement )
     @F_IST@     : Init_SQL_Table
 
+     1234567
+    @DROPTAB@   : Means "Drop Table"
+
+
+    @m_ask@ : ask  == request     
+    @m_giv@ : give == response    
+    @m_url@ : path(relative_url)  
+    @m_pam@ : query params dict   
+    @m_seg@ : url segments array  
+
 
 *** ******************************************************** **/
+/** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
+
+    Just because the physical structure of the code is
+    "just dump it all in one file" doesn't mean we can't
+    have a conceptual structure of how the project is
+    organized.
+
+    1234567
+    DABITCH : DAtabase BITCH , anything that involves
+   @DABITCH@: database access goes through her. Because
+            : she is a gossipy bitch and collects
+            : all information she hears.
+
+    1234567
+    SOCREEP : SOcket CREEP , you say one god damned nice
+   @SOCREEP@: thing to him in passing and he gets the 
+            : wrong idea and keeps talking to you.
+            : He will keep talking to you until you 
+            : bluntly cut him off and tell him to 
+            : stop talking to you. Because, that is
+            : how SOCKETs are.
+
+
+    
+
+
+*** *********************** CONCEPTUAL_SUB_SYSTEM_NAMESPACES **/
 /** I_TAKE_IT_BACK ***************************************** ***
 
     @col@ : col_ , use c_ for column prefix instead.
 
     @fid@ : fid_ : Foriegn_Key ( id ) , use "k_" instead.
+
+    DATA_BOTHENDS       : Section deleted in [042]
+    DATA_SERVER_BACKEND : Section deleted in [042]
+
+
+
 
 *** ***************************************** I_TAKE_IT_BACK **/
