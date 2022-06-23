@@ -88,8 +88,8 @@
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
 
     const d_sob =( "" /////////////////// //: < < < < < [042]://
-    +    "[WHAT_THE_FUCK_WAS_I_THINKING]" //: < < < < < [042]:// 
-    +    "[THIS_OBJECT_CANNOT_BE_GLOBAL]" //: < < < < < [042]:// 
+    +    "[WHAT_THE_FUCK_WAS_I_THINKING]" //: < < < < < [042]://
+    +    "[THIS_OBJECT_CANNOT_BE_GLOBAL]" //: < < < < < [042]://
     +    "[FIXED_IN_TUTORIAL_042.......]" //: < < < < < [042]://
     );; ///////////////////////////////// //: < < < < < [042]://
 
@@ -471,14 +471,15 @@ if( yesnode ){ //:-------------------------------------------://
 //:                                                          ://
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 
-    const   F_ASERVER_END_O_K = function
-    PRIVATE_F_ASERVER_END_O_K(
+    const   F_ASERVER_END_O_K = function             //:[042]://
+    PRIVATE_F_ASERVER_END_O_K(                       //:[042]://
+                                                     //:[042]://
+        i_sob                                        //:[042]://
+    ){                                               //:[042]://
+        i_sob.m_giv.writeHead( 200 ,  d_txt     );   //:[042]://
+        i_sob.m_giv.end( "[O_K][WHATEVER_DUDE]" );   //:[042]://
+    };;                                              //:[042]://
 
-        i_sob 
-    ){
-        i_sob.m_giv.writeHead( 200 ,  d_txt  );
-        i_sob.m_giv.end( "[O_K][WHATEVER_YOU_SAY_BRO]" );
-    };;
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 //:                                                          ://
 //:     SYSNAME_ASERVER ( A SERVER )                         ://
@@ -490,14 +491,14 @@ if( yesnode ){ //:-------------------------------------------://
 //:                                                          ://
 //:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
 
-    const   F_DABITCH_DROPTAB_TAB_HEX = function
-    PRIVATE_F_DABITCH_DROPTAB_TAB_HEX(
+    const   F_DABITCH_DROPTAB_TAB_HEX = function     //:[042]://
+    PRIVATE_F_DABITCH_DROPTAB_TAB_HEX(               //:[042]://
+                                                     //:[042]://
+        /** No Argument List **/                     //:[042]://
+    ){                                               //:[042]://
+        console.log( "[TODO:DROP_TABLE]" );          //:[042]://
+    };;                                              //:[042]://
 
-        /** No Argument List **/
-    ){
-
-        console.log( "[TODO:DROP_TABLE]" );
-    };;
 //:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
 //:                                                          ://
 //:     SYSNAME_DABITCH ( DAtabase Bitch )                   ://
@@ -529,13 +530,13 @@ if( yesnode ){
 
 require( "http" ).createServer( function( i_ask , i_giv ){
 
-    const   sob ={  //:----------------------------------://
-        m_ask : "[nil][!s!:m_ask]"  //: < < < < < < [042]://
+    const   sob ={  //:----------------------------------://    
+        m_ask : "[nil][!s!:m_ask]"  //: < < < < < < [042]://    
     ,   m_giv : "[nil][!s!:m_giv]"  //: < < < < < < [042]://    
     ,   m_url : "[nil][!s!:m_url]"  //: < < < < < < [042]://    
     ,   m_pam : "[nil][!s!:m_pam]"  //: < < < < < < [042]://    
-    ,   m_seg : "[nil][!s!:m_seg]"  //: < < < < < < [042]://      
-    };; //:----------------------------------------------://
+    ,   m_seg : "[nil][!s!:m_seg]"  //: < < < < < < [042]://    
+    };; //:----------------------------------------------://    
     //:load_state_object_bundle:-------------------------://
                                                          ;;;
     sob.m_ask = i_ask                                    ;;;
@@ -721,20 +722,20 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     have a conceptual structure of how the project is
     organized.
 
-    1234567
-    DABITCH : DAtabase BITCH , anything that involves
-   @DABITCH@: database access goes through her. Because
-            : she is a gossipy bitch and collects
-            : all information she hears.
+    1234567                                                     
+    DABITCH : DAtabase BITCH , anything that involves           
+   @DABITCH@: database access goes through her. Because         
+            : she is a gossipy bitch and collects               
+            : all information she hears.                           
 
-    1234567
-    SOCREEP : SOcket CREEP , you say one god damned nice
-   @SOCREEP@: thing to him in passing and he gets the 
-            : wrong idea and keeps talking to you.
-            : He will keep talking to you until you 
-            : bluntly cut him off and tell him to 
-            : stop talking to you. Because, that is
-            : how SOCKETs are.
+    1234567                                                     
+    SOCREEP : SOcket CREEP , you say one god damned nice        
+   @SOCREEP@: thing to him in passing and he gets the           
+            : wrong idea and keeps talking to you.              
+            : He will keep talking to you until you             
+            : bluntly cut him off and tell him to               
+            : stop talking to you. Because, that is             
+            : how SOCKETs are.                                                                
 
 
     
@@ -747,8 +748,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     @fid@ : fid_ : Foriegn_Key ( id ) , use "k_" instead.
 
-    DATA_BOTHENDS       : Section deleted in [042]
-    DATA_SERVER_BACKEND : Section deleted in [042]
+    DATA_BOTHENDS       : Section deleted in [042]              
+    DATA_SERVER_BACKEND : Section deleted in [042]              
 
 
 
