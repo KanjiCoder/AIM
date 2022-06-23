@@ -654,14 +654,14 @@ if( yesnode ){ //:-------------------------------------------://
         i_nam                                        //:[046]://
     ,   i_hex                                        //:[046]://
     ){                                               //:[046]://
-        return( F_PROTODO( "[TODO:C]" );             //:[046]://                 
+        return( F_PROTODO( "[TODO:C]" ) );           //:[046]://                 
     };;                                              //:[046]://
     const   F_DABITCH_R_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_R_TAB_HEX(                     //:[046]://
                                                      //:[046]://
         i_nam                                        //:[046]://
     ){                                               //:[046]://
-        return( F_PROTODO( "[TODO:R]" );             //:[046]://   
+        return( F_PROTODO( "[TODO:R]" ) );           //:[046]:// 
     };;                                              //:[046]://
     const   F_DABITCH_U_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_U_TAB_HEX(                     //:[046]://
@@ -669,14 +669,14 @@ if( yesnode ){ //:-------------------------------------------://
         i_nam                                        //:[046]://
     ,   i_hex                                        //:[046]://
     ){                                               //:[046]://
-        return( F_PROTODO( "[TODO:U]" );             //:[046]://   
+        return( F_PROTODO( "[TODO:U]" ) );           //:[046]://  
     };;                                              //:[046]://
     const   F_DABITCH_D_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_D_TAB_HEX(                     //:[046]://
                                                      //:[046]://
         i_nam                                        //:[046]://
     ){                                               //:[046]://
-        return( F_PROTODO( "[TODO:D]" );             //:[046]://   
+        return( F_PROTODO( "[TODO:D]" ) );           //:[046]://   
     };;                                              //:[046]://
 
 //:002_002_002_002_002_002_002____002_002_002_002_002_002_002://
