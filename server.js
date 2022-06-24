@@ -600,10 +600,10 @@ if( yesnode ){ //:-------------------------------------------://
                                                       
         if( HAS( say ) ){                             
                                                       
-            if( say.rows || say.command ){ //:#IPR#://             
-                say = { arr_row : [] };             
-                say.arr_row = say.rows ;            
-            };;                                     
+        //:     if( say.rows || say.command ){ //:#IPR#://             
+        //:         say = { arr_row : [] };             
+        //:         say.arr_row = say.rows ;            
+        //:     };;                                     
                                                      //:[050]://
             jso = JSON.stringify( say );             //:[050]://
         };;                                          //:[050]://
