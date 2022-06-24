@@ -644,6 +644,7 @@ if( yesnode ){ //:-------------------------------------------://
             })                                       //:[045]://
             .catch( function( i_err ){               //:[045]://
                                                      //:[045]://
+                LOG( "[run_sql:i_sql]" , i_sql );    //:[048]://
                 LOG( "[run_sql:i_tbm]" , i_tbm );    //:[045]://
                 LOG( "[run_sql:i_err]" , i_err );    //:[045]://
                 ERR( "[run_sql:i_tbm]"         );    //:[045]://
