@@ -177,6 +177,7 @@ if( yesnode ){ //:-------------------------------------------://
     +'      </head>                            '
     );; //:----------------------------------://
 
+    var d_jso = { "Content-Type": "application/json"         } ;
     var d_txt = { "Content-Type": "text/plain"               } ;
     var d_png = { "Content-Type": "image/png"                } ;
     var d_htm = { "Content-Type": "text/html"                } ;
@@ -588,6 +589,27 @@ if( yesnode ){ //:-------------------------------------------://
 //:                                                          ://
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 
+    const   F_ASERVER_ENDJSON = function             //:[050]://
+    PRIVATE_F_ASERVER_ENDJSON(                       //:[050]://
+                                                     //:[050]://
+        i_sob                                        //:[050]://
+    ,   i_saywhat /**Optional**/                     //:[050]://
+    ){                                               //:[050]://
+        i_sob.m_giv.writeHead( 200 ,  d_jso  );      //:[050]://
+                                                     //:[050]://
+        if( NIL( i_saywhat ) ){                      //:[050]://
+                                                     //:[050]://
+            i_sob.m_giv.write( "{}" );               //:[050]://
+        }else{                                       //:[050]://
+            i_sob.m_giv.write(                       //:[050]://
+                                                     //:[050]://
+                JSON.stringify( i_saywhat );         //:[050]://
+            );;                                      //:[050]://
+        };;                                          //:[050]://
+                                                     //:[050]://
+        i_sob.m_giv.end( );                          //:[050]://
+    };;                                              //:[050]://
+
     const   F_ASERVER_END_O_K = function             //:[042]://
     PRIVATE_F_ASERVER_END_O_K(                       //:[042]://
                                                      //:[042]://
@@ -638,7 +660,13 @@ if( yesnode ){ //:-------------------------------------------://
             d_dcp                                    //:[045]://
             .query( i_sql /**[ i_cts | i_dts ]**/ )  //:[045]://
             .then( function( i_saywhat ){            //:[045]://
-                                                     //:[045]://
+                                                    
+
+              //:  xxxxxxxxxxxxxx
+               
+
+
+
                 LOG( "[run_sql:i_tbm]" , i_tbm );    //:[045]://
                 o_k_yes( i_saywhat );                //:[045]://
             })                                       //:[045]://
@@ -830,12 +858,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         ,   hex                                      //:[046]://
         ).then( ( i_saywhat )=>{                     //:[046]://
                                                      //:[046]://
-            F_ASERVER_END_O_K( sob , i_saywhat );    //:[046]://
+            F_ASERVER_ENDJSON( sob , i_saywhat );    //:[046]://
                                                      //:[046]://
         }, F_NICEGUY );;                             //:[046]://
     }else                                            //:[046]://
     //:-----------------------------------:dabitch_crud:[046]://
-    if(  1
+    if(  1                                                      
     &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [049]://
     &&   "MAKETAB" === sob.m_seg[ 1 ] //: < < < < < < < [049]://
     &&   "TAB_HEX" === sob.m_seg[ 2 ] //: < < < < < < < [049]://
@@ -845,7 +873,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         F_DABITCH_MAKETAB_TAB_HEX(  )                //:[049]://
         .then( ( i_saywhat )=>{                      //:[049]://
                                                      //:[049]://
-            F_ASERVER_END_O_K( sob , i_saywhat );    //:[049]://
+            F_ASERVER_ENDJSON( sob , i_saywhat );    //:[049]://
                                                      //:[049]://
         }, F_NICEGUY );;                             //:[049]://
     }else
@@ -862,7 +890,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                                                      //:[044]://
         ).then( ( i_saywhat )=>{                     //:[044]://
                                                      //:[044]://
-            F_ASERVER_END_O_K( sob , i_saywhat );    //:[044]://
+            F_ASERVER_ENDJSON( sob , i_saywhat );    //:[044]://
                                                      //:[044]://
         }, F_NICEGUY );;                             //:[044]://
     }else{
@@ -1102,3 +1130,21 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     TRY[ F_TED ]( Template_EDit , for sql strings )
     
 *** ******************************************************** **/
+/** FEATURE_CREEP ****************************************** ***
+
+    Let people extend my code : ( 2022_06_24 ) :
+
+        We should make it so that people can extend the game
+        simply by loading JSONP ( application/javascript ) 
+        into the game.
+
+        Or maybe allow people to... extend the code base by
+        including "ATOMIC_IVY_MMO" javasscript and then
+        using it as a library ?
+
+        application/javascript <<< Runnable JavaScript Response
+
+        Inspired by:
+        https://stackoverflow.com/questions/477816
+
+*** ****************************************** FEATURE_CREEP **/
