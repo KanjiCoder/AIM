@@ -596,16 +596,18 @@ if( yesnode ){ //:-------------------------------------------://
     ,   i_saywhat /**Optional**/                     //:[050]://
     ){                                               //:[050]://
         var jso = "{}" ;                             //:[050]://
-        var say = i_saywhat ;                        //:[050]://
+        var i_say = i_saywhat ;   
+        var o_say = i_saywhat ;
                                                       
-        if( HAS( say ) ){                             
+        if( HAS( i_say ) ){                             
                                                       
-        //:     if( say.rows || say.command ){ //:#IPR#://             
-        //:         say = { arr_row : [] };             
-        //:         say.arr_row = say.rows ;            
-        //:     };;                                     
+            if( i_say.rows || i_say.command ){ //:#IPR#://             
+                o_say = { arr_row : [] };             
+                o_say.arr_row = i_say.rows    ;
+                o_say.sql_cmd = i_say.command ;
+            };;                                     
                                                      //:[050]://
-            jso = JSON.stringify( say );             //:[050]://
+            jso = JSON.stringify( o_say );             //:[050]://
         };;                                          //:[050]://
         i_sob.m_giv.writeHead( 200 ,  d_jso  );      //:[050]://
         i_sob.m_giv.write(              jso  );      //:[050]://                  
