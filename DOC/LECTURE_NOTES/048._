@@ -1,0 +1,36 @@
+
+
+    SQL fixes Tutorial 48 :
+
+    Changed Sql Create Statement ( added : UNIQUE )
+
+
+        CREATE TABLE IF NOT EXISTS tab_hex(  
+             iid SERIAL PRIMARY KEY          
+        ,  c_nam VARCHAR( 64 ) UNIQUE               
+        ,  c_hex INT CHECK ( c_hex >= 0 )    
+        );;                                  
+
+
+    Added parens[ ( ) ]around[ c_name ]
+
+        INSERT INTO tab_hex
+        (    c_nam ,   c_hex )VALUES
+        (  'BLUE', 777 )
+        ON CONFLICT ( c_nam ) DO NOTHING ;
+
+
+    Helpful Urls :
+
+        http://sqlfiddle.com/
+
+        https://www.postgresqltutorial.com/
+        postgresql-tutorial/postgresql-upsert/
+
+        https://www.w3schools.com/sql/sql_unique.asp
+
+    TINYURL versions of urls :
+
+        www.tinyurl.com/048-URL-001
+        www.tinyurl.com/048-URL-002
+        www.tinyurl.com/048-URL-003

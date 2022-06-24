@@ -153,7 +153,7 @@ if( yesnode ){ //:-------------------------------------------://
     var d_cts_tab_hex =( "                  "+n  //:[041]://
     +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n  //:[041]://
     +"       iid SERIAL PRIMARY KEY         "+n  //:[041]://
-    +"  ,  c_nam VARCHAR( 64 )     UNIQUE   "+n  //:[048]://    
+    +"  ,  c_nam VARCHAR( 64 )     UNIQUE   "+n  //:[048]://      
     +"  ,  c_hex INT CHECK ( c_hex >= 0 )   "+n  //:[046]://    
     +"  );;                                 "+n  //:[041]://
     );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  //:[041]://
@@ -653,6 +653,18 @@ if( yesnode ){ //:-------------------------------------------://
         });;return( o_promise );                     //:[044]://
     };;                                              //:[044]://                           
 
+    const   F_DABITCH_MAKETAB_TAB_HEX = function     //:[049]://
+    PRIVATE_F_DABITCH_MAKETAB_TAB_HEX( ){            //:[049]://
+                                                     //:[049]://
+        var o_promise =(                             //:[049]://
+        F_DABITCH_RUN_SQL(                           //:[049]://
+                                                     //:[049]://
+              d_dts_tab_hex                          //:[049]://
+        ,   "[d_dts_tab_hex]"                        //:[049]://
+                                                     //:[049]://
+        ));; return( o_promise );                    //:[049]://
+    };;                                              //:[049]://
+
     const   F_DABITCH_DROPTAB_TAB_HEX = function     //:[042]://
     PRIVATE_F_DABITCH_DROPTAB_TAB_HEX(               //:[042]://
                                                      //:[042]://
@@ -823,6 +835,20 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         }, F_NICEGUY );;                             //:[046]://
     }else                                            //:[046]://
     //:-----------------------------------:dabitch_crud:[046]://
+    if(  1
+    &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [049]://
+    &&   "MAKETAB" === sob.m_seg[ 1 ] //: < < < < < < < [049]://
+    &&   "TAB_HEX" === sob.m_seg[ 2 ] //: < < < < < < < [049]://
+    ){   //: PATH :   DABITCH/MAKETAB/TAB_HEX < < < < < [049]://
+         //: FUNC : F_DABITCH_MAKETAB_TAB_HEX < < < < < [049]://
+                                                                
+        F_DABITCH_MAKETAB_TAB_HEX(  )                //:[049]://
+        .then( ( i_saywhat )=>{                      //:[049]://
+                                                     //:[049]://
+            F_ASERVER_END_O_K( sob , i_saywhat );    //:[049]://
+                                                     //:[049]://
+        }, F_NICEGUY );;                             //:[049]://
+    }else
     if(  1
     &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [042]://
     &&   "DROPTAB" === sob.m_seg[ 1 ] //: < < < < < < < [042]://
