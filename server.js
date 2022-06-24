@@ -695,8 +695,8 @@ if( yesnode ){ //:-------------------------------------------://
         sql = F_TED( sql , "[i_hex]" , i_hex );      //:[048]://
         return( F_DABITCH_RUN_SQL(                   //:[048]://
                                                      //:[048]://
-            sql , "[sql:create]" );                  //:[048]://
-        );;                                          //:[048]://
+            sql , "[sql:create]"                     //:[048]://
+        ));;                                         //:[048]://
     };;                                              //:[046]://
     const   F_DABITCH_R_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_R_TAB_HEX(                     //:[046]://
