@@ -596,11 +596,16 @@ if( yesnode ){ //:-------------------------------------------://
     ,   i_saywhat /**Optional**/                     //:[050]://
     ){                                               //:[050]://
         var jso = "{}" ;                             //:[050]://
+        var say = i_saywhat ;                        //:[050]://
                                                      //:[050]://
-        if( HAS( i_saywhat ) ){                      //:[050]://
-            jso = JSON.stringify(                    //:[050]://
-                 i_saywhat                           //:[050]://
-            );;                                      //:[050]://
+        if( HAS( say ) ){                            //:[050]://
+                                                     //:[050]://
+            if( say.rows ){ //:#IPR#://              //:[050]://
+                say = { arr_row : [] };              //:[050]://
+                say.arr_row = say.rows ;             //:[050]://
+            };;                                      //:[050]://
+                                                     //:[050]://
+            jso = JSON.stringify( say );             //:[050]://
         };;                                          //:[050]://
         i_sob.m_giv.writeHead( 200 ,  d_jso  );      //:[050]://
         i_sob.m_giv.write(              jso  );      //:[050]://                  
@@ -1048,6 +1053,11 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @MWM@ : Really should be #MWM# not @MWM@
     !MWM! : Or we could do this, doxygen style comment.
     !NDC! : Not_Deep_Copy ( Not a deep copy )
+
+    #IPR# : Is_Postgres_Response , we want to get rid 
+          : of all the bloat and return the[ rows ]
+          : member as { arr_rows : [ ... ] } response.
+          : TUTORIAL [050]
 
 *** ******************************************************** **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
