@@ -595,19 +595,16 @@ if( yesnode ){ //:-------------------------------------------://
         i_sob                                        //:[050]://
     ,   i_saywhat /**Optional**/                     //:[050]://
     ){                                               //:[050]://
-        i_sob.m_giv.writeHead( 200 ,  d_jso  );      //:[050]://
+        var jso = "{}" ;                             //:[050]://
                                                      //:[050]://
-        if( NIL( i_saywhat ) ){                      //:[050]://
-                                                     //:[050]://
-            i_sob.m_giv.write( "{}" );               //:[050]://
-        }else{                                       //:[050]://
-            i_sob.m_giv.write(                       //:[050]://
-                                                     //:[050]://
-                JSON.stringify( i_saywhat );         //:[050]://
+        if( HAS( i_saywhat ) ){                      //:[050]://
+            jso = JSON.stringify(                    //:[050]://
+                 i_saywhat                           //:[050]://
             );;                                      //:[050]://
         };;                                          //:[050]://
-                                                     //:[050]://
-        i_sob.m_giv.end( );                          //:[050]://
+        i_sob.m_giv.writeHead( 200 ,  d_jso  );      //:[050]://
+        i_sob.m_giv.write(              jso  );      //:[050]://                  
+        i_sob.m_giv.end(                     );      //:[050]://          
     };;                                              //:[050]://
 
     const   F_ASERVER_END_O_K = function             //:[042]://
