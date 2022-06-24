@@ -597,13 +597,13 @@ if( yesnode ){ //:-------------------------------------------://
     ){                                               //:[050]://
         var jso = "{}" ;                             //:[050]://
         var say = i_saywhat ;                        //:[050]://
-                                                     //:[050]://
-        if( HAS( say ) ){                            //:[050]://
-                                                     //:[050]://
-        //    if( say.rows ){ //:#IPR#://              //:[050]://
-        //        say = { arr_row : [] };              //:[050]://
-        //        say.arr_row = say.rows ;             //:[050]://
-        //    };;                                      //:[050]://
+                                                      
+        if( HAS( say ) ){                             
+                                                      
+            if( say.rows || say.command ){ //:#IPR#://             
+                say = { arr_row : [] };             
+                say.arr_row = say.rows ;            
+            };;                                     
                                                      //:[050]://
             jso = JSON.stringify( say );             //:[050]://
         };;                                          //:[050]://
