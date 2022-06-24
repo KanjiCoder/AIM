@@ -547,6 +547,41 @@ if( yesnode ){ //:-------------------------------------------://
     };;                                              //:[046]://
 
 //:==================================:FUNC_PROMISE_TODO:[046]://
+//:FUNC_DEEP_COPY_STRING:[047]:==============================://
+//:_____D____C____S__________________________________________://
+
+    const F_DCS = function PRIVATE_F_DCS(            //:[047]://
+                                                     //:[047]://
+        i_str                                        //:[047]://
+    ){                                               //:[047]://
+        var deep_copy_string =(                      //:[047]://
+                                                     //:[047]://
+            ( ' ' + i_str).slice(1)                  //:[047]://
+        );;                                          //:[047]://
+        return( deep_copy_string );                  //:[047]://
+    };;                                              //:[047]://
+//:____________________________________D____C____S___________://
+//:==============================:FUNC_DEEP_COPY_STRING:[047]://
+//:FUNC_TEMPLATE_EDit:[047]:=================================://
+//:_____T________ED__________________________________________://
+                                                     //:[047]://
+    const F_TED = function PRIVATE_F_TED(            //:[047]://
+                                                     //:[047]://
+        i_sql , i_fin , i_rep                        //:[047]://
+    ){                                               //:[047]://
+        var rep , o_sql ;                            //:[047]://
+        rep =( ""+i_rep+"" ); //:@vas@://            //:[047]://
+        o_sql = i_sql ;       //:!NDC!://            //:[047]://
+        o_sql = o_sql.replaceAll( i_fin , rep );     //:[047]://
+        return( o_sql );                             //:[047]://
+    };;                                              //:[047]://
+                                                     //:[047]://
+    const F_TSM =( "[NOT: Template Str Modify]" );   //:[047]://
+    const F_TSF =( "[NOT: Template Str Fill  ]" );   //:[047]://
+    const F_TSE =( "[NOT: Template Str Edit  ]" );   //:[047]://
+                                                     //:[047]://
+//:_______________________________________T________ED________://
+//:=================================:FUNC_TEMPLATE_EDit:[047]://
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 //:                                                          ://
 //:     SYSNAME_ASERVER ( A SERVER )                         ://
@@ -654,7 +689,14 @@ if( yesnode ){ //:-------------------------------------------://
         i_nam                                        //:[046]://
     ,   i_hex                                        //:[046]://
     ){                                               //:[046]://
-        return( F_PROTODO( "[TODO:C]" ) );           //:[046]://
+        var sql ;                                    //:[048]://
+        sql = F_DCS( d_dabitch_c_tab_hex );          //:[048]://
+        sql = F_TED( sql , "[i_nam]" , i_nam );      //:[048]://
+        sql = F_TED( sql , "[i_hex]" , i_hex );      //:[048]://
+        return( F_DABITCH_RUN_SQL(                   //:[048]://
+                                                     //:[048]://
+            sql , "[sql:create]" );                  //:[048]://
+        );;                                          //:[048]://
     };;                                              //:[046]://
     const   F_DABITCH_R_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_R_TAB_HEX(                     //:[046]://
@@ -904,6 +946,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @tbm@ : Trace_Back_Message
     @dbs@ / @d_dbs@ : WRONG[ data_base_string ]FIX[ dbu ]
     @pas@ / @i_pas@ : PASsword
+    @vas@ : Value_As_String
 
 
     @d_dcp@ : Database_Client_Pool ( d_ == global data ) 
@@ -948,6 +991,11 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @m_seg@ : url segments array  
 
     @PROTODO@ : A promise used as a todo message.
+
+    #MWM# : Monkey Wrench Macros
+    @MWM@ : Really should be #MWM# not @MWM@
+    !MWM! : Or we could do this, doxygen style comment.
+    !NDC! : Not_Deep_Copy ( Not a deep copy )
 
 *** ******************************************************** **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
@@ -1012,3 +1060,11 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         -KanjiCoder ( 2022_06_23 )
 
 *** ************************************************* ERRORS **/
+/** CTRL_F_HELP ******************************************** ***
+
+    template edit | template_edit | template string edit
+    finds and replaces tokens | find and replace
+    TRY[ F_TED ]( Template_EDit , for sql strings )
+    
+
+*** ******************************************************** **/
