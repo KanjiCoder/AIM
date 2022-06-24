@@ -596,22 +596,24 @@ if( yesnode ){ //:-------------------------------------------://
     ,   i_saywhat /**Optional**/                     //:[050]://
     ){                                               //:[050]://
         var jso = "{}" ;                             //:[050]://
-        var i_say = i_saywhat ;   
-        var o_say = i_saywhat ;
-                                                      
-        if( HAS( i_say ) ){                             
-                                                      
-            if( i_say.rows || i_say.command ){ //:#IPR#://             
-                o_say = { arr_row : [] };             
-                o_say.arr_row = i_say.rows    ;
-                o_say.sql_cmd = i_say.command ;
-            };;                                     
+        var i_say = i_saywhat ;                      //:[050]://
+        var o_say = i_saywhat ;                      //:[050]://
                                                      //:[050]://
-            jso = JSON.stringify( o_say );             //:[050]://
+        if( HAS( i_say ) ){                          //:[050]://
+                                                     //:[050]://
+            if( i_say.rows        //: #IPR# ://      //:[050]://
+            ||  i_say.command     //: #IPR# ://      //:[050]://
+            ){                                       //:[050]://
+                o_say = { arr_row : [] };            //:[050]://
+                o_say.arr_row = i_say.rows    ;      //:[050]://
+                o_say.sql_cmd = i_say.command ;      //:[050]://
+            };;                                      //:[050]://
+                                                     //:[050]://
+            jso = JSON.stringify( o_say );           //:[050]://
         };;                                          //:[050]://
         i_sob.m_giv.writeHead( 200 ,  d_jso  );      //:[050]://
-        i_sob.m_giv.write(              jso  );      //:[050]://                  
-        i_sob.m_giv.end(                     );      //:[050]://          
+        i_sob.m_giv.write(              jso  );      //:[050]://
+        i_sob.m_giv.end(                     );      //:[050]://
     };;                                              //:[050]://
 
     const   F_ASERVER_END_O_K = function             //:[042]://
@@ -1056,10 +1058,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     !MWM! : Or we could do this, doxygen style comment.
     !NDC! : Not_Deep_Copy ( Not a deep copy )
 
-    #IPR# : Is_Postgres_Response , we want to get rid 
-          : of all the bloat and return the[ rows ]
-          : member as { arr_rows : [ ... ] } response.
-          : TUTORIAL [050]
+    #IPR# : Is_Postgres_Response , we want to get rid           
+          : of all the bloat and return the[ rows ]             
+          : member as { arr_rows : [ ... ] } response.          
+          : TUTORIAL [050]                                      
 
 *** ******************************************************** **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
