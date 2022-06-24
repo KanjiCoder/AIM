@@ -1070,7 +1070,15 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : password. This is by design. We will fix it         
           : in future deltas.                                   
 
+    [048] : This snapshot can be difficult to get started
+          : without crashing server because it requires us
+          : to re-build the schema/table for[ tab_hex ]
+          : before the api call[ DABITCH/C/TAB_HEX/red/40 ]
+          :                    [ DABITCH/C/TAB_HEX/blue/69 ]
+          : will work. We will make it easier by adding
+          : helper api to re-create table in [049]
 
+    [049] : Added helper : <yourappurl>/DABITCH/MAKTAB/TAB_HEX  
 
 
 *** *************************************** MISC_DELTA_NOTES **/
@@ -1093,5 +1101,4 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     finds and replaces tokens | find and replace
     TRY[ F_TED ]( Template_EDit , for sql strings )
     
-xxx
 *** ******************************************************** **/
