@@ -120,7 +120,7 @@ if( yesnode ){ //:-------------------------------------------://
         +"INSERT INTO tab_hex                "+n //:[046]://    
         +"(    c_nam ,   c_hex )VALUES       "+n //:[046]://    
         +"(  '[i_nam]', [i_hex] )            "+n //:[046]://    
-        +"ON CONFLICT c_nam DO NOTHING ;     "+n //:[046]://    
+        +"ON CONFLICT ( c_nam ) DO NOTHING ; "+n //:[048]://    
         +"                                   "+n //:[046]://    
         );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //:[046]://    
         var d_dabitch_r_tab_hex =( "         "+n //:[046]://    
@@ -153,7 +153,7 @@ if( yesnode ){ //:-------------------------------------------://
     var d_cts_tab_hex =( "                  "+n  //:[041]://
     +"  CREATE TABLE IF NOT EXISTS tab_hex( "+n  //:[041]://
     +"       iid SERIAL PRIMARY KEY         "+n  //:[041]://
-    +"  ,  c_nam VARCHAR( 64 )              "+n  //:[046]://    
+    +"  ,  c_nam VARCHAR( 64 )     UNIQUE   "+n  //:[048]://    
     +"  ,  c_hex INT CHECK ( c_hex >= 0 )   "+n  //:[046]://    
     +"  );;                                 "+n  //:[041]://
     );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  //:[041]://
