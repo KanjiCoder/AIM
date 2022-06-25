@@ -129,6 +129,8 @@ if( yesnode ){ //:-------------------------------------------://
         +"                                   "+n //:[046]://    
         );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //:[046]://    
         var d_dabitch_r_tab_hex =( "         "+n //:[046]://    
+        +"                                   "+n //:[046]://  
+        +" /** CRUD.READ (VIDEO[052]) **/    "+n //:[052]://      
         +"                                   "+n //:[046]://    
         +"SELECT * FROM tab_hex              "+n //:[046]://    
         +"WHERE c_nam = '[i_nam]' ;          "+n //:[046]://    
@@ -757,7 +759,17 @@ if( yesnode ){ //:-------------------------------------------://
                                                      //:[046]://
         i_nam                                        //:[046]://
     ){                                               //:[046]://
-        return( F_PROTODO( "[TODO:R]" ) );           //:[046]://
+
+        var sql ;  /** #_KISS_BEATS_DRY_# **/        //:[052]://
+        sql = F_DCS( d_dabitch_r_tab_hex );          //:[052]://
+        sql = F_TED( sql , "[i_nam]" , i_nam );      //:[052]://
+        var o_promise =(                             //:[052]://
+            F_DABITCH_RUN_SQL(                       //:[052]://
+                                                     //:[052]://
+            sql , "[sql:read]"                       //:[052]://
+        ));;                                         //:[052]://
+        return( o_promise );                         //:[052]://
+
     };;                                              //:[046]://
     const   F_DABITCH_U_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_U_TAB_HEX(                     //:[046]://
@@ -1069,7 +1081,11 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     #IPR# : Is_Postgres_Response , we want to get rid           
           : of all the bloat and return the[ rows ]             
           : member as { arr_rows : [ ... ] } response.          
-          : TUTORIAL [050]                                      
+          : TUTORIAL [050]     
+
+    #_KISS_BEATS_DRY_# : #KISS# Beats #DRY#                [052]
+    #KISS# : Keep_It_Simple_Stupid                         [052]
+    #DRY#  : Dont_Repeat_Yourself                          [052]
 
 *** ******************************************************** **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
