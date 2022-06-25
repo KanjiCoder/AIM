@@ -673,6 +673,10 @@ if( yesnode ){ //:-------------------------------------------://
         
         var o_promise = "[nil][run_sql_promise]" ;   //:[055]://
 
+        if( notnode ){                               //:[055]://
+                                                     //:[055]://
+            ERR("[RUN_SQL:SERVER_SIDE_ONLY]");       //:[055]://
+        }else                                        //:[055]://
         if( yesnode ){ /**RUN_SQL:Server Side Only**///:[055]://
 
             if( NIL( i_sql ) ){ ERR("#001#"); };     //:[045]://
@@ -701,7 +705,7 @@ if( yesnode ){ //:-------------------------------------------://
                 ;;                                   //:[045]://
             });;
         };;                                          //:[055]://
-        return( o_promise );                         //:[055]://                 
+        return( o_promise );                         //:[055]://           
     };;                                              //:[044]://                           
 
     const   F_DABITCH_MAKETAB_TAB_HEX = function     //:[049]://
