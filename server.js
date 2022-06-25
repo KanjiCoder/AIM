@@ -101,6 +101,10 @@
 
     const cantsay =( "[FIX:wontsay]" );              //:[045]://
 
+    const cmd_nam =( "[FIX:sql_cmd]" );              //:[056]://
+    const nam_cmd =( "[FIX:sql_cmd]" );              //:[056]://
+    const cmd_sql =( "[FIX:sql_cmd]" );              //:[056]://
+
 //:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
 //:MASTER_DECLARATION_DATA:[035]:============================://
 
@@ -620,6 +624,7 @@ if( yesnode ){ //:-------------------------------------------://
                 o_say = { arr_row : [] };            //:[050]://
                 o_say.arr_row = i_say.rows    ;      //:[050]://
                 o_say.sql_cmd = i_say.command ;      //:[050]://
+                o_say.err_msg = i_say.err_msg ;      //:[056]://
             };;                                      //:[050]://
                                                      //:[050]://
             jso = JSON.stringify( o_say );           //:[050]://
@@ -693,6 +698,7 @@ if( yesnode ){ //:-------------------------------------------://
                 .query( i_sql )                      //:[055]://
                 .then( function( i_saywhat ){        //:[045]://
                     LOG( "[RUN_S:i_tbm]" , i_tbm );  //:[055]://
+                    i_saywhat.err_msg =( "" );       //:[056]://
                     o_k_yes( i_saywhat );            //:[045]://
                 })                                   //:[045]://
                 .catch( function( i_err ){           //:[045]://
@@ -700,7 +706,18 @@ if( yesnode ){ //:-------------------------------------------://
                     LOG( "[RUN_S:i_sql]" , i_sql );  //:[055]://
                     LOG( "[RUN_S:i_tbm]" , i_tbm );  //:[055]://
                     LOG( "[RUN_S:i_err]" , i_err );  //:[055]://
-                    ERR( "[RUN_S:i_tbm]"         );  //:[055]://
+                    
+                    /** #MUO_RBP# **/                //:[056]://
+                                                     //:[056]://
+                    var i_saywhat     = { };         //:[056]://
+                    i_saywhat.rows    = [ ];         //:[056]://
+                    i_saywhat.command = "[SQL_ERR]"; //:[056]://
+                    i_saywhat.err_msg =(             //:[056]://
+                                                     //:[056]://
+                        ""+i_err+""                  //:[056]://
+                    );;                              //:[056]://
+                    o_k_yes( i_saywhat );            //:[056]://
+
                 })                                   //:[045]://
                 ;;                                   //:[045]://
             });;
@@ -1080,6 +1097,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @doc_bod@ : Means[ document body ]USE[ dom_bod ]
     @dom_can@ : DomainObjectModel - Canvas
 
+    @cmd_nam@ : You Mean[ sql_cmd ]
+    @nam_cmd@ : You Mean[ sql_cmd ]
+
     @bla_bla@ : Someone is speaking, I am not listening.
 
     @RES_CAN@ : RESize_CANvas
@@ -1125,6 +1145,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     #RES_NAE# : resolve func , NOT_AN_ERROR                [055]
     #REJ_NAE# : reject  func , NOT_AN_ERROR                [055]
 
+    #MUO_RBP# : Mock_Up(sql)Obj_Returned_By_PG(lib)        [056]
 
 *** ******************************************************** **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
