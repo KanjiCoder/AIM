@@ -1141,7 +1141,18 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : will work. We will make it easier by adding
           : helper api to re-create table in [049]
 
-    [049] : Added helper : <yourappurl>/DABITCH/MAKTAB/TAB_HEX  
+    [049] : Added helper : <yourappurl>/DABITCH/MAKTAB/TAB_HEX 
+
+    [052] : Noticed that: <app>/DABITCH/C/TAB_HEX/blue
+          : will crash the sever with a "missing column"
+          : error.
+          :
+          : If argument is undefined, we should use an
+          : "empty" name.
+          :
+          : null string ==> "[NIL][SQL_NIL]"
+          : null number ==> 0
+          :
 
 
 *** *************************************** MISC_DELTA_NOTES **/
