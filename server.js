@@ -670,32 +670,38 @@ if( yesnode ){ //:-------------------------------------------://
         i_sql                                        //:[044]://
     ,   i_tbm                                        //:[045]://
     ){                                               //:[044]://
+        
+        var o_promise = "[nil][run_sql_promise]" ;   //:[055]://
+
+        if( yesnode ){ /**RUN_SQL:Server Side Only**///:[055]://
+
+            if( NIL( i_sql ) ){ ERR("#001#"); };     //:[045]://
+            if( NIL( i_tbm ) ){ ERR("#002#"); };     //:[045]://
                                                      //:[045]://
-        if( NIL( i_sql ) ){ ERR("#001#"); };         //:[045]://
-        if( NIL( i_tbm ) ){ ERR("#002#"); };         //:[045]://
-                                                     //:[045]://
-        var o_promise = new Promise( function        //:[044]://
-        EXECUTO_F_DABITCH_RUN_SQL(                   //:[044]://
+            o_promise = new Promise( function        //:[055]://
+            EXECUTO_F_DABITCH_RUN_SQL(               //:[044]://
                                                      //:[044]://
-            o_k_yes //: resolve func , NOT_AN_ERROR  //:[044]://
-        ,   wontsay //: reject  func , NOT_AN_ERROR  //:[044]://
-        ){                                           //:[044]://
+                o_k_yes     //: #RES_NAE# ://        //:[055]://
+            ,   wontsay     //: #REJ_NAE# ://        //:[055]://
+            ){                                       //:[044]://
                                                      //:[045]://
-            d_dcp                                    //:[045]://
-            .query( i_sql /**[ i_cts | i_dts ]**/ )  //:[045]://
-            .then( function( i_saywhat ){            //:[045]://
-                LOG( "[run_sql:i_tbm]" , i_tbm );    //:[045]://
-                o_k_yes( i_saywhat );                //:[045]://
-            })                                       //:[045]://
-            .catch( function( i_err ){               //:[045]://
+                d_dcp                                //:[045]://
+                .query( i_sql )                      //:[055]://
+                .then( function( i_saywhat ){        //:[045]://
+                    LOG( "[RUN_S:i_tbm]" , i_tbm );  //:[055]://
+                    o_k_yes( i_saywhat );            //:[045]://
+                })                                   //:[045]://
+                .catch( function( i_err ){           //:[045]://
                                                      //:[045]://
-                LOG( "[run_sql:i_sql]" , i_sql );    //:[048]://
-                LOG( "[run_sql:i_tbm]" , i_tbm );    //:[045]://
-                LOG( "[run_sql:i_err]" , i_err );    //:[045]://
-                ERR( "[run_sql:i_tbm]"         );    //:[045]://
-            })                                       //:[045]://
-            ;;                                       //:[045]://
-        });;return( o_promise );                     //:[044]://
+                    LOG( "[RUN_S:i_sql]" , i_sql );  //:[055]://
+                    LOG( "[RUN_S:i_tbm]" , i_tbm );  //:[055]://
+                    LOG( "[RUN_S:i_err]" , i_err );  //:[055]://
+                    ERR( "[RUN_S:i_tbm]"         );  //:[055]://
+                })                                   //:[045]://
+                ;;                                   //:[045]://
+            });;
+        };;                                          //:[055]://
+        return( o_promise );                         //:[055]://                 
     };;                                              //:[044]://                           
 
     const   F_DABITCH_MAKETAB_TAB_HEX = function     //:[049]://
@@ -1111,6 +1117,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     #_KISS_BEATS_DRY_# : #KISS# Beats #DRY#                [052]
     #KISS# : Keep_It_Simple_Stupid                         [052]
     #DRY#  : Dont_Repeat_Yourself                          [052]
+
+    #RES_NAE# : resolve func , NOT_AN_ERROR                [055]
+    #REJ_NAE# : reject  func , NOT_AN_ERROR                [055]
+
 
 *** ******************************************************** **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
