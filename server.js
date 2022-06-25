@@ -3,8 +3,11 @@
 
     Tutorial Where We Build This File ::::::::::::::::::::::::::
 
-        www.tinyurl.com/BOMB-GAME-TUTORIAL        <<< Same_Place
-        www.tinyurl.com/GAME-TUTS                 <<< Same_Place
+        www.tinyurl.com/GAME-TUTS-ALL         //: ALL OF IT  ://
+
+        www.tinyurl.com/GAME-TUTS             //: KANJICODER ://  
+        www.tinyurl.com/GAME-TUTS-SLOWER      //: NINJACODER :// 
+        www.tinyurl.com/GAME-TUTS-UNSCRIPTED  //:  WEEBCODER ://
 
 :::----------------------------------------------------------:::
 
@@ -116,6 +119,8 @@ if( yesnode ){ //:-------------------------------------------://
     //:DABITCH_CRUD:[046]:-------------------------------://    
                                                  //:[046]://    
         var d_dabitch_c_tab_hex =( "         "+n //:[046]://    
+        +"                                   "+n //:[046]://    
+        +" /** CRUD.CREATE (VIDEO[051]) **/  "+n //:[051]://    
         +"                                   "+n //:[046]://    
         +"INSERT INTO tab_hex                "+n //:[046]://    
         +"(    c_nam ,   c_hex )VALUES       "+n //:[046]://    
@@ -589,6 +594,8 @@ if( yesnode ){ //:-------------------------------------------://
 //:                                                          ://
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 
+    //:END_serverresponsewith_JSON:==========================://
+
     const   F_ASERVER_ENDJSON = function             //:[050]://
     PRIVATE_F_ASERVER_ENDJSON(                       //:[050]://
                                                      //:[050]://
@@ -616,6 +623,9 @@ if( yesnode ){ //:-------------------------------------------://
         i_sob.m_giv.end(                     );      //:[050]://
     };;                                              //:[050]://
 
+    //:==========================:END_serverresponsewith_JSON://
+    //:END_serverresponsewith_OK_status:=====================://
+
     const   F_ASERVER_END_O_K = function             //:[042]://
     PRIVATE_F_ASERVER_END_O_K(                       //:[042]://
                                                      //:[042]://
@@ -634,6 +644,8 @@ if( yesnode ){ //:-------------------------------------------://
                                                      //:[044]://
         i_sob.m_giv.end( "[O_K][K_THNX_BYE]" );      //:[044]://
     };;                                              //:[042]://
+
+    //:=====================:END_serverresponsewith_OK_status://
 
 //:001_001_001_001_001_001_001____001_001_001_001_001_001_001://
 //:                                                          ://
@@ -666,13 +678,6 @@ if( yesnode ){ //:-------------------------------------------://
             d_dcp                                    //:[045]://
             .query( i_sql /**[ i_cts | i_dts ]**/ )  //:[045]://
             .then( function( i_saywhat ){            //:[045]://
-                                                    
-
-              //:  xxxxxxxxxxxxxx
-               
-
-
-
                 LOG( "[run_sql:i_tbm]" , i_tbm );    //:[045]://
                 o_k_yes( i_saywhat );                //:[045]://
             })                                       //:[045]://
@@ -733,17 +738,19 @@ if( yesnode ){ //:-------------------------------------------://
     const   F_DABITCH_C_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_C_TAB_HEX(                     //:[046]://
                                                      //:[046]://
-        i_nam                                        //:[046]://
-    ,   i_hex                                        //:[046]://
+        i_nam           /** [ATF]:SEE_VIDEO[051] **/ //:[051]://
+    ,   i_hex           /** [ATF]:SEE_VIDEO[051] **/ //:[051]://
     ){                                               //:[046]://
         var sql ;                                    //:[048]://
         sql = F_DCS( d_dabitch_c_tab_hex );          //:[048]://
         sql = F_TED( sql , "[i_nam]" , i_nam );      //:[048]://
         sql = F_TED( sql , "[i_hex]" , i_hex );      //:[048]://
-        return( F_DABITCH_RUN_SQL(                   //:[048]://
+        var o_promise =(                             //:[051]://
+            F_DABITCH_RUN_SQL(                       //:[048]://
                                                      //:[048]://
             sql , "[sql:create]"                     //:[048]://
         ));;                                         //:[048]://
+        return( o_promise );                         //:[051]://
     };;                                              //:[046]://
     const   F_DABITCH_R_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_R_TAB_HEX(                     //:[046]://
@@ -1029,6 +1036,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @bla_bla@ : Someone is speaking, I am not listening.
 
     @RES_CAN@ : RESize_CANvas
+    @ATF@ : About_This_Fuction , Used as [ATF] within function.
 
     @DODS@ : Data_Oriented_Design'S
 
