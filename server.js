@@ -1214,6 +1214,11 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : null number ==> 0
           :
 
+    [056] : Return[ err_msg ]object from JSON response always.
+          : If error in SQL , rather than crash server,
+          : we pack meaningful error message into[ err_msg ].
+          : If no error , [ err_msg == "" ].
+          : ADDED_DATE[ 2022_06_25 ]
 
 *** *************************************** MISC_DELTA_NOTES **/
 /** ERRORS ************************************************* ***
