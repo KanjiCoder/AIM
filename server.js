@@ -138,6 +138,8 @@ if( yesnode ){ //:-------------------------------------------://
         );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //:[046]://    
         var d_dabitch_u_tab_hex =( "         "+n //:[046]://    
         +"                                   "+n //:[046]://    
+        +" /** CRUD.READ (VIDEO[053]) **/    "+n //:[053]://     
+        +"                                   "+n //:[046]://    
         +"UPDATE tab_hex SET c_hex = [i_hex] "+n //:[046]://    
         +"WHERE c_nam = '[i_nam]' ;          "+n //:[046]://    
         +"                                   "+n //:[046]://    
@@ -777,7 +779,18 @@ if( yesnode ){ //:-------------------------------------------://
         i_nam                                        //:[046]://
     ,   i_hex                                        //:[046]://
     ){                                               //:[046]://
-        return( F_PROTODO( "[TODO:U]" ) );           //:[046]://
+
+        var sql ;                                    //:[053]://
+        sql = F_DCS( d_dabitch_u_tab_hex );          //:[053]://
+        sql = F_TED( sql , "[i_nam]" , i_nam );      //:[053]://
+        sql = F_TED( sql , "[i_hex]" , i_hex );      //:[053]://
+        var o_promise =(                             //:[053]://
+            F_DABITCH_RUN_SQL(                       //:[053]://
+                                                     //:[053]://
+            sql , "[sql:update]"                     //:[053]://
+        ));;                                         //:[053]://
+        return( o_promise );                         //:[053]://
+
     };;                                              //:[046]://
     const   F_DABITCH_D_TAB_HEX = function           //:[046]://
     PRIVATE_F_DABITCH_D_TAB_HEX(                     //:[046]://
