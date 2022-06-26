@@ -617,7 +617,7 @@ if( yesnode ){ //:-------------------------------------------://
 //:=================================:FUNC_TEMPLATE_EDit:[047]://
 //:FUNC_DICT_TO_STRING:[058]:================================://
 
-    const F_DTS = function PRIVATE F_DTS(            //:[058]://
+    const F_DTS = function PRIVATE_F_DTS(            //:[058]://
                                                      //:[058]://
         i_dob  /** @dob@ : Dictionary Object **/     //:[058]://
     ){                                               //:[058]://
