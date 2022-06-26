@@ -110,6 +110,19 @@
     const F_INI_KEYMAST =( "[FIX:F_KEYMAST_INI]" );  //:[057]://
 
 //:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
+//:XMLHTTPREQUEST_WIREUP_HACK:[058]:=========================://
+
+    /** *********************************************** **/
+    /** We are going to need to use some pre-processing **/
+    /** black magic to make this work....               **/
+    /** VIDEO[ 058 ]OF[ www.tinyurl.com/GAME-TUTS ]     **/
+    /** *********************************************** **/
+    
+    var d_urlsite =(
+        "[SITE_ROOT_TUTORIAL_058]" 
+    );;
+
+//:=========================:XMLHTTPREQUEST_WIREUP_HACK:[058]://
 //:MASTER_DECLARATION_DATA:[035]:============================://
 
     //:--------------------------------------------------://
@@ -214,7 +227,7 @@ if( notnode ){ //:-------------------------------------------://
     var d_can = "[nil][!c!:d_can]" ;  //: Html5 Canvas  [035]://
     var d_wgl = "[nil][!c!:d_wgl]" ;  //: WebGL Context [035]://
 
-
+    var d_url = d_urlsite ; 
 
 };; //:------------------------------------------------------://
 if( yesnode || notnode ){ //:--------------------------------://
@@ -602,6 +615,72 @@ if( yesnode ){ //:-------------------------------------------://
                                                      //:[047]://
 //:_______________________________________T________ED________://
 //:=================================:FUNC_TEMPLATE_EDit:[047]://
+//:FUNC_DICT_TO_STRING:[058]:================================://
+
+    const F_DTS = function PRIVATE F_DTS(            //:[058]://
+                                                     //:[058]://
+        i_dob  /** @dob@ : Dictionary Object **/     //:[058]://
+    ){                                               //:[058]://
+                                                     //:[058]://
+        var o_str="";                                //:[058]://
+                                                     //:[058]://
+        o_str += "[dob:end]"+"\n";                   //:[058]://
+                                                     //:[058]://
+        if( i_dob ){                                 //:[058]://
+            var arr_k_v=( Object.entries( i_dob ) ); //:[058]://
+                                                     //:[058]://
+            for( var k_v of arr_k_v ){               //:[058]://
+                                                     //:[058]://
+                o_str +=( "[k_v[0]]:" + k_v[ 0 ] );  //:[058]://
+                o_str +="\n";                        //:[058]://
+                o_str +=( "[k_v[1]]:" + k_v[ 1 ] );  //:[058]://
+                o_str +="\n";                        //:[058]://
+                o_str +="------------------------";  //:[058]://
+                o_str +="\n";                        //:[058]://
+            };;                                      //:[058]://
+        }else{                                       //:[058]://
+            o_str += "[Dictionary_Was_Nil]" ;        //:[058]://
+        };;                                          //:[058]://
+                                                     //:[058]://
+        o_str += "[dob:end]"+"\n";                   //:[058]://
+        return( o_str );                             //:[058]://
+    }
+//:================================:FUNC_DICT_TO_STRING:[058]://
+//:FUNC_XML_HTTP_REQUEST:[058]:==============================://
+
+    const F_XHR = function PRIVATE_F_XHR(
+        i_asktype  /** EXAMPLE[ "GET" , "POST" ]ETC    **/
+    ,   i_urlpath  /** @urlpath@ : URL : Relative Path **/
+    ){
+        var o_promise = new Promise( function
+        EXECUTO_F_XHR( o_k_yes , wontsay ){
+
+            var emp , urlfull , xhr_ask ;
+
+                emp = "" ; /**EmptyString**/
+            urlfull = "[REQUEST_URL_NOT_SET]" ;
+
+            if( "/" != i_urlpath[ 0 ] ){
+
+                urlfull = d_url + "/" + i_urlpath ;
+            }else{
+                urlfull = d_url + emp + i_urlpath ;
+            };;
+
+            xhr_ask = new XMLHttpRequest();
+            xhr_ask.open( i_asktype , urlfull );
+            xhr_ask.send();
+            xhr_ask.onreadystatechange=(evt_xhr)=>{
+            if( xhr_ask.readyState === 4 ){
+            
+                console.log("DONE");
+                o_k_yes( xhr_ask.responseText );
+                
+            };;};;
+
+        });; return( o_promise );
+    };;
+//:==============================:FUNC_XML_HTTP_REQUEST:[058]://
 //|01|01|01|01|01|01|01|01|01|SUBS|01|01|01|01|01|01|01|01|01|//
 //|[ @$$$$$@ ]                                               |//
 //|__ASERVER__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
@@ -859,7 +938,16 @@ if( yesnode ){ //:-------------------------------------------://
         evt_key                                      //:[057]://
     ){                                               //:[057]://
                                                      //:[057]://
-        console.log( evt_key );                      //:[057]://
+        console.log( evt_key );                      //:[057]://  
+
+    
+        F_XHR( "GET" , "DABITCH/C/TAB_HEX/RED/89" )
+        .then((i_saywhat)=>{
+
+            console.log( "[what?]:" + i_saywhat );
+        });;
+
+
     };;                                              //:[057]://
 
     const   F_KEYMAST_UPP = function                 //:[057]://
@@ -941,7 +1029,14 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
         sob.m_giv.end( "WORLD" );
     }else
-    if( sob.m_url == "/ATOMIC_IVY_MMO" ){
+    if( sob.m_url == "/ENV" ){                       //:[058]://
+                                                     //:[058]://
+        var str_env = F_DTS( process.env );          //:[058]://
+        sob.m_giv.writeHead( 200 , d_txt );          //:[058]://
+        sob.m_giv.end( str_env );                    //:[058]://
+
+    }else
+    if( sob.m_url == "/ATOMIC_IVY_MMO" ){  //:#SELFSERVE#://
 
         l_fs.readFile( "./server.js" , function(i_err,i_cof){
 
@@ -949,6 +1044,17 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                 i_cof = "[we messed up]" ;
             }else{
                 sob.m_giv.writeHead( 200 , d_js );
+
+                //:#MYSBSYS#:[058]:--------------:// //:[058]://
+                                                     //:[058]://
+                i_cof = ""+i_cof+"";                 //:[058]://
+                i_cof = i_cof.replaceAll(            //:[058]://
+                                                     //:[058]://
+                    "[SITE_ROOT_TUTORIAL_058]"       //:[058]://
+                ,    www.example.com                 //:[058]://
+                );;                                  //:[058]://
+                //:--------------:#MYSBSYS#:[058]:// //:[058]://
+
             };;
             sob.m_giv.end( i_cof , "utf-8" );
         });;
@@ -1191,6 +1297,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     #MUO_RBP# : Mock_Up(sql)Obj_Returned_By_PG(lib)        [056]
 
+    #MYSBSYS# : ModifyYourSelf _ Before _ ServingYourSelf  [058]
+
 *** ******************************************************** **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
 
@@ -1266,8 +1374,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : If no error , [ err_msg == "" ].                    
           : ADDED_DATE[ 2022_06_25 ]   
 
-    [057] : KEYMAIN - Politically Correct Version Of
-          : KEYMAST ( Key Master )
+    [057] : KEYMAIN - Politically Correct Version Of            
+          : KEYMAST ( Key Master )                              
 
             
 
@@ -1287,9 +1395,16 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** ************************************************* ERRORS **/
 /** CTRL_F_HELP ******************************************** ***
 
+    CTRLF_HELP | ctrl-f-help | ctrl f help | control f help
+    YOU_ARE_HERE
+
     template edit | template_edit | template string edit
     finds and replaces tokens | find and replace
     TRY[ F_TED ]( Template_EDit , for sql strings )
+
+    serve youself | serve_yourself | serve this file
+    self serve | self serve icecream
+    SEE[ #SELFSERVE# ]
     
 *** ******************************************************** **/
 /** FEATURE_CREEP ****************************************** ***
