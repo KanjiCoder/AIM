@@ -118,8 +118,11 @@
     /** *************************************** **/  //:[058]://
                                                      //:[058]://
     var d_urlsite =(                                 //:[058]://
-        "[BLACK_MAGIC_URL_PRE_PROCESSED]"            //:[058]://
+        "[BLACK_MAGIC:d_urlsite]"                    //:[059]://
     );;                                              //:[058]://
+    var d_urlsite_o_k=(                              //:[059]://
+        "[BLACK_MAGIC:d_urlsite_o_k]"                //:[059]://
+    );;                                              //:[059]://
 
 //:=========================:XMLHTTPREQUEST_WIREUP_HACK:[058]://
 //:MASTER_DECLARATION_DATA:[035]:============================://
@@ -1006,14 +1009,56 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             }else{
                 sob.m_giv.writeHead( 200 , d_js );
 
+                //:get_app_domain:[059]:---------------------://
+                var n =( "\n" );                     //:[059]://
+                                                     //:[059]://
+                var app_nam =( process.env[          //:[059]://
+                                                     //:[059]://
+                    "HEROKU_APP_NAME"                //:[059]://
+                ]);;                                 //:[059]://
+                                                     //:[059]://
+                if( false == ( !!app_nam ) ){        //:[059]://
+                                                     //:[059]://
+                    d_urlsite_o_k =( "[NOT_O_K]" );  //:[059]://
+                    d_urlsite =( ""                  //:[059]://
+                                                     //:[059]://
+                    "[Your_App_Is_Crashing_Because]"+n//[059]//0
+                    "[You_Dont_Have_Access_To_____]"+n//[059]//0
+                    "[process.env[HEROKU_APP_NAME]]"+n//[059]//0
+                    "[To_Fix_This_You_Need_To_Run_]"+n//[059]//0
+                    "[The_Below_Command.__________]"+n//[059]//0
+                    "[WRITE_IT_AS_ONE_SINGLE_LINE!]"+n//[059]//0
+                    "                              "+n//[059]//0
+                    "   heroku labs:enable         "+n//[059]//0
+                    "   runtime-dyno-metadata      "+n//[059]//0
+                    "   -app YOUR_APP_NAME_HERE    "+n//[059]//0
+                    "                              "+n//[059]//0
+                    "[GOOD_LUCK! -KanjiCoder _____]"+n//[059]//0
+                                                     //:[059]://
+                    );;                              //:[059]://
+                                                     //:[059]://
+                }else{                               //:[059]://
+                    d_urlsite_o_k =( "[YES_O_K]" );  //:[059]://
+                    d_urlsite     =( ""              //:[059]://
+                    + "https://"                     //:[059]://
+                    +  app_nam                       //:[059]://
+                    + ".herokuapp.com"               //:[059]://
+                    );;                              //:[059]://
+                };;                                  //:[059]://
+                //:---------------------:get_app_domain:[059]://
+
                 //:#MYSBSYS#:[058]:--------------:// //:[058]://
                                                      //:[058]://
                 i_cof = ""+i_cof+"";                 //:[058]://
                 i_cof = i_cof.replaceAll(            //:[058]://
                                                      //:[058]://
-                    "[BLACK_MAGIC_URL_PRE_PROCESSED]"//:[058]://
-                ,    "www.example.com"               //:[058]://
+                    "[BLACK_MAGIC:d_urlsite]"        //:[059]://
+                ,                 d_urlsite          //:[059]://
                 );;                                  //:[058]://
+                i_cof = i_cof.replaceAll(            //:[059]://
+                    "[BLACK_MAGIC:d_urlsite_o_k]"    //:[059]://
+                ,                 d_urlsite_o_k      //:[059]://
+                );;                                  //:[059]://
                 //:--------------:#MYSBSYS#:[058]:// //:[058]://
 
             };;
