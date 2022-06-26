@@ -1051,7 +1051,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                 i_cof = i_cof.replaceAll(            //:[058]://
                                                      //:[058]://
                     "[SITE_ROOT_TUTORIAL_058]"       //:[058]://
-                ,    www.example.com                 //:[058]://
+                ,    "www.example.com"               //:[058]://
                 );;                                  //:[058]://
                 //:--------------:#MYSBSYS#:[058]:// //:[058]://
 
