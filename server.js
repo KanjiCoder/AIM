@@ -50,9 +50,17 @@
     
     3. git init . && git add . && git commit -m "[AIM]"
     
-    4. heroku apps:create my-atomic-ivy-server
+    4. heroku apps:create APPNAME     ## Example: "aim-kanji" ##
+                                                                
+    5. heroku addons:create              \                      
+            heroku-postgresql:hobby-dev  \                      
+            --version=14                 \                      
+            --app  "APPNAME"             \                      
+            --name "APPNAME-database"    ## END OF COMMAND ##   
+                                                                
+    6. heroku labs:enable  runtime-dyno-metadata --app APPNAME  
     
-    5. git push heroku master
+    7. git push heroku master
     
 :::----------------------------------------------------------**/
 //:========================:DEPLOY_THIS_SERVER_YOURSELF:[034]://
@@ -707,13 +715,13 @@ if( yesnode ){ //:-------------------------------------------://
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 
-    //:--------------------------------------------------://
-    //:[062]:ARTDUDE Holds Onto Art Assets And Rendering ://
-    //:[ATS]:Data. Art dude is some guy on the street    ://
-    //:     :trying to sell paintings and blank canvases.://
-    //:     :( Storing & Fetching Assets+Levels )        ://
-    //:     :( Is ArtDude's Job.                )        ://
-    //:--------------------------------------------------://
+    //:--------------------------------------------------://    
+    //:[062]:ARTDUDE Holds Onto Art Assets And Rendering ://    
+    //:[ATS]:Data. Art dude is some guy on the street    ://    
+    //:     :trying to sell paintings and blank canvases.://    
+    //:     :( Storing & Fetching Assets+Levels )        ://    
+    //:     :( Is ArtDude's Job.                )        ://    
+    //:--------------------------------------------------://    
 
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
@@ -726,17 +734,17 @@ if( yesnode ){ //:-------------------------------------------://
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 
-    //:--------------------------------------------------://
-    //:[062]:ARTGIRL Likes to throw paint at walls.      ://
-    //:[ATS]:She has a paintball gun. She shoots so much ://
-    //:     :paint that some fragments of paint are      ://
-    //:     :never seen because they get covered up by   ://
-    //:     :other paintball shots. Because remember,    ://
-    //:     :a fragment is a "potential pixel".          ://
-    //:     :ARTGIRL does the rendering __WORK__ using   ://
-    //:     :supplies she buys from ARTDUDE.             ://
-    //:     :( OpenGL Pipeline Creation Is ArtGirl's Job)://
-    //:--------------------------------------------------://
+    //:--------------------------------------------------://    
+    //:[062]:ARTGIRL Likes to throw paint at walls.      ://    
+    //:[ATS]:She has a paintball gun. She shoots so much ://    
+    //:     :paint that some fragments of paint are      ://    
+    //:     :never seen because they get covered up by   ://    
+    //:     :other paintball shots. Because remember,    ://    
+    //:     :a fragment is a "potential pixel".          ://    
+    //:     :ARTGIRL does the rendering __WORK__ using   ://    
+    //:     :supplies she buys from ARTDUDE.             ://    
+    //:     :( OpenGL Pipeline Creation Is ArtGirl's Job)://    
+    //:--------------------------------------------------://    
 
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
