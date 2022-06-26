@@ -224,6 +224,22 @@ if( yesnode ){ //:-------------------------------------------://
 };; //:------------------------------------------------------://
 if( notnode ){ //:-------------------------------------------://
 
+    var d_msgkill_001 =( ""
+    +"[Your_App_Is_Crashing_Because_You_Dont]"+"\n"  //:[059]://
+    +"[Have_Access_To_______________________]"+"\n"  //:[059]://
+    +"[-------------------------------------]"+"\n"  //:[059]://
+    +"[   process.env[HEROKU_APP_NAME]      ]"+"\n"  //:[059]://
+    +"[-------------------------------------]"+"\n"  //:[059]://
+    +"[To_Fix_This_You_Need_To_Run__________]"+"\n"  //:[059]://
+    +"[The_Below_Command.___________________]"+"\n"  //:[059]://
+    +"[WRITE_IT_AS_ONE_SINGLE_LINE!!!!!!!!!!]"+"\n"  //:[059]://
+    +"                                       "+"\n"  //:[059]://
+    +"       heroku labs:enable              "+"\n"  //:[059]://
+    +"       runtime-dyno-metadata           "+"\n"  //:[059]://
+    +"       -app YOUR_APP_NAME_HERE         "+"\n"  //:[059]://
+    +"                                       "+"\n"  //:[059]://
+    +"[GOOD_LUCK! -KanjiCoder ______________]"+"\n"  //:[059]://
+    );;                                              //:[059]://
 
     
     var d_can = "[nil][!c!:d_can]" ;  //: Html5 Canvas  [035]://
@@ -1022,21 +1038,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                     d_urlsite_o_k =( "[NOT_O_K]" );  //:[059]://
                     d_urlsite =( ""                  //:[059]://
                                                      //:[059]://
-                    +"[Your_App_Is_Crashing_Because]"+n//[059]// 
-                    +"[You_Dont_Have_Access_To_____]"+n//[059]// 
-                    +"[process.env[HEROKU_APP_NAME]]"+n//[059]// 
-                    +"[To_Fix_This_You_Need_To_Run_]"+n//[059]// 
-                    +"[The_Below_Command.__________]"+n//[059]// 
-                    +"[WRITE_IT_AS_ONE_SINGLE_LINE!]"+n//[059]// 
-                    +"                              "+n//[059]// 
-                    +"   heroku labs:enable         "+n//[059]// 
-                    +"   runtime-dyno-metadata      "+n//[059]// 
-                    +"   -app YOUR_APP_NAME_HERE    "+n//[059]// 
-                    +"                              "+n//[059]// 
-                    +"[GOOD_LUCK! -KanjiCoder _____]"+n//[059]// 
+                    "[SEE:d_msgkill_001]"            //:[059]://
                                                      //:[059]://
                     );;                              //:[059]://
-                                                     //:[059]://
                 }else{                               //:[059]://
                     d_urlsite_o_k =( "[YES_O_K]" );  //:[059]://
                     d_urlsite     =( ""              //:[059]://
