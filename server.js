@@ -1022,18 +1022,18 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                     d_urlsite_o_k =( "[NOT_O_K]" );  //:[059]://
                     d_urlsite =( ""                  //:[059]://
                                                      //:[059]://
-                    "[Your_App_Is_Crashing_Because]"+n//[059]//0
-                    "[You_Dont_Have_Access_To_____]"+n//[059]//0
-                    "[process.env[HEROKU_APP_NAME]]"+n//[059]//0
-                    "[To_Fix_This_You_Need_To_Run_]"+n//[059]//0
-                    "[The_Below_Command.__________]"+n//[059]//0
-                    "[WRITE_IT_AS_ONE_SINGLE_LINE!]"+n//[059]//0
-                    "                              "+n//[059]//0
-                    "   heroku labs:enable         "+n//[059]//0
-                    "   runtime-dyno-metadata      "+n//[059]//0
-                    "   -app YOUR_APP_NAME_HERE    "+n//[059]//0
-                    "                              "+n//[059]//0
-                    "[GOOD_LUCK! -KanjiCoder _____]"+n//[059]//0
+                    +"[Your_App_Is_Crashing_Because]"+n//[059]// 
+                    +"[You_Dont_Have_Access_To_____]"+n//[059]// 
+                    +"[process.env[HEROKU_APP_NAME]]"+n//[059]// 
+                    +"[To_Fix_This_You_Need_To_Run_]"+n//[059]// 
+                    +"[The_Below_Command.__________]"+n//[059]// 
+                    +"[WRITE_IT_AS_ONE_SINGLE_LINE!]"+n//[059]// 
+                    +"                              "+n//[059]// 
+                    +"   heroku labs:enable         "+n//[059]// 
+                    +"   runtime-dyno-metadata      "+n//[059]// 
+                    +"   -app YOUR_APP_NAME_HERE    "+n//[059]// 
+                    +"                              "+n//[059]// 
+                    +"[GOOD_LUCK! -KanjiCoder _____]"+n//[059]// 
                                                      //:[059]://
                     );;                              //:[059]://
                                                      //:[059]://
