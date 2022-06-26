@@ -118,7 +118,7 @@
     /** *************************************** **/  //:[058]://
                                                      //:[058]://
     var d_urlsite =(                                 //:[058]://
-        "[BLACK_MAGIC_PRE_PROCESSED_URL]"            //:[058]://
+        "[BLACK_MAGIC_URL_PRE_PROCESSED]"            //:[058]://
     );;                                              //:[058]://
 
 //:=========================:XMLHTTPREQUEST_WIREUP_HACK:[058]://
@@ -226,7 +226,7 @@ if( notnode ){ //:-------------------------------------------://
     var d_can = "[nil][!c!:d_can]" ;  //: Html5 Canvas  [035]://
     var d_wgl = "[nil][!c!:d_wgl]" ;  //: WebGL Context [035]://
 
-    var d_url = d_urlsite ; 
+    var d_url = d_urlsite ;           //: E.T.PhoneHome [058]://
 
 };; //:------------------------------------------------------://
 if( yesnode || notnode ){ //:--------------------------------://
@@ -625,7 +625,9 @@ if( yesnode ){ //:-------------------------------------------://
                                                      //:[058]://
         o_str += "[dob:end]"+"\n";                   //:[058]://
                                                      //:[058]://
-        if( i_dob ){                                 //:[058]://
+        if( false === !!i_dob ){                     //:[058]://
+            o_str += "[Dictionary_Was_Nil]" ;        //:[058]://
+        }else{                                       //:[058]://
             var arr_k_v=( Object.entries( i_dob ) ); //:[058]://
                                                      //:[058]://
             for( var k_v of arr_k_v ){               //:[058]://
@@ -637,8 +639,6 @@ if( yesnode ){ //:-------------------------------------------://
                 o_str +="------------------------";  //:[058]://
                 o_str +="\n";                        //:[058]://
             };;                                      //:[058]://
-        }else{                                       //:[058]://
-            o_str += "[Dictionary_Was_Nil]" ;        //:[058]://
         };;                                          //:[058]://
                                                      //:[058]://
         o_str += "[dob:end]"+"\n";                   //:[058]://
@@ -1011,7 +1011,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                 i_cof = ""+i_cof+"";                 //:[058]://
                 i_cof = i_cof.replaceAll(            //:[058]://
                                                      //:[058]://
-                    "[BLACK_MAGIC_PRE_PROCESSED_URL]"//:[058]://
+                    "[BLACK_MAGIC_URL_PRE_PROCESSED]"//:[058]://
                 ,    "www.example.com"               //:[058]://
                 );;                                  //:[058]://
                 //:--------------:#MYSBSYS#:[058]:// //:[058]://
