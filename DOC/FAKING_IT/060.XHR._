@@ -1,0 +1,42 @@
+//:FUNC_XML_HTTP_REQUEST:[060]:==============================://
+
+    const F_XHR = function PRIVATE_F_XHR(
+        i_asktype  /** EXAMPLE[ "GET" , "POST" ]ETC    **/
+    ,   i_urlpath  /** @urlpath@ : URL : Relative Path **/
+    ){
+        var o_promise = new Promise( function
+        EXECUTO_F_XHR( o_k_yes , wontsay ){
+
+            var emp , urlfull , xhr_ask ;
+
+                emp = "" ; /**EmptyString**/
+            urlfull = "[REQUEST_URL_NOT_SET]" ;
+
+            if( "/" != i_urlpath[ 0 ] ){
+
+                urlfull = d_url + "/" + i_urlpath ;
+            }else{
+                urlfull = d_url + emp + i_urlpath ;
+            };;
+
+            xhr_ask = new XMLHttpRequest();
+            xhr_ask.open( i_asktype , urlfull );
+            xhr_ask.send();
+            xhr_ask.onreadystatechange=(evt_xhr)=>{
+            if( xhr_ask.readyState === 4 ){
+            
+                console.log("DONE");
+                o_k_yes( xhr_ask.responseText );
+                
+            };;};;
+
+        });; return( o_promise );
+    };;
+//:==============================:FUNC_XML_HTTP_REQUEST:[060]://
+
+
+        F_XHR( "GET" , "DABITCH/C/TAB_HEX/RED/89" )
+        .then((i_saywhat)=>{
+
+            console.log( "[what?]:" + i_saywhat );
+        });;

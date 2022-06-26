@@ -112,15 +112,14 @@
 //:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
 //:XMLHTTPREQUEST_WIREUP_HACK:[058]:=========================://
 
-    /** *********************************************** **/
-    /** We are going to need to use some pre-processing **/
-    /** black magic to make this work....               **/
-    /** VIDEO[ 058 ]OF[ www.tinyurl.com/GAME-TUTS ]     **/
-    /** *********************************************** **/
-    
-    var d_urlsite =(
-        "[SITE_ROOT_TUTORIAL_058]" 
-    );;
+    /** *************************************** **/  //:[058]://
+    /** Using pre-processing black magic here.  **/  //:[058]://
+    /** VID[ 058 ][ www.tinyurl.com/GAME-TUTS ] **/  //:[058]://
+    /** *************************************** **/  //:[058]://
+                                                     //:[058]://
+    var d_urlsite =(                                 //:[058]://
+        "[BLACK_MAGIC_PRE_PROCESSED_URL]"            //:[058]://
+    );;                                              //:[058]://
 
 //:=========================:XMLHTTPREQUEST_WIREUP_HACK:[058]://
 //:MASTER_DECLARATION_DATA:[035]:============================://
@@ -644,43 +643,14 @@ if( yesnode ){ //:-------------------------------------------://
                                                      //:[058]://
         o_str += "[dob:end]"+"\n";                   //:[058]://
         return( o_str );                             //:[058]://
-    }
+    };;                                              //:[058]://
+
 //:================================:FUNC_DICT_TO_STRING:[058]://
-//:FUNC_XML_HTTP_REQUEST:[058]:==============================://
+//:FUNC_XML_HTTP_REQUEST:[060]:==============================://
 
-    const F_XHR = function PRIVATE_F_XHR(
-        i_asktype  /** EXAMPLE[ "GET" , "POST" ]ETC    **/
-    ,   i_urlpath  /** @urlpath@ : URL : Relative Path **/
-    ){
-        var o_promise = new Promise( function
-        EXECUTO_F_XHR( o_k_yes , wontsay ){
+    //: Wait till tutorial #060# ://
 
-            var emp , urlfull , xhr_ask ;
-
-                emp = "" ; /**EmptyString**/
-            urlfull = "[REQUEST_URL_NOT_SET]" ;
-
-            if( "/" != i_urlpath[ 0 ] ){
-
-                urlfull = d_url + "/" + i_urlpath ;
-            }else{
-                urlfull = d_url + emp + i_urlpath ;
-            };;
-
-            xhr_ask = new XMLHttpRequest();
-            xhr_ask.open( i_asktype , urlfull );
-            xhr_ask.send();
-            xhr_ask.onreadystatechange=(evt_xhr)=>{
-            if( xhr_ask.readyState === 4 ){
-            
-                console.log("DONE");
-                o_k_yes( xhr_ask.responseText );
-                
-            };;};;
-
-        });; return( o_promise );
-    };;
-//:==============================:FUNC_XML_HTTP_REQUEST:[058]://
+//:==============================:FUNC_XML_HTTP_REQUEST:[060]://
 //|01|01|01|01|01|01|01|01|01|SUBS|01|01|01|01|01|01|01|01|01|//
 //|[ @$$$$$@ ]                                               |//
 //|__ASERVER__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
@@ -939,15 +909,6 @@ if( yesnode ){ //:-------------------------------------------://
     ){                                               //:[057]://
                                                      //:[057]://
         console.log( evt_key );                      //:[057]://  
-
-    
-        F_XHR( "GET" , "DABITCH/C/TAB_HEX/RED/89" )
-        .then((i_saywhat)=>{
-
-            console.log( "[what?]:" + i_saywhat );
-        });;
-
-
     };;                                              //:[057]://
 
     const   F_KEYMAST_UPP = function                 //:[057]://
@@ -1050,7 +1011,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                 i_cof = ""+i_cof+"";                 //:[058]://
                 i_cof = i_cof.replaceAll(            //:[058]://
                                                      //:[058]://
-                    "[SITE_ROOT_TUTORIAL_058]"       //:[058]://
+                    "[BLACK_MAGIC_PRE_PROCESSED_URL]"//:[058]://
                 ,    "www.example.com"               //:[058]://
                 );;                                  //:[058]://
                 //:--------------:#MYSBSYS#:[058]:// //:[058]://
@@ -1405,6 +1366,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     serve youself | serve_yourself | serve this file
     self serve | self serve icecream
     SEE[ #SELFSERVE# ]
+
+    xml http request | xmlhttprequest | httprequest | httpreq
+    SEE[ FUNC_XML_HTTP_REQUEST | XMLHTTPREQUEST_WIREUP_HACK ]
+    
     
 *** ******************************************************** **/
 /** FEATURE_CREEP ****************************************** ***
