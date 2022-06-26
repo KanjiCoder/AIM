@@ -667,7 +667,38 @@ if( yesnode ){ //:-------------------------------------------://
 //:================================:FUNC_DICT_TO_STRING:[058]://
 //:FUNC_XML_HTTP_REQUEST:[061]:==============================://
 
-    //: Wait till tutorial #061# ://
+    const F_XHR = function PRIVATE_F_XHR(
+        i_asktype  /** EXAMPLE[ "GET" , "POST" ]ETC    **/
+    ,   i_urlpath  /** @urlpath@ : URL : Relative Path **/
+    ){
+        var o_promise = new Promise( function
+        EXECUTO_F_XHR( o_k_yes , wontsay ){
+
+            var emp , urlfull , xhr_ask ;
+
+                emp = "" ; /**EmptyString**/
+            urlfull = "[REQUEST_URL_NOT_SET]" ;
+
+            if( "/" != i_urlpath[ 0 ] ){
+
+                urlfull = d_url + "/" + i_urlpath ;
+            }else{
+                urlfull = d_url + emp + i_urlpath ;
+            };;
+
+            xhr_ask = new XMLHttpRequest();
+            xhr_ask.open( i_asktype , urlfull );
+            xhr_ask.send();
+            xhr_ask.onreadystatechange=(evt_xhr)=>{
+            if( xhr_ask.readyState === 4 ){
+            
+                console.log("DONE");
+                o_k_yes( xhr_ask.responseText );
+                
+            };;};;
+
+        });; return( o_promise );
+    };;
 
 //:==============================:FUNC_XML_HTTP_REQUEST:[061]://
 //|01|01|01|01|01|01|01|01|01|SUBS|01|01|01|01|01|01|01|01|01|//
@@ -927,7 +958,14 @@ if( yesnode ){ //:-------------------------------------------://
         evt_key                                      //:[057]://
     ){                                               //:[057]://
                                                      //:[057]://
-        console.log( evt_key );                      //:[057]://  
+
+        F_XHR( "GET" , "DABITCH/C/TAB_HEX/RED/89" )
+        .then((i_saywhat)=>{
+
+            console.log( "[what?]:" + i_saywhat );
+        });;
+
+  
     };;                                              //:[057]://
 
     const   F_KEYMAST_UPP = function                 //:[057]://
