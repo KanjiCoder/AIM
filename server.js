@@ -1397,6 +1397,18 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : RUN:                                                
            
         heroku labs:enable runtime-dyno-metadata --app APPNAME
+
+    [060] : We didn't change any source code here.
+          : (except this comment message)
+          : I Ran :
+    heroku labs:enable runtime-dyno-metadata --app "aim-kanji"
+          :
+          : You might need to use :
+          :
+          git commit --allow-empty -m "[EMPTY_COMMIT]"
+          :
+          : To force server to restart after adding
+          : "runtime-dyno-metadata"
             
 
 *** *************************************** MISC_DELTA_NOTES **/
