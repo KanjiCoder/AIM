@@ -224,7 +224,7 @@ if( yesnode ){ //:-------------------------------------------://
 };; //:------------------------------------------------------://
 if( notnode ){ //:-------------------------------------------://
 
-    var d_msgkill_001 =( ""
+    var d_msgkill_001 =( ""                                     
     +"[Your_App_Is_Crashing_Because_You_Dont]"+"\n"  //:[059]://
     +"[Have_Access_To_______________________]"+"\n"  //:[059]://
     +"[-------------------------------------]"+"\n"  //:[059]://
@@ -1391,10 +1391,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     [057] : KEYMAIN - Politically Correct Version Of            
           : KEYMAST ( Key Master )                              
 
-    [059] : Added helpful message to help you configure
-          : your heroku installation properly if you
-          : cannot get access to your application name.
-          : RUN:
+    [059] : Added helpful message to help you configure         
+          : your heroku installation properly if you            
+          : cannot get access to your application name.         
+          : RUN:                                                
            
         heroku labs:enable runtime-dyno-metadata --app APPNAME
             
