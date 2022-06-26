@@ -851,21 +851,21 @@ if( yesnode ){ //:-------------------------------------------://
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 
-    const F_KEYMAST_DOW = PRIVATE_F_KEYMAST_DOW( 
+    const F_KEYMAST_DOW = function PRIVATE_F_KEYMAST_DOW( 
         evt_key
     ){
 
         console.log( evt_key );
     };;
 
-    const F_KEYMAST_UPP = PRIVATE_F_KEYMAST_UPP( 
+    const F_KEYMAST_UPP = function PRIVATE_F_KEYMAST_UPP( 
         evt_key
     ){
 
         console.log( evt_key );
     };;
 
-    const F_KEYMAST_INI = PRIVATE_F_KEYMAST_INI( ){
+    const F_KEYMAST_INI = function PRIVATE_F_KEYMAST_INI( ){
 
         var ADD = document.addEventListener ;
 
