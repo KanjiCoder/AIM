@@ -105,6 +105,9 @@
     const nam_cmd =( "[FIX:sql_cmd]" );              //:[056]://
     const cmd_sql =( "[FIX:sql_cmd]" );              //:[056]://
     const msg_err =( "[FIX:err_msg]" );              //:[056]://
+    
+    const key_evt =( "[FIX:evt_key]" );              //:[057]://
+    const F_INI_KEYMAST =( "[FIX:F_KEYMAST_INI]" );  //:[057]://
 
 //:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
 //:MASTER_DECLARATION_DATA:[035]:============================://
@@ -888,7 +891,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 
     F_INI_CLI();    //:INIt: CLIent :----------------://
                                                      
-    F_INI_KEYMAST();//:INIt: Client Keyboard Handler ://
+    F_KEYMAST_INI();//:INIt: Client Keyboard Handler ://
 
 };; };;
 //:===============================:INIT_CLIENT_FRONTEND:[035]://
