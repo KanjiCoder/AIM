@@ -667,38 +667,38 @@ if( yesnode ){ //:-------------------------------------------://
 //:================================:FUNC_DICT_TO_STRING:[058]://
 //:FUNC_XML_HTTP_REQUEST:[061]:==============================://
 
-    const F_XHR = function PRIVATE_F_XHR(
-        i_asktype  /** EXAMPLE[ "GET" , "POST" ]ETC    **/
-    ,   i_urlpath  /** @urlpath@ : URL : Relative Path **/
-    ){
-        var o_promise = new Promise( function
-        EXECUTO_F_XHR( o_k_yes , wontsay ){
-
-            var emp , urlfull , xhr_ask ;
-
-                emp = "" ; /**EmptyString**/
-            urlfull = "[REQUEST_URL_NOT_SET]" ;
-
-            if( "/" != i_urlpath[ 0 ] ){
-
-                urlfull = d_url + "/" + i_urlpath ;
-            }else{
-                urlfull = d_url + emp + i_urlpath ;
-            };;
-
-            xhr_ask = new XMLHttpRequest();
-            xhr_ask.open( i_asktype , urlfull );
-            xhr_ask.send();
-            xhr_ask.onreadystatechange=(evt_xhr)=>{
-            if( xhr_ask.readyState === 4 ){
-            
-                console.log("DONE");
-                o_k_yes( xhr_ask.responseText );
-                
-            };;};;
-
-        });; return( o_promise );
-    };;
+    const F_XHR = function PRIVATE_F_XHR(            //:[061]://
+        i_asktype  /** @asktype@  **/                //:[061]://
+    ,   i_urlpath  /** @urlpath@  **/                //:[061]://
+    ){                                               //:[061]://
+        var o_promise = new Promise( function        //:[061]://
+        EXECUTO_F_XHR( o_k_yes , wontsay ){          //:[061]://
+                                                     //:[061]://
+            var emp , urlfull , xhr_ask ;            //:[061]://
+                                                     //:[061]://
+                emp = "" ; /**EmptyString**/         //:[061]://
+            urlfull = "[REQUEST_URL_NOT_SET]" ;      //:[061]://
+                                                     //:[061]://
+            if( "/" != i_urlpath[ 0 ] ){             //:[061]://
+                                                     //:[061]://
+                urlfull = d_url + "/" + i_urlpath ;  //:[061]://
+            }else{                                   //:[061]://
+                urlfull = d_url + emp + i_urlpath ;  //:[061]://
+            };;                                      //:[061]://
+                                                     //:[061]://
+            xhr_ask = new XMLHttpRequest();          //:[061]://
+            xhr_ask.open( i_asktype , urlfull );     //:[061]://
+            xhr_ask.send();                          //:[061]://
+            xhr_ask.onreadystatechange=(evt_xhr)=>{  //:[061]://
+            if( xhr_ask.readyState === 4 ){          //:[061]://
+                                                     //:[061]://
+                console.log("DONE");                 //:[061]://
+                o_k_yes( xhr_ask.responseText );     //:[061]://
+                                                     //:[061]://
+            };;};;                                   //:[061]://
+                                                     //:[061]://
+        });; return( o_promise );                    //:[061]://
+    };;                                              //:[061]://
 
 //:==============================:FUNC_XML_HTTP_REQUEST:[061]://
 //|01|01|01|01|01|01|01|01|01|SUBS|01|01|01|01|01|01|01|01|01|//
@@ -959,13 +959,12 @@ if( yesnode ){ //:-------------------------------------------://
     ){                                               //:[057]://
                                                      //:[057]://
 
-        F_XHR( "GET" , "DABITCH/C/TAB_HEX/RED/89" )
-        .then((i_saywhat)=>{
+        F_XHR( "GET" , "DABITCH/R/TAB_HEX/RED" )     //:[061]://
+        .then((i_saywhat)=>{                         //:[061]://
+                                                     //:[061]://
+            console.log( "[what?]:" + i_saywhat );   //:[061]://
+        });;                                         //:[061]://
 
-            console.log( "[what?]:" + i_saywhat );
-        });;
-
-  
     };;                                              //:[057]://
 
     const   F_KEYMAST_UPP = function                 //:[057]://
@@ -1250,7 +1249,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : use "l_" prefix for "libraries"
 
 *** ******************************************************** **/
-/** COMMENTS_ARE_READ_LAST_OR_NEVER ************************ ***
+/** @ATTED_COMMENTS@ *************************************** ***
 
     @LIB_URL@ : LIBRARY : Universal Resource Locator
     @LIB_Q_S@ : LIBRARY : QueryString
@@ -1269,7 +1268,6 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @wgl@ : Web_GL ( context object )
     @dbu@ : Data_Base_URL
     @cin@ : Connection_INformation
-    @dcp@ : Database_Connection_Pool
     @err@ : Error
     @cli@ : Client ( postgres )
     @don@ : Done   ( postgres "done" function pointer )
@@ -1281,37 +1279,32 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @dbs@ / @d_dbs@ : WRONG[ data_base_string ]FIX[ dbu ]
     @pas@ / @i_pas@ : PASsword
     @vas@ : Value_As_String
-
-
-    @d_dcp@ : Database_Client_Pool ( d_ == global data ) 
-    
-    @o_k_yes@ : Resolver function for promise.
-    @okbutno@ : Reject   function for promise.
-    @wontsay@ : Reject   function for promise. (NEVER CALLED)
-    @cantsay@ : Mistake, I meant[ wontsay ]
+    @dcp@ : @d_dcp@ : Database_Client_Pool ( d_ == global data ) 
+    @dcp@ : Database_Connection_Pool
 
     @TIK@ : TICK ( as in update tick )
     @GUL@ : Game_Update_Loop
     @TDC@ : Test_Database_Connection
+    @ATF@ : About_This_Fuction , Used as [ATF] within function.
 
+    @o_k_yes@ : Resolver function for promise.
+    @okbutno@ : Reject   function for promise.
+    @wontsay@ : Reject   function for promise. (NEVER CALLED)
+    @cantsay@ : Mistake, I meant[ wontsay ]
     @dom_roo@ : DomainObjectModel - Root
     @dom_bod@ : DomainObjectModel - Body
     @doc_bod@ : Means[ document body ]USE[ dom_bod ]
     @dom_can@ : DomainObjectModel - Canvas
-
     @cmd_nam@ : You Mean[ sql_cmd ]
     @nam_cmd@ : You Mean[ sql_cmd ]
-
     @bla_bla@ : Someone is speaking, I am not listening.
+    @asktype@ : EXAMPLE[ "GET" , "POST" ]ETC
+    @urlpath@ : URL ( relative ) path EX[ API/WHATEVER ]
 
     @RES_CAN@ : RESize_CANvas
-    @ATF@ : About_This_Fuction , Used as [ATF] within function.
+    
 
     @DODS@ : Data_Oriented_Design'S
-
-    #MRI# : Make Routing ( case ) Insensitive 
-
-    #_P_N_C_# : Paranoid_Null_Check
 
     @F_INI_SER@ : Initialize Server ( SEE[ F_ISD ] )
     @F_ISD@     : Initialize Server Data
@@ -1329,16 +1322,19 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @m_seg@ : url segments array  
 
     @PROTODO@ : A promise used as a todo message.
-
-    #MWM# : Monkey Wrench Macros
     @MWM@ : Really should be #MWM# not @MWM@
-    !MWM! : Or we could do this, doxygen style comment.
-    !NDC! : Not_Deep_Copy ( Not a deep copy )
+
+*** *************************************** @ATTED_COMMENTS@ **/
+/** #HASH_TAGGED_COMMENTS# ********************************* ***
 
     #IPR# : Is_Postgres_Response , we want to get rid           
           : of all the bloat and return the[ rows ]             
           : member as { arr_rows : [ ... ] } response.          
           : TUTORIAL [050]     
+
+    #MRI# : Make Routing ( case ) Insensitive 
+    #MWM# : Monkey Wrench Macros
+    #_P_N_C_# : Paranoid_Null_Check
 
     #_KISS_BEATS_DRY_# : #KISS# Beats #DRY#                [052]
     #KISS# : Keep_It_Simple_Stupid                         [052]
@@ -1351,7 +1347,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     #MYSBSYS# : ModifyYourSelf _ Before _ ServingYourSelf  [058]
 
-*** ******************************************************** **/
+*** ********************************* #HASH_TAGGED_COMMENTS# **/
+/** !EXCLAIMED_COMMENTS! *********************************** ***
+
+    !MWM! : Or we could do this, doxygen style comment.
+    !NDC! : Not_Deep_Copy ( Not a deep copy )
+
+*** *********************************** !EXCLAIMED_COMMENTS! **/
 /** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
 
     Just because the physical structure of the code is
