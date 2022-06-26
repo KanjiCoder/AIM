@@ -601,7 +601,7 @@ if( yesnode ){ //:-------------------------------------------://
 //:=================================:FUNC_TEMPLATE_EDit:[047]://
 //|01|01|01|01|01|01|01|01|01|SUBS|01|01|01|01|01|01|01|01|01|//
 //|[ @$$$$$@ ]                                               |//
-//|[_ASERVER_]VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV|//
+//|__ASERVER__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
 //|[ @$$$$$@ ]                                               |//
 //|01|01|01|01|01|01|01|01|01|SUBS|01|01|01|01|01|01|01|01|01|//
 
@@ -661,12 +661,12 @@ if( yesnode ){ //:-------------------------------------------://
 
 //|01|01|01|01|01|01|01|01|01|SUBS|01|01|01|01|01|01|01|01|01|//
 //|                                               [ @$$$$$@ ]|//
-//|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[_ASERVER_]|//
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __ASERVER__|//
 //|                                               [ @$$$$$@ ]|//
 //|01|01|01|01|01|01|01|01|01|SUBS|01|01|01|01|01|01|01|01|01|//
 //|02|02|02|02|02|02|02|02|02|SUBS|02|02|02|02|02|02|02|02|02|//
 //|[ @$$$$$@ ]                                               |//
-//|[_DABITCH_]VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV|//
+//|__DABITCH__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 
@@ -842,40 +842,45 @@ if( yesnode ){ //:-------------------------------------------://
 
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
-//|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[_DABITCH_]|//
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __DABITCH__|//
 //|                                               [ @$$$$$@ ]|//
 //|02|02|02|02|02|02|02|02|02|SUBS|02|02|02|02|02|02|02|02|02|//
 //|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|//
 //|[ @$$$$$@ ]                                               |//
-//|[_KEYMAST_]VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV|//
+//|__KEYMAST__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 
-    const F_KEYMAST_DOW = function PRIVATE_F_KEYMAST_DOW( 
-        evt_key
-    ){
+    const   F_KEYMAST_DOW = function                 //:[057]://
+    PRIVATE_F_KEYMAST_DOW(                           //:[057]://
+        evt_key                                      //:[057]://
+    ){                                               //:[057]://
+                                                     //:[057]://
+        console.log( evt_key );                      //:[057]://
+    };;                                              //:[057]://
 
-        console.log( evt_key );
-    };;
+    const   F_KEYMAST_UPP = function                 //:[057]://
+    PRIVATE_F_KEYMAST_UPP(                           //:[057]://
+        evt_key                                      //:[057]://
+    ){                                               //:[057]://
+                                                     //:[057]://
+        console.log( evt_key );                      //:[057]://
+    };;                                              //:[057]://
 
-    const F_KEYMAST_UPP = function PRIVATE_F_KEYMAST_UPP( 
-        evt_key
-    ){
-
-        console.log( evt_key );
-    };;
-
-    const F_KEYMAST_INI = function PRIVATE_F_KEYMAST_INI( ){
-
-        var ADD = document.addEventListener ;
-
-        ADD( "keyup"   , F_KEYMAST_UPP );
-        ADD( "keydown" , F_KEYMAST_DOW );
-    };;
+    const   F_KEYMAST_INI = function                 //:[057]://
+    PRIVATE_F_KEYMAST_INI(                           //:[057]://
+        /** No Arguments **/                         //:[057]://
+    ){                                               //:[057]://
+                                                     //:[057]://
+        var ADD = document.addEventListener ;        //:[057]://
+                                                     //:[057]://
+        ADD( "keyup"   , F_KEYMAST_UPP );            //:[057]://
+        ADD( "keydown" , F_KEYMAST_DOW );            //:[057]://
+    };;                                              //:[057]://
 
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
-//|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[_KEYMAST_]|//
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __KEYMAST__|//
 //|                                               [ @$$$$$@ ]|//
 //|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|//
 //:INIT_CLIENT_FRONTEND:[035]:===============================://
@@ -1256,7 +1261,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : If error in SQL , rather than crash server,         
           : we pack meaningful error message into[ err_msg ].   
           : If no error , [ err_msg == "" ].                    
-          : ADDED_DATE[ 2022_06_25 ]                            
+          : ADDED_DATE[ 2022_06_25 ]   
+
+    [057] : KEYMAIN - Politically Correct Version Of
+          : KEYMAST ( Key Master )
+
+            
 
 *** *************************************** MISC_DELTA_NOTES **/
 /** ERRORS ************************************************* ***
