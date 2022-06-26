@@ -744,6 +744,7 @@ if( yesnode ){ //:-------------------------------------------://
     //:     :ARTGIRL does the rendering __WORK__ using   ://    
     //:     :supplies she buys from ARTDUDE.             ://    
     //:     :( OpenGL Pipeline Creation Is ArtGirl's Job)://    
+    //:     :( Rendering Loop Calls Are Her Job Too.    )://    
     //:--------------------------------------------------://    
 
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
@@ -1373,6 +1374,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     @PROTODO@ : A promise used as a todo message.
     @MWM@ : Really should be #MWM# not @MWM@
+    @ATS@ : About_This[ Struct / System / Section ]        [062]
 
 *** *************************************** @ATTED_COMMENTS@ **/
 /** #HASH_TAGGED_COMMENTS# ********************************* ***
