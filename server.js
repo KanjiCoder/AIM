@@ -378,7 +378,7 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
     let pos =(0.0 + 1.0 );                           //:[066]://
     let _0_ =(0.0 * 0.0 );                           //:[066]://
                                                      //:[066]://
-    var d_artgirl = STRUCT({  laxcoma = 0            //:[066]://
+    var d_artgirl = STRUCT({  laxcoma : 0            //:[066]://
                                                       
     ,   wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
 
