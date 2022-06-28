@@ -73,6 +73,7 @@
 
     DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
 
+        c_    : const    ( GLOBAL ) ( use like c99 macros )[064]
         d_    : data     ( GLOBAL ) 
         f_    : function ( GLOBAL ) 
         l_    : library  ( GLOBAL ) 
@@ -292,12 +293,28 @@ if( yesnode ){ //:-------------------------------------------://
 
 };; //:------------------------------------------------------://
 //:============================:MASTER_DECLARATION_LIBS:[035]://
+//:CONST_MACROS_BY_SYSTEM[064]:==============================://
+                                                    
+//: __ARTGIRL__ ://                                  //:[064]://
+                                                     //:[064]://
+    /** *********************************** **/      //:[064]://
+    /** Different Rendering Pipelines [064] **/      //:[064]://
+    /** *********************************** **/      //:[064]://
+                                                     //:[064]://
+    const c_artgirl_ren_tot = ( 7 ); //:#RenderPipelines[064]://
+    const c_artgirl_ren_001 = ( 0 ); //:GradientQuad    [064]://
+    const c_artgirl_ren_002 = ( 1 ); //:FlashingScreen  [064]://
+    const c_artgirl_ren_003 = ( 2 ); //:Sectors_Colored [064]://
+    const c_artgirl_ren_004 = ( 3 ); //:Sectors_Numbered[064]://
+    const c_artgirl_ren_005 = ( 4 ); //:SolidColorTiles [064]://
+    const c_artgirl_ren_006 = ( 5 ); //:@HEXASET1STAMP@ [064]://
+    const c_artgirl_ren_007 = ( 6 ); //:@HEXASET1AUSET@ [064]://
+
+//:==============================:CONST_MACROS_BY_SYSTEM[064]://
 //:DATA_BY_SYSTEM:[063]:=====================================://
 
-//:-------------://                                  //:[063]://
-//: __ARTGIRL__ ://                                  //:[063]://
-//:-------------://                                  //:[063]://
-if( notnode ){                                       //:[063]://
+
+if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                      //:[063]://
     var d_artgirl_wgl =( "[FIX:a_g.wgl]" );          //:[063]://
                                                      //:[063]://
@@ -1073,8 +1090,29 @@ if( notnode ){                                       //:[063]://
 //| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __KEYMAST__|//
 //|                                               [ @$$$$$@ ]|//
 //|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|//
+//|06|06|06|06|06|06|06|06|06|SUBS|06|06|06|06|06|06|06|06|06|//
+//|[ @$$$$$@ ]                                               |//
+//|__SERGAME__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
+//|[ @$$$$$@ ]                                               |//
+//|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
 
-//: NEXT_VIDEO(064) : CLIGAME & SERGAME namespaces.     [063]://
+    //:--------------------------------------------------://
+    //: __SERGAME__ first because server will never [064]://    
+    //: call client, but client might call server.  [064]://
+    //: ...Maybe with sockets? That's a later issue.[064]://
+    //:--------------------------------------------------://
+
+//|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
+//|                                               [ @$$$$$@ ]|//
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __SERGAME__|//
+//|                                               [ @$$$$$@ ]|//
+//|06|06|06|06|06|06|06|06|06|SUBS|06|06|06|06|06|06|06|06|06|//
+//|07|07|07|07|07|07|07|07|07|SUBS|07|07|07|07|07|07|07|07|07|//
+//|[ @$$$$$@ ]                                               |//
+//|__CLIGAME__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
+//|[ @$$$$$@ ]                                               |//
+//|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
+
                                                      //:[063]://
     const   F_CLIGAME_TIK = function                 //:[063]://
     PRIVATE_F_CLIGAME_TIK(                           //:[063]://
@@ -1103,6 +1141,11 @@ if( notnode ){                                       //:[063]://
         );;                                          //:[063]://
     };;                                              //:[063]://
 
+//|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
+//|                                               [ @$$$$$@ ]|//
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __CLIGAME__|//
+//|                                               [ @$$$$$@ ]|//
+//|07|07|07|07|07|07|07|07|07|SUBS|07|07|07|07|07|07|07|07|07|//
 //:INIT_CLIENT_FRONTEND:[035]:===============================://
 if( notnode ){  window.onload = function( /** [030] **/ ){
 
@@ -1415,6 +1458,23 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @asktype@ : EXAMPLE[ "GET" , "POST" ]ETC
     @urlpath@ : URL ( relative ) path EX[ API/WHATEVER ]
 
+    @HEXASET@ : A fourset, but encoded as 16 uint32s.      [064]
+              : Each uint32 encoding a 5x5 array of pixels.[064]
+                                                           [064]
+    @HEXASET1STAMP@ : Stamping hexaset graphic WITHOUT     [064]
+                    : any auto-tile like rendering. This   [064]
+                    : render pipeline ignores all layers   [064]
+                    : and only pays attention to the main  [064]
+                    : game layer.                          [064]
+                    : #_ONLY_RENDERS_THE_MAIN_GAME_LAYER_# [064]
+                                                           [064]
+    @HEXASET1AUSET@ : Stamping hexaset graphic using       [064]
+                    : auto-tiling algorithm. Specifically  [064]
+                    : the FOURSET algorithm.               [064]
+                    : SEE[ https://imgur.com/9nMmX2F ]     [064]
+                    : #_ONLY_RENDERS_THE_MAIN_GAME_LAYER_# [064]
+                        
+
     @cli_wid@ : Client Width 
     @cli_hig@ : Client Height
 
@@ -1464,6 +1524,22 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     #MUO_RBP# : Mock_Up(sql)Obj_Returned_By_PG(lib)        [056]
 
     #MYSBSYS# : ModifyYourSelf _ Before _ ServingYourSelf  [058]
+
+    #_ONLY_RENDERS_THE_MAIN_GAME_LAYER_# :                 [064]
+                                                           [064]
+        A render pipeline like this does __NOT__           [064]
+        render all level data. It only renders             [064]
+        the main gameplay layer. The layer with            [064]
+        the geometry [ IVY ] interacts with.               [064]
+        This layer is the main layer of                    [064]
+        destructable geometry.                             [064]
+                                                           [064]
+        ( We probably will have a BG and FG    )           [064]
+        ( game layer that is also destructable )           [064]
+        ( but is only for ASTHETICS, and does  )           [064]
+        ( __NOT__ affect gameplay. Thus __NOT__)           [064]
+        ( considered part of the main game     )           [064]
+        ( layer .                              )           [064]
 
 *** ********************************* #HASH_TAGGED_COMMENTS# **/
 /** !EXCLAIMED_COMMENTS! *********************************** ***
