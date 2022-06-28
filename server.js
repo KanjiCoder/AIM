@@ -120,9 +120,40 @@
     };;                                              //:[065]://
 
 //:=============================================:STRUCT:[065]://
+//:CONST_ARR:[066]:==========================================://
+
+    const CONST_ARR = function PRIVATE_CONST_ARR( 
+    
+        i_len /** Length Of Array **/
+    ){
+        var o_arr = null ;
+
+        var len   = arguments.length ;
+        var dex   = 0 ; 
+        
+        if( len !=( i_len + 1 ) ){
+
+            ERR( "[Improper_Array_Initialization]" );
+        }else{
+
+            o_arr = new Array( i_len );
+            
+            for(dex = 0 ; dex<=(i_len-1) ; dex ++){  //:[066]://
+
+                o_arr[ dex ] = arguments[ dex + 1 ];
+            };;
+        };;
+
+        Object.freeze( o_arr );
+        return( o_arr );
+    };;
+
+//:==========================================:CONST_ARR:[066]://
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
 
     //: CTRL_F_TAGS[ #illegal# ]                        [063]://
+
+    const  tcz  =( "[TexCoord.Z:NO_SUCH_THING]" );   //:[066]://
 
     const d_sob =( "" /////////////////// //: < < < < < [042]://
     +    "[WHAT_THE_FUCK_WAS_I_THINKING]" //: < < < < < [042]://
@@ -315,7 +346,12 @@ if( yesnode ){ //:-------------------------------------------://
 //:CONST_MACROS_BY_SYSTEM[064]:==============================://
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
-                                                     //:[064]://
+
+
+    /** WebGL Surface Quad Macros ********* **/      //:[066]://
+                                                     //:[066]://
+        const c_artgirl_vbd_len =( 20 );             //:[066]://
+                                                     
     /** *********************************** **/      //:[064]://
     /** Different Rendering Pipelines [064] **/      //:[064]://
     /** *********************************** **/      //:[064]://
@@ -337,9 +373,25 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                      //:[063]://
     var d_artgirl_wgl =( "[FIX:a_g.wgl]" );          //:[063]://
                                                      //:[063]://
-    var d_artgirl = STRUCT({                         //:[065]://
-                                                     //:[063]://
-        wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
+
+    let neg =(0.0 - 1.0 );                           //:[066]://
+    let pos =(0.0 + 1.0 );                           //:[066]://
+    let _0_ =(0.0 * 0.0 );                           //:[066]://
+                                                     //:[066]://
+    var d_artgirl = STRUCT({  laxcoma = 0            //:[066]://
+                                                      
+    ,   wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
+
+    ,   vbl :           c_artgirl_vbd_len //:@vbd@:////:[065]://
+    ,   vbd :CONST_ARR( c_artgirl_vbd_len //:@vbd@:////:[065]://
+
+        //:@vcx@ @vcy@ @vcz@        @tcx@ , @tcy@
+        ,   neg , neg , _0_    ,    (0.0) , (1.0)    //:[066]://
+        ,   pos , neg , _0_    ,    (1.0) , (1.0)    //:[066]://
+        ,   neg , pos , _0_    ,    (0.0) , (0.0)    //:[066]://
+        ,   pos , pos , _0_    ,    (1.0) , (0.0)    //:[066]://
+        )                                            //:[066]://
+
     });;                                             //:[063]://
                                                      //:[065]://
     console.log( d_artgirl );                        //:[065]://
@@ -1462,6 +1514,16 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @dcp@ : @d_dcp@ : Database_Client_Pool ( d_ == global data ) 
     @dcp@ : Database_Connection_Pool
 
+    @vbd@ : Vertex_Buffer_Data                             [066]
+                                                           [066]
+    @vcx@ : Vertex  Coord .X                               [066]
+    @vcy@ : Vertex  Coord .Y                               [066]
+    @vcz@ : Vertex  Coord .Z                               [066]
+                                                           [066]
+    @tcx@ : Texture Coord .X                               [066]
+    @tcy@ : Texture Coord .Y                               [066]
+    @tcz@ : Texture Coord .Z ( NO FUCKING SUCH THING )     [066]
+
     @TIK@ : TICK ( as in update tick )
     @GUL@ : Game_Update_Loop
     @TDC@ : Test_Database_Connection
@@ -1480,6 +1542,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @bla_bla@ : Someone is speaking, I am not listening.
     @asktype@ : EXAMPLE[ "GET" , "POST" ]ETC
     @urlpath@ : URL ( relative ) path EX[ API/WHATEVER ]
+    @laxcoma@ : Lax Comma , a hack for style.
 
     @HEXASET@ : A fourset, but encoded as 16 uint32s.      [064]
               : Each uint32 encoding a 5x5 array of pixels.[064]
