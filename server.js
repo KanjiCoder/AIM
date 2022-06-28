@@ -1742,6 +1742,6 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : "JavaScript With Structs".                     [065]
           :                                                [065]
           : NinjaCoder Title: "JavaScript With Structs"    [065]
-          : KanjiCoder Title: "Structs In JavaScript"      [065]
+          : KanjiCoder Title: "JavaScript Struct Keyword"  [065]
 
 *** *************************************** MISC_DELTA_NOTES **/
