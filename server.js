@@ -1096,11 +1096,11 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
 
-    //:--------------------------------------------------://
+    //:--------------------------------------------------://    
     //: __SERGAME__ first because server will never [064]://    
-    //: call client, but client might call server.  [064]://
-    //: ...Maybe with sockets? That's a later issue.[064]://
-    //:--------------------------------------------------://
+    //: call client, but client might call server.  [064]://    
+    //: ...Maybe with sockets? That's a later issue.[064]://    
+    //:--------------------------------------------------://    
 
 //|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
@@ -1112,8 +1112,7 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
 //|__CLIGAME__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
-
-                                                     //:[063]://
+           
     const   F_CLIGAME_TIK = function                 //:[063]://
     PRIVATE_F_CLIGAME_TIK(                           //:[063]://
                                                      //:[063]://
@@ -1698,6 +1697,22 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             
     [063] : Refactored project a bit to give ARTGIRL the        
           : things she rightfully owns and has                  
-          : jurisdiction over.                                  
+          : jurisdiction over.      
+
+    [064] : Waterfalled some design by adding render       [064]
+          : pipeline constants. This is literally our      [064]
+          : ______ nth draft.                              [064]
+          :                                                [064]
+          : 1st draft : Atomic Alice (newgrounds)          [064]
+          : 2nd draft : M128.JS  (still japanese)          [064]
+          : 3rd draft : A2_JC (for josh project   2020)    [064]
+          : 4rd draft : A2_JS (repo. Tile editor? 2021)    [064]
+          :           : Tilde("~") + 2 to get to           [064]
+          :           : interesting stuff.                 [064]
+          : 5rd draft : AAC2020                            [064]
+          : 6th draft : A3 's CPU world map render.        [064]
+          : 7th draft : A3 's LEDIT64 system.              [064]
+          : 8th draft : This source code. Atomic Ivy MMO   [064]
+
 
 *** *************************************** MISC_DELTA_NOTES **/
