@@ -1,22 +1,17 @@
 //:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:=========================://
 /**----------------------------------------------------------:::
-
     Tutorial Where We Build This File ::::::::::::::::::::::::::
-
-        www.tinyurl.com/GAME-TUTS-ALL         //: ALL OF IT  ://
 
         www.tinyurl.com/GAME-TUTS             //: KANJICODER ://  
         www.tinyurl.com/GAME-TUTS-SLOWER      //: NINJACODER :// 
         www.tinyurl.com/GAME-TUTS-UNSCRIPTED  //:  WEEBCODER ://
-
 :::----------------------------------------------------------:::
-
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
 
-        github.com/KanjiCoder/AIM                 <<< Same_Place
-        tinyurl.com/ATOMIC-IVY-MMO-SOURCE-CODE    <<< Same_Place
-        tinyurl.com/GAME-CODE                     <<< Same_Place
-        
+        github.com/KanjiCoder/AIM           <<< Same_Place [066]
+        tinyurl.com/GAME-CODE               <<< Same_Place [066]
+:::----------------------------------------------------------:::
+    CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]  
 :::----------------------------------------------------------**/
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:DEPLOY_THIS_SERVER_YOURSELF:[034]:========================://
