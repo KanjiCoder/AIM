@@ -107,12 +107,15 @@
                                                      //:[065]://
         var o_obj = Object.create( null );           //:[065]://
                                                      //:[065]://
-        Object.keys(obj).forEach( function(key,dex){ //:[065]://
+        Object.keys(i_obj).forEach( (key,dex)=>{     //:[065]://
                                                      //:[065]://
             o_obj[ ""+key+"" ] =(                    //:[065]://
             i_obj[ ""+key+"" ]   );;                 //:[065]://
                                                      //:[065]://
         });;                                         //:[065]://
+                                                     //:[065]://
+        Object.seal( o_obj );                        //:[065]://
+                                                     //:[065]://
         return( o_obj );                             //:[065]://
     };;                                              //:[065]://
 
@@ -1404,7 +1407,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     LIB_  : any library we got by using require function
           : ( use l_ instead of LIB_ for terseness )
-
+    
+    s_    : Structs get the [ d_ ] for data prefix!        [065]
+    v_    : global are[ d_ ] local is[ i_ ]or[ o_ ]or[NONE][065]
     c_    : client - only 
     s_    : server - only
     b_    : BOTH ( known by both client and server )
