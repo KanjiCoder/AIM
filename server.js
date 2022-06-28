@@ -67,9 +67,9 @@
 //:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]:===================://
 /**----------------------------------------------------------:::
     
-    Coding Convention :
-
-        let : Only for temporary references                [063]
+    Coding Convention ( s ):                               [063]
+                                                           [063]
+        let : Only for temporary [object/system] references[063]
 
     DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
 
@@ -102,7 +102,7 @@
 //:====================================:ENVIRONMENT_DETECTION://
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
 
-    //: CTRL_F_TAGS[ #illegal# ]://
+    //: CTRL_F_TAGS[ #illegal# ]                        [063]://
 
     const d_sob =( "" /////////////////// //: < < < < < [042]://
     +    "[WHAT_THE_FUCK_WAS_I_THINKING]" //: < < < < < [042]://
@@ -260,7 +260,7 @@ if( notnode ){ //:-------------------------------------------://
 
     
     var d_can = "[nil][!c!:d_can]" ;  //: Html5 Canvas  [035]://
-    /// d_wgl = "[nil][!c!:d_wgl]" ;  //: WebGL Context [063]://
+    //- d_wgl = "[nil][!c!:d_wgl]" ;      WebGL Context [063]-//
 
     var d_url = d_urlsite ;           //: E.T.PhoneHome [058]://
 
@@ -304,7 +304,7 @@ if( notnode ){                                       //:[063]://
     var d_artgirl ={                                 //:[063]://
                                                      //:[063]://
         wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
-    };;                                              //:[063]://  
+    };;                                              //:[063]://
 };;                                                  //:[063]://
 
 //:=====================================:DATA_BY_SYSTEM:[063]://
@@ -478,12 +478,12 @@ if( notnode ){                                       //:[063]://
     //:-----------------------------:html_dom_setup:[032]://
     //:webgl_setup:[033]:--------------------------------://
 
-        //:[MOVED_TO][  F_ARTGIRL_INI             ]:[063]://
+        //:[MOVED][  F_ARTGIRL_INI                ]:[063]://    
 
     //:--------------------------------:webgl_setup:[033]://
     //:enter_infinite_loop:[036]:------------------------://
 
-        //:[MOVED][       F_GUL( 0.0 );           ]:[063]://
+        //:[MOVED][       F_GUL( 0.0 );           ]:[063]://    
 
     //:------------------------:enter_infinite_loop:[036]://
 
@@ -764,15 +764,14 @@ if( notnode ){                                       //:[063]://
         a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 ); //:[063]://
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );   //:[063]://
     };;                                              //:[063]://
-
+                                                     //:[063]://
     const   F_ARTGIRL_INI = function                 //:[063]://
     PRIVATE_F_ARTGIRL_INI(                           //:[063]://
                                                      //:[063]://
         /** NO arguments **/                         //:[063]://
     ){                                               //:[063]://
         let a_g = d_artgirl ;                        //:[063]://
- 
-                      
+                                                     //:[063]://
         a_g.wgl = d_can.getContext( "webgl" );       //:[063]://
         //:                 _R_ , _G_ , _B_ , _A_  ;   :[063]://
         a_g.wgl.clearColor( 0.0 , 1.0 , 0.0 , 1.0 ); //:[063]://
@@ -1076,7 +1075,7 @@ if( notnode ){                                       //:[063]://
 //|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|//
 
 //: NEXT_VIDEO(064) : CLIGAME & SERGAME namespaces.     [063]://
-
+                                                     //:[063]://
     const   F_CLIGAME_TIK = function                 //:[063]://
     PRIVATE_F_CLIGAME_TIK(                           //:[063]://
                                                      //:[063]://
@@ -1090,7 +1089,7 @@ if( notnode ){                                       //:[063]://
                                                      //:[063]://
         F_ARTGIRL_TIK( i_tim );                      //:[063]://
     };;                                              //:[063]://
-
+                                                     //:[063]://
     const   F_CLIGAME_GUL = function                 //:[063]://
     PRIVATE_F_CLIGAME_GUL(                           //:[063]://
                                                      //:[063]://
@@ -1113,7 +1112,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
 
     F_INI_CLI();    //:INIt: CLIent :------------------:[???]://
 
-    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :----:[063]://                                                     
+    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :----:[063]://
     F_KEYMAST_INI();//:INIt: Client Keyboard Handler   :[???]://
     F_CLIGAME_GUL( 0.0 );   //:Enter_Game_Loop:--------:[063]://
 
@@ -1514,6 +1513,58 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
 
 *** ***************************************** I_TAKE_IT_BACK **/
+/** ERRORS ************************************************* ***
+
+    Errors should :                                        [063]
+                                                                
+        1. Crash the program.                                   
+        2. l_e_t us know exactly where the offending code is.   
+                                                                
+    Errors should not :                                    [063]
+                                                                
+        1. Be detailed human-readable messages describing  [063]
+           the problem. Java may have led you to believe   [063]
+           this is the job of an error, it is not.         [063]
+                                                                
+        -KanjiCoder ( 2022_06_27 )                              
+
+*** ************************************************* ERRORS **/
+/** CTRL_F_HELP ******************************************** ***
+
+    CTRLF_HELP | ctrl-f-help | ctrl f help | control f help
+    YOU_ARE_HERE
+
+    template edit | template_edit | template string edit
+    finds and replaces tokens | find and replace
+    TRY[ F_TED ]( Template_EDit , for sql strings )
+
+    serve youself | serve_yourself | serve this file
+    self serve | self serve icecream
+    SEE[ #SELFSERVE# ]
+
+    xml http request | xmlhttprequest | httprequest | httpreq
+    SEE[ FUNC_XML_HTTP_REQUEST | XMLHTTPREQUEST_WIREUP_HACK ]
+    
+    
+*** ******************************************************** **/
+/** FEATURE_CREEP ****************************************** ***
+
+    Let people extend my code : ( 2022_06_24 ) :
+
+        We should make it so that people can extend the game
+        simply by loading JSONP ( application/javascript ) 
+        into the game.
+
+        Or maybe allow people to... extend the code base by
+        including "ATOMIC_IVY_MMO" javasscript and then
+        using it as a library ?
+
+        application/javascript <<< Runnable JavaScript Response
+
+        Inspired by:
+        https://stackoverflow.com/questions/477816
+
+*** ****************************************** FEATURE_CREEP **/
 /** MISC_DELTA_NOTES *************************************** ***
 
     [044] : Will crash randomly if you supply correct           
@@ -1569,54 +1620,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : To force server to restart after adding
           : "runtime-dyno-metadata"
             
+    [063] : Refactored project a bit to give ARTGIRL the        
+          : things she rightfully owns and has                  
+          : jurisdiction over.                                  
 
 *** *************************************** MISC_DELTA_NOTES **/
-/** ERRORS ************************************************* ***
-
-    Don't both documenting error numbers like #001# ,
-    this isn't Java , we give zero fucks about making
-    nice error messages. The only thing an error should
-    do is:
-
-        1. Crash the program.
-        2. Let us know exactly where the offending code is.
-
-        -KanjiCoder ( 2022_06_23 )
-
-*** ************************************************* ERRORS **/
-/** CTRL_F_HELP ******************************************** ***
-
-    CTRLF_HELP | ctrl-f-help | ctrl f help | control f help
-    YOU_ARE_HERE
-
-    template edit | template_edit | template string edit
-    finds and replaces tokens | find and replace
-    TRY[ F_TED ]( Template_EDit , for sql strings )
-
-    serve youself | serve_yourself | serve this file
-    self serve | self serve icecream
-    SEE[ #SELFSERVE# ]
-
-    xml http request | xmlhttprequest | httprequest | httpreq
-    SEE[ FUNC_XML_HTTP_REQUEST | XMLHTTPREQUEST_WIREUP_HACK ]
-    
-    
-*** ******************************************************** **/
-/** FEATURE_CREEP ****************************************** ***
-
-    Let people extend my code : ( 2022_06_24 ) :
-
-        We should make it so that people can extend the game
-        simply by loading JSONP ( application/javascript ) 
-        into the game.
-
-        Or maybe allow people to... extend the code base by
-        including "ATOMIC_IVY_MMO" javasscript and then
-        using it as a library ?
-
-        application/javascript <<< Runnable JavaScript Response
-
-        Inspired by:
-        https://stackoverflow.com/questions/477816
-
-*** ****************************************** FEATURE_CREEP **/
