@@ -101,6 +101,22 @@
     const notnode =( "undefined"  != typeof window );//:[042]://
 
 //:====================================:ENVIRONMENT_DETECTION://
+//:STRUCT:[065]:=============================================://
+
+    const STRUCT = function PRIVATE_STRUCT( i_obj ){ //:[065]://
+                                                     //:[065]://
+        var o_obj = Object.create( null );           //:[065]://
+                                                     //:[065]://
+        Object.keys(obj).forEach( function(key,dex){ //:[065]://
+                                                     //:[065]://
+            o_obj[ ""+key+"" ] =(                    //:[065]://
+            i_obj[ ""+key+"" ]   );;                 //:[065]://
+                                                     //:[065]://
+        });;                                         //:[065]://
+        return( o_obj );                             //:[065]://
+    };;                                              //:[065]://
+
+//:=============================================:STRUCT:[065]://
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
 
     //: CTRL_F_TAGS[ #illegal# ]                        [063]://
@@ -318,10 +334,13 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                      //:[063]://
     var d_artgirl_wgl =( "[FIX:a_g.wgl]" );          //:[063]://
                                                      //:[063]://
-    var d_artgirl ={                                 //:[063]://
+    var d_artgirl = STRUCT({                         //:[063]://
                                                      //:[063]://
         wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
-    };;                                              //:[063]://
+    });;                                             //:[063]://
+                                                     //:[065]://
+    console.log( d_artgirl );                        //:[065]://
+                                                     //:[065]://
 };;                                                  //:[063]://
 
 //:=====================================:DATA_BY_SYSTEM:[063]://
