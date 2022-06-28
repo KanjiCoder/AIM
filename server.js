@@ -65,7 +65,7 @@
     Coding Convention ( s ):                               [063]
                                                            [063]
         let : Only for temporary [object/system] references[063]
-        let : Okay... And for "temp macros"                [064]
+        let : Okay... And for "temp macros"                [066]
 
     DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
 
