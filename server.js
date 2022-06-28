@@ -147,9 +147,9 @@
 //:==========================================:CONST_ARR:[066]://
 //:NON_CONST_ARRAY:[067]:====================================://
 
-    const ARR = PRIVATE_ARR(       i_len ){          //:[067]://
-        var     o_arr = new Array( i_len );          //:[067]://
-        return( o_arr )                              //:[067]://
+    const ARR = function PRIVATE_ARR( i_len ){       //:[067]://
+        var     o_arr = new Array(    i_len );       //:[067]://
+        return( o_arr );                             //:[067]://
     };;                                              //:[067]://
 
 //:====================================:NON_CONST_ARRAY:[067]://
