@@ -7,11 +7,11 @@
         www.tinyurl.com/GAME-TUTS-UNSCRIPTED  //:  WEEBCODER ://
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
-
+                                                                
         github.com/KanjiCoder/AIM           <<< Same_Place [066]
         tinyurl.com/GAME-CODE               <<< Same_Place [066]
 :::----------------------------------------------------------:::
-    CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]  
+    CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
 :::----------------------------------------------------------**/
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:DEPLOY_THIS_SERVER_YOURSELF:[034]:========================://
@@ -65,6 +65,7 @@
     Coding Convention ( s ):                               [063]
                                                            [063]
         let : Only for temporary [object/system] references[063]
+        let : Okay... And for "temp macros"                [064]
 
     DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
 
