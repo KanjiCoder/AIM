@@ -69,7 +69,7 @@
     
     Coding Convention :
 
-        let : Only for temporary references                [064]
+        let : Only for temporary references                [063]
 
     DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
 
@@ -1075,7 +1075,7 @@ if( notnode ){                                       //:[063]://
 //|                                               [ @$$$$$@ ]|//
 //|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|//
 
-//: NEXT VIDEO(064) : CLIGAME & SERGAME namespaces.     [063]://
+//: NEXT_VIDEO(064) : CLIGAME & SERGAME namespaces.     [063]://
 
     const   F_CLIGAME_TIK = function                 //:[063]://
     PRIVATE_F_CLIGAME_TIK(                           //:[063]://
@@ -1111,13 +1111,11 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
         ERR( d_msgkill_001 );                        //:[059]://
     };;                                              //:[059]://
 
-    F_INI_CLI();    //:INIt: CLIent :----------------://
+    F_INI_CLI();    //:INIt: CLIent :------------------:[???]://
 
-    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :----:[064]://
-
-    F_GUL( 0.0 );   //:Enter_Game_Loop:----------------:[063]://
-                                                     
-    F_KEYMAST_INI();//:INIt: Client Keyboard Handler ://
+    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :----:[063]://                                                     
+    F_KEYMAST_INI();//:INIt: Client Keyboard Handler   :[???]://
+    F_CLIGAME_GUL( 0.0 );   //:Enter_Game_Loop:--------:[063]://
 
 };; };;
 //:===============================:INIT_CLIENT_FRONTEND:[035]://
