@@ -149,7 +149,9 @@
 
     //: CTRL_F_TAGS[ #illegal# ]                        [063]://
 
-    const  tcz  =( "[TexCoord.Z:NO_SUCH_THING]" );   //:[066]://
+    const c_artgirl_ren_len =( "[FIX:ren_tot]" );    //:[067]://
+
+    const tcz  =( "[TexCoord.Z:NO_SUCH_THING]" );    //:[066]://
 
     const d_sob =( "" /////////////////// //: < < < < < [042]://
     +    "[WHAT_THE_FUCK_WAS_I_THINKING]" //: < < < < < [042]://
@@ -375,7 +377,19 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                      //:[066]://
     var d_artgirl = STRUCT({  laxcoma : 0            //:[066]://
                                                       
-    ,   wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
+    ,   wgl : "[nil][d_artgirl_wgl]"    //:@wgl@://  //:[063]://
+    ,   vbo : "[nil][d_artgirl_vbo]"    //:@vbo@://  //:[067]://
+    ,   vao : "[nil][d_artgirl_vao]"    //:@vao@://  //:[067]://
+                                                     //:[067]://
+    ,   tex : "[nil][d_artgirl_tex]"    //:@tex@://  //:[067]://
+    ,   lot : "[nil][d_artgirl_lot]"    //:@lot@://  //:[067]://
+    ,   sam : "[nil][d_artgirl_sam]"    //:@sam@://  //:[067]://
+                                                     //:[067]://
+        /** #_O_P_P_# : One Per Program **/          //:[067]://
+                                                     //:[067]://
+    ,   pid : new Array(c_artgirl_ren_tot) //: #_O_P_P_#[067]://
+    ,   vid : new Array(c_artgirl_ren_tot) //: #_O_P_P_#[067]://
+    ,   fid : new Array(c_artgirl_ren_tot) //: #_O_P_P_#[067]://
 
     ,   vbl :           c_artgirl_vbd_len //:@vbd@:////:[066]://
     ,   vbd :CONST_ARR( c_artgirl_vbd_len //:@vbd@:////:[066]://
@@ -1406,7 +1420,20 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
 };;
 //:================================:INIT_SERVER_BACKEND:[035]://
+/** TODO *************************************************** ***
 
+    TODO001 : Rename "VBO" to "AI0" ( Array Indirect 0 )   [067]
+            : Rename "VAO" to "AI1" ( Array Indirect 1 )   [067]
+            :                                              [067]
+            : Pretty damn sure VBO & VAO are just plain    [067]
+            : integer arrays, but VAO's indexes point      [067]
+            : into VBO array. DATE[ 2022_06_28 ]           [067]
+            :                                              [067]
+            : I am sick of mixing these up. Let's give     [067]
+            : them simpler data-oriented names that        [067]
+            : describe them physically.                    [067]
+
+*** *************************************************** TODO **/
 /** CHANGE_HISTORY ***************************************** ***
 
     TUTORIAL PART 018 : https://pastebin.com/ZCFNxebJ
@@ -1582,6 +1609,17 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @PROTODO@ : A promise used as a todo message.
     @MWM@ : Really should be #MWM# not @MWM@
     @ATS@ : About_This[ Struct / System / Section ]        [062]
+
+    @_pid_@ : @pid@ : Program________ID                    [067]
+    @_vid_@ : @vid@ : Vertexshader___ID                    [067]
+    @_fid_@ : @fid@ : FragmentShader_ID                    [067]
+                                                           [067]
+    @_vbo_@ : @vbo@ : Vertex_Buffer_Object (iid)           [067]
+    @_vao_@ : @vao@ : Vertex_Array__Object (iid)           [067]
+    @_tex_@ : @tex@ : Texture Handle/Location              [067]
+    @_lot_@ : @lot@ : Texture Slot (Where @tex@ GPU_Bound?)[067]
+    @_sam_@ : @sam@ : Texture SAMPLER Handle/Location      [067]
+    @_iid_@ : @iid@ : Integer_ID (AKA: "name" in OpenGL)   [067]
 
 *** *************************************** @ATTED_COMMENTS@ **/
 /** #HASH_TAGGED_COMMENTS# ********************************* ***
