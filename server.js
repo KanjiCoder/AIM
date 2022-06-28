@@ -74,7 +74,7 @@
         f_    : function ( GLOBAL ) 
         l_    : library  ( GLOBAL ) 
         
-        m_    : member   ( LOCAL  )
+        m_    : member   ( LOCAL  )(SERVER SIDE CODE ONLY) [067]
         i_    : input    ( LOCAL  )
         o_    : output   ( LOCAL  )
 
