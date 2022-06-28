@@ -145,6 +145,14 @@
     };;                                              //:[066]://
 
 //:==========================================:CONST_ARR:[066]://
+//:NON_CONST_ARRAY:[067]:====================================://
+
+    const ARR = PRIVATE_ARR(       i_len ){          //:[067]://
+        var     o_arr = new Array( i_len );          //:[067]://
+        return( o_arr )                              //:[067]://
+    };;                                              //:[067]://
+
+//:====================================:NON_CONST_ARRAY:[067]://
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
 
     //: CTRL_F_TAGS[ #illegal# ]                        [063]://
@@ -387,9 +395,9 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                      //:[067]://
         /** #_O_P_P_# : One Per Program **/          //:[067]://
                                                      //:[067]://
-    ,   pid : new Array(c_artgirl_ren_tot) //: #_O_P_P_#[067]://
-    ,   vid : new Array(c_artgirl_ren_tot) //: #_O_P_P_#[067]://
-    ,   fid : new Array(c_artgirl_ren_tot) //: #_O_P_P_#[067]://
+    ,   pid : ARR(c_artgirl_ren_tot) //: @pid@ #_O_P_P_#[067]://
+    ,   vid : ARR(c_artgirl_ren_tot) //: @vid@ #_O_P_P_#[067]://
+    ,   fid : ARR(c_artgirl_ren_tot) //: @fid@ #_O_P_P_#[067]://
 
     ,   vbl :           c_artgirl_vbd_len //:@vbd@:////:[066]://
     ,   vbd :CONST_ARR( c_artgirl_vbd_len //:@vbd@:////:[066]://
@@ -1433,6 +1441,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             : them simpler data-oriented names that        [067]
             : describe them physically.                    [067]
 
+    TODO002 : Finish reading :                             [067]
+            : http://learnwebgl.brown37.net                [067]
+            :       /the_big_picture/3d_rendering.html     [067]
+
 *** *************************************************** TODO **/
 /** CHANGE_HISTORY ***************************************** ***
 
@@ -1848,5 +1860,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : constructor function for immutable             [066]
           : arrays of a fixed size to mimmick              [066]
           : C99 behavior.                                  [066]
+
+    [067] : Added all ( I think ) member variables         [067]
+          : needed by[ ARTGIRL ]to setup our OpenGL        [067]
+          : rendering quad and display it on screen.       [067]
+          :                                                [067]
+          : Created an[ ARR ]function so that we dont      [067]
+          : have to type[ new Array( len ) ]and can        [067]
+          : instead type[       ARR( len ) ].              [067]
 
 *** *************************************** MISC_DELTA_NOTES **/
