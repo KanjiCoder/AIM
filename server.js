@@ -66,6 +66,10 @@
 //:========================:DEPLOY_THIS_SERVER_YOURSELF:[034]://
 //:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]:===================://
 /**----------------------------------------------------------:::
+    
+    Coding Convention :
+
+        let : Only for temporary references                [064]
 
     DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
 
@@ -98,6 +102,8 @@
 //:====================================:ENVIRONMENT_DETECTION://
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
 
+    //: CTRL_F_TAGS[ #illegal# ]://
+
     const d_sob =( "" /////////////////// //: < < < < < [042]://
     +    "[WHAT_THE_FUCK_WAS_I_THINKING]" //: < < < < < [042]://
     +    "[THIS_OBJECT_CANNOT_BE_GLOBAL]" //: < < < < < [042]://
@@ -116,6 +122,9 @@
     
     const key_evt =( "[FIX:evt_key]" );              //:[057]://
     const F_INI_KEYMAST =( "[FIX:F_KEYMAST_INI]" );  //:[057]://
+
+    const d_wgl   =( "[FIX:a_g.wgl]" );              //:[063]://
+    const   wgl   =( "[FIX:a_g.wgl]" );              //:[063]://
 
 //:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
 //:XMLHTTPREQUEST_WIREUP_HACK:[058]:=========================://
@@ -251,7 +260,7 @@ if( notnode ){ //:-------------------------------------------://
 
     
     var d_can = "[nil][!c!:d_can]" ;  //: Html5 Canvas  [035]://
-    var d_wgl = "[nil][!c!:d_wgl]" ;  //: WebGL Context [035]://
+    /// d_wgl = "[nil][!c!:d_wgl]" ;  //: WebGL Context [063]://
 
     var d_url = d_urlsite ;           //: E.T.PhoneHome [058]://
 
@@ -283,6 +292,22 @@ if( yesnode ){ //:-------------------------------------------://
 
 };; //:------------------------------------------------------://
 //:============================:MASTER_DECLARATION_LIBS:[035]://
+//:DATA_BY_SYSTEM:[063]:=====================================://
+
+//:-------------://                                  //:[063]://
+//: __ARTGIRL__ ://                                  //:[063]://
+//:-------------://                                  //:[063]://
+if( notnode ){                                       //:[063]://
+                                                     //:[063]://
+    var d_artgirl_wgl =( "[nil][d_artgirl_wgl]" );   //:[063]://
+                                                     //:[063]://
+    var d_artgirl ={                                 //:[063]://
+                                                     //:[063]://
+        wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
+    };;                                              //:[063]://  
+};;                                                  //:[063]://
+
+//:=====================================:DATA_BY_SYSTEM:[063]://
 //:MASTER_DECLARATION_FUNC:[035]:============================://
     
     /** ************************************************ **/
@@ -371,8 +396,8 @@ if( yesnode ){ //:-------------------------------------------://
 
     const F_RES_CAN = function PRIVATE_F_RES_CAN( ){
 
-        let wid =( 0 - 333 /** wid : Client Width  **/ );
-        let hig =( 0 - 666 /** hig : Client Height **/ );
+        var wid =( 0 - 333 /** @cli_wid@ **/ );      //:[063]://
+        var hig =( 0 - 666 /** @cli_hig@ **/ );      //:[063]://
         let   W = window ;
         let   D = document.documentElement ;
         let   B = document.body            ;
@@ -388,29 +413,13 @@ if( yesnode ){ //:-------------------------------------------://
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
 //:FUNC_GAME_UPDATE_TICK:[036]:==============================://
 
-    const F_TIK = function PRIVATE_F_TIK( i_tim ){   //:@TIK@://
+    const F_TIK = "[FIX:F_CLIGAME_TIK]" ;            //:[063]://
 
-        /** ************************************ **/
-        /** Games "Main" loop that updates both  **/
-        /** rendering and game logic.            **/
-        /** ************************************ **/
-
-        var _R_ = ( i_tim % 255.000 );
-        if( _R_ > 255.0 ){ ERR("[_R_]"); };
-            _R_ = ( _R_ / 255.0 );
-
-        d_wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );
-        d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );
-    };;
 //:==============================:FUNC_GAME_UPDATE_TICK:[036]://
 //:FUNC_GAME_UPDATE_LOOP:[036]:==============================://
 
-    const F_GUL = function PRIVATE_F_GUL( i_tim ){ //: @GUL@ ://
+    const F_GUL = "[FIX:F_CLIGAME_GUL]" ;            //:[063]://
 
-        F_TIK( i_tim );
-
-        window.requestAnimationFrame( F_GUL );
-    };;
 //:==============================:FUNC_GAME_UPDATE_LOOP:[036]://
 //:FUNC_INITIALIZE_CLIENT:[035]:=============================://
 
@@ -469,17 +478,12 @@ if( yesnode ){ //:-------------------------------------------://
     //:-----------------------------:html_dom_setup:[032]://
     //:webgl_setup:[033]:--------------------------------://
 
-        const wgl = "[REFACTORED_TO:d_wgl:[035]]" ;
-
-        d_wgl = d_can.getContext( "webgl" );         
-        //:.clearColor( _R_  ,  _G_  ,  _B_  ,  _A_ );   ://
-        d_wgl.clearColor( 0.0  ,  1.0  ,  0.0  ,  1.0 );
-        d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );
+        //:[MOVED_TO][  F_ARTGIRL_INI             ]:[063]://
 
     //:--------------------------------:webgl_setup:[033]://
     //:enter_infinite_loop:[036]:------------------------://
 
-        F_GUL( 0.0 ); 
+        //:[MOVED][       F_GUL( 0.0 );           ]:[063]://
 
     //:------------------------:enter_infinite_loop:[036]://
 
@@ -745,8 +749,36 @@ if( yesnode ){ //:-------------------------------------------://
     //:     :supplies she buys from ARTDUDE.             ://    
     //:     :( OpenGL Pipeline Creation Is ArtGirl's Job)://    
     //:     :( Rendering Loop Calls Are Her Job Too.    )://    
-    //:--------------------------------------------------://    
+    //:--------------------------------------------------:// 
 
+    const   F_ARTGIRL_TIK = function                 //:[063]://
+    PRIVATE_F_ARTGIRL_TIK(                           //:[063]://
+        i_tim                                        //:[063]://
+    ){                                               //:[063]://
+        let a_g = d_artgirl ;                        //:[063]://
+                                                     //:[063]://
+        var _R_ = ( i_tim % 255.000 );               //:[063]://
+        if( _R_ > 255.0 ){ ERR("[_R_]"); };          //:[063]://
+            _R_ = ( _R_ / 255.0 );                   //:[063]://
+                                                     //:[063]://
+        a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 ); //:[063]://
+        a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );   //:[063]://
+    };;                                              //:[063]://
+
+    const   F_ARTGIRL_INI = function                 //:[063]://
+    PRIVATE_F_ARTGIRL_INI(                           //:[063]://
+                                                     //:[063]://
+        /** NO arguments **/                         //:[063]://
+    ){                                               //:[063]://
+        let a_g = d_artgirl ;                        //:[063]://
+ 
+                      
+        a_g.wgl = d_can.getContext( "webgl" );       //:[063]://
+        //:                 _R_ , _G_ , _B_ , _A_  ;   :[063]://
+        a_g.wgl.clearColor( 0.0 , 1.0 , 0.0 , 1.0 ); //:[063]://
+        a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );   //:[063]://
+    };;                                              //:[063]://
+  
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
 //| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __ARTGIRL__|//
@@ -1042,6 +1074,31 @@ if( yesnode ){ //:-------------------------------------------://
 //| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __KEYMAST__|//
 //|                                               [ @$$$$$@ ]|//
 //|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|//
+
+//: NEXT VIDEO(064) : CLIGAME & SERGAME namespaces.     [063]://
+
+    const   F_CLIGAME_TIK = function                 //:[063]://
+    PRIVATE_F_CLIGAME_TIK(                           //:[063]://
+                                                     //:[063]://
+        i_tim                                        //:[063]://
+    ){                                               //:[063]://
+                                                     //:[063]://
+        /** ************************************ **/ //:[063]://
+        /** Games "Main" loop that updates both  **/ //:[063]://
+        /** rendering and game logic.            **/ //:[063]://
+        /** ************************************ **/ //:[063]://
+                                                     //:[063]://
+        F_ARTGIRL_TIK( i_tim );                      //:[063]://
+    };;                                              //:[063]://
+
+    const   F_CLIGAME_GUL = function                 //:[063]://
+    PRIVATE_F_CLIGAME_GUL( i_tim ){                  //:[063]://
+                                                     //:[063]://
+        F_CLIGAME_TIK( i_tim );                      //:[063]://
+                                                     //:[063]://
+        window.requestAnimationFrame( F_GUL );       //:[063]://
+    };;                                              //:[063]://
+
 //:INIT_CLIENT_FRONTEND:[035]:===============================://
 if( notnode ){  window.onload = function( /** [030] **/ ){
 
@@ -1050,6 +1107,10 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
     };;                                              //:[059]://
 
     F_INI_CLI();    //:INIt: CLIent :----------------://
+
+    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :----:[064]://
+
+    F_GUL( 0.0 );   //:Enter_Game_Loop:----------------:[063]://
                                                      
     F_KEYMAST_INI();//:INIt: Client Keyboard Handler ://
 
@@ -1351,6 +1412,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     @bla_bla@ : Someone is speaking, I am not listening.
     @asktype@ : EXAMPLE[ "GET" , "POST" ]ETC
     @urlpath@ : URL ( relative ) path EX[ API/WHATEVER ]
+
+    @cli_wid@ : Client Width 
+    @cli_hig@ : Client Height
 
     @RES_CAN@ : RESize_CANvas
     
