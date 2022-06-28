@@ -337,7 +337,7 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                      //:[063]://
     var d_artgirl_wgl =( "[FIX:a_g.wgl]" );          //:[063]://
                                                      //:[063]://
-    var d_artgirl = STRUCT({                         //:[063]://
+    var d_artgirl = STRUCT({                         //:[065]://
                                                      //:[063]://
         wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
     });;                                             //:[063]://
