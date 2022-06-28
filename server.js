@@ -1738,5 +1738,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : 7th draft : A3 's LEDIT64 system.              [064]
           : 8th draft : This source code. Atomic Ivy MMO   [064]
 
+    [065] : J++ , Previously known as                      [065]
+          : "JavaScript With Structs".                     [065]
+          :                                                [065]
+          : NinjaCoder Title: "JavaScript With Structs"    [065]
+          : KanjiCoder Title: "Structs In JavaScript"      [065]
 
 *** *************************************** MISC_DELTA_NOTES **/
