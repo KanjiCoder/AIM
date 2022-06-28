@@ -122,31 +122,31 @@
 //:=============================================:STRUCT:[065]://
 //:CONST_ARR:[066]:==========================================://
 
-    const CONST_ARR = function PRIVATE_CONST_ARR( 
-    
-        i_len /** Length Of Array **/
-    ){
-        var o_arr = null ;
-
-        var len   = arguments.length ;
-        var dex   = 0 ; 
-        
-        if( len !=( i_len + 1 ) ){
-
-            ERR( "[Improper_Array_Initialization]" );
-        }else{
-
-            o_arr = new Array( i_len );
-            
+    const CONST_ARR = function PRIVATE_CONST_ARR(    //:[066]://
+                                                     //:[066]://
+        i_len /** Length Of Array **/                //:[066]://
+    ){                                               //:[066]://
+        var o_arr = null ;                           //:[066]://
+                                                     //:[066]://
+        var len   = arguments.length ;               //:[066]://
+        var dex   = 0 ;                              //:[066]://
+                                                     //:[066]://
+        if( len !=( i_len + 1 ) ){                   //:[066]://
+                                                     //:[066]://
+            ERR( "[Improper_Array_Initialization]" );//:[066]://
+        }else{                                       //:[066]://
+                                                     //:[066]://
+            o_arr = new Array( i_len );              //:[066]://
+                                                     //:[066]://
             for(dex = 0 ; dex<=(i_len-1) ; dex ++){  //:[066]://
-
-                o_arr[ dex ] = arguments[ dex + 1 ];
-            };;
-        };;
-
-        Object.freeze( o_arr );
-        return( o_arr );
-    };;
+                                                     //:[066]://
+                o_arr[ dex ] = arguments[ dex + 1 ]; //:[066]://
+            };;                                      //:[066]://
+        };;                                          //:[066]://
+                                                     //:[066]://
+        Object.freeze( o_arr );                      //:[066]://
+        return( o_arr );                             //:[066]://
+    };;                                              //:[066]://
 
 //:==========================================:CONST_ARR:[066]://
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
@@ -347,7 +347,6 @@ if( yesnode ){ //:-------------------------------------------://
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
 
-
     /** WebGL Surface Quad Macros ********* **/      //:[066]://
                                                      //:[066]://
         const c_artgirl_vbd_len =( 20 );             //:[066]://
@@ -382,10 +381,10 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                       
     ,   wgl : "[nil][d_artgirl_wgl]"                 //:[063]://
 
-    ,   vbl :           c_artgirl_vbd_len //:@vbd@:////:[065]://
-    ,   vbd :CONST_ARR( c_artgirl_vbd_len //:@vbd@:////:[065]://
-
-        //:@vcx@ @vcy@ @vcz@        @tcx@ , @tcy@
+    ,   vbl :           c_artgirl_vbd_len //:@vbd@:////:[066]://
+    ,   vbd :CONST_ARR( c_artgirl_vbd_len //:@vbd@:////:[066]://
+                                                     //:[066]://
+        //:@vcx@ @vcy@ @vcz@        @tcx@ , @tcy@    //:[066]://
         ,   neg , neg , _0_    ,    (0.0) , (1.0)    //:[066]://
         ,   pos , neg , _0_    ,    (1.0) , (1.0)    //:[066]://
         ,   neg , pos , _0_    ,    (0.0) , (0.0)    //:[066]://
@@ -1806,5 +1805,14 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           :                                                [065]
           : NinjaCoder Title: "JavaScript With Structs"    [065]
           : KanjiCoder Title: "JavaScript Struct Keyword"  [065]
+
+    [066] : Added hardcoded vertex buffer data for         [066]
+          : the shader quad needed for creating            [066]
+          : 2D graphics pipeline in WebGL.                 [066]
+          :                                                [066]
+          : Also created nifty const-array                 [066]
+          : constructor function for immutable             [066]
+          : arrays of a fixed size to mimmick              [066]
+          : C99 behavior.                                  [066]
 
 *** *************************************** MISC_DELTA_NOTES **/
