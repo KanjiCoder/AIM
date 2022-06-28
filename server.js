@@ -1092,11 +1092,16 @@ if( notnode ){                                       //:[063]://
     };;                                              //:[063]://
 
     const   F_CLIGAME_GUL = function                 //:[063]://
-    PRIVATE_F_CLIGAME_GUL( i_tim ){                  //:[063]://
+    PRIVATE_F_CLIGAME_GUL(                           //:[063]://
                                                      //:[063]://
+        i_tim                                        //:[063]://
+    ){                                               //:[063]://
         F_CLIGAME_TIK( i_tim );                      //:[063]://
                                                      //:[063]://
-        window.requestAnimationFrame( F_GUL );       //:[063]://
+        window.requestAnimationFrame(                //:[063]://
+                                                     //:[063]://
+            F_CLIGAME_GUL                            //:[063]://
+        );;                                          //:[063]://
     };;                                              //:[063]://
 
 //:INIT_CLIENT_FRONTEND:[035]:===============================://
