@@ -1604,10 +1604,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** ******************************************************** **/
 /** @ATTED_COMMENTS@ *************************************** ***
 
-    /** ************************************************ **/
-    /** @'s used to describe a variable or phase. [068]  **/
-    /** Something that can appear multiple times. [068]  **/
-    /** ************************************************ **/
+    //:--------------------------------------------------://
+    //: @'s used to describe a variable or phase. [068]  ://
+    //: Something that can appear multiple times. [068]  ://
+    //:--------------------------------------------------://    
 
     @LIB_URL@ : LIBRARY : Universal Resource Locator
     @LIB_Q_S@ : LIBRARY : QueryString
@@ -1728,12 +1728,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** *************************************** @ATTED_COMMENTS@ **/
 /** #HASH_TAGGED_COMMENTS# ********************************* ***
 
-    /** ************************************************ **/
-    /** #'s are used to describe a comment that has [068]**/
-    /** been EXTRACTED from the code somewhere.     [068]**/
-    /** This may be a 1-line comment, multi-line    [068]**/
-    /** comment, __OR__ an abbreviated error msg.   [068]**/
-    /** ************************************************ **/
+    //:--------------------------------------------------://
+    //: #'s are used to describe a comment that has [068]://
+    //: been EXTRACTED from the code somewhere.     [068]://
+    //: This may be a 1-line comment, multi-line    [068]://
+    //: comment, __OR__ an abbreviated error msg.   [068]://
+    //:--------------------------------------------------://
 
     #IPR# : Is_Postgres_Response , we want to get rid           
           : of all the bloat and return the[ rows ]             
