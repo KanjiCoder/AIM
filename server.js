@@ -375,7 +375,7 @@ if( yesnode ){ //:-------------------------------------------://
     const c_artgirl_ren_007 = ( 7 ); //:@HEXASET1AUSET@ [068]://
 
     const c_artgirl_ren_tot = ( 7 ); //:#RenderPipelines[068]://
-
+                                                                
     const c_artgirl_ren_def = (      //:Default_Render  [068]://
           c_artgirl_ren_001    );;   //:Pipeline_To_Use [068]://
 
@@ -855,7 +855,7 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 
-    //:--------------------------------------------------://    
+    //:--------------------------------------------------://
     //:[062]:ARTGIRL Likes to throw paint at walls.      ://    
     //:[ATS]:She has a paintball gun. She shoots so much ://    
     //:     :paint that some fragments of paint are      ://    
@@ -1179,12 +1179,12 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                      //:[068]://
         i_evt_key //:( i_evt_key )=>( o_asc_key ):// //:[068]://
     ){                                               //:[068]://
-        var o_asc_key =( String.fromCharCode(
-
-            i_evt_key.keyCode 
-        ));;
-        return( o_asc_key );
-    }
+        var o_asc_key =( String.fromCharCode(        //:[068]://
+                                                     //:[068]://
+            i_evt_key.keyCode                        //:[068]://
+        ));;                                         //:[068]://
+        return( o_asc_key );                         //:[068]://
+    };;                                              //:[068]://
 
     const   F_KEYMAST_DOW = function                 //:[057]://
     PRIVATE_F_KEYMAST_DOW(                           //:[057]://
@@ -1206,7 +1206,7 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
         ||  "7" == a_k  //:  Future me problem.         [068]://
         ||  "8" == a_k  //:                             [068]://
         ||  "9" == a_k  //:----------------------------------://
-        ){
+        ){                                                      
             //:RPL__RenderPipelineLoad:[068]:----------------://
             //:                                              ://
             //: #NOKISS#[ F_ARTGIRL_RPL( parseInt( a_k ) ] ) ://
@@ -1226,7 +1226,7 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
             //:----------------:RPL__RenderPipelineLoad:[068]://
 
         }else
-        if( "r" == a_k ){
+        if( "r" == a_k ){                            //:[068]://
 
             //:[061]:----------------------------------------://
             F_XHR( "GET" , "DABITCH/R/TAB_HEX/RED" )  
@@ -1235,9 +1235,9 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                 console.log( "[what?]:" + i_saywhat );  
             });;      
             //:----------------------------------------:[061]://
-        }else{
+        }else{                                       //:[068]://
             LOG( "[UNBOUND_KEY]" , a_k );            //:[068]://
-        };;
+        };;                                          //:[068]://
 
     };; //:[F_KEYMAST_DOW]:----------------------------:[057]://
 
@@ -1604,9 +1604,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** ******************************************************** **/
 /** @ATTED_COMMENTS@ *************************************** ***
 
-    //:--------------------------------------------------://
-    //: @'s used to describe a variable or phase. [068]  ://
-    //: Something that can appear multiple times. [068]  ://
+    //:--------------------------------------------------://    
+    //: @'s used to describe a variable or phase. [068]  ://    
+    //: Something that can appear multiple times. [068]  ://    
     //:--------------------------------------------------://    
 
     @LIB_URL@ : LIBRARY : Universal Resource Locator
@@ -1728,12 +1728,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** *************************************** @ATTED_COMMENTS@ **/
 /** #HASH_TAGGED_COMMENTS# ********************************* ***
 
-    //:--------------------------------------------------://
-    //: #'s are used to describe a comment that has [068]://
-    //: been EXTRACTED from the code somewhere.     [068]://
-    //: This may be a 1-line comment, multi-line    [068]://
-    //: comment, __OR__ an abbreviated error msg.   [068]://
-    //:--------------------------------------------------://
+    //:--------------------------------------------------://    
+    //: #'s are used to describe a comment that has [068]://    
+    //: been EXTRACTED from the code somewhere.     [068]://    
+    //: This may be a 1-line comment, multi-line    [068]://    
+    //: comment, __OR__ an abbreviated error msg.   [068]://    
+    //:--------------------------------------------------://    
 
     #IPR# : Is_Postgres_Response , we want to get rid           
           : of all the bloat and return the[ rows ]             
@@ -1853,16 +1853,16 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     xml http request | xmlhttprequest | httprequest | httpreq
     SEE[ FUNC_XML_HTTP_REQUEST | XMLHTTPREQUEST_WIREUP_HACK ]
 
-    event to key | event to ascii key | keyboard event to key
-    turn keyboard event into keypress | evt_cto_key | evt_key
-    SEE[ F_KEYMAST_EVT_ASC ][ 068 ]
-    
-    F_ARTGIRL_REN_SEL | REN_SEL | render pipeline select
-    render select | select render pipeline | load pipeline
-    load render pipeline | artgirl pipeline load 
-    F_ARTGIRL_RPS | ARTGIRL_RPS | render pipeline load
-    load render pipeline | select pipeline
-    SEE[ F_ARTGIRL_RPL ]( Render_Pipeline_Load )
+    event to key | event to ascii key | keyboard event to key   
+    turn keyboard event into keypress | evt_cto_key | evt_key   
+    SEE[ F_KEYMAST_EVT_ASC ][068]                               
+                                                                
+    F_ARTGIRL_REN_SEL | REN_SEL | render pipeline select   [068]
+    render select | select render pipeline | load pipeline [068]
+    load render pipeline | artgirl pipeline load           [068]
+    F_ARTGIRL_RPS | ARTGIRL_RPS | render pipeline load     [068]
+    load render pipeline | select pipeline                 [068]
+    SEE[ F_ARTGIRL_RPL ]( Render_Pipeline_Load )           [068]
     
 *** ******************************************************** **/
 /** FEATURE_CREEP ****************************************** ***
