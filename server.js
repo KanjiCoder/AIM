@@ -177,7 +177,7 @@
 //:NON_CONST_ARRAY:[067]:====================================://// [---]
                                                                 // [069]
     const F_ARR = function PRIVATE_F_ARR( i_len ){              // [069]
-        var       o_arr = new Array(     i_len );               // [067]
+        var       o_arr = new Array(      i_len );              // [067]
         return(   o_arr );                                      // [067]
     };;                                                         // [067]
                                                                 // [067]
@@ -380,10 +380,10 @@ if( yesnode ){ //:-------------------------------------------://
 //:============================:MASTER_DECLARATION_LIBS:[035]://
 //:__ARTGIRL__:SHADER_STRINGS:[069]:=========================://// [---]
                                                                 // [069]
-const c_artgirl_ssv_bad =( "[BAD_SSV_DEX:ssv]" );               // [069]
-const c_artgirl_ssf_bad =( "[BAD_SSV_DEX:ssf]" );               // [069]
+const d_artgirl_ssv_bad =( "[BAD_SSV_DEX:ssv]" );               // [070][069]
+const d_artgirl_ssf_bad =( "[BAD_SSV_DEX:ssf]" );               // [070][069]
                                                                 // [069]
-const c_artgirl_ssv_all =( //: ShaderSourceVert #all#           // [069]
+const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (`                                                                      
                                                                         
@@ -391,57 +391,57 @@ const c_artgirl_ssv_all =( //: ShaderSourceVert #all#           // [069]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
                                                                 // [069]
-const c_artgirl_ssv_001 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
-const c_artgirl_ssv_002 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
-const c_artgirl_ssv_003 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
-const c_artgirl_ssv_004 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
-const c_artgirl_ssv_005 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
-const c_artgirl_ssv_006 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
-const c_artgirl_ssv_007 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
+const d_artgirl_ssv_001 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
+const d_artgirl_ssv_002 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
+const d_artgirl_ssv_003 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
+const d_artgirl_ssv_004 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
+const d_artgirl_ssv_005 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
+const d_artgirl_ssv_006 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
+const d_artgirl_ssv_007 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
                                                                 // [069]
-const c_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [069]
+const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (`                                                                      
                                                                         
     TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
-const c_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [069]
+const d_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (`                                                                      
                                                                         
     TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
-const c_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [069]
+const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (`                                                                      
                                                                         
     TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
-const c_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [069]
+const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (`                                                                      
                                                                         
     TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
-const c_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [069]
+const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (`                                                                      
                                                                         
     TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
-const c_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [069]
+const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (`                                                                      
                                                                         
     TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
-const c_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [069]
+const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (`                                                                      
                                                                         
@@ -507,24 +507,24 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     ,arr_fid:F_ARR(c_artgirl_ren_tot +1 ) //: @fid@ #_O_P_P_#://// [069]
                                                                 // [069]
     ,arr_ssv:F_SSA(c_artgirl_ren_tot +1   //: #_1_BASED_ARR_#://// [069]
-            ,      c_artgirl_ssv_bad                            // [069]
-            ,      c_artgirl_ssv_001                            // [069]
-            ,      c_artgirl_ssv_002                            // [069]
-            ,      c_artgirl_ssv_003                            // [069]
-            ,      c_artgirl_ssv_004                            // [069]
-            ,      c_artgirl_ssv_005                            // [069]
-            ,      c_artgirl_ssv_006                            // [069]
-            ,      c_artgirl_ssv_007                            // [069]
+            ,      d_artgirl_ssv_bad                            // [070][069]
+            ,      d_artgirl_ssv_001                            // [070][069]
+            ,      d_artgirl_ssv_002                            // [070][069]
+            ,      d_artgirl_ssv_003                            // [070][069]
+            ,      d_artgirl_ssv_004                            // [070][069]
+            ,      d_artgirl_ssv_005                            // [070][069]
+            ,      d_artgirl_ssv_006                            // [070][069]
+            ,      d_artgirl_ssv_007                            // [070][069]
             )      /////////////////                            // [069]
     ,arr_ssf:F_SSA(c_artgirl_ren_tot +1   //: #_1_BASED_ARR_#://// [069]
-            ,      c_artgirl_ssf_bad                            // [069]
-            ,      c_artgirl_ssf_001                            // [069]
-            ,      c_artgirl_ssf_002                            // [069]
-            ,      c_artgirl_ssf_003                            // [069]
-            ,      c_artgirl_ssf_004                            // [069]
-            ,      c_artgirl_ssf_005                            // [069]
-            ,      c_artgirl_ssf_006                            // [069]
-            ,      c_artgirl_ssf_007                            // [069]
+            ,      d_artgirl_ssf_bad                            // [070][069]
+            ,      d_artgirl_ssf_001                            // [070][069]
+            ,      d_artgirl_ssf_002                            // [070][069]
+            ,      d_artgirl_ssf_003                            // [070][069]
+            ,      d_artgirl_ssf_004                            // [070][069]
+            ,      d_artgirl_ssf_005                            // [070][069]
+            ,      d_artgirl_ssf_006                            // [070][069]
+            ,      d_artgirl_ssf_007                            // [070][069]
             )      /////////////////                            // [069]
                                                                 // [---]
     ,   vbl :      c_artgirl_vbd_len //:@vbd@://                // [066] 
