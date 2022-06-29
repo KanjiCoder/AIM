@@ -352,6 +352,7 @@ if( yesnode ){ //:-------------------------------------------://
 //:CONST_MACROS_BY_SYSTEM[064]:==============================://
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
+    
 
     /** WebGL Surface Quad Macros ********* **/      //:[066]://
                                                      //:[066]://
@@ -361,14 +362,22 @@ if( yesnode ){ //:-------------------------------------------://
     /** Different Rendering Pipelines [064] **/      //:[064]://
     /** *********************************** **/      //:[064]://
                                                      //:[064]://
-    const c_artgirl_ren_tot = ( 7 ); //:#RenderPipelines[064]://
-    const c_artgirl_ren_001 = ( 0 ); //:GradientQuad    [064]://
-    const c_artgirl_ren_002 = ( 1 ); //:FlashingScreen  [064]://
-    const c_artgirl_ren_003 = ( 2 ); //:Sectors_Colored [064]://
-    const c_artgirl_ren_004 = ( 3 ); //:Sectors_Numbered[064]://
-    const c_artgirl_ren_005 = ( 4 ); //:SolidColorTiles [064]://
-    const c_artgirl_ren_006 = ( 5 ); //:@HEXASET1STAMP@ [064]://
-    const c_artgirl_ren_007 = ( 6 ); //:@HEXASET1AUSET@ [064]://
+
+    const c_artgirl_ren_000 = "[DONT_USE:000]" ;     //:[068]://
+    const c_artgirl_ren_bad = ( 0 ); //:Select:ren_def  [068]://
+
+    const c_artgirl_ren_001 = ( 1 ); //:GradientQuad    [068]://
+    const c_artgirl_ren_002 = ( 2 ); //:FlashingScreen  [068]://
+    const c_artgirl_ren_003 = ( 3 ); //:Sectors_Colored [068]://
+    const c_artgirl_ren_004 = ( 4 ); //:Sectors_Numbered[068]://
+    const c_artgirl_ren_005 = ( 5 ); //:SolidColorTiles [068]://
+    const c_artgirl_ren_006 = ( 6 ); //:@HEXASET1STAMP@ [068]://
+    const c_artgirl_ren_007 = ( 7 ); //:@HEXASET1AUSET@ [068]://
+
+    const c_artgirl_ren_tot = ( 7 ); //:#RenderPipelines[068]://
+
+    const c_artgirl_ren_def = (      //:Default_Render  [068]://
+          c_artgirl_ren_001    );;   //:Pipeline_To_Use [068]://
 
 //:==============================:CONST_MACROS_BY_SYSTEM[064]://
 //:DATA_BY_SYSTEM:[063]:=====================================://
@@ -859,6 +868,21 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
     //:     :( Rendering Loop Calls Are Her Job Too.    )://    
     //:--------------------------------------------------:// 
 
+    const   F_ARTGIRL_RPL = function                 //:[068]://
+    PRIVATE_F_ARTGIRL_RPL( //:Render Pipeline Load @RPL@[068]://
+                           //:                          [068]://
+        i_ren //: < < < < < < Render Pipeline Number    [068]://
+    ){                                               //:[068]://
+        if( i_ren < 1 ){ ERR("[RPL_NEG]") ; };       //:[068]://
+        if( i_ren > 9 ){ ERR("[RPL_POS]") ; };       //:[068]://
+        if( i_ren > c_artgirl_ren_tot ){             //:[068]://
+                                                     //:[068]://
+            ERR("[Not_That_Many_Render_Pipelines]"); //:[068]://
+        };;                                          //:[068]://
+                                                     //:[068]://
+        LOG( "[[TODO]:RPL]" , i_ren );               //:[068]://
+    };;                                              //:[068]://
+
     const   F_ARTGIRL_TIK = function                 //:[063]://
     PRIVATE_F_ARTGIRL_TIK(                           //:[063]://
         i_tim                                        //:[063]://
@@ -1143,26 +1167,88 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 
+    //:------------------------------------------------------://
+    //: @_G_@ : Generally                               [068]://
+    //: @_S_@ : Specifically                            [068]://
+    //: @a_k@ : @asc_key@ : Ascii(_G_) Key(_S_)         [068]://
+    //: @e_k@ : @evt_key@ : Event(_G_) Key(_S_)         [068]://
+    //:------------------------------------------------------://
+
+    const   F_KEYMAST_EVT_ASC = function             //:[068]://
+    PRIVATE_F_KEYMAST_EVT_ASC(                       //:[068]://
+                                                     //:[068]://
+        i_evt_key //:( i_evt_key )=>( o_asc_key ):// //:[068]://
+    ){                                               //:[068]://
+        var o_asc_key =( String.fromCharCode(
+
+            i_evt_key.keyCode 
+        ));;
+        return( o_asc_key );
+    }
+
     const   F_KEYMAST_DOW = function                 //:[057]://
     PRIVATE_F_KEYMAST_DOW(                           //:[057]://
-        evt_key                                      //:[057]://
+        i_evt_key                                    //:[068]://
     ){                                               //:[057]://
                                                      //:[057]://
 
-        F_XHR( "GET" , "DABITCH/R/TAB_HEX/RED" )     //:[061]://
-        .then((i_saywhat)=>{                         //:[061]://
-                                                     //:[061]://
-            console.log( "[what?]:" + i_saywhat );   //:[061]://
-        });;                                         //:[061]://
+        var asc_key = F_KEYMAST_EVT_ASC( i_evt_key );//:[068]://
+        let a_k     =( asc_key /** Key Down **/ );   //:[068]://
+
+        if(  0          //:----------------------------------://
+        ||  "0" == a_k  //:                             [068]://
+        ||  "1" == a_k  //:  Select the shader pipeline to   ://
+        ||  "2" == a_k  //:  use via the number keys.        ://
+        ||  "3" == a_k  //:                             [068]://
+        ||  "4" == a_k  //:  0 == default pipeline.     [068]://
+        ||  "5" == a_k  //:                             [068]://
+        ||  "6" == a_k  //:  More than 9 pipelines ?    [068]://
+        ||  "7" == a_k  //:  Future me problem.         [068]://
+        ||  "8" == a_k  //:                             [068]://
+        ||  "9" == a_k  //:----------------------------------://
+        ){
+            /** **************************** **/
+            /** @RPL@ : Render Pipeline Load **/
+            /**       : c_artgirl_ren_###    **/
+            /** **************************** **/
+
+            //:RPL__RenderPipelineLoad:[068]:----------------://
+            //:                                              ://
+            //: #NOKISS#[ F_ARTGIRL_RPL( parseInt( a_k ) ] ) ://
+            //:                                              ://
+            let RPL = F_ARTGIRL_RPL ;                     //:://
+            if( "0" == a_k ){ RPL( c_artgirl_ren_def ); };//:://
+            if( "1" == a_k ){ RPL( 1 );};//:c_artgirl_ren_001://
+            if( "2" == a_k ){ RPL( 2 );};//:c_artgirl_ren_002://
+            if( "3" == a_k ){ RPL( 3 );};//:c_artgirl_ren_003://
+            if( "4" == a_k ){ RPL( 4 );};//:c_artgirl_ren_004://
+            if( "5" == a_k ){ RPL( 5 );};//:c_artgirl_ren_005://
+            if( "6" == a_k ){ RPL( 6 );};//:c_artgirl_ren_006://
+            if( "7" == a_k ){ RPL( 7 );};//:c_artgirl_ren_007://
+            if( "8" == a_k ){ RPL( 8 );};//:c_artgirl_ren_008://
+            if( "9" == a_k ){ RPL( 9 );};//:c_artgirl_ren_009://
+            //:-----------------:RPL__RenderPipelineLoad:[068]://
+
+        }else
+        if( "r" == a_k ){
+
+            //:[061]:------------------------------------://
+            F_XHR( "GET" , "DABITCH/R/TAB_HEX/RED" )  
+            .then((i_saywhat)=>{                        
+                                                        
+                console.log( "[what?]:" + i_saywhat );  
+            });;      
+            //:------------------------------------:[061]://
+        };;
 
     };;                                              //:[057]://
 
     const   F_KEYMAST_UPP = function                 //:[057]://
     PRIVATE_F_KEYMAST_UPP(                           //:[057]://
-        evt_key                                      //:[057]://
+        i_evt_key                                    //:[068]://
     ){                                               //:[057]://
                                                      //:[057]://
-        console.log( evt_key );                      //:[057]://
+        console.log( i_evt_key );                    //:[068]://
     };;                                              //:[057]://
 
     const   F_KEYMAST_INI = function                 //:[057]://
@@ -1499,7 +1585,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     c_    : client - only 
     s_    : server - only
     b_    : BOTH ( known by both client and server )
-    g_    : global
+    g_    : global ( see[ d_ and F_ ] )
+
+  ( D_ UPPERCASE ) : Impossible, data is lowercase(d_)     [068]
+  ( f_ lowercase ) : Impossible, func is uppercase(F_)     [068]
 
     m_    : macro       NO MACROS IN JAVASCRIPT , simplify.
     t_    : type        TRY_NOT_TO_USE_THIS
@@ -1516,6 +1605,11 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
 *** ******************************************************** **/
 /** @ATTED_COMMENTS@ *************************************** ***
+
+    /** ************************************************ **/
+    /** @'s used to describe a variable or phase. [068]  **/
+    /** Something that can appear multiple times. [068]  **/
+    /** ************************************************ **/
 
     @LIB_URL@ : LIBRARY : Universal Resource Locator
     @LIB_Q_S@ : LIBRARY : QueryString
@@ -1636,6 +1730,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** *************************************** @ATTED_COMMENTS@ **/
 /** #HASH_TAGGED_COMMENTS# ********************************* ***
 
+    /** ************************************************ **/
+    /** #'s are used to describe a comment that has [068]**/
+    /** been EXTRACTED from the code somewhere.     [068]**/
+    /** This may be a 1-line comment, multi-line    [068]**/
+    /** comment, __OR__ an abbreviated error msg.   [068]**/
+    /** ************************************************ **/
+
     #IPR# : Is_Postgres_Response , we want to get rid           
           : of all the bloat and return the[ rows ]             
           : member as { arr_rows : [ ... ] } response.          
@@ -1671,6 +1772,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         ( __NOT__ affect gameplay. Thus __NOT__)           [064]
         ( considered part of the main game     )           [064]
         ( layer .                              )           [064]
+
+    #NOKISS# : NO, dont do this. Keep It Simple Stupid.    [068]
 
 *** ********************************* #HASH_TAGGED_COMMENTS# **/
 /** !EXCLAIMED_COMMENTS! *********************************** ***
@@ -1751,7 +1854,17 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     xml http request | xmlhttprequest | httprequest | httpreq
     SEE[ FUNC_XML_HTTP_REQUEST | XMLHTTPREQUEST_WIREUP_HACK ]
+
+    event to key | event to ascii key | keyboard event to key
+    turn keyboard event into keypress | evt_cto_key | evt_key
+    SEE[ F_KEYMAST_EVT_ASC ][ 068 ]
     
+    F_ARTGIRL_REN_SEL | REN_SEL | render pipeline select
+    render select | select render pipeline | load pipeline
+    load render pipeline | artgirl pipeline load 
+    F_ARTGIRL_RPS | ARTGIRL_RPS | render pipeline load
+    load render pipeline | select pipeline
+    SEE[ F_ARTGIRL_RPL ]( Render_Pipeline_Load )
     
 *** ******************************************************** **/
 /** FEATURE_CREEP ****************************************** ***
