@@ -1179,10 +1179,13 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
                                                      //:[068]://
         i_evt_key //:( i_evt_key )=>( o_asc_key ):// //:[068]://
     ){                                               //:[068]://
-        var o_asc_key =( String.fromCharCode(        //:[068]://
+        var o_asc_key =(                             //:[068]://
+            String.prototype.toUpperCase.call(       //:[068]://
+            String.fromCharCode(                     //:[068]://
                                                      //:[068]://
-            i_evt_key.keyCode                        //:[068]://
-        ));;                                         //:[068]://
+                i_evt_key.keyCode                    //:[068]://
+                                                     //:[068]://
+            )||"[nil][o_asc_key]" ));;               //:[068]://
         return( o_asc_key );                         //:[068]://
     };;                                              //:[068]://
 
@@ -1226,7 +1229,7 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
             //:----------------:RPL__RenderPipelineLoad:[068]://
 
         }else
-        if( "r" == a_k ){                            //:[068]://
+        if( "R" == a_k ){                            //:[068]://
 
             //:[061]:----------------------------------------://
             F_XHR( "GET" , "DABITCH/R/TAB_HEX/RED" )  
