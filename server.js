@@ -877,7 +877,7 @@ if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
         if( i_ren > 9 ){ ERR("[RPL_POS]") ; };       //:[068]://
         if( i_ren > c_artgirl_ren_tot ){             //:[068]://
                                                      //:[068]://
-            ERR("[Not_That_Many_Render_Pipelines]"); //:[068]://
+            LOG("[Not_That_Many_Render_Pipelines]"); //:[068]://
         };;                                          //:[068]://
                                                      //:[068]://
         LOG( "[[TODO]:RPL]" , i_ren );               //:[068]://
