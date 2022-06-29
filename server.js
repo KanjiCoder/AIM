@@ -2114,6 +2114,6 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           :                                                [067]
           : Created an[ ARR ]function so that we dont      [067]
           : have to type[ new Array( len ) ]and can        [067]
-          : instead type[     F_ARR( len ) ].                   // [069]
+          : instead type[     F_ARR( len ) ].                   // [069][067]
 
 *** *************************************** MISC_DELTA_NOTES **/
