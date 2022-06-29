@@ -118,7 +118,7 @@
 //:=============================================:STRUCT:[065]://
 //:CONST_ARR:[066]:==========================================://
 
-    const CONST_ARR = function PRIVATE_CONST_ARR(    //:[066]://
+    const F_CAR = function PRIVATE_F_CAR(                       // [069]
                                                      //:[066]://
         i_len /** Length Of Array **/                //:[066]://
     ){                                               //:[066]://
@@ -128,9 +128,9 @@
         var dex   = 0 ;                              //:[066]://
                                                      //:[066]://
         if( len !=( i_len + 1 ) ){                   //:[066]://
-                                                     //:[066]://
-            ERR( "[Improper_Array_Initialization]" );//:[066]://
-        }else{                                       //:[066]://
+                                                     //:[066]://              
+            ERR( "[F_CAR:#IAI#]" );                             // [069] 
+        }else{                                       //:[066]:// 
                                                      //:[066]://
             o_arr = new Array( i_len );              //:[066]://
                                                      //:[066]://
@@ -145,14 +145,43 @@
     };;                                              //:[066]://
 
 //:==========================================:CONST_ARR:[066]://
-//:NON_CONST_ARRAY:[067]:====================================://
-
-    const ARR = function PRIVATE_ARR( i_len ){       //:[067]://
-        var     o_arr = new Array(    i_len );       //:[067]://
-        return( o_arr );                             //:[067]://
-    };;                                              //:[067]://
-
-//:====================================:NON_CONST_ARRAY:[067]://
+//:SHADER_STRING_ARRAY:[069]:================================://// [---]
+                                                                // [069]
+    const F_SSA = function PRIVATE_F_SSA( //:@SSA@://           // [069]
+                                                                // [069]
+        i_len //: Length Of Array ://                           // [069]
+    ){                                                          // [069]
+        var o_arr = null ;                                      // [069]
+                                                                // [069]
+        var len   = arguments.length ;                          // [069]
+        var dex   = 0 ;                                         // [069]
+                                                                // [069]
+        if( len !=( i_len + 1 ) ){                              // [069]
+                                                                // [069]
+            ERR( "[SSA:#IAI#]" );                               // [069]
+        }else{                                                  // [069]
+                                                                // [069]
+            o_arr = new Array( i_len );                         // [069]
+                                                                // [069]
+            for(dex = 0 ; dex<=(i_len-1) ; dex ++){             // [069]
+                                                                // [069]
+                o_arr[ dex ] = arguments[ dex + 1 ];            // [069]
+            };;                                                 // [069]
+        };;                                                     // [069]
+                                                                // [069]
+        Object.freeze( o_arr );                                 // [069]
+        return( o_arr );                                        // [069]
+    };;                                                         // [069]
+                                                                // [069]
+//:================================:SHADER_STRING_ARRAY:[069]://// [---]
+//:NON_CONST_ARRAY:[067]:====================================://// [---]
+                                                                // [069]
+    const F_ARR = function PRIVATE_F_ARR( i_len ){              // [069]
+        var       o_arr = new Array(     i_len );               // [067]
+        return(   o_arr );                                      // [067]
+    };;                                                         // [067]
+                                                                // [067]
+//:====================================:NON_CONST_ARRAY:[067]://// [---]
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
 
     //: CTRL_F_TAGS[ #illegal# ]                        [063]://
@@ -349,10 +378,81 @@ if( yesnode ){ //:-------------------------------------------://
 
 };; //:------------------------------------------------------://
 //:============================:MASTER_DECLARATION_LIBS:[035]://
-//:CONST_MACROS_BY_SYSTEM[064]:==============================://
+//:__ARTGIRL__:SHADER_STRINGS:[069]:=========================://// [---]
+                                                                // [069]
+const c_artgirl_ssv_bad =( "[BAD_SSV_DEX:ssv]" );               // [069]
+const c_artgirl_ssf_bad =( "[BAD_SSV_DEX:ssf]" );               // [069]
+                                                                // [069]
+const c_artgirl_ssv_all =( //: ShaderSourceVert #all#           // [069]
+////////////////////////////////////////////////////////////////   [069]
+(`                                                                      
+                                                                        
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+                                                                        
+`));; //////////////////////////////////////////////////////////   [069]
+                                                                // [069]
+const c_artgirl_ssv_001 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
+const c_artgirl_ssv_002 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
+const c_artgirl_ssv_003 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
+const c_artgirl_ssv_004 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
+const c_artgirl_ssv_005 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
+const c_artgirl_ssv_006 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
+const c_artgirl_ssv_007 =( c_artgirl_ssv_all ); //:@ssv@://     // [069]
+                                                                // [069]
+const c_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [069]
+////////////////////////////////////////////////////////////////   [069]
+(`                                                                      
+                                                                        
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+                                                                        
+`));; //////////////////////////////////////////////////////////   [069]
+const c_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [069]
+////////////////////////////////////////////////////////////////   [069]
+(`                                                                      
+                                                                        
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+                                                                        
+`));; //////////////////////////////////////////////////////////   [069]
+const c_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [069]
+////////////////////////////////////////////////////////////////   [069]
+(`                                                                      
+                                                                        
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+                                                                        
+`));; //////////////////////////////////////////////////////////   [069]
+const c_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [069]
+////////////////////////////////////////////////////////////////   [069]
+(`                                                                      
+                                                                        
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+                                                                        
+`));; //////////////////////////////////////////////////////////   [069]
+const c_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [069]
+////////////////////////////////////////////////////////////////   [069]
+(`                                                                      
+                                                                        
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+                                                                        
+`));; //////////////////////////////////////////////////////////   [069]
+const c_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [069]
+////////////////////////////////////////////////////////////////   [069]
+(`                                                                      
+                                                                        
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+                                                                        
+`));; //////////////////////////////////////////////////////////   [069]
+const c_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [069]
+////////////////////////////////////////////////////////////////   [069]
+(`                                                                      
+                                                                        
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+                                                                        
+`));; //////////////////////////////////////////////////////////   [069]
+                                                                // [069]
+//:=========================:__ARTGIRL__:SHADER_STRINGS:[069]://// [---]
+//:CONST_MACROS_BY_SYSTEM[064]:==============================://// [---]
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
-    
 
     /** WebGL Surface Quad Macros ********* **/      //:[066]://
                                                      //:[066]://
@@ -380,36 +480,55 @@ if( yesnode ){ //:-------------------------------------------://
           c_artgirl_ren_001    );;   //:Pipeline_To_Use [068]://
 
 //:==============================:CONST_MACROS_BY_SYSTEM[064]://
-//:DATA_BY_SYSTEM:[063]:=====================================://
-
-
-if( /** __ARTGIRL__ **/ notnode ){                   //:[063]://
-                                                     //:[063]://
-    var d_artgirl_wgl =( "[FIX:a_g.wgl]" );          //:[063]://
-                                                     //:[063]://
-
-    let neg =(0.0 - 1.0 );                           //:[066]://
-    let pos =(0.0 + 1.0 );                           //:[066]://
-    let _0_ =(0.0 * 0.0 );                           //:[066]://
-                                                     //:[066]://
-    var d_artgirl = STRUCT({  laxcoma : 0            //:[066]://
-                                                      
-    ,   wgl : "[nil][d_artgirl_wgl]"    //:@wgl@://  //:[063]://
-    ,   vbo : "[nil][d_artgirl_vbo]"    //:@vbo@://  //:[067]://
-    ,   vao : "[nil][d_artgirl_vao]"    //:@vao@://  //:[067]://
-                                                     //:[067]://
-    ,   tex : "[nil][d_artgirl_tex]"    //:@tex@://  //:[067]://
-    ,   lot : "[nil][d_artgirl_lot]"    //:@lot@://  //:[067]://
-    ,   sam : "[nil][d_artgirl_sam]"    //:@sam@://  //:[067]://
-                                                     //:[067]://
-        /** #_O_P_P_# : One Per Program **/          //:[067]://
-                                                     //:[067]://
-    ,   pid : ARR(c_artgirl_ren_tot) //: @pid@ #_O_P_P_#[067]://
-    ,   vid : ARR(c_artgirl_ren_tot) //: @vid@ #_O_P_P_#[067]://
-    ,   fid : ARR(c_artgirl_ren_tot) //: @fid@ #_O_P_P_#[067]://
-
-    ,   vbl :           c_artgirl_vbd_len //:@vbd@:////:[066]://
-    ,   vbd :CONST_ARR( c_artgirl_vbd_len //:@vbd@:////:[066]://
+//:DATA_BY_SYSTEM:[063]:=====================================://// [---]
+                                                                // [063]
+if( /** __ARTGIRL__ **/ notnode ){                              // [063] 
+                                                                // [063] 
+    var d_artgirl_wgl =( "[FIX:a_g.wgl]" );                     // [063] 
+                                                                // [---]
+    let neg =(0.0 - 1.0 );                                      // [066]  
+    let pos =(0.0 + 1.0 );                                      // [066]  
+    let _0_ =(0.0 * 0.0 );                                      // [066]  
+                                                                // [066]  
+    var d_artgirl = STRUCT({  laxcoma : 0                       // [066]  
+                                                                // [---]  
+    ,   wgl : "[nil][d_artgirl_wgl]"    //:@wgl@://             // [063]  
+    ,   vbo : "[nil][d_artgirl_vbo]"    //:@vbo@://             // [067]  
+    ,   vao : "[nil][d_artgirl_vao]"    //:@vao@://             // [067]  
+                                                                // [067]  
+    ,   tex : "[nil][d_artgirl_tex]"    //:@tex@://             // [067]  
+    ,   lot : "[nil][d_artgirl_lot]"    //:@lot@://             // [067]  
+    ,   sam : "[nil][d_artgirl_sam]"    //:@sam@://             // [067]  
+                                                                // [067]  
+        /** #_O_P_P_# : One Per Program **/                     // [067]  
+                                                                // [---]
+    ,arr_pid:F_ARR(c_artgirl_ren_tot) //: @pid@ #_O_P_P_#    ://// [069]
+    ,arr_vid:F_ARR(c_artgirl_ren_tot) //: @vid@ #_O_P_P_#    ://// [069]
+    ,arr_fid:F_ARR(c_artgirl_ren_tot) //: @fid@ #_O_P_P_#    ://// [069]
+                                                                // [069]
+    ,arr_ssv:F_SSA(c_artgirl_ren_tot                            // [069]
+            ,      c_artgirl_ssv_bad                            // [069]
+            ,      c_artgirl_ssv_001                            // [069]
+            ,      c_artgirl_ssv_002                            // [069]
+            ,      c_artgirl_ssv_003                            // [069]
+            ,      c_artgirl_ssv_004                            // [069]
+            ,      c_artgirl_ssv_005                            // [069]
+            ,      c_artgirl_ssv_006                            // [069]
+            ,      c_artgirl_ssv_007                            // [069]
+            )      /////////////////                            // [069]
+    ,arr_ssf:F_SSA(c_artgirl_ren_tot                            // [069]
+            ,      c_artgirl_ssf_bad                            // [069]
+            ,      c_artgirl_ssf_001                            // [069]
+            ,      c_artgirl_ssf_002                            // [069]
+            ,      c_artgirl_ssf_003                            // [069]
+            ,      c_artgirl_ssf_004                            // [069]
+            ,      c_artgirl_ssf_005                            // [069]
+            ,      c_artgirl_ssf_006                            // [069]
+            ,      c_artgirl_ssf_007                            // [069]
+            )      /////////////////                            // [069]
+                                                                // [---]
+    ,   vbl :      c_artgirl_vbd_len //:@vbd@://                // [066] 
+    ,   vbd :F_CAR(c_artgirl_vbd_len //:@vbd@://                // [066] 
                                                      //:[066]://
         //:@vcx@ @vcy@ @vcz@        @tcx@ , @tcy@    //:[066]://
         ,   neg , neg , _0_    ,    (0.0) , (1.0)    //:[066]://
@@ -1607,10 +1726,18 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** ******************************************************** **/
 /** @ATTED_COMMENTS@ *************************************** ***
 
-    //:--------------------------------------------------://    
-    //: @'s used to describe a variable or phase. [068]  ://    
-    //: Something that can appear multiple times. [068]  ://    
-    //:--------------------------------------------------://    
+    //:--------------------------------------------------://    // [069]
+    //: @'s used to describe a variable or phase. [069]  ://    // [069]
+    //: Something that can appear multiple times. [069]  ://    // [069]
+    //:--------------------------------------------------://    // [069]
+    //: TAG[ AT_SECTION | ATSECTION | atsection | atsec ]://    // [069]
+    //:--------------------------------------------------://    // [069]
+                                                                // [069]
+    @SSA@ : Shader String Array ( array of [ssv]or[ssf] )       // [069]
+    @ssv@ : Shader Source ( vertex   shader       )             // [069]
+    @ssf@ : Shader Source ( fragment shader       )             // [069]
+    @vss@ : WRONG , use general to specific ( ssv )             // [069]
+    @fss@ : WRONG , use general to specific ( ssf )             // [069]
 
     @LIB_URL@ : LIBRARY : Universal Resource Locator
     @LIB_Q_S@ : LIBRARY : QueryString
@@ -1731,12 +1858,17 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** *************************************** @ATTED_COMMENTS@ **/
 /** #HASH_TAGGED_COMMENTS# ********************************* ***
 
-    //:--------------------------------------------------://    
-    //: #'s are used to describe a comment that has [068]://    
-    //: been EXTRACTED from the code somewhere.     [068]://    
-    //: This may be a 1-line comment, multi-line    [068]://    
-    //: comment, __OR__ an abbreviated error msg.   [068]://    
-    //:--------------------------------------------------://    
+    //:--------------------------------------------------://    // [069]
+    //: #'s are used to describe a comment that has [069]://    // [069]
+    //: been EXTRACTED from the code somewhere.     [069]://    // [069]
+    //: This may be a 1-line comment, multi-line    [069]://    // [069]
+    //: comment, __OR__ an abbreviated error msg.   [069]://    // [069]
+    //:--------------------------------------------------://    // [069]
+    //: TAG[ hashsec | poundsec | octosec | hashtagsec ] ://    // [069]
+    //: TAG[ hashtag | hashtagsec | hash-tag-sec | hts ] ://    // [069]
+    //:--------------------------------------------------://    // [069]
+                                                                // [069]
+    #IAI# : Improper_Array_Initialization                       // [069]
 
     #IPR# : Is_Postgres_Response , we want to get rid           
           : of all the bloat and return the[ rows ]             
@@ -1981,6 +2113,6 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           :                                                [067]
           : Created an[ ARR ]function so that we dont      [067]
           : have to type[ new Array( len ) ]and can        [067]
-          : instead type[       ARR( len ) ].              [067]
+          : instead type[     F_ARR( len ) ].                   // [069]
 
 *** *************************************** MISC_DELTA_NOTES **/
