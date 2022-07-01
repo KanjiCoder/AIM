@@ -433,9 +433,19 @@ const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                   
-    in vec4 inn_pos;  //: Attribute : Vertex  Position   ://
-    in vec2 inn_tex;  //: Attribute : Texture Coord      ://
+    layout ( location = 0 ) in vec4 inn_pos ;  
+    layout ( location = 1 ) in vec2 inn_tex ;   
+                           out vec2 out_tex ;
 
+    void main(){
+
+        gl_Position =( inn_pos.x
+                     , inn_pos.y
+                     , inn_pos.z
+                     ,       1.0 );
+
+        out_tex = inn_tex ;
+    }
                            
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
@@ -451,13 +461,13 @@ const d_artgirl_ssv_007 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
 const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                       
-                                                                        
+                                 
+    in  vec2  out_tex ; //:INN:TextureCoord://
     out vec4  out_f_c ; //:OUTput_FragColor://
 
     void main(){
 
         out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
-
     }
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
