@@ -396,9 +396,12 @@ const d_artgirl_ssf_bad =( "[BAD_SSV_DEX:ssf]" );               // [070][069]
                                                                 // [069]
 const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(`                                                                      
-                                                                        
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+(c_artgirl_wgl_tag+`                                            // [074]                          
+                                                                  
+    in vec4 inn_pos;  //: Attribute : Vertex  Position   ://
+    in vec2 inn_tex;  //: Attribute : Texture Coord      ://
+
+                           
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
                                                                 // [069]
@@ -412,51 +415,57 @@ const d_artgirl_ssv_007 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
                                                                 // [069]
 const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(`                                                                      
+(c_artgirl_wgl_tag+`                                            // [074]                       
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+    out vec4  out_f_c ; //:OUTput_FragColor://
+
+    void main(){
+
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
+
+    }
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(`                                                                      
+(c_artgirl_wgl_tag+`                                            // [074]                         
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:002                            
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(`                                                                      
+(c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:003                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(`                                                                      
+(c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:004                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(`                                                                      
+(c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:005                             
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(`                                                                      
+(c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:006                           
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(`                                                                      
+(c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29                             
+    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:007                            
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
                                                                 // [069]
@@ -464,6 +473,11 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
 //:CONST_MACROS_BY_SYSTEM[064]:==============================://// [---]
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
+
+    /** What Version Of WebGl Are We Using? **/
+
+        const c_artgirl_wgl_tag =("#version 300 es");           // [073]
+        const c_artgirl_wgl_ask =(         "webgl2");           // [073]
 
     /** WebGL Surface Quad Macros ********* **/      //:[066]://
                                                      //:[066]://
@@ -1075,7 +1089,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     ){                                                          // [063] 
         let a_g = d_artgirl ;                                   // [063] 
                                                                 // [063] 
-        a_g.wgl = d_can.getContext( "webgl" );                  // [063] 
+        a_g.wgl = d_can.getContext( c_artgirl_wgl_ask );        // [074][063] 
                                                                          
         let wgl =( a_g.wgl /** d_artgirl.wgl **/ );             // [071] 
                                                                 // [071]
@@ -2218,6 +2232,86 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     
 *** ******************************************************** **/
 /** FEATURE_CREEP ****************************************** ***
+
+    DEATHMATCH_CREW / DEATHMATCH_OVERLOAD :                     // [074]
+                                                                // [074]
+        When too many people are in the server, everyone is     // [074]
+        teleported to the DEATHMATCH room. The deathmatch does  // [074]
+        __NOT__ end until __HALF__ of the people in the server  // [074]
+        are __KILLED__ by other people in the deathmatch room.  // [074]
+                                                                // [074]
+        Deatmatch room will be in the very center of the        // [074]
+        worldmap.                                               // [074]
+                                                                // [074]
+        The level will be designed as a funnel, forcing         // [074]
+        people to have multiple 1:1 battles with each other.    // [074]
+                                                                // [074]
+        There is an event-box over the mini rooms. A gate in    // [074]
+        the floor will __OPEN__ when event-area detects         // [074]
+        only one player.                                        // [074]
+                                                                // [074]
+        There are explosive timer_boxes (TIMER) above           // [074]
+        each room. When they explode, the ceiling caves         // [074]
+        in and kills BOTH PLAYERS within the room.              // [074]
+                                                                // [074]
+            [ --------- LONGEST_TIMER ---------- ]              // [074]
+            [ LONGER_TIMER  ]   [ LONGER_TIMER   ]              // [074]
+            [TIMER]   [TIMER]   [TIMER]    [TIMER]              // [074]
+            [ A B ]   [ C D ]   [ E F ]    [ G H ]              // [074]
+            |               |   |                |              // [074]
+            |               |   |                |              // [074]
+            +---------------+   +----------------+              // [074]
+            |                                    |              // [074]
+            |                                    |              // [074]
+            +------------------------------------+              // [074]
+                                                                // [074]
+        If you are killed, you are booted from the              // [074]
+        server and lose items or something. Not sure            // [074]
+        if you end up teleported back to same room              // [074]
+        you were in or if you are forced to start               // [074]
+        at beginning.                                           // [074]
+                                                                // [074]
+        People will be added to deathmatch CELLS in the         // [074]
+        deathmatch LEVEL in a round-robin style.                // [074]
+        SO hypothetically, if you build a crew of HALF          // [074]
+        the MAXIMUM server capacity, you could all join         // [074]
+        a server, and kill everyone in that server like         // [074]
+        vikings, because you will __NOT__ be pitted against     // [074]
+        another member of YOUR CREW because of the              // [074]
+        round-robin assignment of deathmatch cells.             // [074]
+                                                                // [074]
+        Possibly there should be a warning message when         // [074]
+        the server is getting too full. Anyone can switch       // [074]
+        servers at ANY TIME. ( encouraged to manage             // [074]
+        server load on their own ). But once deathmatch         // [074]
+        from server overload starts, you are not allowed        // [074]
+        to leave the server. If you leave the server            // [074]
+        during deathmatch via "disconnect" or "rage quit"       // [074]
+        it is as if you __LOST__. Sorry if you have             // [074]
+        bad internet, you are fucked.                           // [074]
+                                                                // [074]
+        Timer boxes can be sprites generated by using           // [074]
+        special region rectangle tiles. We will need            // [074]
+        to reserve 2 tile types to create these region          // [074]
+        rects that spawn sprites.                               // [074]
+                                                                // [074]
+        Timer box can be a binary pattern inside the            // [074]
+        region rect that tells us how long to set               // [074]
+        timer for. Thus larger timerboxes can have              // [074]
+        larger time durations because they literally            // [074]
+        can encode larger binary bit patterns.                  // [074]
+                                                                // [074]
+        Normal gameplay does not allow you to set bombs.        // [074]
+        But in deathmatch, you can.                             // [074]
+                                                                // [074]
+        Offical server needs to encode a list of other          // [074]
+        servers in it's source code to help distribute load.    // [074]
+                                                                // [074]
+        If GOD is editing a level, warning needs to be made     // [074]
+        that "blocks" may appear or dissapear out of nowhere.   // [074]
+        If a block appears where you exist, you die.            // [074]
+                                                                // [074]
+        GOD is whoever has level editing priviledges.           // [074]
 
     Let people extend my code : ( 2022_06_24 ) :
 
