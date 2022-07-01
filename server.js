@@ -1052,14 +1052,16 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         }else{                                                  // [072]
             LOG( "[ARTGILR_ERR_CHK:BAD]" , i_tbm );             // [072]
                                                                 // [---]
-            var dic ={ "laxcoma":"0"                            // [073]
-            ,(""+( wgl.INVALID_ENUM                  )):"[FU1]" // [073]
-            ,(""+( wgl.INVALID_VALUE                 )):"[FU2]" // [073]
-            ,(""+( wgl.INVALID_OPERATION             )):"[FU3]" // [073]
-            ,(""+( wgl.INVALID_FRAMEBUFFER_OPERATION )):"[FU4]" // [073]
-            ,(""+( wgl.OUT_OF_MEMORY                 )):"[FU5]" // [073]
-            ,(""+( wgl.CONTEXT_LOST_WEBGL            )):"[FU6]" // [073]
-            };;                                                 // [073]
+
+            var d ={   }; /** d for dict **/
+            var w = wgl ; /** w for  wgl **/
+            d[(""+( w.INVALID_ENUM                  ))]="[FU1]";
+            d[(""+( w.INVALID_VALUE                 ))]="[FU2]";
+            d[(""+( w.INVALID_OPERATION             ))]="[FU3]";
+            d[(""+( w.INVALID_FRAMEBUFFER_OPERATION ))]="[FU4]";
+            d[(""+( w.OUT_OF_MEMORY                 ))]="[FU5]";
+            d[(""+( w.CONTEXT_LOST_WEBGL            ))]="[FU6]";
+
                                                                 // [073]
             var err_msg =( dic[ ""+err+"" ] );                  // [073]
             LOG( "[ARTGIRL_ERR_CHK:err_msg]" , err_msg );       // [073]
