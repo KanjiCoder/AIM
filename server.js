@@ -1052,18 +1052,16 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         }else{                                                  // [072]
             LOG( "[ARTGILR_ERR_CHK:BAD]" , i_tbm );             // [072]
                                                                 // [---]
-
-            var d ={   }; /** d for dict **/
-            var w = wgl ; /** w for  wgl **/
-            d[(""+( w.INVALID_ENUM                  ))]="[FU1]";
-            d[(""+( w.INVALID_VALUE                 ))]="[FU2]";
-            d[(""+( w.INVALID_OPERATION             ))]="[FU3]";
-            d[(""+( w.INVALID_FRAMEBUFFER_OPERATION ))]="[FU4]";
-            d[(""+( w.OUT_OF_MEMORY                 ))]="[FU5]";
-            d[(""+( w.CONTEXT_LOST_WEBGL            ))]="[FU6]";
-
+            var d ={   }; /** d for dict **/                    // [073]
+            var w = wgl ; /** w for  wgl **/                    // [073]
+            d[(""+( w.INVALID_ENUM                  ))]="[FU1]";// [073]
+            d[(""+( w.INVALID_VALUE                 ))]="[FU2]";// [073]
+            d[(""+( w.INVALID_OPERATION             ))]="[FU3]";// [073]
+            d[(""+( w.INVALID_FRAMEBUFFER_OPERATION ))]="[FU4]";// [073]
+            d[(""+( w.OUT_OF_MEMORY                 ))]="[FU5]";// [073]
+            d[(""+( w.CONTEXT_LOST_WEBGL            ))]="[FU6]";// [073]
                                                                 // [073]
-            var err_msg =( dic[ ""+err+"" ] );                  // [073]
+            var err_msg =( d[ ""+err+"" ] );                    // [073]
             LOG( "[ARTGIRL_ERR_CHK:err_msg]" , err_msg );       // [073]
             ERR( "[ARTGIRL_ERR_CHK:err_msg]" + err_msg );       // [073][072]
         };;                                                     // [072]
