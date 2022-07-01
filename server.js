@@ -439,10 +439,10 @@ const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 
     void main(){
 
-        gl_Position =( inn_pos.x
-                     , inn_pos.y
-                     , inn_pos.z
-                     ,       1.0 );
+        gl_Position =vec4( inn_pos.x
+                         , inn_pos.y
+                         , inn_pos.z
+                         ,       1.0 );
 
         out_tex = inn_tex ;
     }
