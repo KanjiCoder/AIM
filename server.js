@@ -433,23 +433,22 @@ const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]    
 
-    precision highp float;
-                                                                  
-    layout ( location = 0 ) in vec4 inn_pos ;    //:@inn_pos@://
-    layout ( location = 1 ) in vec2 inn_tex ;    //:@inn_tex@://
-                           out vec2 out_tex ;    //:@out_tex@://
-
-    void main(){
-
-        gl_Position =vec4( inn_pos.x
-                         , inn_pos.y
-                         , inn_pos.z
-                         ,       1.0 );
-
-        out_tex = inn_tex ;
-    }
-                           
-                                                                        
+    precision highp float;                                      // [074]
+                                                                // [074]
+    layout ( location = 0 ) in vec4 inn_pos ;    //:@inn_pos@://// [074]
+    layout ( location = 1 ) in vec2 inn_tex ;    //:@inn_tex@://// [074]
+                           out vec2 out_tex ;    //:@out_tex@://// [074]
+                                                                // [074]
+    void main(){                                                // [074]
+                                                                // [074]
+        gl_Position =vec4( inn_pos.x                            // [074]
+                         , inn_pos.y                            // [074]
+                         , inn_pos.z                            // [074]
+                         ,       1.0 );                         // [074]
+                                                                // [074]
+        out_tex = inn_tex ;                                     // [074]
+    }                                                           // [074]
+                                   
 `));; //////////////////////////////////////////////////////////   [069]
                                                                 // [069]
 const d_artgirl_ssv_001 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
@@ -464,105 +463,105 @@ const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                       
                                  
-    precision mediump float ;
-
-    in  vec2  out_tex ; //: @out_tex@ ://
-    out vec4  out_f_c ; //: @out_f_c@ ://
-
-    void main(){
-
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
-    }
+    precision mediump float ;                                   // [074]
+                                                                // [074]
+    in  vec2  out_tex ; //: @out_tex@ ://                       // [074]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
+                                                                // [074]
+    void main(){                                                // [074]
+                                                                // [074]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
+    }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                         
                                                                         
-    precision mediump float ;
-
-    in  vec2  out_tex ; //: @out_tex@ ://
-    out vec4  out_f_c ; //: @out_f_c@ ://
-
-    void main(){
-
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
-    }                          
+    precision mediump float ;                                   // [074]
+                                                                // [074]
+    in  vec2  out_tex ; //: @out_tex@ ://                       // [074]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
+                                                                // [074]
+    void main(){                                                // [074]
+                                                                // [074]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
+    }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    precision mediump float ;
-
-    in  vec2  out_tex ; //: @out_tex@ ://
-    out vec4  out_f_c ; //: @out_f_c@ ://
-
-    void main(){
-
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
-    }                        
+    precision mediump float ;                                   // [074]
+                                                                // [074]
+    in  vec2  out_tex ; //: @out_tex@ ://                       // [074]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
+                                                                // [074]
+    void main(){                                                // [074]
+                                                                // [074]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
+    }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    precision mediump float ;
-
-    in  vec2  out_tex ; //: @out_tex@ ://
-    out vec4  out_f_c ; //: @out_f_c@ ://
-
-    void main(){
-
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
-    }                          
+    precision mediump float ;                                   // [074]
+                                                                // [074]
+    in  vec2  out_tex ; //: @out_tex@ ://                       // [074]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
+                                                                // [074]
+    void main(){                                                // [074]
+                                                                // [074]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
+    }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    precision mediump float ;
-
-    in  vec2  out_tex ; //: @out_tex@ ://
-    out vec4  out_f_c ; //: @out_f_c@ ://
-
-    void main(){
-
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
-    }                           
+    precision mediump float ;                                   // [074]
+                                                                // [074]
+    in  vec2  out_tex ; //: @out_tex@ ://                       // [074]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
+                                                                // [074]
+    void main(){                                                // [074]
+                                                                // [074]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
+    }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    precision mediump float ;
-
-    in  vec2  out_tex ; //: @out_tex@ ://
-    out vec4  out_f_c ; //: @out_f_c@ ://
-
-    void main(){
-
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
-    }                         
+    precision mediump float ;                                   // [074]
+                                                                // [074]
+    in  vec2  out_tex ; //: @out_tex@ ://                       // [074]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
+                                                                // [074]
+    void main(){                                                // [074]
+                                                                // [074]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
+    }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    precision mediump float ;
-
-    in  vec2  out_tex ; //: @out_tex@ ://
-    out vec4  out_f_c ; //: @out_f_c@ ://
-
-    void main(){
-
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
-    }                         
+    precision mediump float ;                                   // [074]
+                                                                // [074]
+    in  vec2  out_tex ; //: @out_tex@ ://                       // [074]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
+                                                                // [074]
+    void main(){                                                // [074]
+                                                                // [074]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
+    }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
                                                                 // [069]
@@ -1110,17 +1109,14 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
 
-        //: OGL.glBindVertexArray( a3d_ledit64_vao );
-        //: OGL.glDrawArrays( 0x0005 , 0 , 4 ); 
-
-        a_g.wgl.bindVertexArray( a_g.vao );
-        a_g.wgl.drawArrays( 
-            
-            a_g.wgl.TRIANGLE_STRIP //: #TESTYLE# ://
-        
-        ,   0  //: IndexOfFirstVert   ://
-        ,   4  //: NumberOfVertsToDraw://
-        );;
+        a_g.wgl.bindVertexArray( a_g.vao );                     // [074]
+        a_g.wgl.drawArrays(                                     // [074]
+                                                                // [074]
+            a_g.wgl.TRIANGLE_STRIP //: #TESTYLE# ://            // [074]
+                                                                // [074]
+        ,   0  //: IndexOfFirstVert   ://                       // [074]
+        ,   4  //: NumberOfVertsToDraw://                       // [074]
+        );;                                                     // [074]
 
     };;                                                         // [063] 
                                                                 // [063] 
@@ -2146,8 +2142,25 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //:--------------------------------------------------://    // [069]
 
 
-    #TESTYLE# : Tesselation Style , how to connect verts        // [074]
-              : to create polygons.                             // [074]
+    #TESTYLE# : Tesselation Style , how to  +--------------+    // [074]
+              : connect verts  to create polygons.         |    // [074]
+              |                                            |    // [074]
+              |     TRIANGLE_STRIP :     TRIANGLE_FAN :    |    // [074]
+              |                                            |    // [074]
+              |     [0]-------[1]        [1]-------[2]     |    // [074]
+              |      |\        |          | \     / |      |    // [074]
+              |      | \       |          |  \   /  |      |    // [074]
+              |      |  \      |          |   [0]   |      |    // [074]
+              |      |   \     |          |  /   \  |      |    // [074]
+              |      |    \    |          | /     \ |      |    // [074]
+              |      |     \   |         [4]-------[3]     |    // [074]
+              |      |      \  |                           |    // [074]
+              |      |       \ |                           |    // [074]
+              |      |        \|                           |    // [074]
+              |     [3]-------[2]                          |    // [074]
+              |                                            |    // [074]
+              +--------------------------------------------+    // [074]
+
                                                                 // [069]
     #IAI# : Improper_Array_Initialization                       // [069]
     #_1_BASED_ARR_# : Array index 0 not used for anything.      // [069]
