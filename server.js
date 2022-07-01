@@ -2332,4 +2332,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : have to type[ new Array( len ) ]and can        [067]
           : instead type[     F_ARR( len ) ].                   // [069][067]
 
+    [073] : 1 : More robust error checking.                     // [073]
+          : 2 : Updated deployment documentation.               // [073]
+
 *** *************************************** MISC_DELTA_NOTES **/
