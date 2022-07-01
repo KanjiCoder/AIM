@@ -189,7 +189,7 @@
     const idv =( "[FIX:vid]" );                                 // [071]
     const idf =( "[FIX:fid]" );                                 // [071]
     const idp =( "[FIX:pid]" );                                 // [071]
-
+                                                                // [071]
     const fss =( "[FIX:ssf]" );                                 // [071]
     const vss =( "[FIX:ssv]" );                                 // [071]
     const P_F =( "[FIX:MSG]( P_F == MSG )" );                   // [071]
@@ -1042,7 +1042,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     };;                                                         // [071]
 
     const   F_ARTGIRL_INI = function                            // [063] 
-    PRIVATE_F_ARTGIRL_INI(                                      // [063] 
+    PRIVATE_F_ARTGIRL_INI(  /**AKA[ render pipeline factory ]**/// [071] 
                                                                 // [063] 
         /** NO arguments **/                                    // [063] 
     ){                                                          // [063] 
