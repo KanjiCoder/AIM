@@ -999,35 +999,35 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     //:     :( Rendering Loop Calls Are Her Job Too.    )://    
     //:--------------------------------------------------:// 
 
-    const   F_ARTGIRL_RPL = function                 //:[068]://
-    PRIVATE_F_ARTGIRL_RPL( //:Render Pipeline Load @RPL@[068]://
-                           //:                          [068]://
-        i_ren //: < < < < < < Render Pipeline Number    [068]://
-    ){                                               //:[068]://
-        if( i_ren < 1 ){ ERR("[RPL_NEG]") ; };       //:[068]://
-        if( i_ren > 9 ){ ERR("[RPL_POS]") ; };       //:[068]://
-        if( i_ren > c_artgirl_ren_tot ){             //:[068]://
-                                                     //:[068]://
-            MSG("[Not_That_Many_Render_Pipelines]"); //:[068]://
-        };;                                          //:[068]://
-                                                     //:[068]://
-        LOG( "[[TODO]:RPL]" , i_ren );               //:[068]://
-    };;                                              //:[068]://
+    const   F_ARTGIRL_RPL = function                            // [068] 
+    PRIVATE_F_ARTGIRL_RPL( //:Render Pipeline Load @RPL@ ://    // [068] 
+                                                                // [068] 
+        i_ren //: < < < < < < Render Pipeline Number     ://    // [068] 
+    ){                                                          // [068] 
+        if( i_ren < 1 ){ ERR("[RPL_NEG]") ; };                  // [068] 
+        if( i_ren > 9 ){ ERR("[RPL_POS]") ; };                  // [068] 
+        if( i_ren > c_artgirl_ren_tot ){                        // [068] 
+                                                                // [068] 
+            MSG("[Not_That_Many_Render_Pipelines]");            // [068] 
+        };;                                                     // [068] 
+                                                                // [068] 
+        LOG( "[[TODO]:RPL]" , i_ren );                          // [068] 
+    };;                                                         // [068] 
 
-    const   F_ARTGIRL_TIK = function                 //:[063]://
-    PRIVATE_F_ARTGIRL_TIK(                           //:[063]://
-        i_tim                                        //:[063]://
-    ){                                               //:[063]://
-        let a_g = d_artgirl ;                        //:[063]://
-                                                     //:[063]://
-        var _R_ = ( i_tim % 255.000 );               //:[063]://
-        if( _R_ > 255.0 ){ ERR("[_R_]"); };          //:[063]://
-            _R_ = ( _R_ / 255.0 );                   //:[063]://
-                                                     //:[063]://
-        a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 ); //:[063]://
-        a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );   //:[063]://
-    };;                                              //:[063]://
-                                                     //:[063]://
+    const   F_ARTGIRL_TIK = function                            // [063] 
+    PRIVATE_F_ARTGIRL_TIK(                                      // [063] 
+        i_tim                                                   // [063] 
+    ){                                                          // [063] 
+        let a_g = d_artgirl ;                                   // [063] 
+                                                                // [063] 
+        var _R_ = ( i_tim % 255.000 );                          // [063] 
+        if( _R_ > 255.0 ){ ERR("[_R_]"); };                     // [063] 
+            _R_ = ( _R_ / 255.0 );                              // [063] 
+                                                                // [063] 
+        a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
+        a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
+    };;                                                         // [063] 
+                                                                // [063] 
 
     const   F_ARTGIRL_ERR_CHK = function                        // [071]
     PRIVATE_F_ARTGIRL_ERR_CHK(                                  // [071]
@@ -1047,16 +1047,15 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         };;                                                     // [071]
     };;                                                         // [071]
 
-
-    const   F_ARTGIRL_INI = function                 //:[063]://
-    PRIVATE_F_ARTGIRL_INI(                           //:[063]://
-                                                     //:[063]://
-        /** NO arguments **/                         //:[063]://
-    ){                                               //:[063]://
-        let a_g = d_artgirl ;                        //:[063]://
-                                                     //:[063]://
-        a_g.wgl = d_can.getContext( "webgl" );       //:[063]://
-
+    const   F_ARTGIRL_INI = function                            // [063] 
+    PRIVATE_F_ARTGIRL_INI(                                      // [063] 
+                                                                // [063] 
+        /** NO arguments **/                                    // [063] 
+    ){                                                          // [063] 
+        let a_g = d_artgirl ;                                   // [063] 
+                                                                // [063] 
+        a_g.wgl = d_can.getContext( "webgl" );                  // [063] 
+                                                                         
         let wgl =( a_g.wgl /** d_artgirl.wgl **/ );             // [071] 
                                                                 // [071]
         //:vardec:[071]:---------------------------------://    // [071]
@@ -1084,104 +1083,104 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             o_k =( 1 );                                         // [071]
                                                                 // [071]
         //:---------------------------------:varini:[071]://    // [071]
-        //:compile_all_vertex_shaders:[071]:-------------://
-
-            if( o_k >= 1 ){
-            for( i_r = i_0 ; i_r <= i_1 ; i_r ++ ){
-
-                //: SEE[ #_OPENGL_VS_WEBGL_# ] ://
-            
-                typ = ASS( a_g.wgl.VERTEX_SHADER     );
-                ssv = ASS( a_g.arr_ssv[ i_r ]        );
-                vid = ASS( wgl.createShader( typ ) );
-
-                wgl.shaderSource(    vid , ssv  );
-                wgl.compileShader(   vid        );
-
-                msg = wgl.getShaderInfoLog(  vid  );
-                o_k = ( ( msg.length <= 0 ) ? 1 : 0 );
-
-                if( 1 == o_k ){
-
-                    a_g.arr_vid[ i_r ]=ASS( vid );
-                }else
-                if( 0 == o_k ){ 
-                    MSG("[BEG:ssv]\n\n");
-
-                    MSG( ssv );  
-
-                    MSG("[END:ssv]\n\n");
-                    LOG( "[C_S:INFOLOG:V_S]" , msg );
-                    ERR( "[C_S:VERT_SHADER]"       ); 
-                }else{
-                    ERR("[WTFMAN:VERT]");
-                };;
-            };;};;
-        //:-------------:compile_all_vertex_shaders:[071]://
-        //:compile_all_fragment_shaders:[071]:-----------://
-
-            if( o_k >= 1 ){
-            for( i_r = i_0 ; i_r <= i_1 ; i_r ++ ){
-
-                //: SEE[ #_OPENGL_VS_WEBGL_# ] ://
-            
-                typ = ASS( a_g.wgl.FRAGMENT_SHADER   );
-                ssf = ASS( a_g.arr_ssf[ i_r ]        );
-                fid = ASS( wgl.createShader( typ )   );
-
-                wgl.shaderSource(    fid , ssf  );
-                wgl.compileShader(   fid        );
-
-                msg = wgl.getShaderInfoLog(  fid  );
-                o_k = ( ( msg.length <= 0 ) ? 1 : 0 );
-
-                if( 1 == o_k ){
-                
-                    a_g.arr_fid[ i_r ]=ASS( fid );
-                }else
-                if( 0 == o_k ){ 
-                    MSG("[BEG:ssf]\n\n");
-
-                    MSG( ssf );  
-
-                    MSG("[END:ssf]\n\n");
-                    LOG( "[C_S:INFOLOG:F_S]" , msg );
-                    ERR( "[C_S:FRAG_SHADER]"       ); 
-                }else{
-                    ERR("[WTFMAN:FRAG]");
-                };;
-            };;};;
-        //:-----------:compile_all_fragment_shaders:[071]://
-        //:create_all_shader_programs:[071]:-------------://    
-
-            if( o_k >= 1 ){
-            for( i_r = i_0 ; i_r <= i_1 ; i_r ++ ){
-
-                pid = ASS( wgl.createProgram( ) );
-                a_g.arr_pid[ i_r ]=( pid );
-                if( pid <= 0 ){ ERR("[BAD_PID]"); };
-
-                
-                pid = ASS( a_g.arr_pid[ i_r ] );
-                vid = ASS( a_g.arr_vid[ i_r ] );
-                fid = ASS( a_g.arr_fid[ i_r ] );
-
-                let ERR_CHK = F_ARTGIRL_ERR_CHK ;
-                
-                wgl.attachShader( pid ,             vid  );
-                wgl.attachShader( pid ,             fid  );
-                wgl.linkProgram(  pid );  ERR_CHK("[L_P]");
-                wgl.useProgram(   pid );  ERR_CHK("[U_P]");
-
-            };;};;
-        //:-------------:create_all_shader_programs:[071]://
-        //:misc_pipeline_setup_code:[071]:---------------://
-
+        //:compile_all_vertex_shaders:[071]:-------------://    // [071]
+                                                                // [071]
+            if( o_k >= 1 ){                                     // [071]
+            for( i_r = i_0 ; i_r <= i_1 ; i_r ++ ){             // [071]
+                                                                // [071]
+                //: SEE[ #_OPENGL_VS_WEBGL_# ] ://              // [071]
+                                                                // [071]
+                typ = ASS( a_g.wgl.VERTEX_SHADER     );         // [071]
+                ssv = ASS( a_g.arr_ssv[ i_r ]        );         // [071]
+                vid = ASS( wgl.createShader( typ ) );           // [071]
+                                                                // [071]
+                wgl.shaderSource(    vid , ssv  );              // [071]
+                wgl.compileShader(   vid        );              // [071]
+                                                                // [071]
+                msg = wgl.getShaderInfoLog(  vid  );            // [071]
+                o_k = ( ( msg.length <= 0 ) ? 1 : 0 );          // [071]
+                                                                // [071]
+                if( 1 == o_k ){                                 // [071]
+                                                                // [071]
+                    a_g.arr_vid[ i_r ]=ASS( vid );              // [071]
+                }else                                           // [071]
+                if( 0 == o_k ){                                 // [071]
+                    MSG("[BEG:ssv]\n\n");                       // [071]
+                                                                // [071]
+                    MSG( ssv );                                 // [071]
+                                                                // [071]
+                    MSG("[END:ssv]\n\n");                       // [071]
+                    LOG( "[C_S:INFOLOG:V_S]" , msg );           // [071]
+                    ERR( "[C_S:VERT_SHADER]"       );           // [071]
+                }else{                                          // [071]
+                    ERR("[WTFMAN:VERT]");                       // [071]
+                };;                                             // [071]
+            };;};;                                              // [071]
+        //:-------------:compile_all_vertex_shaders:[071]://    // [071]
+        //:compile_all_fragment_shaders:[071]:-----------://    // [071]
+                                                                // [071]
+            if( o_k >= 1 ){                                     // [071]
+            for( i_r = i_0 ; i_r <= i_1 ; i_r ++ ){             // [071]
+                                                                // [071]
+                //: SEE[ #_OPENGL_VS_WEBGL_# ] ://              // [071]
+                                                                // [071]
+                typ = ASS( a_g.wgl.FRAGMENT_SHADER   );         // [071]
+                ssf = ASS( a_g.arr_ssf[ i_r ]        );         // [071]
+                fid = ASS( wgl.createShader( typ )   );         // [071]
+                                                                // [071]
+                wgl.shaderSource(    fid , ssf  );              // [071]
+                wgl.compileShader(   fid        );              // [071]
+                                                                // [071]
+                msg = wgl.getShaderInfoLog(  fid  );            // [071]
+                o_k = ( ( msg.length <= 0 ) ? 1 : 0 );          // [071]
+                                                                // [071]
+                if( 1 == o_k ){                                 // [071]
+                                                                // [071]
+                    a_g.arr_fid[ i_r ]=ASS( fid );              // [071]
+                }else                                           // [071]
+                if( 0 == o_k ){                                 // [071]
+                    MSG("[BEG:ssf]\n\n");                       // [071]
+                                                                // [071]
+                    MSG( ssf );                                 // [071]
+                                                                // [071]
+                    MSG("[END:ssf]\n\n");                       // [071]
+                    LOG( "[C_S:INFOLOG:F_S]" , msg );           // [071]
+                    ERR( "[C_S:FRAG_SHADER]"       );           // [071]
+                }else{                                          // [071]
+                    ERR("[WTFMAN:FRAG]");                       // [071]
+                };;                                             // [071]
+            };;};;                                              // [071]
+        //:-----------:compile_all_fragment_shaders:[071]://    // [071]
+        //:create_all_shader_programs:[071]:-------------://    // [071]
+                                                                // [071]
+            if( o_k >= 1 ){                                     // [071]
+            for( i_r = i_0 ; i_r <= i_1 ; i_r ++ ){             // [071]
+                                                                // [071]
+                pid = ASS( wgl.createProgram( ) );              // [071]
+                a_g.arr_pid[ i_r ]=( pid );                     // [071]
+                if( pid <= 0 ){ ERR("[BAD_PID]"); };            // [071]
+                                                                // [071]
+                                                                // [071]
+                pid = ASS( a_g.arr_pid[ i_r ] );                // [071]
+                vid = ASS( a_g.arr_vid[ i_r ] );                // [071]
+                fid = ASS( a_g.arr_fid[ i_r ] );                // [071]
+                                                                // [071]
+                let ERR_CHK = F_ARTGIRL_ERR_CHK ;               // [071]
+                                                                // [071]
+                wgl.attachShader( pid ,             vid  );     // [071]
+                wgl.attachShader( pid ,             fid  );     // [071]
+                wgl.linkProgram(  pid );  ERR_CHK("[L_P]");     // [071]
+                wgl.useProgram(   pid );  ERR_CHK("[U_P]");     // [071]
+                                                                // [071]
+            };;};;                                              // [071]
+        //:-------------:create_all_shader_programs:[071]://    // [071]
+        //:misc_pipeline_setup_code:[071]:---------------://    // [071]
+                                                                // [071]
             //:                 _R_ , _G_ , _B_ , _A_  ; ://    // [071][063] 
             a_g.wgl.clearColor( 0.0 , 1.0 , 0.0 , 1.0 );        // [071][063] 
             a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );          // [071][063] 
-
-        //:---------------:misc_pipeline_setup_code:[071]://
+                                                                // [071]
+        //:---------------:misc_pipeline_setup_code:[071]://    // [071]
 
     };;                                              //:[063]://
   
@@ -1601,18 +1600,18 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 //:INIT_CLIENT_FRONTEND:[035]:===============================://
 if( notnode ){  window.onload = function( /** [030] **/ ){
 
-    if( "[NOT_O_K]" === d_urlsite_o_k ){             //:[059]://
-        ERR( d_msgkill_001 );                        //:[059]://
-    };;                                              //:[059]://
-
-    F_INI_CLI();    //:INIt: CLIent :------------------:[???]://
-
-    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :----:[063]://
-    F_KEYMAST_INI();//:INIt: Client Keyboard Handler   :[???]://
-
+    if( "[NOT_O_K]" === d_urlsite_o_k ){                        // [059] 
+        ERR( d_msgkill_001 );                                   // [059] 
+    };;                                                         // [059] 
+                                                                // [059]
+    F_INI_CLI();    //:INIt: CLIent :------------------://      // [???] 
+                                                                // [063]
+    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :----://      // [063] 
+    F_KEYMAST_INI();//:INIt: Client Keyboard Handler   ://      // [???] 
+                                                                // [071]
     F_ARTGIRL_RPL( c_artgirl_ren_def );                         // [071]
-
-    F_CLIGAME_GUL( 0.0 );   //:Enter_Game_Loop:--------:[063]://
+                                                                // [071]
+    F_CLIGAME_GUL( 0.0 );   //:Enter_Game_Loop ://              // [063] 
 
 };; };;
 //:===============================:INIT_CLIENT_FRONTEND:[035]://
@@ -2070,7 +2069,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
 
     #_OPENGL_VS_WEBGL_#                                         // [071]
-        --------------------------------------------------------// [071]
+        ----------------------------------------------------    // [071]
                                                                 // [071]
         OGL : Open GL                                           // [071]
         WGL : Web  GL                                           // [071]
@@ -2094,7 +2093,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         OGL : glCompileShader(    vid );                        // [071]
         WGL : wgl.compileShader(  vid );                        // [071]
                                                                 // [071]
-        --------------------------------------------------------// [071]
+        ----------------------------------------------------    // [071]
 
 
 
