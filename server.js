@@ -1109,6 +1109,19 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                                                                 // [063] 
         a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
+
+        //: OGL.glBindVertexArray( a3d_ledit64_vao );
+        //: OGL.glDrawArrays( 0x0005 , 0 , 4 ); 
+
+        a_g.wgl.bindVertexArray( a_g.vao );
+        a_g.wgl.drawArrays( 
+            
+            a_g.wgl.TRIANGLE_STRIP //: #TESTYLE# ://
+        
+        ,   0  //: IndexOfFirstVert   ://
+        ,   4  //: NumberOfVertsToDraw://
+        );;
+
     };;                                                         // [063] 
                                                                 // [063] 
 
@@ -2129,7 +2142,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //:--------------------------------------------------://    // [069]
     //: TAG[ hashsec | poundsec | octosec | hashtagsec ] ://    // [069]
     //: TAG[ hashtag | hashtagsec | hash-tag-sec | hts ] ://    // [069]
+    //: TAG[ hashnotes | hash-notes | hash notes       ] ://    // [074]
     //:--------------------------------------------------://    // [069]
+
+
+    #TESTYLE# : Tesselation Style , how to connect verts        // [074]
+              : to create polygons.                             // [074]
                                                                 // [069]
     #IAI# : Improper_Array_Initialization                       // [069]
     #_1_BASED_ARR_# : Array index 0 not used for anything.      // [069]
