@@ -1093,7 +1093,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             
                 typ = ASS( a_g.wgl.VERTEX_SHADER     );
                 ssv = ASS( a_g.arr_ssv[ i_r ]        );
-                vid = ASS( wgl.glCreateShader( typ ) );
+                vid = ASS( wgl.createShader( typ ) );
 
                 wgl.shaderSource(    vid , ssv  );
                 wgl.compileShader(   vid        );
@@ -1127,7 +1127,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             
                 typ = ASS( a_g.wgl.FRAGMENT_SHADER   );
                 ssf = ASS( a_g.arr_ssf[ i_r ]        );
-                fid = ASS( wgl.glCreateShader( typ ) );
+                fid = ASS( wgl.createShader( typ )   );
 
                 wgl.shaderSource(    fid , ssf  );
                 wgl.compileShader(   fid        );
