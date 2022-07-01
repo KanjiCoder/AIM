@@ -435,9 +435,9 @@ const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 
     precision highp float;
                                                                   
-    layout ( location = 0 ) in vec4 inn_pos ;  
-    layout ( location = 1 ) in vec2 inn_tex ;   
-                           out vec2 out_tex ;
+    layout ( location = 0 ) in vec4 inn_pos ;    //:@inn_pos@://
+    layout ( location = 1 ) in vec2 inn_tex ;    //:@inn_tex@://
+                           out vec2 out_tex ;    //:@out_tex@://
 
     void main(){
 
@@ -466,8 +466,8 @@ const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
                                  
     precision mediump float ;
 
-    in  vec2  out_tex ; //:INN:TextureCoord://
-    out vec4  out_f_c ; //:OUTput_FragColor://
+    in  vec2  out_tex ; //: @out_tex@ ://
+    out vec4  out_f_c ; //: @out_f_c@ ://
 
     void main(){
 
@@ -479,42 +479,90 @@ const d_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                         
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:002                            
+    precision mediump float ;
+
+    in  vec2  out_tex ; //: @out_tex@ ://
+    out vec4  out_f_c ; //: @out_f_c@ ://
+
+    void main(){
+
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
+    }                          
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:003                             
+    precision mediump float ;
+
+    in  vec2  out_tex ; //: @out_tex@ ://
+    out vec4  out_f_c ; //: @out_f_c@ ://
+
+    void main(){
+
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
+    }                        
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:004                             
+    precision mediump float ;
+
+    in  vec2  out_tex ; //: @out_tex@ ://
+    out vec4  out_f_c ; //: @out_f_c@ ://
+
+    void main(){
+
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
+    }                          
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:005                             
+    precision mediump float ;
+
+    in  vec2  out_tex ; //: @out_tex@ ://
+    out vec4  out_f_c ; //: @out_f_c@ ://
+
+    void main(){
+
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
+    }                           
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:006                           
+    precision mediump float ;
+
+    in  vec2  out_tex ; //: @out_tex@ ://
+    out vec4  out_f_c ; //: @out_f_c@ ://
+
+    void main(){
+
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
+    }                         
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                          
                                                                         
-    TODO_ACTUAL_SHADER_CODE_HERE_2022_06_29:007                            
+    precision mediump float ;
+
+    in  vec2  out_tex ; //: @out_tex@ ://
+    out vec4  out_f_c ; //: @out_f_c@ ://
+
+    void main(){
+
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://
+    }                         
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
                                                                 // [069]
@@ -1942,6 +1990,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //: TAG[ AT_SECTION | ATSECTION | atsection | atsec ]://    // [069]
     //:--------------------------------------------------://    // [069]
                                                                 // [069]
+
+    @inn_pos@ : INNPUT:VertexPosition                           // [074]
+    @inn_tex@ : INNPUT:TextureCoord                             // [074]
+    @out_tex@ : OUTPUT:TextureCoord                             // [074]
+    @out_f_c@ : OUTput_FragColor                                // [074]
+
     @SSA@ : Shader String Array ( array of [ssv]or[ssf] )       // [069]
     @ssv@ : Shader Source ( vertex   shader       )             // [069]
     @ssf@ : Shader Source ( fragment shader       )             // [069]
