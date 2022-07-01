@@ -431,7 +431,9 @@ const d_artgirl_ssf_bad =( "[BAD_SSV_DEX:ssf]" );               // [070][069]
                                                                 // [069]
 const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(c_artgirl_wgl_tag+`                                            // [074]                          
+(c_artgirl_wgl_tag+`                                            // [074]    
+
+    precision highp float;
                                                                   
     layout ( location = 0 ) in vec4 inn_pos ;  
     layout ( location = 1 ) in vec2 inn_tex ;   
@@ -462,6 +464,8 @@ const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]                       
                                  
+    precision mediump float ;
+
     in  vec2  out_tex ; //:INN:TextureCoord://
     out vec4  out_f_c ; //:OUTput_FragColor://
 
