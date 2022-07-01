@@ -30,18 +30,21 @@
 
         STEP 2 FOR PROGRAMMERS :
 
-            touch package.json
-            echo "{}" > package.json
+        touch package.json                                      // [073]
+        echo '{ "dependencies":{"pg":"8.7.3"}}' > package.json  // [073]
         
         STEP 2 FOR ARTISTS :
 
-            +---------------------------------------+
-            | Notepad ++ : server.js        |[-]|[X]|
-            +---------------------------------------+
-            |         |                             |
-            | LINE 01 |  { }                        |
-            |         |                             |
-            +---------+-----------------------------+
+            +-------------------------------------------------+ // [073]
+            | Notepad ++ : server.js                  |[-]|[X]| // [073]
+            +-------------------------------------------------+ // [073]
+            |    |                                            | // [073]
+            | 01 |  {                                         | // [073]
+            | 02 |      "//" : "[ pg added in video [039] ]"  | // [073]
+            | 03 |  ,   "dependencies": { "pg" : "8.7.3" }    | // [073]
+            | 04 |  }                                         | // [073]
+            |    |                                            | // [073]
+            +----+--------------------------------------------+ // [073]
     
     3. git init . && git add . && git commit -m "[AIM]"
     
@@ -1048,7 +1051,19 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             LOG( "[ARTGIRL_ERR_CHK:O_K]" , i_tbm );             // [072]
         }else{                                                  // [072]
             LOG( "[ARTGILR_ERR_CHK:BAD]" , i_tbm );             // [072]
-            ERR( "[TODO:Get_Error_Message]"      );             // [072]
+                                                                // [---]
+            var dic ={ "":""                                    // [073]
+            ,""+( wgl.INVALID_ENUM  )                 : "[FU1]" // [073]
+            ,""+( wgl.INVALID_VALUE )                 : "[FU2]" // [073]
+            ,""+( wgl.INVALID_OPERATION )             : "[FU3]" // [073]
+            ,""+( wgl.INVALID_FRAMEBUFFER_OPERATION ) : "[FU4]" // [073]
+            ,""+( wgl.OUT_OF_MEMORY )                 : "[FU5]" // [073]
+            ,""+( wgl.CONTEXT_LOST_WEBGL )            : "[FU6]" // [073]
+            };;                                                 // [073]
+                                                                // [073]
+            var err_msg =( dic[ ""+err+"" ] );                  // [073]
+            LOG( "[ARTGIRL_ERR_CHK:err_msg]" , err_msg );       // [073]
+            ERR( "[ARTGIRL_ERR_CHK:err_msg]" + err_msg );       // [073][072]
         };;                                                     // [072]
                                                                 // [---]
     };;                                                         // [071]
