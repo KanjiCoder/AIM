@@ -389,7 +389,42 @@ if( yesnode ){ //:-------------------------------------------://
 
 };; //:------------------------------------------------------://
 //:============================:MASTER_DECLARATION_LIBS:[035]://
-//:__ARTGIRL__:SHADER_STRINGS:[069]:=========================://// [---]
+//:CONST_MACROS_BY_SYSTEM[074]:==============================://// [---]
+                                                    
+//: __ARTGIRL__ ://                                  //:[064]://
+
+    /** What Version Of WebGl Are We Using? **/
+
+        const c_artgirl_wgl_tag =("#version 300 es");           // [074]
+        const c_artgirl_wgl_ask =(         "webgl2");           // [074]
+
+    /** WebGL Surface Quad Macros ********* **/      //:[066]://
+                                                     //:[066]://
+        const c_artgirl_vbd_len =( 20 );             //:[066]://
+                                                     
+    /** *********************************** **/      //:[064]://
+    /** Different Rendering Pipelines [064] **/      //:[064]://
+    /** *********************************** **/      //:[064]://
+                                                     //:[064]://
+
+    const c_artgirl_ren_000 = "[DONT_USE:000]" ;     //:[068]://
+    const c_artgirl_ren_bad = ( 0 ); //:Select:ren_def  [068]://
+
+    const c_artgirl_ren_001 = ( 1 ); //:GradientQuad    [068]://
+    const c_artgirl_ren_002 = ( 2 ); //:FlashingScreen  [068]://
+    const c_artgirl_ren_003 = ( 3 ); //:Sectors_Colored [068]://
+    const c_artgirl_ren_004 = ( 4 ); //:Sectors_Numbered[068]://
+    const c_artgirl_ren_005 = ( 5 ); //:SolidColorTiles [068]://
+    const c_artgirl_ren_006 = ( 6 ); //:@HEXASET1STAMP@ [068]://
+    const c_artgirl_ren_007 = ( 7 ); //:@HEXASET1AUSET@ [068]://
+
+    const c_artgirl_ren_tot = ( 7 ); //:#RenderPipelines[068]://
+                                                                
+    const c_artgirl_ren_def = (      //:Default_Render  [068]://
+          c_artgirl_ren_001    );;   //:Pipeline_To_Use [068]://
+
+//:==============================:CONST_MACROS_BY_SYSTEM[074]://
+//:__ARTGIRL__:SHADER_STRINGS:[074]:=========================://// [---]
                                                                 // [069]
 const d_artgirl_ssv_bad =( "[BAD_SSV_DEX:ssv]" );               // [070][069]
 const d_artgirl_ssf_bad =( "[BAD_SSV_DEX:ssf]" );               // [070][069]
@@ -469,42 +504,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
                                                                 // [069]
-//:=========================:__ARTGIRL__:SHADER_STRINGS:[069]://// [---]
-//:CONST_MACROS_BY_SYSTEM[064]:==============================://// [---]
-                                                    
-//: __ARTGIRL__ ://                                  //:[064]://
-
-    /** What Version Of WebGl Are We Using? **/
-
-        const c_artgirl_wgl_tag =("#version 300 es");           // [073]
-        const c_artgirl_wgl_ask =(         "webgl2");           // [073]
-
-    /** WebGL Surface Quad Macros ********* **/      //:[066]://
-                                                     //:[066]://
-        const c_artgirl_vbd_len =( 20 );             //:[066]://
-                                                     
-    /** *********************************** **/      //:[064]://
-    /** Different Rendering Pipelines [064] **/      //:[064]://
-    /** *********************************** **/      //:[064]://
-                                                     //:[064]://
-
-    const c_artgirl_ren_000 = "[DONT_USE:000]" ;     //:[068]://
-    const c_artgirl_ren_bad = ( 0 ); //:Select:ren_def  [068]://
-
-    const c_artgirl_ren_001 = ( 1 ); //:GradientQuad    [068]://
-    const c_artgirl_ren_002 = ( 2 ); //:FlashingScreen  [068]://
-    const c_artgirl_ren_003 = ( 3 ); //:Sectors_Colored [068]://
-    const c_artgirl_ren_004 = ( 4 ); //:Sectors_Numbered[068]://
-    const c_artgirl_ren_005 = ( 5 ); //:SolidColorTiles [068]://
-    const c_artgirl_ren_006 = ( 6 ); //:@HEXASET1STAMP@ [068]://
-    const c_artgirl_ren_007 = ( 7 ); //:@HEXASET1AUSET@ [068]://
-
-    const c_artgirl_ren_tot = ( 7 ); //:#RenderPipelines[068]://
-                                                                
-    const c_artgirl_ren_def = (      //:Default_Render  [068]://
-          c_artgirl_ren_001    );;   //:Pipeline_To_Use [068]://
-
-//:==============================:CONST_MACROS_BY_SYSTEM[064]://
+//:=========================:__ARTGIRL__:SHADER_STRINGS:[074]://// [---]
 //:DATA_BY_SYSTEM:[063]:=====================================://// [---]
                                                                 // [063]
 if( /** __ARTGIRL__ **/ notnode ){                              // [063] 
@@ -2313,20 +2313,20 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                                                                 // [074]
         GOD is whoever has level editing priviledges.           // [074]
 
-    Let people extend my code : ( 2022_06_24 ) :
-
-        We should make it so that people can extend the game
-        simply by loading JSONP ( application/javascript ) 
-        into the game.
-
-        Or maybe allow people to... extend the code base by
-        including "ATOMIC_IVY_MMO" javasscript and then
-        using it as a library ?
-
-        application/javascript <<< Runnable JavaScript Response
-
-        Inspired by:
-        https://stackoverflow.com/questions/477816
+    Let people extend my code : ( 2022_06_24 ) :                // [???]
+                                                                // [???]
+        We should make it so that people can extend the game    // [???]
+        simply by loading JSONP ( application/javascript )      // [???]
+        into the game.                                          // [???]
+                                                                // [???]
+        Or maybe allow people to... extend the code base by     // [???]
+        including "ATOMIC_IVY_MMO" javasscript and then         // [???]
+        using it as a library ?                                 // [???]
+                                                                // [???]
+        application/javascript <<< Runnable JavaScript Response // [???]
+                                                                // [???]
+        Inspired by:                                            // [???]
+        https://stackoverflow.com/questions/477816              // [???]
 
 *** ****************************************** FEATURE_CREEP **/
 /** MISC_DELTA_NOTES *************************************** ***
