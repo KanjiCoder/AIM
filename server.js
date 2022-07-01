@@ -186,6 +186,10 @@
 
     //: CTRL_F_TAGS[ #illegal# ]                        [063]://
 
+    const idv =( "[FIX:vid]" );                                 // [071]
+    const idf =( "[FIX:fid]" );                                 // [071]
+    const idp =( "[FIX:pid]" );                                 // [071]
+
     const fss =( "[FIX:ssf]" );                                 // [071]
     const vss =( "[FIX:ssv]" );                                 // [071]
     const P_F =( "[FIX:MSG]( P_F == MSG )" );                   // [071]
