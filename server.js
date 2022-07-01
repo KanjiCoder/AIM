@@ -435,7 +435,7 @@ const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 
     precision highp float;                                      // [074]
                                                                 // [074]
-    layout ( location = 0 ) in vec4 inn_pos ;    //:@inn_pos@://// [074]
+    layout ( location = 0 ) in vec3 inn_pos ;    //:@inn_pos@://// [074]
     layout ( location = 1 ) in vec2 inn_tex ;    //:@inn_tex@://// [074]
                            out vec2 i_o_tex ;    //:@i_o_tex@://// [074]
                                                                 // [074]
