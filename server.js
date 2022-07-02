@@ -1228,8 +1228,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
 
         a_g.wgl.bindVertexArray( a_g.vao );                     // [074]
-        a_g.wgl.enableVertexAttribArray( 0 /**  att_loc  **/ );
-        a_g.wgl.enableVertexAttribArray( 1 /**  att_loc  **/ );
+ ///////a_g.wgl.enableVertexAttribArray( 0 /**  att_loc  **/ );     //:<<<<<<< GUESS
+ ///////a_g.wgl.enableVertexAttribArray( 1 /**  att_loc  **/ );     //:<<<<<<< GUESS
         a_g.wgl.drawArrays(                                     // [074]
                                                                 // [074]
             a_g.wgl.TRIANGLE_STRIP //: #TESTYLE# ://            // [074]
@@ -1514,14 +1514,17 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:------------------------:error_check:[078]://
             //:actions:[078]:----------------------------://
 
+                wgl.enableVertexAttribArray( loc_pos /**#S_POS#**/ ); 
+                wgl.enableVertexAttribArray( loc_tex /**#S_TEX#**/ );
+
                 a_g.vao = wgl.createVertexArray(         );
                           wgl.bindVertexArray(   a_g.vao );
 
                 wgl.vertexAttribPointer( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
                 wgl.vertexAttribPointer( loc_tex , 2 , typ,n_o,sib , oib_tex );
 
-                wgl.enableVertexAttribArray( loc_pos /**#S_POS#**/ ); 
-                wgl.enableVertexAttribArray( loc_tex /**#S_TEX#**/ );
+                         wgl.bindVertexArray( null );
+
             //:----------------------------:actions:[078]://
         }
         //:-----------------------------:VAO_IS_AI1:[078]://
