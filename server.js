@@ -1227,8 +1227,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
 
-        a_g.wgl.enableVertexAttribArray( 0 /**  att_loc  **/ );     //:<<<<<<< GUESS
-        a_g.wgl.enableVertexAttribArray( 1 /**  att_loc  **/ );     //:<<<<<<< GUESS
+        //: a_g.wgl.enableVertexAttribArray( 0 /**  att_loc  **/ );     //:<<<<<<< GUESS
+        //: a_g.wgl.enableVertexAttribArray( 1 /**  att_loc  **/ );     //:<<<<<<< GUESS
         a_g.wgl.bindVertexArray( a_g.vao );                     // [074]
 
         a_g.wgl.drawArrays(                                     // [074]
@@ -1488,7 +1488,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
                 let s_f =( Float32Array.BYTES_PER_ELEMENT );
                 let typ =( wgl.FLOAT );
-                let n_o =( 0 ); /** WTF is GLBoolean **/
+                let n_o =( false ); /** WTF is GLBoolean ? **/
                 let sib =( (3+2) * s_f );
 
                 var oib_pos = ( 0 * s_f );  
