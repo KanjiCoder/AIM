@@ -1512,11 +1512,11 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                     let loc_pos =( c_artgirl_loc_pos );
                     let loc_tex =( c_artgirl_loc_tex );
 
-                    // LET GAL
+                    let GAL = wgl.getAttribLocation ;
                     let chk_pos =(
-                        wgl.getAttribLocation( pid ,"inn_pos"));;
+                        GAL( pid ,"inn_pos"));;
                     let chk_tex =(
-                        wgl.getAttribLocation( pid ,"inn_tex"));;
+                        GAL( pid ,"inn_tex"));;
                     
                     if( chk_pos != loc_pos ){ERR("[c78:pos]");};
                     if( chk_tex != loc_tex ){ERR("[c78:tex]");};
