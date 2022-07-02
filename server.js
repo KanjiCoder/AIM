@@ -1332,6 +1332,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             );;                                                 // [077]
         }                                                       // [077]
         //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
+
         //:VAO_IS_AI1:[078]:-----------------------------://
         //:                                              ://
         //:  @s_f@ : Sizeof( float32 ) in bytes          ://
@@ -1378,8 +1379,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                     O_N( loc_pos /**#S_POS#**/ ); 
                     O_N( loc_tex /**#S_TEX#**/ );
                     
-                    A_P( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
-                    A_P( loc_tex , 2 , typ,n_o,sib , oib_tex );
+                    A_P( loc_pos , 3 , typ,0,sib , oib_pos ); 
+                    A_P( loc_tex , 2 , typ,0,sib , oib_tex );
 
                 wgl.bindVertexArray( null );  //:#SS_END#://
                 wgl.bindBuffer( a_b, null );  //:#SS_END#://
