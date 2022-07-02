@@ -99,7 +99,31 @@
     const yesnode =( "undefined" === typeof window );//:[042]://
     const notnode =( "undefined"  != typeof window );//:[042]://
 
+    const firefox =(                                            // [077]
+        ('netscape' in window )                                 // [077]
+        &&                                                      // [077]
+        / rv:/.test( navigator.userAgent )                      // [077]
+    );;                                                         // [077]
+
 //:====================================:ENVIRONMENT_DETECTION://
+//:SHUTARR:[077]:============================================://
+
+    const F_SHUTARR = function PRIVATE_F_SHUTARR(               // [077]
+                                                                // [077]
+        i_arr                                                   // [077]
+    ){                                                          // [077]
+        if( firefox ){                                          // [077]
+                                                                // [077]
+            /** Do nothing because idiots at firefox **/        // [077]
+            /** don't know how to correctly implement**/        // [077]
+            /** the god damned spec. ............... **/        // [077]
+        }else{                                                  // [077]
+                                                                // [077]
+            Object.seal( i_arr );                               // [077]
+        };;                                                     // [077]
+    };;                                                         // [077]
+
+//:============================================:SHUTARR:[077]://
 //:F32_ARRAY:[075]:==========================================://
 
     const F_ARR_F32 = function PRIVATE_F_ARR_F32(               // [075]
@@ -121,7 +145,7 @@
                 );;                                             // [075]
             };;                                                 // [075]
         };;                                                     // [075]
-        Object.seal( o_arr /** #FAS# **/ );                     // [075]
+        F_SHUTARR( o_arr /** #FAS# **/ );                       // [077][075]
         return( o_arr );                                        // [075]
     };;                                                         // [075]
                                                                 // [---]
@@ -166,7 +190,7 @@
                 o_arr[ dex ] = ( arg );                         // [076]
             };;                                                 // [076]
         };;                                                     // [076]
-        Object.seal( o_arr /** #FAS# **/ );                     // [076]
+        F_SHUTARR( o_arr /** #FAS# **/ );                       // [077][076]
         return( o_arr );                                        // [076]
     };;                                                         // [076]
                                                                 // [---]
