@@ -481,10 +481,10 @@ if( yesnode ){ //:-------------------------------------------://
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
 
-    /** Shader Attribute Locations. **/
-
-        const c_artgirl_loc_pos =( 0 /** #S_POS# **/ );
-        const c_artgirl_loc_tex =( 1 /** #S_TEX# **/ );
+    /** Shader Attribute Locations. **/                         // [077]
+                                                                // [077]
+        const c_artgirl_loc_pos =( 0 /** #S_POS# **/ );         // [077]
+        const c_artgirl_loc_tex =( 1 /** #S_TEX# **/ );         // [077]
 
     /** What Version Of WebGl Are We Using? **/
 
@@ -1257,50 +1257,51 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         let wgl =( a_g.wgl /** d_artgirl.wgl **/ );             // [071] 
                                                                 // [071]
         
-        //:VBO_IS_AI0:[077]:-----------------------------://
-        //:                                              ://
-        //: 1 : Allocate Untyped Buffer & Get It's Handle://
-        //: 2 : Specify Type Of The Buffer (arraybuffer) ://
-        //: 3 : Supply Data To The Buffer.               ://
-        //:- - - - - - - - - - - -- - - - - - - - - - - -://
-        {
-            /** #_OPENGL_VS_WEBGL_PART_002_# **/
-
-        //:[STEP_001]://
-
-            /** **************************************** **/
-            /** Allocate Untyped Buffer , Get Handle.    **/
-            /** **************************************** **/
-
-            a_g.vbo = wgl.createBuffer( );
-
-        //:[STEP_002]://
-
-            /** **************************************** **/
-            /** wgl.bindBuffer( ... , a_g.vbo )          **/
-            /** Tell WebGL That[ bufferData ]command     **/
-            /** is to affect[ a_g.vbo ]                  **/
-            /** **************************************** **/
-
-            wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );
-
-        //:[STEP_003]://
-
-            /** **************************************** **/
-            /** Let GPU know about your raw array.       **/
-            /**                                          **/
-            /** CPU COPY : a_g.vbd                       **/
-            /** GPU COPY : a_g.vbo                       **/
-            /** **************************************** **/
-
-            wgl.bufferData( 
-                wgl.ARRAY_BUFFER  //:[ target  ]://
-            ,   a_g.vbd           //:[ srcData ]://
-            ,   wgl.STATIC_DRAW   //:[ usage   ]://
-            ,   a_g.vbl           //:[ length  ]://
-            );;
-        }
-        //:-----------------------------:VBO_IS_AI0:[077]://    
+        //:VBO_IS_AI0:[077]:-----------------------------://    // [077]
+        //:                                              ://    // [077]
+        //: 1 : Allocate Untyped Buffer & Get It's Handle://    // [077]
+        //: 2 : Specify Type Of The Buffer (arraybuffer) ://    // [077]
+        //: 3 : Supply Data To The Buffer.               ://    // [077]
+        //:- - - - - - - - - - - -- - - - - - - - - - - -://    // [077]
+        {                                                       // [077]
+            /** #_OPENGL_VS_WEBGL_PART_002_# **/                // [077]
+                                                                // [077]
+        //:[STEP_001]://                                        // [077]
+                                                                // [077]
+            /** **************************************** **/    // [077]
+            /** Allocate Untyped Buffer , Get Handle.    **/    // [077]
+            /** **************************************** **/    // [077]
+                                                                // [077]
+            a_g.vbo = wgl.createBuffer( );                      // [077]
+                                                                // [077]
+        //:[STEP_002]://                                        // [077]
+                                                                // [077]
+            /** **************************************** **/    // [077]
+            /** wgl.bindBuffer( ... , a_g.vbo )          **/    // [077]
+            /** Tell WebGL That[ bufferData ]command     **/    // [077]
+            /** is to affect[ a_g.vbo ]                  **/    // [077]
+            /** **************************************** **/    // [077]
+                                                                // [077]
+            wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );       // [077]
+                                                                // [077]
+        //:[STEP_003]://                                        // [077]
+                                                                // [077]
+            /** **************************************** **/    // [077]
+            /** Let GPU know about your raw array.       **/    // [077]
+            /**                                          **/    // [077]
+            /** CPU COPY : a_g.vbd                       **/    // [077]
+            /** GPU COPY : a_g.vbo                       **/    // [077]
+            /** **************************************** **/    // [077]
+                                                                // [077]
+            wgl.bufferData(                                     // [077]
+                wgl.ARRAY_BUFFER  //:[ target  ]://             // [077]
+            ,   a_g.vbd           //:[ srcData ]://             // [077]
+            ,   wgl.STATIC_DRAW   //:[ usage   ]://             // [077]
+            ,   a_g.vbl           //:[ length  ]://             // [077]
+            );;                                                 // [077]
+        }                                                       // [077]
+        //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
+       
 
 
 
@@ -2703,5 +2704,23 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                                                                 // [---]
     [076] : Created Uint8 Array Constructor Functions.          // [076]
           : F_ARR_U08 & F_CAR_U08                               // [076]
+
+    [077] : Created "Vertex Buffer Object" ( VBO )         :    // [077]
+          : VBO is just a GPU copy of a raw array          :    // [077]
+          : that we give to WebGL. The name makes          :    // [077]
+          : no fucking sense.                              :    // [077]
+          :                                                :    // [077]
+          : I am going to think of VBO == AI0              :    // [077]
+          : AI0 == Array Indirect 0                        :    // [077]
+          : ( zero indirection because raw array without ) :    // [077]
+          : ( any interpretation yet )                     :    // [077]
+          :                                                :    // [077]
+          : ---------------------------------------------- :    // [077]
+          : ALSO... created constants for the array        :    // [077]
+          :         attribute slots.                       :    // [077]
+          : c_artgirl_loc_pos <-- slot location : pos      :    // [077]
+          : c_artgirl_loc_tex <-- slot location : tex      :    // [077]
+          :                                                :    // [077]
+          : ---------------------------------------------- :    // [077]
 
 *** *************************************** MISC_DELTA_NOTES **/
