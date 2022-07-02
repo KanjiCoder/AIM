@@ -1466,7 +1466,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             );;                                                 // [077]
 
 
-            wgl.bindBuffer( wgl.ARRAY_BUFFER, null ); //<----------------- Maybe ?
+            ///////// wgl.bindBuffer( wgl.ARRAY_BUFFER, null ); //<----------------- NO !
         }                                                       // [077]
         //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
 
@@ -1529,6 +1529,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                     wgl.vertexAttribPointer( loc_tex , 2 , typ,n_o,sib , oib_tex );
 
                 wgl.bindVertexArray( null );
+                wgl.bindBuffer( wgl.ARRAY_BUFFER, null );
 
             //:----------------------------:actions:[078]://
         }
