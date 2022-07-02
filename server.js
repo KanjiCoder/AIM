@@ -1229,7 +1229,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
         //: a_g.wgl.enableVertexAttribArray( 0 /**  att_loc  **/ );     //:<<<<<<< GUESS
         //: a_g.wgl.enableVertexAttribArray( 1 /**  att_loc  **/ );     //:<<<<<<< GUESS
-        a_g.wgl.bindBuffer(      a_g.vbo );
+        a_g.wgl.bindBuffer(  wgl.ARRAY_BUFFER  , a_g.vbo );
         a_g.wgl.bindVertexArray( a_g.vao );                     // [074]
 
         a_g.wgl.drawArrays(                                     // [074]
