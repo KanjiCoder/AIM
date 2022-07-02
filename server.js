@@ -1301,6 +1301,53 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             );;                                                 // [077]
         }                                                       // [077]
         //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
+        //:VAO_IS_AI1:[078]:-----------------------------://
+        //:                                              ://
+        //:  @s_f@ : Sizeof( float32 ) in bytes          ://
+        //:  @oib@ : Offset In Bytes (to 1st element)    ://
+        //:  @sib@ : Stride In Bytes                     ://
+        //:- - - - - - - - - - - -- - - - - - - - - - - -://
+        {
+            //: #_OPENGL_VS_WEBGL_PART_003_# ://
+
+            //:function_pointers:[078]:------------------://
+
+                let w = wgl; let CVA,BVA,A_P,O_N ;;;;;;;;;
+                CVA =( w.createVertexArray      ).bind(w);
+                BVA =( w.bindVertexArray        ).bind(w);
+                A_P =( w.vertexAttribPointer    ).bind(w);
+                O_N =( w.enableVertexAttribArray).bind(w);
+
+            //:------------------:function_pointers:[078]://
+            //:calculations:[078]:-----------------------://
+
+                let s_f =( 4 /** 4 Bytes Per Float **/ );
+                let typ =( wgl.FLOAT );
+                let sib =( (3+2) * s_f );
+
+                var oib_pos = ( 0 * s_f );  
+                var oib_tex = ( 3 * s_f );  
+
+                let loc_pos = c_artgirl_loc_pos ;
+                let loc_tex = c_artgirl_loc_tex ;
+                
+                if( 0 != loc_pos ){ ERR("[loc_pos]"); };
+                if( 1 != loc_tex ){ ERR("[loc_tex]"); };
+
+            //:-----------------------:calculations:[078]://
+            //:actions:[078]:----------------------------://
+
+                a_g.vao = wgl.CVA(         );
+                          wgl.BVA( a_g.vao );
+
+                A_P( loc_pos , 3 , typ,0,sib , oib_pos ); 
+                A_P( loc_tex , 2 , typ,0,sib , oib_tex );
+
+                O_N( loc_pos /**#S_POS#**/ ); 
+                O_N( loc_tex /**#S_TEX#**/ );
+            //:----------------------------:actions:[078]://
+        }
+        //:-----------------------------:VAO_IS_AI1:[078]://
        
 
 
@@ -2410,6 +2457,14 @@ require( "http" ).createServer( function( i_ask , i_giv ){
               , wgl.STATIC_DRAW                                 // [077]
               , 20                                              // [077]
               );;                                               // [077]
+
+    #_OPENGL_VS_WEBGL_PART_003_#
+
+        OGL : glGenVertexArrays( 1 , &( a3d_ledit64_vao )  );
+        WGL : vao = wgl.createVertexArray( );
+
+        OGL : OGL.glBindVertexArray(        a3d_ledit64_vao    );
+        WGL : wgl.bindVertexArray( vao )
 
 *** ********************************* #HASH_TAGGED_COMMENTS# **/
 /** !EXCLAIMED_COMMENTS! *********************************** ***
