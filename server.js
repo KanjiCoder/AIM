@@ -2532,102 +2532,106 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** ****************************************** FEATURE_CREEP **/
 /** MISC_DELTA_NOTES *************************************** ***
 
-    [044] : Will crash randomly if you supply correct           
-          : password. This is by design. We will fix it         
-          : in future deltas.                                   
-
-    [048] : This snapshot can be difficult to get started
-          : without crashing server because it requires us
-          : to re-build the schema/table for[ tab_hex ]
-          : before the api call[ DABITCH/C/TAB_HEX/red/40 ]
-          :                    [ DABITCH/C/TAB_HEX/blue/69 ]
-          : will work. We will make it easier by adding
-          : helper api to re-create table in [049]
-
-    [049] : Added helper : <yourappurl>/DABITCH/MAKTAB/TAB_HEX 
-
-    [052] : Noticed that: <app>/DABITCH/C/TAB_HEX/blue
-          : will crash the sever with a "missing column"
-          : error.
-          :
-          : If argument is undefined, we should use an
-          : "empty" name.
-          :
-          : null string ==> "[NIL][SQL_NIL]"
-          : null number ==> 0
-          :
-
-    [056] : Return[ err_msg ]object from JSON response always.  
-          : If error in SQL , rather than crash server,         
-          : we pack meaningful error message into[ err_msg ].   
-          : If no error , [ err_msg == "" ].                    
-          : ADDED_DATE[ 2022_06_25 ]   
-
-    [057] : KEYMAIN - Politically Correct Version Of            
-          : KEYMAST ( Key Master )                              
-
-    [059] : Added helpful message to help you configure         
-          : your heroku installation properly if you            
-          : cannot get access to your application name.         
-          : RUN:                                                
-           
-        heroku labs:enable runtime-dyno-metadata --app APPNAME
-
-    [060] : We didn't change any source code here.
-          : (except this comment message)
-          : I Ran :
-    heroku labs:enable runtime-dyno-metadata --app "aim-kanji"
-          :
-          : You might need to use :
-          :
-          git commit --allow-empty -m "[EMPTY_COMMIT]"
-          :
-          : To force server to restart after adding
-          : "runtime-dyno-metadata"
-            
-    [063] : Refactored project a bit to give ARTGIRL the        
-          : things she rightfully owns and has                  
-          : jurisdiction over.      
-
-    [064] : Waterfalled some design by adding render       [064]
-          : pipeline constants. This is literally our      [064]
-          : ______ nth draft.                              [064]
-          :                                                [064]
-          : 1st draft : Atomic Alice (newgrounds)          [064]
-          : 2nd draft : M128.JS  (still japanese)          [064]
-          : 3rd draft : A2_JC (for josh project   2020)    [064]
-          : 4rd draft : A2_JS (repo. Tile editor? 2021)    [064]
-          :           : Tilde("~") + 2 to get to           [064]
-          :           : interesting stuff.                 [064]
-          : 5rd draft : AAC2020                            [064]
-          : 6th draft : A3 's CPU world map render.        [064]
-          : 7th draft : A3 's LEDIT64 system.              [064]
-          : 8th draft : This source code. Atomic Ivy MMO   [064]
-
-    [065] : J++ , Previously known as                      [065]
-          : "JavaScript With Structs".                     [065]
-          :                                                [065]
-          : NinjaCoder Title: "JavaScript With Structs"    [065]
-          : KanjiCoder Title: "JavaScript Struct Keyword"  [065]
-
-    [066] : Added hardcoded vertex buffer data for         [066]
-          : the shader quad needed for creating            [066]
-          : 2D graphics pipeline in WebGL.                 [066]
-          :                                                [066]
-          : Also created nifty const-array                 [066]
-          : constructor function for immutable             [066]
-          : arrays of a fixed size to mimmick              [066]
-          : C99 behavior.                                  [066]
-
-    [067] : Added all ( I think ) member variables         [067]
-          : needed by[ ARTGIRL ]to setup our OpenGL        [067]
-          : rendering quad and display it on screen.       [067]
-          :                                                [067]
-          : Created an[ ARR ]function so that we dont      [067]
-          : have to type[ new Array( len ) ]and can        [067]
+    [044] : Will crash randomly if you supply correct           // [044]
+          : password. This is by design. We will fix it         // [044]
+          : in future deltas.                                   // [044]
+                                                                // [---]
+    [048] : This snapshot can be difficult to get started       // [048]
+          : without crashing server because it requires us      // [048]
+          : to re-build the schema/table for[ tab_hex ]         // [048]
+          : before the api call[ DABITCH/C/TAB_HEX/red/40 ]     // [048]
+          :                    [ DABITCH/C/TAB_HEX/blue/69 ]    // [048]
+          : will work. We will make it easier by adding         // [048]
+          : helper api to re-create table in [049]              // [048]
+                                                                // [---]
+    [049] : Added helper : <yourappurl>/DABITCH/MAKTAB/TAB_HEX  // [049]
+                                                                // [---]
+    [052] : Noticed that: <app>/DABITCH/C/TAB_HEX/blue          // [052]
+          : will crash the sever with a "missing column"        // [052]
+          : error.                                              // [052]
+          :                                                     // [052]
+          : If argument is undefined, we should use an          // [052]
+          : "empty" name.                                       // [052]
+          :                                                     // [052]
+          : null string ==> "[NIL][SQL_NIL]"                    // [052]
+          : null number ==> 0                                   // [052]
+          :                                                     // [052]
+                                                                // [---]
+    [056] : Return[ err_msg ]object from JSON response always.  // [056]
+          : If error in SQL , rather than crash server,         // [056]
+          : we pack meaningful error message into[ err_msg ].   // [056]
+          : If no error , [ err_msg == "" ].                    // [056]
+          : ADDED_DATE[ 2022_06_25 ]                            // [056]
+                                                                // [---]
+    [057] : KEYMAIN - Politically Correct Version Of            // [057]
+          : KEYMAST ( Key Master )                              // [057]
+                                                                // [---]
+    [059] : Added helpful message to help you configure         // [059]
+          : your heroku installation properly if you            // [059]
+          : cannot get access to your application name.         // [059]
+          : RUN:                                                // [059]
+                                                                // [059]
+        heroku labs:enable runtime-dyno-metadata --app APPNAME  // [059]
+                                                                // [---]
+    [060] : We didn't change any source code here.              // [060]
+          : (except this comment message)                       // [060]
+          : I Ran :                                             // [060]
+                                                                // [---]
+    heroku labs:enable runtime-dyno-metadata --app "aim-kanji"  // [063]
+          :                                                     // [063]
+          : You might need to use :                             // [063]
+          :                                                     // [063]
+          git commit --allow-empty -m "[EMPTY_COMMIT]"          // [063]
+          :                                                     // [063]
+          : To force server to restart after adding             // [063]
+          : "runtime-dyno-metadata"                             // [063]
+                                                                // [063]
+    [063] : Refactored project a bit to give ARTGIRL the        // [063]
+          : things she rightfully owns and has                  // [063]
+          : jurisdiction over.                                  // [063]
+                                                                // [---]
+    [064] : Waterfalled some design by adding render            // [064]
+          : pipeline constants. This is literally our           // [064]
+          : ______ nth draft.                                   // [064]
+          :                                                     // [064]
+          : 1st draft : Atomic Alice (newgrounds)               // [064]
+          : 2nd draft : M128.JS  (still japanese)               // [064]
+          : 3rd draft : A2_JC (for josh project   2020)         // [064]
+          : 4rd draft : A2_JS (repo. Tile editor? 2021)         // [064]
+          :           : Tilde("~") + 2 to get to                // [064]
+          :           : interesting stuff.                      // [064]
+          : 5rd draft : AAC2020                                 // [064]
+          : 6th draft : A3 's CPU world map render.             // [064]
+          : 7th draft : A3 's LEDIT64 system.                   // [064]
+          : 8th draft : This source code. Atomic Ivy MMO        // [064]
+                                                                // [---] 
+    [065] : J++ , Previously known as                           // [065]
+          : "JavaScript With Structs".                          // [065]
+          :                                                     // [065]
+          : NinjaCoder Title: "JavaScript With Structs"         // [065]
+          : KanjiCoder Title: "JavaScript Struct Keyword"       // [065]
+                                                                // [---] 
+    [066] : Added hardcoded vertex buffer data for              // [066]
+          : the shader quad needed for creating                 // [066]
+          : 2D graphics pipeline in WebGL.                      // [066]
+          :                                                     // [066]
+          : Also created nifty const-array                      // [066]
+          : constructor function for immutable                  // [066]
+          : arrays of a fixed size to mimmick                   // [066]
+          : C99 behavior.                                       // [066]
+                                                                // [---] 
+    [067] : Added all ( I think ) member variables              // [067]
+          : needed by[ ARTGIRL ]to setup our OpenGL             // [067]
+          : rendering quad and display it on screen.            // [067]
+          :                                                     // [067]
+          : Created an[ ARR ]function so that we dont           // [067]
+          : have to type[ new Array( len ) ]and can             // [067]
           : instead type[     F_ARR( len ) ].                   // [069][067]
-
+                                                                // [---]
     [073] : 1 : More robust error checking.                     // [073]
           : 2 : Updated deployment documentation.               // [073]
+                                                                // [---]
+    [076] : Created Uint8 Array Constructor Functions.          // [076]
+          : F_ARR_U08 & F_CAR_U08                               // [076]
 
 *** *************************************** MISC_DELTA_NOTES **/
