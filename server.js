@@ -1501,8 +1501,13 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:-----------------------:calculations:[078]://
             //:error_check:[078]:------------------------://
 
-                //: gl.getAttribLocation( p ,"ver_pos");
-                //: gl.getAttribLocation( p ,"ver_col");
+                let chk_pos =(
+                    wgl.getAttribLocation( pid ,"inn_pos"));;
+                let chk_tex =(
+                    wgl.getAttribLocation( pid ,"inn_tex"));;
+
+                if( chk_pos != loc_pos ){ERR("[c78:pos]");};
+                if( chk_tex != loc_tex ){ERR("[c78:tex]");};
 
             //:------------------------:error_check:[078]://
             //:actions:[078]:----------------------------://
