@@ -1285,6 +1285,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         let wgl =( a_g.wgl /** d_artgirl.wgl **/ );             // [071] 
                                                                 // [071]
         
+        let a_b = wgl.ARRAY_BUFFER ;
 
         //:VBO_IS_AI0:[077]:-----------------------------://    // [077]
         //:                                              ://    // [077]
@@ -1329,12 +1330,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             ,   0                 //:[ srcOffset]      #GFD_001#// [078]  
             ,   a_g.vbl           //:[ length   ]://            // [077]
             );;                                                 // [077]
-
-
-            ///////// wgl.bindBuffer( wgl.ARRAY_BUFFER, null ); //<----------------- NO !
         }                                                       // [077]
         //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
-
         //:VAO_IS_AI1:[078]:-----------------------------://
         //:                                              ://
         //:  @s_f@ : Sizeof( float32 ) in bytes          ://
@@ -1347,10 +1344,12 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:function_pointers:[078]:------------------://
 
                 let w = wgl; let CVA,BVA,A_P,O_N ;;;;;;;;;
+
                 CVA =( w.createVertexArray      ).bind(w);
                 BVA =( w.bindVertexArray        ).bind(w);
-                A_P =( w.vertexAttribPointer    ).bind(w);
+
                 O_N =( w.enableVertexAttribArray).bind(w);
+                A_P =( w.vertexAttribPointer    ).bind(w);
 
             //:------------------:function_pointers:[078]://
             //:calculations:[078]:-----------------------://
@@ -1373,14 +1372,14 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:-----------------------:calculations:[078]://
             //:actions:[078]:----------------------------://
 
-                a_g.vao = wgl.createVertexArray(  );
-                wgl.bindVertexArray(   a_g.vao );
+                     a_g.vao =  CVA(  );
+                BVA( a_g.vao );        
 
-                    wgl.enableVertexAttribArray( loc_pos /**#S_POS#**/ ); 
-                    wgl.enableVertexAttribArray( loc_tex /**#S_TEX#**/ );
+                    O_N( loc_pos /**#S_POS#**/ ); 
+                    O_N( loc_tex /**#S_TEX#**/ );
                     
-                    wgl.vertexAttribPointer( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
-                    wgl.vertexAttribPointer( loc_tex , 2 , typ,n_o,sib , oib_tex );
+                    A_P( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
+                    A_P( loc_tex , 2 , typ,n_o,sib , oib_tex );
 
                 wgl.bindVertexArray( null );
                 wgl.bindBuffer( wgl.ARRAY_BUFFER, null );
@@ -1513,16 +1512,13 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                     let loc_tex =( c_artgirl_loc_tex );
 
                     let GAL = wgl.getAttribLocation.bind(wgl);
-                    let chk_pos =(
-                        GAL( pid ,"inn_pos"));;
-                    let chk_tex =(
-                        GAL( pid ,"inn_tex"));;
+                    let chk_pos =( GAL( pid ,"inn_pos"));
+                    let chk_tex =( GAL( pid ,"inn_tex"));
                     
                     if( chk_pos != loc_pos ){ERR("[c78:pos]");};
                     if( chk_tex != loc_tex ){ERR("[c78:tex]");};
                 
                 //:------------------------:error_check:[078]://
-
                                                                 // [---]
             };;};;                                              // [071]
         //:-------------:create_all_shader_programs:[071]://    // [071]
@@ -2397,9 +2393,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //: TAG[ has-section | has-sect | hassect          ] ://    // [077]
     //:--------------------------------------------------://    // [069]
 
-    #GFD_001# : GOD_FUCKING_DAMINT ( number 1 of #TBD# )
-    #TBD#     : To Be Determined
-
+    #VBO_IS_AI0# : I am full of shit see[ GLSNAPSHOT ]          // [078]
+    #VAO_IS_AI1# : I am full of shit see[ GLSNAPSHOT ]          // [078]
+                                                                // [078]
+    #GFD_001# : GOD_FUCKING_DAMINT ( number 1 of #TBD# )        // [078]
+    #TBD#     : To Be Determined                                // [078]
+                                                                // [078]
     #GLSNAPSHOT# : A VAO is basically a "snapshot" of           // [078]
                  : configured VBO state. My idea of             // [078]
                  : analogy of VI0 & VI1 is totally              // [078]
