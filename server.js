@@ -1333,63 +1333,60 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         }                                                       // [077]
         //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
 
-        //:VAO_IS_AI1:[078]:-----------------------------://
-        //:                                              ://
-        //:  @s_f@ : Sizeof( float32 ) in bytes          ://
-        //:  @oib@ : Offset In Bytes (to 1st element)    ://
-        //:  @sib@ : Stride In Bytes                     ://
-        //:- - - - - - - - - - - -- - - - - - - - - - - -://
-        {
-            //: #_OPENGL_VS_WEBGL_PART_003_# ://
-
-            //:function_pointers:[078]:------------------://
-
-                let w = wgl; let CVA,BVA,A_P,O_N ;;;;;;;;;
-
-                CVA =( w.createVertexArray      ).bind(w);
-                BVA =( w.bindVertexArray        ).bind(w);
-
-                O_N =( w.enableVertexAttribArray).bind(w);
-                A_P =( w.vertexAttribPointer    ).bind(w);
-
-            //:------------------:function_pointers:[078]://
-            //:calculations:[078]:-----------------------://
-
-                let s_f =( Float32Array.BYTES_PER_ELEMENT );
-                let typ =( wgl.FLOAT );
-                let n_o =( false ); /** WTF is GLBoolean ? **/
-                let sib =( (3+2) * s_f );
-
-                var oib_pos = ( 0 * s_f );  
-                var oib_tex = ( 3 * s_f );  
-
-                let loc_pos = c_artgirl_loc_pos ;
-                let loc_tex = c_artgirl_loc_tex ;
-                
-                if( 0 != loc_pos ){ ERR("[loc_pos]"); };
-                if( 1 != loc_tex ){ ERR("[loc_tex]"); };
-                if( 4 !=     s_f ){ ERR("[_4_:s_f]"); };
-
-            //:-----------------------:calculations:[078]://
-            //:actions:[078]:----------------------------://
-
-                     a_g.vao =  CVA(  );      //:#SS_BEG#://
-                BVA( a_g.vao );               //:#SS_BEG#://
-
-                    O_N( loc_pos /**#S_POS#**/ ); 
-                    O_N( loc_tex /**#S_TEX#**/ );
-                    
-                    A_P( loc_pos , 3 , typ,0,sib , oib_pos ); 
-                    A_P( loc_tex , 2 , typ,0,sib , oib_tex );
-
-                wgl.bindVertexArray( null );  //:#SS_END#://
-                wgl.bindBuffer( a_b, null );  //:#SS_END#://
-
-            //:----------------------------:actions:[078]://
-        }
-        //:-----------------------------:VAO_IS_AI1:[078]://
-
-
+        //:VAO_IS_AI1:[078]:-----------------------------://    // [078]
+        //:                                              ://    // [078]
+        //:  @s_f@ : Sizeof( float32 ) in bytes          ://    // [078]
+        //:  @oib@ : Offset In Bytes (to 1st element)    ://    // [078]
+        //:  @sib@ : Stride In Bytes                     ://    // [078]
+        //:- - - - - - - - - - - -- - - - - - - - - - - -://    // [078]
+        {                                                       // [078]
+            //: #_OPENGL_VS_WEBGL_PART_003_# ://                // [078]
+                                                                // [078]
+            //:function_pointers:[078]:------------------://    // [078]
+                                                                // [078]
+                let w = wgl; let CVA,BVA,A_P,O_N ;;;;;;;;;      // [078]
+                                                                // [078]
+                CVA =( w.createVertexArray      ).bind(w);      // [078]
+                BVA =( w.bindVertexArray        ).bind(w);      // [078]
+                                                                // [078]
+                O_N =( w.enableVertexAttribArray).bind(w);      // [078]
+                A_P =( w.vertexAttribPointer    ).bind(w);      // [078]
+                                                                // [078]
+            //:------------------:function_pointers:[078]://    // [078]
+            //:calculations:[078]:-----------------------://    // [078]
+                                                                // [078]
+                let s_f =( Float32Array.BYTES_PER_ELEMENT );    // [078]
+                let t =( wgl.FLOAT   ); //: t : type     ://    // [078]
+                let s =( (3+2) * s_f ); //: s : stride   ://    // [078]
+                                                                // [078]
+                var oib_pos = ( 0 * s_f );                      // [078]
+                var oib_tex = ( 3 * s_f );                      // [078]
+                                                                // [078]
+                let loc_pos = c_artgirl_loc_pos ;               // [078]
+                let loc_tex = c_artgirl_loc_tex ;               // [078]
+                                                                // [078]
+                if( 0 != loc_pos ){ ERR("[loc_pos]"); };        // [078]
+                if( 1 != loc_tex ){ ERR("[loc_tex]"); };        // [078]
+                if( 4 !=     s_f ){ ERR("[_4_:s_f]"); };        // [078]
+                                                                // [078]
+            //:-----------------------:calculations:[078]://    // [078]
+            //:actions:[078]:----------------------------://    // [078]
+                                                                // [078]
+                     a_g.vao =  CVA(  );      //:#SS_BEG#://    // [078]
+                BVA( a_g.vao );               //:#SS_BEG#://    // [078]
+                                                                // [078]
+                    O_N( loc_pos /**#S_POS#**/ );               // [078]
+                    O_N( loc_tex /**#S_TEX#**/ );               // [078]
+                                                                // [078]
+                    A_P( loc_pos , 3 , t,0,s , oib_pos );       // [078]
+                    A_P( loc_tex , 2 , t,0,s , oib_tex );       // [078]
+                                                                // [078]
+                wgl.bindVertexArray( null );  //:#SS_END#://    // [078]
+                wgl.bindBuffer( a_b, null );  //:#SS_END#://    // [078]
+                                                                // [078]
+            //:----------------------------:actions:[078]://    // [078]
+        }                                                       // [078]
+        //:-----------------------------:VAO_IS_AI1:[078]://    // [078]
 
         //:vardec:[071]:---------------------------------://    // [071]
                       //: ------------------------------ ://    // [071]
