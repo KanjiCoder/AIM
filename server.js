@@ -1228,9 +1228,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
 
-
-    //:    a_g.wgl.bindBuffer(  wgl.ARRAY_BUFFER  , a_g.vbo );
-    /////    a_g.wgl.bindVertexArray( a_g.vao );                     // [074]
+        a_g.wgl.bindVertexArray( a_g.vao );   /**#GLSNAPSHOT#**/// [078][074]
 
         a_g.wgl.drawArrays(                                     // [074]
                                                                 // [074]
@@ -2395,8 +2393,22 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     #GFD_001# : GOD_FUCKING_DAMINT ( number 1 of #TBD# )
     #TBD#     : To Be Determined
 
-    #S_POS# : Slot Index Of POSITION Attribute data.
-    #S_TEX# : Slot Index Of TEXTURE  Attribute data.
+    #GLSNAPSHOT# : A VAO is basically a "snapshot" of           // [078]
+                 : configured VBO state. My idea of             // [078]
+                 : analogy of VI0 & VI1 is totally              // [078]
+                 : wrong. I am full of shit. Go                 // [078]
+                 : watch this guy if you want to be             // [078]
+                 : taught WebGL2 by someone who knows           // [078]
+                 : what they are doing. I am....                // [078]
+                                                                // [078]
+                 : a jack of all trades is a master of none,    // [078]
+                 : but oftentimes better than a master of one   // [078]
+                 :                                              // [078]
+                 : www.youtube.com/watch?v=0nZn5YPNf5k          // [078]
+                 : ( Good WebGL2 Tutorial )                     // [078]
+                                                                // [078]
+    #S_POS# : Slot Index Of POSITION Attribute data.            // [078]
+    #S_TEX# : Slot Index Of TEXTURE  Attribute data.            // [078]
 
     #KFNFR# : Keep Function Name For Readability                // [075]
                                                                 // [075]
