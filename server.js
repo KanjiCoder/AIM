@@ -133,13 +133,13 @@
 
         if( i_len <= 0 ){ ERR("[#YSMITF#]" ); };
 
-        var            o_arr = "[nil][f_car_f32]" ;
-                       o_arr =(
+        var                o_arr = "[nil][f_car_f32]" ;
+                           o_arr =(
 
             F_ARR_F32.apply( null , arguments )
         );;
-        Object.freeze( o_arr );
-        return(        o_arr );
+        //- Object.freeze( o_arr ); #KFNFR# -//
+        return(            o_arr );
     };;
 
 //:==========================================:F32_ARRAY:[075]://
@@ -2192,6 +2192,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //: TAG[ hashsect | hash-section | hashnotes       ] ://    // [075]
     //:--------------------------------------------------://    // [069]
 
+    #KFNFR# : Keep Function Name For Readability                // [075]
+ 
     #_DRY_INSTEAD_OF_KISS_WARNING_BECAUSE_LAZY_# :              // [075]
                                                                 // [075]
         I decided on D_R_Y instead of K_I_S_S because           // [075]
