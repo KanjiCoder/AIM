@@ -1323,6 +1323,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
                 let s_f =( 4 /** 4 Bytes Per Float **/ );
                 let typ =( wgl.FLOAT );
+                let n_o =( wgl.FALSE );
                 let sib =( (3+2) * s_f );
 
                 var oib_pos = ( 0 * s_f );  
@@ -1340,8 +1341,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 a_g.vao = CVA(         );
                           BVA( a_g.vao );
 
-                A_P( loc_pos , 3 , typ,0,sib , oib_pos ); 
-                A_P( loc_tex , 2 , typ,0,sib , oib_tex );
+                A_P( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
+                A_P( loc_tex , 2 , typ,n_o,sib , oib_tex );
 
                 O_N( loc_pos /**#S_POS#**/ ); 
                 O_N( loc_tex /**#S_TEX#**/ );
@@ -2730,6 +2731,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : 6th draft : A3 's CPU world map render.             // [064]
           : 7th draft : A3 's LEDIT64 system.                   // [064]
           : 8th draft : This source code. Atomic Ivy MMO        // [064]
+          :                                                     // [077]
+          : #_LIST_OF_TRIES_2022_07_02_#                        // [077]
                                                                 // [---] 
     [065] : J++ , Previously known as                           // [065]
           : "JavaScript With Structs".                          // [065]
