@@ -1224,7 +1224,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         if( _R_ > 255.0 ){ ERR("[_R_]"); };                     // [063] 
             _R_ = ( _R_ / 255.0 );                              // [063] 
                                                                 // [063] 
-        a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
+       // a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
 
         //: a_g.wgl.enableVertexAttribArray( 0 /**  att_loc  **/ );     //:<<<<<<< GUESS
