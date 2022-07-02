@@ -1507,14 +1507,14 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:------------------------:error_check:[078]://
             //:actions:[078]:----------------------------://
 
-                a_g.vao = CVA(         );
-                          BVA( a_g.vao );
+                a_g.vao = wgl.createVertexArray(         );
+                          wgl.bindVertexArray(   a_g.vao );
 
-                A_P( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
-                A_P( loc_tex , 2 , typ,n_o,sib , oib_tex );
+                wgl.vertexAttribPointer( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
+                wgl.vertexAttribPointer( loc_tex , 2 , typ,n_o,sib , oib_tex );
 
-                O_N( loc_pos /**#S_POS#**/ ); 
-                O_N( loc_tex /**#S_TEX#**/ );
+                wgl.enableVertexAttribArray( loc_pos /**#S_POS#**/ ); 
+                wgl.enableVertexAttribArray( loc_tex /**#S_TEX#**/ );
             //:----------------------------:actions:[078]://
         }
         //:-----------------------------:VAO_IS_AI1:[078]://
