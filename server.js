@@ -1371,17 +1371,6 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 if( 4 !=     s_f ){ ERR("[_4_:s_f]"); };
 
             //:-----------------------:calculations:[078]://
-            //:error_check:[078]:------------------------://
-
-            //    let chk_pos =(
-            //        wgl.getAttribLocation( pid ,"inn_pos"));;
-            //    let chk_tex =(
-            //        wgl.getAttribLocation( pid ,"inn_tex"));;
-            //
-            //    if( chk_pos != loc_pos ){ERR("[c78:pos]");};
-            //    if( chk_tex != loc_tex ){ERR("[c78:tex]");};
-
-            //:------------------------:error_check:[078]://
             //:actions:[078]:----------------------------://
 
                 a_g.vao = wgl.createVertexArray(  );
@@ -1517,6 +1506,20 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 wgl.attachShader( pid ,             fid  );     // [072]
                 wgl.linkProgram(  pid );  ERR_CHK("[L_P]");     // [072]
                 wgl.useProgram(   pid );  ERR_CHK("[U_P]");     // [072]
+
+                //:error_check:[078]:------------------------://
+                
+                    // LET GAL
+                    let chk_pos =(
+                        wgl.getAttribLocation( pid ,"inn_pos"));;
+                    let chk_tex =(
+                        wgl.getAttribLocation( pid ,"inn_tex"));;
+                    
+                    if( chk_pos != loc_pos ){ERR("[c78:pos]");};
+                    if( chk_tex != loc_tex ){ERR("[c78:tex]");};
+                
+                //:------------------------:error_check:[078]://
+
                                                                 // [---]
             };;};;                                              // [071]
         //:-------------:create_all_shader_programs:[071]://    // [071]
