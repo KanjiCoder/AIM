@@ -1337,8 +1337,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:-----------------------:calculations:[078]://
             //:actions:[078]:----------------------------://
 
-                a_g.vao = wgl.CVA(         );
-                          wgl.BVA( a_g.vao );
+                a_g.vao = CVA(         );
+                          BVA( a_g.vao );
 
                 A_P( loc_pos , 3 , typ,0,sib , oib_pos ); 
                 A_P( loc_tex , 2 , typ,0,sib , oib_tex );
