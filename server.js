@@ -1488,7 +1488,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
                 let s_f =( Float32Array.BYTES_PER_ELEMENT );
                 let typ =( wgl.FLOAT );
-                let n_o =( new GLboolean( false ) );
+                let n_o =( 0 ); /** WTF is GLBoolean **/
                 let sib =( (3+2) * s_f );
 
                 var oib_pos = ( 0 * s_f );  
