@@ -1463,6 +1463,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             ,   wgl.STATIC_DRAW   //:[ usage   ]://             // [077]
             ,   a_g.vbl           //:[ length  ]://             // [077]
             );;                                                 // [077]
+
+
+            wgl.bindBuffer( wgl.ARRAY_BUFFER, null ); //<----------------- Maybe ?
         }                                                       // [077]
         //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
 
