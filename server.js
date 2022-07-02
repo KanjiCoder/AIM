@@ -100,6 +100,56 @@
     const notnode =( "undefined"  != typeof window );//:[042]://
 
 //:====================================:ENVIRONMENT_DETECTION://
+//:F32_ARRAY:[075]:==========================================://
+
+    const F_ARR_F32 = function PRIVATE_F_ARR_F32(
+
+        i_len /** Length Of Array **/
+    ){
+        var o_arr = "[nil][f_arr_f32:o_arr]" ;
+        var   len = arguments.length ;
+        var   dex = 0 ;
+
+        if( len !=( i_len + 1 ) ){
+            ERR( "[F_ARR_F32:#IAI#]" );
+        }else{
+            o_arr = new Float32Array( i_len );
+            for( dex = 0 ; dex <=( i_len-1 ) ; dex ++ ){
+
+                o_arr[ dex ] = (
+                    (0.0) + ( arguments[ dex + 1 ] )
+                );;
+            };;
+        };;
+        Object.seal( o_arr /** #FAS# **/ );
+        return( o_arr );
+    };;
+
+    const F_CAR_F32 = function PRIVATE_F_CAR_F32(
+
+        i_len 
+    ){
+        //: #_DRY_INSTEAD_OF_KISS_WARNING_BECAUSE_LAZY_# ://
+
+        if( i_len <= 0 ){ ERR("[#YSMITF#]" );
+
+        var            o_arr = "[nil][f_car_f32]" ;
+                       o_arr =(
+
+            F_ARR_F32.apply( null , arguments )
+        );;
+        Object.freeze( o_arr );
+        return(        o_arr );
+    };;
+
+//:==========================================:F32_ARRAY:[075]://
+//:U08_ARRAY:[075]:==========================================://
+
+    //:----------------------------------------------://
+    //: Typed Unit32 Array : See Video #076 ( next ) ://
+    //:----------------------------------------------://
+
+//:==========================================:U08_ARRAY:[075]://
 //:STRUCT:[065]:=============================================://
 
     const STRUCT = function PRIVATE_STRUCT( i_obj ){ //:[065]://
@@ -613,16 +663,15 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             ,      d_artgirl_ssf_007                            // [070][069]
             )      /////////////////                            // [069]
                                                                 // [---]
-    ,   vbl :      c_artgirl_vbd_len //:@vbd@://                // [066] 
-    ,   vbd :F_CAR(c_artgirl_vbd_len //:@vbd@://                // [066] 
+    ,   vbl :          c_artgirl_vbd_len //:@vbd@://            // [066] 
+    ,   vbd :F_CAR_F32(c_artgirl_vbd_len //:@vbd@://            // [066] 
                                                                 // [066] 
-        //:@vcx@ @vcy@ @vcz@        @tcx@ , @tcy@               // [066] 
-        ,   neg , neg , _0_    ,    (0.0) , (1.0)               // [066] 
-        ,   pos , neg , _0_    ,    (1.0) , (1.0)               // [066] 
-        ,   neg , pos , _0_    ,    (0.0) , (0.0)               // [066] 
-        ,   pos , pos , _0_    ,    (1.0) , (0.0)               // [066] 
-        )  //:#ITS_A_ZEE#://                                    // [074] 
-
+            //:@vcx@ @vcy@ @vcz@        @tcx@ , @tcy@           // [075][066] 
+            ,   neg , neg , _0_    ,    (0.0) , (1.0)           // [075][066] 
+            ,   pos , neg , _0_    ,    (1.0) , (1.0)           // [075][066] 
+            ,   neg , pos , _0_    ,    (0.0) , (0.0)           // [075][066] 
+            ,   pos , pos , _0_    ,    (1.0) , (0.0)           // [075][066] 
+            )  //:#ITS_A_ZEE#://                                // [075][074] 
     });;                                             //:[063]://
                                                      //:[065]://
     console.log( d_artgirl );                        //:[065]://
@@ -2140,8 +2189,20 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //: TAG[ hashsec | poundsec | octosec | hashtagsec ] ://    // [069]
     //: TAG[ hashtag | hashtagsec | hash-tag-sec | hts ] ://    // [069]
     //: TAG[ hashnotes | hash-notes | hash notes       ] ://    // [074]
+    //: TAG[ hashsect | hash-section | hashnotes       ] ://    // [075]
     //:--------------------------------------------------://    // [069]
 
+    #_DRY_INSTEAD_OF_KISS_WARNING_BECAUSE_LAZY_# :              // [075]
+                                                                // [075]
+        I decided on D_R_Y instead of K_I_S_S because           // [075]
+        I am lazy and don't want to type more. Also             // [075]
+        wanted to have fun and mess around with some            // [075]
+        javascript. Let's see if it bytes me later.             // [075]
+        -KanjiCoder                                             // [075]
+
+    #YSMITF# : You Shot Marvin In The Face                      // [075]
+
+    #FAS# : Fixed_Array_Size ( Object.seal( myArray ) );        // [075]
 
     #TESTYLE# : Tesselation Style , how to  +--------------+    // [074]
               : connect verts  to create polygons.         |    // [074]
