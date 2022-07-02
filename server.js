@@ -131,7 +131,7 @@
     ){
         //: #_DRY_INSTEAD_OF_KISS_WARNING_BECAUSE_LAZY_# ://
 
-        if( i_len <= 0 ){ ERR("[#YSMITF#]" );
+        if( i_len <= 0 ){ ERR("[#YSMITF#]" ); };
 
         var            o_arr = "[nil][f_car_f32]" ;
                        o_arr =(
