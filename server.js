@@ -1224,7 +1224,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         if( _R_ > 255.0 ){ ERR("[_R_]"); };                     // [063] 
             _R_ = ( _R_ / 255.0 );                              // [063] 
                                                                 // [063] 
-       // a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
+        a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
 
         //: a_g.wgl.enableVertexAttribArray( 0 /**  att_loc  **/ );     //:<<<<<<< GUESS
@@ -1515,16 +1515,16 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:------------------------:error_check:[078]://
             //:actions:[078]:----------------------------://
 
-                wgl.enableVertexAttribArray( loc_pos /**#S_POS#**/ ); 
-                wgl.enableVertexAttribArray( loc_tex /**#S_TEX#**/ );
+                a_g.vao = wgl.createVertexArray(  );
+                wgl.bindVertexArray(   a_g.vao );
 
-                a_g.vao = wgl.createVertexArray(         );
-                          wgl.bindVertexArray(   a_g.vao );
+                    wgl.enableVertexAttribArray( loc_pos /**#S_POS#**/ ); 
+                    wgl.enableVertexAttribArray( loc_tex /**#S_TEX#**/ );
+                    
+                    wgl.vertexAttribPointer( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
+                    wgl.vertexAttribPointer( loc_tex , 2 , typ,n_o,sib , oib_tex );
 
-                wgl.vertexAttribPointer( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
-                wgl.vertexAttribPointer( loc_tex , 2 , typ,n_o,sib , oib_tex );
-
-                         wgl.bindVertexArray( null );
+                wgl.bindVertexArray( null );
 
             //:----------------------------:actions:[078]://
         }
