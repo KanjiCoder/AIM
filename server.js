@@ -1227,7 +1227,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
 
-        a_g.wgl.bindVertexArray( a_g.vao );                     // [074]
+        //: a_g.wgl.bindVertexArray( a_g.vao );                     // [074]
         a_g.wgl.drawArrays(                                     // [074]
                                                                 // [074]
             a_g.wgl.TRIANGLE_STRIP //: #TESTYLE# ://            // [074]
@@ -2827,5 +2827,16 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : c_artgirl_loc_tex <-- slot location : tex      :    // [077]
           :                                                :    // [077]
           : ---------------------------------------------- :    // [077]
+
+    [078] : Vertex fetch requires 4, but attribs only supply 0
+          : ------------------------------------------------
+          : Fuckyou WebGl. How many times have I fucking
+          : done this in my life? And I still can't get
+          : it right the first time? This part is  
+          : easier in C99 because in WEBGL there are
+          : multiple overrides for functions.
+          :
+          : I say this because I don't get stuck like 
+          : this when I am doing this in C99.
 
 *** *************************************** MISC_DELTA_NOTES **/
