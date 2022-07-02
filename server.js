@@ -1509,6 +1509,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
                 //:error_check:[078]:------------------------://
                 
+                    let loc_pos =( c_artgirl_loc_pos );
+                    let loc_tex =( c_artgirl_loc_tex );
+
                     // LET GAL
                     let chk_pos =(
                         wgl.getAttribLocation( pid ,"inn_pos"));;
