@@ -1460,10 +1460,11 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             /** **************************************** **/    // [077]
                                                                 // [077]
             wgl.bufferData(                                     // [077]
-                wgl.ARRAY_BUFFER  //:[ target  ]://             // [077]
-            ,  new Float32Array(  a_g.vbd  )         //:[ srcData ]://             // [077]
-            ,   wgl.STATIC_DRAW   //:[ usage   ]://             // [077]
-            ,   a_g.vbl           //:[ length  ]://             // [077]
+                wgl.ARRAY_BUFFER  //:[ target   ]://            // [077]
+            ,   a_g.vbd           //:[ srcData  ]://            // [077]
+            ,   wgl.STATIC_DRAW   //:[ usage    ]://            // [077]
+            ,   0                 //:[ srcOffset]      #GFD_001#// [078]  
+            ,   a_g.vbl           //:[ length   ]://            // [077]
             );;                                                 // [077]
 
 
@@ -2391,6 +2392,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //: TAG[ hashsect | hash-section | hashnotes       ] ://    // [075]
     //: TAG[ has-section | has-sect | hassect          ] ://    // [077]
     //:--------------------------------------------------://    // [069]
+
+    #GFD_001# : GOD_FUCKING_DAMINT ( number 1 of #TBD# )
+    #TBD#     : To Be Determined
 
     #S_POS# : Slot Index Of POSITION Attribute data.
     #S_TEX# : Slot Index Of TEXTURE  Attribute data.
