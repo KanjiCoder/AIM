@@ -99,7 +99,9 @@
     const yesnode =( "undefined" === typeof window );//:[042]://
     const notnode =( "undefined"  != typeof window );//:[042]://
 
-    const firefox =(                                            // [077]
+    const firefox =(                                            // [077]    
+        notnode                                                 // [077]
+        &&                                                      // [077]
         ('netscape' in window )                                 // [077]
         &&                                                      // [077]
         / rv:/.test( navigator.userAgent )                      // [077]
