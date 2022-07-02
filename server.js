@@ -481,6 +481,11 @@ if( yesnode ){ //:-------------------------------------------://
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
 
+    /** Shader Attribute Locations. **/
+
+        const c_artgirl_loc_pos =( 0 /** #S_POS# **/ );
+        const c_artgirl_loc_tex =( 1 /** #S_TEX# **/ );
+
     /** What Version Of WebGl Are We Using? **/
 
         const c_artgirl_wgl_tag =("#version 300 es");           // [074]
@@ -523,8 +528,8 @@ const d_artgirl_ssv_all =( //: ShaderSourceVert #all# ://       // [070][069]
 
     precision highp float;                                      // [074]
                                                                 // [074]
-    layout ( location = 0 ) in vec3 inn_pos ;    //:@inn_pos@://// [074]
-    layout ( location = 1 ) in vec2 inn_tex ;    //:@inn_tex@://// [074]
+    layout (location = ${c_artgirl_loc_pos}) in vec3 inn_pos ;  // [077][074]
+    layout (location = ${c_artgirl_loc_tex}) in vec2 inn_tex ;  // [077][074]
                            out vec2 i_o_tex ;    //:@i_o_tex@://// [074]
                                                                 // [074]
     void main(){                                                // [074]
@@ -1251,6 +1256,54 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                                                                          
         let wgl =( a_g.wgl /** d_artgirl.wgl **/ );             // [071] 
                                                                 // [071]
+        
+        //:VBO_IS_AI0:[077]:-----------------------------://
+        //:                                              ://
+        //: 1 : Allocate Untyped Buffer & Get It's Handle://
+        //: 2 : Specify Type Of The Buffer (arraybuffer) ://
+        //: 3 : Supply Data To The Buffer.               ://
+        //:- - - - - - - - - - - -- - - - - - - - - - - -://
+        {
+            /** #_OPENGL_VS_WEBGL_PART_002_# **/
+
+        //:[STEP_001]://
+
+            /** **************************************** **/
+            /** Allocate Untyped Buffer , Get Handle.    **/
+            /** **************************************** **/
+
+            a_g.vbo = wgl.createBuffer( );
+
+        //:[STEP_002]://
+
+            /** **************************************** **/
+            /** wgl.bindBuffer( ... , a_g.vbo )          **/
+            /** Tell WebGL That[ bufferData ]command     **/
+            /** is to affect[ a_g.vbo ]                  **/
+            /** **************************************** **/
+
+            wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );
+
+        //:[STEP_003]://
+
+            /** **************************************** **/
+            /** Let GPU know about your raw array.       **/
+            /**                                          **/
+            /** CPU COPY : a_g.vbd                       **/
+            /** GPU COPY : a_g.vbo                       **/
+            /** **************************************** **/
+
+            wgl.bufferData( 
+                wgl.ARRAY_BUFFER  //:[ target  ]://
+            ,   a_g.vbd           //:[ srcData ]://
+            ,   wgl.STATIC_DRAW   //:[ usage   ]://
+            ,   a_g.vbl           //:[ length  ]://
+            );;
+        }
+        //:-----------------------------:VBO_IS_AI0:[077]://    
+
+
+
         //:vardec:[071]:---------------------------------://    // [071]
                       //: ------------------------------ ://    // [071]
             var i_0 ; //: RenderPipeline : INDEX ( MIN ) ://    // [071]
@@ -2228,7 +2281,11 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //: TAG[ hashtag | hashtagsec | hash-tag-sec | hts ] ://    // [069]
     //: TAG[ hashnotes | hash-notes | hash notes       ] ://    // [074]
     //: TAG[ hashsect | hash-section | hashnotes       ] ://    // [075]
+    //: TAG[ has-section | has-sect | hassect          ] ://    // [077]
     //:--------------------------------------------------://    // [069]
+
+    #S_POS# : Slot Index Of POSITION Attribute data.
+    #S_TEX# : Slot Index Of TEXTURE  Attribute data.
 
     #KFNFR# : Keep Function Name For Readability                // [075]
                                                                 // [075]
@@ -2333,12 +2390,25 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                                                                 // [071]
         ----------------------------------------------------    // [071]
 
-
-
-
-
-
-
+    #_OPENGL_VS_WEBGL_PART_002_#                                // [077]
+                                                                // [077]
+        0x8892 : GL_ARRAY_BUFFER                                // [077]
+        0x88E4 : GL_STATIC_DRAW                                 // [077]
+                                                                // [077]
+        OGL : glGenBuffers( 1      , &( a3d_ledit64_vbo )  );   // [077]
+        WGL : a_g.vbo = createBuffer( );                        // [077]
+                                                                // [077]
+        OGL : glBindBuffer( 0x8892 ,  a3d_ledit64_vbo    );     // [077]
+        WGL : wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );     // [077]
+                                                                // [077]
+        OGL : siz = VBL * sizeof( VBD[ 0 ] );                   // [077]
+            : glBufferData( 0x8892 , siz , VBD ,0x88E4 );       // [077]
+        WGL : wgl.bufferData(                                   // [077]
+                wgl.ARRAY_BUFFER                                // [077]
+              , a_g.vbd                                         // [077]
+              , wgl.STATIC_DRAW                                 // [077]
+              , 20                                              // [077]
+              );;                                               // [077]
 
 *** ********************************* #HASH_TAGGED_COMMENTS# **/
 /** !EXCLAIMED_COMMENTS! *********************************** ***

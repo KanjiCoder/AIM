@@ -1,0 +1,16 @@
+
+
+    For Video 78
+
+                let s_f =( 4 /** 4 Bytes Per Float **/ );
+            let VAA =(    wgl.enableVertexAttribArray );
+                VAA.bind( wgl );
+
+            var pos_1st = ( 0 * s_f );  
+            var tex_1st = ( 3 * s_f );  
+            
+            if( 0 != c_artgirl_loc_pos ){ ERR("[loc_pos]"); };
+            if( 1 != c_artgirl_loc_tex ){ ERR("[loc_tex]"); };
+
+            VAA( c_artgirl_loc_pos /**#S_POS#**/ ); 
+            VAA( c_artgirl_loc_tex /**#S_TEX#**/ );
