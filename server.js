@@ -1512,7 +1512,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                     let loc_pos =( c_artgirl_loc_pos );
                     let loc_tex =( c_artgirl_loc_tex );
 
-                    let GAL = wgl.getAttribLocation ;
+                    let GAL = wgl.getAttribLocation.bind(wgl);
                     let chk_pos =(
                         GAL( pid ,"inn_pos"));;
                     let chk_tex =(
