@@ -1283,100 +1283,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         let wgl =( a_g.wgl /** d_artgirl.wgl **/ );             // [071] 
                                                                 // [071]
         
-        //:VBO_IS_AI0:[077]:-----------------------------://    // [077]
-        //:                                              ://    // [077]
-        //: 1 : Allocate Untyped Buffer & Get It's Handle://    // [077]
-        //: 2 : Specify Type Of The Buffer (arraybuffer) ://    // [077]
-        //: 3 : Supply Data To The Buffer.               ://    // [077]
-        //:- - - - - - - - - - - -- - - - - - - - - - - -://    // [077]
-        {                                                       // [077]
-            /** #_OPENGL_VS_WEBGL_PART_002_# **/                // [077]
-                                                                // [077]
-        //:[STEP_001]://                                        // [077]
-                                                                // [077]
-            /** **************************************** **/    // [077]
-            /** Allocate Untyped Buffer , Get Handle.    **/    // [077]
-            /** **************************************** **/    // [077]
-                                                                // [077]
-            a_g.vbo = wgl.createBuffer( );                      // [077]
-                                                                // [077]
-        //:[STEP_002]://                                        // [077]
-                                                                // [077]
-            /** **************************************** **/    // [077]
-            /** wgl.bindBuffer( ... , a_g.vbo )          **/    // [077]
-            /** Tell WebGL That[ bufferData ]command     **/    // [077]
-            /** is to affect[ a_g.vbo ]                  **/    // [077]
-            /** **************************************** **/    // [077]
-                                                                // [077]
-            wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );       // [077]
-                                                                // [077]
-        //:[STEP_003]://                                        // [077]
-                                                                // [077]
-            /** **************************************** **/    // [077]
-            /** Let GPU know about your raw array.       **/    // [077]
-            /**                                          **/    // [077]
-            /** CPU COPY : a_g.vbd                       **/    // [077]
-            /** GPU COPY : a_g.vbo                       **/    // [077]
-            /** **************************************** **/    // [077]
-                                                                // [077]
-            wgl.bufferData(                                     // [077]
-                wgl.ARRAY_BUFFER  //:[ target  ]://             // [077]
-            ,   a_g.vbd           //:[ srcData ]://             // [077]
-            ,   wgl.STATIC_DRAW   //:[ usage   ]://             // [077]
-            ,   a_g.vbl           //:[ length  ]://             // [077]
-            );;                                                 // [077]
-        }                                                       // [077]
-        //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
 
-        //:VAO_IS_AI1:[078]:-----------------------------://
-        //:                                              ://
-        //:  @s_f@ : Sizeof( float32 ) in bytes          ://
-        //:  @oib@ : Offset In Bytes (to 1st element)    ://
-        //:  @sib@ : Stride In Bytes                     ://
-        //:- - - - - - - - - - - -- - - - - - - - - - - -://
-        {
-            //: #_OPENGL_VS_WEBGL_PART_003_# ://
-
-            //:function_pointers:[078]:------------------://
-
-                let w = wgl; let CVA,BVA,A_P,O_N ;;;;;;;;;
-                CVA =( w.createVertexArray      ).bind(w);
-                BVA =( w.bindVertexArray        ).bind(w);
-                A_P =( w.vertexAttribPointer    ).bind(w);
-                O_N =( w.enableVertexAttribArray).bind(w);
-
-            //:------------------:function_pointers:[078]://
-            //:calculations:[078]:-----------------------://
-
-                let s_f =( Float32Array.BYTES_PER_ELEMENT );
-                let typ =( wgl.FLOAT );
-                let n_o =( wgl.FALSE );
-                let sib =( (3+2) * s_f );
-
-                var oib_pos = ( 0 * s_f );  
-                var oib_tex = ( 3 * s_f );  
-
-                let loc_pos = c_artgirl_loc_pos ;
-                let loc_tex = c_artgirl_loc_tex ;
-                
-                if( 0 != loc_pos ){ ERR("[loc_pos]"); };
-                if( 1 != loc_tex ){ ERR("[loc_tex]"); };
-                if( 4 !=     s_f ){ ERR("[_4_:s_f]"); };
-
-            //:-----------------------:calculations:[078]://
-            //:actions:[078]:----------------------------://
-
-                a_g.vao = CVA(         );
-                          BVA( a_g.vao );
-
-                A_P( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
-                A_P( loc_tex , 2 , typ,n_o,sib , oib_tex );
-
-                O_N( loc_pos /**#S_POS#**/ ); 
-                O_N( loc_tex /**#S_TEX#**/ );
-            //:----------------------------:actions:[078]://
-        }
-        //:-----------------------------:VAO_IS_AI1:[078]://
 
 
 
@@ -1511,7 +1418,106 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
 
 
+        //:VBO_IS_AI0:[077]:-----------------------------://    // [077]
+        //:                                              ://    // [077]
+        //: 1 : Allocate Untyped Buffer & Get It's Handle://    // [077]
+        //: 2 : Specify Type Of The Buffer (arraybuffer) ://    // [077]
+        //: 3 : Supply Data To The Buffer.               ://    // [077]
+        //:- - - - - - - - - - - -- - - - - - - - - - - -://    // [077]
+        {                                                       // [077]
+            /** #_OPENGL_VS_WEBGL_PART_002_# **/                // [077]
+                                                                // [077]
+        //:[STEP_001]://                                        // [077]
+                                                                // [077]
+            /** **************************************** **/    // [077]
+            /** Allocate Untyped Buffer , Get Handle.    **/    // [077]
+            /** **************************************** **/    // [077]
+                                                                // [077]
+            a_g.vbo = wgl.createBuffer( );                      // [077]
+                                                                // [077]
+        //:[STEP_002]://                                        // [077]
+                                                                // [077]
+            /** **************************************** **/    // [077]
+            /** wgl.bindBuffer( ... , a_g.vbo )          **/    // [077]
+            /** Tell WebGL That[ bufferData ]command     **/    // [077]
+            /** is to affect[ a_g.vbo ]                  **/    // [077]
+            /** **************************************** **/    // [077]
+                                                                // [077]
+            wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );       // [077]
+                                                                // [077]
+        //:[STEP_003]://                                        // [077]
+                                                                // [077]
+            /** **************************************** **/    // [077]
+            /** Let GPU know about your raw array.       **/    // [077]
+            /**                                          **/    // [077]
+            /** CPU COPY : a_g.vbd                       **/    // [077]
+            /** GPU COPY : a_g.vbo                       **/    // [077]
+            /** **************************************** **/    // [077]
+                                                                // [077]
+            wgl.bufferData(                                     // [077]
+                wgl.ARRAY_BUFFER  //:[ target  ]://             // [077]
+            ,   a_g.vbd           //:[ srcData ]://             // [077]
+            ,   wgl.STATIC_DRAW   //:[ usage   ]://             // [077]
+            ,   a_g.vbl           //:[ length  ]://             // [077]
+            );;                                                 // [077]
+        }                                                       // [077]
+        //:-----------------------------:VBO_IS_AI0:[077]://    // [077]
 
+        //:VAO_IS_AI1:[078]:-----------------------------://
+        //:                                              ://
+        //:  @s_f@ : Sizeof( float32 ) in bytes          ://
+        //:  @oib@ : Offset In Bytes (to 1st element)    ://
+        //:  @sib@ : Stride In Bytes                     ://
+        //:- - - - - - - - - - - -- - - - - - - - - - - -://
+        {
+            //: #_OPENGL_VS_WEBGL_PART_003_# ://
+
+            //:function_pointers:[078]:------------------://
+
+                let w = wgl; let CVA,BVA,A_P,O_N ;;;;;;;;;
+                CVA =( w.createVertexArray      ).bind(w);
+                BVA =( w.bindVertexArray        ).bind(w);
+                A_P =( w.vertexAttribPointer    ).bind(w);
+                O_N =( w.enableVertexAttribArray).bind(w);
+
+            //:------------------:function_pointers:[078]://
+            //:calculations:[078]:-----------------------://
+
+                let s_f =( Float32Array.BYTES_PER_ELEMENT );
+                let typ =( wgl.FLOAT );
+                let n_o =( wgl.FALSE );
+                let sib =( (3+2) * s_f );
+
+                var oib_pos = ( 0 * s_f );  
+                var oib_tex = ( 3 * s_f );  
+
+                let loc_pos = c_artgirl_loc_pos ;
+                let loc_tex = c_artgirl_loc_tex ;
+                
+                if( 0 != loc_pos ){ ERR("[loc_pos]"); };
+                if( 1 != loc_tex ){ ERR("[loc_tex]"); };
+                if( 4 !=     s_f ){ ERR("[_4_:s_f]"); };
+
+            //:-----------------------:calculations:[078]://
+            //:error_check:[078]:------------------------://
+
+                //: gl.getAttribLocation( p ,"ver_pos");
+                //: gl.getAttribLocation( p ,"ver_col");
+
+            //:------------------------:error_check:[078]://
+            //:actions:[078]:----------------------------://
+
+                a_g.vao = CVA(         );
+                          BVA( a_g.vao );
+
+                A_P( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
+                A_P( loc_tex , 2 , typ,n_o,sib , oib_tex );
+
+                O_N( loc_pos /**#S_POS#**/ ); 
+                O_N( loc_tex /**#S_TEX#**/ );
+            //:----------------------------:actions:[078]://
+        }
+        //:-----------------------------:VAO_IS_AI1:[078]://
 
 
 
