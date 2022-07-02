@@ -1285,7 +1285,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         let wgl =( a_g.wgl /** d_artgirl.wgl **/ );             // [071] 
                                                                 // [071]
         
-        let a_b = wgl.ARRAY_BUFFER ;
+        let a_b = wgl.ARRAY_BUFFER ;                            // [078]
 
         //:VBO_IS_AI0:[077]:-----------------------------://    // [077]
         //:                                              ://    // [077]
@@ -1312,7 +1312,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             /** is to affect[ a_g.vbo ]                  **/    // [077]
             /** **************************************** **/    // [077]
                                                                 // [077]
-            wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );       // [077]
+            wgl.bindBuffer( a_b , a_g.vbo );                    // [078][077]
                                                                 // [077]
         //:[STEP_003]://                                        // [077]
                                                                 // [077]
@@ -1324,7 +1324,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             /** **************************************** **/    // [077]
                                                                 // [077]
             wgl.bufferData(                                     // [077]
-                wgl.ARRAY_BUFFER  //:[ target   ]://            // [077]
+                a_b               //:[ target   ]://            // [078][077]
             ,   a_g.vbd           //:[ srcData  ]://            // [077]
             ,   wgl.STATIC_DRAW   //:[ usage    ]://            // [077]
             ,   0                 //:[ srcOffset]      #GFD_001#// [078]  
@@ -1372,8 +1372,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:-----------------------:calculations:[078]://
             //:actions:[078]:----------------------------://
 
-                     a_g.vao =  CVA(  );
-                BVA( a_g.vao );        
+                     a_g.vao =  CVA(  );      //:#SS_BEG#://
+                BVA( a_g.vao );               //:#SS_BEG#://
 
                     O_N( loc_pos /**#S_POS#**/ ); 
                     O_N( loc_tex /**#S_TEX#**/ );
@@ -1381,8 +1381,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                     A_P( loc_pos , 3 , typ,n_o,sib , oib_pos ); 
                     A_P( loc_tex , 2 , typ,n_o,sib , oib_tex );
 
-                wgl.bindVertexArray( null );
-                wgl.bindBuffer( wgl.ARRAY_BUFFER, null );
+                wgl.bindVertexArray( null );  //:#SS_END#://
+                wgl.bindBuffer( a_b, null );  //:#SS_END#://
 
             //:----------------------------:actions:[078]://
         }
@@ -2412,6 +2412,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                  :                                              // [078]
                  : www.youtube.com/watch?v=0nZn5YPNf5k          // [078]
                  : ( Good WebGL2 Tutorial )                     // [078]
+    #SS_BEG# : SnapShotBegin                                    // [078]
+    #SS_END# : SnapShotEnd                                      // [078]
+
                                                                 // [078]
     #S_POS# : Slot Index Of POSITION Attribute data.            // [078]
     #S_TEX# : Slot Index Of TEXTURE  Attribute data.            // [078]
