@@ -1327,7 +1327,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 a_b               //:[ target   ]://            // [078][077]
             ,   a_g.vbd           //:[ srcData  ]://            // [077]
             ,   wgl.STATIC_DRAW   //:[ usage    ]://            // [077]
-            ,   0                 //:[ srcOffset]      #GFD_001#// [078]  
+            ,   0                 //:[ srcOffset]      #GFD_001#// [078][FIX]  
             ,   a_g.vbl           //:[ length   ]://            // [077]
             );;                                                 // [077]
         }                                                       // [077]
@@ -1335,9 +1335,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
         //:VAO_IS_AI1:[078]:-----------------------------://    // [078]
         //:                                              ://    // [078]
-        //:  @s_f@ : Sizeof( float32 ) in bytes          ://    // [078]
-        //:  @oib@ : Offset In Bytes (to 1st element)    ://    // [078]
-        //:  @sib@ : Stride In Bytes                     ://    // [078]
+        //:   SEE[ www.tinyurl.com/ANDY-WEBGL2 ]         ://    // [078]
+        //:                                              ://    // [078]
         //:- - - - - - - - - - - -- - - - - - - - - - - -://    // [078]
         {                                                       // [078]
             //: #_OPENGL_VS_WEBGL_PART_003_# ://                // [078]
@@ -1355,19 +1354,19 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //:------------------:function_pointers:[078]://    // [078]
             //:calculations:[078]:-----------------------://    // [078]
                                                                 // [078]
-                let s_f =( Float32Array.BYTES_PER_ELEMENT );    // [078]
-                let t =( wgl.FLOAT   ); //: t : type     ://    // [078]
-                let s =( (3+2) * s_f ); //: s : stride   ://    // [078]
+                let b =( Float32Array.BYTES_PER_ELEMENT );      // [078]
+                let t =( wgl.FLOAT ); //: t : type     ://      // [078]
+                let s =( (3+2) * b ); //: s : stride   ://      // [078]
                                                                 // [078]
-                var oib_pos = ( 0 * s_f );                      // [078]
-                var oib_tex = ( 3 * s_f );                      // [078]
+                var oib_pos = ( 0 * b );                        // [078]
+                var oib_tex = ( 3 * b );                        // [078]
                                                                 // [078]
                 let loc_pos = c_artgirl_loc_pos ;               // [078]
                 let loc_tex = c_artgirl_loc_tex ;               // [078]
                                                                 // [078]
                 if( 0 != loc_pos ){ ERR("[loc_pos]"); };        // [078]
                 if( 1 != loc_tex ){ ERR("[loc_tex]"); };        // [078]
-                if( 4 !=     s_f ){ ERR("[_4_:s_f]"); };        // [078]
+                if( 4 !=      b  ){ ERR("[_4_:-b-]"); };        // [078]
                                                                 // [078]
             //:-----------------------:calculations:[078]://    // [078]
             //:actions:[078]:----------------------------://    // [078]
@@ -1503,20 +1502,20 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 wgl.attachShader( pid ,             fid  );     // [072]
                 wgl.linkProgram(  pid );  ERR_CHK("[L_P]");     // [072]
                 wgl.useProgram(   pid );  ERR_CHK("[U_P]");     // [072]
-
-                //:error_check:[078]:------------------------://
-                
-                    let loc_pos =( c_artgirl_loc_pos );
-                    let loc_tex =( c_artgirl_loc_tex );
-
-                    let GAL = wgl.getAttribLocation.bind(wgl);
-                    let chk_pos =( GAL( pid ,"inn_pos"));
-                    let chk_tex =( GAL( pid ,"inn_tex"));
-                    
-                    if( chk_pos != loc_pos ){ERR("[c78:pos]");};
-                    if( chk_tex != loc_tex ){ERR("[c78:tex]");};
-                
-                //:------------------------:error_check:[078]://
+                                                                // [---]
+                //:error_check:[078]:------------------------://// [078]
+                                                                // [078]
+                    let loc_pos =( c_artgirl_loc_pos );         // [078]
+                    let loc_tex =( c_artgirl_loc_tex );         // [078]
+                                                                // [078]
+                    let GAL = wgl.getAttribLocation.bind(wgl);  // [078]
+                    let chk_pos =( GAL( pid ,"inn_pos"));       // [078]
+                    let chk_tex =( GAL( pid ,"inn_tex"));       // [078]
+                                                                // [078]
+                    if( chk_pos != loc_pos ){ERR("[c78:pos]");};// [078]
+                    if( chk_tex != loc_tex ){ERR("[c78:tex]");};// [078]
+                                                                // [078]
+                //:------------------------:error_check:[078]://// [078]
                                                                 // [---]
             };;};;                                              // [071]
         //:-------------:create_all_shader_programs:[071]://    // [071]
@@ -1528,16 +1527,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                                                                 // [071]
         //:---------------:misc_pipeline_setup_code:[071]://    // [071]
 
-
-
-
-
-
-
-
-
-
-    };;                                              //:[063]://
+    };; //:ENDFUNC_ARTGIRL_INI:::::::::::::::::::::::::::::::://// [078][063] 
   
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
@@ -2412,7 +2402,6 @@ require( "http" ).createServer( function( i_ask , i_giv ){
                  : ( Good WebGL2 Tutorial )                     // [078]
     #SS_BEG# : SnapShotBegin                                    // [078]
     #SS_END# : SnapShotEnd                                      // [078]
-
                                                                 // [078]
     #S_POS# : Slot Index Of POSITION Attribute data.            // [078]
     #S_TEX# : Slot Index Of TEXTURE  Attribute data.            // [078]
@@ -2861,16 +2850,19 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : c_artgirl_loc_tex <-- slot location : tex      :    // [077]
           :                                                :    // [077]
           : ---------------------------------------------- :    // [077]
-
-    [078] : Vertex fetch requires 4, but attribs only supply 0
-          : ------------------------------------------------
-          : Fuckyou WebGl. How many times have I fucking
-          : done this in my life? And I still can't get
-          : it right the first time? This part is  
-          : easier in C99 because in WEBGL there are
-          : multiple overrides for functions.
-          :
-          : I say this because I don't get stuck like 
-          : this when I am doing this in C99.
+                                                                // [---]
+    [078] : Vertex fetch requires 4, but attribs only supply 0  // [078]
+          : ------------------------------------------------    // [078]
+          : Fuckyou WebGl. How many times have I fucking        // [078]
+          : done this in my life? And I still can't get         // [078]
+          : it right the first time? This part is               // [078]
+          : easier in C99 because in WEBGL there are            // [078]
+          : multiple overrides for functions.                   // [078]
+          :                                                     // [078]
+          : I say this because I don't get stuck like           // [078]
+          : this when I am doing this in C99.                   // [078]
+          :                                                     // [078]
+          : SILENTFAIL : wgl.bufferData( a1,a2,a3,a4    );      // [078]
+          : THE____FIX : wgl.bufferData( a1,a2,a3,a4,a5 );      // [078]
 
 *** *************************************** MISC_DELTA_NOTES **/
