@@ -2863,5 +2863,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           :                                                     // [078]
           : SILENTFAIL : wgl.bufferData( a1,a2,a3,a4    );      // [078]
           : THE____FIX : wgl.bufferData( a1,a2,a3,a4,a5 );      // [078]
+                                                                // [---]
+    [079] : No code changes. Just demonstrated the end          // [079]
+          : result of tutorial [078] . We didn't have           // [079]
+          : enough time to go over the end-result               // [079]
+          : in the previous video.                              // [079]
 
 *** *************************************** MISC_DELTA_NOTES **/
