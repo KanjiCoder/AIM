@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_080  <<< THIS_VIDEO¯S_CODE    // [080][079]                               
+        github.com/KanjiCoder/AIM_081  <<< THIS_VIDEO¯S_CODE    // [081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -517,30 +517,32 @@ if( yesnode ){ //:-------------------------------------------://
         const c_artgirl_wgl_tag =("#version 300 es");           // [074]
         const c_artgirl_wgl_ask =(         "webgl2");           // [074]
 
-    /** WebGL Surface Quad Macros ********* **/      //:[066]://
-                                                     //:[066]://
-        const c_artgirl_vbd_len =( 20 );             //:[066]://
-                                                     
-    /** *********************************** **/      //:[064]://
-    /** Different Rendering Pipelines [064] **/      //:[064]://
-    /** *********************************** **/      //:[064]://
-                                                     //:[064]://
+    /** WebGL Surface Quad Macros ********* **/                 // [066] 
+                                                                // [066] 
+        const c_artgirl_vbd_len =( 20 );                        // [066] 
+                                                                         
+    /** *********************************** **/                 // [064] 
+    /** Different Rendering Pipelines [064] **/                 // [064] 
+    /** *********************************** **/                 // [064] 
+                                                                // [064] 
+                                                                         
+    const c_artgirl_ren_000 = "[DONT_USE:000]" ;                // [068] 
+    const c_artgirl_ren_bad = ( 0 ); //:Select:ren_def       ://// [068] 
 
-    const c_artgirl_ren_000 = "[DONT_USE:000]" ;     //:[068]://
-    const c_artgirl_ren_bad = ( 0 ); //:Select:ren_def  [068]://
+    const c_artgirl_ren_001 = ( 1 ); //:FLAT_CYAN_COLOR      ://// [081][068]
+    const c_artgirl_ren_002 = ( 2 ); //:FLAT_LIME_COLOR      ://// [081][068]
+    const c_artgirl_ren_003 = ( 3 ); //:GradientQuad         ://// [081][068] 
+    const c_artgirl_ren_004 = ( 4 ); //:FlashingScreen       ://// [081][068] 
+    const c_artgirl_ren_005 = ( 5 ); //:Sectors_Colored      ://// [081][068] 
+    const c_artgirl_ren_006 = ( 6 ); //:Sectors_Numbered     ://// [081][068] 
+    const c_artgirl_ren_007 = ( 7 ); //:SolidColorTiles      ://// [081][068] 
+    const c_artgirl_ren_008 = ( 8 ); //:@HEXASET1STAMP@      ://// [081][068] 
+    const c_artgirl_ren_009 = ( 9 ); //:@HEXASET1AUSET@      ://// [081][068] 
 
-    const c_artgirl_ren_001 = ( 1 ); //:GradientQuad    [068]://
-    const c_artgirl_ren_002 = ( 2 ); //:FlashingScreen  [068]://
-    const c_artgirl_ren_003 = ( 3 ); //:Sectors_Colored [068]://
-    const c_artgirl_ren_004 = ( 4 ); //:Sectors_Numbered[068]://
-    const c_artgirl_ren_005 = ( 5 ); //:SolidColorTiles [068]://
-    const c_artgirl_ren_006 = ( 6 ); //:@HEXASET1STAMP@ [068]://
-    const c_artgirl_ren_007 = ( 7 ); //:@HEXASET1AUSET@ [068]://
-
-    const c_artgirl_ren_tot = ( 7 ); //:#RenderPipelines[068]://
+    const c_artgirl_ren_tot = ( 9 ); //:#RenderPipelines#    ://// [081][068] 
                                                                 
-    const c_artgirl_ren_def = (      //:Default_Render  [068]://
-          c_artgirl_ren_001    );;   //:Pipeline_To_Use [068]://
+    const c_artgirl_ren_def = (      //:Default_Render       ://// [068] 
+          c_artgirl_ren_001    );;   //:Pipeline_To_Use      ://// [068] 
 
 //:==============================:CONST_MACROS_BY_SYSTEM[074]://
 //:__ARTGIRL__:SHADER_STRINGS:[074]:=========================://// [---]
@@ -577,10 +579,15 @@ const d_artgirl_ssv_004 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
 const d_artgirl_ssv_005 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
 const d_artgirl_ssv_006 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
 const d_artgirl_ssv_007 =( d_artgirl_ssv_all ); //:@ssv@://     // [070][069]
+const d_artgirl_ssv_008 =( d_artgirl_ssv_all ); //:@ssv@://     // [081]
+const d_artgirl_ssv_009 =( d_artgirl_ssv_all ); //:@ssv@://     // [081]
                                                                 // [069]
 const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(c_artgirl_wgl_tag+`                                            // [074]                       
+(c_artgirl_wgl_tag+`                                            // [074] 
+
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_001 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_001 ] ://                // [081]  
                                  
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -595,7 +602,10 @@ const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(c_artgirl_wgl_tag+`                                            // [074]                         
+(c_artgirl_wgl_tag+`                                            // [074]  
+
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_002 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_002 ] ://                // [081]                       
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -610,7 +620,10 @@ const d_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [070][069]
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(c_artgirl_wgl_tag+`                                            // [074]                          
+(c_artgirl_wgl_tag+`                                            // [074] 
+
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_003 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_003 ] ://                // [081]                            
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -625,7 +638,10 @@ const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(c_artgirl_wgl_tag+`                                            // [074]                          
+(c_artgirl_wgl_tag+`                                            // [074]  
+
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_004 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_004 ] ://                // [081]                           
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -640,7 +656,10 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(c_artgirl_wgl_tag+`                                            // [074]                          
+(c_artgirl_wgl_tag+`                                            // [074]   
+
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_005 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_005 ] ://                // [081]                         
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -655,7 +674,10 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(c_artgirl_wgl_tag+`                                            // [074]                          
+(c_artgirl_wgl_tag+`                                            // [074]   
+
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_006 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_006 ] ://                // [081]                         
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -670,7 +692,10 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [070][069]
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
-(c_artgirl_wgl_tag+`                                            // [074]                          
+(c_artgirl_wgl_tag+`                                            // [074]  
+
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_007 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_007 ] ://                // [081]                            
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -683,6 +708,48 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
     }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
+                                                                   [---]
+                                                                   [---]
+                                                                   [---]
+const d_artgirl_ssf_008 =( //: ShaderSourceFrag #08@ssf@[081]://   [081]
+////////////////////////////////////////////////////////////////// [081]
+(c_artgirl_wgl_tag+`                                            // [081]
+                                                                // [081]
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_008 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_008 ] ://                // [081]                    
+                                                                // [081]
+    precision mediump float ;                                   // [081]
+                                                                // [081]
+    in  vec2  i_o_tex ; //: @i_o_tex@ ://                       // [081]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [081]
+                                                                // [081]
+    void main(){                                                // [081]
+                                                                // [081]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [081]
+    }                                                           // [081]
+                                                                // [081]
+`));; //////////////////////////////////////////////////////////// [081]
+const d_artgirl_ssf_009 =( //: ShaderSourceFrag #09@ssf@[081]://   [081]
+////////////////////////////////////////////////////////////////// [081]
+(c_artgirl_wgl_tag+`                                            // [081]
+                                                                // [081]
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_009 ] ://                // [081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_009 ] ://                // [081]                    
+                                                                // [081]
+    precision mediump float ;                                   // [081]
+                                                                // [081]
+    in  vec2  i_o_tex ; //: @i_o_tex@ ://                       // [081]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       // [081]
+                                                                // [081]
+    void main(){                                                // [081]
+                                                                // [081]
+        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [081]
+    }                                                           // [081]
+                                                                // [081]
+`));; //////////////////////////////////////////////////////////// [081]
+                                                                // [---]
+                                                                // [---]
+                                                                // [---]
                                                                 // [069]
 //:=========================:__ARTGIRL__:SHADER_STRINGS:[074]://// [---]
 //:DATA_BY_SYSTEM:[063]:=====================================://// [---]
@@ -720,6 +787,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             ,      d_artgirl_ssv_005                            // [070][069]
             ,      d_artgirl_ssv_006                            // [070][069]
             ,      d_artgirl_ssv_007                            // [070][069]
+            ,      d_artgirl_ssv_008                            // [081]
+            ,      d_artgirl_ssv_009                            // [081]
             )      /////////////////                            // [069]
     ,arr_ssf:F_SSA(c_artgirl_ren_tot +1   //: #_1_BASED_ARR_#://// [069]
             ,      d_artgirl_ssf_bad                            // [070][069]
@@ -730,6 +799,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             ,      d_artgirl_ssf_005                            // [070][069]
             ,      d_artgirl_ssf_006                            // [070][069]
             ,      d_artgirl_ssf_007                            // [070][069]
+            ,      d_artgirl_ssf_008                            // [081]
+            ,      d_artgirl_ssf_009                            // [081]
             )      /////////////////                            // [069]
                                                                 // [---]
     ,   vbl :          c_artgirl_vbd_len //:@vbd@://            // [066] 
@@ -860,9 +931,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         d_can.width = wid ;                                     // [032][031]
         d_can.height= hig ;                                     // [032][031]
 
-        if( HAS( a_g.wgl ) ){
+        if( HAS( a_g.wgl ) ){                                   // [080]
                  a_g.wgl.viewport( 0 , 0 ,wid,hig );            // [080]
-        };;
+        };;                                                     // [080]
     };;                                                         // [032]
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
 //:FUNC_GAME_UPDATE_TICK:[036]:==============================://
@@ -1792,65 +1863,65 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 
     //:------------------------------------------------------://
-    //: @_G_@ : Generally                               [068]://
-    //: @_S_@ : Specifically                            [068]://
-    //: @a_k@ : @asc_key@ : Ascii(_G_) Key(_S_)         [068]://
-    //: @e_k@ : @evt_key@ : Event(_G_) Key(_S_)         [068]://
+    //: @_G_@ : Generally                                    ://// [068] 
+    //: @_S_@ : Specifically                                 ://// [068] 
+    //: @a_k@ : @asc_key@ : Ascii(_G_) Key(_S_)              ://// [068] 
+    //: @e_k@ : @evt_key@ : Event(_G_) Key(_S_)              ://// [068] 
     //:------------------------------------------------------://
 
-    const   F_KEYMAST_EVT_ASC = function             //:[068]://
-    PRIVATE_F_KEYMAST_EVT_ASC(                       //:[068]://
-                                                     //:[068]://
-        i_evt_key //:( i_evt_key )=>( o_asc_key ):// //:[068]://
-    ){                                               //:[068]://
-        var o_asc_key =(                             //:[068]://
-            String.prototype.toUpperCase.call(       //:[068]://
-            String.fromCharCode(                     //:[068]://
-                                                     //:[068]://
-                i_evt_key.keyCode                    //:[068]://
-                                                     //:[068]://
-            )||"[nil][o_asc_key]" ));;               //:[068]://
-        return( o_asc_key );                         //:[068]://
-    };;                                              //:[068]://
+    const   F_KEYMAST_EVT_ASC = function                        // [068] 
+    PRIVATE_F_KEYMAST_EVT_ASC(                                  // [068] 
+                                                                // [068] 
+        i_evt_key //:( i_evt_key )=>( o_asc_key )://            // [068] 
+    ){                                                          // [068] 
+        var o_asc_key =(                                        // [068] 
+            String.prototype.toUpperCase.call(                  // [068] 
+            String.fromCharCode(                                // [068] 
+                                                                // [068] 
+                i_evt_key.keyCode                               // [068] 
+                                                                // [068] 
+            )||"[nil][o_asc_key]" ));;                          // [068] 
+        return( o_asc_key );                                    // [068] 
+    };;                                                         // [068] 
 
-    const   F_KEYMAST_DOW = function                 //:[057]://
-    PRIVATE_F_KEYMAST_DOW(                           //:[057]://
-        i_evt_key                                    //:[068]://
-    ){                                               //:[057]://
-                                                     //:[057]://
+    const   F_KEYMAST_DOW = function                            // [057] 
+    PRIVATE_F_KEYMAST_DOW(                                      // [057] 
+        i_evt_key                                               // [068] 
+    ){                                                          // [057] 
+                                                                // [057] 
+                                                                         
+        var asc_key = F_KEYMAST_EVT_ASC( i_evt_key );           // [068] 
+        let a_k     =( asc_key /** Key Down **/ );              // [068] 
 
-        var asc_key = F_KEYMAST_EVT_ASC( i_evt_key );//:[068]://
-        let a_k     =( asc_key /** Key Down **/ );   //:[068]://
-
-        if(  0          //:----------------------------------://
-        ||  "0" == a_k  //:                             [068]://
-        ||  "1" == a_k  //:  Select the shader pipeline to   ://
-        ||  "2" == a_k  //:  use via the number keys.        ://
-        ||  "3" == a_k  //:                             [068]://
-        ||  "4" == a_k  //:  0 == default pipeline.     [068]://
-        ||  "5" == a_k  //:                             [068]://
-        ||  "6" == a_k  //:  More than 9 pipelines ?    [068]://
-        ||  "7" == a_k  //:  Future me problem.         [068]://
-        ||  "8" == a_k  //:                             [068]://
-        ||  "9" == a_k  //:----------------------------------://
-        ){                                                      
-            //:RPL__RenderPipelineLoad:[068]:----------------://
-            //:                                              ://
-            //: #NOKISS#[ F_ARTGIRL_RPL( parseInt( a_k ) ] ) ://
-            //:                                              ://
-            let RPL = F_ARTGIRL_RPL ;                     //:://
-            if( "0" == a_k ){ RPL( c_artgirl_ren_def ); };//:://
-            if( "1" == a_k ){ RPL( 1 );};//:c_artgirl_ren_001://
-            if( "2" == a_k ){ RPL( 2 );};//:c_artgirl_ren_002://
-            if( "3" == a_k ){ RPL( 3 );};//:c_artgirl_ren_003://
-            if( "4" == a_k ){ RPL( 4 );};//:c_artgirl_ren_004://
-            if( "5" == a_k ){ RPL( 5 );};//:c_artgirl_ren_005://
-            if( "6" == a_k ){ RPL( 6 );};//:c_artgirl_ren_006://
-            if( "7" == a_k ){ RPL( 7 );};//:c_artgirl_ren_007://
-            if( "8" == a_k ){ RPL( 8 );};//:c_artgirl_ren_008://
-            if( "9" == a_k ){ RPL( 9 );};//:c_artgirl_ren_009://
-            //:                                              ://
-            //:----------------:RPL__RenderPipelineLoad:[068]://
+        if(  0          //:----------------------------------://// [068]
+        ||  "0" == a_k  //:                             [068]://// [068]
+        ||  "1" == a_k  //:  Select the shader pipeline to   ://// [068]
+        ||  "2" == a_k  //:  use via the number keys.        ://// [068]
+        ||  "3" == a_k  //:                             [068]://// [068]
+        ||  "4" == a_k  //:  0 == default pipeline.     [068]://// [068]
+        ||  "5" == a_k  //:                             [068]://// [068]
+        ||  "6" == a_k  //:  More than 9 pipelines ?    [068]://// [068]
+        ||  "7" == a_k  //:  Future me problem.         [068]://// [068]
+        ||  "8" == a_k  //:                             [068]://// [068]
+        ||  "9" == a_k  //:----------------------------------://// [068]
+        ){                                                      // [068]
+            //:RPL__RenderPipelineLoad:[068]:----------------://// [068]
+            //:                                              ://// [068]
+            //: #NOKISS#[ F_ARTGIRL_RPL( parseInt( a_k ) ] ) ://// [068]
+            //:                                              ://// [068]
+            let RPL = F_ARTGIRL_RPL ;                     //:://// [068]
+            if( "0" == a_k ){ RPL( c_artgirl_ren_def ); };//:://// [068]
+            if( "1" == a_k ){ RPL( 1 );};//:c_artgirl_ren_001://// [068]
+            if( "2" == a_k ){ RPL( 2 );};//:c_artgirl_ren_002://// [068]
+            if( "3" == a_k ){ RPL( 3 );};//:c_artgirl_ren_003://// [068]
+            if( "4" == a_k ){ RPL( 4 );};//:c_artgirl_ren_004://// [068]
+            if( "5" == a_k ){ RPL( 5 );};//:c_artgirl_ren_005://// [068]
+            if( "6" == a_k ){ RPL( 6 );};//:c_artgirl_ren_006://// [068]
+            if( "7" == a_k ){ RPL( 7 );};//:c_artgirl_ren_007://// [068]
+            if( "8" == a_k ){ RPL( 8 );};//:c_artgirl_ren_008://// [068]
+            if( "9" == a_k ){ RPL( 9 );};//:c_artgirl_ren_009://// [068]
+            //:                                              ://// [068]
+            //:----------------:RPL__RenderPipelineLoad:[068]://// [068]
 
         }else
         if( "R" == a_k ){                            //:[068]://
@@ -2608,8 +2679,18 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 *** ************************************************* ERRORS **/
 /** CTRL_F_HELP ******************************************** ***
 
-    CTRLF_HELP | ctrl-f-help | ctrl f help | control f help
-    YOU_ARE_HERE
+    
+    TAGS[ CTRL_F | CTRL_F_SECTION | ctrl-f-section        ]     // [081]
+    TAGS[ ctrl f section | ctrl f help | ctrl eff  ctrl f ]     // [081]
+    TAGS[ CTRLF_HELP | ctrl-f-help | ctrl f help          ]     // [081]
+    TAGS[ control f help | hackish google search          ]     // [081]
+     
+
+    slated render pipelines | slated renderers | slated-render
+    renderes-slated | rendereres slated | renderer enums
+    renderers-slated | renderers slated | render eneums
+    render enums | renderer eneums
+    SEE[ c_artgirl_ren_001 -to- c_artgirl_ren_007 ]
 
     template edit | template_edit | template string edit
     finds and replaces tokens | find and replace
@@ -2879,3 +2960,4 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : 2: Retroactively added some video number tags       // [080]
 
 *** *************************************** MISC_DELTA_NOTES **/
+
