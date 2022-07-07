@@ -842,25 +842,25 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 //:=============================:FUNC_BOILERPLATE:[028]+[035]://
 //:FUNC_RESIZE_CANVAS:[032]+[035]:===========================://
 
-    const F_RES_CAN = function PRIVATE_F_RES_CAN( ){
+    const F_RES_CAN = function PRIVATE_F_RES_CAN( ){            // [032]
 
-        var wid =( 0 - 333 /** @cli_wid@ **/ );      //:[063]://
-        var hig =( 0 - 666 /** @cli_hig@ **/ );      //:[063]://
-        let   W = window ;
-        let   D = document.documentElement ;
-        let   B = document.body            ;
-        
-        wid =(W.innerWidth ||D.clientWidth ||
-                             B.clientWidth || 0 );;
-        hig =(W.innerHeight||D.clientHeight||
-                             B.clientHeight|| 0 );;
-        
-        d_can.width = wid ;
-        d_can.height= hig ;
+        var wid =( 0 - 333 /** @cli_wid@ **/ );                 // [063] 
+        var hig =( 0 - 666 /** @cli_hig@ **/ );                 // [063] 
+        let   W = window ;                                      // [032][031]
+        let   D = document.documentElement ;                    // [032][031]
+        let   B = document.body            ;                    // [032][031]
+                                                                // [032][031]
+        wid =(W.innerWidth ||D.clientWidth ||                   // [032][031]
+                             B.clientWidth || 0 );;             // [032][031]
+        hig =(W.innerHeight||D.clientHeight||                   // [032][031]
+                             B.clientHeight|| 0 );;             // [032][031]
+                                                                // [032][031]
+        d_can.width = wid ;                                     // [032][031]
+        d_can.height= hig ;                                     // [032][031]
 
         let a_g = d_artgirl ;                                   // [080]
-            a_g.viewport( 0 , 0 ,wid,hig );                     // [080]
-    };;
+            a_g.wgl.viewport( 0 , 0 ,wid,hig );                 // [080]
+    };;                                                         // [032]
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
 //:FUNC_GAME_UPDATE_TICK:[036]:==============================://
 
@@ -2871,5 +2871,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : result of tutorial [078] . We didn't have           // [079]
           : enough time to go over the end-result               // [079]
           : in the previous video.                              // [079]
+
+    [080] : 1: gl.viewport changes when canvas size changed now.// [080]
+          : 2: Retroactively added some video number tags       // [080]
 
 *** *************************************** MISC_DELTA_NOTES **/
