@@ -1288,19 +1288,19 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             MSG("[Not_That_Many_Render_Pipelines]");            // [068] 
         };;                                                     // [068] 
                                                                 // [068] 
-        LOG( "[[RENDER_PIPELINE_LOAD]:RPL]" , i_ren );          // [082][068] 
+        LOG( "[[RENDER_PIPELINE_LOAD]:RPL]" , i_ren );          // [082][068]
 
-
-        let a_g = d_artgirl     ;
-        let wgl = d_artgirl.wgl ;
-        if( NIL( wgl ) ){
-            LOG("[CALM_THE_FUCK_DOWN_AND_WAIT]");
-        }else{
-            
-            var pid = d_artgirl.arr_pid[ i_ren ];
-            wgl.useProgram( pid );
-        };;
-
+        //:LIKE_AND_SUBSCRIBE_YOU_FREELOADER:[082]:------://    // [082]
+                                                                // [082]
+            let a_g = d_artgirl     ;          //:@MACRO@://    // [082]
+            let wgl = d_artgirl.wgl ;          //:@MACRO@://    // [082]
+            if( NIL( wgl ) ){                                   // [082]
+                LOG("[CALM_THE_FUCK_DOWN_AND_WAIT]");           // [082]
+            }else{                                              // [082]
+                var pid = d_artgirl.arr_pid[ i_ren ];           // [082]
+                wgl.useProgram( pid );                          // [082]
+            };;                                                 // [082]
+        //:------:LIKE_AND_SUBSCRIBE_YOU_FREELOADER:[082]://    // [082]
 
     };;                                                         // [068] 
 
@@ -2325,6 +2325,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     //: TAG[ AT_SECTION | ATSECTION | atsection | atsec ]://    // [069]
     //:--------------------------------------------------://    // [069]
                                                                 // [069]
+
+    @MACRO@   : "let" keyword is to be used like a              // [082]
+              : temporary macro to shorten the length           // [082]
+              : of variables. __NOT__ used for                  // [082]
+              : block scope vs function scope unless            // [082]
+              : absolutely necessary.                           // [082]
 
     @inn_pos@ : INNPUT:VertexPosition                           // [074]
     @inn_tex@ : INNPUT:TextureCoord                             // [074]
