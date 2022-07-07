@@ -7,9 +7,9 @@
         www.tinyurl.com/GAME-TUTS-UNSCRIPTED  //:  WEEBCODER ://
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
-                                                                
-        github.com/KanjiCoder/AIM           <<< Same_Place [066]
-        tinyurl.com/GAME-CODE               <<< Same_Place [066]
+                      
+        github.com/KanjiCoder/AIM_080  <<< THIS_VIDEO¯S_CODE    // [080][079]                               
+
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
 :::----------------------------------------------------------**/
@@ -857,6 +857,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         
         d_can.width = wid ;
         d_can.height= hig ;
+
+        let a_g = d_artgirl ;                                   // [080]
+            a_g.viewport( 0 , 0 ,wid,hig );                     // [080]
     };;
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
 //:FUNC_GAME_UPDATE_TICK:[036]:==============================://
