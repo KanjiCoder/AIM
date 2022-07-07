@@ -587,7 +587,7 @@ const d_artgirl_ssf_001 =( //: ShaderSourceFrag #01@ssf@[069]://// [070][069]
 (c_artgirl_wgl_tag+`                                            // [074] 
 
     //: FRAG_SHADER_STR[ d_artgirl_ssf_001 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_001 ] ://                // [081]  
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_001 ] ://                // [081]
                                  
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -605,7 +605,7 @@ const d_artgirl_ssf_002 =( //: ShaderSourceFrag #02@ssf@[069]://   [070][069]
 (c_artgirl_wgl_tag+`                                            // [074]  
 
     //: FRAG_SHADER_STR[ d_artgirl_ssf_002 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_002 ] ://                // [081]                       
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_002 ] ://                // [081]                     
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -2962,7 +2962,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     [081] : Getting Ready For Pipeline Swapping. Added          // [081]
           : A "Flat Lime" color shader.                         // [081]
           :                                                     // [081]
-          : Made "Flat Cyan" color shader ana official          // [081]
+          : Made "Flat Cyan" color shader an official           // [081]
           : shader in our shader enums.                         // [081]
 
 *** *************************************** MISC_DELTA_NOTES **/
