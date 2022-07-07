@@ -633,13 +633,13 @@ const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
                                                                 // [074]
     void main(){                                                // [074]
                                                                 // [074]
-        out_f_c = vec4(//:---------------------://
-            i_o_tex.x  //: X: 0% to 100% Red   ://
-        ,   i_o_tex.y  //: Y: 0% to 100% Green ://
-        ,   0.0        //:    0% Blue          ://
-        ,   1.0        //: 100% Alpha          ://
-        );;            //:---------------------://
-
+        out_f_c = vec4(//:---------------------://              // [083][074]
+            i_o_tex.x  //: X: 0% to 100% Red   ://              // [083]
+        ,   i_o_tex.y  //: Y: 0% to 100% Green ://              // [083]
+        ,   0.0        //:    0% Blue          ://              // [083]
+        ,   1.0        //: 100% Alpha          ://              // [083]
+        );;            //:---------------------://              // [083][074]
+                                                                // [074]
     }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
@@ -2994,6 +2994,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           :                                                     // [081]
           : Made "Flat Cyan" color shader an official           // [081]
           : shader in our shader enums.                         // [081]
+
+    [082] : Gradient Quad With TOP-LEFT origin. This is __NOT__ // [082]
+          : the origin standard to [ OPENGL || WEBGL ] ,        // [082]
+          : we were "clever" with our texture coord values      // [082]
+          : so that we could get [hack] a __SANE__ top-left     // [082]
+          : graphical origin.                                   // [082]
 
 *** *************************************** MISC_DELTA_NOTES **/
 
