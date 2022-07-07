@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_081  <<< THIS_VIDEO¯S_CODE    // [081][080][079]                               
+        github.com/KanjiCoder/AIM_082  <<< THIS_VIDEO¯S_CODE    // [082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -1288,7 +1288,20 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             MSG("[Not_That_Many_Render_Pipelines]");            // [068] 
         };;                                                     // [068] 
                                                                 // [068] 
-        LOG( "[[TODO]:RPL]" , i_ren );                          // [068] 
+        LOG( "[[RENDER_PIPELINE_LOAD]:RPL]" , i_ren );          // [082][068] 
+
+
+        let a_g = d_artgirl     ;
+        let wgl = d_artgirl.wgl ;
+        if( NIL( wgl ) ){
+            LOG("[CALM_THE_FUCK_DOWN_AND_WAIT]");
+        }else{
+            
+            var pid = d_artgirl.arr_pid[ i_ren ];
+            wgl.useProgram( pid );
+        };;
+
+
     };;                                                         // [068] 
 
     const   F_ARTGIRL_TIK = function                            // [063] 
@@ -2685,6 +2698,10 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     TAGS[ CTRLF_HELP | ctrl-f-help | ctrl f help          ]     // [081]
     TAGS[ control f help | hackish google search          ]     // [081]
      
+    load program | use program | load-program | use-program     // [082]
+    load_program | use_program | use that one gl program        // [082]
+    USE[ wgl.useProgram ]                                       // [082]
+    PASTE_LINE                                                  // [082]
 
     slated render pipelines | slated renderers | slated-render  // [081]
     renderes-slated | rendereres slated | renderer enums        // [081]
