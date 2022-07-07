@@ -819,9 +819,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                                                                 // [066] 
             //:@vcx@ @vcy@ @vcz@        @tcx@ , @tcy@           // [075][066] 
             ,   neg , neg , _0_    ,    (min) , ( 1 )//:#TLO#://// [083][075][066] 
-            ,   pos , neg , _0_    ,    ( 1 ) , ( 1 )           // [083][075][066] 
+            ,   pos , neg , _0_    ,    ( 1 ) , ( 1 )//:#TLO#://// [083][075][066] 
             ,   neg , pos , _0_    ,    (min) , (min)//:#TLO#://// [083][075][066] 
-            ,   pos , pos , _0_    ,    ( 1 ) , (min)           // [083][075][066] 
+            ,   pos , pos , _0_    ,    ( 1 ) , (min)//:#TLO#://// [083][075][066] 
             )  //:#ITS_A_ZEE#://                                // [075][074] 
     });;                                             //:[063]://
                                                      //:[065]://
@@ -2493,8 +2493,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : write our shader logic with a __SANE__              // [083]
           : top-left graphical origin.                          // [083]
           :                                                     // [083]
-          : Observe the two lines marked with #TLO# to          // [083]
-          : observe how the Y values have been flipped.         // [083]
+          : Specifically the mapping from VERTEX-Y to           // [083]
+          : TEXTURE-COORD-Y has been [flipped/inverted]         // [083]
 
     #VBO_IS_AI0# : I am full of shit see[ GLSNAPSHOT ]          // [078]
     #VAO_IS_AI1# : I am full of shit see[ GLSNAPSHOT ]          // [078]
