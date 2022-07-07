@@ -531,15 +531,15 @@ if( yesnode ){ //:-------------------------------------------://
 
     const c_artgirl_ren_001 = ( 1 ); //:FLAT_CYAN_COLOR      ://// [081][068]
     const c_artgirl_ren_002 = ( 2 ); //:FLAT_LIME_COLOR      ://// [081][068]
-    const c_artgirl_ren_003 = ( 3 ); //:GradientQuad         ://// [081][068] 
-    const c_artgirl_ren_004 = ( 4 ); //:FlashingScreen       ://// [081][068] 
-    const c_artgirl_ren_005 = ( 5 ); //:Sectors_Colored      ://// [081][068] 
-    const c_artgirl_ren_006 = ( 6 ); //:Sectors_Numbered     ://// [081][068] 
-    const c_artgirl_ren_007 = ( 7 ); //:SolidColorTiles      ://// [081][068] 
-    const c_artgirl_ren_008 = ( 8 ); //:@HEXASET1STAMP@      ://// [081][068] 
-    const c_artgirl_ren_009 = ( 9 ); //:@HEXASET1AUSET@      ://// [081][068] 
+    const c_artgirl_ren_003 = ( 3 ); //:GradientQuad         ://// [081][068]
+    const c_artgirl_ren_004 = ( 4 ); //:FlashingScreen       ://// [081][068]
+    const c_artgirl_ren_005 = ( 5 ); //:Sectors_Colored      ://// [081][068]
+    const c_artgirl_ren_006 = ( 6 ); //:Sectors_Numbered     ://// [081][068]
+    const c_artgirl_ren_007 = ( 7 ); //:SolidColorTiles      ://// [081][068]
+    const c_artgirl_ren_008 = ( 8 ); //:@HEXASET1STAMP@      ://// [081][068]
+    const c_artgirl_ren_009 = ( 9 ); //:@HEXASET1AUSET@      ://// [081][068]
 
-    const c_artgirl_ren_tot = ( 9 ); //:#RenderPipelines#    ://// [081][068] 
+    const c_artgirl_ren_tot = ( 9 ); //:#RenderPipelines#    ://// [081][068]
                                                                 
     const c_artgirl_ren_def = (      //:Default_Render       ://// [068] 
           c_artgirl_ren_001    );;   //:Pipeline_To_Use      ://// [068] 
@@ -623,7 +623,7 @@ const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
 (c_artgirl_wgl_tag+`                                            // [074] 
 
     //: FRAG_SHADER_STR[ d_artgirl_ssf_003 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_003 ] ://                // [081]                            
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_003 ] ://                // [081]                         
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -641,7 +641,7 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
 (c_artgirl_wgl_tag+`                                            // [074]  
 
     //: FRAG_SHADER_STR[ d_artgirl_ssf_004 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_004 ] ://                // [081]                           
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_004 ] ://                // [081]                       
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -659,7 +659,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 (c_artgirl_wgl_tag+`                                            // [074]   
 
     //: FRAG_SHADER_STR[ d_artgirl_ssf_005 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_005 ] ://                // [081]                         
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_005 ] ://                // [081]                    
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -677,7 +677,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://   [070][069]
 (c_artgirl_wgl_tag+`                                            // [074]   
 
     //: FRAG_SHADER_STR[ d_artgirl_ssf_006 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_006 ] ://                // [081]                         
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_006 ] ://                // [081]                    
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -695,7 +695,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://   [070][069]
 (c_artgirl_wgl_tag+`                                            // [074]  
 
     //: FRAG_SHADER_STR[ d_artgirl_ssf_007 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_007 ] ://                // [081]                            
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_007 ] ://                // [081]                           
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -716,7 +716,7 @@ const d_artgirl_ssf_008 =( //: ShaderSourceFrag #08@ssf@[081]://// [081]
 (c_artgirl_wgl_tag+`                                            // [081]
                                                                 // [081]
     //: FRAG_SHADER_STR[ d_artgirl_ssf_008 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_008 ] ://                // [081]                    
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_008 ] ://                // [081]
                                                                 // [081]
     precision mediump float ;                                   // [081]
                                                                 // [081]
@@ -734,7 +734,7 @@ const d_artgirl_ssf_009 =( //: ShaderSourceFrag #09@ssf@[081]://   [081]
 (c_artgirl_wgl_tag+`                                            // [081]
                                                                 // [081]
     //: FRAG_SHADER_STR[ d_artgirl_ssf_009 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_009 ] ://                // [081]                    
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_009 ] ://                // [081]
                                                                 // [081]
     precision mediump float ;                                   // [081]
                                                                 // [081]
@@ -2958,6 +2958,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     [080] : 1: gl.viewport changes when canvas size changed now.// [080]
           : 2: Retroactively added some video number tags       // [080]
+
+    [081] : Getting Ready For Pipeline Swapping. Added          // [081]
+          : A "Flat Lime" color shader.                         // [081]
+          :                                                     // [081]
+          : Made "Flat Cyan" color shader ana official          // [081]
+          : shader in our shader enums.                         // [081]
 
 *** *************************************** MISC_DELTA_NOTES **/
 
