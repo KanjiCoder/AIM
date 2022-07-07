@@ -858,8 +858,11 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         d_can.width = wid ;                                     // [032][031]
         d_can.height= hig ;                                     // [032][031]
 
-        let a_g = d_artgirl ;                                   // [080]
-            a_g.wgl.viewport( 0 , 0 ,wid,hig );                 // [080]
+        if( HAS( a_g.wgl ) ){
+            let a_g = d_artgirl ;                               // [080]
+                a_g.wgl.viewport( 0 , 0 ,wid,hig );             // [080]
+        };;
+
     };;                                                         // [032]
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
 //:FUNC_GAME_UPDATE_TICK:[036]:==============================://
