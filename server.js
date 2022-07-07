@@ -844,6 +844,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
     const F_RES_CAN = function PRIVATE_F_RES_CAN( ){            // [032]
 
+        let a_g = d_artgirl ;                                   // [080]
+
         var wid =( 0 - 333 /** @cli_wid@ **/ );                 // [063] 
         var hig =( 0 - 666 /** @cli_hig@ **/ );                 // [063] 
         let   W = window ;                                      // [032][031]
@@ -859,10 +861,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         d_can.height= hig ;                                     // [032][031]
 
         if( HAS( a_g.wgl ) ){
-            let a_g = d_artgirl ;                               // [080]
-                a_g.wgl.viewport( 0 , 0 ,wid,hig );             // [080]
+                 a_g.wgl.viewport( 0 , 0 ,wid,hig );            // [080]
         };;
-
     };;                                                         // [032]
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
 //:FUNC_GAME_UPDATE_TICK:[036]:==============================://
