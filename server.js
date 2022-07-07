@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_082  <<< THIS_VIDEO¯S_CODE    // [082][081][080][079]                               
+        github.com/KanjiCoder/AIM_083  <<< THIS_VIDEO¯S_CODE    // [083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -622,8 +622,9 @@ const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074] 
 
-    //: FRAG_SHADER_STR[ d_artgirl_ssf_003 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_003 ] ://                // [081]                         
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_003 ] :-------------://  // [083][081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_003 ] :-------------://  // [083][081] 
+    //: FRAG_SHADER_SUM[ GRADIENT_QUAD / GradientQuad    ] ://  // [083]
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -632,7 +633,13 @@ const d_artgirl_ssf_003 =( //: ShaderSourceFrag #03@ssf@[069]://   [070][069]
                                                                 // [074]
     void main(){                                                // [074]
                                                                 // [074]
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
+        out_f_c = vec4(//:---------------------://
+            i_o_tex.x  //: X: 0% to 100% Red   ://
+        ,   i_o_tex.y  //: Y: 0% to 100% Green ://
+        ,   0.0        //:    0% Blue          ://
+        ,   1.0        //: 100% Alpha          ://
+        );;            //:---------------------://
+
     }                                                           // [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
