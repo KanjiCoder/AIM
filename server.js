@@ -647,8 +647,9 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
 ////////////////////////////////////////////////////////////////   [069]
 (c_artgirl_wgl_tag+`                                            // [074]  
 
-    //: FRAG_SHADER_STR[ d_artgirl_ssf_004 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_004 ] ://                // [081]                       
+    //: FRAG_SHADER_STR[ d_artgirl_ssf_004 ] :--------------:// // [084][081]
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_004 ] :--------------:// // [084][081]  
+    //: FRAG_SHADER_SUM[ FlashingScreen / FLASH_GRAD ]://       // [084]
                                                                         
     precision mediump float ;                                   // [074]
                                                                 // [074]
@@ -2723,6 +2724,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     TAGS[ ctrl f section | ctrl f help | ctrl eff  ctrl f ]     // [081]
     TAGS[ CTRLF_HELP | ctrl-f-help | ctrl f help          ]     // [081]
     TAGS[ control f help | hackish google search          ]     // [081]
+
+    shader numbers | shadernumbers | shader_numbers             // [084]
+    shader number | shadernumber | shader_number                // [084]
+    shader index | shaderindex | shader_index                   // [084]
+    SEE[ c_artgirl_ren_001 ]TO[ c_artgirl_ren_009 ]             // [084]
+    PASTE_LINE
      
     load program | use program | load-program | use-program     // [082]
     load_program | use_program | use that one gl program        // [082]
@@ -3013,6 +3020,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : we were "clever" with our texture coord values      // [082]
           : so that we could get [hack] a __SANE__ top-left     // [082]
           : graphical origin.                                   // [082]
+
+    [084] : We are delirious right now. I wrote this off        // [084]
+          : camera. We are too tired to do more tutorial.       // [084]
+          : You only have so much mental strength.              // [084]
+          : SEARCH_FOR[ FLASH_GRAD ]And pick this back          // [084]
+          : up on camera later.                                 // [084]
 
 *** *************************************** MISC_DELTA_NOTES **/
 
