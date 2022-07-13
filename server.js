@@ -500,7 +500,7 @@ if( yesnode || notnode ){ //:--------------------------------://
     //:XXXXXXXX_WHAT_DOES_MARCELLUS_WALLUS_LOOK_LIKE_XXXXXXXX://
 
     var d_tik =(  0  );  /** Simulation Ticker **/              // [085]
-                         /** Inited Elsewhere  **/
+                         /** Inited Elsewhere  **/              // [085]
 
     
 
@@ -807,7 +807,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [085]
         ///   d_cligame_tms ; //:Target Millisecs   ://         // [085]
         var   d_cligame_ams ; //:Adjusted/LeftoverMS://         // [085]
                                                                 // [085]
-        ASS(  c_cligame_tms === ( 1000 / c_fps ) , "[TMS]" );   // [085]                     
+        ASS(  c_cligame_tms === ( 1000 / c_fps ) , "[TMS]" );   // [085]
                                                                 // [085]
                                                                 // [085]
 };;                                                             // [085]
@@ -1369,10 +1369,10 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
     const   F_ARTGIRL_TIK = function                            // [063] 
     PRIVATE_F_ARTGIRL_TIK(                                      //      [063] 
-        /**VOID**/                                              // [085][063] 
-    ){                                                          //      [063] 
-        let a_g = d_artgirl ;                                   //      [063] 
-                                                                //      [063] 
+        /**VOID**/                                              // [085][063]
+    ){                                                          //      [063]
+        let a_g = d_artgirl ;                                   //      [063]
+                                                                //      [063]
         var u_r ; //:uint32  red://                             // [085]
         var f_r ; //:float32 red://                             // [085]
 
@@ -2070,12 +2070,12 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     const   F_CLIGAME_TIK = function                            //      [063] 
     PRIVATE_F_CLIGAME_TIK(                                      //      [063] 
                                                                 //      [063] 
-        /** VOID **/                                            // [085][063]                        
-    ){                                                          //      [063] 
-        //:[ATF]:------------------------------------://        // [085][063] 
-        //: Games "Main" loop that updates both      ://        // [085][063] 
-        //: rendering and game logic.                ://        // [085][063] 
-        //:------------------------------------:[ATF]://        // [085][063] 
+        /** VOID **/                                            // [085][063]
+    ){                                                          //      [063]
+        //:[ATF]:------------------------------------://        // [085][063]
+        //: Games "Main" loop that updates both      ://        // [085][063]
+        //: rendering and game logic.                ://        // [085][063]
+        //:------------------------------------:[ATF]://        // [085][063]
         //:Incriment_Simulation_Ticker:--------------://        // [085]
 
         d_tik ++ ; //:[ GlobalSimulationTicker      ]://        // [085]
@@ -2088,7 +2088,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                                                                 // [085]
             d_cligame_t_0 = performance.now();                  // [085]
                                                                 // [---]
-                F_ARTGIRL_TIK( /**VOID**/ );                    // [085][063] 
+                F_ARTGIRL_TIK( /**VOID**/ );                    // [085][063]
                                                                 // [---]
             d_cligame_t_1 = performance.now();                  // [085]
                                                                 // [085]
@@ -3117,7 +3117,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : up on camera later.                                 // [084]
 
 *** *************************************** MISC_DELTA_NOTES **/
-//:HASHTAG_OR_ATTED_COMMENTS:================================://
+//:HASHTAG_OR_ATTED_COMMENTS:[085]:==========================://
 /** ******************************************************** ***
 
     [ABOUT_THIS_SECTION] :                                      // [085]
@@ -3139,25 +3139,25 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         has one delta note in it BELOW this section,            // [085]
         and move it to the maian[ MISC_DELTA_NOTES ]            // [085]
         when it is ready.                                       // [085]
-
-    #_TIK_TIMETRAVEL_# :
-
-        We might want to "backdate" a timestamp. So
-        this gaurantees us 1 hour's worth of backdating
-        when the game starts. 
-
-            30FPS == 2 hours backdating.
-    
-            60FPS == 1 hour  backdating.
-
-            I don't want to modify code based on framerate.
-            So... Just assume we have 1 hours worth of
-            back dating no matter what the framerate.
-
-    #_1_HOUR_BACKDATE_# :
-
-        Lets wait till , [_TIK_TIMETRAVEL_] to backdate.
-
+                                                                // [085]
+    #_TIK_TIMETRAVEL_# :                                        // [085]
+                                                                // [085]
+        We might want to "backdate" a timestamp. So             // [085]
+        this gaurantees us 1 hour's worth of backdating         // [085]
+        when the game starts.                                   // [085]
+                                                                // [085]
+            30FPS == 2 hours backdating.                        // [085]
+                                                                // [085]
+            60FPS == 1 hour  backdating.                        // [085]
+                                                                // [085]
+            I don't want to modify code based on framerate.     // [085]
+            So... Just assume we have 1 hours worth of          // [085]
+            back dating no matter what the framerate.           // [085]
+                                                                // [085]
+    #_1_HOUR_BACKDATE_# :                                       // [085]
+                                                                // [085]
+        Lets wait till , [_TIK_TIMETRAVEL_] to backdate.        // [085]
+                                                                // [085]
     #_SCRAPPED_REQUEST_ANIMATION_FRAME_#                        // [085]
                                                                 // [085]
         Scrapping this because it is more important             // [085]
@@ -3181,15 +3181,15 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     #FP_NORM# : Floating Point Normalization.                   // [085]
 
 *** ******************************************************** **/
-//:================================:HASHTAG_OR_ATTED_COMMENTS://
-//:THIS_COMMITS_DELTA_NOTE:==================================://
+//:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
+//:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [085] : Setting up the simulation ticker before we can
-          : setup the flashing shader code.
+    [085] : Setting up the simulation ticker before we can      // [085]
+          : setup the flashing shader code.                     // [085]
 
 
 *** ******************************************************** **/
-//:==================================:THIS_COMMITS_DELTA_NOTE://
+//:============================:THIS_COMMITS_DELTA_NOTE:[085]://
 
 
