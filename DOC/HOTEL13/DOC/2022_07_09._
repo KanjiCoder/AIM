@@ -1,0 +1,87 @@
+
+    //:Using Atomic Alice Colors For HOTEL13
+
+
+    var d_hotel13_ficolor_til =[
+
+        "#000000"   //: "BLACK"
+
+        //:----------------------------------://
+        //: Cut values in half to make       ://
+        //: them all darker.                 ://
+        //:----------------------------------://
+
+        //: C3/2 ==> 61 DARK_VERSIONS ://
+        //: FF/2 ==> 7F DARK_VERSIONS ://
+        //: 88/2 ==> 44 DARK_VERSIONS ://
+        //: 44/2 ==> 22 DARK_VERSIONS ://
+
+    ,   "#617F00"   //: "ELECTRIC_LIME"   
+    ,   "#447F00"   //: "LIME"            
+    ,   "#227F00"   //: "HARLEQUIN"       
+    ,   "#007F00"   //: "GREEN"           
+    ,   "#007F22"   //: "ZOISITE"         
+    ,   "#007F44"   //: "TEAL"            
+    ,   "#007F61"   //: "VAPOR"           
+    ,   "#007F7F"   //: "CYAN"            
+    ,   "#00617F"   //: "WATER"           
+    ,   "#00447F"   //: "SKY"             
+    ,   "#00227F"   //: "ARGON"           
+    ,   "#00007F"   //: "BLUE"            
+    ,   "#22007F"   //: "HAN_PURPLE"      
+    ,   "#44007F"   //: "INDIGO"          
+    ,   "#61007F"   //: "PURPLE_LIGHTNING"
+    ];;
+    var d_hotel13_ficolor_bom =[    //:PASTEL://
+
+        "#000000"   //: "BLACK"
+
+        //:----------------------------------://
+        //: All "00" channels got "99" to    ://
+        //: create pastel colors.            ://
+        //:----------------------------------://
+
+    ,   "#C3FF99"   //: "ELECTRIC_LIME"   
+    ,   "#88FF99"   //: "LIME"            
+    ,   "#44FF99"   //: "HARLEQUIN"       
+    ,   "#99FF99"   //: "GREEN"           
+    ,   "#99FF44"   //: "ZOISITE"         
+    ,   "#99FF88"   //: "TEAL"            
+    ,   "#99FFC3"   //: "VAPOR"           
+    ,   "#99FFFF"   //: "CYAN"            
+    ,   "#99C3FF"   //: "WATER"           
+    ,   "#9988FF"   //: "SKY"             
+    ,   "#9944FF"   //: "ARGON"           
+    ,   "#9900FF"   //: "BLUE"            
+    ,   "#4499FF"   //: "HAN_PURPLE"      
+    ,   "#8899FF"   //: "INDIGO"          
+    ,   "#C399FF"   //: "PURPLE_LIGHTNING"
+    ];;
+    var d_hotel13_ficolor_fad =[   //:FULLSAT://
+
+        "#000000"   //: "BLACK"
+
+        //:----------------------------------://
+        //: Some of the original atomic alice://
+        //: colors from my notes.            ://
+        //:----------------------------------://
+
+    ,   "#C3FF00"   //: "ELECTRIC_LIME"   
+    ,   "#88FF00"   //: "LIME"            
+    ,   "#44FF00"   //: "HARLEQUIN"       
+    ,   "#00FF00"   //: "GREEN"           
+    ,   "#00FF44"   //: "ZOISITE"         
+    ,   "#00FF88"   //: "TEAL"            
+    ,   "#00FFC3"   //: "VAPOR"           
+    ,   "#00FFFF"   //: "CYAN"            
+    ,   "#00C3FF"   //: "WATER"           
+    ,   "#0088FF"   //: "SKY"             
+    ,   "#0044FF"   //: "ARGON"           
+    ,   "#0000FF"   //: "BLUE"            
+    ,   "#4400FF"   //: "HAN_PURPLE"      
+    ,   "#8800FF"   //: "INDIGO"          
+    ,   "#C300FF"   //: "PURPLE_LIGHTNING"
+    ];;
+
+ 
+

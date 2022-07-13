@@ -1,0 +1,68 @@
+           window.alert( "[This formula isn't finished]" );
+            //: we need to check EVERY TILE under the 
+            //: potential tile we are about to set
+            //: for this check to be correct.
+        
+            o_hit =( 0 ); //:InnocentTillProvenGuilty://
+        
+            var dpx ; //:DataPixelX  ://
+            var dpy ; //:DataPixelY  ://
+            var dpi ; //:DataPixelINDEX ://
+            var dci ; //:DataComponentINDEX://
+            var te7 ; //:AllTileSizes://
+            var dia ; //:DiagonalOffset://
+            var lat ; //:LateralOffset ://
+            var lmx ; //:Lateral Move X ? ://
+            var lmy ; //:Lateral Move Y ? ://
+            /// peb ; //:PebbleSize       ://
+            var g_w ; //:GridCellWIDTH    ://
+            var g_h ; //:GridCellHEIGHT   ://
+            var t_x ; //:Tile X           ://
+            var t_y ; //:Tile Y           ://
+            
+            g_w = d_hotel13_sam.hot_can.width / 5 ;
+            g_h = d_hotel13_sam.hot_can.height/ 5 ;
+            
+            lmx =(          ( i_la3 % 2 ) );
+            lmy =(Math.floor( i_la3 / 2 ) );
+            
+            for( te7 = 0 ; te7 <=(7-1) ; te7 ++ ){
+            
+                dpx =( 512 )+( 128 * h_x );
+                dpy =( 512 )+( 128 * h_y );
+                
+                dia = d_hotel13_te7_dia[ te7 ];
+                lat = d_hotel13_te7_lat[ te7 ];
+                /// = d_hotel13_te7_peb[ te7 ];
+                
+                dpx += dia ;
+                dpy += dia ;
+                
+                dpx +=(lat * lmx);
+                dpy +=(lat * lmy);
+                
+                t_w = g_w / lat ; //: lat === ntx ://
+                t_h = g_h / lat ; //: lat === nty ://
+                
+                t_x = Math.floor( i_clk_p_x / t_w );
+                t_y = Math.floor( i_clk_p_y / t_h );
+                t_x = t_x % lat ;
+                t_y = t_y % lat ;
+                
+                dpx += t_x ;
+                dpy += t_y ;
+                
+                dpi = ( dpx + ( dpy * 2048 ) );
+                dci =( 4*dpi );
+                
+                if( 0
+                ||  d_pix2048[ dci+0 ] >= 0x1
+                ||  d_pix2048[ dci+1 ] >= 0x1
+                ||  d_pix2048[ dci+2 ] >= 0x1
+                ||  d_pix2048[ dci+3 ] >= 0x1
+                ){
+                
+                    o_hit =( 1 );
+                    break; //:exitloop://
+                };;
+            };;
