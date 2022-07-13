@@ -308,19 +308,17 @@
 
     //:CTRL_F_TAGS[ #illegal# ]                          ://    // [063] 
     //:TAG[ disallowed | its wrong carl | monkey wrench ]://    // [085]
-
+                                                                // [085]
     const d_fps =( "[MORE_SENSIBLE::c_fps]" );                  // [085]
     const i_tim =( "[REFACTORED_USE:d_tik]" );                  // [085]
     const d_tim =( "[YOU_MEAN:::::::d_tik]" );                  // [085]
-    const d_cligame_tik ="[FIX:d_tik]"       ;                  // [085]
+    const d_cligame_tik =( "[FIX:d_tik]"    );                  // [085]
                                                                 // [085]
     const c_cligame_t_0 =( "[FIX:NOT_CONST:d_cligame_t_0]" );   // [085]
     const c_cligame_t_1 =( "[FIX:NOT_CONST:d_cligame_t_1]" );   // [085]
     const c_cligame_mil =( "[FIX:NOT_CONST:d_cligame_mil]" );   // [085]
     const c_cligame_ams =( "[FIX:NOT_CONST:d_cligame_ams]" );   // [085]
-
     const d_cligame_tms =( "[IS_CONSTANT:::c_cligame_tms]" );   // [085]
-
 
     const idv =( "[FIX:vid]" );                                 // [071]
     const idf =( "[FIX:fid]" );                                 // [071]
@@ -1379,10 +1377,10 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         var f_r ; //:float32 red://                             // [085]
 
         var u_r = ( d_tik % 256     ); //:#I32_MOD#://          // [085][063]
-        var f_r = ( u_r   / 255     ); //:#FP_NORM#://
+        var f_r = ( u_r   / 255     ); //:#FP_NORM#://          // [085]
 
-        if( f_r > 255.0 ){ ERR("[f_r:big]" );                   // [085][063]
-        if( f_r <   0.0 ){ ERR("[f_r:low]" );                   // [085]
+        if( f_r > 255.0 ){ ERR("[f_r:big]" ); };                // [085][063]
+        if( f_r <   0.0 ){ ERR("[f_r:low]" ); };                // [085]
  
         a_g.wgl.clearColor( f_r , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
@@ -2080,10 +2078,10 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         //:------------------------------------:[ATF]://        // [085][063] 
         //:Incriment_Simulation_Ticker:--------------://        // [085]
 
-        d_tik ++ //:[ GlobalSimulationTicker        ]://        // [085]
-                 //:[ d_tik is the rule of law      ]://        // [085]
-                 //:[ i_tim wasn't well thought out ]://        // [085]
-                 //:TAG[ d_tik++ | d_tik ++ | tik++ ]://        // [085]
+        d_tik ++ ; //:[ GlobalSimulationTicker      ]://        // [085]
+                  //:[ d_tik is the rule of law     ]://        // [085]
+                  //:[ i_tim wasn't well thought out]://        // [085]
+                  //:TAG[ d_tik++ | d_tik ++ | tik++]://        // [085]
 
         //:--------------:Incriment_Simulation_Ticker://        // [085]
         //:Do_Work_And_Adjust_Frame_Delay:-----------://        // [085]
