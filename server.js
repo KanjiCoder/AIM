@@ -108,6 +108,11 @@
     );;                                                         // [077]
 
 //:====================================:ENVIRONMENT_DETECTION://
+//:TOP_LEVEL_CONSTANT_MACROS:[085]:==========================://// [085]
+                                                                // [085]
+    var c_fps =(  30  );  /** Simulation FrameRate **/          // [085]
+                                                                // [085]
+//:==========================:TOP_LEVEL_CONSTANT_MACROS:[085]://// [085]
 //:SHUTARR:[077]:============================================://
 
     const F_SHUTARR = function PRIVATE_F_SHUTARR(               // [077]
@@ -301,7 +306,21 @@
 //:====================================:NON_CONST_ARRAY:[067]://// [---]
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
 
-    //: CTRL_F_TAGS[ #illegal# ]                        [063]://
+    //:CTRL_F_TAGS[ #illegal# ]                          ://    // [063] 
+    //:TAG[ disallowed | its wrong carl | monkey wrench ]://    // [085]
+
+    const d_fps =( "[MORE_SENSIBLE::c_fps]" );                  // [085]
+    const i_tim =( "[REFACTORED_USE:d_tik]" );                  // [085]
+    const d_tim =( "[YOU_MEAN:::::::d_tik]" );                  // [085]
+    const d_cligame_tik ="[FIX:d_tik]"       ;                  // [085]
+                                                                // [085]
+    const c_cligame_t_0 =( "[FIX:NOT_CONST:d_cligame_t_0]" );   // [085]
+    const c_cligame_t_1 =( "[FIX:NOT_CONST:d_cligame_t_1]" );   // [085]
+    const c_cligame_mil =( "[FIX:NOT_CONST:d_cligame_mil]" );   // [085]
+    const c_cligame_ams =( "[FIX:NOT_CONST:d_cligame_ams]" );   // [085]
+
+    const d_cligame_tms =( "[IS_CONSTANT:::c_cligame_tms]" );   // [085]
+
 
     const idv =( "[FIX:vid]" );                                 // [071]
     const idf =( "[FIX:fid]" );                                 // [071]
@@ -482,6 +501,10 @@ if( yesnode || notnode ){ //:--------------------------------://
 
     //:XXXXXXXX_WHAT_DOES_MARCELLUS_WALLUS_LOOK_LIKE_XXXXXXXX://
 
+    var d_tik =(  0  );  /** Simulation Ticker **/              // [085]
+                         /** Inited Elsewhere  **/
+
+    
 
 
 };; //:------------------------------------------------------://
@@ -504,6 +527,12 @@ if( yesnode ){ //:-------------------------------------------://
 };; //:------------------------------------------------------://
 //:============================:MASTER_DECLARATION_LIBS:[035]://
 //:CONST_MACROS_BY_SYSTEM[074]:==============================://// [---]
+
+//: __CLIGAME__ ://                                             // [085]
+                                                                // [085]
+    const c_cligame_tms =( 1000 / c_fps );                      // [085]
+
+
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
 
@@ -525,6 +554,13 @@ if( yesnode ){ //:-------------------------------------------://
     /** Different Rendering Pipelines [064] **/                 // [064] 
     /** *********************************** **/                 // [064] 
                                                                 // [064] 
+    //:--------------------------------------------------://    // [085]
+    //:TAG[ shader types | shader type | slotted shaders]://    // [085]
+    //:TAG[ reserved shaders | shader enums | shader id ]://    // [085]
+    //:TAG[ shaders on the table | planned shaders      ]://    // [085]
+    //:TAG[ shader identifiers | renderers | rendernums ]://    // [085]
+    //:TAG[ slotted renderers | slated renderers        ]://    // [085]
+    //:--------------------------------------------------://    // [085]
                                                                          
     const c_artgirl_ren_000 = "[DONT_USE:000]" ;                // [068] 
     const c_artgirl_ren_bad = ( 0 ); //:Select:ren_def       ://// [068] 
@@ -762,6 +798,21 @@ const d_artgirl_ssf_009 =( //: ShaderSourceFrag #09@ssf@[081]://   [081]
 //:=========================:__ARTGIRL__:SHADER_STRINGS:[074]://// [---]
 //:DATA_BY_SYSTEM:[063]:=====================================://// [---]
                                                                 // [063]
+
+if( /** __CLIGAME__ **/ notnode ){                              // [085]
+                                                                // [085]
+    /** Frame Rate Control **/                                  // [085]
+                                                                // [085]
+        var   d_cligame_t_0 ; //:TimeStampBeforeWork://         // [085]
+        var   d_cligame_t_1 ; //:TimeStampAfterWork ://         // [085]
+        var   d_cligame_mil ; //:ElapsedMilliseconds://         // [085]
+        ///   d_cligame_tms ; //:Target Millisecs   ://         // [085]
+        var   d_cligame_ams ; //:Adjusted/LeftoverMS://         // [085]
+                                                                // [085]
+        ASS(  c_cligame_tms === ( 1000 / c_fps ) , "[TMS]" );   // [085]                     
+                                                                // [085]
+                                                                // [085]
+};;                                                             // [085]
 if( /** __ARTGIRL__ **/ notnode ){                              // [063] 
                                                                 // [063] 
     var d_artgirl_wgl =( "[FIX:a_g.wgl]" );                     // [063] 
@@ -965,6 +1016,8 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     //:client_global_data:[031]:-------------------------://
 
         const dom_can = "[REFACTORED_TO:d_can:[035]]" ;
+
+        d_tik =( 60 * 60 * 1000 );  //:#_TIK_TIMETRAVEL_#://    // [085]
        
     //:-------------------------:client_global_data:[031]://
     //:boilerplate:[028]:--------------------------------://
@@ -1317,16 +1370,21 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     };;                                                         // [068] 
 
     const   F_ARTGIRL_TIK = function                            // [063] 
-    PRIVATE_F_ARTGIRL_TIK(                                      // [063] 
-        i_tim                                                   // [063] 
-    ){                                                          // [063] 
-        let a_g = d_artgirl ;                                   // [063] 
-                                                                // [063] 
-        var _R_ = ( i_tim % 255.000 );                          // [063] 
-        if( _R_ > 255.0 ){ ERR("[_R_]"); };                     // [063] 
-            _R_ = ( _R_ / 255.0 );                              // [063] 
-                                                                // [063] 
-        a_g.wgl.clearColor( _R_ , 0.0 , 0.0 , 1.0 );            // [063] 
+    PRIVATE_F_ARTGIRL_TIK(                                      //      [063] 
+        /**VOID**/                                              // [085][063] 
+    ){                                                          //      [063] 
+        let a_g = d_artgirl ;                                   //      [063] 
+                                                                //      [063] 
+        var u_r ; //:uint32  red://                             // [085]
+        var f_r ; //:float32 red://                             // [085]
+
+        var u_r = ( d_tik % 256     ); //:#I32_MOD#://          // [085][063]
+        var f_r = ( u_r   / 255     ); //:#FP_NORM#://
+
+        if( f_r > 255.0 ){ ERR("[f_r:big]" );                   // [085][063]
+        if( f_r <   0.0 ){ ERR("[f_r:low]" );                   // [085]
+ 
+        a_g.wgl.clearColor( f_r , 0.0 , 0.0 , 1.0 );            // [063] 
         a_g.wgl.clear( a_g.wgl.COLOR_BUFFER_BIT );              // [063] 
 
         a_g.wgl.bindVertexArray( a_g.vao );   /**#GLSNAPSHOT#**/// [078][074]
@@ -2011,32 +2069,65 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 //|[ @$$$$$@ ]                                               |//
 //|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
            
-    const   F_CLIGAME_TIK = function                 //:[063]://
-    PRIVATE_F_CLIGAME_TIK(                           //:[063]://
-                                                     //:[063]://
-        i_tim                                        //:[063]://
-    ){                                               //:[063]://
-                                                     //:[063]://
-        /** ************************************ **/ //:[063]://
-        /** Games "Main" loop that updates both  **/ //:[063]://
-        /** rendering and game logic.            **/ //:[063]://
-        /** ************************************ **/ //:[063]://
-                                                     //:[063]://
-        F_ARTGIRL_TIK( i_tim );                      //:[063]://
-    };;                                              //:[063]://
-                                                     //:[063]://
-    const   F_CLIGAME_GUL = function                 //:[063]://
-    PRIVATE_F_CLIGAME_GUL(                           //:[063]://
-                                                     //:[063]://
-        i_tim                                        //:[063]://
-    ){                                               //:[063]://
-        F_CLIGAME_TIK( i_tim );                      //:[063]://
-                                                     //:[063]://
-        window.requestAnimationFrame(                //:[063]://
-                                                     //:[063]://
-            F_CLIGAME_GUL                            //:[063]://
-        );;                                          //:[063]://
-    };;                                              //:[063]://
+    const   F_CLIGAME_TIK = function                            //      [063] 
+    PRIVATE_F_CLIGAME_TIK(                                      //      [063] 
+                                                                //      [063] 
+        /** VOID **/                                            // [085][063]                        
+    ){                                                          //      [063] 
+        //:[ATF]:------------------------------------://        // [085][063] 
+        //: Games "Main" loop that updates both      ://        // [085][063] 
+        //: rendering and game logic.                ://        // [085][063] 
+        //:------------------------------------:[ATF]://        // [085][063] 
+        //:Incriment_Simulation_Ticker:--------------://        // [085]
+
+        d_tik ++ //:[ GlobalSimulationTicker        ]://        // [085]
+                 //:[ d_tik is the rule of law      ]://        // [085]
+                 //:[ i_tim wasn't well thought out ]://        // [085]
+                 //:TAG[ d_tik++ | d_tik ++ | tik++ ]://        // [085]
+
+        //:--------------:Incriment_Simulation_Ticker://        // [085]
+        //:Do_Work_And_Adjust_Frame_Delay:-----------://        // [085]
+                                                                // [085]
+            d_cligame_t_0 = performance.now();                  // [085]
+                                                                // [---]
+                F_ARTGIRL_TIK( /**VOID**/ );                    // [085][063] 
+                                                                // [---]
+            d_cligame_t_1 = performance.now();                  // [085]
+                                                                // [085]
+            d_cligame_mil =(  d_cligame_t_1                     // [085]
+                             -d_cligame_t_0 );;                 // [085]
+                                                                // [085]
+            d_cligame_ams =(  c_cligame_tms                     // [085]
+                            - d_cligame_mil );;                 // [085]
+                                                                // [085]
+        //:-----------:Do_Work_And_Adjust_Frame_Delay://        // [085]
+                                                                // [---]
+    };;                                                         //      [063] 
+                                                                //      [063] 
+    const   F_CLIGAME_GUL = function                            //      [063] 
+    PRIVATE_F_CLIGAME_GUL(                                      //      [063] 
+                                                                //      [063] 
+        /** VOID **/                                            // [085][063] 
+    ){                                                          //      [063] 
+        F_CLIGAME_TIK( /** VOID **/ );                          // [085][063] 
+                                                                //      [063] 
+        //:#_SCRAPPED_REQUEST_ANIMATION_FRAME_#://              // [085]
+                                                                // [085]
+        //:----------------------------------------------://    // [085]
+        //: To achieve the desired frame rate, we need   ://    // [085]
+        //: to call our loop function AFTER ALLOTED TIME ://    // [085]
+        //: SLOT RUNS OUT! "ams" is the milliseconds     ://    // [085]
+        //: that are left-over in our frame after        ://    // [085]
+        //: we run all the code that needs to run        ://    // [085]
+        //: via[ F_CLIGAME_TIK ].                        ://    // [085]
+        //:                                              ://    // [085]
+        //: ams == adjusted milli-seconds                ://    // [085]
+        //:----------------------------------------------://    // [085]
+        window.setTimeout(                                      // [085]
+            ( F_CLIGAME_GUL )   //:@RECURSIVE@ ://              // [085]
+        ,   ( d_cligame_ams )   //:LeftoverTime://              // [085]
+        );;                                                     // [085]
+    };;                                                         //      [063] 
 
 //|--|--|--|--|--|--|--|--|--|0064|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
@@ -3028,4 +3119,79 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : up on camera later.                                 // [084]
 
 *** *************************************** MISC_DELTA_NOTES **/
+//:HASHTAG_OR_ATTED_COMMENTS:================================://
+/** ******************************************************** ***
+
+    [ABOUT_THIS_SECTION] :                                      // [085]
+                                                                // [085]
+        Decided it is better for workflow to have @atted@       // [085]
+        and #hashed# comments in same section.                  // [085]
+                                                                // [085]
+    @ABOUT_THIS_SECTION@ : Marks Section Explanation.           // [085]
+    @ATS@ : [ATS]:[ about this struct ]or[ about this section ] // [085]
+                                                                // [085]
+    #_HOTEL13_COMMENT_WORKFLOW_# :                              // [085]
+                                                                // [085]
+        Think about locality. The thing I go to the             // [085]
+        most when coding is the hashtagged and atted            // [085]
+        comments. So make a section for EITHER here             // [085]
+        and put at bottom of file. The next most                // [085]
+        common thing for me to touch is "MISC_DELTA_NOTES"      // [085]
+        so make a [THIS_COMMITS_DELTA_NOTE] that only           // [085]
+        has one delta note in it BELOW this section,            // [085]
+        and move it to the maian[ MISC_DELTA_NOTES ]            // [085]
+        when it is ready.                                       // [085]
+
+    #_TIK_TIMETRAVEL_# :
+
+        We might want to "backdate" a timestamp. So
+        this gaurantees us 1 hour's worth of backdating
+        when the game starts. 
+
+            30FPS == 2 hours backdating.
+    
+            60FPS == 1 hour  backdating.
+
+            I don't want to modify code based on framerate.
+            So... Just assume we have 1 hours worth of
+            back dating no matter what the framerate.
+
+    #_1_HOUR_BACKDATE_# :
+
+        Lets wait till , [_TIK_TIMETRAVEL_] to backdate.
+
+    #_SCRAPPED_REQUEST_ANIMATION_FRAME_#                        // [085]
+                                                                // [085]
+        Scrapping this because it is more important             // [085]
+        to me that [simulation/logic] code is                   // [085]
+        called when it needs to be called. We can               // [085]
+        worry about things like proper "v-sync"                 // [085]
+        later when we have a fucking game.                      // [085]
+                                                                // [085]
+        window.requestAnimationFrame(                           // [085]
+                                                                // [085]
+            F_CLIGAME_GUL                                       // [085]
+        );;                                                     // [085]
+                                                                // [085]
+    F_CLIGAME_TIKLOOP : SEE[ F_CLIGAME_GUL | F_CLIGAME_TIK ]    // [085]
+    F_CLIGAME_LOOP    : SEE[ F_CLIGAME_GUL | F_CLIGAME_TIK ]    // [085]
+                                                                // [085]
+    @RECURSIVE@ : Making note of recursion in general or        // [085]
+                : the site of a recursive function call.        // [085]
+                                                                // [085]
+    #I32_MOD# : integer modulus.                                // [085]
+    #FP_NORM# : Floating Point Normalization.                   // [085]
+
+*** ******************************************************** **/
+//:================================:HASHTAG_OR_ATTED_COMMENTS://
+//:THIS_COMMITS_DELTA_NOTE:==================================://
+/** ******************************************************** ***
+
+    [085] : Setting up the simulation ticker before we can
+          : setup the flashing shader code.
+
+
+*** ******************************************************** **/
+//:==================================:THIS_COMMITS_DELTA_NOTE://
+
 
