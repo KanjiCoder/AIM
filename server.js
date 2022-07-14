@@ -528,7 +528,7 @@ if( yesnode ){ //:-------------------------------------------://
 
 //: __CLIGAME__ ://                                             // [085]
                                                                 // [085]
-    const c_cligame_tms =( 1000 / c_fps );                      // [085]
+    const c_cligame_tms =( 1000 / c_fps ); /**Target_MIL sec**/ // [085]
 
 
                                                     
