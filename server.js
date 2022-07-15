@@ -538,7 +538,7 @@ if( yesnode ){ //:-------------------------------------------://
                                                                 // [077]
         const c_artgirl_loc_pos =( 0 /** #S_POS# **/ );         // [077]
         const c_artgirl_loc_tex =( 1 /** #S_TEX# **/ );         // [077]
-        const c_artgirl_loc_tik =( 2 /** #D_TIK# **/ );         // [086]
+        const c_artgirl_loc_tik =( "[#NO_LOC_TIK#]"  );         // [086]
 
     /** What Version Of WebGl Are We Using? **/
 
@@ -688,11 +688,11 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
                                                                         
     precision mediump float ;                                   // [074]
     
-    #define F32 float
-    #define U32 uint
-    #define UNI uniform
+    #define F32 float    //: Shorthand Type == Uppercase ://    // [086]
+    #define U32 uint     //: Shorthand Type == Uppercase ://    // [086]
+    #define UNI uniform  //: Shorthand Type == Uppercase ://    // [086]
 
-    layout( location = ${c_artgirl_loc_tik} ) UNI U32 d_tik ;   // [086]
+    UNI U32 d_tik ;                                             // [086]
                                                                 //      [074]
     in  vec2  i_o_tex ; //: @i_o_tex@ ://                       //      [074]
     out vec4  out_f_c ; //: @out_f_c@ ://                       //      [074]
@@ -700,7 +700,7 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
     void main(){                                                //      [074]
                                                                 //      [074]
 
-        F32 f32 = F32( d_tik ) / 255.0 ;
+        F32 f32 = mod( F32( d_tik ) , 255.0 ) ;                 // [086]
         out_f_c = vec4( 0 , 0 ,f32 , 1.0 ); //:BLUE://          // [086][074]
     }                                                           //      [074]
                                                                         
@@ -3198,6 +3198,13 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     #D_TIK# : Slot value for "d_tik" uniform when uploading     // [086]
             : from cpu to gpu.                                  // [086]
+
+    #NO_LOC_TIK# : uniforms don't get layouts. Weird because
+                 : is see it in documentation here.
+                 :
+                 : https://www.khronos.org/opengl/wiki/
+                 :         Layout_Qualifier_(GLSL)
+                 :          #Explicit_uniform_location
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
