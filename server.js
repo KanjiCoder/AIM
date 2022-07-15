@@ -700,7 +700,7 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
     void main(){                                                //      [074]
                                                                 //      [074]
 
-        F32 f32 = mod( F32( d_tik ) , 255.0 ) ;                 // [086]
+        F32 f32 = mod( F32( d_tik ) , 255.0  ) / 255.0 ;                 // [086]
         out_f_c = vec4( 0 , 0 ,f32 , 1.0 ); //:BLUE://          // [086][074]
     }                                                           //      [074]
                                                                         
