@@ -534,10 +534,11 @@ if( yesnode ){ //:-------------------------------------------://
                                                     
 //: __ARTGIRL__ ://                                  //:[064]://
 
-    /** Shader Attribute Locations. **/                         // [077]
+    /** Shader Attribute AND Uniform Locations. **/             // [086][077]
                                                                 // [077]
         const c_artgirl_loc_pos =( 0 /** #S_POS# **/ );         // [077]
         const c_artgirl_loc_tex =( 1 /** #S_TEX# **/ );         // [077]
+        const c_artgirl_loc_tik =( 2 /** #D_TIK# **/ );         // [086]
 
     /** What Version Of WebGl Are We Using? **/
 
@@ -3121,6 +3122,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){
           : SEARCH_FOR[ FLASH_GRAD ]And pick this back          // [084]
           : up on camera later.                                 // [084]
 
+    [085] : Setting up the simulation ticker before we can      // [085]
+          : setup the flashing shader code.                     // [085]
+
 *** *************************************** MISC_DELTA_NOTES **/
 //:HASHTAG_OR_ATTED_COMMENTS:[085]:==========================://
 /** ******************************************************** ***
@@ -3185,13 +3189,15 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     #I32_MOD# : integer modulus.                                // [085]
     #FP_NORM# : Floating Point Normalization.                   // [085]
 
+    #D_TIK# : Slot value for "d_tik" uniform when uploading     // [086]
+            : from cpu to gpu.                                  // [086]
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [085] : Setting up the simulation ticker before we can      // [085]
-          : setup the flashing shader code.                     // [085]
+    [086] : xxxxxxxxxxxxxxxxxx
 
 
 *** ******************************************************** **/
