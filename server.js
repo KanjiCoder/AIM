@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_085  <<< THIS_VIDEO¯S_CODE    // [085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_086  <<< THIS_VIDEO¯S_CODE    // [086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -686,14 +686,19 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
     //: FRAG_SHADER_SUM[ FlashingScreen / FLASH_GRAD ]://       // [084]
                                                                         
     precision mediump float ;                                   // [074]
-                                                                // [074]
-    in  vec2  i_o_tex ; //: @i_o_tex@ ://                       // [074]
-    out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
-                                                                // [074]
-    void main(){                                                // [074]
-                                                                // [074]
-        out_f_c = vec4( 0 , 1 , 1 , 1.0 ); //:CYAN://           // [074]
-    }                                                           // [074]
+
+    #define U32 uint
+    #define UNI uniform
+
+    layout( location = ${ c_artgirl_loc_tik} ) UNI U32 d_tik ;  // [086]
+                                                                //      [074]
+    in  vec2  i_o_tex ; //: @i_o_tex@ ://                       //      [074]
+    out vec4  out_f_c ; //: @out_f_c@ ://                       //      [074]
+                                                                //      [074]
+    void main(){                                                //      [074]
+                                                                //      [074]
+        out_f_c = vec4( 0 , 0 ,0.5 , 1.0 ); //:BLUE://          // [086][074]
+    }                                                           //      [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
 const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
