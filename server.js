@@ -687,7 +687,8 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
     //: FRAG_SHADER_SUM[ FlashingScreen / FLASH_GRAD ]://       // [084]
                                                                         
     precision mediump float ;                                   // [074]
-
+    
+    #define F32 float
     #define U32 uint
     #define UNI uniform
 
@@ -698,7 +699,9 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
                                                                 //      [074]
     void main(){                                                //      [074]
                                                                 //      [074]
-        out_f_c = vec4( 0 , 0 ,0.5 , 1.0 ); //:BLUE://          // [086][074]
+
+        F32 f32 = F32( d_tik ) / 255.0 ;
+        out_f_c = vec4( 0 , 0 ,f32 , 1.0 ); //:BLUE://          // [086][074]
     }                                                           //      [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
