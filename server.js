@@ -702,8 +702,15 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
     void main(){                                                //      [074]
                                                                 //      [074]
 
-        F32 f32 = mod( F32( d_tik ) , 255.0  ) / 255.0 ;                 // [086]
-        out_f_c = vec4( 0 , 0 ,f32 , 1.0 ); //:BLUE://          // [086][074]
+        F32 f32 = mod( F32( d_tik ) , 255.0  ) / 255.0 ;        // [086]
+                                                                // [086]
+        out_f_c = vec4(                                         // [086]
+            i_o_tex.x                                           // [086]
+        ,   i_o_tex.y                                           // [086]
+        ,   f32                                                 // [086]
+        ,   1.0                                                 // [086]
+        );; //:INCREASING_BLUE://                               // [086][074]
+
     }                                                           //      [074]
                                                                         
 `));; //////////////////////////////////////////////////////////   [069]
@@ -1388,17 +1395,17 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         let a_g = d_artgirl     ;                               //      [063]
         let wgl = d_artgirl.wgl ;                               // [086]
 
-        //:update_frag_shader_uniforms:[086]-------------://
-
-            //:[#PMOITROAE#]://
-            var act_pid =( a_g.arr_pid[ a_g.ren_pin ] );
-            var loc_tik = wgl.getUniformLocation( 
-                act_pid
-            ,   "d_tik" 
-            );;
-            a_g.wgl.uniform1ui( loc_tik , d_tik );
-
-        //:------------:[086]:update_frag_shader_uniforms://
+        //:update_frag_shader_uniforms:[086]-------------://    // [086]
+                                                                // [086]
+            //:[#PMOITROAE#]://                                 // [086]
+            var act_pid =( a_g.arr_pid[ a_g.ren_pin ] );        // [086]
+            var loc_tik = wgl.getUniformLocation(               // [086]
+                act_pid                                         // [086]
+            ,   "d_tik"                                         // [086]
+            );;                                                 // [086]
+            a_g.wgl.uniform1ui( loc_tik , d_tik );              // [086]
+                                                                // [086]
+        //:------------:[086]:update_frag_shader_uniforms://    // [086]
 
         var u_r ; //:uint32  red://                             // [085]
         var f_r ; //:float32 red://                             // [085]
