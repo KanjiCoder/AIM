@@ -693,7 +693,7 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
     #define F32 float    //: Shorthand Type == Uppercase ://    // [086]
     #define U32 uint     //: Shorthand Type == Uppercase ://    // [086]
     #define UNI uniform  //: Shorthand Type == Uppercase ://    // [086]
-
+                                                                // [086]
     UNI U32 d_tik ;                                             // [086]
                                                                 //      [074]
     in  vec2  i_o_tex ; //: @i_o_tex@ ://                       //      [074]
@@ -705,8 +705,8 @@ const d_artgirl_ssf_004 =( //: ShaderSourceFrag #04@ssf@[069]://   [070][069]
         F32 f32 = mod( F32( d_tik ) , 255.0  ) / 255.0 ;        // [086]
                                                                 // [086]
         out_f_c = vec4(                  ///                    // [086]
-            mod( i_o_tex.x * 10.0 , 1.0 )///                    // [086]                 
-        ,   mod( i_o_tex.y * 10.0 , 1.0 )///                    // [086]                 
+            mod( i_o_tex.x * 10.0 , 1.0 )///                    // [086]
+        ,   mod( i_o_tex.y * 10.0 , 1.0 )///                    // [086]
         ,   f32                          ///                    // [086]
         ,   1.0                          ///                    // [086]
         );; //:INCREASING_BLUE://///////////                    // [086][074]
@@ -1394,7 +1394,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     ){                                                          //      [063]
         let a_g = d_artgirl     ;                               //      [063]
         let wgl = d_artgirl.wgl ;                               // [086]
-
+                                                                // [086]
         //:update_frag_shader_uniforms:[086]-------------://    // [086]
                                                                 // [086]
             //:[#PMOITROAE#]://                                 // [086]
@@ -1660,20 +1660,20 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                     a_g.arr_fid[ i_r ]=ASS( fid );              // [072]
                 }else                                           // [072]
                 if( 0 == o_k ){                                 // [072]
-
+                                                                // [---]
                     MSG( "[*****************************]\n" ); // [086]
-                    MSG("[BEG:ssf]\n\n");                       // [072]
-                                                                // [072]
-                    MSG( ssf );                                 // [072]
-                                                                // [072]
-                    MSG( "[END:ssf]\n\n"                );      // [072]
+                    MSG("[BEG:ssf]\n\n");                       //      [072]
+                                                                //      [072]
+                    MSG( ssf );                                 //      [072]
+                                                                //      [072]
+                    MSG( "[END:ssf]\n\n"                );      //      [072]
                     console.log( "[fragerr:msg]:" , msg );      // [086]
-                    LOG( "[C_S:INFOLOG:F_S]"      , msg );      // [072]
+                    LOG( "[C_S:INFOLOG:F_S]"      , msg );      //      [072]
                     MSG( "[*****************************]\n" ); // [086]
-                    ERR( "[C_S:FRAG_SHADER]"       );           // [072]
-                }else{                                          // [072]
-                    ERR("[WTFMAN:FRAG]");                       // [072]
-                };;                                             // [072]
+                    ERR( "[C_S:FRAG_SHADER]"       );           //      [072]
+                }else{                                          //      [072]
+                    ERR("[WTFMAN:FRAG]");                       //      [072]
+                };;                                             //      [072]
                                                                 // [---]
             };;};;                                              // [071]
         //:-----------:compile_all_fragment_shaders:[071]://    // [071]
@@ -3244,7 +3244,14 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [086] : xxxxxxxxxxxxxxxxxx
+
+    [086] : Now uploading[ d_tik ]value to shader uniform       
+          : variable of same name every frame.                  
+          :                                                     
+          : Numkey 4 ==> Gradient Shader. Got a bit fancy       
+          : with making tiles with modulus so it is             
+          : visually distinct enough from Numkey 3.             
+
 
 
 *** ******************************************************** **/
