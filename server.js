@@ -308,7 +308,9 @@
 
     //:CTRL_F_TAGS[ #illegal# ]                          ://    // [063] 
     //:TAG[ disallowed | its wrong carl | monkey wrench ]://    // [085]
-                                                                // [085]
+    //:TAG[ its-wrong-carl | itswrongcarl | wrong_carl  ]://    // [086]
+    //:TAG[ its_wrong_carl .............................]://    // [086]
+                                                                 
     const d_fps =( "[MORE_SENSIBLE::c_fps]" );                  // [085]
     const i_tim =( "[REFACTORED_USE:d_tik]" );                  // [085]
     const d_tim =( "[YOU_MEAN:::::::d_tik]" );                  // [085]
@@ -842,7 +844,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     ,   lot : "[nil][d_artgirl_lot]"    //:@lot@://             // [067]  
     ,   sam : "[nil][d_artgirl_sam]"    //:@sam@://             // [067]  
                                                                 // [067]  
-        /** #_O_P_P_# : One Per Program **/                     // [067]  
+        /** #_O_P_P_# : One Per Program **/                     // [067]
+
+    ,   ren_pin : (0-666)  //:AT[ren_pin]://                    // [086]
                                                                 // [---]
     ,arr_pid:F_ARR(c_artgirl_ren_tot +1 ) //: @pid@ #_O_P_P_#://// [069]
     ,arr_vid:F_ARR(c_artgirl_ren_tot +1 ) //: @vid@ #_O_P_P_#://// [069]
@@ -1362,17 +1366,18 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                                                                 // [068] 
         LOG( "[[RENDER_PIPELINE_LOAD]:RPL]" , i_ren );          // [082][068]
 
-        //:LIKE_AND_SUBSCRIBE_YOU_FREELOADER:[082]:------://    // [082]
-                                                                // [082]
-            let a_g = d_artgirl     ;          //:@MACRO@://    // [082]
-            let wgl = d_artgirl.wgl ;          //:@MACRO@://    // [082]
-            if( NIL( wgl ) ){                                   // [082]
-                LOG("[CALM_THE_FUCK_DOWN_AND_WAIT]");           // [082]
-            }else{                                              // [082]
-                var pid = a_g.arr_pid[ i_ren ];                 // [082]
-                wgl.useProgram( pid );                          // [082]
-            };;                                                 // [082]
-        //:------:LIKE_AND_SUBSCRIBE_YOU_FREELOADER:[082]://    // [082]
+        //:LIKE_AND_SUBSCRIBE_YOU_FREELOADER:[082]:------://    //      [082]
+                                                                //      [082]
+            let a_g = d_artgirl     ;          //:@MACRO@://    //      [082]
+            let wgl = d_artgirl.wgl ;          //:@MACRO@://    //      [082]
+            if( NIL( wgl ) ){                                   //      [082]
+                LOG("[CALM_THE_FUCK_DOWN_AND_WAIT]");           //      [082]
+            }else{                                              //      [082]
+                var pid = a_g.arr_pid[ i_ren ];                 //      [082]
+                wgl.useProgram( pid );                          //      [082]
+                a_g.ren_pin=( i_ren );                          // [086]
+            };;                                                 //      [082]
+        //:------:LIKE_AND_SUBSCRIBE_YOU_FREELOADER:[082]://    //      [082]
 
     };;                                                         // [068] 
 
@@ -1380,8 +1385,21 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     PRIVATE_F_ARTGIRL_TIK(                                      //      [063] 
         /**VOID**/                                              // [085][063]
     ){                                                          //      [063]
-        let a_g = d_artgirl ;                                   //      [063]
-                                                                //      [063]
+        let a_g = d_artgirl     ;                               //      [063]
+        let wgl = d_artgirl.wgl ;                               // [086]
+
+        //:update_frag_shader_uniforms:[086]-------------://
+
+            //:[#PMOITROAE#]://
+            var act_pid =( a_g.arr_pid[ a_g.ren_pin ] );
+            var loc_tik = wgl.getUniformLocation( 
+                act_pid
+            ,   "d_tik" 
+            );;
+            a_g.wgl.uniform1ui( loc_tik , d_tik );
+
+        //:------------:[086]:update_frag_shader_uniforms://
+
         var u_r ; //:uint32  red://                             // [085]
         var f_r ; //:float32 red://                             // [085]
 
@@ -2091,10 +2109,10 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         //:------------------------------------:[ATF]://        // [085][063]
         //:Incriment_Simulation_Ticker:--------------://        // [085]
 
-        d_tik ++ ; //:[ GlobalSimulationTicker      ]://        // [085]
-                  //:[ d_tik is the rule of law     ]://        // [085]
-                  //:[ i_tim wasn't well thought out]://        // [085]
-                  //:TAG[ d_tik++ | d_tik ++ | tik++]://        // [085]
+        d_tik ++ ; //:[ GlobalSimulationTicker      ]://        //      [085]
+                   //:[ d_tik is the rule of law    ]://        //      [085]
+                   //:[ No more[ i_tim ]            ]://        // [086][085]
+                   //:TAG[ d_tik++|d_tik ++|tik++   ]://        // [086][085]
 
         //:--------------:Incriment_Simulation_Ticker://        // [085]
         //:Do_Work_And_Adjust_Frame_Delay:-----------://        // [085]
@@ -3198,13 +3216,21 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 
     #D_TIK# : Slot value for "d_tik" uniform when uploading     // [086]
             : from cpu to gpu.                                  // [086]
-
-    #NO_LOC_TIK# : uniforms don't get layouts. Weird because
-                 : is see it in documentation here.
-                 :
-                 : https://www.khronos.org/opengl/wiki/
-                 :         Layout_Qualifier_(GLSL)
-                 :          #Explicit_uniform_location
+                                                                // [086]
+    #NO_LOC_TIK# : uniforms don't get layouts. Weird because    // [086]
+                 : is see it in documentation here.             // [086]
+                 :                                              // [086]
+                 : https://www.khronos.org/opengl/wiki/         // [086]
+                 :         Layout_Qualifier_(GLSL)              // [086]
+                 :          #Explicit_uniform_location          // [086]
+                                                                // [086]
+    @ren_pin@ : RENder PIPeline index (of active pipeline)      // [086]
+    @act_pid@ : Active Pipeline Id _DO_NOT_CACHE_IN_ARTGIRL_    // [086]
+                                                                // [086]
+    #POITROAE# : Mis Spelling Of[ PMOITROAE ]                   // [086]
+    #PMOITROAE#: Pre-Mature Optimization Is The Root Of         // [086]
+               : All Evil.                                      // [086]
+               :  (Tagging possible optimization sites )        // [086]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
