@@ -3433,6 +3433,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         THE_DUM != CAMERA RECTANGLE ( But closely related )    :   [087]
                                                                :   [087]
     :----------------------------------------------------------:   [087]
+                                                                   [087]
+    @G_TILE@: Game Sized Tile                                      [087]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
@@ -3440,7 +3442,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){
 /** ******************************************************** ***
 
 
-           
+
+    [087] : 1 : Calculated the "shape" of nothingness.         :   [087]
+          : 2 : Figured out addressing space for rendering.    :   [087]
+          :::::                                                :   [087]
+              : c_dum ( 0x7F_FFFF ) : DiscreteUnits - THE_DUM  :   [087]
+              : c_dut ( 0x2222    ) : DiscreteUnits -  G_TILE  :   [087]
 
 
 
