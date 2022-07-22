@@ -2197,6 +2197,8 @@ if( yesnode ){
     }else{                                     //: [040] ://      
         F_ISD();     //:Initialize_Server_Data   : [040] ://          
         F_TDC();     //:Test_Database_Connection : [040] ://   
+
+        //:< < < < < < < < < < < < < < < < < < < < < < < < < < < < < < : NOTICE_ME_SENPAI : These operations should be using promises. Dangerous race condition stuff is happening here.
         
         //:Create_Table_Statements:[041]:----------------://    
                                                                 

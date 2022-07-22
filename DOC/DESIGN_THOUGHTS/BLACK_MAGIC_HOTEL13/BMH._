@@ -1,0 +1,25 @@
+
+   
+    BLACK_MAGIC : MODULE :
+
+        Instead of use ES6 modules we will create 
+        a comment like:
+
+    
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //:                                              ://
+        //:            [BLACK_MAGIC:HOTEL13]             ://
+        //:                                              ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+
+        When the server serves itself , it also 
+        injects the source code of[  HOTEL13.JS ]
+        by using a simple:
+
+        i_cof.replaceAll( 
+
+            "[BLACK_MAGIC:HOTEL13]" 
+
+        ,   contents_of_file_hotel13_js
+        );;
+
