@@ -110,9 +110,46 @@
 //:====================================:ENVIRONMENT_DETECTION://
 //:TOP_LEVEL_CONSTANT_MACROS:[085]:==========================://// [085]
                                                                 // [085]
-    var c_fps =(  30  );  /** Simulation FrameRate **/          // [085]
+    //:TAG[ constants | macros | constant | macro ]://
+
+    const c_fps =(  30  );  /** Simulation FrameRate **/        // [088][085]
+
+    const c_dum = 0x7FFFFF ;                                    // [088]
+    const c_dut = 0x2222   ;                                    // [088]
+                                                                // [088]
+    const   x_0 =( 0 ); //:VIEWPORT:LEF://                      // [088]
+    const   x_1 =( 1 ); //:VIEWPORT:RIG://                      // [088]
+    const   y_0 =( 2 ); //:VIEWPORT:TOP://                      // [088]
+    const   y_1 =( 3 ); //:VIEWPORT:BOT://                      // [088]
+
                                                                 // [085]
 //:==========================:TOP_LEVEL_CONSTANT_MACROS:[085]://// [085]
+//:TOP_LEVEL_VARIABLES:[088]:================================://
+
+    var d_vpc = new Uint32Array( 4 ); //:@d_vpc@ : CANVAS://       [088]
+    var d_vp0 = new Uint32Array( 4 ); //:@d_vp0@ : DEST  ://       [088]
+    var d_vp1 = new Uint32Array( 4 ); //:@d_vp1@ : DATA  ://       [088]
+
+        //:::::::::::::::::::::::::::::::::::::::::::::::://    
+        //:Initially, Camera Is Zoomed All The Way Out   ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        d_vp1[ x_0 ]=(       0  );
+        d_vp1[ y_0 ]=(       0  );
+        d_vp1[ x_1 ]=( c_dum - 1);
+        d_vp1[ y_1 ]=( c_dum - 1);
+
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //: We don't know what[ vp1 ]or[ vpc ]should be  ://
+        //: yet, but let's set them to something that    ://
+        //: will clue us in on how they got to that      ://
+        //: size.                                        ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        d_vp0[ x_0 ]=(   0  ); d_vpc[ x_0 ]=(   0  );
+        d_vp0[ y_0 ]=(   0  ); d_vpc[ y_0 ]=(   0  );
+        d_vp0[ x_1 ]=( 420  ); d_vpc[ x_1 ]=(  69  );
+        d_vp0[ y_1 ]=( 420  ); d_vpc[ y_1 ]=(  69  );
+
+//:================================:TOP_LEVEL_VARIABLES:[088]://
 //:SHUTARR:[077]:============================================://
 
     const F_SHUTARR = function PRIVATE_F_SHUTARR(               // [077]
@@ -2384,8 +2421,22 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             : http://learnwebgl.brown37.net                [067]
             :       /the_big_picture/3d_rendering.html     [067]
 
-*** *************************************************** TODO **/
-/** CHANGE_HISTORY ***************************************** ***
+*** *************************************************** TODO **/ // [088]
+/** TAG_SECTION ******************************************** *** // [088]
+*** CTRL_F_HELP ******************************************** *** // [088]
+TAG[ tag_section | tag-section | tag_section ]BEG -------------- // [088]
+
+    TAG[ d_cam | d-cam | camera variable | camera var ]          // [088]
+    FIX[ d_vp0 | d_vp1 | d_vpc | c_dum | d_dut ]                 // [088]
+
+    TAG[ plank_units | plankunit | plank-units | plank units ]   // [088]
+    FIX[ c_dum | c_dut ]                                         // [088]
+         
+
+TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
+*** ******************************************** CTRL_F_HELP *** // [088]
+*** ******************************************** TAG_SECTION **/ // [088]
+/** CHANGE_HISTORY ***************************************** *** // [088]
 
     TUTORIAL PART 018 : https://pastebin.com/ZCFNxebJ
                       : tinyurl.com/SERVER-JS-PART-18
@@ -3296,7 +3347,8 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         worlmap at any given time. How many tiles is it?       :   [087]
                                                                :   [087]
                                                                :   [087]
-        |<------------------@THE_DUM@-------------------|      :   [087]
+        |<------------------@THE_DUM@------------------>|      :   [088][087]
+        |<------------------@THEDUM@------------------->|      :   [088]
         |                                               |      :   [087]
         |<--- HOTEL --->|                               |      :   [087]
         | AKA:LEVELPACK |                               |      :   [087]
@@ -3437,6 +3489,23 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     :----------------------------------------------------------:   [087]
                                                                    [087]
     @G_TILE@: Game Sized Tile                                      [087]
+
+                                                                    
+    @d_vpc@ : Viewport VPC: (Canvas/GL-Viewport)                   [088]
+    @d_vp0@ : Viewport VP0: (Destination/Screen        )           [088]
+    @d_vp1@ : Viewport VP1: (Offscreen/Source/TileData )           [088]
+                                                                   [088]
+    #_VPC_VS_VP0_# / #_VP0_VS_VPC_# :                              [088]
+                                                                   [088]
+        d_vpc && d_vp0 are in the same coordinate space,           [088]
+        d_vp0 is always WITHIN d_vpc.                              [088]
+        d_vpc should always be size of canvas.                     [088]
+
+    @X_0@ : You mean lowercase[ x_0 ]. Data is always lowercase.   [088]
+    @X_1@ : You mean lowercase[ x_1 ]. Data is always lowercase.   [088]
+    @Y_0@ : You mean lowercase[ y_0 ]. Data is always lowercase.   [088]
+    @Y_1@ : You mean lowercase[ y_1 ]. Data is always lowercase.   [088]
+
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
