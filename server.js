@@ -110,7 +110,7 @@
 //:====================================:ENVIRONMENT_DETECTION://
 //:TOP_LEVEL_CONSTANT_MACROS:[085]:==========================://// [085]
                                                                 // [085]
-    //:TAG[ constants | macros | constant | macro ]://
+    //:TAG[ constants | macros | constant | macro ]://          // [088]
 
     const c_fps =(  30  );  /** Simulation FrameRate **/        // [088][085]
 
@@ -124,32 +124,32 @@
 
                                                                 // [085]
 //:==========================:TOP_LEVEL_CONSTANT_MACROS:[085]://// [085]
-//:TOP_LEVEL_VARIABLES:[088]:================================://
-
+//:TOP_LEVEL_VARIABLES:[088]:================================://   [---]
+                                                                   [088]
     var d_vpc = new Uint32Array( 4 ); //:@d_vpc@ : CANVAS://       [088]
     var d_vp0 = new Uint32Array( 4 ); //:@d_vp0@ : DEST  ://       [088]
     var d_vp1 = new Uint32Array( 4 ); //:@d_vp1@ : DATA  ://       [088]
-
-        //:::::::::::::::::::::::::::::::::::::::::::::::://    
-        //:Initially, Camera Is Zoomed All The Way Out   ://
-        //:::::::::::::::::::::::::::::::::::::::::::::::://
-        d_vp1[ x_0 ]=(       0  );
-        d_vp1[ y_0 ]=(       0  );
-        d_vp1[ x_1 ]=( c_dum - 1);
-        d_vp1[ y_1 ]=( c_dum - 1);
-
-        //:::::::::::::::::::::::::::::::::::::::::::::::://
-        //: We don't know what[ vp1 ]or[ vpc ]should be  ://
-        //: yet, but let's set them to something that    ://
-        //: will clue us in on how they got to that      ://
-        //: size.                                        ://
-        //:::::::::::::::::::::::::::::::::::::::::::::::://
-        d_vp0[ x_0 ]=(   0  ); d_vpc[ x_0 ]=(   0  );
-        d_vp0[ y_0 ]=(   0  ); d_vpc[ y_0 ]=(   0  );
-        d_vp0[ x_1 ]=( 420  ); d_vpc[ x_1 ]=(  69  );
-        d_vp0[ y_1 ]=( 420  ); d_vpc[ y_1 ]=(  69  );
-
-//:================================:TOP_LEVEL_VARIABLES:[088]://
+                                                                   [088]
+        //:::::::::::::::::::::::::::::::::::::::::::::::://       [088]
+        //:Initially, Camera Is Zoomed All The Way Out   ://       [088]
+        //:::::::::::::::::::::::::::::::::::::::::::::::://       [088]
+        d_vp1[ x_0 ]=(       0  );                                 [088]
+        d_vp1[ y_0 ]=(       0  );                                 [088]
+        d_vp1[ x_1 ]=( c_dum - 1);                                 [088]
+        d_vp1[ y_1 ]=( c_dum - 1);                                 [088]
+                                                                   [088]
+        //:::::::::::::::::::::::::::::::::::::::::::::::://       [088]
+        //: We don't know what[ vp1 ]or[ vpc ]should be  ://       [088]
+        //: yet, but let's set them to something that    ://       [088]
+        //: will clue us in on how they got to that      ://       [088]
+        //: size.                                        ://       [088]
+        //:::::::::::::::::::::::::::::::::::::::::::::::://       [088]
+        d_vp0[ x_0 ]=(   0  ); d_vpc[ x_0 ]=(   0  );              [088]
+        d_vp0[ y_0 ]=(   0  ); d_vpc[ y_0 ]=(   0  );              [088]
+        d_vp0[ x_1 ]=( 420  ); d_vpc[ x_1 ]=(  69  );              [088]
+        d_vp0[ y_1 ]=( 420  ); d_vpc[ y_1 ]=(  69  );              [088]
+                                                                   [088]
+//:================================:TOP_LEVEL_VARIABLES:[088]://   [---]
 //:SHUTARR:[077]:============================================://
 
     const F_SHUTARR = function PRIVATE_F_SHUTARR(               // [077]
@@ -2421,29 +2421,21 @@ require( "http" ).createServer( function( i_ask , i_giv ){
             : http://learnwebgl.brown37.net                [067]
             :       /the_big_picture/3d_rendering.html     [067]
 
-*** *************************************************** TODO **/ // [088]
+*** *************************************************** TODO **/  
 /** TAG_SECTION ******************************************** *** // [088]
 *** CTRL_F_HELP ******************************************** *** // [088]
 TAG[ tag_section | tag-section | tag_section ]BEG -------------- // [088]
-
+                                                                 // [088]
     TAG[ d_cam | d-cam | camera variable | camera var ]          // [088]
     FIX[ d_vp0 | d_vp1 | d_vpc | c_dum | d_dut ]                 // [088]
-
+                                                                 // [088]
     TAG[ plank_units | plankunit | plank-units | plank units ]   // [088]
     FIX[ c_dum | c_dut ]                                         // [088]
-         
-
+                                                                 // [088]
+                                                                 // [088]
 TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 *** ******************************************** CTRL_F_HELP *** // [088]
 *** ******************************************** TAG_SECTION **/ // [088]
-/** CHANGE_HISTORY ***************************************** *** // [088]
-
-    TUTORIAL PART 018 : https://pastebin.com/ZCFNxebJ
-                      : tinyurl.com/SERVER-JS-PART-18
-                      : git@github.com:KanjiCoder/AIM_018.git
-                      : https://github.com/KanjiCoder/AIM_018
-
-*** ***************************************** CHANGE_HISTORY **/
 /** SNAPSHOT_REPOS ***************************************** ***
 
     github.com/KanjiCoder/AIM_035    ( end of tutorial 35 code )
@@ -3044,6 +3036,17 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
 *** ****************************************** FEATURE_CREEP **/
 /** MISC_DELTA_NOTES *************************************** ***
+*** CHANGE_HISTORY _ *************************************** ***   [088]
+*** CHANGE_LOG _____ *************************************** ***   [088]
+
+
+    TAG[ CHANGE_HISTORY | MISC_DELTA_NOTES ]                    // [088]
+
+    [018] : TUTORIAL PART 018                                   // [088]
+          : https://pastebin.com/ZCFNxebJ                       // [088]
+          : tinyurl.com/SERVER-JS-PART-18                       // [088]
+          : git@github.com:KanjiCoder/AIM_018.git               // [088]
+          : https://github.com/KanjiCoder/AIM_018               // [088]
 
     [044] : Will crash randomly if you supply correct           // [044]
           : password. This is by design. We will fix it         // [044]
@@ -3217,6 +3220,16 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : with making tiles with modulus so it is             // [087][086]
           : visually distinct enough from Numkey 3.             // [087][086]
 
+
+    [087] : 1 : Calculated the "shape" of nothingness.         :   [088][087]
+          : 2 : Figured out addressing space for rendering.    :   [088][087]
+          :::::                                                :   [088][087]
+              : c_dum ( 0x7F_FFFF ) : DiscreteUnits - THE_DUM  :   [088][087]
+              : c_dut ( 0x2222    ) : DiscreteUnits -  G_TILE  :   [088][087]
+
+
+*** *************************************** CHANGE_LOG _____ ***   [088]
+*** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
 //:HASHTAG_OR_ATTED_COMMENTS:[085]:==========================://
 /** ******************************************************** ***
@@ -3500,7 +3513,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         d_vpc && d_vp0 are in the same coordinate space,           [088]
         d_vp0 is always WITHIN d_vpc.                              [088]
         d_vpc should always be size of canvas.                     [088]
-
+                                                                   [088]
     @X_0@ : You mean lowercase[ x_0 ]. Data is always lowercase.   [088]
     @X_1@ : You mean lowercase[ x_1 ]. Data is always lowercase.   [088]
     @Y_0@ : You mean lowercase[ y_0 ]. Data is always lowercase.   [088]
@@ -3514,11 +3527,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
 
 
-    [087] : 1 : Calculated the "shape" of nothingness.         :   [087]
-          : 2 : Figured out addressing space for rendering.    :   [087]
-          :::::                                                :   [087]
-              : c_dum ( 0x7F_FFFF ) : DiscreteUnits - THE_DUM  :   [087]
-              : c_dut ( 0x2222    ) : DiscreteUnits -  G_TILE  :   [087]
+    [088] : Added Variables For Camera & Plank Units
+          : ( Plank Units == Discrete Units )
 
 
 
