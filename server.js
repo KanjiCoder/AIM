@@ -114,8 +114,9 @@
 
     const c_fps =(  30  );  /** Simulation FrameRate **/        // [088][085]
 
-    const c_dum = 0x7FFFFF ;                                    // [088]
-    const c_dut = 0x2222   ;                                    // [088]
+    const c_dud = "[YOU_MEAN:c_dum:NO:DiscreteUnits:DUM]" ;     // [088]
+    const c_dum = 0x7FFFFF ; //:DiscreteUnits:~MAP~             // [088]
+    const c_dut = 0x2222   ; //:DiscreteUnits: TILE             // [088]
                                                                 // [088]
     const   x_0 =( 0 ); //:VIEWPORT:LEF://                      // [088]
     const   x_1 =( 1 ); //:VIEWPORT:RIG://                      // [088]
@@ -125,6 +126,10 @@
                                                                 // [085]
 //:==========================:TOP_LEVEL_CONSTANT_MACROS:[085]://// [085]
 //:TOP_LEVEL_VARIABLES:[088]:================================://   [---]
+                                                                   [088]
+
+    //:TAG[ viewport_rectangles | viewport-rectangles   ]://       [088]
+    //:TAG[ viewport rectangles | vprec|vp-rec|vp_rec   ]://       [088]
                                                                    [088]
     var d_vpc = new Uint32Array( 4 ); //:@d_vpc@ : CANVAS://       [088]
     var d_vp0 = new Uint32Array( 4 ); //:@d_vp0@ : DEST  ://       [088]
@@ -3038,7 +3043,6 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 /** MISC_DELTA_NOTES *************************************** ***
 *** CHANGE_HISTORY _ *************************************** ***   [088]
 *** CHANGE_LOG _____ *************************************** ***   [088]
-
 
     TAG[ CHANGE_HISTORY | MISC_DELTA_NOTES ]                    // [088]
 
