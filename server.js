@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_091  <<< THIS_VIDEO¯S_CODE    // [091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_092  <<< THIS_VIDEO¯S_CODE    // [091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -1111,7 +1111,18 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         d_can.height= hig ;                                     // [032][031]
 
         if( HAS( a_g.wgl ) ){                                   // [080]
-                 a_g.wgl.viewport( 0 , 0 ,wid,hig );            // [080]
+
+            d_vpc[ x_0 ]=( 0 );                                 // [092]
+            d_vpc[ y_0 ]=( 0 );                                 // [092]
+            d_vpc[ x_1 ]=( wid - 1 /**@INC_REC@**/ );           // [092]
+            d_vpc[ y_1 ]=( hig - 1 /**@INC_REC@**/ );           // [092]
+                                                                // [092]
+            a_g.wgl.viewport(                                   // [---][080]
+                ( d_vpc[ x_0 ]                    )  //:@org@://// [092][080]
+            ,   ( d_vpc[ y_0 ]                    )  //:@org@://// [092][080]
+            ,   ( d_vpc[ x_1 ] - d_vpc[ x_0 ] + 1 )  //:@wid@://// [092][080]
+            ,   ( d_vpc[ y_1 ] - d_vpc[ y_0 ] + 1 )  //:@hig@://// [092][080]
+            );;                                                 // [---][080]         
         };;                                                     // [080]
     };;                                                         // [032]
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
@@ -2507,6 +2518,14 @@ TAG[ tag_section | tag-section | tag_section ]BEG -------------- // [088]
                                                                  // [088]
     TAG[ plank_units | plankunit | plank-units | plank units ]   // [088]
     FIX[ c_dum | c_dut ]                                         // [088]
+
+    TAG[ canvas-resize | canvas_resize | canvasresize ]          // [092]
+    TAG[ resize-canvas | resize_canvas | resizecanvas ]          // [092]
+   GOTO[ F_RES_CAN ]( Function _ RESize _ CANvas )               // [092]
+
+
+    TAG[ glViewport ]FIX[ wgl.viewport ]                         // [092]
+
                                                                  // [088]
                                                                  // [088]
 TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
