@@ -130,13 +130,15 @@
     //:TAG[ viewport_rectangles | viewport-rectangles   ]://    // [088]
     //:TAG[ viewport rectangles | vprec|vp-rec|vp_rec   ]://    // [088]
                                                                 // [088]
+    var d_tik =( 0 /** SEE[ DTICK_INITED ] **/ );               // [090]
     var d_vpc = new Uint32Array( 4 ); //:@d_vpc@ : CANVAS://    // [088]
     var d_vp0 = new Uint32Array( 4 ); //:@d_vp0@ : DEST  ://    // [088]
     var d_vp1 = new Uint32Array( 4 ); //:@d_vp1@ : DATA  ://    // [088]
                                                                 // [---]
-    var d_vpc_loc =( 0-1 ); //:Location[ d_vpc ]In_Shader://    // [090]
-    var d_vp0_loc =( 0-2 ); //:Location[ d_vp0 ]In_Shader://    // [090]
-    var d_vp1_loc =( 0-3 ); //:Location[ d_vp1 ]In_Shader://    // [090]
+    var d_tik_loc =( 0-1 ); //:Location[ d_tik ]In_Shader://    // [090]
+    var d_vpc_loc =( 0-2 ); //:Location[ d_vpc ]In_Shader://    // [090]
+    var d_vp0_loc =( 0-3 ); //:Location[ d_vp0 ]In_Shader://    // [090]
+    var d_vp1_loc =( 0-4 ); //:Location[ d_vp1 ]In_Shader://    // [090]
                                                                 // [090]
     const d_loc_vpc = ()=>{ ERR("[FIX:d_vpc_vpc]"); };          // [090]
     const d_loc_vp0 = ()=>{ ERR("[FIX:d_vpc_vp0]"); };          // [090]
@@ -546,15 +548,7 @@ if( notnode ){ //:-------------------------------------------://
 };; //:------------------------------------------------------://
 if( yesnode || notnode ){ //:--------------------------------://
 
-
-
-    //:XXXXXXXX_WHAT_DOES_MARCELLUS_WALLUS_LOOK_LIKE_XXXXXXXX://
-
-    var d_tik =(  0  );  /** Simulation Ticker **/              // [085]
-                         /** Inited Elsewhere  **/              // [085]
-
-    
-
+    //:XXXXXXXX_WHAT_DOES_MARCELLUS_WALLUS_LOOK_LIKE_XXXXXXXX:// // [090]
 
 };; //:------------------------------------------------------://
 //:============================:MASTER_DECLARATION_DATA:[035]://
@@ -1139,6 +1133,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         const dom_can = "[REFACTORED_TO:d_can:[035]]" ;
 
         d_tik =( 60 * 60 * 1000 );  //:#_TIK_TIMETRAVEL_#://    // [085]
+                                    //:###DTICK_INITED###://    // [090]
        
     //:-------------------------:client_global_data:[031]://
     //:boilerplate:[028]:--------------------------------://
@@ -3295,6 +3290,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [088] : Added Variables For Camera & Plank Units               [089][088]
           : ( Plank Units == Discrete Units )                      [089][088]
 
+    [089] : Added Camera Vars [ vp0 , vp1 , vpc ]                  [090][089]
+          : to shader code, but have not wired them                [090][089]
+          : up in the CPU code yet.                                [090][089]
+
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -3637,14 +3636,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
             WRITE[ d_tik ]NOT[ u_tik    ||     du_tik ]            [089]
             INVALID_BECAUSE_COMBINES_PREFIXES[ du_tik ]            [089]
 
+    #DTICK_INITED# : Marking where[ d_tik ]initialized.            [090]
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [089] : Added Camera Vars [ vp0 , vp1 , vpc ]                  [089]
-          : to shader code, but have not wired them                [089]
-          : up in the CPU code yet.                                [089]
+    [090] : Added variables for uniform locations of               [090]
+          : [ d_tik , d_vp0 , d_vp1 , d_vpc ]                      [090]
 
 
 *** ******************************************************** **/
