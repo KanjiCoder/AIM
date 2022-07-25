@@ -763,7 +763,10 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 (c_artgirl_wgl_tag+`                                            // [074]   
 
     //: FRAG_SHADER_STR[ d_artgirl_ssf_005 ] ://                // [081]
-    //: FRAG_SHADER_ENU[ c_artgirl_ren_005 ] ://                // [081]   
+    //: FRAG_SHADER_ENU[ c_artgirl_ren_005 ] ://                // [081]  
+
+    //: TAG[fragment_shaders|fragment-shaders|fragshader]://    // [093]
+    //: TAG[fragment shaders|frag shaders | frag_shaders]://    // [093]
 
     #define F32 float      //: Shorthand Type == U_CASE  ://    // [089]
     #define U32 uint       //: Shorthand Type == U_CASE  ://    // [089]
@@ -2183,63 +2186,63 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             });;      
             //:----------------------------------------:[061]://
         }else                                                   // [093][068] 
-        if( "+" === a_k || "=" === a_k ){
-            //:::::::::::::::::::::::::::::::::::://
-            //: ZOOM_INN ===> MAKE[ VP1 ]SMALLER ://
-            //:::::::::::::::::::::::::::::::::::://
-
-            //:    [x_0] > > > [+] < < < [x_1]   ://
-            //:    [y_0] > > > [+] < < < [y_1]   ://
-
-            let new_x_0 = d_vp1[ x_0 ] + c_dut ;
-            let new_x_1 = d_vp1[ x_1 ] - c_dut ;
-            let new_y_0 = d_vp1[ y_0 ] + c_dut ;
-            let new_y_1 = d_vp1[ y_1 ] - c_dut ;
-
-            if( ( new_x_0 > new_x_1 )
-            ||  ( new_y_0 > new_y_1 )
-            ){  //:::::::::::::::::::::::::::::::::::://
-                //: DO_NOTHING. Viewport Is Max      ://    
-                //: Smallness. Any smaller and we    ://    
-                //: enter the upside  down world.    :// 
-                //:::::::::::::::::::::::::::::::::::://
-                console.log("[CANNOT_ZOOM_IN_ANYMORE]");
-            }else{
-                d_vp1[ x_0 ]=( new_x_0 );
-                d_vp1[ x_1 ]=( new_x_1 );
-                d_vp1[ y_0 ]=( new_y_0 );
-                d_vp1[ y_1 ]=( new_y_1 );
-            };;
-        }else
-        if( "-" === a_k || "_" === a_k ){
-            //:::::::::::::::::::::::::::::::::::://
-            //: ZOOM_OUT ===> MAKE[ VP1 ]BIGGER  ://
-            //:::::::::::::::::::::::::::::::::::://
-
-            //:    [x_0] < < < [-] > > > [x_1]   ://
-            //:    [y_0] < < < [-] > > > [y_1]   ://
-
-            let new_x_0 = d_vp1[ x_0 ] - c_dut ;
-            let new_x_1 = d_vp1[ x_1 ] + c_dut ;
-            let new_y_0 = d_vp1[ y_0 ] - c_dut ;
-            let new_y_1 = d_vp1[ y_1 ] + c_dut ;
-
-            if( ( new_x_0 < 0 || new_x_1 > (c_dum-1) )
-            ||  ( new_y_0 < 0 || new_y_1 > (c_dum-1) )
-            ){  //:::::::::::::::::::::::::::::::::::://
-                //: DO_NOTHING. Viewport is Max      ://
-                //: Bigness. Any larger and we       ://
-                //: we will have integer overlow.    ://
-                //: Nothing lays beyond[ THE_DUM ].  ://
-                //:::::::::::::::::::::::::::::::::::://
-                console.log("[CANNOT_ZOOM_OUT_ANYMORE]");
-            }else{
-                d_vp1[ x_0 ]=( new_x_0 );
-                d_vp1[ x_1 ]=( new_x_1 );
-                d_vp1[ y_0 ]=( new_y_0 );
-                d_vp1[ y_1 ]=( new_y_1 );
-            };;
-        }else
+        if( "+" === a_k || "=" === a_k ){                       // [093]
+            //:::::::::::::::::::::::::::::::::::://            // [093]
+            //: ZOOM_INN ===> MAKE[ VP1 ]SMALLER ://            // [093]
+            //:::::::::::::::::::::::::::::::::::://            // [093]
+                                                                // [093]
+            //:    [x_0] > > > [+] < < < [x_1]   ://            // [093]
+            //:    [y_0] > > > [+] < < < [y_1]   ://            // [093]
+                                                                // [093]
+            let new_x_0 = d_vp1[ x_0 ] + c_dut ;                // [093]
+            let new_x_1 = d_vp1[ x_1 ] - c_dut ;                // [093]
+            let new_y_0 = d_vp1[ y_0 ] + c_dut ;                // [093]
+            let new_y_1 = d_vp1[ y_1 ] - c_dut ;                // [093]
+                                                                // [093]
+            if( ( new_x_0 > new_x_1 )                           // [093]
+            ||  ( new_y_0 > new_y_1 )                           // [093]
+            ){  //:::::::::::::::::::::::::::::::::::://        // [093]
+                //: DO_NOTHING. Viewport Is Max      ://        // [093]
+                //: Smallness. Any smaller and we    ://        // [093]
+                //: enter the upside  down world.    ://        // [093]
+                //:::::::::::::::::::::::::::::::::::://        // [093]
+                console.log("[CANNOT_ZOOM_IN_ANYMORE]");        // [093]
+            }else{                                              // [093]
+                d_vp1[ x_0 ]=( new_x_0 );                       // [093]
+                d_vp1[ x_1 ]=( new_x_1 );                       // [093]
+                d_vp1[ y_0 ]=( new_y_0 );                       // [093]
+                d_vp1[ y_1 ]=( new_y_1 );                       // [093]
+            };;                                                 // [093]
+        }else                                                   // [093]
+        if( "-" === a_k || "_" === a_k ){                       // [093]
+            //:::::::::::::::::::::::::::::::::::://            // [093]
+            //: ZOOM_OUT ===> MAKE[ VP1 ]BIGGER  ://            // [093]
+            //:::::::::::::::::::::::::::::::::::://            // [093]
+                                                                // [093]
+            //:    [x_0] < < < [-] > > > [x_1]   ://            // [093]
+            //:    [y_0] < < < [-] > > > [y_1]   ://            // [093]
+                                                                // [093]
+            let new_x_0 = d_vp1[ x_0 ] - c_dut ;                // [093]
+            let new_x_1 = d_vp1[ x_1 ] + c_dut ;                // [093]
+            let new_y_0 = d_vp1[ y_0 ] - c_dut ;                // [093]
+            let new_y_1 = d_vp1[ y_1 ] + c_dut ;                // [093]
+                                                                // [093]
+            if( ( new_x_0 < 0 || new_x_1 > (c_dum-1) )          // [093]
+            ||  ( new_y_0 < 0 || new_y_1 > (c_dum-1) )          // [093]
+            ){  //:::::::::::::::::::::::::::::::::::://        // [093]
+                //: DO_NOTHING. Viewport is Max      ://        // [093]
+                //: Bigness. Any larger and we       ://        // [093]
+                //: we will have integer overlow.    ://        // [093]
+                //: Nothing lays beyond[ THE_DUM ].  ://        // [093]
+                //:::::::::::::::::::::::::::::::::::://        // [093]
+                console.log("[CANNOT_ZOOM_OUT_ANYMORE]");       // [093]
+            }else{                                              // [093]
+                d_vp1[ x_0 ]=( new_x_0 );                       // [093]
+                d_vp1[ x_1 ]=( new_x_1 );                       // [093]
+                d_vp1[ y_0 ]=( new_y_0 );                       // [093]
+                d_vp1[ y_1 ]=( new_y_1 );                       // [093]
+            };;                                                 // [093]
+        }else                                                   // [093]
         {                                                       // [068] 
             LOG( "[UNBOUND_KEY]" , a_k );                       // [068] 
         };;                                                     // [068] 
@@ -3397,6 +3400,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [091] : GPU/CPU sync of [ d_tik , d_vp0 , d_vp1 , d_vpc ]      [092][091]
 
+    [092] : [ d_vpc ]is now size of wgl.viewport , and resizes     [093][092]
+          : correctly when user resizes the window.                [093][092]
+
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -3752,29 +3758,18 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     @INC_REC@ : The variable is an "INClusive RECtangle"           [092]
 
-
-    #_OLD_EVT_ASC_LOGIC_DOESNT_WORK_FOR_PLUS_MINUS_#            // [092]
-                                                                // [092]
-        The code below will __NOT__ work for the "+" and "-"    // [092]
-        keys, so we have changed it.                            // [092]
-                                                                // [092]
-        var o_asc_key =(                                        // [092][068] 
-            String.prototype.toUpperCase.call(                  // [092][068] 
-            String.fromCharCode(                                // [092][068] 
-                                                                // [092][068] 
-                i_evt_key.keyCode                               // [092][068] 
-                                                                // [092][068] 
-            )||"[nil][o_asc_key]" ));;                          // [092][068] 
-
-
-
-
-
-
-
-
-
-
+    #_OLD_EVT_ASC_LOGIC_DOESNT_WORK_FOR_PLUS_MINUS_#            // [093]
+                                                                // [093]
+        The code below will __NOT__ work for the "+" and "-"    // [093]
+        keys, so we have changed it.                            // [093]
+                                                                // [093]
+        var o_asc_key =(                                        // [093][068] 
+            String.prototype.toUpperCase.call(                  // [093][068] 
+            String.fromCharCode(                                // [093][068] 
+                                                                // [093][068] 
+                i_evt_key.keyCode                               // [093][068] 
+                                                                // [093][068] 
+            )||"[nil][o_asc_key]" ));;                          // [093][068] 
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
@@ -3782,8 +3777,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 /** ******************************************************** ***
 
 
-    [092] : [ d_vpc ]is now size of wgl.viewport , and resizes     [092]
-          : correctly when user resizes the window.                [092]
+    [093] : Added the logic for zooming in and out.                [093]
+          : HOWEVER... Nothing can be observed yet,                [093]
+          : because the fragment shader code does                  [093]
+          : __NOT__ make use of[ d_vp1 ]yet.                       [093]
+          : ( d_vp1 === Data Selection Viewport Rectangle )        [093]
 
 
 
