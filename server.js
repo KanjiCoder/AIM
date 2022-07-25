@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_089  <<< THIS_VIDEO¯S_CODE    // [089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_090  <<< THIS_VIDEO¯S_CODE    // [090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -140,6 +140,7 @@
     var d_vp0_loc =( 0-3 ); //:Location[ d_vp0 ]In_Shader://    // [090]
     var d_vp1_loc =( 0-4 ); //:Location[ d_vp1 ]In_Shader://    // [090]
                                                                 // [090]
+    const d_loc_tik = ()=>{ ERR("[FIX:d_vpc_tik]"); };          // [090]
     const d_loc_vpc = ()=>{ ERR("[FIX:d_vpc_vpc]"); };          // [090]
     const d_loc_vp0 = ()=>{ ERR("[FIX:d_vpc_vp0]"); };          // [090]
     const d_loc_vp1 = ()=>{ ERR("[FIX:d_vpc_vp1]"); };          // [090]
@@ -3645,6 +3646,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [090] : Added variables for uniform locations of               [090]
           : [ d_tik , d_vp0 , d_vp1 , d_vpc ]                      [090]
+          : [ d_tik_loc , d_vp0_loc , d_vp1_loc , d_vpc_loc ]      [090]
 
 
 *** ******************************************************** **/
