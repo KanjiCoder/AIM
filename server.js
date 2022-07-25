@@ -3309,6 +3309,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : to shader code, but have not wired them                [090][089]
           : up in the CPU code yet.                                [090][089]
 
+    [090] : Added variables for uniform locations of               [091][090]
+          : [ d_tik , d_vp0 , d_vp1 , d_vpc ]                      [091][090]
+          : [ d_tik_loc , d_vp0_loc , d_vp1_loc , d_vpc_loc ]      [091][090]
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -3662,9 +3665,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [090] : Added variables for uniform locations of               [090]
-          : [ d_tik , d_vp0 , d_vp1 , d_vpc ]                      [090]
-          : [ d_tik_loc , d_vp0_loc , d_vp1_loc , d_vpc_loc ]      [090]
+
+
+    [091] : GPU/CPU sync of [ d_tik , d_vp0 , d_vp1 , d_vpc ]      [091]
 
 
 *** ******************************************************** **/
