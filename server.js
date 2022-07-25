@@ -766,32 +766,32 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
     #define U32 uint       //: Shorthand Type == U_CASE  ://    // [089]
     #define UNI uniform    //: Shorthand Type == U_CASE  ://    // [089]
     #define UV4 uvec4      //: Shorthand Type == U_CASE  ://    // [089]
-                           
+                                                                // [089]
     #define x_0  ( 0 )     //: Accessors[ vpc,vp0,vp1 ]  ://    // [089]
     #define x_1  ( 1 )     //: Accessors[ vpc,vp0,vp1 ]  ://    // [089]
     #define y_0  ( 2 )     //: Accessors[ vpc,vp0,vp1 ]  ://    // [089]
     #define y_1  ( 3 )     //: Accessors[ vpc,vp0,vp1 ]  ://    // [089]
-
+                                                                // [089]
     #define u_0   U32( 0 ) //: Default is SIGNED integer.://    // [089]
     #define u_1   U32( 1 ) //: Default is SIGNED integer.://    // [089]
     #define u_255 U32(255) //: Default is SIGNED integer.://    // [089]
     #define f_255 F32(255) //: Default is SIGNED integer.://    // [089]
-
+                                                                // [089]
     #define f_raw_fcx   ( gl_FragCoord.x )                      // [089]
     #define f_raw_fcy   ( gl_FragCoord.y )                      // [089]
-
+                                                                // [089]
     #define F_NAW_FCX (F32(u_fcx-((u_fcx/u_255)*u_255))/f_255)  // [089]
     #define F_NAW_FCY (F32(u_fcy-((u_fcy/u_255)*u_255))/f_255)  // [089]
-
+                                                                // [089]
     #define F_NOR_FCX (F32(u_fcx) / F32(d_vpc[x_1]))            // [089]
     #define F_NOR_FCY (F32(u_fcy) / F32(d_vpc[y_1]))            // [089]
-    
+                                                                // [089]
                                                                 // [089]
     UNI U32 d_tik ;      //: TICKER   : Logic Frame      ://    // [089]
     UNI UV4 d_vpc ;      //: Viewport : CANVAS/CLIENT    ://    // [089]
     UNI UV4 d_vp0 ;      //: Viewport : DEST/SCREEN      ://    // [089]
     UNI UV4 d_vp1 ;      //: Viewport : DATA/SELECT      ://    // [089]
-
+                                                                // [089]
     //:--------------------------------------------------://    // [089]
     //:Shader Variable Prefixes :                        ://    // [089]
     //:#_DO_NOT_COMBINE_PREFIXES_# !!!!!!!!!!!!!!!!!!!!! ://    // [089]
@@ -3284,6 +3284,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
               : c_dum ( 0x7F_FFFF ) : DiscreteUnits - THE_DUM  :   [088][087]
               : c_dut ( 0x2222    ) : DiscreteUnits -  G_TILE  :   [088][087]
 
+    [088] : Added Variables For Camera & Plank Units               [089][088]
+          : ( Plank Units == Discrete Units )                      [089][088]
+
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -3631,11 +3634,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-
-
-    [088] : Added Variables For Camera & Plank Units
-          : ( Plank Units == Discrete Units )
-
+    [089] : Added Camera Vars [ vp0 , vp1 , vpc ]                  [089]
+          : to shader code, but have not wired them                [089]
+          : up in the CPU code yet.                                [089]
 
 
 *** ******************************************************** **/
