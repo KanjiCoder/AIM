@@ -2188,6 +2188,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             //: ZOOM_INN ===> MAKE[ VPC ]SMALLER ://
             //:::::::::::::::::::::::::::::::::::://
 
+            //:    [x_0] > > > [+] < < < [x_1]   ://
+            //:    [y_0] > > > [+] < < < [y_1]   ://
+
             let new_x_0 = d_vpc[ x_0 ] + c_dut ;
             let new_x_1 = d_vpc[ x_1 ] - c_dut ;
             let new_y_0 = d_vpc[ y_0 ] + c_dut ;
@@ -2200,7 +2203,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 //: Smallness. Any smaller and we    ://    
                 //: enter the upside  down world.    :// 
                 //:::::::::::::::::::::::::::::::::::://
-                console.log("[VP_HIT_EDGE_OF_THE_DUM]");
+                console.log("[CANNOT_ZOOM_IN_ANYMORE]");
             }else{
                 d_vpc[ x_0 ]=( new_x_0 );
                 d_vpc[ x_1 ]=( new_x_1 );
@@ -2226,7 +2229,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 //: we will have integer overlow.    ://
                 //: Nothing lays beyond[ THE_DUM ].  ://
                 //:::::::::::::::::::::::::::::::::::://
-                console.log("[VP_IS_MAX_SMALLNESS]");
+                console.log("[CANNOT_ZOOM_OUT_ANYMORE]");
             }else{
                 d_vpc[ x_0 ]=( new_x_0 );
                 d_vpc[ x_1 ]=( new_x_1 );
