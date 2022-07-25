@@ -2185,16 +2185,16 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         }else                                                   // [093][068] 
         if( "+" === a_k || "=" === a_k ){
             //:::::::::::::::::::::::::::::::::::://
-            //: ZOOM_INN ===> MAKE[ VPC ]SMALLER ://
+            //: ZOOM_INN ===> MAKE[ VP1 ]SMALLER ://
             //:::::::::::::::::::::::::::::::::::://
 
             //:    [x_0] > > > [+] < < < [x_1]   ://
             //:    [y_0] > > > [+] < < < [y_1]   ://
 
-            let new_x_0 = d_vpc[ x_0 ] + c_dut ;
-            let new_x_1 = d_vpc[ x_1 ] - c_dut ;
-            let new_y_0 = d_vpc[ y_0 ] + c_dut ;
-            let new_y_1 = d_vpc[ y_1 ] - c_dut ;
+            let new_x_0 = d_vp1[ x_0 ] + c_dut ;
+            let new_x_1 = d_vp1[ x_1 ] - c_dut ;
+            let new_y_0 = d_vp1[ y_0 ] + c_dut ;
+            let new_y_1 = d_vp1[ y_1 ] - c_dut ;
 
             if( ( new_x_0 > new_x_1 )
             ||  ( new_y_0 > new_y_1 )
@@ -2205,21 +2205,24 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 //:::::::::::::::::::::::::::::::::::://
                 console.log("[CANNOT_ZOOM_IN_ANYMORE]");
             }else{
-                d_vpc[ x_0 ]=( new_x_0 );
-                d_vpc[ x_1 ]=( new_x_1 );
-                d_vpc[ y_0 ]=( new_y_0 );
-                d_vpc[ y_1 ]=( new_y_1 );
+                d_vp1[ x_0 ]=( new_x_0 );
+                d_vp1[ x_1 ]=( new_x_1 );
+                d_vp1[ y_0 ]=( new_y_0 );
+                d_vp1[ y_1 ]=( new_y_1 );
             };;
         }else
         if( "-" === a_k || "_" === a_k ){
             //:::::::::::::::::::::::::::::::::::://
-            //: ZOOM_OUT ===> MAKE[ VPC ]BIGGER  ://
+            //: ZOOM_OUT ===> MAKE[ VP1 ]BIGGER  ://
             //:::::::::::::::::::::::::::::::::::://
 
-            let new_x_0 = d_vpc[ x_0 ] - c_dut ;
-            let new_x_1 = d_vpc[ x_1 ] + c_dut ;
-            let new_y_0 = d_vpc[ y_0 ] - c_dut ;
-            let new_y_1 = d_vpc[ y_1 ] + c_dut ;
+            //:    [x_0] < < < [-] > > > [x_1]   ://
+            //:    [y_0] < < < [-] > > > [y_1]   ://
+
+            let new_x_0 = d_vp1[ x_0 ] - c_dut ;
+            let new_x_1 = d_vp1[ x_1 ] + c_dut ;
+            let new_y_0 = d_vp1[ y_0 ] - c_dut ;
+            let new_y_1 = d_vp1[ y_1 ] + c_dut ;
 
             if( ( new_x_0 < 0 || new_x_1 > (c_dum-1) )
             ||  ( new_y_0 < 0 || new_y_1 > (c_dum-1) )
@@ -2231,10 +2234,10 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 //:::::::::::::::::::::::::::::::::::://
                 console.log("[CANNOT_ZOOM_OUT_ANYMORE]");
             }else{
-                d_vpc[ x_0 ]=( new_x_0 );
-                d_vpc[ x_1 ]=( new_x_1 );
-                d_vpc[ y_0 ]=( new_y_0 );
-                d_vpc[ y_1 ]=( new_y_1 );
+                d_vp1[ x_0 ]=( new_x_0 );
+                d_vp1[ x_1 ]=( new_x_1 );
+                d_vp1[ y_0 ]=( new_y_0 );
+                d_vp1[ y_1 ]=( new_y_1 );
             };;
         }else
         {                                                       // [068] 
