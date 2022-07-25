@@ -1507,6 +1507,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 wgl.uniform4uiv( d_vpc_loc , d_vpc   );         // [091]
                 wgl.uniform4uiv( d_vp0_loc , d_vp0   );         // [091]
                 wgl.uniform4uiv( d_vp1_loc , d_vp1   );         // [091]
+
+                F_RES_CAN();
+
                                                                 // [---]
             };;                                                 //      [082]
         //:------:LIKE_AND_SUBSCRIBE_YOU_FREELOADER:[082]://    //      [082]
