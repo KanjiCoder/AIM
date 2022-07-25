@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_092  <<< THIS_VIDEO¯S_CODE    // [091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_092  <<< THIS_VIDEO¯S_CODE    // [092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -1498,7 +1498,9 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 var act_pid =( a_g.arr_pid[ a_g.ren_pin ] );    // [091]
                 ASS(act_pid === pid , "[XP8:GETAWAY]"     );    // [091]
                 let GUL = wgl.getUniformLocation.bind( wgl);    // [091]
-                                                                // [091]
+                                                                // [---]
+                F_RES_CAN();    //:#CPU_UPDATE_B4_GPUSYNC#://   // [092]
+                                                                // [---]
                 d_tik_loc = GUL(  act_pid , "d_tik" );          // [091]
                 d_vpc_loc = GUL(  act_pid , "d_vpc" );          // [091]
                 d_vp0_loc = GUL(  act_pid , "d_vp0" );          // [091]
@@ -1508,9 +1510,6 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 wgl.uniform4uiv( d_vpc_loc , d_vpc   );         // [091]
                 wgl.uniform4uiv( d_vp0_loc , d_vp0   );         // [091]
                 wgl.uniform4uiv( d_vp1_loc , d_vp1   );         // [091]
-
-                F_RES_CAN();
-
                                                                 // [---]
             };;                                                 //      [082]
         //:------:LIKE_AND_SUBSCRIBE_YOU_FREELOADER:[082]://    //      [082]
@@ -2526,8 +2525,7 @@ TAG[ tag_section | tag-section | tag_section ]BEG -------------- // [088]
     TAG[ canvas-resize | canvas_resize | canvasresize ]          // [092]
     TAG[ resize-canvas | resize_canvas | resizecanvas ]          // [092]
    GOTO[ F_RES_CAN ]( Function _ RESize _ CANvas )               // [092]
-
-
+                                                                 // [092]
     TAG[ glViewport ]FIX[ wgl.viewport ]                         // [092]
 
                                                                  // [088]
@@ -3336,6 +3334,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : [ d_tik , d_vp0 , d_vp1 , d_vpc ]                      [091][090]
           : [ d_tik_loc , d_vp0_loc , d_vp1_loc , d_vpc_loc ]      [091][090]
 
+    [091] : GPU/CPU sync of [ d_tik , d_vp0 , d_vp1 , d_vpc ]      [092][091]
+
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -3683,14 +3684,20 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                     : way for our first draft has now              [091]
                     : been optimized.                              [091]
 
+    #CPU_UPDATE_B4_GPUSYNC# :                                      [092]
+                                                                   [092]
+        Update[ d_vpc ]on the CPU side before doing all            [092]
+        of your[ gpu/cpu ]sync calls.                              [092]
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
 
+    [092] : [ d_vpc ]is now size of wgl.viewport , and resizes     [092]
+          : correctly when user resizes the window.                [092]
 
-    [091] : GPU/CPU sync of [ d_tik , d_vp0 , d_vp1 , d_vpc ]      [091]
 
 
 *** ******************************************************** **/
