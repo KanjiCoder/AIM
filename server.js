@@ -3689,6 +3689,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         Update[ d_vpc ]on the CPU side before doing all            [092]
         of your[ gpu/cpu ]sync calls.                              [092]
 
+    @INC_REC@ : The variable is an "INClusive RECtangle"           [092]
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
