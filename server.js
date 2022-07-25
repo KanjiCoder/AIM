@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_092  <<< THIS_VIDEO¯S_CODE    // [092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_093  <<< THIS_VIDEO¯S_CODE    // [093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -2120,16 +2120,19 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                                                                 // [068] 
         i_evt_key //:( i_evt_key )=>( o_asc_key )://            // [068] 
     ){                                                          // [068] 
-        var o_asc_key =(                                        // [068] 
-            String.prototype.toUpperCase.call(                  // [068] 
-            String.fromCharCode(                                // [068] 
-                                                                // [068] 
-                i_evt_key.keyCode                               // [068] 
-                                                                // [068] 
-            )||"[nil][o_asc_key]" ));;                          // [068] 
+                                                                // [---]
+        //:#_OLD_EVT_ASC_LOGIC_DOESNT_WORK_FOR_PLUS_MINUS_#://  // [092]
+                                                                // [092]
+        var o_asc_key =(                                        // [092]
+            String.prototype.toUpperCase.call(                  // [092]
+            (                                                   // [092]
+                i_evt_key.key                                   // [092]
+                                                                // [092]
+            )||"[nil][o_asc_key]" ));;                          // [092]
+                                                                // [---]
         return( o_asc_key );                                    // [068] 
     };;                                                         // [068] 
-
+                                                                // [---]
     const   F_KEYMAST_DOW = function                            // [057] 
     PRIVATE_F_KEYMAST_DOW(                                      // [057] 
         i_evt_key                                               // [068] 
@@ -2179,9 +2182,61 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 console.log( "[what?]:" + i_saywhat );  
             });;      
             //:----------------------------------------:[061]://
-        }else{                                       //:[068]://
-            LOG( "[UNBOUND_KEY]" , a_k );            //:[068]://
-        };;                                          //:[068]://
+        }else                                                   // [093][068] 
+        if( "+" === a_k ){
+            //:::::::::::::::::::::::::::::::::::://
+            //: ZOOM_INN ===> MAKE[ VPC ]SMALLER ://
+            //:::::::::::::::::::::::::::::::::::://
+
+            let new_x_0 = d_vpc[ x_0 ] + c_dut ;
+            let new_x_1 = d_vpc[ x_1 ] - c_dut ;
+            let new_y_0 = d_vpc[ y_0 ] + c_dut ;
+            let new_y_1 = d_vpc[ y_1 ] - c_dut ;
+
+            if( ( new_x_0 > new_x_1 )
+            ||  ( new_y_0 > new_y_1 )
+            ){  //:::::::::::::::::::::::::::::::::::://
+                //: DO_NOTHING. Viewport Is Max      ://    
+                //: Smallness. Any smaller and we    ://    
+                //: enter the upside  down world.    :// 
+                //:::::::::::::::::::::::::::::::::::://
+                console.log("[VP_HIT_EDGE_OF_THE_DUM]");
+            }else{
+                d_vpc[ x_0 ]=( new_x_0 );
+                d_vpc[ x_1 ]=( new_x_1 );
+                d_vpc[ y_0 ]=( new_y_0 );
+                d_vpc[ y_1 ]=( new_y_1 );
+            };;
+        }else
+        if( "-" === a_k ){
+            //:::::::::::::::::::::::::::::::::::://
+            //: ZOOM_OUT ===> MAKE[ VPC ]BIGGER  ://
+            //:::::::::::::::::::::::::::::::::::://
+
+            let new_x_0 = d_vpc[ x_0 ] - c_dut ;
+            let new_x_1 = d_vpc[ x_1 ] + c_dut ;
+            let new_y_0 = d_vpc[ y_0 ] - c_dut ;
+            let new_y_1 = d_vpc[ y_1 ] + c_dut ;
+
+            if( ( new_x_0 < 0 || new_x_1 > (c_dum-1) )
+            ||  ( new_y_0 < 0 || new_y_1 > (c_dum-1) )
+            ){  //:::::::::::::::::::::::::::::::::::://
+                //: DO_NOTHING. Viewport is Max      ://
+                //: Bigness. Any larger and we       ://
+                //: we will have integer overlow.    ://
+                //: Nothing lays beyond[ THE_DUM ].  ://
+                //:::::::::::::::::::::::::::::::::::://
+                console.log("[VP_IS_MAX_SMALLNESS]");
+            }else{
+                d_vpc[ x_0 ]=( new_x_0 );
+                d_vpc[ x_1 ]=( new_x_1 );
+                d_vpc[ y_0 ]=( new_y_0 );
+                d_vpc[ y_1 ]=( new_y_1 );
+            };;
+        }else
+        {                                                       // [068] 
+            LOG( "[UNBOUND_KEY]" , a_k );                       // [068] 
+        };;                                                     // [068] 
 
     };; //:[F_KEYMAST_DOW]:----------------------------:[057]://
 
@@ -3690,6 +3745,30 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         of your[ gpu/cpu ]sync calls.                              [092]
 
     @INC_REC@ : The variable is an "INClusive RECtangle"           [092]
+
+
+    #_OLD_EVT_ASC_LOGIC_DOESNT_WORK_FOR_PLUS_MINUS_#            // [092]
+                                                                // [092]
+        The code below will __NOT__ work for the "+" and "-"    // [092]
+        keys, so we have changed it.                            // [092]
+                                                                // [092]
+        var o_asc_key =(                                        // [092][068] 
+            String.prototype.toUpperCase.call(                  // [092][068] 
+            String.fromCharCode(                                // [092][068] 
+                                                                // [092][068] 
+                i_evt_key.keyCode                               // [092][068] 
+                                                                // [092][068] 
+            )||"[nil][o_asc_key]" ));;                          // [092][068] 
+
+
+
+
+
+
+
+
+
+
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
