@@ -189,6 +189,7 @@
         {                                                       // [096]
             ERR("[NON_TOGGLE_VAR]");                            // [096]
         };;                                                     // [096]
+        return( /**VOID**/ );                                   // [096]
     };;                                                         // [096]
 //:=========================:TOP_LEVEL_HELPER_FUNCTIONS:[096]://
 //:SHUTARR:[077]:============================================://
@@ -2359,7 +2360,7 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         if( "L" == a_k ){                                       // [096]
                                                                 // [096]
             F_TOG( window , "d_rendopt_boxview_onn" );          // [096]
-                                                                // [096]
+            F_RES_CAN(); //:UpdateViewportSizes://              // [096]
         }else                                                   // [096]
         {                                                       // [068] 
             LOG( "[UNBOUND_KEY]" , a_k );                       // [068] 
@@ -3531,6 +3532,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : verify rendering code uses[ vp0 ]and[ vpc ]            [095][094]
           : correctly.                                             [095][094]
 
+    [095] : Added letter boxing to shader code.                 // [096][095]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -3959,7 +3962,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [095] : Added letter boxing to shader code.                 // [095]
+    [096] : "L" Key To Toggle Letter Boxing.                    // [096]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
