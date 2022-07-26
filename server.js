@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_095  <<< THIS_VIDEO¯S_CODE    // [094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_095  <<< THIS_VIDEO¯S_CODE    // [095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -853,21 +853,19 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
         ){                                                      // [095]
             //:#_BLACKSECTION_OF_LETTERBOX_#://                 // [095]
             out_f_c = vec4(0,0,0,1);                            // [095]
-            return;
-        };;                                                  
-
-            u_v0l = UV2( u_fcx-d_vp0[x_0]                           // [095]
-                      ,  u_fcy-d_vp0[y_0] );;                       // [095]
-
-            u_mv0 = UV2( d_vp0[x_1]-d_vp0[x_0]+u_1              // [095]
-                       , d_vp0[y_1]-d_vp0[y_0]+u_1 );;          // [095]
+            return;                                             // [095]
+        };;                                                     // [095]
+        u_v0l = UV2( u_fcx-d_vp0[x_0]                           // [095]
+                ,    u_fcy-d_vp0[y_0] );;                       // [095]
                                                                 // [095]
-            f_v0l = FV2(                                        // [095]
-                F32(u_v0l.x) / F32(u_mv0.x - u_1)               // [095]
-            ,   F32(u_v0l.y) / F32(u_mv0.y - u_1) );;           // [095]
+        u_mv0 = UV2( d_vp0[x_1]-d_vp0[x_0]+u_1                  // [095]
+                ,    d_vp0[y_1]-d_vp0[y_0]+u_1 );;              // [095]
                                                                 // [095]
-            out_f_c = FV4( f_v0l.x , f_v0l.y , 0.0 , 1.0 );     // [095]
- 
+        f_v0l = FV2(                                            // [095]
+            F32(u_v0l.x) / F32(u_mv0.x - u_1)                   // [095]
+        ,   F32(u_v0l.y) / F32(u_mv0.y - u_1) );;               // [095]
+                                                                // [095]
+        out_f_c = FV4( f_v0l.x , f_v0l.y , 0.0 , 1.0 );         // [095]
                                                                 // [095]
     }   ////////////////////////////////////////////////////////// [074]                                                       
                                                                         
@@ -3508,6 +3506,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : __NOT__ make use of[ d_vp1 ]yet.                       [094][093]
           : ( d_vp1 === Data Selection Viewport Rectangle )        [094][093]
 
+    [094] : Added letter boxing math so that we can                [095][094]
+          : verify rendering code uses[ vp0 ]and[ vpc ]            [095][094]
+          : correctly.                                             [095][094]
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -3937,9 +3938,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [094] : Added letter boxing math so that we can
-          : verify rendering code uses[ vp0 ]and[ vpc ]
-          : correctly.
+    [095] : Added letter boxing to shader code.
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
