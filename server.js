@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_095  <<< THIS_VIDEO¯S_CODE    // [095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_096  <<< THIS_VIDEO¯S_CODE    // [096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -174,7 +174,21 @@
 
 
 
-//:============================:RENDER_OPTION_VARIABLES:[094]://    
+//:============================:RENDER_OPTION_VARIABLES:[094]://  
+//:TOP_LEVEL_HELPER_FUNCTIONS:[096]:=========================://
+
+    const F_TOG = function PRIVATE_F_TOG(
+
+        i_obj //:object_containing_var ://
+    ,   i_nam //:varible_name_to_toggle://
+    ){
+        if( 0 === i_obj[i_nam] ){ i_obj[i_nam]=( 1 ); }else
+        if( 1 === i_obj[i_nam] ){ i_obj[i_nam]=( 0 ); }else
+        {
+            ERR("[NON_TOGGLE_VAR]");
+        };;
+    };;
+//:=========================:TOP_LEVEL_HELPER_FUNCTIONS:[096]://
 //:SHUTARR:[077]:============================================://
 
     const F_SHUTARR = function PRIVATE_F_SHUTARR(               // [077]
@@ -2340,6 +2354,11 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
                 d_vp1[ y_1 ]=( new_y_1 );                       // [093]
             };;                                                 // [093]
         }else                                                   // [093]
+        if( "L" == a_k ){                                       // [096]
+                                                                // [096]
+            F_TOG( window , "d_rendopt_boxview_onn" );          // [096]
+                                                                // [096]
+        }else                                                   // [096]
         {                                                       // [068] 
             LOG( "[UNBOUND_KEY]" , a_k );                       // [068] 
         };;                                                     // [068] 
