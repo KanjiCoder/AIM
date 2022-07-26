@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_093  <<< THIS_VIDEO¯S_CODE    // [093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_093  <<< THIS_VIDEO¯S_CODE    // [094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -165,6 +165,16 @@
         d_vp0[ y_1 ]=( 420  ); d_vpc[ y_1 ]=(  69  );           // [088]
                                                                 // [088]
 //:================================:TOP_LEVEL_VARIABLES:[088]://   [---]
+//:RENDER_OPTION_VARIABLES:[094]:============================://   
+
+
+
+    var d_rendopt_boxview_onn =( 1 ); //:LetterBoxxingOn?://    // [094]
+    var d_rendopt_boxview_rat =( 3 ); //:LetterBoxRatio  ://    // [094]
+
+
+
+//:============================:RENDER_OPTION_VARIABLES:[094]://    
 //:SHUTARR:[077]:============================================://
 
     const F_SHUTARR = function PRIVATE_F_SHUTARR(               // [077]
@@ -1093,6 +1103,50 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     };;                                                         // [071]
                                                                                                        
 //:=============================:FUNC_BOILERPLATE:[028]+[035]://
+//:FUNC_RESIZE_VP0_BOXVIEW:[094]:============================://
+
+    const   F_RES_VP0_BOXVIEW = function                        // [094]
+    PRIVATE_F_RES_VP0_BOXVIEW(                                  // [094]
+        /**NOARGS**/                                            // [094]
+    ){                                                          // [094]
+        //:[ATF]:----------------------------------------://    // [094]
+        //:                                              ://    // [094]
+        //: Take the SHORTER screen dimension and        ://    // [094]
+        //: divide it by[ rat (ratio) ], to create a     ://    // [094]
+        //: "letter boxxing" effect in our render.       ://    // [094]
+        //:                                              ://    // [094]
+        //:  VPC : Viewport CANVAS/CLIENT                ://    // [094]
+        //:  VP0 : Viewport DEST(inside of VPC)          ://    // [094]
+        //:                                              ://    // [094]
+        //:----------------------------------------:[ATF]://    // [094]
+                                                                // [094]
+        var rat =( d_rendopt_boxview_rat );                     // [094]
+                                                                // [094]
+        var v_wid = d_vpc[x_1]-d_vpc[x_0]+1;   //:vpc_wid://    // [094]
+        var v_hig = d_vpc[y_1]-d_vpc[y_0]+1;   //:vpc_hig://    // [094]
+                                                                // [094]
+        var b_wid =( v_wid );                  //:box_wid://    // [094]
+        var b_hig =( v_hig );                  //:box_hig://    // [094]
+                                                                // [094]
+        if( v_wid > v_hig ){ b_hig=( b_wid / rat ); }else       // [094]
+        if( v_hig > v_wid ){ b_wid=( b_hig / rat ); }else       // [094]
+        if( v_wid===v_hig ){ b_wid=( v_wid *  1  );             // [094]
+                             b_hig=( v_hig / rat ); }else       // [094]
+        { ERR("[@EDCL@:2022_07_26]"); };;                       // [094]
+                                                                // [094]
+        //: #_UNLIKELY_BUT_MATHEMATICALLY_POSSIBLE_# ://        // [094]
+        if( b_wid > v_wid ){ b_wid = v_wid ; };                 // [094]
+        if( b_hig > v_hig ){ b_hig = v_hig ; };                 // [094]
+                                                                // [094]
+        var h_wid = Math.floor( b_wid / 2.0 ); //:haf_wid://    // [094]
+        var h_hig = Math.floor( b_hig / 2.0 ); //:haf_hig://    // [094]
+                                                                // [094]
+        d_vp0[ x_0 ] = ( d_vpc[ x_0 ] + h_wid );                // [094]
+        d_vp0[ x_1 ] = ( d_vpc[ x_1 ] - h_wid );                // [094]
+        d_vp0[ y_0 ] = ( d_vpc[ y_0 ] + h_hig );                // [094]
+        d_vp0[ y_1 ] = ( d_vpc[ y_1 ] - h_hig );                // [094]
+    };;                                                         // [094]
+//:============================:FUNC_RESIZE_VP0_BOXVIEW:[094]://
 //:FUNC_RESIZE_CANVAS:[032]+[035]:===========================://
 
     const F_RES_CAN = function PRIVATE_F_RES_CAN( ){            // [032]
@@ -1126,7 +1180,18 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             ,   ( d_vpc[ y_0 ]                    )  //:@org@://// [092][080]
             ,   ( d_vpc[ x_1 ] - d_vpc[ x_0 ] + 1 )  //:@wid@://// [092][080]
             ,   ( d_vpc[ y_1 ] - d_vpc[ y_0 ] + 1 )  //:@hig@://// [092][080]
-            );;                                                 // [---][080]         
+            );;                                                 // [---][080]    
+
+            //:#_INSET_VP0_WITHIN_VPC_TO_LETTERBOX_#://         // [094]
+                                                                // [094]
+            d_vp0[ x_0 ]=( d_vpc[ x_0 ] );                      // [094]
+            d_vp0[ y_0 ]=( d_vpc[ y_0 ] );                      // [094]
+            d_vp0[ x_1 ]=( d_vpc[ x_1 ] );                      // [094]
+            d_vp0[ y_1 ]=( d_vpc[ y_1 ] );                      // [094]
+            if( d_rendopt_boxview_onn >= 1 ){                   // [094]
+                F_RES_VP0_BOXVIEW();                            // [094]
+            };;                                                 // [094]
+
         };;                                                     // [080]
     };;                                                         // [032]
 //:===========================:FUNC_RESIZE_CANVAS:[032]+[035]://
@@ -3770,6 +3835,53 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                 i_evt_key.keyCode                               // [093][068] 
                                                                 // [093][068] 
             )||"[nil][o_asc_key]" ));;                          // [093][068] 
+               
+    u_fcx : Uint32 FragCoord.X , top-left origin.               // [094]
+    u_fcy : Uint32 FragCoord.Y , top-left origin.               // [094]
+    u_fc  : Denoting[ u_fcx /or/ u_fcy ]IN_DIAGRAM              // [094]
+                                                                // [094]
+    [     u_fc    ] [     u_fc    ] [     u_fc    ]             // [094]
+    [A][ ][ ][ ][ ] [ ][ ][B][ ][ ] [ ][ ][ ][ ][C] <--THE_DUM  // [094]
+                                                                // [094]
+    Thinking if the frag coords were over this small of         // [094]
+    a range, that [A],[B],[C] would be the discrete units       // [094]
+    from "THE_DUM" I would pick. In this diagram                // [094]
+    "THE_DUM" is only 15 discrete units in span.                // [094]
+                                                                // [094]
+    #_INSET_VP0_WITHIN_VPC_TO_LETTERBOX_# :                     // [094]
+                                                                // [094]
+        Right now VP0 === VPC , but if we ever want             // [094]
+        to "letterbox" our rendering, all we need               // [094]
+        to do is INSET[ VP0 ]within[ VPC ]instead of            // [094]
+        make them an identical size.                            // [094]
+                                                                // [094]
+    @EDCL@: Expected_Dead_Code_Line (AKA:Unreachable)           // [094]
+                                                                // [094]
+    #_UNLIKELY_BUT_MATHEMATICALLY_POSSIBLE_# :----------------: // [094]
+                                                              : // [094]
+        It is possible that by taking the SMALLER             : // [094]
+        axis of screen, and trying to make it 1/3             : // [094]
+        of the larger axis, that we accidentially             : // [094]
+        make the [1/3] axis LARGER than the                   : // [094]
+        length of the screen on that axis.                    : // [094]
+                                                              : // [094]
+        A perfect case :                                      : // [094]
+        9 x 3 ==> 9 x 3                                       : // [094]
+                                                              : // [094]
+        [ ][ ][ ] [ ][ ][ ] [ ][ ][ ]                         : // [094]
+        [ ][ ][ ] [ ][ ][ ] [ ][ ][ ]                         : // [094]
+        [ ][ ][ ] [ ][ ][ ] [ ][ ][ ]                         : // [094]
+                                                              : // [094]
+        The edge case I am worried about :                    : // [094]
+        9 x 2 ==> 9 x 3 ( 9x3 isn't possible )                : // [094]
+                                                              : // [094]
+        [ ][ ][ ] [ ][ ][ ] [ ][ ][ ]                         : // [094]
+        [ ][ ][ ] [ ][ ][ ] [ ][ ][ ]                         : // [094]
+                                                              : // [094]
+        This scenario will only happen if our client          : // [094]
+        screen space is THINNER than 3x1 ratio.               : // [094]
+    :---------------------------------------------------------: // [094]
+    
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
