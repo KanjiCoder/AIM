@@ -177,17 +177,19 @@
 //:============================:RENDER_OPTION_VARIABLES:[094]://  
 //:TOP_LEVEL_HELPER_FUNCTIONS:[096]:=========================://
 
-    const F_TOG = function PRIVATE_F_TOG(
-
-        i_obj //:object_containing_var ://
-    ,   i_nam //:varible_name_to_toggle://
-    ){
-        if( 0 === i_obj[i_nam] ){ i_obj[i_nam]=( 1 ); }else
-        if( 1 === i_obj[i_nam] ){ i_obj[i_nam]=( 0 ); }else
-        {
-            ERR("[NON_TOGGLE_VAR]");
-        };;
-    };;
+    const F_TOG = function PRIVATE_F_TOG(                       // [096]
+                                                                // [096]
+        i_obj //:object_containing_var ://                      // [096]
+    ,   i_nam //:varible_name_to_toggle://                      // [096]
+    ){                                                          // [096]
+        var val =( i_obj[ i_nam ] );                            // [096]
+                                                                // [096]
+        if( 0 === val ){ i_obj[ i_nam ]=( 1 ); }else            // [096]
+        if( 1 === val ){ i_obj[ i_nam ]=( 0 ); }else            // [096]
+        {                                                       // [096]
+            ERR("[NON_TOGGLE_VAR]");                            // [096]
+        };;                                                     // [096]
+    };;                                                         // [096]
 //:=========================:TOP_LEVEL_HELPER_FUNCTIONS:[096]://
 //:SHUTARR:[077]:============================================://
 
