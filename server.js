@@ -3473,6 +3473,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [092] : [ d_vpc ]is now size of wgl.viewport , and resizes     [093][092]
           : correctly when user resizes the window.                [093][092]
 
+    [093] : Added the logic for zooming in and out.                [094][093]
+          : HOWEVER... Nothing can be observed yet,                [094][093]
+          : because the fragment shader code does                  [094][093]
+          : __NOT__ make use of[ d_vp1 ]yet.                       [094][093]
+          : ( d_vp1 === Data Selection Viewport Rectangle )        [094][093]
+
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -3893,14 +3899,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-
-    [093] : Added the logic for zooming in and out.                [093]
-          : HOWEVER... Nothing can be observed yet,                [093]
-          : because the fragment shader code does                  [093]
-          : __NOT__ make use of[ d_vp1 ]yet.                       [093]
-          : ( d_vp1 === Data Selection Viewport Rectangle )        [093]
-
-
+    [094] : Added letter boxing math so that we can
+          : verify rendering code uses[ vp0 ]and[ vpc ]
+          : correctly.
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
