@@ -1227,13 +1227,18 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
         return( o_nil );                         //:[040]://    
     };;                  
 
-    function ASS( i_obj ){                                      // [071]
+    function YEL( i_msg ){                                      // [098]
+                                                                // [098]
+        if( notnode ){ window.alert( i_msg ); };                // [098]
+        console.log( "[YEL_MSG]:" ,  i_msg );                   // [098]
+    };;                                                         // [098]
+    function ASS( i_obj , i_oem ){                              // [098][071]
                                                                 // [071]
         if( !HAS( i_obj ) ){                                    // [071]
                                                                 // [071]
-            MSG( "[MSG:ASSFAIL]" );                             // [071]
-            YEL( "[YEL:ASSFAIL]" );                             // [098]
-            ERR( "[ERR:ASSFAIL]" );                             // [098]
+            MSG( "[MSG:ASSFAIL]"+( i_oem || "" ) );             // [098][071]
+            YEL( "[YEL:ASSFAIL]"+( i_oem || "" ) );             // [098]
+            ERR( "[ERR:ASSFAIL]"+( i_oem || "" ) );             // [098]
         };;                                                     // [071]
                                                                 // [071]
         return(   i_obj );                                      // [071]
@@ -4161,6 +4166,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                                                               : // [098]
             @DUA@ : Discrete_Unit_Assert                      : // [098]
     :---------------------------------------------------------: // [098]
+
+    @i_oem@ : INPUT - On_Error_Message                          // [098]
+    @oem@   :         On_Error_Message                          // [098]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
