@@ -135,16 +135,17 @@
     ASS( Math.floor( c_duh / 5 ) === c_dur , "[@DUA@002]" );    // [098]
     ASS( Math.floor( c_dur /64 ) === c_dut , "[@DUA@003]" );    // [098]
     ASS( c_dur/2/2/2/2/2/2       === c_dut , "[@DUA@004]" );    // [098]
-    ASS(               c_du0     === c_dut , "[@DUA@005]" );    // [098]
-    ASS(               c_du6     === c_dur , "[@DUA@006]" );    // [098]
-    ASS(               c_du1 / 2 === c_du0 , "[@DUA@007]" );    // [098]
-    ASS(               c_du2 / 2 === c_du1 , "[@DUA@008]" );    // [098]
-    ASS(               c_du3 / 2 === c_du2 , "[@DUA@009]" );    // [098]
-    ASS(               c_du4 / 2 === c_du3 , "[@DUA@010]" );    // [098]
-    ASS(               c_du5 / 2 === c_du4 , "[@DUA@011]" );    // [098]
-    ASS(               c_du6 / 2 === c_du5 , "[@DUA@012]" );    // [098]
-    ASS(               c_duh / 5 === c_du6 , "[@DUA@013]" );    // [098]
-                                                                // [098]
+    ASS(             c_du0       === c_dut , "[@DUA@005]" );    // [098]
+    ASS(             c_du6       === c_dur , "[@DUA@006]" );    // [098]
+    ASS(             c_du1 /   2 === c_du0 , "[@DUA@007]" );    // [098]
+    ASS(             c_du2 /   2 === c_du1 , "[@DUA@008]" );    // [098]
+    ASS(             c_du3 /   2 === c_du2 , "[@DUA@009]" );    // [098]
+    ASS(             c_du4 /   2 === c_du3 , "[@DUA@010]" );    // [098]
+    ASS(             c_du5 /   2 === c_du4 , "[@DUA@011]" );    // [098]
+    ASS(             c_du6 /   2 === c_du5 , "[@DUA@012]" );    // [098]
+    ASS(             c_duh /   5 === c_du6 , "[@DUA@013]" );    // [098]
+    ASS(             c_duh / 960 === c_dut , "[@DUA@013]" );    // [098]
+                                                                // [---]
     const   x_0 =( 0 ); //:VIEWPORT:LEF://                      // [088]
     const   x_1 =( 1 ); //:VIEWPORT:RIG://                      // [088]
     const   y_0 =( 2 ); //:VIEWPORT:TOP://                      // [088]
@@ -3623,6 +3624,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [096] : "L" Key To Toggle Letter Boxing.                    // [097][096]
 
+    [097] : Figured Out Sample Coordinate For Data Set.         // [098][097]
+          : HOWEVER:                                            // [098][097]
+          : 1. Not using sample coord yet.                      // [098][097]
+          : 2. Don't have any data yet.                         // [098][097]
+          : Next thing to do: Use sample coord to               // [098][097]
+          : visualize the space we are in.                      // [098][097]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4116,50 +4124,45 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         "t" goes from t_0 to t_1 .                            : // [097]
     :---------------------------------------------------------: // [097]
 
-    #_WE_MAY_NEED_TO_REVISE_THIS_FOR_EVEN_DIVISIBILITY_# :
-
-        0x7FFFFF == all 23 usable bits set.
-                    THIS IS WRONG FOR[ c_dum ]BECAUSE IT
-                    IS NOT EVENLY DIVISIBLE When Doing:
-                    c_dut =( 0x7FFFFF / 3 / 5 / 64 )
-    
-                    THIS IS:
-                    c_dut =( 0x7FFF80 / 3 / 5 / 64 )
-
-        c_dum =( 0x7FFF80 ); //:THE_DUM://
-        c_duh =( 0x2AAA80 ); //:HOTEL  ://
-        c_dur =( 0x88880  ); //:ROOM   ://
-        c_dut =( 0x2222   ); //:TILE   ://
- 
-    #_DEFINE_ALL_DISCRETE_PLANK_CONSTANTS_# :
-
-        I am taking back what I said back in
-        Tutorial[087]... We should define _ALL_
-        of the discrete unit constants, even if 
-        it is more stuff to memorize, because I
-        fucked up their values the first time
-        I tried to make them.
-
-                  2*2*2*2*2*2 === 64
-        0x88880 / 2/2/2/2/2/2 === 0x2222
-
-        @DUA@ : Discrete_Unit_Assert
-
-        
-        
-
+    #_FIXING_YOUR_FUCKUP_VIDEO_098_# :------------------------: // [098]
+                                                              : // [098]
+        #_WE_MAY_NEED_TO_REVISE_THIS_FOR_EVEN_DIVISIBILITY_#::: // [098]
+                                                              : // [098]
+            0x7FFFFF == all 23 usable bits set.               : // [098]
+                        THIS IS WRONG FOR[ c_dum ]BECAUSE IT  : // [098]
+                        IS NOT EVENLY DIVISIBLE When Doing:   : // [098]
+                        c_dut =( 0x7FFFFF / 3 / 5 / 64 )      : // [098]
+                                                              : // [098]
+                        THIS IS:                              : // [098]
+                        c_dut =( 0x7FFF80 / 3 / 5 / 64 )      : // [098]
+                                                              : // [098]
+            c_dum =( 0x7FFF80 ); //:THE_DUM://                : // [098]
+            c_duh =( 0x2AAA80 ); //:HOTEL  ://                : // [098]
+            c_dur =( 0x88880  ); //:ROOM   ://                : // [098]
+            c_dut =( 0x2222   ); //:TILE   ://                : // [098]
+                                                              : // [098]
+        #_DEFINE_ALL_DISCRETE_PLANK_CONSTANTS_#:::::::::::::::: // [098]
+                                                              : // [098]
+            I am taking back what I said back in              : // [098]
+            Tutorial[087]... We should define _ALL_           : // [098]
+            of the discrete unit constants, even if           : // [098]
+            it is more stuff to memorize, because I           : // [098]
+            fucked up their values the first time             : // [098]
+            I tried to make them.                             : // [098]
+                                                              : // [098]
+                      2*2*2*2*2*2 === 64                      : // [098]
+            0x88880 / 2/2/2/2/2/2 === 0x2222                  : // [098]
+                                                              : // [098]
+            @DUA@ : Discrete_Unit_Assert                      : // [098]
+    :---------------------------------------------------------: // [098]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-   [097] : Figured Out Sample Coordinate For Data Set.          // [097]
-         : HOWEVER:                                             // [097]
-         : 1. Not using sample coord yet.                       // [097]
-         : 2. Don't have any data yet.                          // [097]
-         : Next thing to do: Use sample coord to                // [097]
-         : visualize the space we are in.                       // [097]
+    [098] : 1 : _____FIXED_____  "Discrete_Unit" constants.     // [098]
+          : 2 : Added  __MORE__  "Discrete_Unit" constants.     // [098]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
