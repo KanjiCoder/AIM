@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_097  <<< THIS_VIDEO¯S_CODE    // [097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_098  <<< THIS_VIDEO¯S_CODE    // [098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -115,9 +115,36 @@
     const c_fps =(  30  );  /** Simulation FrameRate **/        // [088][085]
 
     const c_dud = "[YOU_MEAN:c_dum:NO:DiscreteUnits:DUM]" ;     // [088]
-    const c_dum = 0x7FFFFF ; //:DiscreteUnits:~MAP~             // [088]
-    const c_dut = 0x2222   ; //:DiscreteUnits: TILE             // [088]
-                                                                // [088]
+
+    //:#_DEFINE_ALL_DISCRETE_PLANK_CONSTANTS_#                  // [098]
+                                                                // [098]
+    const c_dum = 0x7FFF80  ; //:DiscreteUnits : THE_DUM        // [098][088]
+    const c_duh = 0x2AAA80  ; //:DiscreteUnits : HOTEL          // [098]
+    const c_dur = 0x088880  ; //:DiscreteUnits : ROOM           // [098]
+    const c_dut = 0x002222  ; //:DiscreteUnits : TILE           // [088]
+                                                                // [098]
+    const c_du0 = 0x002222   ; //:DiscreteUnits : te7==0        // [098]
+    const c_du1 = 0x004444   ; //:DiscreteUnits : te7==1        // [098]
+    const c_du2 = 0x008888   ; //:DiscreteUnits : te7==2        // [098]
+    const c_du3 = 0x011110   ; //:DiscreteUnits : te7==3        // [098]
+    const c_du4 = 0x022220   ; //:DiscreteUnits : te7==4        // [098]
+    const c_du5 = 0x044440   ; //:DiscreteUnits : te7==5        // [098]
+    const c_du6 = 0x088880   ; //:DiscreteUnits : te7==6        // [098]
+                                                                // [098]
+    ASS( Math.floor( c_dum / 3 ) === c_duh , "[@DUA@001]" );    // [098]
+    ASS( Math.floor( c_duh / 5 ) === c_dur , "[@DUA@002]" );    // [098]
+    ASS( Math.floor( c_dur /64 ) === c_dut , "[@DUA@003]" );    // [098]
+    ASS( c_dur/2/2/2/2/2/2       === c_dut , "[@DUA@004]" );    // [098]
+    ASS(               c_du0     === c_dut , "[@DUA@005]" );    // [098]
+    ASS(               c_du6     === c_dur , "[@DUA@006]" );    // [098]
+    ASS(               c_du1 / 2 === c_du0 , "[@DUA@007]" );    // [098]
+    ASS(               c_du2 / 2 === c_du1 , "[@DUA@008]" );    // [098]
+    ASS(               c_du3 / 2 === c_du2 , "[@DUA@009]" );    // [098]
+    ASS(               c_du4 / 2 === c_du3 , "[@DUA@010]" );    // [098]
+    ASS(               c_du5 / 2 === c_du4 , "[@DUA@011]" );    // [098]
+    ASS(               c_du6 / 2 === c_du5 , "[@DUA@012]" );    // [098]
+    ASS(               c_duh / 5 === c_du6 , "[@DUA@013]" );    // [098]
+                                                                // [098]
     const   x_0 =( 0 ); //:VIEWPORT:LEF://                      // [088]
     const   x_1 =( 1 ); //:VIEWPORT:RIG://                      // [088]
     const   y_0 =( 2 ); //:VIEWPORT:TOP://                      // [088]
@@ -3683,7 +3710,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     #_THE_TWO_MOST_IMPORTANT_DISCRETE_VALUES_# :---------------:   [087]
                                                                :   [087]
-        const c_dum = 0x7FFFFF ;//: DiscreteUnits -THEDUM://   :   [087]
+        const c_dum = 0x7FFF80 ;//: DiscreteUnits -THEDUM://   :   [098][087]
         const c_dut = 0x2222   ;//: DiscreteUnits - TILE ://   :   [087]
                                                                :   [087]
     :--------------: #_THE_TWO_MOST_IMPORTANT_DISCRETE_VALUES_#:   [087]
@@ -3801,12 +3828,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                                 HEX[ 0 - to 0x7F FFFF ]        :   [087]
                                                                :   [087]
                                                                :   [087]
-        +--------------------------------------------------+   :   [087]
-        |                                                  |   :   [087]
-        |  0x7F_FFFF / 960u == 0x2222                      |   :   [087]
-        |  0x7F_FFFF / 960u ==  8,738                      |   :   [087]
-        |                                                  |   :   [087]
-        +--------------------------------------------------+   :   [087]
+        +--------------------------------------------------+   :   [098][087]
+        |                                                  |   :   [098][087]
+        |  0x7F_FF80 / 960u == 0x2222                      |   :   [098][087]
+        |  0x7F_FF80 / 960u ==  8,738                      |   :   [098][087]
+        |                                                  |   :   [098][087]
+        +--------------------------------------------------+   :   [098][087]
                                                                :   [087]
         We have 0x2222 discrete units per game tile            :   [087]
         that is rendered in our camera.                        :   [087]
@@ -3825,7 +3852,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         |<-------- AKA: One ALICE  Sized Tile ------------->|  :   [087]
         |<-------- AKA: One IVY    Sized Tile ------------->|  :   [087]
                                                                :   [087]
-        const c_dum = 0x7FFFFF ;//: DiscreteUnits -THEDUM://   :   [087]
+        const c_dum = 0x7FFF80 ;//: DiscreteUnits -THEDUM://   :   [098][087]
         const c_dut = 0x2222   ;//: DiscreteUnits - TILE ://   :   [087]
                                                                :   [087]
         var     duh =( c_dum /  3 );                           :   [087]
@@ -4088,6 +4115,38 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         Think parametric functions where                      : // [097]
         "t" goes from t_0 to t_1 .                            : // [097]
     :---------------------------------------------------------: // [097]
+
+    #_WE_MAY_NEED_TO_REVISE_THIS_FOR_EVEN_DIVISIBILITY_# :
+
+        0x7FFFFF == all 23 usable bits set.
+                    THIS IS WRONG FOR[ c_dum ]BECAUSE IT
+                    IS NOT EVENLY DIVISIBLE When Doing:
+                    c_dut =( 0x7FFFFF / 3 / 5 / 64 )
+    
+                    THIS IS:
+                    c_dut =( 0x7FFF80 / 3 / 5 / 64 )
+
+        c_dum =( 0x7FFF80 ); //:THE_DUM://
+        c_duh =( 0x2AAA80 ); //:HOTEL  ://
+        c_dur =( 0x88880  ); //:ROOM   ://
+        c_dut =( 0x2222   ); //:TILE   ://
+ 
+    #_DEFINE_ALL_DISCRETE_PLANK_CONSTANTS_# :
+
+        I am taking back what I said back in
+        Tutorial[087]... We should define _ALL_
+        of the discrete unit constants, even if 
+        it is more stuff to memorize, because I
+        fucked up their values the first time
+        I tried to make them.
+
+                  2*2*2*2*2*2 === 64
+        0x88880 / 2/2/2/2/2/2 === 0x2222
+
+        @DUA@ : Discrete_Unit_Assert
+
+        
+        
 
 
 *** ******************************************************** **/
