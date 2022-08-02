@@ -3730,6 +3730,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : Next thing to do: Use sample coord to               // [098][097]
           : visualize the space we are in.                      // [098][097]
 
+    [098] : 1 : _____FIXED_____  "Discrete_Unit" constants.     // [099][098]
+          : 2 : Added  __MORE__  "Discrete_Unit" constants.     // [099][098]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4262,47 +4265,47 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [MOD3]  @MOD3@  #MOD3#  : Doing Modulo  3 ( %3  ) by hand   // [099]
     [MOD5]  @MOD4@  #MOD5#  : Doing Modulo  5 ( %5  ) by hand   // [099]
     [MOD64] @MOD64@ #MOD64# : Doing Modulo 64 ( %64 ) by hand   // [099]
-
+                                                                // [099]
     @TMMC@: Tile Map Math Collision                             // [099]
                                                                 // [099]
         Figure out what cell a given [pixel||unit] is within    // [099]
         by doing "tile map math collision". AKA: What cell      // [099]
         is the unit "colliding/overlapping" with.               // [099]
-
-    #_BRANCHLESS_CHECKERBOARD_# :-----------------------------:
-                                                              :
-        //:::::::::::::::::::::::::::::::::::::::::::::::://  :
-        //: Figure Out The Checkerboard Value Of XY      ://  :
-        //: coordinate of different geometry elements.   ://  :
-        //: Calculations are BRANCHLESS way to calculate ://  :
-        //: if BOTH ARE ODD ( 1 == 1 ) or BOTH ARE EVEN  ://  :
-        //: ( 0 === 0 ).                                 ://  :
-        //:                                              ://  :
-        //:   X  &  Y ==> abs( X - Y ) ==>( 0 || 1 )     ://  :
-        //:   -------                                    ://  :
-        //:   0  &  1 ==> abs( 0 - 1 ) ==> 1             ://  :
-        //:   1  &  0 ==> abs( 1 - 0 ) ==> 1             ://  :
-        //:   0  &  0 ==> abs( 0 - 0 ) ==> 0             ://  :
-        //:   1  &  1 ==> abs( 1 - 1 ) ==> 0             ://  :
-        //:::::::::::::::::::::::::::::::::::::::::::::::://  :
-                                                              :
-        i_h02 =abs(                                           :
-            I32( u_h03.x -(( u_h03.x / u_2)*u_2)) //:MOD2://  :
-        -   I32( u_h03.y -(( u_h03.y / u_2)*u_2)) //:MOD2://  :
-        );;                                                   :
-                                                              :
-    :---------------------------------------------------------:
-    #_BE_CONSISTENT_WITH_VARIABLE_CONVENTIONS_# :-------------:
-                                                              :
-        @i_h01@/@h01@ : Did_You_Mean[ h02 /AKA/ i_h02 ] :     :
-        @i_r01@/@r01@ : Did_You_Mean[ r02 /AKA/ i_r02 ] :     :
-        @i_t01@/@t01@ : Did_You_Mean[ t02 /AKA/ i_t02 ] :     :
-                                                              :
-            If we are going to be consistent with or naming   :
-            convention, a variable that is either a[ 0 ]      :
-            or[ 1 ]gets a "02" postfix, not a "01" postfix.   :
-            ( Because there are "2 total possible values" )   :
-    :---------------------------------------------------------:
+                                                                // [099]
+    #_BRANCHLESS_CHECKERBOARD_# :-----------------------------: // [099]
+                                                              : // [099]
+        //:::::::::::::::::::::::::::::::::::::::::::::::://  : // [099]
+        //: Figure Out The Checkerboard Value Of XY      ://  : // [099]
+        //: coordinate of different geometry elements.   ://  : // [099]
+        //: Calculations are BRANCHLESS way to calculate ://  : // [099]
+        //: if BOTH ARE ODD ( 1 == 1 ) or BOTH ARE EVEN  ://  : // [099]
+        //: ( 0 === 0 ).                                 ://  : // [099]
+        //:                                              ://  : // [099]
+        //:   X  &  Y ==> abs( X - Y ) ==>( 0 || 1 )     ://  : // [099]
+        //:   -------                                    ://  : // [099]
+        //:   0  &  1 ==> abs( 0 - 1 ) ==> 1             ://  : // [099]
+        //:   1  &  0 ==> abs( 1 - 0 ) ==> 1             ://  : // [099]
+        //:   0  &  0 ==> abs( 0 - 0 ) ==> 0             ://  : // [099]
+        //:   1  &  1 ==> abs( 1 - 1 ) ==> 0             ://  : // [099]
+        //:::::::::::::::::::::::::::::::::::::::::::::::://  : // [099]
+                                                              : // [099]
+        i_h02 =abs(                                           : // [099]
+            I32( u_h03.x -(( u_h03.x / u_2)*u_2)) //:MOD2://  : // [099]
+        -   I32( u_h03.y -(( u_h03.y / u_2)*u_2)) //:MOD2://  : // [099]
+        );;                                                   : // [099]
+                                                              : // [099]
+    :---------------------------------------------------------: // [099]
+    #_BE_CONSISTENT_WITH_VARIABLE_CONVENTIONS_# :-------------: // [099]
+                                                              : // [099]
+        @i_h01@/@h01@ : Did_You_Mean[ h02 /AKA/ i_h02 ] :     : // [099]
+        @i_r01@/@r01@ : Did_You_Mean[ r02 /AKA/ i_r02 ] :     : // [099]
+        @i_t01@/@t01@ : Did_You_Mean[ t02 /AKA/ i_t02 ] :     : // [099]
+                                                              : // [099]
+            If we are going to be consistent with or naming   : // [099]
+            convention, a variable that is either a[ 0 ]      : // [099]
+            or[ 1 ]gets a "02" postfix, not a "01" postfix.   : // [099]
+            ( Because there are "2 total possible values" )   : // [099]
+    :---------------------------------------------------------: // [099]
 
 
 *** ******************************************************** **/
@@ -4310,8 +4313,17 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [098] : 1 : _____FIXED_____  "Discrete_Unit" constants.     // [098]
-          : 2 : Added  __MORE__  "Discrete_Unit" constants.     // [098]
+    [099] : Basic space visualization coded, however the        // [099]
+          : camera math is __NOT__ 100% correct. Seems the      // [099]
+          : bottom-right corner of the camera is "pinned".      // [099]
+          :                                                     // [099]
+          : Suspect error is in [GLSL/GPU] code , and           // [099]
+          : __NOT__ cpu code.                                   // [099]
+          :                                                     // [099]
+          : TODO:                                               // [099]
+          : Make a CPU debug button that                        // [099]
+          : snaps camera exactly onto a 1 tile in the           // [099]
+          : game to help diagnose problem.                      // [099]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
