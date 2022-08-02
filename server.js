@@ -3745,6 +3745,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : snaps camera exactly onto a 1 tile in the           // [100][099]
           : game to help diagnose problem.                      // [100][099]
 
+
+    [100] : GO TO THE NEXT PLAYLIST FOR VIDEO # 101 :           // [101][100]
+          : www.tinyurl.com/BOMB-PLAYLIST-002                   // [101][100]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4325,8 +4329,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [100] : GO TO THE NEXT PLAYLIST FOR VIDEO # 101 :
-          : www.tinyurl.com/BOMB-PLAYLIST-002
+    [101] : No code changes. The first video of each playlist
+          : will be used to DEMO/PREVIEW all of the work done
+          : in that playlist. So video 101 summarizes
+          : videos[ 101 - to - 200 ].
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
