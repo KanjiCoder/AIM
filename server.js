@@ -827,6 +827,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 
     #define F32 float      //: Shorthand Type == U_CASE  ://    // [089]
     #define U32 uint       //: Shorthand Type == U_CASE  ://    // [089]
+    #define I32  int       //: Shorthand Type == U_CASE  ://    // [099]
     #define UNI uniform    //: Shorthand Type == U_CASE  ://    // [089]
     #define UV2 uvec2      //: U32 Vector , 2 elements.  ://    // [095]
     #define FV2  vec2      //: F32 Vector , 2 elements.  ://    // [095]
