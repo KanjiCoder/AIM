@@ -8,7 +8,7 @@
 :::----------------------------------------------------------:::
     Git Repo With All Source Code ::::::::::::::::::::::::::::::
                       
-        github.com/KanjiCoder/AIM_099  <<< THIS_VIDEO¯S_CODE    // [099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+        github.com/KanjiCoder/AIM_100  <<< THIS_VIDEO¯S_CODE    // [100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 
 :::----------------------------------------------------------:::
     CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
@@ -3733,6 +3733,18 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [098] : 1 : _____FIXED_____  "Discrete_Unit" constants.     // [099][098]
           : 2 : Added  __MORE__  "Discrete_Unit" constants.     // [099][098]
 
+    [099] : Basic space visualization coded, however the        // [100][099]
+          : camera math is __NOT__ 100% correct. Seems the      // [100][099]
+          : bottom-right corner of the camera is "pinned".      // [100][099]
+          :                                                     // [100][099]
+          : Suspect error is in [GLSL/GPU] code , and           // [100][099]
+          : __NOT__ cpu code.                                   // [100][099]
+          :                                                     // [100][099]
+          : TODO:                                               // [100][099]
+          : Make a CPU debug button that                        // [100][099]
+          : snaps camera exactly onto a 1 tile in the           // [100][099]
+          : game to help diagnose problem.                      // [100][099]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4313,17 +4325,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [099] : Basic space visualization coded, however the        // [099]
-          : camera math is __NOT__ 100% correct. Seems the      // [099]
-          : bottom-right corner of the camera is "pinned".      // [099]
-          :                                                     // [099]
-          : Suspect error is in [GLSL/GPU] code , and           // [099]
-          : __NOT__ cpu code.                                   // [099]
-          :                                                     // [099]
-          : TODO:                                               // [099]
-          : Make a CPU debug button that                        // [099]
-          : snaps camera exactly onto a 1 tile in the           // [099]
-          : game to help diagnose problem.                      // [099]
+    [100] : GO TO THE NEXT PLAYLIST FOR VIDEO # 101 :
+          : www.tinyurl.com/BOMB-PLAYLIST-002
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
