@@ -1,19 +1,30 @@
 //:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:=========================://
-/**----------------------------------------------------------:::
-    Tutorial Where We Build This File ::::::::::::::::::::::::::
-
-        www.tinyurl.com/GAME-TUTS             //: KANJICODER ://  
-        www.tinyurl.com/GAME-TUTS-SLOWER      //: NINJACODER :// 
-        www.tinyurl.com/GAME-TUTS-UNSCRIPTED  //:  WEEBCODER ://
-:::----------------------------------------------------------:::
-    Git Repo With All Source Code ::::::::::::::::::::::::::::::
-                      
-        github.com/KanjiCoder/AIM_100  <<< THIS_VIDEO¯S_CODE    // [100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
-
-:::----------------------------------------------------------:::
-    CONTACT_CODE_AUTHOR : KanjiCoder@gmail.com             [066]
-:::----------------------------------------------------------**/
+//: I filmed this tutorial series 3 times. Pick one!         :// // [102]
+//:                                                          :// // [102]
+//: 1__MIN : www.tinyurl.com/BOMB-PLAYLIST-002   (KANJICODER):// // [102]
+//: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
+//: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
+//:                                                          :// // [102]
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_102             :// // [102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
+//:SYSTEM_INDEX:[102]:=======================================://
+/** ******************************************************** *** // [102]
+                                                                 // [102]
+    C : Chronological Order (by creation order)                  // [102]
+    D : Dependency    Order (LOW === LESS DEPS)                  // [102]
+                                                                 // [102]
+    ARTDUDE [C:04] [D:01] : Art Assets Used By Renderer          // [102]
+    ARTGIRL [C:05] [D:02] : Render Pipeline Management           // [102]
+    ASERVER [C:01] [D:03] : Server Side Functions Only           // [102]
+    DABITCH [C:02] [D:04] : Database Access Functions Only       // [102]
+    EDIGAME [C:08] [D:05] : Editor State + Game State            // [102]
+    KEYMAST [C:03] [D:06] : Keyboard Listeners                   // [102]
+    SERGAME [C:06] [D:07] : HIGH_LEVEL_GAME_CODE - Server Side   // [102]
+    CLIGAME [C:07] [D:08] : HIGH_LEVEL_GAME_CODE - Client Side   // [102]
+                                                                 // [102]
+*** ******************************************************** **/ // [102]
+//:=======================================:SYSTEM_INDEX:[102]://
 //:DEPLOY_THIS_SERVER_YOURSELF:[034]:========================://
 /**----------------------------------------------------------:::
 
@@ -30,21 +41,21 @@
 
         STEP 2 FOR PROGRAMMERS :
 
-        touch package.json                                      // [073]
-        echo '{ "dependencies":{"pg":"8.7.3"}}' > package.json  // [073]
-        
-        STEP 2 FOR ARTISTS :
-
-            +-------------------------------------------------+ // [073]
-            | Notepad ++ : server.js                  |[-]|[X]| // [073]
-            +-------------------------------------------------+ // [073]
-            |    |                                            | // [073]
-            | 01 |  {                                         | // [073]
-            | 02 |      "//" : "[ pg added in video [039] ]"  | // [073]
-            | 03 |  ,   "dependencies": { "pg" : "8.7.3" }    | // [073]
-            | 04 |  }                                         | // [073]
-            |    |                                            | // [073]
-            +----+--------------------------------------------+ // [073]
+        touch package.json                                       // [073]
+        echo '{ "dependencies":{"pg":"8.7.3"}}' > package.json   // [073]
+                                                                 
+        STEP 2 FOR ARTISTS :                                     
+                                                                 
+            +-------------------------------------------------+  // [073]
+            | Notepad ++ : server.js                  |[-]|[X]|  // [073]
+            +-------------------------------------------------+  // [073]
+            |    |                                            |  // [073]
+            | 01 |  {                                         |  // [073]
+            | 02 |      "//" : "[ pg added in video [039] ]"  |  // [073]
+            | 03 |  ,   "dependencies": { "pg" : "8.7.3" }    |  // [073]
+            | 04 |  }                                         |  // [073]
+            |    |                                            |  // [073]
+            +----+--------------------------------------------+  // [073]
     
     3. git init . && git add . && git commit -m "[AIM]"
     
@@ -1145,21 +1156,11 @@ const d_artgirl_ssf_009 =( //: ShaderSourceFrag #09@ssf@[081]://   [081]
 //:=========================:__ARTGIRL__:SHADER_STRINGS:[074]://// [---]
 //:DATA_BY_SYSTEM:[063]:=====================================://// [---]
                                                                 // [063]
-
-if( /** __CLIGAME__ **/ notnode ){                              // [085]
-                                                                // [085]
-    /** Frame Rate Control **/                                  // [085]
-                                                                // [085]
-        var   d_cligame_t_0 ; //:TimeStampBeforeWork://         // [085]
-        var   d_cligame_t_1 ; //:TimeStampAfterWork ://         // [085]
-        var   d_cligame_mil ; //:ElapsedMilliseconds://         // [085]
-        ///   d_cligame_tms ; //:Target Millisecs   ://         // [085]
-        var   d_cligame_ams ; //:Adjusted/LeftoverMS://         // [085]
-                                                                // [085]
-        ASS(  c_cligame_tms === ( 1000 / c_fps ) , "[TMS]" );   // [085]
-                                                                // [085]
-                                                                // [085]
-};;                                                             // [085]
+if( /** __ARTDUDE__ **/ notnode ){                              // [102]
+                                                                // [102]
+    //:Art Assets Go Here://                                    // [102]
+                                                                // [102]
+};;                                                             // [102]
 if( /** __ARTGIRL__ **/ notnode ){                              // [063] 
                                                                 // [063] 
     var d_artgirl_wgl =( "[FIX:a_g.wgl]" );                     // [063] 
@@ -1224,11 +1225,45 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
             ,   neg , pos , _0_    ,    (min) , (min)//:#TLO#://// [083][075][066] 
             ,   pos , pos , _0_    ,    ( 1 ) , (min)//:#TLO#://// [083][075][066] 
             )  //:#ITS_A_ZEE#://                                // [075][074] 
-    });;                                             //:[063]://
-                                                     //:[065]://
-    console.log( d_artgirl );                        //:[065]://
-                                                     //:[065]://
-};;                                                  //:[063]://
+    });;                                                        //      [063] 
+                                                                //      [065] 
+    console.log( d_artgirl );                                   //      [065] 
+                                                                //      [065] 
+};;                                                             //      [063] 
+if( /** __ASERVER__ **/ yesnode ){                              // [102]
+                                                                // [102]
+    //:NO_DATA://                                               // [102]
+};;                                                             // [102]
+if( /** __DABITCH__ **/ notnode ){                              // [102]
+                                                                // [102]
+    //: TODO: Move DABITCH SQL STRINGS INTO HERE ://            // [102]
+};;                                                             // [102]
+if( /** __EDIGAME__ **/ notnode ){                              // [102]
+                                                                // [102]
+    //: TODO: Editor+Gameplay State Object Here                 // [102]
+};;                                                             // [102]
+if( /** __KEYMAST__ **/ notnode ){                              // [102]
+                                                                // [102]
+    //:NO_DATA://                                               // [102]
+};;                                                             // [102]
+if( /** __SERGAME__ **/ yesnode ){                              // [102]
+                                                                // [102]
+    //:NO_DATA://                                               // [102]
+};;                                                             // [102]
+if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
+                                                                // [102][085]
+    /** Frame Rate Control **/                                  // [102][085]
+                                                                // [102][085]
+        var   d_cligame_t_0 ; //:TimeStampBeforeWork://         // [102][085]
+        var   d_cligame_t_1 ; //:TimeStampAfterWork ://         // [102][085]
+        var   d_cligame_mil ; //:ElapsedMilliseconds://         // [102][085]
+        ///   d_cligame_tms ; //:Target Millisecs   ://         // [102][085]
+        var   d_cligame_ams ; //:Adjusted/LeftoverMS://         // [102][085]
+                                                                // [102][085]
+        ASS(  c_cligame_tms === ( 1000 / c_fps ) , "[TMS]" );   // [102][085]
+                                                                // [102][085]
+                                                                // [102][085]
+};;                                                             // [102][085]
 
 //:=====================================:DATA_BY_SYSTEM:[063]://
 //:MASTER_DECLARATION_FUNC:[035]:============================://
@@ -2400,22 +2435,37 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
 
     };;                                              //:[046]://
 
-//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
-//|                                               [ @$$$$$@ ]|//
-//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __DABITCH__|//
-//|                                               [ @$$$$$@ ]|//
-//|02|02|02|02|02|02|02|02|02|SUBS|02|02|02|02|02|02|02|02|02|//
-//|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|//
-//|[ @$$$$$@ ]                                               |//
-//|__KEYMAST__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |//
-//|[ @$$$$$@ ]                                               |//
-//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
+//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [102]
+//|                                               [ @$$$$$@ ]|// // [102]
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __DABITCH__|// // [102]
+//|                                               [ @$$$$$@ ]|// // [102]
+//|02|02|02|02|02|02|02|02|02|SUBS|02|02|02|02|02|02|02|02|02|// // [102]
+//|08|08|08|08|08|08|08|08|08|SUBS|08|08|08|08|08|08|08|08|08|// // [102]
+//|[ @$$$$$@ ]                                               |// // [102]
+//|__EDIGAME__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |// // [102]
+//|[ @$$$$$@ ]                                               |// // [102]
+//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [102]
+                                                                 // [102]
+                                                                 // [102]
+    //:TODO: Edigame functions.                                  // [102]
+                                                                 // [102]
+                                                                 // [102]
+//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [102]
+//|                                               [ @$$$$$@ ]|// // [102]
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __EDIGAME__|// // [102]
+//|                                               [ @$$$$$@ ]|// // [102]
+//|08|08|08|08|08|08|08|08|08|SUBS|08|08|08|08|08|08|08|08|08|// // [102]
+//|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|// // [102]
+//|[ @$$$$$@ ]                                               |// // [102]
+//|__KEYMAST__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |// // [102]
+//|[ @$$$$$@ ]                                               |// // [102]
+//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [102]
 
     //:------------------------------------------------------://
-    //: @_G_@ : Generally                                    ://// [068] 
-    //: @_S_@ : Specifically                                 ://// [068] 
-    //: @a_k@ : @asc_key@ : Ascii(_G_) Key(_S_)              ://// [068] 
-    //: @e_k@ : @evt_key@ : Event(_G_) Key(_S_)              ://// [068] 
+    //: @_G_@ : Generally                                    :// // [068] 
+    //: @_S_@ : Specifically                                 :// // [068] 
+    //: @a_k@ : @asc_key@ : Ascii(_G_) Key(_S_)              :// // [068] 
+    //: @e_k@ : @evt_key@ : Event(_G_) Key(_S_)              :// // [068] 
     //:------------------------------------------------------://
 
     const   F_KEYMAST_EVT_ASC = function                        // [068] 
@@ -3749,6 +3799,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [100] : GO TO THE NEXT PLAYLIST FOR VIDEO # 101 :           // [101][100]
           : www.tinyurl.com/BOMB-PLAYLIST-002                   // [101][100]
 
+    [101] : No code changes. The first video of each playlist   // [102][101]
+          : will be used to DEMO/PREVIEW all of the work done   // [102][101]
+          : in that playlist. So video 101 summarizes           // [102][101]
+          : videos[ 101 - to - 200 ].                           // [102][101]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4329,10 +4384,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [101] : No code changes. The first video of each playlist
-          : will be used to DEMO/PREVIEW all of the work done
-          : in that playlist. So video 101 summarizes
-          : videos[ 101 - to - 200 ].
+    [102] : Organizing code before we stubb in                  // [102]
+          : EDIGAME container which will contain high           // [102]
+          : level camera controls. (among other things )        // [102]
+          :                                                     // [102]
+          : Will use these high level camera controls           // [102]
+          : to help debug the incorrect rendering code.         // [102]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
