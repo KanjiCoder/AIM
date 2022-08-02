@@ -1022,6 +1022,23 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
             U32 r25 = u_r05.x + ( u_r05.y * u_5 ) ;
             U32 t4k = u_t64.x + ( u_t64.y * u64 ) ;
 
+            //:::::::::::::::::::::::::::::::::::::::::::::::://
+            //: #_BRANCHLESS_CHECKERBOARD_#                  ://
+            //:::::::::::::::::::::::::::::::::::::::::::::::://
+
+            i_h01 =abs(
+                I32( u_h03.x -(( u_h03.x / u_3)*u_3)) //:MOD2://
+            -   I32( u_h03.y -(( u_h03.y / u_3)*u_3)) //:MOD2://
+            );;
+            i_r01 =abs(
+                I32( u_r05.x -(( u_r05.x / u_5)*u_5)) //:MOD2://
+            -   I32( u_r05.y -(( u_r05.y / u_5)*u_5)) //:MOD2://
+            );;
+            i_t01 =abs(
+                I32( u_t64.x -(( u_t64.x / u64)*u64)) //:MOD2://
+            -   I32( u_t64.y -(( u_t64.y / u64)*u64)) //:MOD2://
+            );;
+
 
     ////                                                        // [099]
     ////    out_f_c =FV4(                                       // [099]
@@ -4253,6 +4270,35 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         Figure out what cell a given [pixel||unit] is within    // [099]
         by doing "tile map math collision". AKA: What cell      // [099]
         is the unit "colliding/overlapping" with.               // [099]
+
+    #_BRANCHLESS_CHECKERBOARD_# :-----------------------------:
+                                                              :
+        //:::::::::::::::::::::::::::::::::::::::::::::::://  :
+        //: Figure Out The Checkerboard Value Of XY      ://  :
+        //: coordinate of different geometry elements.   ://  :
+        //: Calculations are BRANCHLESS way to calculate ://  :
+        //: if BOTH ARE ODD ( 1 == 1 ) or BOTH ARE EVEN  ://  :
+        //: ( 0 === 0 ).                                 ://  :
+        //:                                              ://  :
+        //:   X  &  Y ==> abs( X - Y ) ==>( 0 || 1 )     ://  :
+        //:   -------                                    ://  :
+        //:   0  &  1 ==> abs( 0 - 1 ) ==> 1             ://  :
+        //:   1  &  0 ==> abs( 1 - 0 ) ==> 1             ://  :
+        //:   0  &  0 ==> abs( 0 - 0 ) ==> 0             ://  :
+        //:   1  &  1 ==> abs( 1 - 1 ) ==> 0             ://  :
+        //:::::::::::::::::::::::::::::::::::::::::::::::://  :
+                                                              :
+        i_h01 =abs(                                           :
+            I32( u_h03.x -(( u_h03.x / u_3)*u_3)) //:MOD2://  :
+        -   I32( u_h03.y -(( u_h03.y / u_3)*u_3)) //:MOD2://  :
+        );;                                                   :
+                                                              :
+    :---------------------------------------------------------:
+
+
+
+
+
 
 
 *** ******************************************************** **/
