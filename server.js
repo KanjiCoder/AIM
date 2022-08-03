@@ -4018,6 +4018,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : the other for when[ AIM ]is behaving as             // [105][104]
           : a __GAME__.                                         // [105][104]
 
+    [105] : Numpad keys snap camera to respective levelpacks    // [106][105]
+          : of @THE_DUM@. We are doing this to figure out       // [106][105]
+          : where bug is in our RENDERING(GLSL) code.           // [106][105]
+          : ( BUG NOT FOUND YET , 2022_08_03 )                  // [106][105]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4650,16 +4655,22 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         Darken the pixels if the sample point is                // [106]
         out of bounds, so that we can fix our                   // [106]
         rendering math.                                         // [106]
+                                                                // [106]
+        Looks like the TOP_LEFT origin is actually              // [106]
+        correct, and the BOTTOM_RIGHT origin is                 // [106]
+        stretching out too far. Probably because we             // [106]
+        are calculation the "discrete units per pixel"          // [106]
+        or whatever we called it, incorrectly.                  // [106]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [105] : Numpad keys snap camera to respective levelpacks    // [105]
-          : of @THE_DUM@. We are doing this to figure out       // [105]
-          : where bug is in our RENDERING(GLSL) code.           // [105]
-          : ( BUG NOT FOUND YET , 2022_08_03 )                  // [105]
+    [106] : Sample points outside of[ THE_DUM ]are now          // [106]
+          : darkened. This greatly helps diagnose the           // [106]
+          : error in our fragment shader code.                  // [106]
+
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
