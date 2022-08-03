@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_102             :// // [102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_103             :// // [103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:SYSTEM_INDEX:[102]:=======================================://
@@ -669,9 +669,9 @@ if( yesnode ){ //:-------------------------------------------://
 //:CONST_MACROS_BY_SYSTEM[074]:==============================://// [---]
 
 //: __ARTDUDE__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103]
-
+                                                                         
     /** NOTHING_HERE_YET **/                                     // [103]
-          
+                                                                         
 //: __ARTGIRL__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103][064]://
 
     /** Shader Attribute AND Uniform Locations. **/              // [086][077]
@@ -716,19 +716,19 @@ if( yesnode ){ //:-------------------------------------------://
                                                                  
     const c_artgirl_ren_tot = ( 9 ); //:#RenderPipelines#    :// // [081][068]
                                                                 
-    const c_artgirl_ren_def = (      //:Default_Render       :// // [068] 
-          c_artgirl_ren_001    );;   //:Pipeline_To_Use      :// // [068] 
-
+    const c_artgirl_ren_def = (      //:Default_Render       :// // [068]    
+          c_artgirl_ren_001    );;   //:Pipeline_To_Use      :// // [068]    
+                                                                             
 //: __ASERVER__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103]
-
+                                                                         
     /** NOTHING_HERE_YET **/                                     // [103]
-
+                                                                         
 //: __DABITCH__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103]
-
+                                                                         
     /** NOTHING_HERE_YET **/                                     // [103]
-
+                                                                         
 //: __EDIGAME__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103]
-
+                                                                             
     const c_edigame_mod = "[FIX:d_edigame_mod]" ;                // [103]
     const c_edigame_tog = "[FIX:USE_BOTH:tog_001:AND:tog_002]";  // [103]
                                                                  // [103]
@@ -737,15 +737,15 @@ if( yesnode ){ //:-------------------------------------------://
                                                                  // [103]
     const c_edigame_edi =( 1   /** edigame as EDItor * * **/ );  // [103]
     const c_edigame_gam =( 2   /** edigame as GAMe   * * **/ );  // [103]
-
+                                                                         
 //: __KEYMAST__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103]
-
+                                                                         
     /** NOTHING_HERE_YET **/                                     // [103]
-
+                                                                         
 //: __SERGAME__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103]
-
+                                                                         
     /** NOTHING_HERE_YET **/                                     // [103]
-
+                                                                         
 //: __CLIGAME__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103][085]
                                                                  // [103][085]
     const c_cligame_tms =( 1000 / c_fps ); /**Target_MIL sec**/  // [103][085]
@@ -1298,9 +1298,7 @@ if( /** __DABITCH__ **/ notnode ){                              // [102]
 };;                                                             // [102]
 if( /** __EDIGAME__ **/ notnode ){                              // [102]
                                                                 // [---]
-                                                                // [---]
     //:#_WHAT_IS_EDIGAME_#://                                   // [103]
-                                                                // [103]
                                                                 // [103]
     var d_edigame_mod =( c_edigame_edi );                       // [103]
                                                                 // [103]
@@ -1314,7 +1312,6 @@ if( /** __EDIGAME__ **/ notnode ){                              // [102]
         /** Members when acting as GAME   **/                   // [103]
                                                                 // [103]
     };;                                                         // [103]
-                                                                // [---]
                                                                 // [---]
 };;                                                             // [102]
 if( /** __KEYMAST__ **/ notnode ){                              // [102]
@@ -2521,7 +2518,6 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 //|[ @$$$$$@ ]                                               |// // [102]
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [102]
 
-
     const   F_EDIGAME_MOD_LOG = function                         // [103]
     PRIVATE_F_EDIGAME_MOD_LOG(                                   // [103]
                                                                  // [103]
@@ -2592,7 +2588,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         ){                                                      // [103]
             //:::::::::::::::::::::::::::::::::::://            // [103]
             //: Are controls behaving like an    ://            // [103]
-            //: __EDITOR__ or like a __GAME__ ?  ://            // [103]      
+            //: __EDITOR__ or like a __GAME__ ?  ://            // [103]
             //:::::::::::::::::::::::::::::::::::://            // [103]
                                                                 // [103]
             F_CYC( window , "d_edigame_mod"                     // [103]
@@ -3912,6 +3908,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : in that playlist. So video 101 summarizes           // [102][101]
           : videos[ 101 - to - 200 ].                           // [102][101]
 
+    [102] : Organizing code before we stubb in                  // [103][102]
+          : EDIGAME container which will contain high           // [103][102]
+          : level camera controls. (among other things )        // [103][102]
+          :                                                     // [103][102]
+          : Will use these high level camera controls           // [103][102]
+          : to help debug the incorrect rendering code.         // [103][102]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4523,12 +4526,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [102] : Organizing code before we stubb in                  // [102]
-          : EDIGAME container which will contain high           // [102]
-          : level camera controls. (among other things )        // [102]
-          :                                                     // [102]
-          : Will use these high level camera controls           // [102]
-          : to help debug the incorrect rendering code.         // [102]
+    [103] : Stubbed in EDIGAME controls. Pressing               // [103]
+          : [ tilde(~) / backtick(`) ] switches between         // [103]
+          : "editor mode" and "game mode" style                 // [103]
+          : controls.                                           // [103]
+          :                                                     // [103]
+          : Will will be plagerizing parts of                   // [103]
+          : HOTEL13.JS('s)[ d_hotel13_sam ]object to            // [103]
+          : populate[ d_edigame_edi ], so updated               // [103]
+          : HOTEL13.JS snapshot to be latest revision.          // [103]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
