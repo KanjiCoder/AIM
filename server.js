@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_105             :// // [105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_106             :// // [106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:SYSTEM_INDEX:[102]:=======================================://
@@ -1125,6 +1125,17 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
             ,   F32(   F32( i_255 * i_t02 ) / f_255 )           // [099]
             ,   1.0                                             // [099]
             );;                                                 // [099]
+
+
+            //: #_OUT_OF_BOUNDS_DIAGNOSIS_#://                  // [106]
+            if( u_dsc.x > ( c_dum - u_1 )                       // [106]
+            ||  u_dsc.y > ( c_dum - u_1 )                       // [106]
+            ){                                                  // [106]
+                out_f_c.x /= 2.0 ;                              // [106]
+                out_f_c.y /= 2.0 ;                              // [106]
+                out_f_c.z /= 2.0 ;                              // [106]
+            };;                                                 // [106]
+
                                                                 // [099]
         //:-----------------------:use_the_sample_point:[099]://// [099]
                                                                 // [---]
@@ -4633,6 +4644,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     @camsnap_cel@ : What cell of 3x3 levelpack grid is          // [105]
                   : the numberkey associated with?              // [105]
                   : camsnap_cel == CameraSnap - Cell            // [105]
+
+    #_OUT_OF_BOUNDS_DIAGNOSIS_# :                               // [106]
+                                                                // [106]
+        Darken the pixels if the sample point is                // [106]
+        out of bounds, so that we can fix our                   // [106]
+        rendering math.                                         // [106]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
