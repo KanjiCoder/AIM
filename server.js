@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_106             :// // [106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_107             :// // [107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:SYSTEM_INDEX:[102]:=======================================://
@@ -997,8 +997,9 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 
         //:determine_sample_point:[097]:---------------------://// [097]
                                                                 // [097]
-        u_mv1 = UV2( d_vp1[x_1]-d_vp0[x_1]+u_1                  // [097]
-                ,    d_vp1[y_1]-d_vp0[y_1]+u_1 );;              // [097]
+        //:#_MV1_IS_MAGNITUDE_OF_VP1_THE_DATA_VIEWPORT_#://     // [107]
+        u_mv1 = UV2( d_vp1[x_1]-d_vp1[x_0]+u_1                  // [107][BUG][097]
+                ,    d_vp1[y_1]-d_vp1[y_0]+u_1 );;              // [107][BUG][097]
                                                                 // [097]
         u_duv = u_mv1 ; //:@SYNONYMOUS_VARIABLES@://            // [097]
                                                                 // [097]
@@ -4661,6 +4662,17 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         stretching out too far. Probably because we             // [106]
         are calculation the "discrete units per pixel"          // [106]
         or whatever we called it, incorrectly.                  // [106]
+
+    #_MV1_IS_MAGNITUDE_OF_VP1_THE_DATA_VIEWPORT_# :             // [107]
+                                                                // [107]
+        Why am I screaming about this? Because the line         // [107]
+        of code under this comment was __WRONG__ and we         // [107]
+        are fixing it now. So I am screaming with commentary    // [107]
+        so that you know in NO UNCERTAIN TERMS what             // [107]
+        we are supposed to be calculating here.                 // [107]
+                                                                // [107]
+        The magnitude (aka length) of VIEWPORT ONE (VP1).       // [107]
+        VP1 == off screen data selection viewport.              // [107]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
