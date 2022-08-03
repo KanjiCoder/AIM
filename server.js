@@ -3944,6 +3944,16 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : Will use these high level camera controls           // [103][102]
           : to help debug the incorrect rendering code.         // [103][102]
 
+    [103] : Stubbed in EDIGAME controls. Pressing               // [104][103]
+          : [ tilde(~) / backtick(`) ] switches between         // [104][103]
+          : "editor mode" and "game mode" style                 // [104][103]
+          : controls.                                           // [104][103]
+          :                                                     // [104][103]
+          : Will be plagerizing parts of                        // [104][103]
+          : HOTEL13.JS('s)[ d_hotel13_sam ]object to            // [104][103]
+          : populate[ d_edigame_edi ], so updated               // [104][103]
+          : HOTEL13.JS snapshot to be latest revision.          // [104][103]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4553,12 +4563,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     #_DOWN_HANDLER_WHEN_BEHAVING_AS_A_GAME_# :                  // [104]
                                                                 // [104]
         Main key down handler for when[ AIM ]project is         // [104]
-        behaving as an EDITOR.                                  // [104]
+        behaving as a __GAME__.                                 // [104]
                                                                 // [104]
     #_DOWN_HANDLER_WHEN_BEHAVING_AS_AN_EDITOR_# :               // [104]
                                                                 // [104]
         Main key down handler for when[ AIM ]project is         // [104]
-        behaving as a GAME.                                     // [104]
+        behaving as a __EDITOR__.                               // [104]
                                                                 // [104]
     #_HIGHEST_LEVEL_KEYBOARD_DOWN_HANDLER_# :                   // [104]
                                                                 // [104]
@@ -4572,15 +4582,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [103] : Stubbed in EDIGAME controls. Pressing               // [103]
-          : [ tilde(~) / backtick(`) ] switches between         // [103]
-          : "editor mode" and "game mode" style                 // [103]
-          : controls.                                           // [103]
-          :                                                     // [103]
-          : Will be plagerizing parts of                        // [103]
-          : HOTEL13.JS('s)[ d_hotel13_sam ]object to            // [103]
-          : populate[ d_edigame_edi ], so updated               // [103]
-          : HOTEL13.JS snapshot to be latest revision.          // [103]
+    [104] : Trivial refactoring, keyboard down handler
+          : now split into two sub functions. One for
+          : when[ AIM ]is behaving as an __EDITOR__ ,
+          : the other for when[ AIM ]is behaving as
+          : a __GAME__.
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
