@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_104             :// // [104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_105             :// // [105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:SYSTEM_INDEX:[102]:=======================================://
@@ -2582,7 +2582,6 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         var asc_key = F_KEYMAST_EVT_ASC( i_evt_key );           // [104] 
         let a_k     =( asc_key /** Key Down **/ );              // [104] 
 
-
         var oh_my_god_its_the_numpad=( 0 );                     // [105]
         var pad_num=( 0-1 );                                    // [105]
         if( i_evt_key.keyCode >=  96  //:numpad0://             // [105]
@@ -4002,6 +4001,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : populate[ d_edigame_edi ], so updated               // [104][103]
           : HOTEL13.JS snapshot to be latest revision.          // [104][103]
 
+    [104] : Trivial refactoring, keyboard down handler          // [105][104]
+          : now split into two sub functions. One for           // [105][104]
+          : when[ AIM ]is behaving as an __EDITOR__ ,           // [105][104]
+          : the other for when[ AIM ]is behaving as             // [105][104]
+          : a __GAME__.                                         // [105][104]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4634,11 +4639,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [104] : Trivial refactoring, keyboard down handler          // [104]
-          : now split into two sub functions. One for           // [104]
-          : when[ AIM ]is behaving as an __EDITOR__ ,           // [104]
-          : the other for when[ AIM ]is behaving as             // [104]
-          : a __GAME__.                                         // [104]
+    [105] : Numpad keys snap camera to respective levelpacks    // [105]
+          : of @THE_DUM@. We are doing this to figure out       // [105]
+          : where bug is in our RENDERING(GLSL) code.           // [105]
+          : ( BUG NOT FOUND YET , 2022_08_03 )                  // [105]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
