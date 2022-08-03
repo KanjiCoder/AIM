@@ -1,0 +1,14 @@
+{      
+    "//" : "[KANJICODER_NEEDS_A_DATABASE]",
+    "dependencies": { 
+
+        "pg" : "8.7.3"    
+    },
+
+    "scripts" : {
+
+        "start" : "node HOTEL13.JS"
+    },
+
+    "//" : "[COMMA_HACK_FOR_EASY_RE_ORDERING]"
+}

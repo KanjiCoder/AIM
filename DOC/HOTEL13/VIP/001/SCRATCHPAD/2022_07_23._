@@ -1,0 +1,297 @@
+    //:HOTEL13_TAR:(TASK_ARRAY):=========================://
+    //:                                                  ://
+    //:     I question if "re-inventing" promises is     ://
+    //:     a good idea. But... You have to try things   ://
+    //:     and see if they work. Maybe this is          ://
+    //:     a whole bunch of code that overly            ://
+    //:     complicates things, maybe it's a good        ://
+    //:     idea... We will see.                         ://
+    //:     DATE[ 2022_07_23 ]TIME[ 116AM ]              ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
+        const   F_HOTEL13_NEW_TASKARR = "[USE:NEW_TAR]" ;
+        const   F_HOTEL13_TAR_NEW     = "[USE:NEW_TAR]" ;
+
+        const   F_HOTEL13_NEW_TAR = function
+        PRIVATE_F_HOTEL13_NEW_TAR(
+
+            /**VOID**/
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //:  I like the idea of creating a task      ://
+            //:  runner. But is this really a good       ://
+            //:  idea or does it make things overly      ://
+            //:  complex?                                ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            var o_tar ={ laxcoma:"[HACK]"
+           
+            ,   m_t_a : [ ]  //:Member: TaskArray
+            ,   m_t_p :(0-1) //:Member:TaskPointer
+            ,   m_end : null //:Member:END/DONE function.
+            };;
+            Object.seal( o_tar );
+            return(      o_tar );
+        };;
+
+        const F_HOTEL13_RUNLIST = "[USE:F_HOTEL13_TAR_RUN]" ;
+        const F_HOTEL13_NEXTASK = "[USE:F_HOTEL13_TAR_NEX]" ;
+        const F_HOTEL13_EXITASK = "[USE:F_HOTEL13_TAR_EXI]" ;
+        const F_HOTEL13_RUNTASK = "[USE:F_HOTEL13_TAR_RUN]" ;
+        const F_HOTEL13_TASKNEX = "[USE:F_HOTEL13_TAR_NEX]" ;
+        const F_HOTEL13_RUNNEXT = "[USE:F_HOTEL13_TAR_NEX]" ;
+        const F_HOTEL13_TAR_ERR = "[USE:F_HOTEL13_TAR_EXI]" ;
+        const F_HOTEL13_TASKEXI = "[USE:F_HOTEL13_TAR_EXI]" ;
+
+        const   F_HOTEL13_TAR_RUN = function
+        PRIVATE_F_HOTEL13_TAR_RUN(
+
+            i_tar  
+        ){
+            var o_vod_promise = new Promise( function
+            EXECUTO_F_HOTEL13_TAR_RUN(o_k_yes,wontsay ){
+
+                //:#_THIS_IS_NOT_K_I_S_S_#://
+
+                i_tar.m_end =( o_k_yes          );
+                var taskcmd =( i_tar.m_t_a[ 0 ] );
+                    taskcmd(   i_tar            );
+            });;
+            return( o_vod_promise );
+        };;
+        const   F_HOTEL13_TAR_NEX = function
+        PRIVATE_F_HOTEL13_TAR_NEX(
+
+            i_tar
+        ){
+            var m_i =( i_tar.m_t_a.length - 1 );
+                i_tar.m_t_p ++;
+            if( i_tar.m_t_p > m_i ){
+
+                console.log( "[RESOLVING_PROMISE]" );
+                i_tar.m_end( /** _void_ **/ );
+            }else{
+                var taskcmd = i_tar.m_t_a[ 
+                              i_tar.m_t_p ];  
+                    taskcmd(  i_tar       );
+            };;
+        };;
+        const   F_HOTEL13_TAR_EXI = function
+        PRIVATE_F_HOTEL13_TAR_EXI(
+
+            i_tar  //:Input Task Array Object://
+        ,   i_err_obj  //:Optional_Error_Object  ://
+        ){
+            console.log( "[EXITASK/EARLY_ABORT]" );
+            if( i_err_obj ){
+                console.log( i_err_obj );
+            };;
+            i_tar.m_end( /** NO ARGS **/ );
+        };;
+
+    //:=========================:HOTEL13_TAR:(TASK_ARRAY)://
+    //:HOTEL13_CAS_TYPES:================================://
+
+        const   F_HOTEL13_NEW_SCATPNG = function
+        PRIVATE_F_HOTEL13_NEW_SCATPNG(
+
+            /** VOID **/
+        ){
+            var o_scatpng ={ laxcoma:"[HACK]"
+            ,       m_png  : null   //: .PNG Binary File ://
+            ,       m_has  : (0)    //:  HAS .PNG File?  ://
+            ,       m_ooi  :"[nil][m_ooi]"     //:@m_ooi@://
+            };;
+            Object.seal( o_scatpng );
+            return(      o_scatpng );
+        };;
+
+        const c_hotel13_scatpng_ooi_heroku =(
+
+            "[M_OOI.HEROKU:::::FILE_SYSTEM]"
+        );;
+        const c_hotel13_scatpng_ooi_imgur  =(
+
+            "[M_OOI.IMGUR:::IMAGE_DOWNLOAD]"
+        );;
+        const c_hotel13_scatpng_ooi_none   =(
+
+            "[M_OOI.NONE::::NO_IMAGE_FOUND]"
+        );;
+
+    //:================================:HOTEL13_CAS_TYPES://
+    //:HOTEL13_CAS_FUNCTIONS:============================://
+    //:                                                  ://
+    //:  CAS : Client_And_Server                         ://
+    //:      : Designed to tightly couple a function     ://
+    //:      : that is available on both the client      ://
+    //:      : and server, to make routing less          ://
+    //:      : of hard-to-follow spaghetti code.         ://
+    //:                                                  ://
+    //:      : Since it is called "Client_And_Server"    ://
+    //:      : The "Client" section should always        ://
+    //:      : come first.                               ://
+    //:                                                  ://
+    //:      : TAG[ #_CLIENT_AND_SERVER_# | #CAS# ]      ://
+    //:                                                  ://
+    //:hotel13_cas_functions:- - - - - - ---- - - - - - -://
+
+    //:CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC://
+    ////////////////////////////////////////////////////////
+    const   F_HOTEL13_CAS_COOHASH_SCATPNG = function
+    PRIVATE_F_HOTEL13_CAS_COOHASH_SCATPNG(
+    ////////////////////////////////////////////////////////
+
+        i_coohash
+
+    ////////////////////////////////////////////////////////
+    ){if(      d_hotel13_notnode   ){ //////////////////////
+    ////////////////////////////////////////////////////////
+    return new Promise( function F01( o_k_yes , wontsay ){
+
+        var o_scatpng =( F_HOTEL13_NEW_SCATPNG() );
+
+        //:::::::::::::::::::::::::::::::::::::::::::://        
+        //:EX[ www.app.com                          ]://        
+        //:  [      /F_HOTEL13_CAS_COOHASH_SCATPNG  ]://
+        //:  [      /001_001_001                    ]://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        var e_s =( "/" != d_url[d_url.length-1]?"/":"");
+        var url =(
+        +    d_url+e_s
+        +    "F_HOTEL13_CAS_COOHASH_SCATPNG/"
+        +    i_coohash
+        );;
+
+        var xhr = new XMLHttpRequest();
+            xhr.open( "GET" , url );
+            xhr.responseType = "arraybuffer" ;
+            xhr.send();
+            xhr.onreadystatechange=(e)=>{
+            if( xhr.readyState === (4) ){
+
+                let      ooi =( xhr.getResponseHeader( 
+                    "nsh_ooi" ));;
+                
+                if( 200 === xhr.status ){
+                    o_scatpng.m_has =(  1           );
+                    o_scatpng.m_png =( xhr.response );
+                    o_scatpng.m_ooi =(     ooi      );
+                }else{
+                    o_scatpng.m_has =( 0 - 420669   );
+                    o_scatpng.m_png =(    null      );
+                    o_scatpng.m_ooi =(     ooi      );
+                };;
+                o_k_yes( o_scatpng );
+            };;};;
+    });;
+    ////////////////////////////////////////////////////////
+    }else if(  d_hotel13_yesnode   ){ //////////////////////
+    ////////////////////////////////////////////////////////    
+    return new Promise( function F02( o_k_yes , wontsay ){
+
+        var tar = F_HOTEL13_NEW_TAR(); //: NewTaskArray  ://
+        let NEX = F_HOTEL13_TAR_NEX ;  //: NextTask      ://
+        let EXI = F_HOTEL13_TAR_EXI ;  //: EarlyExit     ://
+
+        var o_scatpng =( F_HOTEL13_NEW_SCATPNG() );
+        var aimpath = F_HOTEL13_COOHASH_AIMPATH(i_coohash);
+
+        let ooi_heroku = c_hotel13_scatpng_ooi_heroku ;
+        let ooi_imgur  = c_hotel13_scatpng_ooi_imgur  ;
+        let ooi_none   = c_hotel13_scatpng_ooi_none   ;
+
+        var png_url =( "[nil][png_url]" );
+
+        o_scatpng.m_ooi =( ooi_none );
+
+        l_fs.readfile( aimpath , (i_err,i_cof)=>{
+
+            if( i_err ){
+                let t_a = tar.m_t_a ;
+                t_a.push( 
+                        F02_GET_IMGUR_URL_FROM_DATABASE );;
+                t_a.push( 
+                        F02_TRY_TO_READ_FROM_IMGUR      );;
+
+                F_HOTEL13_TAR_RUN( tar ).then((_void_)=>{
+
+                    //:::::::::::::::::::::::::::::::://
+                    //:Never Fail. Just Don't Return ://
+                    //:Data Askef For If You Cant.   ://
+                    //:::::::::::::::::::::::::::::::://        
+                    o_k_yes( o_scatpng );
+                });;
+            }else{
+
+                o_scatpng.m_has =(    1  );
+                o_scatpng.m_png =( i_cof );
+                o_scatpng.m_ooi =( ooi_heroku );
+                o_k_yes( o_scatpng );
+            };;
+        });;
+        function 
+        F02_GET_IMGUR_URL_FROM_DATABASE( i_tar ){
+
+            if( ! ( F_HOTEL13_ICH( i_coohash ))){
+            
+                EXI( i_tar , "[NOT_A_COORDHASH]" );
+            }else{
+
+                var sql_cmd =( d_sel_tab_hotel13 );
+                sql_cmd = sql_cmd.replaceAll(
+
+                    "[i_coohash]" , i_coohash
+                );;
+            
+                d_hotel13_dcp.query( sql_cmd )
+                .then( function( i_res ){ 
+                    
+                    png_url =( i_res.rows[ 0 ]
+                              .col_png_url );;
+
+                    NEX( i_tar );
+                }).catch( function( i_err ){                  
+                                        
+                    EXI( i_tar , "[QUERYFAIL]" );          
+                }) 
+                ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+            };;
+        };;
+        function 
+        F02_TRY_TO_READ_FROM_IMGUR( i_tar ){
+
+            var ask = l_https.request({
+
+                host     : "i.imgur.com"  
+            ,   method   : "GET" 
+            ,   headers  :
+                {
+                    accept : "image/png"
+                }
+            },( got )=>{ 
+
+                got.setEncoding( "utf8"    );
+                got.on( "data" , ( got_dat )=>{
+                
+                    o_scatpng.m_png=( got_dat   );
+                    o_scatpng.m_has=(  1        );
+                    o_scatpng.m_ooi=( ooi_imgur );
+                });;
+                got.on( "error", (e)=>{ EXI( i_tar,e); });
+                got.on( "end"  , ( )=>{ LOG("[E001]"); });
+                got.on( "close", ( )=>{ NEX( i_tar  ); });
+            });;
+            ask.write( png_url );
+            ask.end();
+        };;
+    });;
+    ////////////////////////////////////////////////////////
+    }else{ ERR("[NEITHER_ENVIRONMENT]"); };;};;
+    ////////////////////////////////////////////////////////
+    //:CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC://
+
+    //:============================:HOTEL13_CAS_FUNCTIONS://

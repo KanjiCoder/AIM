@@ -1,0 +1,93 @@
+    //:HOTEL13_DATABASE.DATA:============================://
+    if( d_hotel13_yesnode ){
+
+        let n =( "\n" ); //:TempNewlineMacro://
+    
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: @d_hotel13_dbu@ : Database URL           ://
+        //: @d_hotel13_cin@ : Connection_INfo        ://
+        //: @d_hotel13_dcp@ : DB_Connection_Pool     ://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+
+        var d_hotel13_dbu = process.env.DATABASE_URL ;       
+        var d_hotel13_cin ={                                 
+            connectionString : d_hotel13_dbu                 
+        ,   ssl : { rejectUnauthorized : false }     
+        };;                                          
+        var d_hotel13_dcp = "[nil][d_hotel13_dcp]"   ;       
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: DATA.CreateTableStatement.TABle.HOTEL13  ://   
+        //:::::::::::::::::::::::::::::::::::::::::::://
+
+        var d_cts_tab_hotel13 =( "                   "+n 
+        +"                                           "+n
+        +"  CREATE TABLE IF NOT EXISTS tab_hotel13(  "+n 
+        +"                                           "+n
+        +"       iid SERIAL PRIMARY KEY              "+n 
+        +"                                           "+n
+        +"  ,  col_coohash  VARCHAR( 11 )            "+n 
+        +"                                           "+n
+        +"  ,  col_verni32  INT                      "+n
+        +"                  CHECK( col_verni32 >= 0 )"+n   
+        +"                                           "+n
+        +"  ,  col_png_url  VARCHAR( 32 )            "+n
+        +"                                           "+n
+        +"      /** Coordinate Hash And Version **/  "+n
+        +"      /** Number Should Be Unique     **/  "+n
+        +"      /** Combination.                **/  "+n
+        +"  ,   CONSTRAINT con_hotel13 UNIQUE        "+n
+        +"      ( col_coohash , col_verni32 )        "+n
+        +"                                           "+n
+        +"  );;                                      "+n           
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;    
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: DATA.InsertIntoStatement.TABle.HOTEL13   ://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+                 
+        var d_iis_tab_hotel13 =( "                   "+n   
+        +"                                           "+n  
+        +"      INSERT INTO tab_hotel13              "+n  
+        +"      (                                    "+n
+        +"            col_coohash                    "+n
+        +"        ,   col_verni32                    "+n
+        +"        ,   col_png_url                    "+n
+        +"      )VALUES                              "+n
+        +"      (                                    "+n
+        +"            '[i_coohash]'                  "+n
+        +"        ,    [i_verni32]                   "+n
+        +"        ,   '[i_png_url]'                  "+n
+        +"      );;                                  "+n    
+        +"                                           "+n  
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: DATA.Select.TABle.HOTEL13 :::::::::::::::://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+
+        var d_sel_tab_hotel13 =( "                   "+n
+        +"                                           "+n
+        +"      /** SELECT TOP 10 **/                "+n
+        +"                                           "+n
+        +"      SELECT *                             "+n
+        +"      FROM     tab_hotel13                 "+n
+        +"      WHERE    col_coohash = '[i_coohash]' "+n
+        +"      ORDER BY col_verni32 DESC            "+n
+        +"      LIMIT 10                             "+n
+        +"      ;;                                   "+n
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: DATA.DropTableStatement.HOTEL13 :::::::::://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        var d_dts_tab_hotel13 =( "                   "+n   
+        +"                                           "+n   
+        +"  DROP TABLE IF EXISTS tab_hotel13 ;       "+n   
+        +"                                           "+n   
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;   
+      
+
+
+    };;
+    //:============================:HOTEL13_DATABASE.DATA://

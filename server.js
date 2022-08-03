@@ -4500,7 +4500,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         //: switching modes, rather than putting shared  ://    // [103]
         //: state in yet a 3rd object.                   ://    // [103]
         //:----------------------------------------------://    // [103]
-
+                                                                // [103]
     #enu_edi# : Enumeration - EDItor mode                       // [103]
     #enu_gam# : Enumeration - GAMe   mode                       // [103]
                                                                 // [103]

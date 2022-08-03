@@ -1,0 +1,150 @@
+
+
+    Starfield Encryption :
+
+        --------------------------------------------------------
+
+        PRIVATE_PASSWORD : The original simulation setup.
+
+        PUBLIC__PASSWORD : The end state of the simulation.
+
+        --------------------------------------------------------
+
+        The password is 32 unsigned 32 bit hex numbers
+        supplied as a JSON array of strings.
+
+        It creates a binary 32_x_32 bitmap.
+        A 1 means "1 or more stars at this location"
+        A 0 means "0         stars at this location"
+
+        --------------------------------------------------------
+
+        Example Password: ( PUBLIC__PASSWORD )
+
+            @sep_arr@ : Starfield_Encryption_Password
+                      : AKA[ PUBLIC__PASSWORD ]
+
+        var payload = {
+
+            sep_arr : [ "laxcoma"//:Starts With "laxcoma"://    
+
+            ,   "0xFF00FF01"
+            ,   "0xFF00FF02"
+            ,   "0xFF00FF03"
+            ,   "0xFF00FF04"
+            ,   "0xFF00FF05"
+            ,   "0xFF00FF06"
+            ,   "0xFF00FF07"
+            ,   "0xFF00FF08"
+            ,   "0xFF00FF09"
+
+            ,   "0xFF00__10" //:<-- Underscore Means "0" ://
+            ,   "0xFF00__11"
+            ,   "0xFF00__12"
+            ,   "0xFF00__13"
+            ,   "0xFF00__14"
+            ,   "0xFF00__15"
+            ,   "0xFF00__16"
+            ,   "0xFF00__17"
+            ,   "0xFF00__18"
+            ,   "0xFF00__19"
+
+            ,   "0xFF00__20"
+            ,   "0xFF00__21"
+            ,   "0xFF00__22"
+            ,   "0xFF00__23"
+            ,   "0xFF00__24"
+            ,   "0xFF00__25"
+            ,   "0xFF00__26"
+            ,   "0xFF00__27"
+            ,   "0xFF00__28"
+            ,   "0xFF00__29"
+
+            ,   "0xFF00__30"
+            ,   "0xFF00__31"
+
+            ]
+        };;
+
+        --------------------------------------------------------
+
+        //: @starsim@ : STAR simulation , initial
+        //:           :                   simulation
+
+        var starsim =[ 0x000000 //:LaxComa://
+
+            //: _VELOCITY_ | _X_DIRECT_   _Y_DIRECT_
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 01 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 02 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 03 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 04 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 05 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 06 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 07 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 08 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 09 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 10 ://
+
+            //: _VELOCITY_ | _X_DIRECT_   _Y_DIRECT_
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 11 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 12 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 13 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 14 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 15 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 16 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 17 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 18 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 19 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 20 ://
+
+            //: _VELOCITY_ | _X_DIRECT_   _Y_DIRECT_
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 21 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 22 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 23 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 24 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 25 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 26 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 27 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 28 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 29 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 30 ://
+
+            //: _VELOCITY_ | _X_DIRECT_   _Y_DIRECT_
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 31 ://
+        ,       0xVE____VE , 0xLR____LR , 0xUD____UD  //: 32 ://
+        ];;
+
+        --------------------------------------------------------
+
+        How many frames you run the 
+    
+            [ PRIVATE_PASSWORD / starsim ]
+
+        for is up to you. So hacker not only needs the
+        "starsim" array , they also need to know how many
+        frames you ran this simulation for.
+
+        --------------------------------------------------------
+
+        SIMULATION PHYSICS :
+
+            Upon collision , "stars" invert their
+            direction , and their velocity becomes
+            the average of both stars involved in
+            the collision.
+
+            It doesn't matter if there is a bug in
+            the simulation. As long as the simulation
+            execution is deterministic.
+
+        --------------------------------------------------------
+
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]
+        [ ][ ][ ][ ][ ][ ][ ][ ][ ]

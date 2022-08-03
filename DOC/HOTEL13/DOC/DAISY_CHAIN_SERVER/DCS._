@@ -1,0 +1,70 @@
+
+
+    UPDATE[ 2022_07_19 ] #SCHEDULED_SERVER_DOWNTIME# (SSD)
+
+        Each ring needs 30 servers!!!!!!!
+
+        Reason : One server is ALWAYS DOWN (hardcoded)
+
+        If it is the 1st of the month, server #1 is down.
+        If it is the 2nd of the month, server #2 is down.
+
+        We now have a way to "pop-out" servers and make
+        changes.
+
+        We should also be able to DISABLE any other
+        server and have the other servers try the next
+        server in the chain. But this could have a 
+        performance hit because the connection will
+        have to TIMEOUT first. While with the server
+        that is EXPECTED to be disabled, the other
+        servers never try to connect to it in the
+        first place.
+
+
+    DaisyChain / MerryGoRound Image Server :
+
+            [A] --socket--> [B] --socket--> [C]
+             ^                               |
+             |                               |
+           socket                          socket
+             |                               |
+             |                               V
+            [H]                             [D]
+             ^                               |
+             |                               |
+           socket                          socket
+             |                               |
+             |                               V
+            [G] <--socket-- [F] <--socket-- [D]
+
+    All the servers have socket connections to each
+    other and are used as "raid drive" to keep redundant
+    copies of images.
+
+    If you HTTP request to F passes message onto G.
+                           G passes message onto H.
+                           ETC.
+
+    Eventually message goes full circle.
+
+    When message goes full circle you have a variable
+    called "BATON"
+
+    BATON is set to "1" when "F" passes on the message.
+
+    A different server might decide that __IT__ should
+    handle the DOWNLOAD. If so, BATON gets set to ZERO.
+
+    When [F] sees that BATON is set to "ZERO" it will
+    __ASK__ the other server who set BATON to "0" for
+    the latest version of the image.
+
+    Server [F] with copy the image in it's data store,
+    then serve it to the user.
+
+    Something similiar can work for uploading as well.
+
+    Because all the servers are keeping socket 
+    connections open to each other, it will prevent
+    our heroku servers from going to sleep.

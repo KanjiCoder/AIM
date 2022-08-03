@@ -1,0 +1,134 @@
+
+
+    IUH: Imugr Upload Hell
+
+
+
+//:GETTING_CLOSE:============================================://
+
+    These are identical, but the one where we convert
+    to string says "unsupported file type". So...
+    I am thinking the .toString() is corrupting the
+    data. Even though we can't read the data in
+    powershell because it is JUST NUMBERS , it is
+    actually CLOSER TO CORRECT in the 2nd example.
+
+    We need to try to upload to our album with
+    postman. I did a postman upload, but think it
+    probably uploaded anonymously.
+
+
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "binary" ) 
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]).toString( "utf8" );
+
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   new  Buffer(     png_bin , "binary" ) 
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]);; 
+
+ 
+
+//:============================================:GETTING_CLOSE://
+
+    //:WE_DONT_SUPPORT_THAT_FILE_TYPE: 2022_07_21 : 758PM ://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "binary" ) 
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]).toString( "utf8" );
+
+    //:BAD_REQUEST: 2022_07_21 : 755 PM ://
+    norform_pay = "[sfjslfjlsjflsjdfjjjkdk]" ;
+
+    //:INTERNAL_EXPECTATION_FAILED : 2022_07_21 : 7:53 PM ://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "binary" ) 
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]);; 
+            
+
+    //:INTERNAL_EXPECTATION_FAILED : 2022_07_21 : 7:48 PM ://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   new  Buffer(     png_bin , "binary" ) 
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]);; 
+
+    ############################################################
+
+    "INERNAL_EXPECATION_FAILED" <-- Closer To Successs 
+    "WE_DONT_SUPPORT_THAT_FILE_TYPE" <-- Further From Success
+
+    ############################################################
+
+    I have come to the conclusion that status 417 Internal 
+    expectation failed indicates that you do not have 
+    permission to write to the album, 
+    so double check you are sending the correct bearer 
+    token in your header.
+
+    https://stackoverflow.com/questions/65065660
+
+    ############################################################
+
+    //:WE_DONT_SUPPORT_THAT_FILE_TYPE : 7:42 PM ://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "binary" ) 
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]).toString();
+
+    //:COMPILE_ERROR : 2022_07_21 : 740PM ://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "binary" ).toString("utf8")
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]);;
+
+    //:INTERNAL_EXPECTATION_FAILED : 2022_07_21 : 736PM ://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "utf8"   )
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]);;
+
+    //:INTERNAL_EXPECTATION_FAILED : 2022_07_21 : 735PM ://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "binary" )
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]);;
+
+    //:WE_DONT_SUPPORT_THAT_FILE_TYPE://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "utf8"   )
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]).toString( "utf8" );
+
+    //:WE_DONT_SUPPORT_THAT_FILE_TYPE://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "binary" )
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]).toString( "utf8" );
+
+    //:INTERNAL_EXPECTATION_FAILED://
+    norform_pay =Buffer.concat([
+        Buffer.from( norform_str , "utf8"   ) 
+    ,   Buffer.from(     png_bin , "binary" )
+    ,   Buffer.from(     fin_bou , "utf8"   ) 
+    ]);;
+
+
+
+    Internal Expectation Failed :
+
+        1. Maybe File Too Big ?
+
+            https://github.com/ShareX/ShareX/issues/4941

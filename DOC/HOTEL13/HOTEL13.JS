@@ -1,9 +1,2387 @@
+//:IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII://
+//:INDEX_SECTION_HOTEL13:IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII://
+/** ******************************************************** ***
 
-    window.alert( "[TODO:FLAME_TRIP_ADJUSTMENT]" );
-    window.alert( "[TRIPPED_BOMBS_MUST_ANIMATE_FIRST]" );
-    window.alert( "[Create OBE : fractal_OBliteratE_Tile]" );
-    window.alert( "[make laser propegantion _DET function first]"    );
+        [ CTRL_F_HELP  ] : Hackish Google Search === CTRL+F
+        [ BOMB_TYPES   ] : Use CTRL+F For More Info
+        [ DEVEL_TODO   ] : Developer Todo Notes
+        [ BASIC_LAYOUT ] : Basic Data Layout Of Hotel13
+        [ HASHTAG_SEC  ] : 90% of comments are here.
+                         : Always append new notes to the
+                         : BOTTOM OF THIS SECTION.
 
+*** ******************************************************** **/
+//:IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII:INDEX_SECTION_HOTEL13://
+//:IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII://
+//:MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM://
+//:MONKEY_WRENCH_MACROS_HOTEL13:MMMMMMMMMMMMMMMMMMMMMMMMMMMMM://
+
+
+
+    const HEADERS_RECIEVED = "[TYPO_FIX:HEADERS_RECEIVED]" ;
+
+
+
+//:MMMMMMMMMMMMMMMMMMMMMMMMMMMMM:MONKEY_WRENCH_MACROS_HOTEL13://
+//:MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM://
+//:----------------------------------------------------------://
+//:EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE://
+//:ENVIRONMENT_SECTION_HOTEL13:EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE://
+
+    //:HOTEL13_ENVIORNMENT_DETECTION:====================://
+    {
+        let yes =( "undefined" === typeof window );               
+        let not =( "undefined"  != typeof window ); 
+        var d_hotel13_yesnode =( yes ? 1:0 );
+        var d_hotel13_notnode =( not ? 1:0 );
+    }
+    //:====================:HOTEL13_ENVIORNMENT_DETECTION://
+    //:HOTEL13_ARE_YOU_ALONE:============================://
+    //:                                                  ://
+    //:    Is this code currently a part of our          ://
+    //:    [ Atomic Ivy MMO ]AKA[ BOOM MMO ] ?           ://
+    //:    SEE[ www.tinyurl.com/BOMB-GAME-TUTORIAL ]     ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
+        //: Hotel13 Integrated Into Larger Project ? :- -://
+
+            const d_hotel13_yes_aim =(( 0
+            ||  (!( "undefined" === typeof notnode ))  
+            ||  (!( "undefined" === typeof yesnode ))  
+            ) ? 1 : 0 );;
+            const d_hotel13_not_aim =((
+                (!d_hotel13_yes_aim)  
+            ) ? 1 : 0 );;
+            
+        //: Hotel13 as stand alone server ?  :- - - - - -://
+
+            const d_hotel13_h13node =(( 1
+            &&    d_hotel13_not_aim
+            &&    d_hotel13_yesnode
+            ) ? 1 : 0 );;
+    //:============================:HOTEL13_ARE_YOU_ALONE://
+
+//:EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE:ENVIRONMENT_SECTION_HOTEL13://
+//:EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE://
+//:----------------------------------------------------------://
+//:DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD://
+//:DATA_ONLY_SECTION_HOTEL13:DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD://
+
+    //:HOTEL13_MIMETYPES:================================://
+    if( d_hotel13_not_aim ){
+        
+        //:#_DONT_UPLICATE_CONTENT_TYPES_IF_PART_OF_AIM_#://
+
+        let c_t =( "Content-Type" ); //:#JS_DYNA_KEY#://
+        var d_jso = { [c_t]: "application/json"         } ;
+        var d_txt = { [c_t]: "text/plain"               } ;
+        var d_png = { [c_t]: "image/png"                } ;
+        var d_htm = { [c_t]: "text/html"                } ;
+        var d_js  = { [c_t]: "text/javascript"          } ;
+        var d_exe = { [c_t]: "application/x-msdownload" } ;
+        var d_css = { [c_t]: "text/css"                 } ;
+    };;
+    //:================================:HOTEL13_MIMETYPES://
+    //:HOTEL13_DATABASE.DATA:============================://
+    if( d_hotel13_yesnode ){
+
+        //:#_CAN_EXIST_IN_ALL_NODE_JS_ENVIRONMENTS_#://
+
+        let n =( "\n" ); //:TempNewlineMacro://
+    
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: @d_hotel13_dbu@ : Database URL           ://
+        //: @d_hotel13_cin@ : Connection_INfo        ://
+        //: @d_hotel13_dcp@ : DB_Connection_Pool     ://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+
+        var d_hotel13_dbu = process.env.DATABASE_URL ;       
+        var d_hotel13_cin ={                                 
+            connectionString : d_hotel13_dbu                 
+        ,   ssl : { rejectUnauthorized : false }     
+        };;                                          
+        var d_hotel13_dcp = "[nil][d_hotel13_dcp]"   ;       
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: DATA.CreateTableStatement.TABle.HOTEL13  ://   
+        //:::::::::::::::::::::::::::::::::::::::::::://
+
+        var d_cts_tab_hotel13 =( "                   "+n 
+        +"                                           "+n
+        +"  CREATE TABLE IF NOT EXISTS tab_hotel13(  "+n 
+        +"                                           "+n
+        +"       iid SERIAL PRIMARY KEY              "+n 
+        +"                                           "+n
+        +"  ,  col_coohash  VARCHAR( 11 )            "+n 
+        +"                                           "+n
+        +"  ,  col_verni32  INT                      "+n
+        +"                  CHECK( col_verni32 >= 0 )"+n   
+        +"                                           "+n
+        +"  ,  col_png_url  VARCHAR( 32 )            "+n
+        +"                                           "+n
+        +"      /** Coordinate Hash And Version **/  "+n
+        +"      /** Number Should Be Unique     **/  "+n
+        +"      /** Combination.                **/  "+n
+        +"  ,   CONSTRAINT con_hotel13 UNIQUE        "+n
+        +"      ( col_coohash , col_verni32 )        "+n
+        +"                                           "+n
+        +"  );;                                      "+n           
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;    
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: DATA.InsertIntoStatement.TABle.HOTEL13   ://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+                 
+        var d_iis_tab_hotel13 =( "                   "+n   
+        +"                                           "+n  
+        +"      INSERT INTO tab_hotel13              "+n  
+        +"      (                                    "+n
+        +"            col_coohash                    "+n
+        +"        ,   col_verni32                    "+n
+        +"        ,   col_png_url                    "+n
+        +"      )VALUES                              "+n
+        +"      (                                    "+n
+        +"            '[i_coohash]'                  "+n
+        +"        ,    [i_verni32]                   "+n
+        +"        ,   '[i_png_url]'                  "+n
+        +"      );;                                  "+n    
+        +"                                           "+n  
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: DATA.Select.TABle.HOTEL13 :::::::::::::::://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+
+        var d_sel_tab_hotel13 =( "                   "+n
+        +"                                           "+n
+        +"      /** SELECT TOP 10 **/                "+n
+        +"                                           "+n
+        +"      SELECT *                             "+n
+        +"      FROM     tab_hotel13                 "+n
+        +"      WHERE    col_coohash = '[i_coohash]' "+n
+        +"      ORDER BY col_verni32 DESC            "+n
+        +"      LIMIT 10                             "+n
+        +"      ;;                                   "+n
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: DATA.DropTableStatement.HOTEL13 :::::::::://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        var d_dts_tab_hotel13 =( "                   "+n   
+        +"                                           "+n   
+        +"  DROP TABLE IF EXISTS tab_hotel13 ;       "+n   
+        +"                                           "+n   
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;   
+    };;
+    //:============================:HOTEL13_DATABASE.DATA://
+
+//:DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD:DATA_ONLY_SECTION_HOTEL13://
+//:DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD://
+//:LIBRARY_SECTION_HOTEL13:LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL://
+//:LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL://
+
+    if( d_hotel13_h13node /** #_HOTEL13_SERVER_ONLY_# **/ ){
+
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //: l_pg : Add This To Your[ package.json ]      ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        /** ******************************************** ***    
+            { 
+                "//" : "KANJICODER_NEEDS_A_DATABASE"
+            ,   "dependencies": { "pg" : "8.7.3" } 
+            }
+        *** ******************************************** **/
+ 
+        var l_pg     = require( "pg"               );   
+        var l_fs     = require( "fs"               );   
+        var l_url    = require( "url"              );   
+        var l_qs     = require( "node:querystring" );   
+        /// l_http   = require( "http"             );
+        var l_https  = require( "https"            );
+        /// l_buffer = require( "node:buffer"      );
+    };;
+//:LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL:LIBRARY_SECTION_HOTEL13://
+//:LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL://
+
+
+
+    //# BELOW : Not sectioned. #//
+
+
+
+    //:HOTEL13_XMLHTTPREQUEST_WIREUP_HACK:===============://
+    //:HOTEL13_PHONE_HOME:===============================://
+    //:                                                  ://
+    //:    [TODO]: Make it so  HOTEL13's server          ://
+    //:          : MERGES with AIM's server when         ://
+    //:          : HOTEL13's code pasted into either     ://
+    //:          : top or bottom of file.                ://
+    //:          : (not sure which one yet)              ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
+        const d_hotel13_wcx_i_x_def = "[wmc:NOT:wcx]" ;
+        const d_hotel13_wcy_i_y_def = "[wmc:NOT:wcy]" ;
+        const d_hotel13_wcx_i_x     = "[wmc:NOT:wcx]" ;
+        const d_hotel13_wcy_i_y     = "[wmc:NOT:wcy]" ;
+        const d_hotel13_wcx_s_x     = "[wmc:NOT:wcx]" ;
+        const d_hotel13_wcy_s_y     = "[wmc:NOT:wcy]" ;
+
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+    if( d_hotel13_notnode /**ClientSideOnly**/ )
+    {
+        if(!d_url){ var d_url = "[DURLNOTSET]" ; };
+
+        var               d_hotel13_urlsite    =(                                 
+            "[BLACK_MAGIC:d_hotel13_urlsite]"                    
+        );;                                              
+        var               d_hotel13_urlsite_o_k=(                              
+            "[BLACK_MAGIC:d_hotel13_urlsite_o_k]"                
+        );;       
+
+        //:@wmc@:WorldMapCoord ::::::::::::::::::://
+        //:@wmc_s_x@     : wmc - string - x      ://
+        //:@wmc_s_y@     : wmc - string - y      :// 
+        //:@wmc_o_k@     : wmc - Okay?           ://
+        //:@wmc_i_x@     : wmc - integer- x      ://
+        //:@wmc_i_y@     : wmc - integer- y      ://
+        //:@wmc_i_x_def@ : DEFAULT x             ://
+        //:@wmc_i_y_def@ : DEFAULT y             ://
+        //:::::::::::::::::::::::::::::::::::::::://
+        var d_hotel13_wmc_i_x_def =(   0     );
+        var d_hotel13_wmc_i_y_def =(   0     );
+        var d_hotel13_wmc_i_z_def =(   0     );
+        var d_hotel13_wmc_i_x     =( 0 - 404 );
+        var d_hotel13_wmc_i_y     =( 0 - 404 );
+        var d_hotel13_wmc_i_z     =( 0 - 404 );
+
+        var               d_hotel13_wmc_s_x =(
+            "[BLACK_MAGIC:d_hotel13_wmc_s_x]" );;
+        var               d_hotel13_wmc_s_y =(
+            "[BLACK_MAGIC:d_hotel13_wmc_s_y]" );;
+        var               d_hotel13_wmc_s_z =(
+            "[BLACK_MAGIC:d_hotel13_wmc_s_z]" );;
+        var               d_hotel13_wmc_o_k =(
+            "[BLACK_MAGIC:d_hotel13_wmc_o_k]" );;
+        if( "[YES_O_K]" ==d_hotel13_wmc_o_k ){
+
+            d_hotel13_wmc_i_x =( Number.parseInt( 
+            d_hotel13_wmc_s_x ));;
+
+            d_hotel13_wmc_i_y =( Number.parseInt( 
+            d_hotel13_wmc_s_y ));;
+
+            d_hotel13_wmc_i_z =( Number.parseInt( 
+            d_hotel13_wmc_s_z ));;
+        };;
+
+        if( "[YES_O_K]" == d_hotel13_urlsite_o_k ){
+
+            d_url =( d_hotel13_urlsite );
+        }else
+        if( "[NOT_O_K]" == d_hotel13_urlsite_o_k 
+        &&  "[YES_O_K]" ==         d_urlsite_o_k
+        ){
+            d_url =(         d_urlsite );
+        }else{
+
+            F_PRIVATE_HOTEL13_ERR(
+                "[HOTEL13_CANT_PHONE_HOME]" 
+            );;
+        };;
+    }
+    //:===============================:HOTEL13_PHONE_HOME://
+    //:===============:HOTEL13_XMLHTTPREQUEST_WIREUP_HACK://
+    //:STOLENFROM:#BGT#:=================================://
+    //:FUNC_XML_HTTP_REQUEST:[061]:======================://
+                                                          //
+        const   F_HOTEL13_XHR = function                  //
+        PRIVATE_F_HOTEL13_XHR(                            //
+            i_asktype  /** @asktype@  **/                 //
+        ,   i_urlpath  /** @urlpath@  **/                 //
+        ){                                                //
+            var o_promise = new Promise( function         //
+            EXECUTO_F_HOTEL13_XHR( o_k_yes , wontsay ){   //
+                                                          //
+                var emp , urlfull , xhr_ask ;             //
+                                                          //
+                    emp = "" ; /**EmptyString**/          //
+                urlfull = "[REQUEST_URL_NOT_SET]" ;       //
+                                                          //
+                if( "/" != i_urlpath[ 0 ] ){              //
+                                                          //
+                    urlfull = d_url + "/" + i_urlpath ;   //
+                }else{                                    //
+                    urlfull = d_url + emp + i_urlpath ;   //
+                };;                                       //
+                                                          //
+                xhr_ask = new XMLHttpRequest();           //
+                xhr_ask.open( i_asktype , urlfull );      //
+                xhr_ask.send();                           //
+                xhr_ask.onreadystatechange=(evt_xhr)=>{   //
+                if( xhr_ask.readyState === 4 ){           //
+                                                          //
+                    console.log("DONE");                  //
+                    o_k_yes( xhr_ask.responseText );      //
+                                                          //
+                };;};;                                    //
+                                                          //
+            });; return( o_promise );                     //
+        };;                                               //
+    //:======================:FUNC_XML_HTTP_REQUEST:[061]://
+    //:=================================:STOLENFROM:#BGT#://
+    //:HOTEL13_XML_GET:==================================://
+
+        const   F_HOTEL13_XHR_GET = "[TRY:XHR_GET_PNG]" ;
+        const   F_HOTEL13_GET_XHR = "[TRY:XHR_GET_PNG]" ;
+
+        const   F_HOTEL13_XHR_GET_PNG = function
+        PRIVATE_F_HOTEL13_XHR_GET_PNG(
+
+            i_urlpath
+        ){
+            var o_promise = new Promise( function          
+            EXECUTO_F_HOTEL13_XHR_GET_PNG( 
+
+                o_k_yes 
+            ,   wontsay
+            ){
+                                                           
+                var emp , urlfull , xhr_ask ;              
+                                                           
+                    emp = "" ; /**EmptyString**/           
+                urlfull = "[REQUEST_URL_NOT_SET]" ;        
+                                                           
+                if( "/" != i_urlpath[ 0 ] ){               
+                                                           
+                    urlfull = d_url + "/" + i_urlpath ;    
+                }else{                                     
+                    urlfull = d_url + emp + i_urlpath ;    
+                };;                                        
+                                                           
+                xhr_ask = new XMLHttpRequest();            
+                xhr_ask.open( "GET" , urlfull );  
+                xhr_ask.responseType = "arraybuffer" ;  //:<<<<<<<<<<<<<< NOTICE_ME_SENPAI
+                xhr_ask.send();                            
+                xhr_ask.onreadystatechange=(evt_xhr)=>{    
+                if( xhr_ask.readyState === 4 ){            
+                                                           
+                    console.log("[DONE:XHR_GET_PNG]");                   
+                    o_k_yes(  xhr_ask );                                      
+                };;};;                                     
+                                                           
+            });; return( o_promise );                      
+        };;
+    //:==================================:HOTEL13_XML_GET://
+    //:HOTEL13_XML_POST:=================================://
+
+        const   F_HOTEL13_XHR_POST = function                   
+        PRIVATE_F_HOTEL13_XHR_POST(                                          
+            i_urlpath  /** @urlpath@  **/   
+        ,   i_payload  /** @payload@  **/
+        ){                                                 
+            var o_promise = new Promise( function          
+            EXECUTO_F_HOTEL13_XHR_POST(                    
+                o_k_yes                                    
+            ,   wontsay                                    
+            ){                                                                                     
+                var emp , urlfull , xhr_ask ;              
+                                                           
+                    emp = "" ; /**EmptyString**/           
+                urlfull = "[REQUEST_URL_NOT_SET]" ;        
+                                                           
+                if( "/" != i_urlpath[ 0 ] ){               
+                                                           
+                    urlfull = d_url + "/" + i_urlpath ;    
+                }else{                                     
+                    urlfull = d_url + emp + i_urlpath ;    
+                };;                                        
+                                                           
+                xhr_ask = new XMLHttpRequest();            
+                xhr_ask.open( "POST" , urlfull );   
+
+                //:create_png_filename:------------------://
+
+                    d_pngname =( F_HOTEL13_XYZ_PNGNAME( 
+
+                        d_hotel13_wmc_i_x    //: wmc.i_x ://
+                    ,   d_hotel13_wmc_i_y    //: wmc.i_y ://
+                    ,   d_hotel13_wmc_i_z    //: wmc.i_z ://
+                    ));;
+                //:------------------:create_png_filename://
+                //:#set_request_header#:-----------------://
+
+                    xhr_ask.setRequestHeader(
+
+                        "nsh_pngname" //:@nsh_pngname@://
+                    ,    d_pngname
+                    );;
+                //:-----------------:#set_request_header#://        
+    
+                xhr_ask.send( i_payload );   
+                         
+                xhr_ask.onreadystatechange=(evt_xhr)=>{    
+                if( xhr_ask.readyState === 4 ){            
+                                                           
+                    console.log("DONE");                   
+                    o_k_yes( xhr_ask.responseText );       
+                                                           
+                };;};;                                     
+                                                           
+            });; return( o_promise );                      
+        };;                                                
+
+    //:=================================:HOTEL13_XML_POST://
+    //:HOTEL13_CLIENT_SIDE_TODO_LIST:====================://    
+    if( d_hotel13_notnode >= 1 ){
+
+        console.log( "[HOTEL13_SAYS:isnt_node_js_env]" );
+    
+        let w_a =( window.alert );
+    
+        w_a( "[Heroku_Endpoint_For_Save_Load]"          );
+        w_a( "[ d_fps ==> c_fps ]"                      );
+        w_a( "[#_TILE_EXTRA_BITS_RENDER_#]"             );
+        w_a( "[TODO:FLAME_TRIP_ADJUSTMENT]"             );
+        w_a( "[TRIPPED_BOMBS_MUST_ANIMATE_FIRST]"       );
+        w_a( "[Create OBE : fractal_OBliteratE_Tile]"   );
+        w_a( "[make laser propegantion _DET func 1st]"  );
+    };;
+    //:====================:HOTEL13_CLIENT_SIDE_TODO_LIST://
+    //:000_3RD:UPNG_LIB:=================================://
+    //:                                                  ://
+    //: WEB_URL : github.com/photopea/UPNG.js            ://
+    //: SSH_URL : git@github.com:photopea/UPNG.js.git    ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+var UZIP = {};
+if(typeof module == "object") module.exports = UZIP;
+
+
+UZIP["parse"] = function(buf, onlyNames)	// ArrayBuffer
+{
+	var rUs = UZIP.bin.readUshort, rUi = UZIP.bin.readUint, o = 0, out = {};
+	var data = new Uint8Array(buf);
+	var eocd = data.length-4;
+	
+	while(rUi(data, eocd)!=0x06054b50) eocd--;
+	
+	var o = eocd;
+	o+=4;	// sign  = 0x06054b50
+	o+=4;  // disks = 0;
+	var cnu = rUs(data, o);  o+=2;
+	var cnt = rUs(data, o);  o+=2;
+			
+	var csize = rUi(data, o);  o+=4;
+	var coffs = rUi(data, o);  o+=4;
+	
+	o = coffs;
+	for(var i=0; i<cnu; i++)
+	{
+		var sign = rUi(data, o);  o+=4;
+		o += 4;  // versions;
+		o += 4;  // flag + compr
+		o += 4;  // time
+		
+		var crc32 = rUi(data, o);  o+=4;
+		var csize = rUi(data, o);  o+=4;
+		var usize = rUi(data, o);  o+=4;
+		
+		var nl = rUs(data, o), el = rUs(data, o+2), cl = rUs(data, o+4);  o += 6;  // name, extra, comment
+		o += 8;  // disk, attribs
+		
+		var roff = rUi(data, o);  o+=4;
+		o += nl + el + cl;
+		
+		UZIP._readLocal(data, roff, out, csize, usize, onlyNames);
+	}
+	//console.log(out);
+	return out;
+}
+
+UZIP._readLocal = function(data, o, out, csize, usize, onlyNames)
+{
+	var rUs = UZIP.bin.readUshort, rUi = UZIP.bin.readUint;
+	var sign  = rUi(data, o);  o+=4;
+	var ver   = rUs(data, o);  o+=2;
+	var gpflg = rUs(data, o);  o+=2;
+	//if((gpflg&8)!=0) throw "unknown sizes";
+	var cmpr  = rUs(data, o);  o+=2;
+	
+	var time  = rUi(data, o);  o+=4;
+	
+	var crc32 = rUi(data, o);  o+=4;
+	//var csize = rUi(data, o);  o+=4;
+	//var usize = rUi(data, o);  o+=4;
+	o+=8;
+		
+	var nlen  = rUs(data, o);  o+=2;
+	var elen  = rUs(data, o);  o+=2;
+		
+	var name =  UZIP.bin.readUTF8(data, o, nlen);  o+=nlen;  //console.log(name);
+	o += elen;
+			
+	//console.log(sign.toString(16), ver, gpflg, cmpr, crc32.toString(16), "csize, usize", csize, usize, nlen, elen, name, o);
+	if(onlyNames) {  out[name]={size:usize, csize:csize};  return;  }   
+	var file = new Uint8Array(data.buffer, o);
+	if(false) {}
+	else if(cmpr==0) out[name] = new Uint8Array(file.buffer.slice(o, o+csize));
+	else if(cmpr==8) {
+		var buf = new Uint8Array(usize);  UZIP.inflateRaw(file, buf);
+		/*var nbuf = pako["inflateRaw"](file);
+		if(usize>8514000) {
+			//console.log(PUtils.readASCII(buf , 8514500, 500));
+			//console.log(PUtils.readASCII(nbuf, 8514500, 500));
+		}
+		for(var i=0; i<buf.length; i++) if(buf[i]!=nbuf[i]) {  console.log(buf.length, nbuf.length, usize, i);  throw "e";  }
+		*/
+		out[name] = buf;
+	}
+	else throw "unknown compression method: "+cmpr;
+}
+
+UZIP.inflateRaw = function(file, buf) {  return UZIP.F.inflate(file, buf);  }
+UZIP.inflate    = function(file, buf) { 
+	var CMF = file[0], FLG = file[1];
+	var CM = (CMF&15), CINFO = (CMF>>>4);
+	//console.log(CM, CINFO,CMF,FLG);
+	return UZIP.inflateRaw(new Uint8Array(file.buffer, file.byteOffset+2, file.length-6), buf);  
+}
+UZIP.deflate    = function(data, opts/*, buf, off*/) {
+	if(opts==null) opts={level:6};
+	var off=0, buf=new Uint8Array(50+Math.floor(data.length*1.1));
+	buf[off]=120;  buf[off+1]=156;  off+=2;
+	off = UZIP.F.deflateRaw(data, buf, off, opts.level);
+	var crc = UZIP.adler(data, 0, data.length);
+	buf[off+0]=((crc>>>24)&255); 
+	buf[off+1]=((crc>>>16)&255); 
+	buf[off+2]=((crc>>> 8)&255); 
+	buf[off+3]=((crc>>> 0)&255); 	
+	return new Uint8Array(buf.buffer, 0, off+4);
+}
+UZIP.deflateRaw = function(data, opts) {
+	if(opts==null) opts={level:6};
+	var buf=new Uint8Array(50+Math.floor(data.length*1.1));
+	var off = UZIP.F.deflateRaw(data, buf, off, opts.level);
+	return new Uint8Array(buf.buffer, 0, off);
+}
+
+
+UZIP.encode = function(obj, noCmpr) {
+	if(noCmpr==null) noCmpr=false;
+	var tot = 0, wUi = UZIP.bin.writeUint, wUs = UZIP.bin.writeUshort;
+	var zpd = {};
+	for(var p in obj) {  var cpr = !UZIP._noNeed(p) && !noCmpr, buf = obj[p], crc = UZIP.crc.crc(buf,0,buf.length); 
+		zpd[p] = {  cpr:cpr, usize:buf.length, crc:crc, file: (cpr ? UZIP.deflateRaw(buf) : buf)  };  }
+	
+	for(var p in zpd) tot += zpd[p].file.length + 30 + 46 + 2*UZIP.bin.sizeUTF8(p);
+	tot +=  22;
+	
+	var data = new Uint8Array(tot), o = 0;
+	var fof = []
+	
+	for(var p in zpd) {
+		var file = zpd[p];  fof.push(o);
+		o = UZIP._writeHeader(data, o, p, file, 0);
+	}
+	var i=0, ioff = o;
+	for(var p in zpd) {
+		var file = zpd[p];  fof.push(o);
+		o = UZIP._writeHeader(data, o, p, file, 1, fof[i++]);		
+	}
+	var csize = o-ioff;
+	
+	wUi(data, o, 0x06054b50);  o+=4;
+	o += 4;  // disks
+	wUs(data, o, i);  o += 2;
+	wUs(data, o, i);  o += 2;	// number of c d records
+	wUi(data, o, csize);  o += 4;
+	wUi(data, o, ioff );  o += 4;
+	o += 2;
+	return data.buffer;
+}
+// no need to compress .PNG, .ZIP, .JPEG ....
+UZIP._noNeed = function(fn) {  var ext = fn.split(".").pop().toLowerCase();  return "png,jpg,jpeg,zip".indexOf(ext)!=-1;  }
+
+UZIP._writeHeader = function(data, o, p, obj, t, roff)
+{
+	var wUi = UZIP.bin.writeUint, wUs = UZIP.bin.writeUshort;
+	var file = obj.file;
+	
+	wUi(data, o, t==0 ? 0x04034b50 : 0x02014b50);  o+=4; // sign
+	if(t==1) o+=2;  // ver made by
+	wUs(data, o, 20);  o+=2;	// ver
+	wUs(data, o,  0);  o+=2;    // gflip
+	wUs(data, o,  obj.cpr?8:0);  o+=2;	// cmpr
+		
+	wUi(data, o,  0);  o+=4;	// time		
+	wUi(data, o, obj.crc);  o+=4;	// crc32
+	wUi(data, o, file.length);  o+=4;	// csize
+	wUi(data, o, obj.usize);  o+=4;	// usize
+		
+	wUs(data, o, UZIP.bin.sizeUTF8(p));  o+=2;	// nlen
+	wUs(data, o, 0);  o+=2;	// elen
+	
+	if(t==1) {
+		o += 2;  // comment length
+		o += 2;  // disk number
+		o += 6;  // attributes
+		wUi(data, o, roff);  o+=4;	// usize
+	}
+	var nlen = UZIP.bin.writeUTF8(data, o, p);  o+= nlen;	
+	if(t==0) {  data.set(file, o);  o += file.length;  }
+	return o;
+}
+
+
+
+
+
+UZIP.crc = {
+	table : ( function() {
+	   var tab = new Uint32Array(256);
+	   for (var n=0; n<256; n++) {
+			var c = n;
+			for (var k=0; k<8; k++) {
+				if (c & 1)  c = 0xedb88320 ^ (c >>> 1);
+				else        c = c >>> 1;
+			}
+			tab[n] = c;  }    
+		return tab;  })(),
+	update : function(c, buf, off, len) {
+		for (var i=0; i<len; i++)  c = UZIP.crc.table[(c ^ buf[off+i]) & 0xff] ^ (c >>> 8);
+		return c;
+	},
+	crc : function(b,o,l)  {  return UZIP.crc.update(0xffffffff,b,o,l) ^ 0xffffffff;  }
+}
+UZIP.adler = function(data,o,len) {
+	var a = 1, b = 0;
+	var off = o, end=o+len;
+	while(off<end) {
+		var eend = Math.min(off+5552, end);
+		while(off<eend) {
+			a += data[off++];
+			b += a;
+		}
+		a=a%65521;
+		b=b%65521;
+	}
+    return (b << 16) | a;
+}
+
+UZIP.bin = {
+	readUshort : function(buff,p)  {  return (buff[p]) | (buff[p+1]<<8);  },
+	writeUshort: function(buff,p,n){  buff[p] = (n)&255;  buff[p+1] = (n>>8)&255;  },
+	readUint   : function(buff,p)  {  return (buff[p+3]*(256*256*256)) + ((buff[p+2]<<16) | (buff[p+1]<< 8) | buff[p]);  },
+	writeUint  : function(buff,p,n){  buff[p]=n&255;  buff[p+1]=(n>>8)&255;  buff[p+2]=(n>>16)&255;  buff[p+3]=(n>>24)&255;  },
+	readASCII  : function(buff,p,l){  var s = "";  for(var i=0; i<l; i++) s += String.fromCharCode(buff[p+i]);  return s;    },
+	writeASCII : function(data,p,s){  for(var i=0; i<s.length; i++) data[p+i] = s.charCodeAt(i);  },
+	pad : function(n) { return n.length < 2 ? "0" + n : n; },
+	readUTF8 : function(buff, p, l) {
+		var s = "", ns;
+		for(var i=0; i<l; i++) s += "%" + UZIP.bin.pad(buff[p+i].toString(16));
+		try {  ns = decodeURIComponent(s); }
+		catch(e) {  return UZIP.bin.readASCII(buff, p, l);  }
+		return  ns;
+	},
+	writeUTF8 : function(buff, p, str) {
+		var strl = str.length, i=0;
+		for(var ci=0; ci<strl; ci++)
+		{
+			var code = str.charCodeAt(ci);
+			if     ((code&(0xffffffff-(1<< 7)+1))==0) {  buff[p+i] = (     code     );  i++;  }
+			else if((code&(0xffffffff-(1<<11)+1))==0) {  buff[p+i] = (192|(code>> 6));  buff[p+i+1] = (128|((code>> 0)&63));  i+=2;  }
+			else if((code&(0xffffffff-(1<<16)+1))==0) {  buff[p+i] = (224|(code>>12));  buff[p+i+1] = (128|((code>> 6)&63));  buff[p+i+2] = (128|((code>>0)&63));  i+=3;  }
+			else if((code&(0xffffffff-(1<<21)+1))==0) {  buff[p+i] = (240|(code>>18));  buff[p+i+1] = (128|((code>>12)&63));  buff[p+i+2] = (128|((code>>6)&63));  buff[p+i+3] = (128|((code>>0)&63)); i+=4;  }
+			else throw "e";
+		}
+		return i;
+	},
+	sizeUTF8 : function(str) {
+		var strl = str.length, i=0;
+		for(var ci=0; ci<strl; ci++)
+		{
+			var code = str.charCodeAt(ci);
+			if     ((code&(0xffffffff-(1<< 7)+1))==0) {  i++ ;  }
+			else if((code&(0xffffffff-(1<<11)+1))==0) {  i+=2;  }
+			else if((code&(0xffffffff-(1<<16)+1))==0) {  i+=3;  }
+			else if((code&(0xffffffff-(1<<21)+1))==0) {  i+=4;  }
+			else throw "e";
+		}
+		return i;
+	}
+}
+
+
+
+
+
+UZIP.F = {};
+
+UZIP.F.deflateRaw = function(data, out, opos, lvl) {	
+	var opts = [
+	/*
+		 ush good_length; /* reduce lazy search above this match length 
+		 ush max_lazy;    /* do not perform lazy search above this match length 
+         ush nice_length; /* quit search above this match length 
+	*/
+	/*      good lazy nice chain */
+	/* 0 */ [ 0,   0,   0,    0,0],  /* store only */
+	/* 1 */ [ 4,   4,   8,    4,0], /* max speed, no lazy matches */
+	/* 2 */ [ 4,   5,  16,    8,0],
+	/* 3 */ [ 4,   6,  16,   16,0],
+
+	/* 4 */ [ 4,  10,  16,   32,0],  /* lazy matches */
+	/* 5 */ [ 8,  16,  32,   32,0],
+	/* 6 */ [ 8,  16, 128,  128,0],
+	/* 7 */ [ 8,  32, 128,  256,0],
+	/* 8 */ [32, 128, 258, 1024,1],
+	/* 9 */ [32, 258, 258, 4096,1]]; /* max compression */
+	
+	var opt = opts[lvl];
+	
+	
+	var U = UZIP.F.U, goodIndex = UZIP.F._goodIndex, hash = UZIP.F._hash, putsE = UZIP.F._putsE;
+	var i = 0, pos = opos<<3, cvrd = 0, dlen = data.length;
+	
+	if(lvl==0) {
+		while(i<dlen) {   var len = Math.min(0xffff, dlen-i);
+			putsE(out, pos, (i+len==dlen ? 1 : 0));  pos = UZIP.F._copyExact(data, i, len, out, pos+8);  i += len;  }
+		return pos>>>3;
+	}
+
+	var lits = U.lits, strt=U.strt, prev=U.prev, li=0, lc=0, bs=0, ebits=0, c=0, nc=0;  // last_item, literal_count, block_start
+	if(dlen>2) {  nc=UZIP.F._hash(data,0);  strt[nc]=0;  }
+	var nmch=0,nmci=0;
+	
+	for(i=0; i<dlen; i++)  {
+		c = nc;
+		//*
+		if(i+1<dlen-2) {
+			nc = UZIP.F._hash(data, i+1);
+			var ii = ((i+1)&0x7fff);
+			prev[ii]=strt[nc];
+			strt[nc]=ii;
+		} //*/
+		if(cvrd<=i) {
+			if((li>14000 || lc>26697) && (dlen-i)>100) {
+				if(cvrd<i) {  lits[li]=i-cvrd;  li+=2;  cvrd=i;  }
+				pos = UZIP.F._writeBlock(((i==dlen-1) || (cvrd==dlen))?1:0, lits, li, ebits, data,bs,i-bs, out, pos);  li=lc=ebits=0;  bs=i;
+			}
+			
+			var mch = 0;
+			//if(nmci==i) mch= nmch;  else 
+			if(i<dlen-2) mch = UZIP.F._bestMatch(data, i, prev, c, Math.min(opt[2],dlen-i), opt[3]);
+			/*
+			if(mch!=0 && opt[4]==1 && (mch>>>16)<opt[1] && i+1<dlen-2) {
+				nmch = UZIP.F._bestMatch(data, i+1, prev, nc, opt[2], opt[3]);  nmci=i+1;
+				//var mch2 = UZIP.F._bestMatch(data, i+2, prev, nnc);  //nmci=i+1;
+				if((nmch>>>16)>(mch>>>16)) mch=0;
+			}//*/
+			var len = mch>>>16, dst = mch&0xffff;  //if(i-dst<0) throw "e";
+			if(mch!=0) { 
+				var len = mch>>>16, dst = mch&0xffff;  //if(i-dst<0) throw "e";
+				var lgi = goodIndex(len, U.of0);  U.lhst[257+lgi]++; 
+				var dgi = goodIndex(dst, U.df0);  U.dhst[    dgi]++;  ebits += U.exb[lgi] + U.dxb[dgi]; 
+				lits[li] = (len<<23)|(i-cvrd);  lits[li+1] = (dst<<16)|(lgi<<8)|dgi;  li+=2;
+				cvrd = i + len;  
+			}
+			else {	U.lhst[data[i]]++;  }
+			lc++;
+		}
+	}
+	if(bs!=i || data.length==0) {
+		if(cvrd<i) {  lits[li]=i-cvrd;  li+=2;  cvrd=i;  }
+		pos = UZIP.F._writeBlock(1, lits, li, ebits, data,bs,i-bs, out, pos);  li=0;  lc=0;  li=lc=ebits=0;  bs=i;
+	}
+	while((pos&7)!=0) pos++;
+	return pos>>>3;
+}
+UZIP.F._bestMatch = function(data, i, prev, c, nice, chain) {
+	var ci = (i&0x7fff), pi=prev[ci];  
+	//console.log("----", i);
+	var dif = ((ci-pi + (1<<15)) & 0x7fff);  if(pi==ci || c!=UZIP.F._hash(data,i-dif)) return 0;
+	var tl=0, td=0;  // top length, top distance
+	var dlim = Math.min(0x7fff, i);
+	while(dif<=dlim && --chain!=0 && pi!=ci /*&& c==UZIP.F._hash(data,i-dif)*/) {
+		if(tl==0 || (data[i+tl]==data[i+tl-dif])) {
+			var cl = UZIP.F._howLong(data, i, dif);
+			if(cl>tl) {  
+				tl=cl;  td=dif;  if(tl>=nice) break;    //* 
+				if(dif+2<cl) cl = dif+2;
+				var maxd = 0; // pi does not point to the start of the word
+				for(var j=0; j<cl-2; j++) {
+					var ei =  (i-dif+j+ (1<<15)) & 0x7fff;
+					var li = prev[ei];
+					var curd = (ei-li + (1<<15)) & 0x7fff;
+					if(curd>maxd) {  maxd=curd;  pi = ei; }
+				}  //*/
+			}
+		}
+		
+		ci=pi;  pi = prev[ci];
+		dif += ((ci-pi + (1<<15)) & 0x7fff);
+	}
+	return (tl<<16)|td;
+}
+UZIP.F._howLong = function(data, i, dif) {
+	if(data[i]!=data[i-dif] || data[i+1]!=data[i+1-dif] || data[i+2]!=data[i+2-dif]) return 0;
+	var oi=i, l = Math.min(data.length, i+258);  i+=3;
+	//while(i+4<l && data[i]==data[i-dif] && data[i+1]==data[i+1-dif] && data[i+2]==data[i+2-dif] && data[i+3]==data[i+3-dif]) i+=4;
+	while(i<l && data[i]==data[i-dif]) i++;
+	return i-oi;
+}
+UZIP.F._hash = function(data, i) {
+	return (((data[i]<<8) | data[i+1])+(data[i+2]<<4))&0xffff;
+	//var hash_shift = 0, hash_mask = 255;
+	//var h = data[i+1] % 251;
+	//h = (((h << 8) + data[i+2]) % 251);
+	//h = (((h << 8) + data[i+2]) % 251);
+	//h = ((h<<hash_shift) ^ (c) ) & hash_mask;
+	//return h | (data[i]<<8);
+	//return (data[i] | (data[i+1]<<8));
+}
+//UZIP.___toth = 0;
+UZIP.saved = 0;
+UZIP.F._writeBlock = function(BFINAL, lits, li, ebits, data,o0,l0, out, pos) {
+	var U = UZIP.F.U, putsF = UZIP.F._putsF, putsE = UZIP.F._putsE;
+	
+	//*
+	var T, ML, MD, MH, numl, numd, numh, lset, dset;  U.lhst[256]++;
+	T = UZIP.F.getTrees(); ML=T[0]; MD=T[1]; MH=T[2]; numl=T[3]; numd=T[4]; numh=T[5]; lset=T[6]; dset=T[7];
+	
+	var cstSize = (((pos+3)&7)==0 ? 0 : 8-((pos+3)&7)) + 32 + (l0<<3);
+	var fxdSize = ebits + UZIP.F.contSize(U.fltree, U.lhst) + UZIP.F.contSize(U.fdtree, U.dhst);
+	var dynSize = ebits + UZIP.F.contSize(U.ltree , U.lhst) + UZIP.F.contSize(U.dtree , U.dhst);
+	dynSize    += 14 + 3*numh + UZIP.F.contSize(U.itree, U.ihst) + (U.ihst[16]*2 + U.ihst[17]*3 + U.ihst[18]*7);
+	
+	for(var j=0; j<286; j++) U.lhst[j]=0;   for(var j=0; j<30; j++) U.dhst[j]=0;   for(var j=0; j<19; j++) U.ihst[j]=0;
+	//*/
+	var BTYPE = (cstSize<fxdSize && cstSize<dynSize) ? 0 : ( fxdSize<dynSize ? 1 : 2 );
+	putsF(out, pos, BFINAL);  putsF(out, pos+1, BTYPE);  pos+=3;
+	
+	var opos = pos;
+	if(BTYPE==0) {
+		while((pos&7)!=0) pos++;
+		pos = UZIP.F._copyExact(data, o0, l0, out, pos);
+	}
+	else {
+		var ltree, dtree;
+		if(BTYPE==1) {  ltree=U.fltree;  dtree=U.fdtree;  }
+		if(BTYPE==2) {	
+			UZIP.F.makeCodes(U.ltree, ML);  UZIP.F.revCodes(U.ltree, ML);
+			UZIP.F.makeCodes(U.dtree, MD);  UZIP.F.revCodes(U.dtree, MD);
+			UZIP.F.makeCodes(U.itree, MH);  UZIP.F.revCodes(U.itree, MH);
+			
+			ltree = U.ltree;  dtree = U.dtree;
+			
+			putsE(out, pos,numl-257);  pos+=5;  // 286
+			putsE(out, pos,numd-  1);  pos+=5;  // 30
+			putsE(out, pos,numh-  4);  pos+=4;  // 19
+			
+			for(var i=0; i<numh; i++) putsE(out, pos+i*3, U.itree[(U.ordr[i]<<1)+1]);   pos+=3* numh;
+			pos = UZIP.F._codeTiny(lset, U.itree, out, pos);
+			pos = UZIP.F._codeTiny(dset, U.itree, out, pos);
+		}
+		
+		var off=o0;
+		for(var si=0; si<li; si+=2) {
+			var qb=lits[si], len=(qb>>>23), end = off+(qb&((1<<23)-1));
+			while(off<end) pos = UZIP.F._writeLit(data[off++], ltree, out, pos);
+			
+			if(len!=0) {
+				var qc = lits[si+1], dst=(qc>>16), lgi=(qc>>8)&255, dgi=(qc&255);
+				pos = UZIP.F._writeLit(257+lgi, ltree, out, pos);
+				putsE(out, pos, len-U.of0[lgi]);  pos+=U.exb[lgi];
+				
+				pos = UZIP.F._writeLit(dgi, dtree, out, pos);
+				putsF(out, pos, dst-U.df0[dgi]);  pos+=U.dxb[dgi];  off+=len;
+			}
+		}
+		pos = UZIP.F._writeLit(256, ltree, out, pos);
+	}
+	//console.log(pos-opos, fxdSize, dynSize, cstSize);
+	return pos;
+}
+UZIP.F._copyExact = function(data,off,len,out,pos) {
+	var p8 = (pos>>>3);
+	out[p8]=(len);  out[p8+1]=(len>>>8);  out[p8+2]=255-out[p8];  out[p8+3]=255-out[p8+1];  p8+=4;
+	out.set(new Uint8Array(data.buffer, off, len), p8);
+	//for(var i=0; i<len; i++) out[p8+i]=data[off+i];
+	return pos + ((len+4)<<3);
+}
+/*
+	Interesting facts:
+	- decompressed block can have bytes, which do not occur in a Huffman tree (copied from the previous block by reference)
+*/
+
+UZIP.F.getTrees = function() {
+	var U = UZIP.F.U;
+	var ML = UZIP.F._hufTree(U.lhst, U.ltree, 15);
+	var MD = UZIP.F._hufTree(U.dhst, U.dtree, 15);
+	var lset = [], numl = UZIP.F._lenCodes(U.ltree, lset);
+	var dset = [], numd = UZIP.F._lenCodes(U.dtree, dset);
+	for(var i=0; i<lset.length; i+=2) U.ihst[lset[i]]++;
+	for(var i=0; i<dset.length; i+=2) U.ihst[dset[i]]++;
+	var MH = UZIP.F._hufTree(U.ihst, U.itree,  7);
+	var numh = 19;  while(numh>4 && U.itree[(U.ordr[numh-1]<<1)+1]==0) numh--;
+	return [ML, MD, MH, numl, numd, numh, lset, dset];
+}
+UZIP.F.getSecond= function(a) {  var b=[];  for(var i=0; i<a.length; i+=2) b.push  (a[i+1]);  return b;  }
+UZIP.F.nonZero  = function(a) {  var b= "";  for(var i=0; i<a.length; i+=2) if(a[i+1]!=0)b+=(i>>1)+",";  return b;  }
+UZIP.F.contSize = function(tree, hst) {  var s=0;  for(var i=0; i<hst.length; i++) s+= hst[i]*tree[(i<<1)+1];  return s;  }
+UZIP.F._codeTiny = function(set, tree, out, pos) {
+	for(var i=0; i<set.length; i+=2) {
+		var l = set[i], rst = set[i+1];  //console.log(l, pos, tree[(l<<1)+1]);
+		pos = UZIP.F._writeLit(l, tree, out, pos);
+		var rsl = l==16 ? 2 : (l==17 ? 3 : 7);
+		if(l>15) {  UZIP.F._putsE(out, pos, rst, rsl);  pos+=rsl;  }
+	}
+	return pos;
+}
+UZIP.F._lenCodes = function(tree, set) {
+	var len=tree.length;  while(len!=2 && tree[len-1]==0) len-=2;  // when no distances, keep one code with length 0
+	for(var i=0; i<len; i+=2) {
+		var l = tree[i+1], nxt = (i+3<len ? tree[i+3]:-1),  nnxt = (i+5<len ? tree[i+5]:-1),  prv = (i==0 ? -1 : tree[i-1]);
+		if(l==0 && nxt==l && nnxt==l) {
+			var lz = i+5;
+			while(lz+2<len && tree[lz+2]==l) lz+=2;
+			var zc = Math.min((lz+1-i)>>>1, 138);
+			if(zc<11) set.push(17, zc-3);
+			else set.push(18, zc-11);
+			i += zc*2-2;
+		}
+		else if(l==prv && nxt==l && nnxt==l) {
+			var lz = i+5;
+			while(lz+2<len && tree[lz+2]==l) lz+=2;
+			var zc = Math.min((lz+1-i)>>>1, 6);
+			set.push(16, zc-3);
+			i += zc*2-2;
+		}
+		else set.push(l, 0);
+	}
+	return len>>>1;
+}
+UZIP.F._hufTree   = function(hst, tree, MAXL) {
+	var list=[], hl = hst.length, tl=tree.length, i=0;
+	for(i=0; i<tl; i+=2) {  tree[i]=0;  tree[i+1]=0;  }	
+	for(i=0; i<hl; i++) if(hst[i]!=0) list.push({lit:i, f:hst[i]});
+	var end = list.length, l2=list.slice(0);
+	if(end==0) return 0;  // empty histogram (usually for dist)
+	if(end==1) {  var lit=list[0].lit, l2=lit==0?1:0;  tree[(lit<<1)+1]=1;  tree[(l2<<1)+1]=1;  return 1;  }
+	list.sort(function(a,b){return a.f-b.f;});
+	var a=list[0], b=list[1], i0=0, i1=1, i2=2;  list[0]={lit:-1,f:a.f+b.f,l:a,r:b,d:0};
+	while(i1!=end-1) {
+		if(i0!=i1 && (i2==end || list[i0].f<list[i2].f)) {  a=list[i0++];  }  else {  a=list[i2++];  }
+		if(i0!=i1 && (i2==end || list[i0].f<list[i2].f)) {  b=list[i0++];  }  else {  b=list[i2++];  }
+		list[i1++]={lit:-1,f:a.f+b.f, l:a,r:b};
+	}
+	var maxl = UZIP.F.setDepth(list[i1-1], 0);
+	if(maxl>MAXL) {  UZIP.F.restrictDepth(l2, MAXL, maxl);  maxl = MAXL;  }
+	for(i=0; i<end; i++) tree[(l2[i].lit<<1)+1]=l2[i].d;
+	return maxl;
+}
+
+UZIP.F.setDepth  = function(t, d) {
+	if(t.lit!=-1) {  t.d=d;  return d;  }
+	return Math.max( UZIP.F.setDepth(t.l, d+1),  UZIP.F.setDepth(t.r, d+1) );
+}
+
+UZIP.F.restrictDepth = function(dps, MD, maxl) {
+	var i=0, bCost=1<<(maxl-MD), dbt=0;
+	dps.sort(function(a,b){return b.d==a.d ? a.f-b.f : b.d-a.d;});
+	
+	for(i=0; i<dps.length; i++) if(dps[i].d>MD) {  var od=dps[i].d;  dps[i].d=MD;  dbt+=bCost-(1<<(maxl-od));  }  else break;
+	dbt = dbt>>>(maxl-MD);
+	while(dbt>0) {  var od=dps[i].d;  if(od<MD) {  dps[i].d++;  dbt-=(1<<(MD-od-1));  }  else  i++;  }
+	for(; i>=0; i--) if(dps[i].d==MD && dbt<0) {  dps[i].d--;  dbt++;  }  if(dbt!=0) console.log("debt left");
+}
+
+UZIP.F._goodIndex = function(v, arr) {
+	var i=0;  if(arr[i|16]<=v) i|=16;  if(arr[i|8]<=v) i|=8;  if(arr[i|4]<=v) i|=4;  if(arr[i|2]<=v) i|=2;  if(arr[i|1]<=v) i|=1;  return i;
+}
+UZIP.F._writeLit = function(ch, ltree, out, pos) {
+	UZIP.F._putsF(out, pos, ltree[ch<<1]);
+	return pos+ltree[(ch<<1)+1];
+}
+
+
+
+
+
+
+
+
+UZIP.F.inflate = function(data, buf) {
+	var u8=Uint8Array;
+	if(data[0]==3 && data[1]==0) return (buf ? buf : new u8(0));
+	var F=UZIP.F, bitsF = F._bitsF, bitsE = F._bitsE, decodeTiny = F._decodeTiny, makeCodes = F.makeCodes, codes2map=F.codes2map, get17 = F._get17;
+	var U = F.U;
+	
+	var noBuf = (buf==null);
+	if(noBuf) buf = new u8((data.length>>>2)<<3);
+	
+	var BFINAL=0, BTYPE=0, HLIT=0, HDIST=0, HCLEN=0, ML=0, MD=0; 	
+	var off = 0, pos = 0;
+	var lmap, dmap;
+	
+	while(BFINAL==0) {		
+		BFINAL = bitsF(data, pos  , 1);
+		BTYPE  = bitsF(data, pos+1, 2);  pos+=3;
+		//console.log(BFINAL, BTYPE);
+		
+		if(BTYPE==0) {
+			if((pos&7)!=0) pos+=8-(pos&7);
+			var p8 = (pos>>>3)+4, len = data[p8-4]|(data[p8-3]<<8);  //console.log(len);//bitsF(data, pos, 16), 
+			if(noBuf) buf=UZIP.F._check(buf, off+len);
+			buf.set(new u8(data.buffer, data.byteOffset+p8, len), off);
+			//for(var i=0; i<len; i++) buf[off+i] = data[p8+i];
+			//for(var i=0; i<len; i++) if(buf[off+i] != data[p8+i]) throw "e";
+			pos = ((p8+len)<<3);  off+=len;  continue;
+		}
+		if(noBuf) buf=UZIP.F._check(buf, off+(1<<17));  // really not enough in many cases (but PNG and ZIP provide buffer in advance)
+		if(BTYPE==1) {  lmap = U.flmap;  dmap = U.fdmap;  ML = (1<<9)-1;  MD = (1<<5)-1;   }
+		if(BTYPE==2) {
+			HLIT  = bitsE(data, pos   , 5)+257;  
+			HDIST = bitsE(data, pos+ 5, 5)+  1;  
+			HCLEN = bitsE(data, pos+10, 4)+  4;  pos+=14;
+			
+			var ppos = pos;
+			for(var i=0; i<38; i+=2) {  U.itree[i]=0;  U.itree[i+1]=0;  }
+			var tl = 1;
+			for(var i=0; i<HCLEN; i++) {  var l=bitsE(data, pos+i*3, 3);  U.itree[(U.ordr[i]<<1)+1] = l;  if(l>tl)tl=l;  }     pos+=3*HCLEN;  //console.log(itree);
+			makeCodes(U.itree, tl);
+			codes2map(U.itree, tl, U.imap);
+			
+			lmap = U.lmap;  dmap = U.dmap;
+			
+			pos = decodeTiny(U.imap, (1<<tl)-1, HLIT+HDIST, data, pos, U.ttree);
+			var mx0 = F._copyOut(U.ttree,    0, HLIT , U.ltree);  ML = (1<<mx0)-1;
+			var mx1 = F._copyOut(U.ttree, HLIT, HDIST, U.dtree);  MD = (1<<mx1)-1;
+			
+			//var ml = decodeTiny(U.imap, (1<<tl)-1, HLIT , data, pos, U.ltree); ML = (1<<(ml>>>24))-1;  pos+=(ml&0xffffff);
+			makeCodes(U.ltree, mx0);
+			codes2map(U.ltree, mx0, lmap);
+			
+			//var md = decodeTiny(U.imap, (1<<tl)-1, HDIST, data, pos, U.dtree); MD = (1<<(md>>>24))-1;  pos+=(md&0xffffff);
+			makeCodes(U.dtree, mx1);
+			codes2map(U.dtree, mx1, dmap);
+		}
+		//var ooff=off, opos=pos;
+		while(true) {
+			var code = lmap[get17(data, pos) & ML];  pos += code&15;
+			var lit = code>>>4;  //U.lhst[lit]++;  
+			if((lit>>>8)==0) {  buf[off++] = lit;  }
+			else if(lit==256) {  break;  }
+			else {
+				var end = off+lit-254;
+				if(lit>264) { var ebs = U.ldef[lit-257];  end = off + (ebs>>>3) + bitsE(data, pos, ebs&7);  pos += ebs&7;  }
+				//UZIP.F.dst[end-off]++;
+				
+				var dcode = dmap[get17(data, pos) & MD];  pos += dcode&15;
+				var dlit = dcode>>>4;
+				var dbs = U.ddef[dlit], dst = (dbs>>>4) + bitsF(data, pos, dbs&15);  pos += dbs&15;
+				
+				//var o0 = off-dst, stp = Math.min(end-off, dst);
+				//if(stp>20) while(off<end) {  buf.copyWithin(off, o0, o0+stp);  off+=stp;  }  else
+				//if(end-dst<=off) buf.copyWithin(off, off-dst, end-dst);  else
+				//if(dst==1) buf.fill(buf[off-1], off, end);  else
+				if(noBuf) buf=UZIP.F._check(buf, off+(1<<17));
+				while(off<end) {  buf[off]=buf[off++-dst];    buf[off]=buf[off++-dst];  buf[off]=buf[off++-dst];  buf[off]=buf[off++-dst];  }   
+				off=end;
+				//while(off!=end) {  buf[off]=buf[off++-dst];  }
+			}
+		}
+		//console.log(off-ooff, (pos-opos)>>>3);
+	}
+	//console.log(UZIP.F.dst);
+	//console.log(tlen, dlen, off-tlen+tcnt);
+	return buf.length==off ? buf : buf.slice(0,off);
+}
+UZIP.F._check=function(buf, len) {
+	var bl=buf.length;  if(len<=bl) return buf;
+	var nbuf = new Uint8Array(Math.max(bl<<1,len));  nbuf.set(buf,0);
+	//for(var i=0; i<bl; i+=4) {  nbuf[i]=buf[i];  nbuf[i+1]=buf[i+1];  nbuf[i+2]=buf[i+2];  nbuf[i+3]=buf[i+3];  }
+	return nbuf;
+}
+
+UZIP.F._decodeTiny = function(lmap, LL, len, data, pos, tree) {
+	var bitsE = UZIP.F._bitsE, get17 = UZIP.F._get17;
+	var i = 0;
+	while(i<len) {
+		var code = lmap[get17(data, pos)&LL];  pos+=code&15;
+		var lit = code>>>4; 
+		if(lit<=15) {  tree[i]=lit;  i++;  }
+		else {
+			var ll = 0, n = 0;
+			if(lit==16) {
+				n = (3  + bitsE(data, pos, 2));  pos += 2;  ll = tree[i-1];
+			}
+			else if(lit==17) {
+				n = (3  + bitsE(data, pos, 3));  pos += 3;
+			}
+			else if(lit==18) {
+				n = (11 + bitsE(data, pos, 7));  pos += 7;
+			}
+			var ni = i+n;
+			while(i<ni) {  tree[i]=ll;  i++; }
+		}
+	}
+	return pos;
+}
+UZIP.F._copyOut = function(src, off, len, tree) {
+	var mx=0, i=0, tl=tree.length>>>1;
+	while(i<len) {  var v=src[i+off];  tree[(i<<1)]=0;  tree[(i<<1)+1]=v;  if(v>mx)mx=v;  i++;  }
+	while(i<tl ) {  tree[(i<<1)]=0;  tree[(i<<1)+1]=0;  i++;  }
+	return mx;
+}
+
+UZIP.F.makeCodes = function(tree, MAX_BITS) {  // code, length
+	var U = UZIP.F.U;
+	var max_code = tree.length;
+	var code, bits, n, i, len;
+	
+	var bl_count = U.bl_count;  for(var i=0; i<=MAX_BITS; i++) bl_count[i]=0;
+	for(i=1; i<max_code; i+=2) bl_count[tree[i]]++;
+	
+	var next_code = U.next_code;	// smallest code for each length
+	
+	code = 0;
+	bl_count[0] = 0;
+	for (bits = 1; bits <= MAX_BITS; bits++) {
+		code = (code + bl_count[bits-1]) << 1;
+		next_code[bits] = code;
+	}
+	
+	for (n = 0; n < max_code; n+=2) {
+		len = tree[n+1];
+		if (len != 0) {
+			tree[n] = next_code[len];
+			next_code[len]++;
+		}
+	}
+}
+UZIP.F.codes2map = function(tree, MAX_BITS, map) {
+	var max_code = tree.length;
+	var U=UZIP.F.U, r15 = U.rev15;
+	for(var i=0; i<max_code; i+=2) if(tree[i+1]!=0)  {
+		var lit = i>>1;
+		var cl = tree[i+1], val = (lit<<4)|cl; // :  (0x8000 | (U.of0[lit-257]<<7) | (U.exb[lit-257]<<4) | cl);
+		var rest = (MAX_BITS-cl), i0 = tree[i]<<rest, i1 = i0 + (1<<rest);
+		//tree[i]=r15[i0]>>>(15-MAX_BITS);
+		while(i0!=i1) {
+			var p0 = r15[i0]>>>(15-MAX_BITS);
+			map[p0]=val;  i0++;
+		}
+	}
+}
+UZIP.F.revCodes = function(tree, MAX_BITS) {
+	var r15 = UZIP.F.U.rev15, imb = 15-MAX_BITS;
+	for(var i=0; i<tree.length; i+=2) {  var i0 = (tree[i]<<(MAX_BITS-tree[i+1]));  tree[i] = r15[i0]>>>imb;  }
+}
+
+// used only in deflate
+UZIP.F._putsE= function(dt, pos, val   ) {  val = val<<(pos&7);  var o=(pos>>>3);  dt[o]|=val;  dt[o+1]|=(val>>>8);                        }
+UZIP.F._putsF= function(dt, pos, val   ) {  val = val<<(pos&7);  var o=(pos>>>3);  dt[o]|=val;  dt[o+1]|=(val>>>8);  dt[o+2]|=(val>>>16);  }
+
+UZIP.F._bitsE= function(dt, pos, length) {  return ((dt[pos>>>3] | (dt[(pos>>>3)+1]<<8)                        )>>>(pos&7))&((1<<length)-1);  }
+UZIP.F._bitsF= function(dt, pos, length) {  return ((dt[pos>>>3] | (dt[(pos>>>3)+1]<<8) | (dt[(pos>>>3)+2]<<16))>>>(pos&7))&((1<<length)-1);  }
+/*
+UZIP.F._get9 = function(dt, pos) {
+	return ((dt[pos>>>3] | (dt[(pos>>>3)+1]<<8))>>>(pos&7))&511;
+} */
+UZIP.F._get17= function(dt, pos) {	// return at least 17 meaningful bytes
+	return (dt[pos>>>3] | (dt[(pos>>>3)+1]<<8) | (dt[(pos>>>3)+2]<<16) )>>>(pos&7);
+}
+UZIP.F._get25= function(dt, pos) {	// return at least 17 meaningful bytes
+	return (dt[pos>>>3] | (dt[(pos>>>3)+1]<<8) | (dt[(pos>>>3)+2]<<16) | (dt[(pos>>>3)+3]<<24) )>>>(pos&7);
+}
+UZIP.F.U = function(){
+	var u16=Uint16Array, u32=Uint32Array;
+	return {
+		next_code : new u16(16),
+		bl_count  : new u16(16),
+		ordr : [ 16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15 ],
+		of0  : [3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258,999,999,999],
+		exb  : [0,0,0,0,0,0,0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4,  4,  5,  5,  5,  5,  0,  0,  0,  0],
+		ldef : new u16(32),
+		df0  : [1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,257,385,513,769,1025,1537,2049,3073,4097,6145,8193,12289,16385,24577, 65535, 65535],
+		dxb  : [0,0,0,0,1,1,2, 2, 3, 3, 4, 4, 5, 5,  6,  6,  7,  7,  8,  8,   9,   9,  10,  10,  11,  11,  12,   12,   13,   13,     0,     0],
+		ddef : new u32(32),
+		flmap: new u16(  512),  fltree: [],
+		fdmap: new u16(   32),  fdtree: [],
+		lmap : new u16(32768),  ltree : [],  ttree:[],
+		dmap : new u16(32768),  dtree : [],
+		imap : new u16(  512),  itree : [],
+		//rev9 : new u16(  512)
+		rev15: new u16(1<<15),
+		lhst : new u32(286), dhst : new u32( 30), ihst : new u32(19),
+		lits : new u32(15000),
+		strt : new u16(1<<16),
+		prev : new u16(1<<15)
+	};  
+} ();
+
+(function(){	
+	var U = UZIP.F.U;
+	var len = 1<<15;
+	for(var i=0; i<len; i++) {
+		var x = i;
+		x = (((x & 0xaaaaaaaa) >>> 1) | ((x & 0x55555555) << 1));
+		x = (((x & 0xcccccccc) >>> 2) | ((x & 0x33333333) << 2));
+		x = (((x & 0xf0f0f0f0) >>> 4) | ((x & 0x0f0f0f0f) << 4));
+		x = (((x & 0xff00ff00) >>> 8) | ((x & 0x00ff00ff) << 8));
+		U.rev15[i] = (((x >>> 16) | (x << 16)))>>>17;
+	}
+	
+	function pushV(tgt, n, sv) {  while(n--!=0) tgt.push(0,sv);  }
+	
+	for(var i=0; i<32; i++) {  U.ldef[i]=(U.of0[i]<<3)|U.exb[i];  U.ddef[i]=(U.df0[i]<<4)|U.dxb[i];  }
+	
+	pushV(U.fltree, 144, 8);  pushV(U.fltree, 255-143, 9);  pushV(U.fltree, 279-255, 7);  pushV(U.fltree,287-279,8);
+	/*
+	var i = 0;
+	for(; i<=143; i++) U.fltree.push(0,8);
+	for(; i<=255; i++) U.fltree.push(0,9);
+	for(; i<=279; i++) U.fltree.push(0,7);
+	for(; i<=287; i++) U.fltree.push(0,8);
+	*/
+	UZIP.F.makeCodes(U.fltree, 9);
+	UZIP.F.codes2map(U.fltree, 9, U.flmap);
+	UZIP.F.revCodes (U.fltree, 9)
+	
+	pushV(U.fdtree,32,5);
+	//for(i=0;i<32; i++) U.fdtree.push(0,5);
+	UZIP.F.makeCodes(U.fdtree, 5);
+	UZIP.F.codes2map(U.fdtree, 5, U.fdmap);
+	UZIP.F.revCodes (U.fdtree, 5)
+	
+	pushV(U.itree,19,0);  pushV(U.ltree,286,0);  pushV(U.dtree,30,0);  pushV(U.ttree,320,0);
+	/*
+	for(var i=0; i< 19; i++) U.itree.push(0,0);
+	for(var i=0; i<286; i++) U.ltree.push(0,0);
+	for(var i=0; i< 30; i++) U.dtree.push(0,0);
+	for(var i=0; i<320; i++) U.ttree.push(0,0);
+	*/
+})()
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+        var UPNG = {};
+
+	
+
+UPNG.toRGBA8 = function(out)
+{
+	var w = out.width, h = out.height;
+	if(out.tabs.acTL==null) return [UPNG.toRGBA8.decodeImage(out.data, w, h, out).buffer];
+	
+	var frms = [];
+	if(out.frames[0].data==null) out.frames[0].data = out.data;
+	
+	var len = w*h*4, img = new Uint8Array(len), empty = new Uint8Array(len), prev=new Uint8Array(len);
+	for(var i=0; i<out.frames.length; i++)
+	{
+		var frm = out.frames[i];
+		var fx=frm.rect.x, fy=frm.rect.y, fw = frm.rect.width, fh = frm.rect.height;
+		var fdata = UPNG.toRGBA8.decodeImage(frm.data, fw,fh, out);
+		
+		if(i!=0) for(var j=0; j<len; j++) prev[j]=img[j];
+		
+		if     (frm.blend==0) UPNG._copyTile(fdata, fw, fh, img, w, h, fx, fy, 0);
+		else if(frm.blend==1) UPNG._copyTile(fdata, fw, fh, img, w, h, fx, fy, 1);
+		
+		frms.push(img.buffer.slice(0));
+		
+		if     (frm.dispose==0) {}
+		else if(frm.dispose==1) UPNG._copyTile(empty, fw, fh, img, w, h, fx, fy, 0);
+		else if(frm.dispose==2) for(var j=0; j<len; j++) img[j]=prev[j];
+	}
+	return frms;
+}
+UPNG.toRGBA8.decodeImage = function(data, w, h, out)
+{
+	var area = w*h, bpp = UPNG.decode._getBPP(out);
+	var bpl = Math.ceil(w*bpp/8);	// bytes per line
+
+	var bf = new Uint8Array(area*4), bf32 = new Uint32Array(bf.buffer);
+	var ctype = out.ctype, depth = out.depth;
+	var rs = UPNG._bin.readUshort;
+	
+	//console.log(ctype, depth);
+	var time = Date.now();
+
+	if     (ctype==6) { // RGB + alpha
+		var qarea = area<<2;
+		if(depth== 8) for(var i=0; i<qarea;i+=4) {  bf[i] = data[i];  bf[i+1] = data[i+1];  bf[i+2] = data[i+2];  bf[i+3] = data[i+3]; }
+		if(depth==16) for(var i=0; i<qarea;i++ ) {  bf[i] = data[i<<1];  }
+	}
+	else if(ctype==2) {	// RGB
+		var ts=out.tabs["tRNS"];
+		if(ts==null) {
+			if(depth== 8) for(var i=0; i<area; i++) {  var ti=i*3;  bf32[i] = (255<<24)|(data[ti+2]<<16)|(data[ti+1]<<8)|data[ti];  }
+			if(depth==16) for(var i=0; i<area; i++) {  var ti=i*6;  bf32[i] = (255<<24)|(data[ti+4]<<16)|(data[ti+2]<<8)|data[ti];  }
+		}
+		else {  var tr=ts[0], tg=ts[1], tb=ts[2];
+			if(depth== 8) for(var i=0; i<area; i++) {  var qi=i<<2, ti=i*3;  bf32[i] = (255<<24)|(data[ti+2]<<16)|(data[ti+1]<<8)|data[ti];
+				if(data[ti]   ==tr && data[ti+1]   ==tg && data[ti+2]   ==tb) bf[qi+3] = 0;  }
+			if(depth==16) for(var i=0; i<area; i++) {  var qi=i<<2, ti=i*6;  bf32[i] = (255<<24)|(data[ti+4]<<16)|(data[ti+2]<<8)|data[ti];
+				if(rs(data,ti)==tr && rs(data,ti+2)==tg && rs(data,ti+4)==tb) bf[qi+3] = 0;  }
+		}
+	}
+	else if(ctype==3) {	// palette
+		var p=out.tabs["PLTE"], ap=out.tabs["tRNS"], tl=ap?ap.length:0;
+		//console.log(p, ap);
+		if(depth==1) for(var y=0; y<h; y++) {  var s0 = y*bpl, t0 = y*w;
+			for(var i=0; i<w; i++) { var qi=(t0+i)<<2, j=((data[s0+(i>>3)]>>(7-((i&7)<<0)))& 1), cj=3*j;  bf[qi]=p[cj];  bf[qi+1]=p[cj+1];  bf[qi+2]=p[cj+2];  bf[qi+3]=(j<tl)?ap[j]:255;  }
+		}
+		if(depth==2) for(var y=0; y<h; y++) {  var s0 = y*bpl, t0 = y*w;
+			for(var i=0; i<w; i++) { var qi=(t0+i)<<2, j=((data[s0+(i>>2)]>>(6-((i&3)<<1)))& 3), cj=3*j;  bf[qi]=p[cj];  bf[qi+1]=p[cj+1];  bf[qi+2]=p[cj+2];  bf[qi+3]=(j<tl)?ap[j]:255;  }
+		}
+		if(depth==4) for(var y=0; y<h; y++) {  var s0 = y*bpl, t0 = y*w;
+			for(var i=0; i<w; i++) { var qi=(t0+i)<<2, j=((data[s0+(i>>1)]>>(4-((i&1)<<2)))&15), cj=3*j;  bf[qi]=p[cj];  bf[qi+1]=p[cj+1];  bf[qi+2]=p[cj+2];  bf[qi+3]=(j<tl)?ap[j]:255;  }
+		}
+		if(depth==8) for(var i=0; i<area; i++ ) {  var qi=i<<2, j=data[i]                      , cj=3*j;  bf[qi]=p[cj];  bf[qi+1]=p[cj+1];  bf[qi+2]=p[cj+2];  bf[qi+3]=(j<tl)?ap[j]:255;  }
+	}
+	else if(ctype==4) {	// gray + alpha
+		if(depth== 8)  for(var i=0; i<area; i++) {  var qi=i<<2, di=i<<1, gr=data[di];  bf[qi]=gr;  bf[qi+1]=gr;  bf[qi+2]=gr;  bf[qi+3]=data[di+1];  }
+		if(depth==16)  for(var i=0; i<area; i++) {  var qi=i<<2, di=i<<2, gr=data[di];  bf[qi]=gr;  bf[qi+1]=gr;  bf[qi+2]=gr;  bf[qi+3]=data[di+2];  }
+	}
+	else if(ctype==0) {	// gray
+		var tr = out.tabs["tRNS"] ? out.tabs["tRNS"] : -1;
+		for(var y=0; y<h; y++) {
+			var off = y*bpl, to = y*w;
+			if     (depth== 1) for(var x=0; x<w; x++) {  var gr=255*((data[off+(x>>>3)]>>>(7 -((x&7)   )))& 1), al=(gr==tr*255)?0:255;  bf32[to+x]=(al<<24)|(gr<<16)|(gr<<8)|gr;  }
+			else if(depth== 2) for(var x=0; x<w; x++) {  var gr= 85*((data[off+(x>>>2)]>>>(6 -((x&3)<<1)))& 3), al=(gr==tr* 85)?0:255;  bf32[to+x]=(al<<24)|(gr<<16)|(gr<<8)|gr;  }
+			else if(depth== 4) for(var x=0; x<w; x++) {  var gr= 17*((data[off+(x>>>1)]>>>(4 -((x&1)<<2)))&15), al=(gr==tr* 17)?0:255;  bf32[to+x]=(al<<24)|(gr<<16)|(gr<<8)|gr;  }
+			else if(depth== 8) for(var x=0; x<w; x++) {  var gr=data[off+     x], al=(gr                 ==tr)?0:255;  bf32[to+x]=(al<<24)|(gr<<16)|(gr<<8)|gr;  }
+			else if(depth==16) for(var x=0; x<w; x++) {  var gr=data[off+(x<<1)], al=(rs(data,off+(x<<1))==tr)?0:255;  bf32[to+x]=(al<<24)|(gr<<16)|(gr<<8)|gr;  }
+		}
+	}
+	//console.log(Date.now()-time);
+	return bf;
+}
+
+
+
+UPNG.decode = function(buff)
+{
+	var data = new Uint8Array(buff), offset = 8, bin = UPNG._bin, rUs = bin.readUshort, rUi = bin.readUint;
+	var out = {tabs:{}, frames:[]};
+	var dd = new Uint8Array(data.length), doff = 0;	 // put all IDAT data into it
+	var fd, foff = 0;	// frames
+	
+	var mgck = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
+	for(var i=0; i<8; i++) if(data[i]!=mgck[i]) throw "The input is not a PNG file!";
+
+	while(offset<data.length)
+	{
+		var len  = bin.readUint(data, offset);  offset += 4;
+		var type = bin.readASCII(data, offset, 4);  offset += 4;
+		//console.log(type,len);
+		
+		if     (type=="IHDR")  {  UPNG.decode._IHDR(data, offset, out);  }
+		else if(type=="CgBI")  {  out.tabs[type] = data.slice(offset,offset+4);  }
+		else if(type=="IDAT") {
+			for(var i=0; i<len; i++) dd[doff+i] = data[offset+i];
+			doff += len;
+		}
+		else if(type=="acTL")  {
+			out.tabs[type] = {  num_frames:rUi(data, offset), num_plays:rUi(data, offset+4)  };
+			fd = new Uint8Array(data.length);
+		}
+		else if(type=="fcTL")  {
+			if(foff!=0) {  var fr = out.frames[out.frames.length-1];
+				fr.data = UPNG.decode._decompress(out, fd.slice(0,foff), fr.rect.width, fr.rect.height);  foff=0;
+			}
+			var rct = {x:rUi(data, offset+12),y:rUi(data, offset+16),width:rUi(data, offset+4),height:rUi(data, offset+8)};
+			var del = rUs(data, offset+22);  del = rUs(data, offset+20) / (del==0?100:del);
+			var frm = {rect:rct, delay:Math.round(del*1000), dispose:data[offset+24], blend:data[offset+25]};
+			//console.log(frm);
+			out.frames.push(frm);
+		}
+		else if(type=="fdAT") {
+			for(var i=0; i<len-4; i++) fd[foff+i] = data[offset+i+4];
+			foff += len-4;
+		}
+		else if(type=="pHYs") {
+			out.tabs[type] = [bin.readUint(data, offset), bin.readUint(data, offset+4), data[offset+8]];
+		}
+		else if(type=="cHRM") {
+			out.tabs[type] = [];
+			for(var i=0; i<8; i++) out.tabs[type].push(bin.readUint(data, offset+i*4));
+		}
+		else if(type=="tEXt" || type=="zTXt") {
+			if(out.tabs[type]==null) out.tabs[type] = {};
+			var nz = bin.nextZero(data, offset);
+			var keyw = bin.readASCII(data, offset, nz-offset);
+			var text, tl=offset+len-nz-1;
+			if(type=="tEXt") text = bin.readASCII(data, nz+1, tl);
+			else {
+				var bfr = UPNG.decode._inflate(data.slice(nz+2,nz+2+tl));
+				text = bin.readUTF8(bfr,0,bfr.length);
+			}
+			out.tabs[type][keyw] = text;
+		}
+		else if(type=="iTXt") {
+			if(out.tabs[type]==null) out.tabs[type] = {};
+			var nz = 0, off = offset;
+			nz = bin.nextZero(data, off);
+			var keyw = bin.readASCII(data, off, nz-off);  off = nz + 1;
+			var cflag = data[off], cmeth = data[off+1];  off+=2;
+			nz = bin.nextZero(data, off);
+			var ltag = bin.readASCII(data, off, nz-off);  off = nz + 1;
+			nz = bin.nextZero(data, off);
+			var tkeyw = bin.readUTF8(data, off, nz-off);  off = nz + 1;
+			var text, tl=len-(off-offset);
+			if(cflag==0) text  = bin.readUTF8(data, off, tl);
+			else {
+				var bfr = UPNG.decode._inflate(data.slice(off,off+tl));
+				text = bin.readUTF8(bfr,0,bfr.length);
+			}
+			out.tabs[type][keyw] = text;
+		}
+		else if(type=="PLTE") {
+			out.tabs[type] = bin.readBytes(data, offset, len);
+		}
+		else if(type=="hIST") {
+			var pl = out.tabs["PLTE"].length/3;
+			out.tabs[type] = [];  for(var i=0; i<pl; i++) out.tabs[type].push(rUs(data, offset+i*2));
+		}
+		else if(type=="tRNS") {
+			if     (out.ctype==3) out.tabs[type] = bin.readBytes(data, offset, len);
+			else if(out.ctype==0) out.tabs[type] = rUs(data, offset);
+			else if(out.ctype==2) out.tabs[type] = [ rUs(data,offset),rUs(data,offset+2),rUs(data,offset+4) ];
+			//else console.log("tRNS for unsupported color type",out.ctype, len);
+		}
+		else if(type=="gAMA") out.tabs[type] = bin.readUint(data, offset)/100000;
+		else if(type=="sRGB") out.tabs[type] = data[offset];
+		else if(type=="bKGD")
+		{
+			if     (out.ctype==0 || out.ctype==4) out.tabs[type] = [rUs(data, offset)];
+			else if(out.ctype==2 || out.ctype==6) out.tabs[type] = [rUs(data, offset), rUs(data, offset+2), rUs(data, offset+4)];
+			else if(out.ctype==3) out.tabs[type] = data[offset];
+		}
+		else if(type=="IEND") {
+			break;
+		}
+		//else {  console.log("unknown chunk type", type, len);  out.tabs[type]=data.slice(offset,offset+len);  }
+		offset += len;
+		var crc = bin.readUint(data, offset);  offset += 4;
+	}
+	if(foff!=0) {  var fr = out.frames[out.frames.length-1];
+		fr.data = UPNG.decode._decompress(out, fd.slice(0,foff), fr.rect.width, fr.rect.height);
+	}	
+	out.data = UPNG.decode._decompress(out, dd, out.width, out.height);
+	
+	delete out.compress;  delete out.interlace;  delete out.filter;
+	return out;
+}
+
+UPNG.decode._decompress = function(out, dd, w, h) {
+	var time = Date.now();
+	var bpp = UPNG.decode._getBPP(out), bpl = Math.ceil(w*bpp/8), buff = new Uint8Array((bpl+1+out.interlace)*h);
+	if(out.tabs["CgBI"]) dd = UPNG.inflateRaw(dd,buff);
+	else                 dd = UPNG.decode._inflate(dd,buff);
+	//console.log(dd.length, buff.length);
+	//console.log(Date.now()-time);
+
+	var time=Date.now();
+	if     (out.interlace==0) dd = UPNG.decode._filterZero(dd, out, 0, w, h);
+	else if(out.interlace==1) dd = UPNG.decode._readInterlace(dd, out);
+	//console.log(Date.now()-time);
+	return dd;
+}
+
+UPNG.decode._inflate = function(data, buff) {  var out=UPNG["inflateRaw"](new Uint8Array(data.buffer, 2,data.length-6),buff);  return out;  }
+UPNG.inflateRaw=function(){var H={};H.H={};H.H.N=function(N,W){var R=Uint8Array,i=0,m=0,J=0,h=0,Q=0,X=0,u=0,w=0,d=0,v,C;
+if(N[0]==3&&N[1]==0)return W?W:new R(0);var V=H.H,n=V.b,A=V.e,l=V.R,M=V.n,I=V.A,e=V.Z,b=V.m,Z=W==null;
+if(Z)W=new R(N.length>>>2<<5);while(i==0){i=n(N,d,1);m=n(N,d+1,2);d+=3;if(m==0){if((d&7)!=0)d+=8-(d&7);
+var D=(d>>>3)+4,q=N[D-4]|N[D-3]<<8;if(Z)W=H.H.W(W,w+q);W.set(new R(N.buffer,N.byteOffset+D,q),w);d=D+q<<3;
+w+=q;continue}if(Z)W=H.H.W(W,w+(1<<17));if(m==1){v=b.J;C=b.h;X=(1<<9)-1;u=(1<<5)-1}if(m==2){J=A(N,d,5)+257;
+h=A(N,d+5,5)+1;Q=A(N,d+10,4)+4;d+=14;var E=d,j=1;for(var c=0;c<38;c+=2){b.Q[c]=0;b.Q[c+1]=0}for(var c=0;
+c<Q;c++){var K=A(N,d+c*3,3);b.Q[(b.X[c]<<1)+1]=K;if(K>j)j=K}d+=3*Q;M(b.Q,j);I(b.Q,j,b.u);v=b.w;C=b.d;
+d=l(b.u,(1<<j)-1,J+h,N,d,b.v);var r=V.V(b.v,0,J,b.C);X=(1<<r)-1;var S=V.V(b.v,J,h,b.D);u=(1<<S)-1;M(b.C,r);
+I(b.C,r,v);M(b.D,S);I(b.D,S,C)}while(!0){var T=v[e(N,d)&X];d+=T&15;var p=T>>>4;if(p>>>8==0){W[w++]=p}else if(p==256){break}else{var z=w+p-254;
+if(p>264){var _=b.q[p-257];z=w+(_>>>3)+A(N,d,_&7);d+=_&7}var $=C[e(N,d)&u];d+=$&15;var s=$>>>4,Y=b.c[s],a=(Y>>>4)+n(N,d,Y&15);
+d+=Y&15;while(w<z){W[w]=W[w++-a];W[w]=W[w++-a];W[w]=W[w++-a];W[w]=W[w++-a]}w=z}}}return W.length==w?W:W.slice(0,w)};
+H.H.W=function(N,W){var R=N.length;if(W<=R)return N;var V=new Uint8Array(R<<1);V.set(N,0);return V};
+H.H.R=function(N,W,R,V,n,A){var l=H.H.e,M=H.H.Z,I=0;while(I<R){var e=N[M(V,n)&W];n+=e&15;var b=e>>>4;
+if(b<=15){A[I]=b;I++}else{var Z=0,m=0;if(b==16){m=3+l(V,n,2);n+=2;Z=A[I-1]}else if(b==17){m=3+l(V,n,3);
+n+=3}else if(b==18){m=11+l(V,n,7);n+=7}var J=I+m;while(I<J){A[I]=Z;I++}}}return n};H.H.V=function(N,W,R,V){var n=0,A=0,l=V.length>>>1;
+while(A<R){var M=N[A+W];V[A<<1]=0;V[(A<<1)+1]=M;if(M>n)n=M;A++}while(A<l){V[A<<1]=0;V[(A<<1)+1]=0;A++}return n};
+H.H.n=function(N,W){var R=H.H.m,V=N.length,n,A,l,M,I,e=R.j;for(var M=0;M<=W;M++)e[M]=0;for(M=1;M<V;M+=2)e[N[M]]++;
+var b=R.K;n=0;e[0]=0;for(A=1;A<=W;A++){n=n+e[A-1]<<1;b[A]=n}for(l=0;l<V;l+=2){I=N[l+1];if(I!=0){N[l]=b[I];
+b[I]++}}};H.H.A=function(N,W,R){var V=N.length,n=H.H.m,A=n.r;for(var l=0;l<V;l+=2)if(N[l+1]!=0){var M=l>>1,I=N[l+1],e=M<<4|I,b=W-I,Z=N[l]<<b,m=Z+(1<<b);
+while(Z!=m){var J=A[Z]>>>15-W;R[J]=e;Z++}}};H.H.l=function(N,W){var R=H.H.m.r,V=15-W;for(var n=0;n<N.length;
+n+=2){var A=N[n]<<W-N[n+1];N[n]=R[A]>>>V}};H.H.M=function(N,W,R){R=R<<(W&7);var V=W>>>3;N[V]|=R;N[V+1]|=R>>>8};
+H.H.I=function(N,W,R){R=R<<(W&7);var V=W>>>3;N[V]|=R;N[V+1]|=R>>>8;N[V+2]|=R>>>16};H.H.e=function(N,W,R){return(N[W>>>3]|N[(W>>>3)+1]<<8)>>>(W&7)&(1<<R)-1};
+H.H.b=function(N,W,R){return(N[W>>>3]|N[(W>>>3)+1]<<8|N[(W>>>3)+2]<<16)>>>(W&7)&(1<<R)-1};H.H.Z=function(N,W){return(N[W>>>3]|N[(W>>>3)+1]<<8|N[(W>>>3)+2]<<16)>>>(W&7)};
+H.H.i=function(N,W){return(N[W>>>3]|N[(W>>>3)+1]<<8|N[(W>>>3)+2]<<16|N[(W>>>3)+3]<<24)>>>(W&7)};H.H.m=function(){var N=Uint16Array,W=Uint32Array;
+return{K:new N(16),j:new N(16),X:[16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15],S:[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258,999,999,999],T:[0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0,0,0,0],q:new N(32),p:[1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,257,385,513,769,1025,1537,2049,3073,4097,6145,8193,12289,16385,24577,65535,65535],z:[0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,0,0],c:new W(32),J:new N(512),_:[],h:new N(32),$:[],w:new N(32768),C:[],v:[],d:new N(32768),D:[],u:new N(512),Q:[],r:new N(1<<15),s:new W(286),Y:new W(30),a:new W(19),t:new W(15e3),k:new N(1<<16),g:new N(1<<15)}}();
+(function(){var N=H.H.m,W=1<<15;for(var R=0;R<W;R++){var V=R;V=(V&2863311530)>>>1|(V&1431655765)<<1;
+V=(V&3435973836)>>>2|(V&858993459)<<2;V=(V&4042322160)>>>4|(V&252645135)<<4;V=(V&4278255360)>>>8|(V&16711935)<<8;
+N.r[R]=(V>>>16|V<<16)>>>17}function n(A,l,M){while(l--!=0)A.push(0,M)}for(var R=0;R<32;R++){N.q[R]=N.S[R]<<3|N.T[R];
+N.c[R]=N.p[R]<<4|N.z[R]}n(N._,144,8);n(N._,255-143,9);n(N._,279-255,7);n(N._,287-279,8);H.H.n(N._,9);
+H.H.A(N._,9,N.J);H.H.l(N._,9);n(N.$,32,5);H.H.n(N.$,5);H.H.A(N.$,5,N.h);H.H.l(N.$,5);n(N.Q,19,0);n(N.C,286,0);
+n(N.D,30,0);n(N.v,320,0)}());return H.H.N}()
+
+
+UPNG.decode._readInterlace = function(data, out)
+{
+	var w = out.width, h = out.height;
+	var bpp = UPNG.decode._getBPP(out), cbpp = bpp>>3, bpl = Math.ceil(w*bpp/8);
+	var img = new Uint8Array( h * bpl );
+	var di = 0;
+
+	var starting_row  = [ 0, 0, 4, 0, 2, 0, 1 ];
+	var starting_col  = [ 0, 4, 0, 2, 0, 1, 0 ];
+	var row_increment = [ 8, 8, 8, 4, 4, 2, 2 ];
+	var col_increment = [ 8, 8, 4, 4, 2, 2, 1 ];
+
+	var pass=0;
+	while(pass<7)
+	{
+		var ri = row_increment[pass], ci = col_increment[pass];
+		var sw = 0, sh = 0;
+		var cr = starting_row[pass];  while(cr<h) {  cr+=ri;  sh++;  }
+		var cc = starting_col[pass];  while(cc<w) {  cc+=ci;  sw++;  }
+		var bpll = Math.ceil(sw*bpp/8);
+		UPNG.decode._filterZero(data, out, di, sw, sh);
+
+		var y=0, row = starting_row[pass];
+		while(row<h)
+		{
+			var col = starting_col[pass];
+			var cdi = (di+y*bpll)<<3;
+
+			while(col<w)
+			{
+				if(bpp==1) {
+					var val = data[cdi>>3];  val = (val>>(7-(cdi&7)))&1;
+					img[row*bpl + (col>>3)] |= (val << (7-((col&7)<<0)));
+				}
+				if(bpp==2) {
+					var val = data[cdi>>3];  val = (val>>(6-(cdi&7)))&3;
+					img[row*bpl + (col>>2)] |= (val << (6-((col&3)<<1)));
+				}
+				if(bpp==4) {
+					var val = data[cdi>>3];  val = (val>>(4-(cdi&7)))&15;
+					img[row*bpl + (col>>1)] |= (val << (4-((col&1)<<2)));
+				}
+				if(bpp>=8) {
+					var ii = row*bpl+col*cbpp;
+					for(var j=0; j<cbpp; j++) img[ii+j] = data[(cdi>>3)+j];
+				}
+				cdi+=bpp;  col+=ci;
+			}
+			y++;  row += ri;
+		}
+		if(sw*sh!=0) di += sh * (1 + bpll);
+		pass = pass + 1;
+	}
+	return img;
+}
+
+UPNG.decode._getBPP = function(out) {
+	var noc = [1,null,3,1,2,null,4][out.ctype];
+	return noc * out.depth;
+}
+
+UPNG.decode._filterZero = function(data, out, off, w, h)
+{
+	var bpp = UPNG.decode._getBPP(out), bpl = Math.ceil(w*bpp/8), paeth = UPNG.decode._paeth;
+	bpp = Math.ceil(bpp/8);
+	
+	var i,di, type=data[off], x=0;
+	
+	if(type>1) data[off]=[0,0,1][type-2];  
+	if(type==3) for(x=bpp; x<bpl; x++) data[x+1] = (data[x+1] + (data[x+1-bpp]>>>1) )&255;
+
+	for(var y=0; y<h; y++)  {
+		i = off+y*bpl; di = i+y+1;
+		type = data[di-1]; x=0;
+
+		if     (type==0)   for(; x<bpl; x++) data[i+x] = data[di+x];
+		else if(type==1) { for(; x<bpp; x++) data[i+x] = data[di+x];
+						   for(; x<bpl; x++) data[i+x] = (data[di+x] + data[i+x-bpp]);  }
+		else if(type==2) { for(; x<bpl; x++) data[i+x] = (data[di+x] + data[i+x-bpl]);  }
+		else if(type==3) { for(; x<bpp; x++) data[i+x] = (data[di+x] + ( data[i+x-bpl]>>>1));
+			               for(; x<bpl; x++) data[i+x] = (data[di+x] + ((data[i+x-bpl]+data[i+x-bpp])>>>1) );  }
+		else             { for(; x<bpp; x++) data[i+x] = (data[di+x] + paeth(0, data[i+x-bpl], 0));
+						   for(; x<bpl; x++) data[i+x] = (data[di+x] + paeth(data[i+x-bpp], data[i+x-bpl], data[i+x-bpp-bpl]) );  }
+	}
+	return data;
+}
+
+UPNG.decode._paeth = function(a,b,c)
+{
+	var p = a+b-c, pa = (p-a), pb = (p-b), pc = (p-c);
+	if (pa*pa <= pb*pb && pa*pa <= pc*pc)  return a;
+	else if (pb*pb <= pc*pc)  return b;
+	return c;
+}
+
+UPNG.decode._IHDR = function(data, offset, out)
+{
+	var bin = UPNG._bin;
+	out.width  = bin.readUint(data, offset);  offset += 4;
+	out.height = bin.readUint(data, offset);  offset += 4;
+	out.depth     = data[offset];  offset++;
+	out.ctype     = data[offset];  offset++;
+	out.compress  = data[offset];  offset++;
+	out.filter    = data[offset];  offset++;
+	out.interlace = data[offset];  offset++;
+}
+
+UPNG._bin = {
+	nextZero   : function(data,p)  {  while(data[p]!=0) p++;  return p;  },
+	readUshort : function(buff,p)  {  return (buff[p]<< 8) | buff[p+1];  },
+	writeUshort: function(buff,p,n){  buff[p] = (n>>8)&255;  buff[p+1] = n&255;  },
+	readUint   : function(buff,p)  {  return (buff[p]*(256*256*256)) + ((buff[p+1]<<16) | (buff[p+2]<< 8) | buff[p+3]);  },
+	writeUint  : function(buff,p,n){  buff[p]=(n>>24)&255;  buff[p+1]=(n>>16)&255;  buff[p+2]=(n>>8)&255;  buff[p+3]=n&255;  },
+	readASCII  : function(buff,p,l){  var s = "";  for(var i=0; i<l; i++) s += String.fromCharCode(buff[p+i]);  return s;    },
+	writeASCII : function(data,p,s){  for(var i=0; i<s.length; i++) data[p+i] = s.charCodeAt(i);  },
+	readBytes  : function(buff,p,l){  var arr = [];   for(var i=0; i<l; i++) arr.push(buff[p+i]);   return arr;  },
+	pad : function(n) { return n.length < 2 ? "0" + n : n; },
+	readUTF8 : function(buff, p, l) {
+		var s = "", ns;
+		for(var i=0; i<l; i++) s += "%" + UPNG._bin.pad(buff[p+i].toString(16));
+		try {  ns = decodeURIComponent(s); }
+		catch(e) {  return UPNG._bin.readASCII(buff, p, l);  }
+		return  ns;
+	}
+}
+UPNG._copyTile = function(sb, sw, sh, tb, tw, th, xoff, yoff, mode)
+{
+	var w = Math.min(sw,tw), h = Math.min(sh,th);
+	var si=0, ti=0;
+	for(var y=0; y<h; y++)
+		for(var x=0; x<w; x++)
+		{
+			if(xoff>=0 && yoff>=0) {  si = (y*sw+x)<<2;  ti = (( yoff+y)*tw+xoff+x)<<2;  }
+			else                   {  si = ((-yoff+y)*sw-xoff+x)<<2;  ti = (y*tw+x)<<2;  }
+			
+			if     (mode==0) {  tb[ti] = sb[si];  tb[ti+1] = sb[si+1];  tb[ti+2] = sb[si+2];  tb[ti+3] = sb[si+3];  }
+			else if(mode==1) {
+				var fa = sb[si+3]*(1/255), fr=sb[si]*fa, fg=sb[si+1]*fa, fb=sb[si+2]*fa; 
+				var ba = tb[ti+3]*(1/255), br=tb[ti]*ba, bg=tb[ti+1]*ba, bb=tb[ti+2]*ba; 
+				
+				var ifa=1-fa, oa = fa+ba*ifa, ioa = (oa==0?0:1/oa);
+				tb[ti+3] = 255*oa;  
+				tb[ti+0] = (fr+br*ifa)*ioa;  
+				tb[ti+1] = (fg+bg*ifa)*ioa;   
+				tb[ti+2] = (fb+bb*ifa)*ioa;  
+			}
+			else if(mode==2){	// copy only differences, otherwise zero
+				var fa = sb[si+3], fr=sb[si], fg=sb[si+1], fb=sb[si+2]; 
+				var ba = tb[ti+3], br=tb[ti], bg=tb[ti+1], bb=tb[ti+2]; 
+				if(fa==ba && fr==br && fg==bg && fb==bb) {  tb[ti]=0;  tb[ti+1]=0;  tb[ti+2]=0;  tb[ti+3]=0;  }
+				else {  tb[ti]=fr;  tb[ti+1]=fg;  tb[ti+2]=fb;  tb[ti+3]=fa;  }
+			}
+			else if(mode==3){	// check if can be blended
+				var fa = sb[si+3], fr=sb[si], fg=sb[si+1], fb=sb[si+2]; 
+				var ba = tb[ti+3], br=tb[ti], bg=tb[ti+1], bb=tb[ti+2]; 
+				if(fa==ba && fr==br && fg==bg && fb==bb) continue;
+				//if(fa!=255 && ba!=0) return false;
+				if(fa<220 && ba>20) return false;
+			}
+		}
+	return true;
+}
+
+
+
+
+
+UPNG.encode = function(bufs, w, h, ps, dels, tabs, forbidPlte)
+{
+	if(ps==null) ps=0;
+	if(forbidPlte==null) forbidPlte = false;
+
+	var nimg = UPNG.encode.compress(bufs, w, h, ps, [false, false, false, 0, forbidPlte,false]);
+	UPNG.encode.compressPNG(nimg, -1);
+	
+	return UPNG.encode._main(nimg, w, h, dels, tabs);
+}
+
+UPNG.encodeLL = function(bufs, w, h, cc, ac, depth, dels, tabs) {
+	var nimg = {  ctype: 0 + (cc==1 ? 0 : 2) + (ac==0 ? 0 : 4),      depth: depth,  frames: []  };
+	
+	var time = Date.now();
+	var bipp = (cc+ac)*depth, bipl = bipp * w;
+	for(var i=0; i<bufs.length; i++)
+		nimg.frames.push({  rect:{x:0,y:0,width:w,height:h},  img:new Uint8Array(bufs[i]), blend:0, dispose:1, bpp:Math.ceil(bipp/8), bpl:Math.ceil(bipl/8)  });
+	
+	UPNG.encode.compressPNG(nimg, 0, true);
+	
+	var out = UPNG.encode._main(nimg, w, h, dels, tabs);
+	return out;
+}
+
+UPNG.encode._main = function(nimg, w, h, dels, tabs) {
+	if(tabs==null) tabs={};
+	var crc = UPNG.crc.crc, wUi = UPNG._bin.writeUint, wUs = UPNG._bin.writeUshort, wAs = UPNG._bin.writeASCII;
+	var offset = 8, anim = nimg.frames.length>1, pltAlpha = false;
+	
+	var leng = 8 + (16+5+4) /*+ (9+4)*/ + (anim ? 20 : 0);
+	if(tabs["sRGB"]!=null) leng += 8+1+4;
+	if(tabs["pHYs"]!=null) leng += 8+9+4;
+	if(nimg.ctype==3) {
+		var dl = nimg.plte.length;
+		for(var i=0; i<dl; i++) if((nimg.plte[i]>>>24)!=255) pltAlpha = true;
+		leng += (8 + dl*3 + 4) + (pltAlpha ? (8 + dl*1 + 4) : 0);
+	}
+	for(var j=0; j<nimg.frames.length; j++)
+	{
+		var fr = nimg.frames[j];
+		if(anim) leng += 38;
+		leng += fr.cimg.length + 12;
+		if(j!=0) leng+=4;
+	}
+	leng += 12; 
+	
+	var data = new Uint8Array(leng);
+	var wr=[0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
+	for(var i=0; i<8; i++) data[i]=wr[i];
+	
+	wUi(data,offset, 13);     offset+=4;
+	wAs(data,offset,"IHDR");  offset+=4;
+	wUi(data,offset,w);  offset+=4;
+	wUi(data,offset,h);  offset+=4;
+	data[offset] = nimg.depth;  offset++;  // depth
+	data[offset] = nimg.ctype;  offset++;  // ctype
+	data[offset] = 0;  offset++;  // compress
+	data[offset] = 0;  offset++;  // filter
+	data[offset] = 0;  offset++;  // interlace
+	wUi(data,offset,crc(data,offset-17,17));  offset+=4; // crc
+
+	// 13 bytes to say, that it is sRGB
+	if(tabs["sRGB"]!=null) {
+		wUi(data,offset, 1);      offset+=4;
+		wAs(data,offset,"sRGB");  offset+=4;
+		data[offset] = tabs["sRGB"];  offset++;
+		wUi(data,offset,crc(data,offset-5,5));  offset+=4; // crc
+	}
+	if(tabs["pHYs"]!=null) {
+		wUi(data,offset, 9);      offset+=4;
+		wAs(data,offset,"pHYs");  offset+=4;
+		wUi(data,offset, tabs["pHYs"][0]);      offset+=4;
+		wUi(data,offset, tabs["pHYs"][1]);      offset+=4;
+		data[offset]=tabs["pHYs"][2];			offset++;
+		wUi(data,offset,crc(data,offset-13,13));  offset+=4; // crc
+	}
+
+	if(anim) {
+		wUi(data,offset, 8);      offset+=4;
+		wAs(data,offset,"acTL");  offset+=4;
+		wUi(data,offset, nimg.frames.length);     offset+=4;
+		wUi(data,offset, tabs["loop"]!=null?tabs["loop"]:0);      offset+=4;
+		wUi(data,offset,crc(data,offset-12,12));  offset+=4; // crc
+	}
+
+	if(nimg.ctype==3) {
+		var dl = nimg.plte.length;
+		wUi(data,offset, dl*3);  offset+=4;
+		wAs(data,offset,"PLTE");  offset+=4;
+		for(var i=0; i<dl; i++){
+			var ti=i*3, c=nimg.plte[i], r=(c)&255, g=(c>>>8)&255, b=(c>>>16)&255;
+			data[offset+ti+0]=r;  data[offset+ti+1]=g;  data[offset+ti+2]=b;
+		}
+		offset+=dl*3;
+		wUi(data,offset,crc(data,offset-dl*3-4,dl*3+4));  offset+=4; // crc
+
+		if(pltAlpha) {
+			wUi(data,offset, dl);  offset+=4;
+			wAs(data,offset,"tRNS");  offset+=4;
+			for(var i=0; i<dl; i++)  data[offset+i]=(nimg.plte[i]>>>24)&255;
+			offset+=dl;
+			wUi(data,offset,crc(data,offset-dl-4,dl+4));  offset+=4; // crc
+		}
+	}
+	
+	var fi = 0;
+	for(var j=0; j<nimg.frames.length; j++)
+	{
+		var fr = nimg.frames[j];
+		if(anim) {
+			wUi(data, offset, 26);     offset+=4;
+			wAs(data, offset,"fcTL");  offset+=4;
+			wUi(data, offset, fi++);   offset+=4;
+			wUi(data, offset, fr.rect.width );   offset+=4;
+			wUi(data, offset, fr.rect.height);   offset+=4;
+			wUi(data, offset, fr.rect.x);   offset+=4;
+			wUi(data, offset, fr.rect.y);   offset+=4;
+			wUs(data, offset, dels[j]);   offset+=2;
+			wUs(data, offset,  1000);   offset+=2;
+			data[offset] = fr.dispose;  offset++;	// dispose
+			data[offset] = fr.blend  ;  offset++;	// blend
+			wUi(data,offset,crc(data,offset-30,30));  offset+=4; // crc
+		}
+				
+		var imgd = fr.cimg, dl = imgd.length;
+		wUi(data,offset, dl+(j==0?0:4));     offset+=4;
+		var ioff = offset;
+		wAs(data,offset,(j==0)?"IDAT":"fdAT");  offset+=4;
+		if(j!=0) {  wUi(data, offset, fi++);  offset+=4;  }
+		data.set(imgd,offset);
+		offset += dl;
+		wUi(data,offset,crc(data,ioff,offset-ioff));  offset+=4; // crc
+	}
+
+	wUi(data,offset, 0);     offset+=4;
+	wAs(data,offset,"IEND");  offset+=4;
+	wUi(data,offset,crc(data,offset-4,4));  offset+=4; // crc
+
+	return data.buffer;
+}
+
+UPNG.encode.compressPNG = function(out, filter, levelZero) {
+	for(var i=0; i<out.frames.length; i++) {
+		var frm = out.frames[i], nw=frm.rect.width, nh=frm.rect.height;
+		var fdata = new Uint8Array(nh*frm.bpl+nh);
+		frm.cimg = UPNG.encode._filterZero(frm.img,nh,frm.bpp,frm.bpl,fdata, filter, levelZero);
+	}
+}
+
+
+
+UPNG.encode.compress = function(bufs, w, h, ps, prms) // prms:  onlyBlend, minBits, forbidPlte
+{
+	//var time = Date.now();
+	var onlyBlend = prms[0], evenCrd = prms[1], forbidPrev = prms[2], minBits = prms[3], forbidPlte = prms[4], dither=prms[5];
+	
+	var ctype = 6, depth = 8, alphaAnd=255
+	
+	for(var j=0; j<bufs.length; j++)  {  // when not quantized, other frames can contain colors, that are not in an initial frame
+		var img = new Uint8Array(bufs[j]), ilen = img.length;
+		for(var i=0; i<ilen; i+=4) alphaAnd &= img[i+3];
+	}
+	var gotAlpha = (alphaAnd!=255);
+	
+	//console.log("alpha check", Date.now()-time);  time = Date.now();
+	
+	//var brute = gotAlpha && forGIF;		// brute : frames can only be copied, not "blended"
+	var frms = UPNG.encode.framize(bufs, w, h, onlyBlend, evenCrd, forbidPrev);
+	//console.log("framize", Date.now()-time);  time = Date.now();
+	
+	var cmap={}, plte=[], inds=[]; 
+	
+	if(ps!=0) {
+		var nbufs = [];  for(var i=0; i<frms.length; i++) nbufs.push(frms[i].img.buffer);
+		
+		var abuf = UPNG.encode.concatRGBA(nbufs), qres = UPNG.quantize(abuf, ps);
+		
+		for(var i=0; i<qres.plte.length; i++) plte.push(qres.plte[i].est.rgba);
+		
+		var cof = 0;
+		for(var i=0; i<frms.length; i++) {  
+			var frm=frms[i], bln=frm.img.length, ind = new Uint8Array(qres.inds.buffer, cof>>2, bln>>2);  inds.push(ind);
+			var bb = new Uint8Array(qres.abuf,cof,bln);
+			
+			//console.log(frm.img, frm.width, frm.height);
+			//var time = Date.now();
+			if(dither) UPNG.encode.dither(frm.img, frm.rect.width, frm.rect.height, plte, bb, ind);
+			//console.log(Date.now()-time);
+			frm.img.set(bb);  cof+=bln;  
+		}
+		
+		//console.log("quantize", Date.now()-time);  time = Date.now();
+	}
+	else {
+		// what if ps==0, but there are <=256 colors?  we still need to detect, if the palette could be used
+		for(var j=0; j<frms.length; j++)  {  // when not quantized, other frames can contain colors, that are not in an initial frame
+			var frm = frms[j], img32 = new Uint32Array(frm.img.buffer), nw=frm.rect.width, ilen = img32.length;
+			var ind = new Uint8Array(ilen);  inds.push(ind);
+			for(var i=0; i<ilen; i++) {
+				var c = img32[i];
+				if     (i!=0 && c==img32[i- 1]) ind[i]=ind[i-1];
+				else if(i>nw && c==img32[i-nw]) ind[i]=ind[i-nw];
+				else {
+					var cmc = cmap[c];
+					if(cmc==null) {  cmap[c]=cmc=plte.length;  plte.push(c);  if(plte.length>=300) break;  }
+					ind[i]=cmc;
+				}
+			}
+		}
+		//console.log("make palette", Date.now()-time);  time = Date.now();
+	}
+	
+	var cc=plte.length; //console.log("colors:",cc);
+	if(cc<=256 && forbidPlte==false) {
+		if(cc<= 2) depth=1;  else if(cc<= 4) depth=2;  else if(cc<=16) depth=4;  else depth=8;
+		depth =  Math.max(depth, minBits);
+	}
+	
+	for(var j=0; j<frms.length; j++)
+	{
+		var frm = frms[j], nx=frm.rect.x, ny=frm.rect.y, nw=frm.rect.width, nh=frm.rect.height;
+		var cimg = frm.img, cimg32 = new Uint32Array(cimg.buffer);
+		var bpl = 4*nw, bpp=4;
+		if(cc<=256 && forbidPlte==false) {
+			bpl = Math.ceil(depth*nw/8);
+			var nimg = new Uint8Array(bpl*nh);
+			var inj = inds[j];
+			for(var y=0; y<nh; y++) {  var i=y*bpl, ii=y*nw;
+				if     (depth==8) for(var x=0; x<nw; x++) nimg[i+(x)   ]   =  (inj[ii+x]             );
+				else if(depth==4) for(var x=0; x<nw; x++) nimg[i+(x>>1)]  |=  (inj[ii+x]<<(4-(x&1)*4));
+				else if(depth==2) for(var x=0; x<nw; x++) nimg[i+(x>>2)]  |=  (inj[ii+x]<<(6-(x&3)*2));
+				else if(depth==1) for(var x=0; x<nw; x++) nimg[i+(x>>3)]  |=  (inj[ii+x]<<(7-(x&7)*1));
+			}
+			cimg=nimg;  ctype=3;  bpp=1;
+		}
+		else if(gotAlpha==false && frms.length==1) {	// some next "reduced" frames may contain alpha for blending
+			var nimg = new Uint8Array(nw*nh*3), area=nw*nh;
+			for(var i=0; i<area; i++) { var ti=i*3, qi=i*4;  nimg[ti]=cimg[qi];  nimg[ti+1]=cimg[qi+1];  nimg[ti+2]=cimg[qi+2];  }
+			cimg=nimg;  ctype=2;  bpp=3;  bpl=3*nw;
+		}
+		frm.img=cimg;  frm.bpl=bpl;  frm.bpp=bpp;
+	}
+	//console.log("colors => palette indices", Date.now()-time);  time = Date.now();
+	
+	return {ctype:ctype, depth:depth, plte:plte, frames:frms  };
+}
+UPNG.encode.framize = function(bufs,w,h,alwaysBlend,evenCrd,forbidPrev) {
+	/*  DISPOSE
+	    - 0 : no change
+		- 1 : clear to transparent
+		- 2 : retstore to content before rendering (previous frame disposed)
+		BLEND
+		- 0 : replace
+		- 1 : blend
+	*/
+	var frms = [];
+	for(var j=0; j<bufs.length; j++) {
+		var cimg = new Uint8Array(bufs[j]), cimg32 = new Uint32Array(cimg.buffer);
+		var nimg;
+		
+		var nx=0, ny=0, nw=w, nh=h, blend=alwaysBlend?1:0;
+		if(j!=0) {
+			var tlim = (forbidPrev || alwaysBlend || j==1 || frms[j-2].dispose!=0)?1:2, tstp = 0, tarea = 1e9;
+			for(var it=0; it<tlim; it++)
+			{
+				var pimg = new Uint8Array(bufs[j-1-it]), p32 = new Uint32Array(bufs[j-1-it]);
+				var mix=w,miy=h,max=-1,may=-1;
+				for(var y=0; y<h; y++) for(var x=0; x<w; x++) {
+					var i = y*w+x;
+					if(cimg32[i]!=p32[i]) {
+						if(x<mix) mix=x;  if(x>max) max=x;
+						if(y<miy) miy=y;  if(y>may) may=y;
+					}
+				}
+				if(max==-1) mix=miy=max=may=0;
+				if(evenCrd) {  if((mix&1)==1)mix--;  if((miy&1)==1)miy--;  }
+				var sarea = (max-mix+1)*(may-miy+1);
+				if(sarea<tarea) {
+					tarea = sarea;  tstp = it;
+					nx = mix; ny = miy; nw = max-mix+1; nh = may-miy+1;
+				}
+			}
+			
+			// alwaysBlend: pokud zjistím, že blendit nelze, nastavím předchozímu snímku dispose=1. Zajistím, aby obsahoval můj obdélník.
+			var pimg = new Uint8Array(bufs[j-1-tstp]);
+			if(tstp==1) frms[j-1].dispose = 2;
+			
+			nimg = new Uint8Array(nw*nh*4);
+			UPNG._copyTile(pimg,w,h, nimg,nw,nh, -nx,-ny, 0);
+			
+			blend =  UPNG._copyTile(cimg,w,h, nimg,nw,nh, -nx,-ny, 3) ? 1 : 0;
+			if(blend==1) UPNG.encode._prepareDiff(cimg,w,h,nimg,{x:nx,y:ny,width:nw,height:nh});
+			else         UPNG._copyTile(cimg,w,h, nimg,nw,nh, -nx,-ny, 0);
+			//UPNG._copyTile(cimg,w,h, nimg,nw,nh, -nx,-ny, blend==1?2:0);
+		}
+		else nimg = cimg.slice(0);	// img may be rewritten further ... don't rewrite input
+		
+		frms.push({rect:{x:nx,y:ny,width:nw,height:nh}, img:nimg, blend:blend, dispose:0});
+	}
+	
+	
+	if(alwaysBlend) for(var j=0; j<frms.length; j++) {
+		var frm = frms[j];  if(frm.blend==1) continue;
+		var r0 = frm.rect, r1 = frms[j-1].rect
+		var miX = Math.min(r0.x, r1.x), miY = Math.min(r0.y, r1.y);
+		var maX = Math.max(r0.x+r0.width, r1.x+r1.width), maY = Math.max(r0.y+r0.height, r1.y+r1.height);
+		var r = {x:miX, y:miY, width:maX-miX, height:maY-miY};
+		
+		frms[j-1].dispose = 1;
+		if(j-1!=0) 
+		UPNG.encode._updateFrame(bufs, w,h,frms, j-1,r, evenCrd);
+		UPNG.encode._updateFrame(bufs, w,h,frms, j  ,r, evenCrd);
+	}
+	var area = 0;
+	if(bufs.length!=1) for(var i=0; i<frms.length; i++) {
+		var frm = frms[i];
+		area += frm.rect.width*frm.rect.height;
+		//if(i==0 || frm.blend!=1) continue;
+		//var ob = new Uint8Array(
+		//console.log(frm.blend, frm.dispose, frm.rect);
+	}
+	//if(area!=0) console.log(area);
+	return frms;
+}
+UPNG.encode._updateFrame = function(bufs, w,h, frms, i, r, evenCrd) {
+	var U8 = Uint8Array, U32 = Uint32Array;
+	var pimg = new U8(bufs[i-1]), pimg32 = new U32(bufs[i-1]), nimg = i+1<bufs.length ? new U8(bufs[i+1]):null;
+	var cimg = new U8(bufs[i]), cimg32 = new U32(cimg.buffer);
+	
+	var mix=w,miy=h,max=-1,may=-1;
+	for(var y=0; y<r.height; y++) for(var x=0; x<r.width; x++) {
+		var cx = r.x+x, cy = r.y+y;
+		var j = cy*w+cx, cc = cimg32[j];
+		// no need to draw transparency, or to dispose it. Or, if writing the same color and the next one does not need transparency.
+		if(cc==0 || (frms[i-1].dispose==0 && pimg32[j]==cc && (nimg==null || nimg[j*4+3]!=0)) /**-**/ ) {}
+		else {
+			if(cx<mix) mix=cx;  if(cx>max) max=cx;
+			if(cy<miy) miy=cy;  if(cy>may) may=cy;
+		}
+	}
+	if(max==-1) mix=miy=max=may=0;
+	if(evenCrd) {  if((mix&1)==1)mix--;  if((miy&1)==1)miy--;  }
+	r = {x:mix, y:miy, width:max-mix+1, height:may-miy+1};
+	
+	var fr = frms[i];  fr.rect = r;  fr.blend = 1;  fr.img = new Uint8Array(r.width*r.height*4);
+	if(frms[i-1].dispose==0) {
+		UPNG._copyTile(pimg,w,h, fr.img,r.width,r.height, -r.x,-r.y, 0);
+		UPNG.encode._prepareDiff(cimg,w,h,fr.img,r);
+		//UPNG._copyTile(cimg,w,h, fr.img,r.width,r.height, -r.x,-r.y, 2);
+	}
+	else
+		UPNG._copyTile(cimg,w,h, fr.img,r.width,r.height, -r.x,-r.y, 0);
+}
+UPNG.encode._prepareDiff = function(cimg, w,h, nimg, rec) {
+	UPNG._copyTile(cimg,w,h, nimg,rec.width,rec.height, -rec.x,-rec.y, 2);
+	/*
+	var n32 = new Uint32Array(nimg.buffer);
+	var og = new Uint8Array(rec.width*rec.height*4), o32 = new Uint32Array(og.buffer);
+	UPNG._copyTile(cimg,w,h, og,rec.width,rec.height, -rec.x,-rec.y, 0);
+	for(var i=4; i<nimg.length; i+=4) {
+		if(nimg[i-1]!=0 && nimg[i+3]==0 && o32[i>>>2]==o32[(i>>>2)-1]) {
+			n32[i>>>2]=o32[i>>>2];
+			//var j = i, c=p32[(i>>>2)-1];
+			//while(p32[j>>>2]==c) {  n32[j>>>2]=c;  j+=4;  }
+		}
+	}
+	for(var i=nimg.length-8; i>0; i-=4) {
+		if(nimg[i+7]!=0 && nimg[i+3]==0 && o32[i>>>2]==o32[(i>>>2)+1]) {
+			n32[i>>>2]=o32[i>>>2];
+			//var j = i, c=p32[(i>>>2)-1];
+			//while(p32[j>>>2]==c) {  n32[j>>>2]=c;  j+=4;  }
+		}
+	}*/
+}
+
+UPNG.encode._filterZero = function(img,h,bpp,bpl,data, filter, levelZero)
+{
+	var fls = [], ftry=[0,1,2,3,4];
+	if     (filter!=-1)             ftry=[filter];
+	else if(h*bpl>500000 || bpp==1) ftry=[0];
+	var opts;  if(levelZero) opts={level:0};
+	
+	//: @KANJI_EDIT@://
+	//: var CMPR = (data.length>10e6 && UZIP!=null) ? UZIP : pako;
+    var CMPR = UZIP ;
+	
+	var time = Date.now();
+	for(var i=0; i<ftry.length; i++) {
+		for(var y=0; y<h; y++) UPNG.encode._filterLine(data, img, y, bpl, bpp, ftry[i]);
+		//var nimg = new Uint8Array(data.length);
+		//var sz = UZIP.F.deflate(data, nimg);  fls.push(nimg.slice(0,sz));
+		//var dfl = pako["deflate"](data), dl=dfl.length-4;
+		//var crc = (dfl[dl+3]<<24)|(dfl[dl+2]<<16)|(dfl[dl+1]<<8)|(dfl[dl+0]<<0);
+		//console.log(crc, UZIP.adler(data,2,data.length-6));
+		fls.push(CMPR["deflate"](data,opts));
+	}
+	
+	var ti, tsize=1e9;
+	for(var i=0; i<fls.length; i++) if(fls[i].length<tsize) {  ti=i;  tsize=fls[i].length;  }
+	return fls[ti];
+}
+UPNG.encode._filterLine = function(data, img, y, bpl, bpp, type)
+{
+	var i = y*bpl, di = i+y, paeth = UPNG.decode._paeth
+	data[di]=type;  di++;
+
+	if(type==0) {
+		if(bpl<500) for(var x=0; x<bpl; x++) data[di+x] = img[i+x];
+		else data.set(new Uint8Array(img.buffer,i,bpl),di);
+	}
+	else if(type==1) {
+		for(var x=  0; x<bpp; x++) data[di+x] =  img[i+x];
+		for(var x=bpp; x<bpl; x++) data[di+x] = (img[i+x]-img[i+x-bpp]+256)&255;
+	}
+	else if(y==0) {
+		for(var x=  0; x<bpp; x++) data[di+x] = img[i+x];
+
+		if(type==2) for(var x=bpp; x<bpl; x++) data[di+x] = img[i+x];
+		if(type==3) for(var x=bpp; x<bpl; x++) data[di+x] = (img[i+x] - (img[i+x-bpp]>>1) +256)&255;
+		if(type==4) for(var x=bpp; x<bpl; x++) data[di+x] = (img[i+x] - paeth(img[i+x-bpp], 0, 0) +256)&255;
+	}
+	else {
+		if(type==2) { for(var x=  0; x<bpl; x++) data[di+x] = (img[i+x]+256 - img[i+x-bpl])&255;  }
+		if(type==3) { for(var x=  0; x<bpp; x++) data[di+x] = (img[i+x]+256 - (img[i+x-bpl]>>1))&255;
+					  for(var x=bpp; x<bpl; x++) data[di+x] = (img[i+x]+256 - ((img[i+x-bpl]+img[i+x-bpp])>>1))&255;  }
+		if(type==4) { for(var x=  0; x<bpp; x++) data[di+x] = (img[i+x]+256 - paeth(0, img[i+x-bpl], 0))&255;
+					  for(var x=bpp; x<bpl; x++) data[di+x] = (img[i+x]+256 - paeth(img[i+x-bpp], img[i+x-bpl], img[i+x-bpp-bpl]))&255;  }
+	}
+}
+
+UPNG.crc = {
+	table : ( function() {
+	   var tab = new Uint32Array(256);
+	   for (var n=0; n<256; n++) {
+			var c = n;
+			for (var k=0; k<8; k++) {
+				if (c & 1)  c = 0xedb88320 ^ (c >>> 1);
+				else        c = c >>> 1;
+			}
+			tab[n] = c;  }
+		return tab;  })(),
+	update : function(c, buf, off, len) {
+		for (var i=0; i<len; i++)  c = UPNG.crc.table[(c ^ buf[off+i]) & 0xff] ^ (c >>> 8);
+		return c;
+	},
+	crc : function(b,o,l)  {  return UPNG.crc.update(0xffffffff,b,o,l) ^ 0xffffffff;  }
+}
+
+
+UPNG.quantize = function(abuf, ps)
+{	
+	var sb = new Uint8Array(abuf), tb = sb.slice(0), tb32 = new Uint32Array(tb.buffer);
+	
+	var KD = UPNG.quantize.getKDtree(tb, ps);
+	var root = KD[0], leafs = KD[1];
+	
+	var planeDst = UPNG.quantize.planeDst;
+	var len=sb.length;
+		
+	var inds = new Uint8Array(len>>2), nd;
+	if(sb.length<20e6)  // precise, but slow :(
+		for(var i=0; i<len; i+=4) {
+			var r=sb[i]*(1/255), g=sb[i+1]*(1/255), b=sb[i+2]*(1/255), a=sb[i+3]*(1/255);
+			
+			nd = UPNG.quantize.getNearest(root, r, g, b, a);
+			inds[i>>2] = nd.ind;  tb32[i>>2] = nd.est.rgba;
+		}
+	else 
+		for(var i=0; i<len; i+=4) {
+			var r=sb[i]*(1/255), g=sb[i+1]*(1/255), b=sb[i+2]*(1/255), a=sb[i+3]*(1/255);
+			
+			nd = root;  while(nd.left) nd = (planeDst(nd.est,r,g,b,a)<=0) ? nd.left : nd.right;
+			inds[i>>2] = nd.ind;  tb32[i>>2] = nd.est.rgba;
+		}
+	return {  abuf:tb.buffer, inds:inds, plte:leafs  };
+}
+
+UPNG.quantize.getKDtree = function(nimg, ps, err) {
+	if(err==null) err = 0.0001;
+	var nimg32 = new Uint32Array(nimg.buffer);
+	
+	var root = {i0:0, i1:nimg.length, bst:null, est:null, tdst:0, left:null, right:null };  // basic statistic, extra statistic
+	root.bst = UPNG.quantize.stats(  nimg,root.i0, root.i1  );  root.est = UPNG.quantize.estats( root.bst );
+	var leafs = [root];
+	
+	while(leafs.length<ps)
+	{
+		var maxL = 0, mi=0;
+		for(var i=0; i<leafs.length; i++) if(leafs[i].est.L > maxL) {  maxL=leafs[i].est.L;  mi=i;  }
+		if(maxL<err) break;
+		var node = leafs[mi];
+		
+		var s0 = UPNG.quantize.splitPixels(nimg,nimg32, node.i0, node.i1, node.est.e, node.est.eMq255);
+		var s0wrong = (node.i0>=s0 || node.i1<=s0);
+		//console.log(maxL, leafs.length, mi);
+		if(s0wrong) {  node.est.L=0;  continue;  }
+		
+		
+		var ln = {i0:node.i0, i1:s0, bst:null, est:null, tdst:0, left:null, right:null };  ln.bst = UPNG.quantize.stats( nimg, ln.i0, ln.i1 );  
+		ln.est = UPNG.quantize.estats( ln.bst );
+		var rn = {i0:s0, i1:node.i1, bst:null, est:null, tdst:0, left:null, right:null };  rn.bst = {R:[], m:[], N:node.bst.N-ln.bst.N};
+		for(var i=0; i<16; i++) rn.bst.R[i] = node.bst.R[i]-ln.bst.R[i];
+		for(var i=0; i< 4; i++) rn.bst.m[i] = node.bst.m[i]-ln.bst.m[i];
+		rn.est = UPNG.quantize.estats( rn.bst );
+		
+		node.left = ln;  node.right = rn;
+		leafs[mi]=ln;  leafs.push(rn);
+	}
+	leafs.sort(function(a,b) {  return b.bst.N-a.bst.N;  });
+	for(var i=0; i<leafs.length; i++) leafs[i].ind=i;
+	return [root, leafs];
+}
+
+UPNG.quantize.getNearest = function(nd, r,g,b,a)
+{
+	if(nd.left==null) {  nd.tdst = UPNG.quantize.dist(nd.est.q,r,g,b,a);  return nd;  }
+	var planeDst = UPNG.quantize.planeDst(nd.est,r,g,b,a);
+	
+	var node0 = nd.left, node1 = nd.right;
+	if(planeDst>0) {  node0=nd.right;  node1=nd.left;  }
+	
+	var ln = UPNG.quantize.getNearest(node0, r,g,b,a);
+	if(ln.tdst<=planeDst*planeDst) return ln;
+	var rn = UPNG.quantize.getNearest(node1, r,g,b,a);
+	return rn.tdst<ln.tdst ? rn : ln;
+}
+UPNG.quantize.planeDst = function(est, r,g,b,a) {  var e = est.e;  return e[0]*r + e[1]*g + e[2]*b + e[3]*a - est.eMq;  }
+UPNG.quantize.dist     = function(q,   r,g,b,a) {  var d0=r-q[0], d1=g-q[1], d2=b-q[2], d3=a-q[3];  return d0*d0+d1*d1+d2*d2+d3*d3;  }
+
+UPNG.quantize.splitPixels = function(nimg, nimg32, i0, i1, e, eMq)
+{
+	var vecDot = UPNG.quantize.vecDot;
+	i1-=4;
+	var shfs = 0;
+	while(i0<i1)
+	{
+		while(vecDot(nimg, i0, e)<=eMq) i0+=4;
+		while(vecDot(nimg, i1, e)> eMq) i1-=4;
+		if(i0>=i1) break;
+		
+		var t = nimg32[i0>>2];  nimg32[i0>>2] = nimg32[i1>>2];  nimg32[i1>>2]=t;
+		
+		i0+=4;  i1-=4;
+	}
+	while(vecDot(nimg, i0, e)>eMq) i0-=4;
+	return i0+4;
+}
+UPNG.quantize.vecDot = function(nimg, i, e)
+{
+	return nimg[i]*e[0] + nimg[i+1]*e[1] + nimg[i+2]*e[2] + nimg[i+3]*e[3];
+}
+UPNG.quantize.stats = function(nimg, i0, i1){
+	var R = [0,0,0,0,  0,0,0,0,  0,0,0,0,  0,0,0,0];
+	var m = [0,0,0,0];
+	var N = (i1-i0)>>2;
+	for(var i=i0; i<i1; i+=4)
+	{
+		var r = nimg[i]*(1/255), g = nimg[i+1]*(1/255), b = nimg[i+2]*(1/255), a = nimg[i+3]*(1/255);
+		//var r = nimg[i], g = nimg[i+1], b = nimg[i+2], a = nimg[i+3];
+		m[0]+=r;  m[1]+=g;  m[2]+=b;  m[3]+=a;
+		
+		R[ 0] += r*r;  R[ 1] += r*g;  R[ 2] += r*b;  R[ 3] += r*a;  
+		               R[ 5] += g*g;  R[ 6] += g*b;  R[ 7] += g*a; 
+		                              R[10] += b*b;  R[11] += b*a;  
+		                                             R[15] += a*a;  
+	}
+	R[4]=R[1];  R[8]=R[2];  R[9]=R[6];  R[12]=R[3];  R[13]=R[7];  R[14]=R[11];
+	
+	return {R:R, m:m, N:N};
+}
+UPNG.quantize.estats = function(stats){
+	var R = stats.R, m = stats.m, N = stats.N;
+	
+	// when all samples are equal, but N is large (millions), the Rj can be non-zero ( 0.0003.... - precission error)
+	var m0 = m[0], m1 = m[1], m2 = m[2], m3 = m[3], iN = (N==0 ? 0 : 1/N);
+	var Rj = [
+		R[ 0] - m0*m0*iN,  R[ 1] - m0*m1*iN,  R[ 2] - m0*m2*iN,  R[ 3] - m0*m3*iN,  
+		R[ 4] - m1*m0*iN,  R[ 5] - m1*m1*iN,  R[ 6] - m1*m2*iN,  R[ 7] - m1*m3*iN,
+		R[ 8] - m2*m0*iN,  R[ 9] - m2*m1*iN,  R[10] - m2*m2*iN,  R[11] - m2*m3*iN,  
+		R[12] - m3*m0*iN,  R[13] - m3*m1*iN,  R[14] - m3*m2*iN,  R[15] - m3*m3*iN 
+	];
+	
+	var A = Rj, M = UPNG.M4;
+	var b = [Math.random(),Math.random(),Math.random(),Math.random()], mi = 0, tmi = 0;
+	
+	if(N!=0)
+	for(var i=0; i<16; i++) {
+		b = M.multVec(A, b);  tmi = Math.sqrt(M.dot(b,b));  b = M.sml(1/tmi,  b);
+		if(i!=0 && Math.abs(tmi-mi)<1e-9) break;  mi = tmi;
+	}	
+	//b = [0,0,1,0];  mi=N;
+	var q = [m0*iN, m1*iN, m2*iN, m3*iN];
+	var eMq255 = M.dot(M.sml(255,q),b);
+	
+	return {  Cov:Rj, q:q, e:b, L:mi,  eMq255:eMq255, eMq : M.dot(b,q),
+				rgba: (((Math.round(255*q[3])<<24) | (Math.round(255*q[2])<<16) |  (Math.round(255*q[1])<<8) | (Math.round(255*q[0])<<0))>>>0)  };
+}
+UPNG.M4 = {
+	multVec : function(m,v) {
+			return [
+				m[ 0]*v[0] + m[ 1]*v[1] + m[ 2]*v[2] + m[ 3]*v[3],
+				m[ 4]*v[0] + m[ 5]*v[1] + m[ 6]*v[2] + m[ 7]*v[3],
+				m[ 8]*v[0] + m[ 9]*v[1] + m[10]*v[2] + m[11]*v[3],
+				m[12]*v[0] + m[13]*v[1] + m[14]*v[2] + m[15]*v[3]
+			];
+	},
+	dot : function(x,y) {  return  x[0]*y[0]+x[1]*y[1]+x[2]*y[2]+x[3]*y[3];  },
+	sml : function(a,y) {  return [a*y[0],a*y[1],a*y[2],a*y[3]];  }
+}
+
+UPNG.encode.concatRGBA = function(bufs) {
+	var tlen = 0;
+	for(var i=0; i<bufs.length; i++) tlen += bufs[i].byteLength;
+	var nimg = new Uint8Array(tlen), noff=0;
+	for(var i=0; i<bufs.length; i++) {
+		var img = new Uint8Array(bufs[i]), il = img.length;
+		for(var j=0; j<il; j+=4) {  
+			var r=img[j], g=img[j+1], b=img[j+2], a = img[j+3];
+			if(a==0) r=g=b=0;
+			nimg[noff+j]=r;  nimg[noff+j+1]=g;  nimg[noff+j+2]=b;  nimg[noff+j+3]=a;  }
+		noff += il;
+	}
+	return nimg.buffer;
+}
+
+UPNG.encode.dither = function(sb, w, h, plte, tb, oind) {
+	
+	function addErr(er, tg, ti, f) {
+		tg[ti]+=(er[0]*f)>>4;  tg[ti+1]+=(er[1]*f)>>4;  tg[ti+2]+=(er[2]*f)>>4;  tg[ti+3]+=(er[3]*f)>>4;  
+	}
+	function N(x) {  return Math.max(0, Math.min(255, x));  }
+	function D(a,b) {  var dr=a[0]-b[0], dg=a[1]-b[1], db=a[2]-b[2], da=a[3]-b[3];  return (dr*dr + dg*dg + db*db + da*da);  }
+	
+	
+	var pc=plte.length, nplt = [], rads=[];
+	for(var i=0; i<pc; i++) {
+		var c = plte[i];
+		nplt.push([((c>>>0)&255), ((c>>>8)&255), ((c>>>16)&255), ((c>>>24)&255)]);
+	}
+	for(var i=0; i<pc; i++) {
+		var ne=0xffffffff, ni=0;
+		for(var j=0; j<pc; j++) {  var ce=D(nplt[i],nplt[j]);  if(j!=i && ce<ne) {  ne=ce;  ni=j;  }  }
+		var hd = Math.sqrt(ne)/2;
+		rads[i] = ~~(hd*hd);
+	}
+		
+	var tb32 = new Uint32Array(tb.buffer);
+	var err = new Int16Array(w*h*4);
+	
+	for(var y=0; y<h; y++) {
+		for(var x=0; x<w; x++) {
+			var i = (y*w+x)*4;
+			
+			var cc = [N(sb[i]+err[i]), N(sb[i+1]+err[i+1]), N(sb[i+2]+err[i+2]), N(sb[i+3]+err[i+3])];
+			
+			var ni=0, nd = 0xffffff;
+			for(var j=0; j<pc; j++) {
+				var cd = D(cc,nplt[j]);
+				if(cd<nd) {  nd=cd;  ni=j;  }
+			}  
+			
+			//ni = oind[i>>2];
+			var nc = nplt[ni];
+			var er = [cc[0]-nc[0], cc[1]-nc[1], cc[2]-nc[2], cc[3]-nc[3]];
+			
+			//addErr(er, err, i+4, 16);
+			
+			//*
+			if(x!=w-1) addErr(er, err, i+4    , 7);
+			if(y!=h-1) {
+				if(x!=  0) addErr(er, err, i+4*w-4, 3);
+				           addErr(er, err, i+4*w  , 5);
+				if(x!=w-1) addErr(er, err, i+4*w+4, 1);  //*/
+			}
+		
+			oind[i>>2] = ni;  tb32[i>>2] = plte[ni];
+		}
+	}
+}
+
+    //:=================================:000_3RD:UPNG_LIB://
     //:HOTEL13_FRAMERATE_PERFORMANCE:====================://
 
         var d_hotel13_t_0 =( 0 ); //: Old Timestamp      ://
@@ -799,12 +3177,7 @@
     //:=============================:HOTEL13_COLOR_PALLET://    
 
 
-    const d_hotel13_yes_aim =( 0
-    ||  (!( "undefined" === typeof notnode ))  
-    ||  (!( "undefined" === typeof yesnode ))  
-    );;
-    const d_hotel13_not_aim =( 
-        (!d_hotel13_yes_aim)  );;
+
         
     const d_hotel13_sam =( d_hotel13_not_aim ? 
     {   laxcoma : "[HACK]"
@@ -898,8 +3271,14 @@
     //:SERVER_JS_POLYFILLS:==============================://
     
         function F_PRIVATE_HOTEL13_ERR( msg ){ 
-                alert( "[err:msg]:" + msg );
-                throw( "[err:msg]:" + msg );
+
+            if( d_hotel13_notnode ){
+                alert(       "[err:msg]:" + msg );
+                throw(       "[err:msg]:" + msg );
+            }else{
+                console.log( "[err:msg]:" + msg );
+                      throw( "[err:msg]:" + msg );
+            };;
         };;
         function F_PRIVATE_HOTEL13_ASS( t_f , i_msg ){
             
@@ -961,6 +3340,9 @@
     //:==============================:SERVER_JS_POLYFILLS://
 
 //:#_UN_NAMESPACED_GLOBALS_#:================================://
+
+    //:TAG[ un namespaced globals | un-namespaced-globals ..]://
+    //:TAG[ unnamespaacedglobals | no-name | no-namespace ..]://
 
     const c_opptrez =( 320 /**OnePixelPerTileRez**/ );
     ASS( 5 * 64 == 320               , "[UNG:001]" );
@@ -1767,6 +4149,26 @@
     //:==========================:ADJACENT_ROOMS_LOOKUP_TABLE://
     //:HELPER_FUNCTION_SECTION_I_GUESS:==================://
 
+        const   F_HOTEL13_STR_UPP = function
+        PRIVATE_F_HOTEL13_STR_UPP(
+
+            i_str
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //: An uppercase method that wont explode    ://
+            //: if given invalid input. DATE[2022_07_22] ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            if(!i_str){ i_str = "" ; };
+        
+            var o_str =( String.prototype.toUpperCase.call(
+                i_str
+            ));;
+            return( o_str );
+        };;
+
         const   F_TOG = function 
         PRIVATE_F_TOG(
         
@@ -1988,57 +4390,57 @@
             };;
             //:------------------------------:check__here://
             //: ******** #_BIGGER_TILES_FIRST_# ******** :// 
-            //:check_above:------------------------------://    // [CAP_H13]
-            if( o_hit <= 0 ){                                   // [CAP_H13]
-                                                                // [CAP_H13]
-                //:#_DIBAMIS_DIV_#://                           // [CAP_H13]
-                                                                // [CAP_H13]
-                //:  LOOP_DIRECTION[ _UP_ ] ------------ ://    // [CAP_H13]
-                for( te7 = i_te7+1 ; te7 <=(7-1) ; te7++ ){     // [CAP_H13]
-                                                                // [CAP_H13]
-                    dia = d_hotel13_te7_dia[ te7 ];             // [CAP_H13]
-                    lat = d_hotel13_te7_lat[ te7 ];             // [CAP_H13]
-                                                                // [CAP_H13]
-                    chk    =(d_hotel13_te7_lat[6-(te7-i_te7)]); // [CAP_H13]
-                    dibamis=(d_hotel13_te7_peb[  (te7-i_te7)]); // [CAP_H13]
-                    ASS( chk === dibamis , "[chk:dibamis]");    // [CAP_H13]
-                                                                // [CAP_H13]
-                    //: ttx == tx0 == tx1                       // [CAP_H13]
-                    //: tty == ty0 == ty1                       // [CAP_H13]
-                    ttx = Math.floor( t_x / dibamis );          // [CAP_H13]
-                    tty = Math.floor( t_y / dibamis );          // [CAP_H13]
-                                                                // [CAP_H13]
-                //:NOLOOP:===============================://    // [CAP_H13]
-                //:NOLOOP:===============================://    // [CAP_H13]
-                                                                // [CAP_H13]
-                    //:almost_a_cutpaste:002_of_003:-----://    // [CAP_H13]
-                                                                // [CAP_H13]
-                    dpx =ldx+dia+(lmx*lat)+ttx ;                // [CAP_H13]
-                    dpy =ldy+dia+(lmy*lat)+tty ;                // [CAP_H13]
-                    dpi =( dpx + ( dpy * 2048 ) );              // [CAP_H13]
-                    dci =( 4 * dpi );                           // [CAP_H13]
-                                                                // [CAP_H13]
-                    u32=(( 0x00                                 // [CAP_H13]
-                    |   ( d_pix2048[ dci + 0 ] << 24 )          // [CAP_H13]
-                    |   ( d_pix2048[ dci + 1 ] << 16 )          // [CAP_H13]
-                    |   ( d_pix2048[ dci + 2 ] <<  8 )          // [CAP_H13]
-                    |   ( d_pix2048[ dci + 3 ] <<  0 )          // [CAP_H13]
-                    )>>> 0 );;                                  // [CAP_H13]
-                    //:...u32.&.0x12345678...............://    // [CAP_H13]
-                    v16 =( u32 & 0xF0000000 ) >>>( 28 );        // [CAP_H13]
-                    tik =( u32 & 0x0FFFFFFF ) >>>(  0 );        // [CAP_H13]
-                                                                // [CAP_H13]
-                    if( v16 >(   0  )  ){                       // [CAP_H13]
-                                                                // [CAP_H13]
-                        o_hit =( 1 );                           // [CAP_H13]
-                    };;                                         // [CAP_H13]
-                    //:-----:almost_a_cutpaste:002_of_003://    // [CAP_H13]
-                                                                // [CAP_H13]
-                //:===============================:NOLOOP://    // [CAP_H13]
-                //:===============================:NOLOOP://    // [CAP_H13]
-                };;                                             // [CAP_H13]
-            };;                                                 // [CAP_H13]
-            //:------------------------------:check_above://    // [CAP_H13]
+            //:check_above:------------------------------://    // [H_1_3]
+            if( o_hit <= 0 ){                                   // [H_1_3]
+                                                                // [H_1_3]
+                //:#_DIBAMIS_DIV_#://                           // [H_1_3]
+                                                                // [H_1_3]
+                //:  LOOP_DIRECTION[ _UP_ ] ------------ ://    // [H_1_3]
+                for( te7 = i_te7+1 ; te7 <=(7-1) ; te7++ ){     // [H_1_3]
+                                                                // [H_1_3]
+                    dia = d_hotel13_te7_dia[ te7 ];             // [H_1_3]
+                    lat = d_hotel13_te7_lat[ te7 ];             // [H_1_3]
+                                                                // [H_1_3]
+                    chk    =(d_hotel13_te7_lat[6-(te7-i_te7)]); // [H_1_3]
+                    dibamis=(d_hotel13_te7_peb[  (te7-i_te7)]); // [H_1_3]
+                    ASS( chk === dibamis , "[chk:dibamis]");    // [H_1_3]
+                                                                // [H_1_3]
+                    //: ttx == tx0 == tx1                       // [H_1_3]
+                    //: tty == ty0 == ty1                       // [H_1_3]
+                    ttx = Math.floor( t_x / dibamis );          // [H_1_3]
+                    tty = Math.floor( t_y / dibamis );          // [H_1_3]
+                                                                // [H_1_3]
+                //:NOLOOP:===============================://    // [H_1_3]
+                //:NOLOOP:===============================://    // [H_1_3]
+                                                                // [H_1_3]
+                    //:almost_a_cutpaste:002_of_003:-----://    // [H_1_3]
+                                                                // [H_1_3]
+                    dpx =ldx+dia+(lmx*lat)+ttx ;                // [H_1_3]
+                    dpy =ldy+dia+(lmy*lat)+tty ;                // [H_1_3]
+                    dpi =( dpx + ( dpy * 2048 ) );              // [H_1_3]
+                    dci =( 4 * dpi );                           // [H_1_3]
+                                                                // [H_1_3]
+                    u32=(( 0x00                                 // [H_1_3]
+                    |   ( d_pix2048[ dci + 0 ] << 24 )          // [H_1_3]
+                    |   ( d_pix2048[ dci + 1 ] << 16 )          // [H_1_3]
+                    |   ( d_pix2048[ dci + 2 ] <<  8 )          // [H_1_3]
+                    |   ( d_pix2048[ dci + 3 ] <<  0 )          // [H_1_3]
+                    )>>> 0 );;                                  // [H_1_3]
+                    //:...u32.&.0x12345678...............://    // [H_1_3]
+                    v16 =( u32 & 0xF0000000 ) >>>( 28 );        // [H_1_3]
+                    tik =( u32 & 0x0FFFFFFF ) >>>(  0 );        // [H_1_3]
+                                                                // [H_1_3]
+                    if( v16 >(   0  )  ){                       // [H_1_3]
+                                                                // [H_1_3]
+                        o_hit =( 1 );                           // [H_1_3]
+                    };;                                         // [H_1_3]
+                    //:-----:almost_a_cutpaste:002_of_003://    // [H_1_3]
+                                                                // [H_1_3]
+                //:===============================:NOLOOP://    // [H_1_3]
+                //:===============================:NOLOOP://    // [H_1_3]
+                };;                                             // [H_1_3]
+            };;                                                 // [H_1_3]
+            //:------------------------------:check_above://    // [H_1_3]
             //: ******** #_SMALLER_TILES_NEXT_# ******** :// 
             //:check_below:------------------------------://
             if( o_hit <= 0 ){
@@ -3693,6 +6095,1061 @@
    ////////// 
    ////////// TEST_SIMULATION_PERFORMANCE();
 
+    //:HOTEL13_URL_TO_PNG_FILE_NAME:=====================://
+
+        const   F_HOTEL13_URL_PNGNAME = function
+        PRIVATE_F_HOTEL13_URL_PNGNAME(
+
+            i_url
+        ){
+            var o_pngname =( "TODO.PNG" );
+
+            ERR( "[use:F_HOTEL13_XYZ_PNGNAME]" );
+            
+            return( o_pngname );
+        };;
+    //:=====================:HOTEL13_URL_TO_PNG_FILE_NAME://
+    //:HOTEL13_IS_3_DIGIT_NUMSTRING:=====================://
+
+        const   F_HOTEL13_YES3DIG = function
+        PRIVATE_F_HOTEL13_YES3DIG(
+
+            i_str
+        ){
+            var o_yes =( 0 );
+            if(!i_str){ i_str="" ; };
+
+            if( 3 != i_str.length ){ o_yes =( 0-8675309 ); };
+
+            if( o_yes > 0 ){
+
+                for( var dex = 0 ; dex <=(3-1) ; dex++ ){
+
+                    if( "0" === i_str[ dex ]
+                    ||  "1" === i_str[ dex ]
+                    ||  "2" === i_str[ dex ]
+                    ||  "3" === i_str[ dex ]
+                    ||  "4" === i_str[ dex ]
+                    ||  "5" === i_str[ dex ]
+                    ||  "6" === i_str[ dex ]
+                    ||  "7" === i_str[ dex ]
+                    ||  "8" === i_str[ dex ]
+                    ||  "9" === i_str[ dex ]
+                    ){
+                        /** OK. Do nothing. **/
+                    }else{
+                        
+                        o_yes =( 0 - 42069 );
+                    };;
+                };;
+            }else
+            if( (!(o_yes < 0)) ){
+                /**Donothing**/
+            }else{
+                ERR("[unexpected_case]");
+            };;
+
+            return( o_yes );
+        };;
+    //:=====================:HOTEL13_IS_3_DIGIT_NUMSTRING://
+    //:HOTEL13_XYZ_TO_PNG_FILE_NAME:=====================://
+
+        const   F_HOTEL13_PAD_STR = function
+        PRIVATE_F_HOTEL13_PAD_STR(
+
+            i_str
+        ){
+            if( "string" != typeof i_str ){
+                ERR("[BADINPUT:PAD_STR]");
+            };;
+
+            var o_str =( i_str );
+
+            //:::::::::::::::::::::::::::://
+            //: Add Leading Zeros        ://
+            //:::::::::::::::::::::::::::://
+            while( 1 == 1 ){
+                if( 3 > o_str.length ){
+
+                    o_str = "0" + o_str ;  //:<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI : extracted functionality. Is it correct?
+                }else{
+                    break;
+                };;
+            };;
+
+            return( o_str );
+        };;
+
+        const   F_HOTEL13_I32_STR = function
+        PRIVATE_F_HOTEL13_I32_STR(
+        
+            i_i32
+        ){
+            var o_str = "" ;
+            if( "undefined" === typeof i_i32 ){
+                o_str = "???" ;
+            }else{
+
+                o_str =( ""+i_i32+"" );
+            };;
+
+            o_str = F_HOTEL13_PAD_STR( o_str ); //:<<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI : refactor site.
+
+            return( o_str );
+        };;
+
+        const   F_HOTEL13_I32_S3D = function
+        PRIVATE_F_HOTEL13_I32_S3D(
+
+            i_i32
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://    
+            //:  Convert Integer to 3 Digit String       ://
+            //:  ( I32 ) ==============> ( S3D )         ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            if( "number" != typeof i_i32 ){
+                ERR("[INVALID_INPUT:I32_S3D]");
+            };;
+            if( i_i32 < 0 || i_i32 >(512-1) ){
+                LOG("[NUMBER_OUTSIDE_OF_ALLOWED_BOUNDS]");
+                i_i32 =( 606 /** 606 : SIXOHSIX**/ );
+                /** ************************************ **/
+                /** Don't crash server if someone enters **/    
+                /** out of bound value in address bar,   **/
+                /** but change number to "606" to signal **/
+                /** the nature of the problem.           **/
+                /** ************************************ **/
+            };;
+            var o_str =( ""+i_i32+"" );
+            var   nod =( o_str.length ); //:@nod@://
+            var   miz =( 3 - nod      ); //:@miz@://
+
+            while( 1 == 1 ){
+                o_str =( "0" + o_str );
+                miz -- ;
+                if( miz <= 0 ){ break; };
+            };;
+            return( o_str );
+        };;
+
+        const   F_HOTEL13_XYZ_PNGNAME = function
+        PRIVATE_F_HOTEL13_XYZ_PNGNAME(
+
+            i_w_x  //: @i_w_x@ : world_levelpack_coord_x ://    
+        ,   i_w_y  //: @i_w_y@ : world_levelpack_coord_y ://        
+        ,   i_w_z  //: @i_w_z@ : world_levelpack_coord_z ://    
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //: ( 1 , 2 , 3 )==> AIM_001_002_003.PNG     ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+            var o_str = "";
+
+            o_str += "AIM_" ;
+            o_str += F_HOTEL13_I32_STR( i_w_x );
+            o_str += "_" ;
+            o_str += F_HOTEL13_I32_STR( i_w_y );
+            o_str += "_" ;
+            o_str += F_HOTEL13_I32_STR( i_w_z );
+            o_str += ".PNG"
+
+            return( o_str );
+        };;
+    //:=====================:HOTEL13_XYZ_TO_PNG_FILE_NAME://
+    //:HOTEL_XYZ_TO_PNG_FILE_PATH:=======================://
+        const   F_HOTEL13_XYZ_PNGPATH = function
+        PRIVATE_F_HOTEL13_XYZ_PNGPATH(
+
+            i_w_x  //: @i_w_x@ : world_levelpack_coord_x ://    
+        ,   i_w_y  //: @i_w_y@ : world_levelpack_coord_y ://        
+        ,   i_w_z  //: @i_w_z@ : world_levelpack_coord_z ://    
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //: ( 1 , 2 , 3 )==> "001/002/003"           ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            var o_str = "" ;
+
+                o_str +=F_HOTEL13_I32_STR( i_w_x ); 
+                o_str +=(                   "/"  );
+                o_str +=F_HOTEL13_I32_STR( i_w_y );  
+                o_str +=(                   "/"  );
+                o_str +=F_HOTEL13_I32_STR( i_w_z );
+
+            return( o_str );
+        };;
+    //:=======================:HOTEL_XYZ_TO_PNG_FILE_PATH://
+    //:GET_READY_TO_SAVE_LEVEL:==========================://
+    //:                                                  ://
+    //:     d_pix2048 ==> d_pix0512                      ://
+    //:     ( @SRC@ )     ( @DST@ )                      ://
+    //:- - - - - - - - - - - - -- - - - - - - - - - - - -://         
+
+        const   F_HOTEL13_2048_0512 = function
+        PRIVATE_F_HOTEL13_2048_0512( 
+
+            i_mcx //: Mastermemory_Cell_X ( READ__FROM ) ://   
+        ,   i_mcy //: Mastermemory_Cell_Y ( READ__FROM ) ://
+        ){
+            if( d_bug ){ var infloop_chk =(0-1); };
+            if( d_bug ){
+                if( i_mcx != 1 && i_mcy != 1 ){
+                    ERR("[#_R_W_R_T_U_O_M_B_#:001]");
+                };;
+            };;
+
+            var i5h_x ; //:@i5h_x@ : index_5Hundred__x  ://
+            var i5h_y ; //:@i5h_y@ : index_5Hundred__y  ://
+            var i5h_i ; //:@i5h_i@ : index_5Hundred__i  ://
+            var i2k_x ; //:@i2k_x@ : index_2THOUSAND_x  ://
+            var i2k_y ; //:@i2k_y@ : index_2THOUSAND_y  ://
+            var i2k_i ; //:@i2k_i@ : index_2THOUSAND_i  ://
+ 
+            for(i5h_y = 0 ; i5h_y <=(512-1) ; i5h_y++ ){
+            for(i5h_x = 0 ; i5h_x <=(512-1) ; i5h_x++ ){
+
+                i2k_x =( (i_mcx*512) + i5h_x );
+                i2k_y =( (i_mcy*512) + i5h_y );
+
+                i5h_i =( i5h_x + ( i5h_y * 512 ) );
+                i2k_i =( i2k_x + ( i2k_y *2048 ) );
+
+                let p5h = d_pix0512 ; //:@DST@://
+                let p2k = d_pix2048 ; //:@SRC@://
+                p5h[ (4*i5h_i)+0 ]=p2k[ (4*i2k_i)+0 ];
+                p5h[ (4*i5h_i)+1 ]=p2k[ (4*i2k_i)+1 ];
+                p5h[ (4*i5h_i)+2 ]=p2k[ (4*i2k_i)+2 ];
+                p5h[ (4*i5h_i)+3 ]=p2k[ (4*i2k_i)+3 ];
+
+                if( d_bug ){ 
+                    infloop_chk ++;
+                    if( infloop_chk >=(512*512) ){
+                        ERR("[OOB_BITCH:2048=>0512]");
+                    };;
+                };;
+
+            };;};;
+
+            console.log( "[2048_0512:DONE]" );
+        };;
+    //:==========================:GET_READY_TO_SAVE_LEVEL://
+    //:GET_READY_TO_LOAD_LEVEL:==========================://
+    //:                                                  ://
+    //:     d_pix0512 ==> d_pix2048                      ://
+    //:     ( @SRC@ )     ( @DST@ )                      ://
+    //:- - - - - - - - - - - - -- - - - - - - - - - - - -://   
+
+        //:TYPO:F_HOTEL13_0512_0248://
+        const   F_HOTEL13_0512_0248 = "[FIX:0512_2048]" ;
+
+        const   F_HOTEL13_0512_2048 = function
+        PRIVATE_F_HOTEL13_0512_2048( 
+
+            i_mcx //: Mastermemory_Cell_X ( WRITE___TO ) ://
+        ,   i_mcy //: Mastermemory_Cell_Y ( WRITE___TO ) ://    
+        ){
+            if( d_bug ){ var infloop_chk =(0-1); };
+            if( d_bug ){
+                if( i_mcx != 1 && i_mcy != 1 ){
+                    ERR("[#_R_W_R_T_U_O_M_B_#:002]");
+                };;
+            };;
+
+            var i5h_x ; //:@i5h_x@ : index_5Hundred__x  ://
+            var i5h_y ; //:@i5h_y@ : index_5Hundred__y  ://
+            var i5h_i ; //:@i5h_i@ : index_5Hundred__i  ://
+            var i2k_x ; //:@i2k_x@ : index_2THOUSAND_x  ://
+            var i2k_y ; //:@i2k_y@ : index_2THOUSAND_y  ://
+            var i2k_i ; //:@i2k_i@ : index_2THOUSAND_i  ://
+ 
+            for(i5h_y = 0 ; i5h_y <=(512-1) ; i5h_y++ ){
+            for(i5h_x = 0 ; i5h_x <=(512-1) ; i5h_x++ ){
+
+                i2k_x =( (i_mcx*512) + i5h_x );
+                i2k_y =( (i_mcy*512) + i5h_y );
+
+                i5h_i =( i5h_x + ( i5h_y * 512 ) );
+                i2k_i =( i2k_x + ( i2k_y *2048 ) );
+
+                let p5h = d_pix0512 ; //:@SRC@://
+                let p2k = d_pix2048 ; //:@DST@://
+                p2k[ (4*i2k_i)+0 ] = p5h[ (4*i5h_i)+0 ];
+                p2k[ (4*i2k_i)+1 ] = p5h[ (4*i5h_i)+1 ];
+                p2k[ (4*i2k_i)+2 ] = p5h[ (4*i5h_i)+2 ];
+                p2k[ (4*i2k_i)+3 ] = p5h[ (4*i5h_i)+3 ];
+
+                if( d_bug ){ 
+                    infloop_chk ++;
+                    if( infloop_chk >=(512*512) ){
+                        ERR("[OOB_BITCH:0512=>2048]");
+                    };;
+                };;
+                
+            };;};;
+            console.log( "[0512_2048:DONE]" );
+        };;
+    //:==========================:GET_READY_TO_LOAD_LEVEL://
+    //:SAVE_FILE_INDEX:==================================://
+    //:LOAD_FILE_INDEX:==================================://
+    //:                                                  ://
+    //:   IMGUR_SAVE  ::::::::::: F_HOTEL13_IMGURAP_SAV  ://
+    //:   IMGUR_LOAD  ::::::::::: F_HOTEL13_IMGURAP_LOD  ://
+    //:                                                  ://
+    //:   HEROKU_SAVE ::::::::::: F_HOTEL13_HEROKUA_SAV  ://
+    //:   HEROKU_LOAD ::::::::::: F_HOTEL13_HEROKUA_LOD  ://
+    //:                                                  ://
+    //:   FILE_SAVE / SAVE_FILE : F_HOTEL13_FILESYS_SAV  ://
+    //:   FILE_LOAD / LOAD_FILE : F_HOTEL13_FILESYS_LOD  ://
+    //:                                                  ://
+    //:==================================:SAVE_FILE_INDEX://
+    //:TEMPORARY_DEVELOPMENT_DATA:=======================://
+
+        var d_pngfile     = null ;;;;;;;;;;;;;;;;;;
+        var d_pngname     ="[nil][d_pngname]"     ;
+        var d_pngpath     ="[nil][d_pngpath]"     ;
+        var d_pngpath_upp ="[nil][d_pngpath_upp]" ;
+        var d_pngpath_dow ="[nil][d_pngpath_dow]" ;
+
+    //:=======================:TEMPORARY_DEVELOPMENT_DATA://
+    //:==================================:LOAD_FILE_INDEX://
+    //:SEFFECT_SIDE_EFFECT_SET:==========================://
+
+        const   F_HOTEL13_SEFFECT_PNGNAME_PNGPATH = function
+        PRIVATE_F_HOTEL13_SEFFECT_PNGNAME_PNGPATH(
+
+            /** NO ARGUMENTS. DONE VIA SIDE EFFECTS **/
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //:  Hotel13 is dedicated to the upload      ://
+            //:  and download of :                       ://
+            //:                                          ://
+            //:     [ LEVELPACK(S)/HOTEL(S)]             ://
+            //:                                          ://
+            //:  As such, API is tightly coupled with    ://
+            //:  the "levelpack" that the webpage        ://
+            //:  thinks that it is.                      ://
+            //:                                          ://
+            //:  DATE[ 2022_07_19 ]                      ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            d_pngname =( F_HOTEL13_XYZ_PNGNAME( 
+
+                d_hotel13_wmc_i_x  //: WorldMapCoord.i_x ://
+            ,   d_hotel13_wmc_i_y  //: WorldMapCoord.i_y ://
+            ,   d_hotel13_wmc_i_z  //: WorldMapCoord.i_z ://
+            ));;
+            d_pngpath =( F_HOTEL13_XYZ_PNGPATH(
+
+                d_hotel13_wmc_i_x  //: WorldMapCoord.i_x ://
+            ,   d_hotel13_wmc_i_y  //: WorldMapCoord.i_y ://
+            ,   d_hotel13_wmc_i_z  //: WorldMapCoord.i_z ://
+            ));;
+        };;
+    //:==========================:SEFFECT_SIDE_EFFECT_SET://
+    //:HOTEL13_ANY_API:==================================://
+    const   EXECUTO_F_HOTEL13_ANY_API_SAV = function
+    PRIVATE_EXECUTO_F_HOTEL13_ANY_API_SAV(
+            o_k_yes 
+        ,   wontsay
+    ){
+        //:SIDE_EFFECT_NOTE:-----------------------------://
+        //:                                              ://
+        //:     Relies on setting[ d_pngpath_upp ]       ://
+        //:                                              ://
+        //:-----------------------------:SIDE_EFFECT_NOTE://
+        //:[ATF]:----------------------------------------://
+        //:                                              ://
+        //:  Our HEROKU upload API and IMGUR upload      ://
+        //:  API should be able to be called the         ://
+        //:  EXACT SAME WAY from[ HOTEL13.JS ]client.    ://
+        //:                                              ://
+        //:  If this is the case, we can use this        ://
+        //:  SHARED_EXECUTOR function.                   ://
+        //:                                              ://
+        //:  Q : Why do we want this?                    ://
+        //:  A : Makes it easy to swap out who we        ://
+        //:    : are uploading to by just changing       ://
+        //:    : [ d_pngpath_upp ].                      ://
+        //:                                              ://
+        //:----------------------------------------:[ATF]://
+        //:HOTEL_CLIENT_CALLING_HOTEL_SERVER:============://
+
+            var o_k =( 1 );
+            
+            F_HOTEL13_2048_0512( 1 , 1 );
+            
+            LOG(  "[UPNG.encode]" , "[BEG]" );
+            d_pngfile = UPNG.encode( 
+            
+                [d_pix0512] //:ArrayOf_Frames://
+            ,   512         //:Width_InPixels://
+            ,   512         //:HeightInPixels://
+            ,   (0)         //:ZERO==LOSSLESS://
+            );;
+            LOG(  "[UPNG.encode]" , "[END]" );
+            
+            LOG( "[Need_To_Add_Heroku_Endpoint]" );
+
+
+
+            //: EX[ d_pngname ]IS[ "AIM_101_202_303.PNG" ]
+            //: EX[ d_pngpath ]IS[     "101/202/303"     ]
+        
+            //: d_pngpath_upp =( "UPLOAD/" + d_pngpath );
+            
+            F_HOTEL13_XHR_POST( 
+
+                d_pngpath_upp //:EX["UPLOAD/101/202/303"]://          
+            ,   d_pngfile     //:EX[some binary object  ]://
+
+            ).then((i_saywhat)=>{                        
+                                                        
+                console.log( "[what?]:" + i_saywhat );  
+
+                var job = JSON.parse( i_saywhat );
+                if( job.m_o_k <= 0 ){
+
+                    LOG( "[job]" , job );
+                    YEL("[d_pngpath_upp]:",d_pngpath_upp);
+                    ERR("[MY_SERVER_HATES_YOUR_GUTS]"); 
+                    
+                };;
+    
+                o_k_yes( i_saywhat );
+            });;   
+        //:============:HOTEL_CLIENT_CALLING_HOTEL_SERVER://
+    };;
+    //:==================================:HOTEL13_ANY_API://
+    //:HOTEL13_FUNCS:IMGUR_API_SAVE:=====================://
+    //:HOTEL13_FUNCS:IMGUR_API_LOAD:=====================://
+
+        const   EXECUTO_F_HOTEL13_IMGURAP_SAV = function
+        PRIVATE_EXECUTO_F_HOTEL13_IMGURAP_SAV(
+            o_k_yes                                     
+        ,   wontsay     
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://    
+            //:  Function should be identical to         ://
+            //:  [ EXECUTO_F_HOTEL13_HEROKUA_SAV ]       ://
+            //:  EXECPT[ d_pngpath_upp ]is different.    ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            F_HOTEL13_SEFFECT_PNGNAME_PNGPATH();
+
+            d_pngpath_upp =( 
+
+                "API/3RD/UPP/IMGUR/" + d_pngpath 
+            );;
+
+            EXECUTO_F_HOTEL13_ANY_API_SAV( 
+                o_k_yes
+            ,   wontsay
+            );;
+        };;
+
+        const   F_HOTEL13_IMGURAP_SAV = function
+        PRIVATE_F_HOTEL13_IMGURAP_SAV(
+
+            /** VOID **/
+        ){
+            var o_promise =( new Promise( 
+            
+                EXECUTO_F_HOTEL13_IMGURAP_SAV
+            ));;
+            return( o_promise );  
+        };;
+    
+        const   F_HOTEL13_IMGURAP_LOD = function
+        PRIVATE_F_HOTEL13_IMGURAP_LOD(
+
+            /** VOID **/
+        ){
+            window.alert( "[TODO]" );
+        };;
+    //:=====================:HOTEL13_FUNCS:IMGUR_API_SAVE://
+    //:=====================:HOTEL13_FUNCS:IMGUR_API_LOAD://
+    //:HOTEL13_FUNCS:HEROKUA_SAVE:=======================://
+    //:HOTEL13_FUNCS:HEROKUA_LOAD:=======================://
+
+        const   EXECUTO_F_HOTEL13_HEROKUA_SAV = function
+        PRIVATE_EXECUTO_F_HOTEL13_HEROKUA_SAV(
+            o_k_yes                                     
+        ,   wontsay     
+        ){
+
+            //:::::::::::::::::::::::::::::::://
+            //: Side Effect Set : d_pngname  ://
+            //: Side Effect Set : d_pngpath  ://
+            //:::::::::::::::::::::::::::::::://
+            F_HOTEL13_SEFFECT_PNGNAME_PNGPATH();
+            
+            //:::::::::::::::::::::::::::::::::::::::://
+            //: This path only uploads to heroku.    ://
+            //: It doesn't try to also upload to     ://
+            //: IMGUR API.                           ://
+            //:::::::::::::::::::::::::::::::::::::::://
+            d_pngpath_upp =( "UPLOAD/" + d_pngpath );
+
+            //:::::::::::::::::::::::::::::::::::::::://
+            //:                                      ://
+            //:  Shared executor function that should://
+            //:  work for XMLHTTPREQ to any "save"   ://
+            //:  api path in our server.             ://
+            //:::::::::::::::::::::::::::::::::::::::://
+            EXECUTO_F_HOTEL13_ANY_API_SAV( 
+                o_k_yes
+            ,   wontsay
+            );;
+                
+            //:<<<<<<<<<<<< MOVED_TO: EXECUTO_F_HOTEL13_ANY_API_SAV
+        };;
+
+        const   F_HOTEL13_HEROKUA_SAV = function
+        PRIVATE_F_HOTEL13_HEROKUA_SAV(
+
+            /** VOID **/
+        ){
+            var o_promise =( new Promise( 
+            
+                EXECUTO_F_HOTEL13_HEROKUA_SAV
+            ));;
+            return( o_promise );                      
+        };;
+
+        const   F_HOTEL13_HERSYNC_LOD_PNG = function
+        PRIVATE_F_HOTEL13_HERSYNC_LOD_PNG(
+
+            i_pngfile //:AKA[ got_png ]
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //: HERE : CLIENT                            ://
+            //: SYNC : SYNCHRONOUS                       ://
+            //:                                          ://
+            //: Loads a binary .PNG file in ram stored   ://
+            //: in[ i_pngfile ]into the game.            ://
+            //:                                          ://
+            //: i_pngfile is __NOT__ raw RGBA byte array!://
+            //: i_pngfile    __IS___ .PNG file format.   ://   
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            var o_k =( 1 );
+            
+            var got_png =( i_pngfile ); //:AKA[d_pngfile]://
+            var arr_buf =(  null     );
+            var pix_arr =(  null     );
+
+            LOG( "[Need_To_Add_Heroku_Endpoint]" );
+
+            //:Decode_PNG:-------------------------------://
+            if( o_k >= 1 ){
+            if( (null===got_png)||(!(got_png)) ){
+
+                MSG( "[got_png:does_not_exist]");
+                o_k=(0-1);
+            }else{
+                o_k=(0+1);
+                var buf_3pc ; //:buffer:3rd_party_code://
+                var img_3pc ; //:image::3rd_party_code://
+
+                LOG(    "[UPNG.decode]" , "[BEG]" );
+                buf_3pc = UPNG.decode(  got_png   );
+                LOG(    "[UPNG.decode]" , "[END]" );
+
+                img_3pc = UPNG.toRGBA8( buf_3pc );
+                arr_buf =( img_3pc[ 0 ] );
+            };;};;
+            //:-------------------------------:Decode_PNG:// 
+            //:Is_Array_Buffer_OK:-----------------------://
+            if( o_k >= 1 ){
+            if( (512*512*4) != arr_buf.byteLength ){
+            
+                YEL( "[BAD_LEN:arr_buf]" ); 
+                console.log( "[arr_buf]:" , arr_buf );
+            
+                o_k=( 0 - 404 );
+            }else{
+                o_k=( 0 + 777 );
+                pix_arr =new Uint8Array( arr_buf );
+            };;};;
+            //:-----------------------:Is_Array_Buffer_OK://
+            //:Copy_Buf_Into_Our_512:--------------------://
+            if( o_k >= 1 ){
+            if( (512*512*4) != pix_arr.length ){
+
+                YEL( "[BAD_LEN:pix_arr]" ); 
+                console.log( "[pix_arr]:" , pix_arr );
+
+                o_k =( 0 - 666 );
+            }else{
+                o_k =(0+2);
+
+                var bin ; //:@bin@:BufferIndex://
+
+                if( "undefined" === typeof pix_arr[ 0 ] ){
+                    console.log( "[pix_arr]" , pix_arr );
+                    ERR( "[YOUGOTITWRONG]");
+                };;
+
+                for(bin = 0 ; bin<=((512*512*4)-1) ; bin++ ){
+
+                    d_pix0512[ bin ]=( pix_arr[ bin ] );
+
+                };;
+                pix_arr=( null );
+            };;};;
+            //:--------------------:Copy_Buf_Into_Our_512://   
+
+            if( o_k >= 1 ){
+
+                F_HOTEL13_0512_2048( 1 , 1 );
+                LOG( "[HEROKUA_LOD:SUCCESS]" );
+            }else{
+                YEL( "[HEROKUA_LOD:FAILURE]" );
+            };;
+
+        };;
+
+        const   EXECUTO_F_HOTEL13_HEROKUA_LOD = function
+        PRIVATE_EXECUTO_F_HOTEL13_HEROKUA_LOD(
+            o_k_yes                                     
+        ,   wontsay  
+        ){
+
+            //:TODO: This should be a network access
+            //:      thing right here. Or rather...
+            //:      If we havent already saved to
+            //:      ram, request from network.
+            F_HOTEL13_HERSYNC_LOD_PNG(
+                d_pngfile
+            );;
+
+            o_k_yes( "[PNG_FILE_LOADED_INTO_GAME]" );
+        };;
+    
+        const   F_HOTEL13_HEROKUA_LOD = function
+        PRIVATE_F_HOTEL13_HEROKUA_LOD(
+
+            /** VOID **/
+        ){
+            var o_promise =( new Promise(
+
+                EXECUTO_F_HOTEL13_HEROKUA_LOD
+            ));;
+
+            return( o_promise );
+        };;
+    //:=======================:HOTEL13_FUNCS:HEROKUA_SAVE://
+    //:=======================:HOTEL13_FUNCS:HEROKUA_LOAD://
+    //:HOTEL13_FUNCS:FILESYSTEM_SAVE:====================://
+    //:HOTEL13_FUNCS:FILESYSTEM_LOAD:====================://
+    //:                                                  ://
+    //:   Security concerns make this impossible.        ://
+    //:   Use heroku server or imgur only.               ://
+    //:                                                  ://
+    //:- - - - - - - - - - - - -- - - - - - - - - - - - -://
+
+        const F_HOTEL13_FILESYS_SAVE = "[FIX:FILESYS_SAV]" ;
+        const F_HOTEL13_FILESYS_LOAD = "[FIX:FILESYS_LOD]" ;
+        const F_HOTEL13_FILESYS_LOA  = "[FIX:FILESYS_LOD]" ;
+    
+        const   F_HOTEL13_FILESYS_SAV = function
+        PRIVATE_F_HOTEL13_FILESYS_SAV(
+
+            /** VOID **/
+        ){
+            window.alert( "[IT_AINT_HAPPENIN]" );
+        };;
+    
+        const   F_HOTEL13_FILESYS_LOD = function
+        PRIVATE_F_HOTEL13_FILESYS_LOD(
+
+            /** VOID **/
+        ){
+            window.alert( "[IT_AINT_HAPPENIN]" );
+        };;
+    //:====================:HOTEL13_FUNCS:FILESYSTEM_SAVE://
+    //:====================:HOTEL13_FUNCS:FILESYSTEM_LOAD://
+
+//:BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB://
+//:BOTH_CLIENT_AND_SERVER_SECTION_HOTEL13:BBBBBBBBBBBBBBBBBBB://
+
+
+    //:HOTEL13_TAR:(TASK_ARRAY):=========================://
+    //:                                                  ://
+    //:     #_TASK_ARRAY_MIGHT_BE_TOO_COMPLEX_#          ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
+        const   F_HOTEL13_NEW_TASKARR = "[USE:NEW_TAR]" ;
+        const   F_HOTEL13_TAR_NEW     = "[USE:NEW_TAR]" ;
+
+        const   F_HOTEL13_NEW_TAR = function
+        PRIVATE_F_HOTEL13_NEW_TAR(
+
+            /**VOID**/
+        ){  //:::::::::::::::::::::::::::::::::::::::::::://
+            //:[ATF]:Create New Task Array Runner   [ATF]://
+            //:::::::::::::::::::::::::::::::::::::::::::://
+
+            var o_tar ={ laxcoma:"[HACK]"
+                             //::::::::::::::::::::::::::://
+            ,   m_t_a : [ ]  //: Member:TaskArray        ://    
+            ,   m_t_p :(0-1) //: Member:TaskPointer      ://    
+            ,   m_end : null //: Member:END/DONE function://  
+            ,   m_log : [ ]  //: Member:LoggingArray     ://
+            };;              //::::::::::::::::::::::::::://
+            Object.seal( o_tar );
+            return(      o_tar );
+        };;
+
+        const F_HOTEL13_RUNLIST = "[USE:F_HOTEL13_TAR_RUN]" ;
+        const F_HOTEL13_NEXTASK = "[USE:F_HOTEL13_TAR_NEX]" ;
+        const F_HOTEL13_EXITASK = "[USE:F_HOTEL13_TAR_EXI]" ;
+        const F_HOTEL13_RUNTASK = "[USE:F_HOTEL13_TAR_RUN]" ;
+        const F_HOTEL13_TASKNEX = "[USE:F_HOTEL13_TAR_NEX]" ;
+        const F_HOTEL13_RUNNEXT = "[USE:F_HOTEL13_TAR_NEX]" ;
+        const F_HOTEL13_TAR_ERR = "[USE:F_HOTEL13_TAR_EXI]" ;
+        const F_HOTEL13_TASKEXI = "[USE:F_HOTEL13_TAR_EXI]" ;
+        const F_HOTEL13_TASKLOG = "[USE:F_HOTEL13_TAR_TAL]" ;
+        const F_HOTEL13_TAR_LOG = "[USE:F_HOTEL13_TAR_TAL]" ;
+
+        const   F_HOTEL13_TAR_RUN = function
+        PRIVATE_F_HOTEL13_TAR_RUN(
+
+            i_tar  
+        ){
+            var o_vod_promise = new Promise( function
+            EXECUTO_F_HOTEL13_TAR_RUN(o_k_yes,wontsay ){
+
+                //:#_THIS_IS_NOT_K_I_S_S_#://
+
+                i_tar.m_t_p ++;
+                ASS( 0 === i_tar.m_t_p , "[TAR_M_T_P]" );
+
+                i_tar.m_end =( o_k_yes          );
+                var taskcmd =( i_tar.m_t_a[ 0 ] );
+                    taskcmd(   i_tar            );
+            });;
+            return( o_vod_promise );
+        };;
+        const   F_HOTEL13_TAR_NEX = function
+        PRIVATE_F_HOTEL13_TAR_NEX(
+
+            i_tar
+        ){
+            var m_i =( i_tar.m_t_a.length - 1 );
+                i_tar.m_t_p ++;
+            if( i_tar.m_t_p > m_i ){
+
+                console.log( "[RESOLVING_PROMISE]" );
+                i_tar.m_end( /** _void_ **/ );
+            }else{
+                var taskcmd = i_tar.m_t_a[ 
+                              i_tar.m_t_p ];  
+                    taskcmd(  i_tar       );
+            };;
+        };;
+        const   F_HOTEL13_TAR_EXI = function
+        PRIVATE_F_HOTEL13_TAR_EXI(
+
+            i_tar  //:Input Task Array Object://
+        ,   i_err_obj  //:Optional_Error_Object  ://
+        ){
+            console.log( "[EXITASK/EARLY_ABORT]" );
+            if( i_err_obj ){
+                console.log( i_err_obj );
+            };;
+            i_tar.m_log.push( ""+i_err_obj+"" );
+            i_tar.m_end( /**   NO ARGS   **/  );
+        };;
+        const   F_HOTEL13_TAR_TAL = function
+        PRIVATE_F_HOTEL13_TAR_TAL(
+
+            i_tar //: Task Array Object     ://
+        ,   i_msg //: Message To Add To Log ://
+        ){
+            if( !( "object" == typeof i_tar ) ){
+                ERR("[WHERE_IS_THE_TAR?]");
+            };;
+            if( !( Array.isArray( i_tar.m_log ) ) ){
+                console.log( "[i_tar.m_log]:" 
+                            ,  i_tar.m_log );;
+                ERR("[WHERE_IS_THE_LOG?]");
+            };;
+
+            console.log(      i_msg );
+            i_tar.m_log.push( i_msg );
+        };;
+    //:=========================:HOTEL13_TAR:(TASK_ARRAY)://
+    //:HOTEL13_CAS_TYPES:================================://
+
+        const   F_HOTEL13_NEW_SCATPNG = function
+        PRIVATE_F_HOTEL13_NEW_SCATPNG(
+
+            /** VOID **/
+        ){
+            var o_scatpng ={ laxcoma:"[HACK]"
+            ,       m_png  : null   //: .PNG Binary File ://
+            ,       m_has  : (0)    //:  HAS .PNG File?  ://
+            ,       m_ooi  :"[nil][m_ooi]"     //:@m_ooi@://
+            ,       m_log  : [ ]    //: LoggingObject://
+            };;
+            Object.seal( o_scatpng );
+            return(      o_scatpng );
+        };;
+
+        const c_hotel13_scatpng_ooi_heroku =(
+
+            "[M_OOI.HEROKU:::::FILE_SYSTEM]"
+        );;
+        const c_hotel13_scatpng_ooi_imgur  =(
+
+            "[M_OOI.IMGUR:::IMAGE_DOWNLOAD]"
+        );;
+        const c_hotel13_scatpng_ooi_none   =(
+
+            "[M_OOI.NONE::::NO_IMAGE_FOUND]"
+        );;
+
+    //:================================:HOTEL13_CAS_TYPES://
+    //:HOTEL13_CAS_FUNCTIONS:============================://
+    //:                                                  ://
+    //:  SEE[ #_ABOUT_CAS_FUNCTIONS_# ]                  ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
+    //:CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC://
+    ////////////////////////////////////////////////////////
+    const   F_HOTEL13_CAS_COOHASH_SCATPNG = function
+    PRIVATE_F_HOTEL13_CAS_COOHASH_SCATPNG(
+    ////////////////////////////////////////////////////////
+
+        i_coohash
+
+    ////////////////////////////////////////////////////////
+    ){if(      d_hotel13_notnode   ){ //////////////////////
+    ////////////////////////////////////////////////////////
+    return new Promise( function F01( o_k_yes , wontsay ){
+
+        var o_scatpng =( F_HOTEL13_NEW_SCATPNG() );
+
+        //:::::::::::::::::::::::::::::::::::::::::::://        
+        //:EX[ www.app.com                          ]://        
+        //:  [      /F_HOTEL13_CAS_COOHASH_SCATPNG  ]://
+        //:  [      /001_001_001                    ]://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        if( "string" != typeof d_url ){
+
+            YEL("[WHY_THE_FUCK_NO:d_url]");
+            ERR("[WHY_THE_FUCK_NO:d_url]");
+        };;
+        var e_s =( "/" != d_url[d_url.length-1]?"/":"");
+        var url =( ""
+        +    d_url+e_s
+        +    "F_HOTEL13_CAS_COOHASH_SCATPNG/"
+        +    i_coohash
+        );;
+        console.log( "[SCATPNG_URL]:" , url );
+
+        var ooi =( null /**Origin_Of_Image**/ );
+        var xhr = new XMLHttpRequest();
+            xhr.open( "GET" , url );
+            xhr.responseType = "arraybuffer" ;
+            xhr.send();
+            xhr.onreadystatechange=(e)=>{
+            if( xhr.readyState === xhr.HEADERS_RECEIVED 
+            ||  xhr.readyState === (2)
+            ){
+                MSG( "[HEADERS_RECIEVED]" );
+
+                ooi =( xhr.getResponseHeader( 
+                    "nsh_ooi" ));;
+            };;
+            if( xhr.readyState === (4) ){
+
+
+
+                if( "string" != typeof ooi ){
+                    YEL( "[WHERE_THE_FUCK_IS_MY_HEADER]");
+                    ERR( "[WHERE_THE_FUCK_IS_MY_HEADER]");
+                };;
+                
+                if( 200 === xhr.status ){
+                    o_scatpng.m_has =(  1           );
+                    o_scatpng.m_png =( xhr.response );
+                    o_scatpng.m_ooi =(     ooi      );
+                    o_scatpng.m_log.push("[YES:200]");
+                }else{
+                    o_scatpng.m_has =( 0 - 420669   );
+                    o_scatpng.m_png =(    null      );
+                    o_scatpng.m_ooi =(     ooi      );
+                    o_scatpng.m_log.push("[NOT:200]");
+                };;
+
+                o_k_yes( o_scatpng );
+            };;};;
+    });;
+    ////////////////////////////////////////////////////////
+    }else if(  d_hotel13_yesnode   ){ //////////////////////
+    ////////////////////////////////////////////////////////    
+    return new Promise( function F02( o_k_yes , wontsay ){
+
+        var tar = F_HOTEL13_NEW_TAR(); //: NewTaskArray  ://
+        let NEX = F_HOTEL13_TAR_NEX ;  //: NextTask      ://
+        let EXI = F_HOTEL13_TAR_EXI ;  //: EarlyExit     ://
+        let TAL = F_HOTEL13_TAR_TAL ;  //: TaskArr.LOG   ://
+
+        var o_scatpng =( F_HOTEL13_NEW_SCATPNG() );
+        var aimpath = F_HOTEL13_COOHASH_AIMPATH(i_coohash);
+
+        let ooi_heroku = c_hotel13_scatpng_ooi_heroku ;
+        let ooi_imgur  = c_hotel13_scatpng_ooi_imgur  ;
+        let ooi_none   = c_hotel13_scatpng_ooi_none   ;
+
+        var png_url =( "[nil][png_url]" );
+
+        o_scatpng.m_ooi =( ooi_none );
+
+        l_fs.readFile( aimpath , (i_err,i_cof)=>{
+
+            if( i_err ){
+                TAL( tar , "[PNG_404_HEROKU_DISK]" );
+
+                let t_a = tar.m_t_a ;
+                t_a.push( 
+                        F02_GET_IMGUR_URL_FROM_DATABASE );;
+                t_a.push( 
+                        F02_TRY_TO_READ_FROM_IMGUR      );;
+
+                F_HOTEL13_TAR_RUN( tar ).then((_void_)=>{
+
+                    //:::::::::::::::::::::::::::::::://
+                    //:Never Fail. Just Don't Return ://
+                    //:Data Askef For If You Cant.   ://
+                    //:::::::::::::::::::::::::::::::://   
+                    o_scatpng.m_log.push( tar.m_log );
+                    o_k_yes( o_scatpng );
+                });;
+            }else{
+                TAL( tar , "[PNG_FOUND_ON_DISK]" );
+
+                o_scatpng.m_has =(    1  );
+                o_scatpng.m_png =( i_cof );
+                o_scatpng.m_ooi =( ooi_heroku );
+
+                o_scatpng.m_log.push( tar.m_log );
+                o_k_yes( o_scatpng );
+            };;
+        });;
+        function 
+        F02_GET_IMGUR_URL_FROM_DATABASE( i_tar ){
+
+            if( ! ( F_HOTEL13_ICH( i_coohash ))){
+            
+                EXI( i_tar , "[NOT_A_COORDHASH]" );
+            }else{
+
+                var sql_cmd =( d_sel_tab_hotel13 );
+                sql_cmd = sql_cmd.replaceAll(
+
+                    "[i_coohash]" , i_coohash
+                );;
+            
+                d_hotel13_dcp.query( sql_cmd )
+                .then( function( i_res ){ 
+                    
+                    png_url =( i_res.rows[ 0 ]
+                              .col_png_url );;
+
+                    TAL( i_tar , ""
+                    +   "[-][png_url][-]:"
+                    +   "("
+                    +   ASS( png_url )
+                    +   ")"
+                    );;
+                    NEX( i_tar );
+                }).catch( function( i_err ){                  
+                             
+                    TAL( i_tar , "[i_err]"+i_err );
+                    TAL( i_tar , "[BEG:SQL_CMD]" );
+                    TAL( i_tar ,   sql_cmd       );
+                    TAL( i_tar , "[END:SQL_CMD]" );
+                    EXI( i_tar , "[QUERYFAIL]"   );          
+                }) 
+                ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+            };;
+        };;
+        function 
+        F02_TRY_TO_READ_FROM_IMGUR( i_tar ){
+
+            var arr_dat = [   ]; //:@arr_dat@://
+            var cat_dat =(null); //:@cat_dat@://
+
+            var ask = l_https.request({
+
+                host     : "i.imgur.com"  
+            ,   path     : ASS( png_url )
+            ,   method   : "GET" 
+            ,   headers  :
+                {
+                    accept : "image/png"
+                }
+            },( got )=>{ 
+
+                //+ WILL_CORRUPT_YOUR_DATA!!!!!!!!!!!!!! +//
+                //- DONT[  got.setEncoding( "utf8" );  ] -//        
+
+                got.on( "data" , ( got_dat )=>{
+
+                    TAL( i_tar , "[!GOT_DAT!]" );
+                    arr_dat.push(   got_dat    );
+
+                });;
+                got.on( "error",(e)=>{ EXI( i_tar,e);        });
+                got.on( "end"  ,( )=>{ TAL( i_tar,"[E001]"); });
+                got.on( "close",( )=>{ 
+
+                    cat_dat =( Buffer.concat( arr_dat ) );
+
+                    o_scatpng.m_png=( cat_dat   );
+                    o_scatpng.m_has=(  1        );
+                    o_scatpng.m_ooi=( ooi_imgur );
+
+                    NEX( i_tar  );        
+                });
+            });;
+            ask.on( "error",(e)=>{ EXI( i_tar,e ); });
+        //- ask.write( ); /** Only POST needs WRITE **/  -//        
+            ask.end();
+        };;
+    });;
+    ////////////////////////////////////////////////////////
+    }else{ ERR("[NEITHER_ENVIRONMENT]"); };;};;
+    ////////////////////////////////////////////////////////
+    //:CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC://
+
+    //:============================:HOTEL13_CAS_FUNCTIONS://
+
+//:BBBBBBBBBBBBBBBBBBB:BOTH_CLIENT_AND_SERVER_SECTION_HOTEL13://
+//:BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB://
+
+
+    //:HOTEL13_FUNCS:ALL_RENDER_CODE:====================://
+    //:HOTEL13_FUNCS:_DRAW_2D:===========================://
+    //:SEG_D2D:- - - - - - - - -- - - - - - - - -:SEG_D2D://
+
     //:TYPO:F_HOTEL13_DRAW_2D_REC://
     const   F_HOTEL13_DRAW_2D_REC =(
       "[FIX:F_HOTEL13_DRAW_2D_BOX]" );
@@ -3727,6 +7184,8 @@
         inn_ctx.stroke();
     }
     
+    //:SEG_D2D:- - - - - - - - -- - - - - - - - -:SEG_D2D://
+    
     const   F_HOTEL13_DRAW_2D_CIR = function
     PRIVATE_F_HOTEL13_DRAW_2D_CIR(
         i_ctx //: Context  ://
@@ -3744,6 +7203,8 @@
         i_ctx.lineWidth = 1;
         i_ctx.stroke();
     };;
+
+    //:SEG_D2D:- - - - - - - - -- - - - - - - - -:SEG_D2D://
     
     const   F_HOTEL13_DRAW_2D_TIL = function
     PRIVATE_F_HOTEL13_DRAW_2D_TIL(
@@ -4095,6 +7556,9 @@
         };;};;
         };;};;
     };;
+
+    //:SEG_D2D:- - - - - - - - -- - - - - - - - -:SEG_D2D://
+
     const   F_HOTEL13_DRAW_2D_BOM = function
     PRIVATE_F_HOTEL13_DRAW_2D_BOM(
     
@@ -4372,12 +7836,10 @@
 
         };;};;
         };;};;
-
-
-
-
-
     };;
+
+    //:SEG_D2D:- - - - - - - - -- - - - - - - - -:SEG_D2D://
+
     const   F_HOTEL13_DRAW_2D_FAD = function
     PRIVATE_F_HOTEL13_DRAW_2D_FAD(
     
@@ -4579,6 +8041,8 @@
         };;};;
         };;};;
     };;
+
+    //:SEG_D2D:- - - - - - - - -- - - - - - - - -:SEG_D2D://
     
     const F_HOTEL13_DRAW_2D = function
     PRIVATE_F_HOTEL13_DRAW_2D(
@@ -4610,7 +8074,11 @@
             F_HOTEL13_DRAW_2D_FAD();  
         };;
     };;
-    
+    //:SEG_D2D:- - - - - - - - -- - - - - - - - -:SEG_D2D://
+    //:====================:HOTEL13_FUNCS:ALL_RENDER_CODE://
+    //:===========================:HOTEL13_FUNCS:_DRAW_2D://
+    //:HOTEL13_FUNC:MAIN_UPDATE_LOOP:====================://
+
     const   F_HOTEL13_SAM_TIK = function
     PRIVATE_F_HOTEL13_SAM_TIK(
         /** NO ARGS **/
@@ -4662,13 +8130,6 @@
                 console.log( "[YOU_BE_LAGGGIN]" );
             };;
         //:--------------------------:Is_FPS_GOOD://
-
-    //:   console.log("[d_hotel13_mil]:"
-    //:                ,d_hotel13_mil );;
-    //:   console.log("[d_hotel13_tms]:"
-    //:                ,d_hotel13_tms );;
-    
-
     };;
     
     const   F_HOTEL13_SAM_TIKLOOP = function
@@ -4691,6 +8152,8 @@
         ,   ( d_hotel13_ams         )    
         );;
     };;
+    //:====================:HOTEL13_FUNC:MAIN_UPDATE_LOOP://
+    //:HOTEL13_STAND_ALONE_MAIN_INITIALIZER:=============://    
         
     const F_HOTEL13_SAM_RUN = function
     PRIVATE_F_HOTEL13_SAM_RUN(
@@ -4727,9 +8190,99 @@
                 "[Code_Only_For_Standalone_Mode]"
             );;
         };;
+
+        //:Try_To_Load_Level_From_Server:----------------://
+
+            var s_x =( ""+d_hotel13_wmc_i_x+"" );
+            var s_y =( ""+d_hotel13_wmc_i_y+"" );
+            var s_z =( ""+d_hotel13_wmc_i_z+"" );
+
+            if( 0
+            ||   ( 0 > d_hotel13_wmc_i_x )
+            ||   ( 0 > d_hotel13_wmc_i_y )
+            ||   ( 0 > d_hotel13_wmc_i_z )
+            ){
+                YEL("[NEG_WMC:wmc_hasnt_been_set_yet]");
+                ERR("[NEG_WMC:wmc_hasnt_been_set_yet]");
+            };;
+
+            //:zero_padded_string_coords:------------://
+
+            //: TAG[ zeropad | zero-pad | zero_pad ] ://
+            //: TAG[ zeropadding | zero-padding    ] ://
+            //: TAG[ zero_padding | zero padding   ] ://
+                
+                var dex=( 0 );
+                for( dex = 0 ; dex <=(3-1) ; dex++ ){
+
+                    //:#_ZERO_PAD_#://
+                    if( s_x.length < 3 ){s_x="0"+s_x;};
+                    if( s_y.length < 3 ){s_y="0"+s_y;};
+                    if( s_z.length < 3 ){s_z="0"+s_z;};
+                };;
+
+            //:------------:zero_padded_string_coords://
+            //:Initiate_Download:--------------------://
+
+                //:::::::::::::::::::::::::::::::::::://
+                //:EX[ "PNG/X_111/Y_222/Z_333/"     ]://
+                //:..[   "AIM_111_222_333.PNG"      ]://
+                //:::::::::::::::::::::::::::::::::::://
+                d_pngpath_dow =( ""
+                +     "PNG/" 
+
+                +     "X_" + s_x + "/"
+                +     "Y_" + s_y + "/"
+                +     "Z_" + s_z + "/"  
+
+                +     "AIM"
+                +      "_"
+                +      s_x
+                +      "_"
+                +      s_y
+                +      "_"
+                +      s_z
+
+                +    ".PNG"
+                );;
+
+                let coohash =(
+                    ( s_x + "_" + s_y + "_" + s_z )
+                );;
+
+                F_HOTEL13_CAS_COOHASH_SCATPNG( coohash )
+                .then( ( i_scatpng )=>{
+
+                    if( i_scatpng.m_has >= 1 ){
+
+                        LOG( "[i_scatpng.m_has]"
+                             , i_scatpng.m_has );;
+                        LOG( "[i_scatpng.m_ooi]"
+                             , i_scatpng.m_ooi );;
+
+                        F_HOTEL13_HERSYNC_LOD_PNG(
+
+                            i_scatpng.m_png
+                        );;
+                    }else{
+                        //:::::::::::::::::::::::::::::::://
+                        //: Do nothing. No .PNG to load. ://
+                        //: .PNG ==[ LevelPack / Hotel ] ://
+                        //:::::::::::::::::::::::::::::::://
+                        console.log(
+                            "[NO_PNG:i_scatpng]" 
+                                    ,i_scatpng 
+                        );;
+                    };;
+                });;
+            //:------------------------:Initiate_Download://
+        //:----------------:Try_To_Load_Level_From_Server://
+
     
         F_HOTEL13_SAM_TIKLOOP(); //:LoopForever://
     };;
+    //:=============:HOTEL13_STAND_ALONE_MAIN_INITIALIZER:// 
+    //:HOTEL13_FUNCS:CLICK_TO_GRIDCELL_XY:===============://
     
     const   F_HOTEL13_SAM_EDI_CLK_G_X =(
       "[FIX:F_HOTEL13_SAM_EDI_CLK_GXY]" );;
@@ -4754,7 +8307,14 @@
     
         return( [ g_x , g_y ] );
     };;
-    
+    //:===============:HOTEL13_FUNCS:CLICK_TO_GRIDCELL_XY://
+    //:HOTEL13_FUNCS:EDITOR_HIT_DETECTION:===============://
+    //:                                                  ://
+    //:    This hit detection is what makes              ://
+    //:    "no overlap" mode in editor possible.         ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
     //:TYPO:F_HOTEL13_EDI_CLK_HIT://
     const   F_HOTEL13_EDI_CLK_HIT =(
       "[FIX:F_HOTEL13_SAM_EDI_CLK_HIT]" );;
@@ -4796,8 +8356,17 @@
         var g_x =( gxy[ 0 ] );
         var g_y =( gxy[ 1 ] );
 
-        ASS( g_x >= 0 && g_x <=( 5-1 ) , "[AGX]" );
-        ASS( g_y >= 0 && g_y <=( 5-1 ) , "[AGY]" );
+        if( 0
+        ||  (!( g_x >= 0 && g_x <=( 5-1 ) ))
+        ||  (!( g_y >= 0 && g_y <=( 5-1 ) ))
+        ){
+            YEL( "[g_x]:" , g_x       );
+            YEL( "[g_y]:" , g_y       );
+            YEL( "[p_x]:" , i_clk_p_x );
+            YEL( "[p_y]:" , i_clk_p_y );
+
+            ERR( "[g_x_orr_g_y:OOB]"  );
+        };;
 
         var g25 , h_x , h_y ;
 
@@ -4910,7 +8479,8 @@
     
         return( o_hit );
     };;
-
+    //:===============:HOTEL13_FUNCS:EDITOR_HIT_DETECTION://
+    //:HOTEL13_FUNCS:EDITOR_MOUSE_MOVE:==================://
 
     const   F_HOTEL13_SAM_EDI_MOU = function
     PRIVATE_F_HOTEL13_SAM_EDI_MOU(
@@ -4965,6 +8535,8 @@
             sam.te7_mou_t_y[ te7 ]= t_y ;
         };;
     };;
+    //:==================:HOTEL13_FUNCS:EDITOR_MOUSE_MOVE://
+    //:HOTEL13_FUNCS:EDITOR_CLICK:=======================://
     
     const   F_HOTEL13_SAM_EDI_CLK = function
     PRIVATE_F_HOTEL13_SAM_EDI_CLK(
@@ -5208,6 +8780,9 @@
     
     };;
     
+    //:=======================:HOTEL13_FUNCS:EDITOR_CLICK://
+    //:HOTEL13_FUNCS:MOUSE_EVENTS:=======================://
+
     const   F_HOTEL13_SAM_MOU_CLK = function
     PRIVATE_F_HOTEL13_SAM_MOU_CLK(
         evt_clk
@@ -5215,10 +8790,14 @@
         var clk_p_x = evt_clk.offsetX ;
         var clk_p_y = evt_clk.offsetY ;
         
-        F_HOTEL13_SAM_EDI_CLK(
-            clk_p_x
-        ,   clk_p_y
-        );;
+        if( clk_p_x >= 0 && clk_p_x <=(c_fiverez-1) ){
+        if( clk_p_y >= 0 && clk_p_y <=(c_fiverez-1) ){
+
+            F_HOTEL13_SAM_EDI_CLK(
+                clk_p_x
+            ,   clk_p_y
+            );;
+        };;};;
     
         console.log( "[evt_clk]:" , evt_clk );
     };;
@@ -5226,27 +8805,36 @@
     PRIVATE_F_HOTEL13_SAM_MOU_MOV(
         evt_mov
     ){
-        if( 1 == 1 /**Always**/  ){
+        var mov_p_x = evt_mov.offsetX ;
+        var mov_p_y = evt_mov.offsetY ;
 
-            /** Update Cursor Position **/
+        if( mov_p_x >= 0 && mov_p_x <=(c_fiverez-1) ){
+        if( mov_p_y >= 0 && mov_p_y <=(c_fiverez-1) ){
 
-            F_HOTEL13_SAM_EDI_MOU(
-                evt_mov.offsetX
-            ,   evt_mov.offsetY
-            );;
-        };;
-        if( sam.edi_mod_hol >= 1 ){
-        
-            F_HOTEL13_SAM_EDI_CLK(
-                evt_mov.offsetX
-            ,   evt_mov.offsetY
-            );;
-        };;
+            if( 1 == 1 /**Always**/  ){
+
+                /** Update Cursor Position **/
+
+                F_HOTEL13_SAM_EDI_MOU(
+                    mov_p_x
+                ,   mov_p_y
+                );;
+            };;
+            if( sam.edi_mod_hol >= 1 ){
+
+                F_HOTEL13_SAM_EDI_CLK(
+                    mov_p_x
+                ,   mov_p_y
+                );;
+            };;
+        };;};;
     
         //////////////////console.log( "[evt_mov]:" , evt_mov );
     };;
     
-    
+    //:=======================:HOTEL13_FUNCS:MOUSE_EVENTS://    
+    //:HOTEL13_FUNCS:EVENT_KEYBOARD:=====================://
+
     const   F_HOTEL13_EVT_ASC = function              
     PRIVATE_F_HOTEL13_EVT_ASC(                        
                                                       
@@ -5272,8 +8860,8 @@
         return( o_asc_key );   
     };;                                               
     
-    
-    
+    //:=====================:HOTEL13_FUNCS:EVENT_KEYBOARD://
+    //:HOTEL13_FUNCS:KEYBOARD:===========================://
     
     const   F_HOTEL13_SAM_KEY_DOW = function
     PRIVATE_F_HOTEL13_SAM_KEY_DOW(
@@ -5281,6 +8869,37 @@
     ){
         let sam = d_hotel13_sam ;
         var asc = F_HOTEL13_EVT_ASC( evt_key );
+
+        //:levelpack_save:-------------------------------://
+        //:levelpack_load:-------------------------------://
+    
+            if( "S" == asc ){ 
+
+                //:::::::::::::::::::::::::::::::::::::::://    
+                //:                                      ://
+                //:  All[ F_HOTEL13_*******_SAV ]Calls   ://
+                //:  should save to HEROKU_HARD_DISK     ://
+                //:  in addition to wherever-else on the ://
+                //:  internet they decide to save.       ://
+                //:                                      ://
+                //:::::::::::::::::::::::::::::::::::::::://
+
+                 ///// F_HOTEL13_HEROKUA_SAV();   //:<--------- sanity check. make sure this still works.
+                F_HOTEL13_IMGURAP_SAV(); 
+
+            };;
+            if( "L" == asc ){ F_HOTEL13_HEROKUA_LOD();    };
+            if( "O" == asc ){ /** OBLITERATE NOT OPEN **/ };
+
+            //:------------------------------------------://
+            //:                                          ://
+            //: Will only work from a webserver it seems ://
+            //:                                          ://
+            //: stackoverflow.com/questions/69591311     ://
+            //:------------------------------------------://
+
+        //:-------------------------------:levelpack_save://
+        //:-------------------------------:levelpack_load://
 
         if( "-" == asc
         ||  "_" == asc
@@ -5433,6 +9052,7 @@
         console.log( "[key_upp]:" , evt_key );
     };;
     
+    //:===========================:HOTEL13_FUNCS:KEYBOARD://
     //:HOTEL13_UNIT_TEST:================================://
     
     const   F_HOTEL13_UTM = function
@@ -5531,7 +9151,10 @@
     
         console.log("[part_of_something_larger]");
     }else
-    if( d_hotel13_not_aim ){
+    if( 1                  //:---------------------------://
+    &&  d_hotel13_not_aim  //: <-- STANDALONE APP ?      ://
+    &&  d_hotel13_notnode  //: <-- CLIENT    SIDE ?      ://
+    ){                     //:---------------------------://
     
         console.log("[cellcularbombomata]");
         
@@ -5586,18 +9209,3182 @@
         F_HOTEL13_UTM();  //:#WHY_UTM_ONLY_CALLED_HERE#??://
         F_HOTEL13_SAM_RUN();
     
+    }else
+    if( 1                  //:---------------------------://
+    &&  d_hotel13_not_aim  //: <-- STANDALONE APP ?      ://
+    &&  d_hotel13_yesnode  //: <-- SERVER    SIDE ?      ://
+    ){                     //:---------------------------://
+
+        console.log( "[hotel13_running_as_server]" );
     }else{
+
+        console.log( "[d_hotel13_yes_aim]:"
+                    ,  d_hotel13_yes_aim );;
+
+        console.log( "[d_hotel13_not_aim]:" 
+                    ,  d_hotel13_not_aim );;
+
+        console.log( "[d_hotel13_yesnode]:" 
+                    ,  d_hotel13_yesnode );;
+
+        console.log( "[d_hotel13_notnode]:" 
+                    ,  d_hotel13_notnode );;
+
         ERR("[unexpectedcase:2022_07_05]");
     };;
     //:========================:HOTEL13_STAND_ALONE_SETUP://
+    //:TRY_TO_PARSE_INTEGER:=============================://
+    //:                                                  ://
+    //:    Used so that we can detect what levelpack     ://
+    //:    X/Y room is being requested by client.        ://
+    //:                                                  ://
+    //:    EXAMPLE:  www.myserver.com/000/000            ://
+    //:           :  Is LevelPack [ 0 , 0 ]              ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
+        const   F_HOTEL13_TRYATOI = function
+        PRIVATE_F_HOTEL13_TRYATOI(
+
+            i_str
+        ){
+            var o_k =( 1 );
+
+            //:::::::::::::::::::::::::::::::::::::::::::://
+            //: hack so that we don't crash when trying  ://
+            //: to invoke method on[ i_str ].            ://
+            //:::::::::::::::::::::::::::::::::::::::::::://
+            if( 0
+            ||  null        ==        i_str  
+            ||  "undefined" == typeof i_str  
+            ||  "string"    != typeof i_str
+            ){
+                i_str =( "" );
+            };;
+              
+
+            var o_obj ={ laxcoma:"[HACK]"
+
+            ,   m_has : 0 //: m_i32 exists ?      ://
+            ,   m_i32 : 0 //: boxed integer value ://
+            };;
+
+            var dex     ;
+            var s09 = ""; //:@s09@:String:Only0T09://
+            var nlz = ""; //:@nlz@:NoLeadingZeros ://
+            var c_p =(1); //:@c_p@:CollectionPhase://
+
+            //:::::::::::::::::::::::::::::::::::::::::::://
+            //: Remove anything but "0" to "9" ascii     ://
+            //:::::::::::::::::::::::::::::::::::::::::::://
+
+            var arr =( i_str.split("").filter( ( c )=>{
+
+                var o_yes =( 0
+                ||  "0" === c
+                ||  "1" === c
+                ||  "2" === c
+                ||  "3" === c
+                ||  "4" === c
+                ||  "5" === c
+                ||  "6" === c
+                ||  "7" === c
+                ||  "8" === c
+                ||  "9" === c
+                );;
+                return( o_yes );
+            }));;
+            var s09 = arr.join("");
+            
+            //:::::::::::::::::::::::::::::::::::::::::::://
+            //: Removing leading zeros.: : : : : : : : : ://
+            //: "001" ==> "1"          : : : : : : : : : ://
+            //:::::::::::::::::::::::::::::::::::::::::::://
+            if( s09.length <= 0 ){
+            
+                o_obj.m_has =( 0 );
+                o_obj.m_i32 =( 0 );
+                o_k =( 0 );
+            }else{
+                for(dex = 0  
+                ;   dex <=(s09.length-1) 
+                ;   dex++
+                ){    
+
+                    if( 1 == c_p ){
+                        if( "0" != nlz[ dex ] ){
+
+                            c_p=( 2 );
+                        };;
+                    };;
+
+                    if( 2 == c_p ){
+                        nlz += s09[ dex ];
+                    };;
+                };;
+            };;
+            if( o_k >= 1 ){
+                //: : : : : : : ::: : : : : : : ://
+                //: No numeric characters (0-9) ://
+                //: found in the string.        ://
+                //: : : : : : : ::: : : : : : : ://
+                if( 0 === nlz.length ){
+
+                    o_obj.m_has =( 0 );
+                    o_obj.m_i32 =( 0 );
+                    o_k=( 0 );
+                };;
+            };;
+            if( o_k >= 1 ){
+
+                var res = Number.parseInt( nlz , 10 );
+                if( Number.isNaN( res ) ){
+
+                    o_obj.m_has =( 0 );
+                    o_obj.m_i32 =( 0 );
+                    o_k=( 0 );
+                }else{
+
+                    o_obj.m_has =(  1  );
+                    o_obj.m_i32 =( res );
+                    o_k=( 1 );
+                };;
+            };;
+
+            return( o_obj );
+        };;
+    //:=============================:TRY_TO_PARSE_INTEGER://
+    //:IS_THREE_DIGIT_STRING:============================://
+    //:YES_STRING_3_DIGITS:==============================://
+
+        const   F_HOTEL13_S3D     = "[FIX:YES_S3D]" ;
+        const   F_HOTEL13_3DS     = "[FIX:YES_S3D]" ;
+        const   F_HOTEL13_YES_3DS = "[FIX:YES_S3D]" ;
+
+        const   F_HOTEL13_YES_S3D = function
+        PRIVATE_F_HOTEL13_YES_S3D(  //:<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI : new:2022_07_19
+
+            i_str_num
+        ){
+            var o_yes =( 1 ); /**IsUntilItIsnt**/
+
+            if( "string" != typeof i_str_num ){
+        
+                //:::::::::::::::::::::::::::::::::::::::://
+                //:                                      ://
+                //:  Don't error here because it makes   ://
+                //:  the routing simpler if the          ://
+                //:  m_seg[ # ]is out of bounds and      ://
+                //:  yeilds( "undefined" ).              ://
+                //:                                      ://
+                //:::::::::::::::::::::::::::::::::::::::://
+                o_yes=( 0 );
+            }else
+            if( 3 != i_str_num.length ){
+
+                o_yes=( 0 ); 
+            }else{
+
+                for( var dex = 0 ; dex <=(3-1) ; dex++ ){
+
+                    if( 0
+                    ||  "0" === i_str_num[ dex ]   //:EVE://
+                    ||  "1" === i_str_num[ dex ]   //:ODD://
+                    ||  "2" === i_str_num[ dex ]   //:EVE://
+                    ||  "3" === i_str_num[ dex ]   //:ODD://
+                    ||  "4" === i_str_num[ dex ]   //:EVE://
+                    ||  "5" === i_str_num[ dex ]   //:ODD://
+                    ||  "6" === i_str_num[ dex ]   //:EVE://       
+                    ||  "7" === i_str_num[ dex ]   //:ODD://
+                    ||  "8" === i_str_num[ dex ]   //:EVE://
+                    ||  "9" === i_str_num[ dex ]   //:ODD://
+                    ){
+                        /** Still okay, do nothing.**/
+                    }else{
+                        o_yes=( 0 ); //:Failure://
+                        break;
+                    };;
+                };;
+            };;
+
+            return( o_yes );
+        };;
+    //:==============================:YES_STRING_3_DIGITS://
+    //:NOT_STRING_3_DIGITS:==============================://
+
+        const   F_HOTEL13_NOT_S3D = function
+        PRIVATE_F_HOTEL13_NOT_S3D(
+
+            i_str_num
+        ){
+            var     yes_s3d =(F_HOTEL13_YES_S3D( i_str_num ));
+            var     not_s3d =( ! yes_s3d );
+            return( not_s3d );
+        };;
+    //:==============================:NOT_STRING_3_DIGITS://
+    //:============================:IS_THREE_DIGIT_STRING://
+    //:TRY_TO_INTERPRET_AS_COORD_HASH:===================://
+
+    const   F_HOTEL13_TRY_ICH = "[FIX:ICH_TRY]" ;
+
+    const   F_HOTEL13_ICH_TRY = function
+    PRIVATE_F_HOTEL13_ICH_TRY( 
+                  //:@ICH@ : Interpret as Coord Hash : : ://
+        i_str
+    ){
+        //:[ATF]:::::::::::::::::::::::::::::::::::::::::://
+        //:                                              ://    
+        //: @ICH@:Interpas_Coord_Hash                    ://
+        //: Try to interpret[ i_str ]as a                ://
+        //: valid coorinate hash.                        ://
+        //:                                              ://
+        //::::::::::::::::::::::::::::::::::::::::::[ATF]://
+
+        var strict_mode_failure =( 0 );
+
+        var o_obj ={ laxcoma:"[HACK]"
+
+        ,   m_has : 0
+        ,   m_xyz : "[nil][m_xyz]"
+
+        ,   m_i_x : ( 0 - 111 )
+        ,   m_i_y : ( 0 - 222 )
+        ,   m_i_z : ( 0 - 333 )
+        };;
+        Object.seal( o_obj );
+
+        if( !i_str ){ i_str = "" ; };
+
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //: "000/000" is a different route , so      ://
+        //: do not replaceAll( "/" , "_" ).          ://
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        i_str = i_str.replaceAll( "," , "_" );
+        i_str = i_str.replaceAll( "." , "_" );
+        i_str = i_str.replaceAll( "!" , "_" );
+        i_str = i_str.replaceAll( "+" , "_" );
+        i_str = i_str.replaceAll( "-" , "_" );
+
+        var arr = ( i_str.split( "_" ).filter(n=>n) );
+        var dex ;
+        if( arr.length != 3 ){
+
+            strict_mode_failure =( 1 );
+        };;
+        if( arr.length < 3 ){
+
+            strict_mode_failure =( 1 );
+
+            var  d_0 =( arr.length );
+            var  d_1 =(   3-1      );
+            for( dex = d_0 ; dex <= d_1 ; dex++ ){
+
+                arr[ dex ]=( "000" );
+            };;
+        };;
+        for( dex = 0 ; dex <=( 3-1 ) ; dex++ ){
+
+            if( 3 != ( arr[ dex ] ).length ){
+
+                strict_mode_failure =( 1 );
+            };;
+        };;
+
+        var num_obj =new Array( 3 );
+            num_obj[ 0 ] = F_HOTEL13_TRYATOI( arr[ 0 ] );
+            num_obj[ 1 ] = F_HOTEL13_TRYATOI( arr[ 1 ] );
+            num_obj[ 2 ] = F_HOTEL13_TRYATOI( arr[ 2 ] );
+        
+        if( num_obj[ 0 ].m_has
+        &&  num_obj[ 1 ].m_has
+        &&  num_obj[ 2 ].m_has
+        ){
+            //:::::::::::::::::::::::::::://
+            //: @m_has@ : HAS / Exists?  ://
+            //: @m_xyz@ : XYZ Coord Hash ://
+            //: @m_i_x@ : Member . i_x   ://
+            //: @m_i_y@ : Member . i_y   ://
+            //: @m_i_z@ : Member . i_z   ://
+            //:::::::::::::::::::::::::::://
+
+            o_obj.m_has =( 1 );
+            o_obj.m_xyz =( ""
+            +              ""+num_obj[0].m_i32+""
+            +              ""+num_obj[1].m_i32+""
+            +              ""+num_obj[2].m_i32+""
+            );;
+            o_obj.m_i_x =(    num_obj[0].m_i32 );
+            o_obj.m_i_y =(    num_obj[1].m_i32 );
+            o_obj.m_i_z =(    num_obj[2].m_i32 );
+
+            if( 0
+            ||  "number" != typeof o_obj.m_i_x 
+            ||  "number" != typeof o_obj.m_i_y 
+            ||  "number" != typeof o_obj.m_i_z 
+            ){
+                ERR("[WTF_NAN_FROM_ICH]");
+            };;
+        };;
 
 
+        //:::::::::::::::::::::::::::::::::::::::::::://
+        //:                                          ://        
+        //:  #_LOOSE_RULE_CAUSE_FUCKING_PROBLEMS_#   ://        
+        //:                                          ://        
+        //:::::::::::::::::::::::::::::::::::::::::::://        
+        if( strict_mode_failure >= 1 ){
+
+            o_obj.m_has =( 0 );
+        };;
+
+        return( o_obj );
+    };;
+    const   F_HOTEL13_ICH = function
+    PRIVATE_F_HOTEL13_ICH( //:@IC@:Is_Coord_Hash?://
+
+        i_str
+    ){
+        //:[ATF]:::::::::::::::::::::::::::::::::::::::::://    
+        //:                                              ://
+        //:  Return positive if string can be            ://
+        //:  interpreted as a coordinate hash.           ://
+        //:                                              ://
+        //:  i_str === "777"   ==> 777_000_000 ==> YES   ://
+        //:  i_str === "1_2"   ==> 001_002_000 ==> YES   ://
+        //:  i_str === "1_2_3" ==> 001_002_003 ==> YES   ://
+        //:                                              ://
+        //:  Actually... It's not that "777" yeilds      ://
+        //:  "777_000_000" , it is that "777" and        ://
+        //:  "777_000_000" are interpreted as the        ://
+        //:  same value coordinate hash.                 ://
+        //:                                              ://
+        //::::::::::::::::::::::::::::::::::::::::::[ATF]://    
+        var o_yes=( 0 );
+
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //: A bit wasteful of a way to do this , but     ://
+        //: but this is javascript land.                 ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        if( !( "string" === typeof i_str )){
+
+            o_yes=( 0 );
+        }else
+        if( "" === i_str ){
+
+            o_yes=( 0 );
+        }else{
+            var obj_xyz = F_HOTEL13_ICH_TRY( i_str );
+            if( obj_xyz.m_has ){
+
+                o_yes =( 1 );
+            };;
+        };;
+        return( o_yes );
+    };;
+    //:===================:TRY_TO_INTERPRET_AS_COORD_HASH://
+    //:STRINGS_TO_COORDHASH:=============================://
+
+        const  F_HOTEL13_STR_XYZ_COOHASH = "[WRONG]" ;
+        const  F_HOTEL13_XYZ_COOHASH     = "[WRONG]" ;
+        const  F_HOTEL13_STR_ARR_COOHASH = "[WRONG]" ;
+
+        const   F_HOTEL13_STR_COOHASH = function
+        PRIVATE_F_HOTEL13_STR_COOHASH(
+
+            i_str_xxx //: EX[ "000" ]
+        ,   i_str_yyy //: EX[ "420" ]
+        ,   i_str_zzz //: EX[ "069" ]
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://    
+            //:  We assume input is valid here.          ://
+            //:  (AND_IT_FUCKED_US_OVER_BIG_TIME)        ://
+            //:  (FOR_HOURS!! 2022_07_20:253AM  )        ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+            if( d_bug ){
+                if( 3 != arguments.length ){
+                    ERR("[WHERE_IS_YOUR_ARGS]");
+                };;
+                if( "string" != typeof i_str_xxx
+                ||  "string" != typeof i_str_yyy
+                ||  "string" != typeof i_str_zzz
+                ){
+                    ERR("[WRONG_TYPES_BITCH]");
+                };;
+            };;
+
+            var ___ =( "" /**EMPTYSTRING**/ );
+            var o_coohash =(""
+
+            +   i_str_xxx + "_"
+            +   i_str_yyy + "_"
+            +   i_str_zzz + ___
+            );;
+
+            return( o_coohash );
+        };;
+    //:=============================:STRINGS_TO_COORDHASH://
+    //:COORDHASH_TO_FILENAME:============================://
+
+        const   F_HOTEL13_COOHASH_AIMPATH = function
+        PRIVATE_F_HOTEL13_COOHASH_AIMPATH(
+
+            i_coohash //:EX[ "123_456_789" ]
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //: "123_456_789" ==TO==> "./PNG/"+          ://
+            //: "X_123/Y_456/Z_789/AIM_123_456_789.PNG"  ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            var o_aimpath =( "[nil][o_aimpath]" );
+
+            if( "string" != typeof i_coohash ){
+                ERR("[BADINPUTTYPE2022]");
+            };;
+
+            var arr =( i_coohash.split( "_" )
+                .filter( n => n ) );;
+
+            if( 3 != arr.length ){
+                //:::::::::::::::::::::::::::::::::::::::://
+                //: Malformed input. I don't think we    ://
+                //: can 100% prevent malformed input,    ://
+                //: so we should __NOT__ crash the       ://
+                //: server over this.                    ://
+                //:::::::::::::::::::::::::::::::::::::::://
+                o_aimpath = "./PNG/ERR_001.PNG" ;
+            }else{
+        
+                var xxx = F_HOTEL13_PAD_STR( arr[0] );
+                var yyy = F_HOTEL13_PAD_STR( arr[1] );
+                var zzz = F_HOTEL13_PAD_STR( arr[2] );
+
+                o_aimpath =( "" /////////////////
+                +   "./PNG/"
+                +          "X_"   +  xxx + "/" 
+                +          "Y_"   +  yyy + "/" 
+                +          "Z_"   +  zzz + "/" 
+                +     "AIM_" 
+                +                    xxx + "_"
+                +                    yyy + "_"
+                +                    zzz + ".PNG"
+                );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+            };;
+               
+            return( o_aimpath );
+        };;
+    //:============================:COORDHASH_TO_FILENAME://
+    //:IS_THE_STRING_A_COORDINATE_HASH:==================://
+    //:                                                  ://
+    //:     STR_0_9_YES : Return >=1 if "0"-"9" ascii.   ://
+    //:     STR_EQU     : Return >=1 if equal strings.   ://
+    //:     YES_COOHASH : Return >=1 if coordinate hash  ://
+    //:     NOT_COOHASH : Return >=1 if NOT  coord hash  ://
+    //:                                                  ://
+    //: - - - - - - - - - - - -- - - - - - - - - - - - - ://
+
+        const   F_HOTEL13_STR_0_9_YES = function
+        PRIVATE_F_HOTEL13_STR_0_9_YES(
+
+            i_chr //:DONT_Allow_Invalid_Input://
+        ){
+            if( "string" != typeof i_chr ){
+                ERR("[STR_0_9:MUST_HAVE_STRING_INPUT]");
+            };;
+            if( i_chr.length != 1 ){
+                ERR("[Expect_Char_Iput]");
+            };;
+            var o_yes =( 0 );
+
+                if( "0" === i_chr[ 0 ]
+                ||  "1" === i_chr[ 0 ]
+                ||  "2" === i_chr[ 0 ]
+                ||  "3" === i_chr[ 0 ]
+                ||  "4" === i_chr[ 0 ]
+                ||  "5" === i_chr[ 0 ]
+                ||  "6" === i_chr[ 0 ]
+                ||  "7" === i_chr[ 0 ]
+                ||  "8" === i_chr[ 0 ]
+                ||  "9" === i_chr[ 0 ]
+                ){
+                    o_yes =( 1 );
+                };;
+            return( o_yes );
+        };;
+
+        const   F_HOTEL13_STR_EQU = function
+        PRIVATE_F_HOTEL13_STR_EQU(
+
+            i_str_001
+        ,   i_str_002
+        ){ 
+            if( "string" != typeof i_str_001
+            ||  "string" != typeof i_str_002
+            ){
+                LOG("[i_str_001]:" , i_str_001 );
+                LOG("[i_str_002]:" , i_str_002 );
+                ERR("[EXPECTS_STRING_INPUT_2022]");
+            };;
+            var o_equ=( 0 );
+            if( i_str_001 === i_str_002 ){
+                o_equ=( 1 );
+            };;
+            return( o_equ );
+        };;
+
+        const   F_HOTEL13_YES_COOHASH = function
+        PRIVATE_F_HOTEL13_YES_COOHASH(
+
+            i_str //:AllowInvalidInput://
+        ){
+            var o_yes=( 0 );
+
+            if( "string" != typeof i_str
+            ||  i_str.length != 11 
+            ){
+                o_yes=( 0 );
+            }else{
+                if( 1
+                &&  F_HOTEL13_STR_0_9_YES( i_str[ 0 ] )
+                &&  F_HOTEL13_STR_0_9_YES( i_str[ 1 ] )
+                &&  F_HOTEL13_STR_0_9_YES( i_str[ 2 ] )
+
+                &&  F_HOTEL13_STR_EQU( "_",i_str[ 3 ] )
+
+                &&  F_HOTEL13_STR_0_9_YES( i_str[ 4 ] )
+                &&  F_HOTEL13_STR_0_9_YES( i_str[ 5 ] )
+                &&  F_HOTEL13_STR_0_9_YES( i_str[ 6 ] )
+
+                &&  F_HOTEL13_STR_EQU( "_",i_str[ 7 ] )
+
+                &&  F_HOTEL13_STR_0_9_YES( i_str[ 8 ] )
+                &&  F_HOTEL13_STR_0_9_YES( i_str[ 9 ] )
+                &&  F_HOTEL13_STR_0_9_YES( i_str[10 ] )
+                ){
+                    o_yes =( 1 );
+                };;
+            };;
+            return( o_yes );
+        };;
+        const   F_HOTEL13_NOT_COOHASH = function
+        PRIVATE_F_HOTEL13_NOT_COOHASH(
+
+            i_str
+        ){  
+            var o_not_coohash=( 0 );
+            var   yes_coohash=( F_HOTEL13_YES_COOHASH(
+
+                i_str
+            ));;
+            if( yes_coohash >= 1 ){ o_not_coohash=( 0 ); };
+            if( yes_coohash <= 0 ){ o_not_coohash=( 1 ); };
+
+            return( o_not_coohash );
+        };;
+    //:==================:IS_THE_STRING_A_COORDINATE_HASH://
+    //:AIMPATH_TO_NAME_WITH_EXT:=========================://
+
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //: @aimpath@ : Full Path To Levelpack File      ://
+        //: @namaext@ : Filename with extension string.  ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+
+        const F_HOTEL13_AIMPATH_PNG_NAM = "[WRONG]" ;
+
+        const   F_HOTEL13_AIMPATH_NAMAEXT = function
+        PRIVATE_F_HOTEL13_AIMPATH_NAMAEXT(
+
+            i_aimpath
+        ){
+            if( "string" != typeof i_aimpath ){
+                ERR("[BADINN:AIMPATH_NAMAEXT]");;
+            };;
+
+            var arr =( i_aimpath
+                .split(   "/"   )
+                .filter( n => n ) 
+            );;
+            var o_namaext =( arr[ arr.length - 1 ] );
+            return( o_namaext );
+        };;
+    //:=========================:AIMPATH_TO_NAME_WITH_EXT://
+    //:AIMPATH_TO_NAME_WITHOUT_EXTENSION:===============://
+
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //: @aimpath@ : Full Path To Levelpack File      ://
+        //: @namonly@ : Filename ONLY (no extension)     ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+
+        const F_HOTEL13_AIMPATH_PNG_TIT = "[WRONG]" ;
+        
+        const   F_HOTEL13_AIMPATH_NAMONLY = function
+        PRIVATE_F_HOTEL13_AIMPATH_NAMONLY(
+            
+            i_aimpath
+        ){
+            if( "string" != typeof i_aimpath ){
+                ERR("[BADINN:AIMPATH_NAMONLY]");;
+            };;
+            
+            var namaext =( F_HOTEL13_AIMPATH_NAMAEXT(
+
+                i_aimpath
+            ));;
+            var arr =( namaext
+                .split(   "."   )
+                .filter( n => n )
+            );;
+            var o_namonly =( arr[ 0 ] );
+            return( o_namonly );
+        };;
+    //:================:AIMPATH_TO_NAME_WITHOUT_EXTENSION://
+    //:AIMPATH_TO_JUST_THE_FOLDER:=======================://
+    
+        const   F_HOTEL13_AIMPATH_JTF = function
+        PRIVATE_F_HOTEL13_AIMPATH_JTF(
+
+            i_aimpath
+        ){
+        //:[ATF]:----------------------------------------://
+        //:                                              ://
+        //:INN:                                          ://
+        //:"./PNG/X_101/Y_202/Z_303/AIM_101_202_303.PNG" ://
+        //:                                              ://
+        //:OUT:                                          ://
+        //:"./PNG/X_101/Y_202/Z_303"                     ://
+        //:                                              ://
+        //:----------------------------------------:[ATF]://  < < < < < < < < < NOTICE_ME_SENPAI : New functionality
+
+            var o_jtf =( "[JFT_NOT_SET]" );
+            var   dex , arr , m_i ;
+
+            if( "string" != typeof i_aimpath ){
+
+                //: Set Error Path ://
+                o_jtf =( "./PNG/JTF_ERR" );
+            }else{
+                o_jtf =( "" );
+                arr =( i_aimpath
+                .   split(   "/"   )
+                .   filter( n => n )
+                );;
+
+                m_i =( arr.length - 1 - 1 );
+                for( dex = 0 ; dex <= m_i ; dex ++ ){
+
+                                     o_jtf += arr[ dex ] ;
+                    if( dex < m_i ){ o_jtf += "/" ;     };
+                };;
+
+            };;
+            return( o_jtf /**@JTF@:Just_The_Folder**/ );
+        };;
+    //:=======================:AIMPATH_TO_JUST_THE_FOLDER://
+    //:TRY_TO_INTERPRET_AS_AIM_JS_FILE:==================://
+
+        //:#_MIS_SPELLINGS_#://
+
+        const F_HOTEL13_GET_AIM_FMT = "[FIX:AIM_FMT_GET]" ;
+        const F_HOTEL13_GET_FMT_AIM = "[FIX:AIM_FMT_GET]" ;
+
+        const F_HOTEL13_AIM_GET_FMT = "[FIX:AIM_FMT_GET]" ;
+    
+        const F_HOTEL13_FMT_AIM_GET = "[FIX:AIM_FMT_GET]" ;
+        const F_HOTEL13_FMT_GET_AIM = "[FIX:AIM_FMT_GET]" ;
+
+        //:#_MIS_SPELLINGS_#://
+
+        const F_HOTEL13_HAS_AIM_FMT = "[FIX:AIM_FMT_HAS]" ;
+        const F_HOTEL13_HAS_FMT_AIM = "[FIX:AIM_FMT_HAS]" ;
+
+        const F_HOTEL13_AIM_HAS_FMT = "[FIX:AIM_FMT_HAS]" ;
+    
+        const F_HOTEL13_FMT_AIM_HAS = "[FIX:AIM_FMT_HAS]" ;
+        const F_HOTEL13_FMT_HAS_AIM = "[FIX:AIM_FMT_HAS]" ;
+
+    //:==================:TRY_TO_INTERPRET_AS_AIM_JS_FILE://
+    //:TRY_TO_INTERPRET_AS_AIM_JS_FILE:==================://
+    const   F_HOTEL13_AIM_FMT_GET = function
+    PRIVATE_F_HOTEL13_AIM_FMT_GET(
+
+        i_str
+    ){
+        if(!i_str){ i_str = "" ; };
+
+        var o_obj ={ laxcoma:"[HACK]"
+
+        ,   m_has : 0
+        ,   m_xyz : "[nil][m_xyz]"
+
+        ,   m_i_x : ( 0 - 10101 )
+        ,   m_i_y : ( 0 - 20202 )
+        ,   m_i_z : ( 0 - 30303 )
+        };;
+        Object.seal( o_obj );
+
+        if( i_str.length >= 4 ){
+        if( "A" === i_str[ 0 ]
+        &&  "I" === i_str[ 1 ]
+        &&  "M" === i_str[ 2 ]
+        &&  "_" === i_str[ 3 ]
+        ){
+            var str_xyz =( i_str );
+
+            str_xyz =( str_xyz.replaceAll(
+                "AIM_" , "" //:#_TAKEOFF_AIM_P_#://
+            ));;
+            str_xyz =( str_xyz.replaceAll(
+                ".JS"  , "" //:#_TAKEOFF_DOTJS_#://
+            ));;
+
+            var obj_xyz =( F_HOTEL13_ICH_TRY(
+                str_xyz
+            ));;
+            if( obj_xyz.m_has ){
+
+                o_obj.m_has =(           200 );
+                o_obj.m_xyz =( obj_xyz.m_xyz );
+
+                o_obj.m_i_x =( obj_xyz.m_i_x );
+                o_obj.m_i_y =( obj_xyz.m_i_y );
+                o_obj.m_i_z =( obj_xyz.m_i_z );
+            };;
+        };;};;
+
+        return( o_obj );
+    };;
+    const   F_HOTEL13_AIM_FMT_HAS = function
+    PRIVATE_F_HOTEL13_AIM_FMT_HAS(
+
+        i_str
+    ){
+        var o_yes=( 0 );
+        var obj_xyz = F_HOTEL13_AIM_FMT_GET( i_str );
+        if( obj_xyz.m_has ){
+
+            o_yes =( 1 );
+        };;
+        return( o_yes );
+    };;
+    const   F_HOTEL13_AIM_FMT_GET_STR = function
+    PRIVATE_F_HOTEL13_AIM_FMT_GET_STR(
+
+        i_str
+    ){
+        //:[ATF]:--------------------------------------------://
+        //:                                                  ://
+        //: Like[ F_HOTEL13_AIM_FMT_GET ]But zero padded     ://
+        //: string versions of the XYZ part of input.        ://
+        //:                                                  ://
+        //: AIM_123_456_789.PNG ==> ( "123" , "456" , "789" )://
+        //: AIM_001_002_003.JS  ==> ( "001" , "002" , "003" )://
+        //:                                                  ://
+        //: ADDED_DATE[ 2022_07_17 ]TIME[ 0540 ]PM           ://
+        //:                                                  ://
+        //:--------------------------------------------:[ATF]://
+
+        if( !i_str){ i_str="" ; };
+
+        var o_k =( 0 /**Undefined**/ );
+
+        var sob_xyz ={ laxcoma:"[HACK]"
+        
+        ,   m_has : 0
+        ,   m_s_x : "[nil][m_s_x](member_string_x)"
+        ,   m_s_y : "[nil][m_s_y](member_string_y)"
+        ,   m_s_z : "[nil][m_s_z](member_string_z)"
+        };;
+        Object.seal( sob_xyz );
+
+        var str_x ;  //: @str_x@ : String Holding x axis ://
+        var str_y ;  //: @str_y@ : String Holding y axis ://
+        var str_z ;  //: @str_z@ : String Holding z axis ://
+        var dex   ;  //: @dex@   : Generic Index Iterator://
+
+        var obj_xyz = F_HOTEL13_AIM_FMT_GET( i_str );
+        if( (!(obj_xyz.m_has)) ){
+            o_k=(            0-1 );
+            sob_xyz.m_has =( 0-1 );
+        }else{
+            str_x =( "" + obj_xyz.m_i_x + "" );
+            str_y =( "" + obj_xyz.m_i_y + "" );
+            str_z =( "" + obj_xyz.m_i_z + "" );
+
+            for( dex = 0 ; dex <=(3-1) ; dex++ ){
+
+                //:#_ZERO_PAD_#://
+                if( str_x.length < 3 ){str_x="0"+str_x;};
+                if( str_y.length < 3 ){str_y="0"+str_y;};
+                if( str_z.length < 3 ){str_z="0"+str_z;};
+            };;
+
+            sob_xyz.m_has =( 1 );
+            sob_xyz.m_s_x =( str_x );
+            sob_xyz.m_s_y =( str_y );
+            sob_xyz.m_s_z =( str_z );
+        };;
+
+        return( sob_xyz );
+    };;
+
+    //:==================:TRY_TO_INTERPRET_AS_AIM_JS_FILE://
+    //:##################################################://
+    //:HOTEL13_SERVER_MODE:##############################://
+
+    if( d_hotel13_h13node ){ //:BEG:ENV_H13NODE::::::::::://
+
+    //:HOTEL13_SERVE_STATIC_PNG:=========================://
+
+        var F_HOTEL13_404_ADD = "[USE:F_HOTEL13_YEHOTEL]";
+        var F_HOTEL13_ADD_404 = "[USE:F_HOTEL13_YEHOTEL]";
+
+        const   F_HOTEL13_YEHOTEL = function
+        PRIVATE_F_HOTEL13_YEHOTEL(
+
+            i_h13
+        ,   i_404
+        ){
+            if( i_404 >= 1 ){   
+
+                i_h13.m_giv.setHeader( "NSH_YEHOTEL" , "[NOT]");
+            }else{
+                i_h13.m_giv.setHeader( "NSH_YEHOTEL" , "[YES]");
+            };;
+        };;
+
+        const   F_HOTEL13_SERVEME_PNG = function
+        PRIVATE_F_HOTEL13_SERVEME_PNG( 
+
+            i_h13  //: Hotel13's SOB(StateObjectBundle)  ://    
+        ,   i_rfp  //: Relative_File_Path  : : : : : : : ://
+        ,   i_dep  //: OPTional_DEPth Var. : : : : : : : ://
+        ,   i_404  //: OPTional: Is 404 not found?       ://
+        ){
+            i_dep = ( i_dep ? i_dep : 1 );
+            i_404 = ( i_404 ? i_404 : 0 );
+
+            l_fs.readFile( i_rfp,function( i_err , i_cof ){
+            "use strict"
+
+                if(i_err){
+                    i_cof = "[PARTY_MONSTER_ERROR]";
+                    if( 1 === i_dep ){
+                              i_dep++;
+                        //:------------------------------://
+                        //: Try To Serve Our 404 Image   ://
+                        //:------------------------------://
+                        F_HOTEL13_SERVEME_PNG(
+                            i_h13 
+                        ,   "./PNG/404_512.PNG" 
+                        ,   i_dep
+                        ,   ( 1 ) //: Is 404 Image ://
+                        );;
+                    }else{
+                         F_HOTEL13_YEHOTEL( i_h13  , i_404 );  
+                        i_h13.m_giv.writeHead( 200, d_png );   
+                        i_h13.m_giv.end( i_cof    ,"utf-8");
+                    };;
+                }else{
+                        F_HOTEL13_YEHOTEL( i_h13  , i_404 );  
+                        i_h13.m_giv.writeHead( 200, d_png );
+                        i_h13.m_giv.end( i_cof    ,"utf-8");    
+                };;
+                //:--------------------------------------://
+                //: Allow for recursively calling        ://
+                //: yourself but only end the response   ://
+                //: once.                                ://
+                //[ WRONG. This is a race condition !!!!!]//
+                //:--------------------------------------://
+                //- if( 1 == i_dep ){                    -//
+                //- 	i_h13.m_giv.end(i_cof,"utf-8");  -//
+                //- };;                                  -//
+                //:--------------------------------------://
+            });;
+        };;
+    //:=========================:HOTEL13_SERVE_STATIC_PNG://
+    //:SERVE_THIS_CODE_AS_JS_FILE:=======================://
+    const   F_HOTEL13_SERVEME = function
+    PRIVATE_F_HOTEL13_SERVEME(
+
+        i_h13     //: Hotel13's StateObjectBundle( sob ) ://
+                  //: [ i_h13 ]AKA[ i_sob / sob ]        ://
+    ,   i_wmc_i_x //:Input: WorldMapCoord . X  : : : : : ://
+    ,   i_wmc_i_y //:Input: WorldMapCoord . Y  : : : : : ://
+    ,   i_wmc_i_z //:Input: WorldMapCoord . Z  : : : : : ://    
+    ){
+        //:[ATF]:----------------------------------------://
+        //:                                              ://
+        //:  If the titlebar says something like :       ://
+        //:  -------------------------------------       ://
+        //:  [AIM_XYZ]( 001 , 001 , 001 )                ://
+        //:  -------------------------------------       ://
+        //:  The javascript running on that page was     ://
+        //:  probably generated from here.               ://
+        //:  -------------------------------------       ://
+        //:  EX: AIM_001_001_001.JS                      ://
+        //:  -------------------------------------       ://
+        //:                                              ://
+        //:----------------------------------------:[ATF]://
+
+        l_fs.readFile("./HOTEL13.JS",(i_err,i_cof)=>{     
+        
+        if(i_err){
+            i_cof = "[we messed up]" ;
+        }else{
+        
+            i_h13.m_giv.writeHead( 200 , d_js );
+        
+            //:STOLENFROM:#BGT#:=====================://
+            //:get_app_domain:[059]:-----------------://
+            var n =( "\n" );                      
+                                                
+            var app_nam =( process.env[           
+                                                
+                "HEROKU_APP_NAME"                 
+            ]);;                                                                    
+            if( false == ( !!app_nam ) ){         
+                                                
+                d_hotel13_urlsite_o_k =( "[NOT_O_K]" );   
+                d_hotel13_urlsite =( ""                   
+                                                
+                +"[SEE:#_HEROKU_APP_NAME_#]"                                 
+                );;                               
+            }else{                                
+                d_hotel13_urlsite_o_k =( "[YES_O_K]" );   
+                d_hotel13_urlsite     =( ""               
+                + "https://"                      
+                +  app_nam                        
+                + ".herokuapp.com"                
+                );;                               
+            };;                                   
+            //:-----------------:get_app_domain:[059]://
+            //:#MYSBSYS#:[058]:----------------------:// 
+                                                
+            i_cof = ""+i_cof+"";                 
+            i_cof = i_cof.replaceAll(            
+                                                
+            "[BLACK_MAGIC:d_hotel13_urlsite]"        
+            ,             d_hotel13_urlsite          
+            );;                                  
+            i_cof = i_cof.replaceAll( 
+        
+            "[BLACK_MAGIC:d_hotel13_urlsite_o_k]"    
+            ,             d_hotel13_urlsite_o_k      
+            );;                             
+            //:----------------------:#MYSBSYS#:[058]://
+            //:SetWorldMapCoords:--------------------://
+            if( (!(i_wmc_i_x >= 0 ))
+            &&  (!(i_wmc_i_y >= 0 ))
+            &&  (!(i_wmc_i_z >= 0 ))
+            ){
+                d_hotel13_wmc_o_k = "[NOT_O_K]" ;
+            }else{
+                d_hotel13_wmc_o_k = "[YES_O_K]" ;
+            };;
+            if( d_hotel13_wmc_o_k==="[NOT_O_K]" ){
+
+                i_cof = i_cof.replaceAll( 
+
+                "[BLACK_MAGIC:d_hotel13_wmc_o_k]"    
+                ,             d_hotel13_wmc_o_k      
+                );;   
+            }else
+            if( d_hotel13_wmc_o_k==="[YES_O_K]" ){
+
+                i_cof = i_cof.replaceAll(                                          
+                "[BLACK_MAGIC:d_hotel13_wmc_s_x]"        
+                ,                  ""+i_wmc_i_x+""       
+                );;                                  
+                i_cof = i_cof.replaceAll( 
+                "[BLACK_MAGIC:d_hotel13_wmc_s_y]"    
+                ,                  ""+i_wmc_i_y+""       
+                );;
+                i_cof = i_cof.replaceAll( 
+                "[BLACK_MAGIC:d_hotel13_wmc_s_z]"    
+                ,                  ""+i_wmc_i_z+""       
+                );;             
+                i_cof = i_cof.replaceAll( 
+                "[BLACK_MAGIC:d_hotel13_wmc_o_k]"    
+                ,             d_hotel13_wmc_o_k      
+                );;   
+            }else{
+                F_HOTEL13_ERR("[unexpected_20220715]");
+            };;
+            //:--------------------:SetWorldMapCoords://
+            //:=====================:STOLENFROM:#BGT#://
+        
+            i_h13.m_giv.end( i_cof  , "utf-8" );
+        
+        };;});; //:END[ readFile ]:::::::::::::::::::://
+
+    };; 
+    //:=======================:SERVE_THIS_CODE_AS_JS_FILE://
+    //:HOTEL13_IMGUR_UPLOAD:=============================://
+    //:HEROKUA_IMGUR_UPLOAD:=============================://
+
+        const  F_HOTEL13_CID = "[MORE_VERBOSE_THAN_THAT]" ;
+        const  F_HOTEL13_C_S = "[MORE_VERBOSE_THAN_THAT]" ;
+
+        const  F_HOTEL13_API_3RD_GET_CID_IMGUR = "[@T_V@]";
+        const  F_HOTEL13_API_3RD_GET_C_S_IMGUR = "[@T_V@]";
+    
+        const   F_HOTEL13_API_3RD_CID_IMGUR = function
+        PRIVATE_F_HOTEL13_API_3RD_CID_IMGUR
+        ( ){
+            let p_e =( process.env );
+            var str_out =( ""
+            ||  p_e.VAR_IMGUR_CID 
+            ||  p_e.VAR_IMGUR_KANJICODER_CID
+            );;
+            return( str_out );
+        };;
+        const   F_HOTEL13_API_3RD_C_S_IMGUR = function
+        PRIVATE_F_HOTEL13_API_3RD_C_S_IMGUR
+        ( ){
+            let p_e =( process.env );
+            var str_out =( ""
+            ||  p_e.VAR_IMGUR_C_S
+            ||  p_e.VAR_IMGUR_KANJICODER_C_S
+            );;
+            return( str_out );
+        };;
+
+        const   F_HOTEL13_API_3RD_HAS_IMGUR = function
+        PRIVATE_F_HOTEL13_API_3RD_HAS_IMGUR(
+
+            /** NO arguments **/
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //: Return TRUE if we have the correct       ://
+            //: environment variables set to make        ://
+            //: API requests to imgur.                   ://
+            //:                                          ://
+            //: If you need to set this up, use          ://
+            //: POWERSHELL on windows. NOT GITBASH       ://
+            //: on windows. Heroku likes to fail for     ://
+            //: this on gitbash for windows.             ://
+            //:                                          ://
+            //: FURTHER_READING[ #_HEROKU_IMGUR_VARS_# ] ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+
+            var api_3rd_has =( 0 );
+            
+            if( 1
+            &&  ( F_HOTEL13_API_3RD_CID_IMGUR() )
+            &&  ( F_HOTEL13_API_3RD_C_S_IMGUR() )
+            ){
+                api_3rd_has =( 1 );
+            }else{
+                api_3rd_has =( 0 );
+            };;
+
+            return( api_3rd_has );
+        };;
+
+     ///////////////  const   F_HOTEL13_HED_AUT_IMGUR = function
+     ///////////////  PRIVATE_F_HOTEL13_HED_AUT_IMGUR(
+     /////////////// 
+     ///////////////      /**NOARGS**/
+     ///////////////  ){
+     ///////////////      
+     /////////////// 
+     /////////////// 
+     ///////////////  };;
+    //:=============================:HEROKUA_IMGUR_UPLOAD://
+    //:=============================:HOTEL13_IMGUR_UPLOAD://
+    //:**************************************************://
+    //:                                                  ://
+    //:             BEG_OF_API_SECTION                   ://
+    //:                                                  ://
+    //:**************************************************://
+    //:**************************************************://
+    //:                                                  ://
+    //:     API : Same Functions On Client And Server    ://
+    //:         : with differing implementations.        ://
+    //:                                                  ://
+    //:**************************************************://
+    //:IMGUR_FUNCS_SERVER:===============================://
+    if( d_hotel13_yesnode >= 1 ){
+
+        var     F_HOTEL13_AIMPATH_MKDIRSYNC = function
+        PRIVATE_F_HOTEL13_AIMPATH_MKDIRSYNC(
+
+            i_aimpath
+        ){
+            //:::::::::::::::::::::::::::::::::::::::://
+            //: @aimpath@ : AtomicIvyMMO_filePATH    ://
+            //:     @jtf@ : Just_The_____Filepath    ://
+            //:::::::::::::::::::::::::::::::::::::::://
+
+            //:::::::::::::::::::::::::::::::::::::::://
+            //: Convert[ aimpath ]TO[ jtf ]          ://
+            //:::::::::::::::::::::::::::::::::::::::://
+            var jtf = F_HOTEL13_AIMPATH_JTF( i_aimpath );
+
+            //:::::::::::::::::::::::::::::::::::::::://
+            //: Create Folder If Not Exists          ://
+            //:::::::::::::::::::::::::::::::::::::::://
+            if( (!(l_fs.existsSync( jtf ))) ){
+
+                l_fs.mkdirSync( 
+
+                    jtf
+                ,   { recursive : true }
+                );;
+            };;
+        };;
 
 
+////    //:@STD@: Save__To_Disk://
+////    //:@LFD@: Load_From_Disk://
+////
+////    var     F_HOTEL13_API_3RD_UPP_IMGUR_YESNODE_STD =
+////    function
+////    PRIVATE_F_HOTEL13_API_3RD_UPP_IMGUR_YESNODE_STD(
+////
+////        i_sob_h13
+////    ,   i_str_xyz
+////    ){
+////
+////            jtf =( ""
+////            +   ( "./PNG/" )
+////            +   ( "X_" + aim_x /**url_x**/ ) + "/"
+////            +   ( "Y_" + aim_y /**url_y**/ ) + "/"
+////            +   ( "Z_" + aim_z /**url_z**/ ) +("")
+////            );;
+////
+////            rel =( ""
+////            +   ( jtf  /** Just_The_Folder **/ )
+////            +   ( "/"  /** ConcatWithSlash **/ )
+////            +   ( f_n  /** FileNameWithExt **/ )
+////            );;
+////
+////            //:::::::::::::::::::::::::::::::::::::::://
+////            //: Create Folder If Not Exists          ://
+////            //:::::::::::::::::::::::::::::::::::::::://
+////            if( (!(l_fs.existsSync( jtf ))) ){
+////
+////                l_fs.mkdirSync( 
+////
+////                    jtf
+////                ,   { recursive : true }
+////                );;
+////            };;
+////
+////            f_s = l_fs.createWriteStream( rel );
+////            f_s.on( "error" , (i_err)=>{
+////
+////                console.log(    "[OHFUKNO_2022]" );
+////                uro.m_log.push( "[OHFUKNO_2022]" );
+////                h13.m_giv.end( JSON.stringify( uro ));
+////            });;
+////
+////            h13.m_ask.pipe( f_s ); //:#_W_D_A_I_C_#://
+////            h13.m_ask.on( "end" , ()=>{
+////
+////                f_s.close( ()=>{
+////
+////                    uro.m_log.push( "[SUCCESS]" );
+////                    uro.m_o_k =( 200 );
+////                    h13.m_giv.end( JSON.stringify( uro ));
+////                });;
+////            });;
+////
+////
+////    };;
+
+        var     F_HOTEL13_API_3RD_UPP_IMGUR_YESNODE = function
+        PRIVATE_F_HOTEL13_API_3RD_UPP_IMGUR_YESNODE(
+
+        //+----------------------------------------------+//
+        //- i_imgname  <---- WRONG , keep_this_note_here -//
+        //- i_pngfile  <---- WRONG , keep_this_note_here -//
+        //+----------------------------------------------+//
+
+            i_sob_h13  //:StateObjectBundle: KIND: h13   ://
+        ,   i_str_xxx  //:           String: KIND: x-axis://
+        ,   i_str_yyy  //:           String: KIND: y-axis://
+        ,   i_str_zzz  //:           String: KIND: z-axis://
+        ){
+            //:[ATF]:------------------------------------://
+            //:                                          ://
+            //:  Take in a request from HOTEL13.JS       ://
+            //:  client side application , extract       ://
+            //:  the .PNG file, and pass it on           ://
+            //:  to IMGUR.                               ://
+            //:                                          ://
+            //:  Also, store a copy on our own server    ://
+            //:  as well because why not?                ://
+            //:                                          ://
+            //:  We might want to DISABLE that           ://
+            //:  aspect in the future when we need       ://
+            //:  to scale, but for now that is fine.     ://
+            //:                                          ://
+            //:------------------------------------:[ATF]://
+            //:ECI:======================================://
+            if( d_bug ){
+                if( 0
+                ||  "undefined" != typeof i_imgname 
+                ||  "undefined" != typeof i_pngfile 
+                ){
+                    ERR("[WRONG_INPUTS_TO_FUNC]");
+                };;
+
+                if( 0
+                ||  "undefined" != typeof i_str_xyz 
+                ){
+                    ERR("[OOPS_NOT_HASH_INPUT]");
+                };;
+            };;
+            //:======================================:ECI://
+            //:VARS:=====================================://
+
+                var o_k =( 1 ); //:EverythingOkay?://
+
+                //:@loganok@ : "LOG Array And OK" ://
+                var loganok={ laxcoma:"[HACK]"
+                ,     m_log : [ ] //:ArrayOfLoggingInfo://
+                ,     m_o_k : (0) //:Everything_Ok?
+                };;
+                function    LOGANOK_ADD(        msg ){
+                            loganok.m_log.push( msg );
+                                   console.log( msg );
+                };;
+                function    LOGANOK_END( ){ 
+
+                    i_sob_h13.m_giv.writeHead( 
+    
+                        200 , d_jso
+                    );;
+                    i_sob_h13.m_giv.end(
+                        JSON.stringify( 
+                            loganok 
+                        )////////////////
+                    );;;;;;;;;;;;;;;;;;;;
+                };;
+
+                var _______
+                ,   str_xyz  //:@str_xyz@ :COOHASH   ://
+                ,   ask_met  //:@ask_met@ :ASK Method://
+                ,       c_l  //:@c_l@ : ContentLength://       
+                ,   wigroom  //:@wigroom@ :WiggleRoom://
+                ,       f_s  //:@f_s@:FileStreamInst ://
+                ,   aimpath  //:EX: ./PNG/../AIM..PNG://
+                ,   hascred  //:@hascred@ :Imgur_Cred://
+                ,   png_bin  //:@png_bin@ :PNGBINARY ://
+                ,   png_nam  //:@png_nam@ :PNG_NAME  ://
+                ,   png_tit  //:@png_tit@ :PNG_TITLE ://
+                ,   bearask  //:@bearask@ :----------://
+                ;;;;;;;;;;;
+
+                var  ___2___
+                ,    arr_k_v     //:@arr_k_v@     :--://
+                ,        kv0     //:    @kv0@     :--://
+                ,        kv1     //:    @kv1@     :--://
+                ,        kvi     //:    @kvi@     :--://
+                ,        k_v     //:    @k_v@     :--://
+                ,    norform_jso //:@norform_jso@ :--://
+                ,    norform_jso_key //:@jso_key@    ://
+                ,    norform_jso_val //:@jso_val@    ://
+                ,    norform_bou //:@norform_bou@ :--://
+                ,    norform_c_t //:@norform_c_t@ :--://
+                ,    norform_pay_buf_001        //:--://
+                ,    norform_pay_buf_002        //:--://
+                ,    norform_pay_buf_003        //:--://
+                ,    norform_pay //:@norform_pay@ :--://        
+                ,    nor_opt     //:@nor_opt@     :--://
+                ,    nor_ask     //:@nor_ask@     :--://
+                ;;;;;;;;;;
+
+                var ___
+                ,   _s_  //: SPACE , literally       ://
+                ,   f_d  //: FormData                ://
+                ,   typ  //: Request Type            ://
+                ,   url  //: Request  URL            ://
+                ,   cid  //: Client_ID
+                ,   a_n  //: Authheader : KEY/NAME   ://
+                ,   a_v  //: Authheader :    VALUE   ://
+                /// xhr
+                ;;;;;;;
+
+                var _____________
+                ,   verni32        //:@verni32@       ://
+                ,   got_jso        //:Got_JSON_OBJ   ://
+                ,   png_url_imgur
+                ;;;;;;;;;;;;;;;;;
+
+                png_url_imgur =( "[nil][png_url_imgur]" );
+
+            //:=====================================:VARS://
+            //:NOT_A_PROMISE:============================://
+            //:                                          ://
+            //:     13-step program to storing the       ://
+            //:     image you want persistantly.         ://
+            //:     #13_STEP_PROGRAM#                    ://
+            //:                                          ://
+            //:- - - - - - - - - - -- - - - - - - - - - -://
+            var ptrstep =( 0-1 );
+            var arrstep =[
+                STEP_001  //: #MAKE_COORD_HASH#          ://
+            ,   STEP_002  //: #ABORT_IF_NOT_HTTPPOST#    ://
+            ,   STEP_003  //: #ABORT_IF_FILE_TOO_BIG#    ://
+            ,   STEP_004  //: #SAVE_TO_HEROKU_HARDDISK#  ://
+            ,   STEP_005  //: #ABORT_IF_NO_IMGUR_CRED#   ://
+            ,   STEP_006  //: #LOAD_FROM_HEROKU_HARDDISK#://
+            ,   STEP_007  //: #GET_JUST_FILENAME#        ://
+            ,   STEP_008  //: #GET_IMGUR_BEARER_TOKEN#   ://
+            ,   STEP_009  //: #BUILD_FORM_DATA#          ://
+            ,   STEP_010  //: #SEND_PNG_TO_IMGUR#        ://
+            ,   STEP_011  //: #GET_MOST_RECENT_LEVELPACK#://
+            ,   STEP_012  //: #ADD_IMGUR_URL_TO_DATABASE#://
+            ,   STEP_013  //: #STOP_TALKING_TO_ME#       ://
+            ];;
+            function LOGANOK_NEX( ){     //:AKA[ NEXT() ]://
+                ptrstep++ ;
+                if( ptrstep <=( arrstep.length -1 )){
+                    arrstep[ ptrstep ]( );
+                };;
+            };;
+            function LOGANOK_ERR(){     //:AKA[ ABORT() ]://    
+
+                          o_k=( 0 );
+                loganok.m_o_k=( 0 );
+                LOGANOK_ADD( "[ABORTED_2022_07_19]"  );
+                LOGANOK_END( );
+            };;
+            //:============================:NOT_A_PROMISE://
+            //:BEGIN_OUR_STEPS:==========================://
+
+                LOGANOK_NEX(); //:[ENTER:STEP_001]://
+
+            //:==========================:BEGIN_OUR_STEPS://
+                
+                //:#MAKE_COORD_HASH#:====================://
+                function STEP_001( i_ignored ){
+
+                    str_xyz = F_HOTEL13_STR_COOHASH(
+                        i_str_xxx
+                    ,   i_str_yyy
+                    ,   i_str_zzz
+                    );;
+                    LOGANOK_NEX( "[STEP_002]" );
+                };;
+                //:======================:MAKE_COORD_HASH://
+                //:#ABORT_IF_NOT_HTTPPOST#:==============://
+                function STEP_002( i_ignored ){
+    
+                    ASS( 1 <= o_k , "[@SBH@:STEP_002]" );
+
+                    ask_met =( 
+                    String.prototype.toUpperCase.call(
+
+                        i_sob_h13.m_ask.method 
+                    ));;
+
+                    if( "POST" != ask_met ){
+        
+                        o_k=( 0 );
+                        LOGANOK_ADD( "[NOT_HTTP_POST]" );
+                        LOGANOK_ERR();
+                    }else{
+
+                        LOGANOK_NEX( "[STEP_003]" );
+                    };;
+                };;
+                //:==============:#ABORT_IF_NOT_HTTPPOST#://
+                //:#ABORT_IF_FILE_TOO_BIG#:==============://
+                function STEP_003( i_ignored ){
+
+                    ASS( 1 <= o_k , "[@SBH@:STEP_003]" );
+
+                    //:1024KB Of Wiggle Room://
+                    wigroom =( 1024 * 1000 );
+
+                    c_l = parseInt( 
+                    i_sob_h13.m_ask.headers[
+
+                        "content-length"
+                    ]);;
+
+                    if( Number.isNaN( c_l ) || c_l <= 0 ){
+
+                        o_k=( 0 );
+                        LOGANOK_ADD( "[NAN_CONTENT_LEN]" );
+                        LOGANOK_ERR();
+                    }else
+                    if( !( c_l <=((512*512*4)+wigroom))){
+
+                        o_k=( 0 );
+                        LOGANOK_ADD("[NOT_512_X_512_PNG]");
+                        LOGANOK_ERR();
+                    }else{
+                        LOGANOK_NEX( "[STEP_004]" );
+                    };;
+                };;
+                //:==============:#ABORT_IF_FILE_TOO_BIG#://
+                //:#SAVE_TO_HEROKU_HARDDISK#:============://
+                function STEP_004( i_ignored ){
+        
+                    ASS( 1 <= o_k , "[@SBH@:STEP_004]" );
+
+                    aimpath=(
+                    F_HOTEL13_COOHASH_AIMPATH(
+                        str_xyz 
+                    ));;
+
+                    if( "./PNG/ERR_001.PNG" === aimpath ){
+        
+                        LOGANOK_ADD( "[ERROR_PATH]" );
+                        LOGANOK_ADD( "[str_xyz]:"
+                                    + "("
+                                    +  str_xyz
+                                    + ")"
+                        );;
+                        LOGANOK_ERR();o_k=( 0 );
+                    }else{
+                        //:::::::::::::::::::::::::::::::://
+                        //: Create Path Before Attempt   ://
+                        //: To Save To Hard Disk         ://
+                        //:::::::::::::::::::::::::::::::://
+                        F_HOTEL13_AIMPATH_MKDIRSYNC(
+                                  aimpath 
+                        );;
+
+                        f_s = l_fs.createWriteStream( aimpath );
+                        f_s.on( "error" , (i_err)=>{
+                        
+                            LOGANOK_ADD(  "[OHFUKNO_2022]" );
+                            LOGANOK_ERR();o_k=( 0 );
+                        });;
+                        i_sob_h13.m_ask.pipe( f_s );  
+
+                        i_sob_h13.m_ask.on( "end" , ( )=>{
+                        
+                            f_s.close( ()=>{
+                        
+                                loganok.m_o_k=( 100 );
+                                LOGANOK_ADD( "[SUCCESS]"  );
+                                LOGANOK_ADD( "[aimpath]:"
+                                         +"("+ aimpath + ")"
+                                );;
+                                LOGANOK_NEX( "[STEP_005]" );
+                            });;
+                        });;
+                    };;
+                };;
+                //:============:#SAVE_TO_HEROKU_HARDDISK#://
+                //:#ABORT_IF_NO_IMGUR_CRED#:=============://
+                function STEP_005( i_ignored ){
+
+                    ASS( 1 <= o_k , "[@SBH@:STEP_005]" );
+
+                    hascred = F_HOTEL13_API_3RD_HAS_IMGUR();    
+
+                    if( !hascred ){
+
+                        o_k=( 0 );
+                        LOGANOK_ADD( "[bad:imgur_cred]" );
+                        LOGANOK_ERR();
+                    }else{
+
+                        LOGANOK_ADD( "[Has_Imgur_Cred]" );
+                        LOGANOK_NEX( "[STEP_006]"       );
+                    };;
+                };;
+                //:=============:#ABORT_IF_NO_IMGUR_CRED#://
+                //:#LOAD_FROM_HEROKU_HARDDISK#:==========://
+                function STEP_006( i_ignored ){
+
+                    ASS( 1 <= o_k , "[@SBH@:STEP_006]" ); //:<<<<<<<<<<<<<< NOTICE_ME_SENPAI
+                
+                    l_fs.readFile( aimpath,(i_err,i_cof)=>{    
+
+                        if( i_err ){
+                            o_k=( 0 );
+                            LOGANOK_ADD( "[READFAIL]" );
+                            LOGANOK_ADD( ""+i_err+""  );
+                            LOGANOK_ERR();   //:ABORT://
+                        }else{
+
+                            png_bin =( i_cof );
+                            LOGANOK_ADD( "[READ:O_K]" );
+                            LOGANOK_NEX( "[STEP_007]" );
+                        };;
+                    });;
+                };;
+                //:==========:#LOAD_FROM_HEROKU_HARDDISK#://
+                //:#GET_JUST_FILENAME#:==================://
+                function STEP_007( i_ignored ){
+
+                    ASS( 1 <= o_k , "[@SBH@:STEP_007]" );
+
+                    png_nam =( 
+                    F_HOTEL13_AIMPATH_NAMAEXT( aimpath ));;
+                    png_tit =(
+                    F_HOTEL13_AIMPATH_NAMONLY( aimpath ));;
+
+                    LOGANOK_ADD("[png_nam]:("+png_nam+")");
+                    LOGANOK_ADD("[png_tit]:("+png_tit+")");
+
+                    LOGANOK_NEX(); //:[STEP_008]://
+                };;
+                //:==================:#GET_JUST_FILENAME#://
+                //:#GET_IMGUR_BEARER_TOKEN#:=============://
+                function STEP_008( i_ignored ){
+
+                    ASS( 1 <= o_k , "[@SBH@:STEP_008]" );
+
+                    //:::::::::::::::::::::::::::::::::::://
+                    //:                                  ://
+                    //:  You don't want to do this.      ://
+                    //:  But we __DO__ need to setup     ://
+                    //:  a database and put imgur        ://
+                    //:  hashes into it. We could use    ://
+                    //:  file-system, but that gets      ://
+                    //:  erased every time we            ://
+                    //:  re-deploy.                      ://
+                    //:::::::::::::::::::::::::::::::::::://
+
+                    LOGANOK_NEX();
+                };;
+                //:=============:#GET_IMGUR_BEARER_TOKEN#://
+                //:#BUILD_FORM_DATA#:====================://
+                function STEP_009( i_ignored ){
+
+                    ASS( 1 <= o_k , "[@SBH@:STEP_009]" );
+
+                    if( 042 != 0x22 ){ ERR("[OCT42]");};
+                    if( 042 !=   34 ){ ERR("[OCT42]");};    
+                    let double_quotes =( 
+                        String.fromCharCode( 042 ));;
+
+                    let equals_sign =( "=" );
+                    let         spc =( " " );
+
+                    //:::::::::::::::::::::::::::::::::::://
+                    //:                                  ://
+                    //: @norform@ :                      ://
+                    //:     Nodejs_Outgoing_Request      ://
+                    //:     FORM-data                    ://
+                    //:                                  ://
+                    //:::::::::::::::::::::::::::::::::::://
+                    norform_jso ={
+                        image       : png_bin
+                ////,   album       :"TffSOLf"   //:"AIM"://
+                    ,    type       :   "file"
+                    ,    name       : png_nam  //[namaext]//
+                    ,   title       : png_tit  //[namonly]//
+                    ,   description :    "DSC"
+                    };;
+                    arr_k_v=( Object.entries( norform_jso ) );  
+                        kv0=( 0 );
+                        kv1=( arr_k_v.length - 1 );
+
+                    //:user_defined_boundary:------------://
+
+                    norform_bou =(
+                        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                    //: "stackoverflow_com_questions_3508338" 
+                    );;
+                    //:------------:user_defined_boundary://
+                    //:all_one_line:---------------------://
+                    norform_c_t =( 
+                        "multipart/form-data"     +";"+spc
+                    +""
+                        //:utf8:-------------------------://
+                        +   "charset=" 
+                        +       double_quotes
+                        +""
+                        +       "utf-8"
+                        +""
+                        +       double_quotes+";"+spc
+                        //:-------------------------:utf8://    
+                    +""
+                    +   "boundary=" + norform_bou
+                    );;
+                    //:---------------------:all_one_line://
+
+                    norform_str = "" ;
+                    
+                    for( kvi = kv0 ; kvi <=(kv1); kvi++ ){
+
+                        k_v = arr_k_v[ kvi ];
+                        norform_jso_key = k_v[  0  ];
+                        norform_jso_val = k_v[  1  ];
+
+                        ASS( 
+                           (norform_jso[ norform_jso_key ] )    
+                            ===
+                           (           ( norform_jso_val ) )
+                        ,
+                            "[JUST_BEING_PARANOID_2022]"
+                        );;
+
+                        //:------------------------------://
+                        //: Image Is Binary Data, Must   ://
+                        //: be handled later when we     ://
+                        //: start working with byte data.://
+                        //:------------------------------://
+                        if( "image" == norform_jso_key ){
+
+                            continue;
+                        };;
+
+                        norform_str +=( ""
+                        +   "--" + norform_bou + "\r\n"
+                        +""
+                        +"" 
+                        +   "Content-Disposition:" 
+                        +   spc
+                        +   "form-data;"
+                        +   spc
+                        +   "name"
+                        +       equals_sign
+                        +       double_quotes
+                        +"" ////////////////////////////////////
+                        +""
+                        +           norform_jso_key
+                        +""
+                        +"" ////////////////////////////////////
+                        +       double_quotes
+                        +       ";"+spc+"\r\n\r\n"
+                        +"" ////////////////////////////////////
+                        +""
+                        +           norform_jso_val
+                        +""
+                        +"" ////////////////////////////////////
+                        +       "\r\n"
+                        );;
+                    };;
+
+                    norform_str +=( ""
+                    //:--------------------------------------://
+                    +"" /////////////// BOUNDARY ///////////////
+                    +""
+                    +   "--" + norform_bou + "\r\n"
+                    +""
+                    //:--------------------------------------://
+                    +   "Content-Disposition:" + spc
+                    +""
+                    +       "form-data"  + ";" + spc
+                    +"" 
+                    //:--------------------------------------://
+                    +   "name"
+                    +       equals_sign
+                    +       double_quotes
+                    +""
+                    +       "image"    //:OtherAPIs[ "file" ]://
+                    +""
+                    +       double_quotes + ";" + spc
+                    //:--------------------------------------://
+                    +   "filename"
+                    +       equals_sign
+                    +       double_quotes
+                    +""
+                    +       png_nam                //[namaext]//
+                    +""
+                    +       double_quotes
+                    +       "\r\n"
+                    //:--------------------------------------://
+                    +   "Content-Type" + ":" + spc
+                    +""
+                    +       "application/octet-stream"
+                    +       "\r\n" //:TWO_BEFORE_CONTENT://
+                    +       "\r\n" //:TWO_BEFORE_CONTENT://
+                    //:--------------------------------------://
+                    );;
+                    //:LOG_CONTENT_TYPE:-----------------://
+
+                    console.log( "[BEG:CONTENT_TYPE]");
+                    console.log( "\n\n" );
+
+                    console.log( norform_c_t );
+
+                    console.log( "\n"   );
+                    console.log( "[END:CONTENT_TYPE]");
+
+                    //:LOG_CONTENT_TYPE:-----------------://
+                    //:LOG_PAYLOAD_NO_DATA:--------------://
+
+                    console.log( "[BEG:PAYLOAD_NO_DATA]" );
+                    console.log( "\n\n" );
+                    
+                    console.log( norform_str );
+    
+                    console.log( "\n"   );
+                    console.log( "[END:PAYLOAD_NO_DATA]" );
+
+                    //:--------------:LOG_PAYLOAD_NO_DATA://
+                    //:MAKE_UTF8_PAYLOAD:----------------://
+                    let fin_bou =(     //: FinalBoundary ://
+                        "\r\n--" + norform_bou + "--\r\n"
+                    );;
+                    //:- - - - - - - - -- - - - - - - - -://
+                    norform_pay_buf_001 =(
+                
+                        Buffer.from( norform_str,"utf8" )    
+                    );;
+                    //:- - - - - - - - -- - - - - - - - -://
+                    norform_pay_buf_002 =(
+                
+                        Buffer.from( png_bin , "binary" )
+                    );;
+                    //:- - - - - - - - -- - - - - - - - -://
+                    norform_pay_buf_003 =(
+                
+                        Buffer.from( fin_bou , "utf8" )
+                    );;
+                    //:- - - - - - - - -- - - - - - - - -://
+
+                    
+            ////    norform_pay = Buffer.concat([
+            ////
+            ////        /** Fails : ERROR 417 **/
+            ////    
+            ////        norform_pay_buf_001
+            ////    ,   norform_pay_buf_002
+            ////    ,   norform_pay_buf_003
+            ////    ]);;
+
+                    //: norform_pay === Uint8Array
+                    //: Is worse, corrupts everything.
+
+                   
+                    norform_pay =Buffer.concat([
+                        Buffer.from( norform_str , "utf8"   ) 
+                    ,   Buffer.from(     png_bin , "binary" ) 
+                    ,   Buffer.from(     fin_bou , "utf8"   ) 
+                    ]);;
+
+ 
+            
+
+                    //:----------------:MAKE_UTF8_PAYLOAD://
+                    //:LOG_BINARY_PAYLOAD:---------------://
+
+                    console.log( "[BEG:PAYLOAD_BINARY]" );
+                    console.log( "\n\n" );
+                    
+                    console.log( norform_pay );
+    
+                    console.log( "\n"   );
+                    console.log( "[END:PAYLOAD_BINARY]" );
+
+                    //:---------------:LOG_BINARY_PAYLOAD://
+
+                    LOGANOK_ADD( "[PAYLOAD_BUILT]" );
+                    LOGANOK_NEX();   //:[STEP_010]://
+                };;
+                //:======================:BUILD_FORM_DATA://
+                //:#SEND_PNG_TO_IMGUR#:==================://
+                function STEP_010( i_ignored ){
+    
+                    ASS( 1 <= o_k , "[@SBH@:STEP_010]" );
+
+                    LOGANOK_ADD( "[THE_HARD_PART]" );
+    
+                    _s_ =( " " ); //:Exactly One Space   ://  
+
+                    //:formdata:-------------------------://
+                    //+ WRONG: formdata is __NOT__       +//
+                    //+      : native to node.js         +//
+                    //-                                  -//
+                    //- f_d = new FormData( );           -//
+                    //- f_d.append( "image",   png_bin );-//
+                    //- f_d.append( "album","ALBUM_AIM");-//
+                    //-                                  -//
+                    //:-------------------------:formdata://
+
+                    typ =( "POST" );
+                    url =( "https://api.imgur.com/3/upload");
+                    cid =( F_HOTEL13_API_3RD_CID_IMGUR() );
+
+                    a_n =( "Authorization" );
+                    a_v =( "Client-ID"+ _s_ + cid );
+
+                    nor_opt = {
+                        encoding : "utf-8" //:GUESS:OVERFLOW_29005084
+                    ,   host     : "api.imgur.com"  //: "hostname" -OR- "host" ? ://
+                    ,   path     : "/3/upload"
+                    ,   method   : "POST" //:typ://
+                    ,   headers  :{
+                            
+                            [a_n]:a_v
+                ////////,   "name" : "IDONTKNOWWHATIAMDOING.png"
+                        ,   "Content-Type"   : norform_c_t
+                /////// ,   "Content-Length" : Buffer.byteLength( norform_pay )
+                        }
+                    ////////,   json   : false
+                    //////body : norform_pay
+                    };;
+
+
+                    nor_ask =( 
+                    l_https.request(nor_opt,(i_giv)=>{
+
+                        i_giv.setEncoding( "utf8" );
+
+                        i_giv.on( "data" , (i_dat)=>{
+
+                            console.log(
+                                "[IMGURDATA]:"+i_dat
+                            );;
+
+                            got_jso = JSON.parse( i_dat );
+
+                            png_url_imgur=(
+                                got_jso.data.link );;
+
+                            if(!png_url_imgur){
+                                MSG("[IMGUR_DOWN_MAYBE]");
+                            };;
+                        });;
+                        i_giv.on( "error",(i_err)=>{
+
+                            LOGANOK_ADD( "[i_err]"+i_err );
+                            //// LOGANOK_ERR();
+                        });;
+                        i_giv.on( "end"  , ()=>{
+
+                            LOGANOK_ADD( "[@A_I_A@]" );
+                            LOGANOK_ADD( "[#_NJS_END_#]" );
+                        });;
+                        i_giv.on( "close", ()=>{
+
+                            LOGANOK_ADD( "[#_NJS_CLOSE_#]" );
+                            LOGANOK_NEX(); //:[STEP_011]://
+                        });;
+                    }));;
+                    nor_ask.on( "error" , (i_err)=>{
+    
+                        LOGANOK_ADD( "[i_err]"+i_err );
+                        LOGANOK_ERR();
+                    });;
+                    nor_ask.on( "close" , ( )=>{
+
+                    /////    LOGANOK_ADD( "[@A_I_A@]" );
+                    /////    LOGANOK_NEX(); //:[STEP_011]://
+                    });;
+
+                //- nor_ask.write( png_bin     ); WRONG  -//    
+                    nor_ask.write( norform_pay ); //:<--We need to write... But what?
+                    nor_ask.end();
+  
+                };;
+                //:==================:#SEND_PNG_TO_IMGUR#://
+                //:#GET_MOST_RECENT_LEVELPACK#:----------://    
+                function STEP_011( i_ignored ){
+
+                        verni32 =( 0 /**ZERO**/       );
+                    let lastver =( 0 - 1 /**NEGONE**/ );
+                    let coohash =( str_xyz );
+                    let sql_cmd =( d_sel_tab_hotel13 );
+                        sql_cmd = sql_cmd.replaceAll(
+
+                            "[i_coohash]" , coohash
+                        );;
+                    d_hotel13_dcp                               
+                    .query( sql_cmd )                 
+                    .then( function( i_res ){ 
+                           
+                        if( i_res.rows.length >= 1 ){
+
+                            lastver =( 
+                                i_res.rows[ 0 ] 
+                                .col_verni32
+                            );;
+                            verni32=( lastver + 1 );
+
+                            MSG("[WE_GOT_ROWS!!!!!]");
+                            LOG("[lastver]",lastver );
+                            LOG("[verni32]",verni32 );
+                            LOG("[coohash]",coohash );
+                            LOG("[sql_cmd]",sql_cmd );
+                        }else
+                        if( i_res.rows.length ===0 ){
+
+                            MSG("[NO_FUCKING_ROWS?]");
+                            LOG("[coohash]",coohash );
+                            LOG("[sql_cmd]",sql_cmd );
+                        }else{
+                            ERR("[WTF_WHERE_ROWS?]");
+                        };;
+
+                        LOGANOK_NEX(); //:[STEP_012]://
+                    })                                          
+                    .catch( function( i_err ){                  
+                                              
+                        MSG("[FAIL:STEP_ELEVEN]");   
+                        LOG("[i_err]",i_err );
+                        LOGANOK_ERR(); o_k=( 0 );       
+                    }) 
+                    ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                };;
+                //:----------:#GET_MOST_RECENT_LEVELPACK#://
+                //:#ADD_IMGUR_URL_TO_DATABASE#:----------://
+                function STEP_012( i_ignored ){
+
+                    ASS( 1 <= o_k , "[@SBH@:STEP_012]" );
+                    
+                    LOGANOK_ADD( "[BEG:DATASTORE]");
+
+                    let coohash =( str_xyz           );
+                    /// verni32 :( ALREADY SET       );
+                    let png_url =( png_url_imgur     );
+                    let sql_cmd =( d_iis_tab_hotel13 );
+
+                    sql_cmd = sql_cmd.replaceAll(
+
+                        "[i_coohash]" ,""+coohash+""
+                    );;
+                    sql_cmd = sql_cmd.replaceAll(
+
+                        "[i_verni32]" ,""+verni32+""
+                    );;
+                    sql_cmd = sql_cmd.replaceAll(
+
+                        "[i_png_url]" ,""+png_url+""
+                    );;
+
+                    LOG( "[sql_cmd]" , sql_cmd );
+
+                    d_hotel13_dcp                               
+                    .query( sql_cmd )                 
+                    .then( function( i_res ){ 
+                                                   
+                        MSG("[DONE:STEP_012]");
+                        LOGANOK_ADD( "[END:DATASTORE]");
+                        LOGANOK_NEX(); //:[STEP_013]://
+                    })                                          
+                    .catch( function( i_err ){                  
+                                              
+                        MSG("[BEG:FAIL_STEP_012]"); 
+  
+                        LOG("[i_err]" , i_err );
+
+                        MSG("[END:FAIL_STEP_012]");   
+                        LOGANOK_END();           
+                    })                                          
+                    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;   
+                };;
+                //:----------:#ADD_IMGUR_URL_TO_DATABASE#://
+                //:#STOP_TALKING_TO_ME#:=================://
+                function STEP_013( i_ignored ){
+
+                    ASS( 1 <= o_k , "[@SBH@:STEP_013]" );
+
+                    console.log( "[IAG:STOPTALKINGTOME]");    
+                    LOGANOK_ADD( "[IAG:STOPTALKINGTOME]");
+                    LOGANOK_END();
+                };;
+                //:=================:#STOP_TALKING_TO_ME#://
+
+            //:DO_NOTHING_HERE:==========================://
+
+                //:--------------------------------------://
+                //: Bro, your shit is like , all async,  ://
+                //: we can't do the complimentary        ://
+                //: action of[ BEGIN_OUR_STEPS ]here.    ://
+                //:--------------------------------------://    
+
+            //:==========================:DO_NOTHING_HERE://
+        };; //:END[ F_HOTEL13_API_3RD_UPP_IMGUR_YESNODE ]://    
+
+        var     F_HOTEL13_API_3RD_DOW_IMGUR_YESNODE = function
+        PRIVATE_F_HOTEL13_API_3RD_DOW_IMGUR_YESNODE(
+
+            i_imgname
+        ){
+
+            var o_promise = new Promise( function        
+            EXECUTO_F_HOTEL13_API_3RD_DOW_IMGUR_YESNODE( 
+
+                o_k_yes
+            ,   wontsay 
+            ){
+                var o_k =( 1 );
+
+                if( F_HOTEL13_API_3RD_HAS_IMGUR() ){
+
+                    o_k =( 1 );
+                }else{
+                    o_k =( 0 );
+                };;
+
+                
+
+                o_k_yes( "[NOT_FINISHED:DOW]" ); //:<<<<<<<<<<<<< NOTICE_ME_SENPAI
+            });;
+            return( o_promise );
+        };;
+
+    };;
+    //:===============================:IMGUR_FUNCS_SERVER://
+    //:IMGUR_FUNCS_CLIENT:===============================://
+    if( d_hotel13_notnode >= 1 ){
+
+        var     F_HOTEL13_API_3RD_UPP_IMGUR_NOTNODE = function
+        PRIVATE_F_HOTEL13_API_3RD_UPP_IMGUR_NOTNODE(
+
+            i_imgname //:ImageNameWithExtension://
+        ,   i_pngfile //:Our_512_X_512_PNG_FILE://
+        ){
+
+            YELL( "[TODO:API_3RD_UPP]" ); //:<<<<<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI
+        };;
+
+        var     F_HOTEL13_API_3RD_DOW_IMGUR_NOTNODE = function
+        PRIVATE_F_HOTEL13_API_3RD_DOW_IMGUR_NOTNODE(
+
+            i_imgname
+        ){
+            YELL( "[TODO:API_3RD_UPP]" ); //:<<<<<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI
+        };;
+    };;
+    //:===============================:IMGUR_FUNCS_CLIENT://
+    //:API_WIREUP:2022_07_18:============================://
+    if( d_hotel13_yesnode >= 1 ){
+
+        var   F_HOTEL13_API_3RD_UPP_IMGUR=(
+              F_HOTEL13_API_3RD_UPP_IMGUR_YESNODE );; 
+
+        var   F_HOTEL13_API_3RD_DOW_IMGUR=(
+              F_HOTEL13_API_3RD_DOW_IMGUR_YESNODE );;
+    }else
+    if( d_hotel13_notnode >= 1 ){
+
+        var   F_HOTEL13_API_3RD_UPP_IMGUR=(
+              F_HOTEL13_API_3RD_UPP_IMGUR_NOTNODE );; 
+
+        var   F_HOTEL13_API_3RD_DOW_IMGUR=(
+              F_HOTEL13_API_3RD_DOW_IMGUR_NOTNODE );;
+
+    }else{
+        ERR("[API_WIREUP_FAIL]");
+    };;
+    //:============================:API_WIREUP:2022_07_18://
+    //:**************************************************://
+    //:                                                  ://
+    //:             END_OF_API_SECTION                   ://
+    //:                                                  ://
+    //:**************************************************://
+    //:HOTEL13_DATABASE.DATA:============================://
+
+        //:::::::::::::::::::://
+        //: Moved Further Up ://
+        //:::::::::::::::::::://
+
+    //:============================:HOTEL13_DATABASE.DATA://
+    //:HOTEL13_DATABASE.FUNC:============================://
+    
+    const   EXECUTO_F_HOTEL13_DATBASE_INI = function
+    PRIVATE_EXECUTO_F_HOTEL13_DATBASE_INI(
+
+            o_k_yes //:ACCEPTOR://
+        ,   wontsay //:REJECTOR://
+    ){
+        //:NICE_OUTLINE:-----------------------------://
+        var ptrstep =( 0-1 );
+        var arrstep =[
+                                              
+            CREATE_CONNECTION_POOL           //: 001 ://
+        ,   TEST_CONNECTION_TO_DATABASE      //: 002 ://
+        ,   CREATE_TABLE_IF_NOT_EXISTS       //: 003 ://
+        ,   RESOLVE_YOUR_PROMISE_AT_THE_END  //: 004 ://
+        ];;
+        function DATBASE_INI_NEX( ){     
+            ptrstep++ ;
+            if( ptrstep <=( arrstep.length -1 )){
+                arrstep[ ptrstep ]( );
+            };;
+        };;
+        //:-----------------------------:NICE_OUTLINE://
+        //:FOUR_STEP_PROGRAM:------------------------://
+
+        DATBASE_INI_NEX();
+
+        function 
+        CREATE_CONNECTION_POOL(){
+            
+            if( (!l_pg) ){
+
+                ERR("[ADD_PG_TO_PACKAGE_DOT_JSON]");
+            };;
+
+            d_hotel13_dcp =( 
+                new( l_pg.Pool )( d_hotel13_cin ));    
+                                                    
+            d_hotel13_dcp
+            .on( "error" , ( i_err , i_cli ) =>{ 
+                                                    
+                ERR( "[oh_nooo_bro_2022_07_21]" );        
+            });;      
+
+            DATBASE_INI_NEX();
+        };;
+        function 
+        TEST_CONNECTION_TO_DATABASE(){
+
+            d_hotel13_dcp
+            .connect( ( i_err , i_cli , i_don )=>{   
+                                                          
+                if( i_err ){                              
+                    LOG( "[d_hotel13_dbu...]" 
+                         , d_hotel13_dbu      );;        
+                    LOG( "[error_is]" , i_err );   
+
+                    MSG("[******************************]"); 
+                    MSG("[ FIX::::::::::::::::::::::::::]");
+                    MSG("[ heroku addons:create         ]");
+                    MSG("[ heroku-postgresql:hobby-dev  ]");
+                    MSG("[ --version=14                 ]");
+                    MSG("[ --app  'YOURAPPNAME'         ]");
+                    MSG("[ --name 'YOURAPPNAME-database']");
+                    MSG("[******************************]"); 
+
+                    ERR( "[sorry!!!]"         );          
+                };;                                       
+                /** Assert Client ( @i_cli@ ) Exists **/ 
+                if( ( i_cli ) ){ MSG( "[cli_exists]" ); }; 
+                if(!( i_cli ) ){ ERR( "[cli_notcli]" ); }; 
+                                                          
+                i_don();//: @don@ : PGSQL Done Function:// 
+                DATBASE_INI_NEX();
+            });;  
+        };;
+        function 
+        CREATE_TABLE_IF_NOT_EXISTS(){
+
+            d_hotel13_dcp                               
+            .query( d_cts_tab_hotel13 )                 
+            .then( function( i_res ){                   
+                                                        
+                MSG("[DONE:CREATE_TABLE_IF_NOT_EXISTS]");
+                DATBASE_INI_NEX();
+            })                                          
+            .catch( function( i_err ){                  
+                                                        
+                MSG("[FAIL:CREATE_TABLE_IF_NOT_EXISTS]");      
+                ERR("[FAIL:CREATE_TABLE_IF_NOT_EXISTS]");            
+            })                                          
+            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;                                          
+        };; 
+        function
+        RESOLVE_YOUR_PROMISE_AT_THE_END(){
+
+            o_k_yes( "[DATABASE_SETUP_DONE]" );
+        };;
+        //:------------------------:FOUR_STEP_PROGRAM://
+
+    };;
+    const   F_HOTEL13_DATBASE_INI = function
+    PRIVATE_F_HOTEL13_DATBASE_INI(
+       
+        /** No arguments **/
+    ){
+        var o_promise = new Promise(  
+
+            EXECUTO_F_HOTEL13_DATBASE_INI
+
+        );;return( o_promise );
+    };;
+    //:============================:HOTEL13_DATABASE.FUNC://
+    //:HOTEL13_SERVER_INIT_ON_STARTUP:===================://
+    if( d_hotel13_yesnode ){
+
+        F_HOTEL13_DATBASE_INI()
+        .then(( i_saywhat )=>{
+
+            console.log("[DONE:F_HOTEL13_DATBASE_INI]");
+        });;
+    };;
+    //:===================:HOTEL13_SERVER_INIT_ON_STARTUP://
+    //:HOTEL13_SERVER:===================================://
+    require("http").createServer(( 
+
+        i_ask  //:AKA[ req / request  ]://
+    ,   i_giv  //:AKA[ res / response ]://
+    )=>{
+
+        //:----------------------------------------------://
+        //:  @h13@ : The state object bundle(sob)        ://
+        //:        : for hotel13's server. __NOT__       ://
+        //:        : named "sob" to avoid confusion      ://
+        //:        : with main[ AIM / BOOM ]server.      ://
+        //:----------------------------------------------://
+
+        var o_k =( 1 );
+
+        var   h13 ={  laxcoma : "[laxcoma_hack]"
+        ,   m_ask : i_ask                                     
+        ,   m_giv : i_giv                                     
+        ,   m_url : l_url.parse( i_ask.url , 1 ).pathname     
+        ,   m_pam : l_qs .parse( i_ask.url , 1 ).query        
+        ,   m_seg : [ "URLPATH_SEGMENTS_NOT_LOADED]" ]        
+        };;
+        h13.m_url =( h13.m_url.toUpperCase()             );      
+        h13.m_seg =( h13.m_url.split( "/" ).filter(n=>n) );
+
+        if( "F_HOTEL13_CAS_COOHASH_SCATPNG" == h13.m_seg[ 0 ]
+        &&   F_HOTEL13_NOT_COOHASH(            h13.m_seg[ 1 ] )
+        ){
+            h13.m_giv.writeHead( 400 , d_txt );
+            h13.m_giv.write( "[APPEND:/COOHASH]" );
+            h13.m_giv.end();
+        }else
+        if( "F_HOTEL13_CAS_COOHASH_SCATPNG" == h13.m_seg[ 0 ] ){
+             F_HOTEL13_CAS_COOHASH_SCATPNG(    h13.m_seg[ 1 ] )
+            .then( ( i_scatpng )=>{
+
+                if( "string" != typeof i_scatpng.m_ooi ){
+                    ERR("[IMAGE_ORIGIN_NEVER_SET]");
+                };;
+
+                if( i_scatpng.m_has >= 1 ){
+
+                    
+                    h13.m_giv.setHeader( 
+                        "nsh_ooi" ,  i_scatpng.m_ooi  );;
+                    h13.m_giv.writeHead( 200 , d_png  );
+                    h13.m_giv.write( i_scatpng.m_png  );        
+                    h13.m_giv.end();
+                }else
+                if( i_scatpng.m_has <= 0 ){
+
+                    h13.m_giv.setHeader(
+                        "nsh_ooi" , i_scatpng.m_ooi   );;
+                    h13.m_giv.writeHead( 404 , d_jso  );
+
+                    i_scatpng.m_log.push( 
+                        "[PNG_NOT_FOUND]"
+                    );;
+                    h13.m_giv.write( JSON.stringify( 
+                            i_scatpng.m_log ));;
+                    h13.m_giv.end();
+                }else{
+                    ERR("[EDCL_20220723]");
+                };;
+            });;
+        }else
+        if( "DANGER_ZONE_FLIP_THE_TABLE_MY_BITCH_2022"
+        === h13.m_seg[ 0 ]
+        ){
+
+            var act_p_w =( F_HOTEL13_API_3RD_C_S_IMGUR() );
+            var got_p_w =( h13.m_seg[ 1 ] );
+
+            act_p_w =F_HOTEL13_STR_UPP( act_p_w );
+            got_p_w =F_HOTEL13_STR_UPP( got_p_w );
+
+            if( 1
+            &&  ( act_p_w === got_p_w )
+            &&  ( act_p_w  != ""      ) //:#PWE_GAURD#://
+            ){
+                d_hotel13_dcp
+                .query( d_dts_tab_hotel13 )
+                .then( function( i_res ){
+
+                    h13.m_giv.writeHead( 200 , d_txt );
+                    h13.m_giv.write("[DATABASE_EXPLODED]");
+                    h13.m_giv.end();
+                })
+                .catch( function( i_err ){
+
+                    LOG( "[OH_FUCK_WHAT_NOW?]");
+                    LOG( "[i_err]" , i_err    );
+
+                    h13.m_giv.writeHead( 200 , d_txt );
+                    h13.m_giv.write("[SQL_ERROR_OHNO]");
+                    h13.m_giv.end();
+                })
+                ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+            }else{
+
+                h13.m_giv.writeHead( 404 , d_txt );
+                h13.m_giv.write("[404_PASSWORD_NOT_FOUND]");
+                h13.m_giv.end();
+            };;
+        }else
+        if( "API"       == h13.m_seg[ 0 ] ){
+
+            if( 1
+            &&  "API"      === h13.m_seg[ 0 ]
+            &&  "LISHASH"  === h13.m_seg[ 1 ]
+            ){   
+                let coohash =( h13.m_seg[ 2 ] );
+                let sql_cmd =( d_sel_tab_hotel13 );
+                    sql_cmd = sql_cmd.replaceAll(
+
+                        "[i_coohash]" , coohash
+                    );;
+
+                if( ! ( F_HOTEL13_ICH( coohash ))){
+
+                    h13.m_giv.writeHead( 400 , d_txt );
+                    h13.m_giv.write(
+                        "[Please_Supply:COOHASH]"
+                    );;
+                    h13.m_giv.end();
+                }else{
+
+                    d_hotel13_dcp                               
+                    .query( sql_cmd )                 
+                    .then( function( i_res ){ 
+                           
+                        h13.m_giv.writeHead(200,d_jso);
+                        h13.m_giv.write(
+                            JSON.stringify( 
+                                i_res.rows
+                            )
+                        );;
+                        h13.m_giv.end();
+                    })                                          
+                    .catch( function( i_err ){                  
+                                              
+                        MSG("[FAIL:LISHASH]");      
+                        ERR("[FAIL:LISHASH]");            
+                    }) 
+                    ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                };;
+            }else
+            if( 1
+            &&  "API"             === h13.m_seg[ 0 ]
+            &&  "3RD"             === h13.m_seg[ 1 ]
+            &&  "UPP"             === h13.m_seg[ 2 ]
+            &&  "IMGUR"           === h13.m_seg[ 3 ]
+            &&  (  F_HOTEL13_NOT_S3D( h13.m_seg[ 4 ] )
+                || F_HOTEL13_NOT_S3D( h13.m_seg[ 5 ] )
+                || F_HOTEL13_NOT_S3D( h13.m_seg[ 6 ] )
+                )
+            ){
+            //: APP.COM/API/3RD/UPP/IMGUR/XXX_YYY_ZZZ://
+            //: APP.COM/API/3RD/UPP/IMGUR/           ://
+            //: APP.COM/API/3RD/UPP/IMGUR/YOUFUCKEDUP://
+
+                h13.m_giv.writeHead( 200 , d_txt );
+                h13.m_giv.write( "[SUPPLY:XXX/YYY/ZZZ]" );
+                h13.m_giv.end();
+            }else
+            if( 1
+            &&  "API"          === h13.m_seg[ 0 ] 
+            &&  "3RD"          === h13.m_seg[ 1 ] 
+            &&  "UPP"          === h13.m_seg[ 2 ] 
+            &&  "IMGUR"        === h13.m_seg[ 3 ] 
+            &&  F_HOTEL13_YES_S3D( h13.m_seg[ 4 ] ) //:<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI:2022_07_19
+            &&  F_HOTEL13_YES_S3D( h13.m_seg[ 5 ] ) 
+            &&  F_HOTEL13_YES_S3D( h13.m_seg[ 6 ] ) 
+            ){
+            //:   APP.COM/API/3RD/UPP/IMGUR/###/###/### :://    
+                F_HOTEL13_API_3RD_UPP_IMGUR(
+
+                    h13            //:<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI
+                ,   h13.m_seg[ 4 ] //:EX[ "333" ]://
+                ,   h13.m_seg[ 5 ] //:EX[ "666" ]://
+                ,   h13.m_seg[ 6 ] //:EX[ "999" ]://
+                );;
+                //:::::::::::::::::::::::::::::::::::::::://
+                //:                                      ://
+                //: Above call __NOT__ a promise. It     ://
+                //: doesn't need to be, and if you make  ://
+                //: it one, shit will get ugly.          ://
+                //:                                      ://
+                //:::::::::::::::::::::::::::::::::::::::://
+            }else
+            if( 1
+            &&  "API"          === h13.m_seg[ 0 ] 
+            &&  "3RD"          === h13.m_seg[ 1 ] 
+            &&  "DOW"          === h13.m_seg[ 2 ] 
+            &&  "IMGUR"        === h13.m_seg[ 3 ] 
+            &&  F_HOTEL13_YES_S3D( h13.m_seg[ 4 ] ) //:<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI:2022_07_19
+            &&  F_HOTEL13_YES_S3D( h13.m_seg[ 5 ] )
+            &&  F_HOTEL13_YES_S3D( h13.m_seg[ 6 ] )
+            ){
+            //:   APP.COM/API/3RD/DOW/IMGUR/###/###/### :://
+                F_HOTEL13_API_3RD_DOW_IMGUR()
+                .then( (i_saywhat)=>{
+
+                    h13.m_giv.writeHead( 200 , d_txt );
+                    h13.m_giv.write( "[TODO:DOW]" );  //:<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI
+                    h13.m_giv.end();
+                });;
+            }else{
+                //:::::::::::::::::::::::::::::::::::::::://
+                //: Unknown API Message .................://
+                //:::::::::::::::::::::::::::::::::::::::://    
+                h13.m_giv.writeHead( 200 , d_txt );
+                h13.m_giv.write( "[API_WTF]" );
+                h13.m_giv.end();
+            };;
+        }else
+        if( "HAS_IMGUR" == h13.m_seg[ 0 ] ){
+
+            //:::::::::::::::::::::::::::::::::::::::::::://
+            //: Before we write imgur upload, let's      ://
+            //: use this hack to see if we have          ://
+            //: the correct configuration ready.         ://
+            //:::::::::::::::::::::::::::::::::::::::::::://
+
+            var has_imgur = F_HOTEL13_API_3RD_HAS_IMGUR();
+            h13.m_giv.writeHead( 200 , d_txt );
+            h13.m_giv.write("[has_imgur]:("+has_imgur+")");
+            h13.m_giv.end();
+        }else
+        if( "PNG"    == h13.m_seg[ 0 ] ){
+
+            //: @rfp@ : Relative File Path
+            //: @s_i@ : Segment      Index
+            //: @m_i@ : Max( valid ) Index
+
+            var rfp = "." ; 
+            var m_i =( h13.m_seg.length - 1 );
+            for( var s_i = 0 ; s_i <=( m_i ) ; s_i ++ ){
+
+                rfp += ( "/" + h13.m_seg[ s_i ] );
+            };;
+
+            F_HOTEL13_SERVEME_PNG( h13 , rfp );
+        }else
+        if( "UPLOAD" == h13.m_seg[ 0 ] ){
+
+            //:@uro@ : Upload_Response_Object://
+            var uro ={ laxcoma:"[HACK]"
+            ,  m_log : [ ] //:ArrayOfLoggingInfo://
+            ,  m_o_k : (0) //:Everything_Ok?
+            };;
+
+            //////////////////////////////////
+            var                exi_ee1 =( 1 );  
+            var                exi_ee2 =( 2 );  
+            var                exi_ee3 =( 3 );  
+            var                exi_ee4 =( 4 );  
+            var                exi_ee5 =( 5 );  
+            var                exi_ee6 =( 6 );  
+            var                exi_ee7 =( 7 );  
+            var                exi_ee8 =( 8 );  
+            var                exi_ee9 =( 9 );  
+
+            var              last_exit =(10 );
+
+            var              early_exit =( last_exit );
+            //////////////////////////////////
+            var doing_some_async_stuff =( 0 );
+    
+            var obj_x   ; //:Object Holding X WorldCoord ://
+            var obj_y   ; //:Object Holding Y WorldCoord ://
+            var obj_z   ; //:Object Holding Z WorldCoord ://
+
+            var world_x ; //:Worldmap . X LevelPack      ://    
+            var world_y ; //:Worldmap . Y LevelPack      ://    
+            var world_z ; //:Worldmap . Z LevelPack      ://
+
+            var met ; //:@met@ : Method           :------://
+            var c_l ; //:@c_l@ : Content Length   :------://
+            var f_n ; //:@f_n@ : File Name        :------://
+            var rel ; //:@rel@ : RelativeFilePath :------://
+            var jtf ; //:@jtf@ : Just_The_Folder  :------://
+            var f_s ; //:@f_s@ : FileStream Inst  :------://    
+            var nca ; //:@nca@ : Name_Components_Array   ://    
+            var nox ; //:@nox@ : filename NO_eXtension   ://
+
+            var goodfmt ;//:Format[ AIM_000_000_000.EXT ]://   
+
+            var url_x   ;//:@url_x@: x m_seg of path :---://      
+            var url_y   ;//:@url_y@: y m_seg of path :---://
+            var url_z   ;//:@url_z@: z m_seg of path :---://
+
+            var sob_xyz ;//:@sob_xyz@:StringObject[xyz]  ://
+            var aim_x   ;//:@aim_x@: AIM_FMT_GET().~x~   ://
+            var aim_y   ;//:@aim_y@: AIM_FMT_GET().~y~   ://
+            var aim_z   ;//:@aim_z@: AIM_FMT_GET().~z~   ://
+
+            h13.m_giv.writeHead( 200 , d_jso );
+
+            uro.m_log.push( "[o_k:Sanity_Check]" );
+            
+
+            if( (o_k >= 1) && (early_exit >= exi_ee1) ){
+
+                if( h13.m_seg.length <= 1 ){
+                    uro.m_log.push("[MISSING:X_AXIS]");
+                    o_k=(0-1);
+                };;
+                if( h13.m_seg.length <= 2 ){
+                    uro.m_log.push("[MISSING:Y_AXIS]");
+                    o_k=(0-2);
+                };;
+                if( h13.m_seg.length <= 3 ){
+                    uro.m_log.push("[MISSING:Z_AXIS]");
+                    o_k=(0-3);
+                };;
+
+                if( o_k >= 1 ){
+                    uro.m_log.push("[o_k:X_Y_Z:given]");
+                };;     
+            }else{
+                uro.m_log.push( "[DEAD_IN_WATER]" );
+                uro.m_log.push( "[o_k==]:"+o_k    );
+                uro.m_log.push( "[exi_ee1]:"+exi_ee1 );
+                uro.m_log.push( "[early_exit]:"+early_exit );
+            };;
+
+            if( (o_k >= 1) && (early_exit >= exi_ee2) ){
+
+                obj_x = F_HOTEL13_TRYATOI( h13.m_seg[ 1 ] );
+                obj_y = F_HOTEL13_TRYATOI( h13.m_seg[ 2 ] );
+                obj_z = F_HOTEL13_TRYATOI( h13.m_seg[ 3 ] );
+
+                if( 1
+                &&  obj_x.m_has 
+                &&  obj_y.m_has 
+                &&  obj_z.m_has
+                ){ 
+                    world_x =( obj_x.m_i32 );
+                    world_y =( obj_y.m_i32 );
+                    world_z =( obj_z.m_i32 );
+                    
+                    o_k =( 0+777 );
+                    uro.m_log.push( "[o_k:COORDS_GOT]" );
+                }else{
+                    o_k =( 0-666 );
+                    uro.m_log.push( "[bad:COORDS_BAD]" );
+                };;
+            };;
+            if( (o_k >= 1) && (early_exit >= exi_ee3) ){
+
+                met = String.prototype.toUpperCase.call(
+                            h13.m_ask.method );;
+
+                if( "POST" != met ){
+    
+                    uro.m_log.push( "[bad:nota_post]" );
+                    o_k =( 0-666 );
+                }else{
+
+                    uro.m_log.push( "[o_k:Is_A_Post]" );
+                    o_k =( 0+777 );
+                };;
+            };;
+            if( (o_k >= 1) && (early_exit >= exi_ee4) ){
+                c_l = parseInt( h13.m_ask.headers[
+
+                    "content-length"
+                ]);;
+
+                if( Number.isNaN( c_l ) || c_l <= 0 ){
+
+                    uro.m_log.push( "[bad:c_l:nan]" );
+                    o_k =( 0-1 );
+                }else{
+
+                    uro.m_log.push( "[o_k:not:nan]" );
+                    o_k =( 0+777 );
+                };;
+            };;
+            if( (o_k >= 1) && (early_exit >= exi_ee5) ){
+
+                f_n = h13.m_ask.headers[ "nsh_pngname" ];
+                if( 0
+                ||  ( null == f_n )
+                ||  (  ""  == f_n )
+                ||  (        !f_n )
+                ){
+                    uro.m_log.push( "[MISSING:nsh_pngname]" );
+                    o_k =( 0 );
+                };;
+            };;
+            if( (o_k >= 1 ) && ( early_exit >= exi_ee6 ) ){
+
+                f_n = String.prototype.toUpperCase.call(f_n);
+                nox = f_n.replaceAll( ".PNG" , "" );
+                nca = nox.split( "_" ).filter( n => n );
+                if( 4 != nca.length ){
+    
+                    uro.m_log.push( 
+                        "[NOT:AIM_###_###_###.PNG(001)]"
+                    );;
+                    uro.m_log.push( "[f_n]:"+f_n );
+                    o_k =( 0 );
+                }else{
+                    //:MoreIntenseTest://
+
+                    goodfmt = F_HOTEL13_AIM_FMT_HAS( nox );
+                    if( !(goodfmt) ){
+
+                        uro.m_log.push( 
+                            "[NOT:AIM_###_###_###.PNG(002)]"
+                        );;
+                        uro.m_log.push( "[nox]:"+nox );
+                        o_k =( 0 );
+                    };;
+                };;
+                if( o_k >= 1 ){
+
+                    uro.m_log.push( "[o_k:FILENAME_FMT]" );
+                    uro.m_log.push( "[f_n]:" + f_n       );
+                };;
+            };;
+            if( (o_k >= 1 ) && ( early_exit >= exi_ee7 ) ){
+
+                //:::::::::::::::::::::::::::::::::::::::://
+                //: URLPATH & FILENAME __MUST__ agree    ://
+                //: EX[ /UPLOAD/111/222/333     ]        ://
+                //: EX[     AIM_111_222_333.PNG ]        ://
+                //:::::::::::::::::::::::::::::::::::::::://
+
+                url_x = ( h13.m_seg[ 1 ] || "[BLANK_X]" );
+                url_y = ( h13.m_seg[ 2 ] || "[BLANK_Y]" );
+                url_z = ( h13.m_seg[ 3 ] || "[BLANK_Z]" );
+
+                if( F_HOTEL13_YES3DIG[ url_x ]
+                &&  F_HOTEL13_YES3DIG[ url_y ]
+                &&  F_HOTEL13_YES3DIG[ url_z ]
+                ){
+                    uro.m_log.push( "[bad_path_format]" );
+                    o_k=( 0 - 432 );
+                }else{
+                    uro.m_log.push( "[o_k:GoodPathFMT]" );
+                };;
+
+                uro.m_log.push( "[url_x]:"+url_x    );
+                uro.m_log.push( "[url_y]:"+url_y    );
+                uro.m_log.push( "[url_z]:"+url_z    );
+            };;
+            if( (o_k >= 1 ) && ( early_exit >= exi_ee8 ) ){
+
+                //:::::::::::::::::::::::::::::::::::::::://
+                //: Make Sure Path Agrees With Filename  ://    
+                //:::::::::::::::::::::::::::::::::::::::://
+
+                sob_xyz = F_HOTEL13_AIM_FMT_GET_STR( f_n );
+                aim_x   = sob_xyz.m_s_x ; //:mstr_x://
+                aim_y   = sob_xyz.m_s_y ; //:mstr_y://
+                aim_z   = sob_xyz.m_s_z ; //:mstr_y://
+
+                if( aim_x === url_x
+                &&  aim_y === url_y
+                &&  aim_z === url_z
+                ){
+                    o_k =( 0 + 888 );
+                }else{
+                    o_k =( 0 - 808 );
+
+                    uro.m_log.push( "[@URL_NE_F_N@]"       );
+                    uro.m_log.push( "[URL__ -VS- AIM__]"   );
+                    uro.m_log.push( url_x + "-VS-" + aim_x );
+                    uro.m_log.push( url_y + "-VS-" + aim_y );
+                    uro.m_log.push( url_z + "-VS-" + aim_z );
+                };;
+            };;
+            if( (o_k >= 1 ) && ( early_exit >= exi_ee9 ) ){
+
+                uro.m_log.push( "[o_k:beg:ee6]" );
+
+                doing_some_async_stuff=( 1 );
+
+                jtf =( ""
+                +   ( "./PNG/" )
+                +   ( "X_" + aim_x /**url_x**/ ) + "/"
+                +   ( "Y_" + aim_y /**url_y**/ ) + "/"
+                +   ( "Z_" + aim_z /**url_z**/ ) +("")
+                );;
+
+                rel =( ""
+                +   ( jtf  /** Just_The_Folder **/ )
+                +   ( "/"  /** ConcatWithSlash **/ )
+                +   ( f_n  /** FileNameWithExt **/ )
+                );;
+    
+                //:::::::::::::::::::::::::::::::::::::::://
+                //: Create Folder If Not Exists          ://
+                //:::::::::::::::::::::::::::::::::::::::://
+                if( (!(l_fs.existsSync( jtf ))) ){
+
+                    l_fs.mkdirSync( 
+    
+                        jtf
+                    ,   { recursive : true }
+                    );;
+                };;
+
+                f_s = l_fs.createWriteStream( rel );
+                f_s.on( "error" , (i_err)=>{
+
+                    console.log(    "[OHFUKNO_2022]" );
+                    uro.m_log.push( "[OHFUKNO_2022]" );
+                    h13.m_giv.end( JSON.stringify( uro ));
+                });;
+
+                h13.m_ask.pipe( f_s ); //:#_W_D_A_I_C_#://
+                h13.m_ask.on( "end" , ()=>{
+
+                    f_s.close( ()=>{
+
+                        uro.m_log.push( "[SUCCESS]" );
+                        uro.m_o_k =( 200 );
+                        h13.m_giv.end( JSON.stringify( uro ));
+                    });;
+                });;
+
+                uro.m_log.push( "[o_k:end:ee6]" );
+            };;
+
+            if( doing_some_async_stuff <= 0 ){
+    
+                if( early_exit < last_exit ){
+
+                    uro.m_log.push( "[warning:earlyexit]" );
+                };;
+                h13.m_giv.end( JSON.stringify( uro ));
+            };;
+        }else
+        if( 1
+        &&  ( 5         == h13.m_seg.length )
+        &&  ( "H13_J_S" == h13.m_seg[ 0 ]   )  //::PREFIX://
+        &&  (  "H13.JS" == h13.m_seg[ 4 ]   )  //:POSTFIX://
+        ){
+            //:::::::::::::::::::::::::::::::::::::::::::://
+            //: Serve as custom taylored client side     ://    
+            //: javascript library by going to url :     ://    
+            //:                                          ://    
+            //: www.app.com/H13_J_S/001/002/003/H13.JS   ://    
+            //: www.app.com/H13_J_S/###/###/###/H13.JS   ://    
+            //:                                          ://    
+            //:::::::::::::::::::::::::::::::::::::::::::://
+
+            var obj_x = F_HOTEL13_TRYATOI( h13.m_seg[ 1 ] );
+            var obj_y = F_HOTEL13_TRYATOI( h13.m_seg[ 2 ] );
+            var obj_z = F_HOTEL13_TRYATOI( h13.m_seg[ 3 ] );
+
+            if( 1
+            && obj_x.m_has 
+            && obj_y.m_has
+            && obj_z.m_has
+            ){
+
+                let _ =( " " ); //:Space://
+                let c =( "," ); //:Comma://
+
+                var seg_x =( obj_x.m_i32 );
+                var seg_y =( obj_y.m_i32 );
+                var seg_z =( obj_z.m_i32 );
+           
+                let wmc_i_x =( seg_x );
+                let wmc_i_y =( seg_y );
+                let wmc_i_z =( seg_z );
+                F_HOTEL13_SERVEME( 
+                        h13 
+                ,   wmc_i_x 
+                ,   wmc_i_y 
+                ,   wmc_i_z
+                );;
+            }else{
+
+                let seg = h13.m_seg ;;;;;;;;;;;;;;;;;;;;;;;;
+                h13.m_giv.writeHead( 200 , d_txt );;;;;;;;;;
+                h13.m_giv.write( "[m_seg[0]]:" + seg[ 0 ] );
+                h13.m_giv.write( "\n"                     );
+                h13.m_giv.write( "[m_seg[1]]:" + seg[ 1 ] );
+                h13.m_giv.write( "\n"                     );
+                h13.m_giv.write( "[m_seg[2]]:" + seg[ 2 ] );
+                h13.m_giv.write( "\n"                     );      
+                h13.m_giv.write( "[m_seg[3]]:" + seg[ 3 ] );
+                h13.m_giv.write( "\n"                     );    
+                h13.m_giv.end("[Room_XY_Is_BS]");;;;;;;;;;;;
+            };;
+        }else
+        if( h13.m_url == "/HELLO" ){
+
+            h13.m_giv.end( "[!WORLD!]" );
+        }else
+        if( h13.m_url == "/HOTEL13" ){
+
+            //:::::::::::::::::::::::::::::::::::::::://
+            //: Serve[ THIS FILE ], yes , this file, ://
+            //: as a javascript source file to       ://
+            //: run on the client side.              ://
+            //:::::::::::::::::::::::::::::::::::::::://
+            F_HOTEL13_SERVEME( 
+                h13
+            ,   d_hotel13_wmc_i_x_def //:AKA[wmc_i_x]://
+            ,   d_hotel13_wmc_i_y_def //:AKA[wmc_i_y]://
+            ,   d_hotel13_wmc_i_z_def //:AKA[wmc_i_z]://
+            );;
+        }else
+        //:AIM_ROUTEPAIR::2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2://
+        if( h13.m_seg.length >= 1
+        &&  F_HOTEL13_AIM_FMT_HAS( h13.m_seg[ 0 ] )
+        ){
+        //:aim_routepair_js:-----------------------------://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //: EXAMPLE: www.app.com/AIM_001.JS              ://
+        //: EXAMPLE: www.app.com/AIM_001_002.JS          ://
+        //: EXAMPLE: www.app.com/AIM_001_002_003.JS      ://
+        //:                                              ://
+        //: "001" is X axis ( in example )               ://
+        //: "002" is Y axis ( in example )               ://
+        //: "003" is Z axis ( in example )               ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+
+            var obj_xyz =( F_HOTEL13_AIM_FMT_GET( 
+                h13.m_seg[ 0 ]
+            ));;
+
+            var wmc_i_x =( 0 );
+            var wmc_i_y =( 0 );
+            var wmc_i_z =( 0 );
+
+            if( obj_xyz.m_has ){
+                wmc_i_x =( obj_xyz.m_i_x );
+                wmc_i_y =( obj_xyz.m_i_y );
+                wmc_i_z =( obj_xyz.m_i_z );  
+            };;
+            
+            F_HOTEL13_SERVEME( 
+                h13 
+            ,   wmc_i_x 
+            ,   wmc_i_y 
+            ,   wmc_i_z  
+            );;
+        //:-----------------------------:aim_routepair_js://
+        }else
+        if( 1 
+        &&  1 == h13.m_seg.length
+        &&  F_HOTEL13_ICH( h13.m_seg[ 0 ] )
+        ){
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //: EXAMPLE: www.app.com/001                     ://
+        //: EXAMPLE: www.app.com/001_002                 ://
+        //: EXAMPLE: www.app.com/001_002_003             ://
+        //:                                              ://
+        //: "001" is X axis ( in example )               ://
+        //: "002" is Y axis ( in example )               ://
+        //: "003" is Z axis ( in example )               ://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //:aim_routepair_htm:----------------------------://
+
+            var obj_xyz =(F_HOTEL13_ICH_TRY( 
+                h13.m_seg[ 0 ]
+            ));;
+            var w_x =( 0 );
+            var w_y =( 0 );
+            var w_z =( 0 );
+            if( obj_xyz.m_has ){
+
+                w_x =( obj_xyz.m_i_x );
+                w_y =( obj_xyz.m_i_y );
+                w_z =( obj_xyz.m_i_z );
+            };;
+
+            var s_x = F_HOTEL13_I32_S3D( w_x );
+            var s_y = F_HOTEL13_I32_S3D( w_y );
+            var s_z = F_HOTEL13_I32_S3D( w_z );
+
+            var h13_webpage =( "" //:----------------://
+            +'      <!DOCTYPE HTML><head>              '
+            +'      <meta charset="utf-8"><title>      '
+            ////////////////////////////////////////////
+            ////       #_GENERATE_PAGE_NAME_#        ///
+            ////////////////////////////////////////////
+            +` [AIM_XYZ]( ${s_x} , ${s_y} , ${s_z} )   `
+            ////////////////////////////////////////////
+            +'      </title>                           '
+            +'          <script                        '
+            ////////////////////////////////////////////
+            ////       #_GENERATE_FILE_NAME_#        ///
+            ////////////////////////////////////////////
+            +`src ="../../AIM_${s_x}_${s_y}_${s_z}.JS" `
+            ///////"../../AIM___001____002____003_.JS"//
+            ////////////////////////////////////////////
+            +'              charset="UTF-8">           '
+            +'          </script>                      '
+            +'      </head>                            '
+            );; //:----------------------------------://
+
+            h13.m_giv.writeHead(   200 ,  d_htm  );
+            h13.m_giv.end( h13_webpage , "utf-8" );
+
+        //:----------------------------:aim_routepair_htm://
+        }else
+        //:2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2::AIM_ROUTEPAIR://    
+        if( 3 == h13.m_seg.length ){     //:#_SLASH_XYZ_#://
+        //:----------------------------------------------://    
+        //:                                              ://
+        //: Example Path :                               ://
+        //:                                              ://
+        //:     www.app.com/H13_J_S/001/002/003/H13.JS   ://
+        //:                                              ://
+        //:----------------------------------------------://
+
+            //:::::::::::::::::::::::::::::::::::::::::::://
+            //: Serve .HTM Page That Is Kind Of Like     ://
+            //: A Youtube Video URL, but for game        ://
+            //: world map [coords/levelpacks].           ://
+            //:::::::::::::::::::::::::::::::::::::::::::://
+
+            let TRYATOI = F_HOTEL13_TRYATOI ;
+            var obj_x = TRYATOI( h13.m_seg[ 0 ] );                
+            var obj_y = TRYATOI( h13.m_seg[ 1 ] );
+            var obj_z = TRYATOI( h13.m_seg[ 2 ] );
+            var   w_x = d_hotel13_wmc_i_x_def ;
+            var   w_y = d_hotel13_wmc_i_y_def ;
+            var   w_z = d_hotel13_wmc_i_z_def ;
+
+            if( obj_x.m_has 
+            &&  obj_y.m_has
+            &&  obj_z.m_has
+            ){
+                w_x = obj_x.m_i32 ;
+                w_y = obj_y.m_i32 ;
+                w_z = obj_z.m_i32 ;
+            };;
+
+            var h13_webpage =( "" //:----------------://
+            +'      <!DOCTYPE HTML><head>              '
+            +'      <meta charset="utf-8"><title>      '
+            ////////////////////////////////////////////
+            +`   [BOOM]( ${w_x} , ${w_y} , ${w_z} )    `
+            ////////////////////////////////////////////
+            +'      </title>                           '
+            +'          <script                        '
+        ////////////////////////////////////////////////////
+        +`src ="../../H13_J_S/${w_x}/${w_y}/${w_z}/H13.JS"`
+        ////////////////////////////////////////////////////
+            +'              charset="UTF-8">           '
+            +'          </script>                      '
+            +'      </head>                            '
+            );; //:----------------------------------://
+            
+            h13.m_giv.writeHead(   200 ,  d_htm  );
+            h13.m_giv.end( h13_webpage , "utf-8" );
+        }else{
+
+            var back_up = "./" ;
+            arr_back_up=[
+                "./"
+            ,   "../"
+            ,   "../../"
+            ,   "../../../"
+            ,   "../../../../"
+            ];;
+            if( h13.m_seg.length <= arr_back_up.length ){
+
+                back_up = arr_back_up[ 
+                    h13.m_seg.length
+                ];;
+            };;
+
+            var h13_webpage =( "" //:----------------://
+            +'      <!DOCTYPE HTML><head>              '
+            +'      <meta charset="utf-8"><title>      '
+            +'          [AIM]                          '
+            +'      </title>                           '
+            +'          <script                        '
+            +`              src    ="${back_up}HOTEL13"`
+            +'              charset="UTF-8">           '
+            +'          </script>                      '
+            +'      </head>                            '
+            );; //:----------------------------------://
+
+            h13.m_giv.writeHead(   200 ,  d_htm  );
+            h13.m_giv.end( h13_webpage , "utf-8" );
+        };;
+
+    }).listen(process.env.PORT); 
+    //:===================================:HOTEL13_SERVER://    
+    };; //:END:ENV_H13NODE:::::::::::::::::::::::::::::::://
+    //:HOTEL13_SERVER_MODE:##############################://
+    //:##################################################://
+
+
+/** CTRL_F_HELP ******************************** *********** ***
+*** TAG_SECTION ******************************** *********** ***
+--- ----------- -------------------------------- ----------- ---
+
+    TAG[ tag_section | tag-section | tagsection ]
+
+--- ----------- -------------------------------- ----------- ---
+
+    -----------------------------------------------------------
+    [ integer-to-string | integer_to_string | integertostring ]
+    [ integer-to-padded-string | int-to-padded-string         ]
+    [ padded-string | padded_string | padded string           ]
+    [ zero padded string | zero_padded_string | zeropadded    ]
+    [ zeropaddedstring | zero padding | zeropadding | zeropad ]
+    [ pad string | pad-string | padstring | pad-numbers       ]
+    [ add padding | add-padding | addpadding | pad numbers    ]
+    [ number-padding | number padding | number_padding        ]
+    -----------------------------------------------------------
+    F_HOTEL13_PAD_STR  ( ( "1" ) ===> ( "001" ) )
+    F_HOTEL13_I32_STR  ( (  1  ) ===> ( "001" ) ) (  old  )
+    F_HOTEL13_I32_S3D  ( (  1  ) ===> ( "001" ) ) ( !NEW! )
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    [ is-valid-coordinate-hash | coord-hash | is-coord-hash ]
+    [ is valid coordinate hash | coord hash | is coord hash ]
+    [ is_valid_coordinate_hash | coord_hash | is_coord_hash ]
+    -----------------------------------------------------------
+    F_HOTEL13_ICH
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    [ set-active-bomb | set_active_bomb | setactivebomb       ]
+    [ set-tripped-bomb | set_tripped_bomb | settrippedbomb    ]
+    [ active-bomb | activebomb | active_bomb | bomb_timer     ]
+    [ tripped-bomb | tripped_bomb | trippedbom | bombtimer    ]
+    [ activate-bomb | activate_bomb | activatebomb | bombtime ]
+    [ trip-bomb | trip_bomb | tripbomb | tripp_bomb| bomb_time]
+    [ tripp-bomb | trippbomb | activate-bomb-timer            ]
+    [ bomb-timer | bomb-is-now-ticking-down | bomb-ticker     ]
+    [ mine-ticker | activate-mine | trip-mine | active-mine   ]
+    -----------------------------------------------------------
+    edi_mod_act  ( AS_OF[ 2022_07_19 ]IS_TOGGLE_KEY[ "A" ] )
+                 ( Modifies:BOMB_SETTING_TOGGLE_KEY[ "B" ] )     
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    [ is-three-digit-string | three-digit-string | is-3ds     ]
+    [ is_three_digit_string | three_digit_string | is_3ds     ]
+    [ isthreedigitstring    | threedigitstring   | is3ds      ]
+    [ three_digit_string | threedigitstring | threedigit      ]
+    [ three-digit-string | three-digit | three_digit          ]
+    [ is three | is_three | is-three | isthree                ]
+    [ is three digit string | is it three digits | is digit   ]
+    -----------------------------------------------------------
+    F_HOTEL13_YES_S3D
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    [ create coordinate hash from xyz strings | xyz-to-hash   ]
+    [ create_coordinate_hash_from_xyz_strings | xyz to hash   ]
+    [ str_xyz_to_coordhash | str-xyz-to-coordhash             ]
+    [ str xyz to coordhash | xyz_to_hash | xyzstr to hash     ]
+    -----------------------------------------------------------
+    F_HOTEL13_STR_COOHASH
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    generate-file-name | generate_file_name | gen_file_name
+    generate file name | gen file name | gen-file-name
+    create-file-name | create_file_name | createfilename
+    genfilename | generatefilename
+    #_GENERATE_PAGE_TITLE_# 
+    -----------------------------------------------------------
+    SEE[ #_GENERATE_FILE_NAME_# | #_GENERATE_PAGE_NAME_# ]
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    generate aim js file | generate_aim_js_file |
+    generate-aim-js-file | generateaimjsfile
+    aim.js | aim_js | aimjs | aim_1_1_1.js
+    aim_001_001_001.js | AIM_001_001_001.JS
+    aim_001_001_003.js | AIM_001_001_003.JS
+    genaimfile | gen_aim_file | gen-aim-file
+    gen aim file
+    -----------------------------------------------------------
+    SEE[ #_GENERATE_FILE_NAME_# | #_GENERATE_PAGE_NAME_# ]
+    SEE_FUNCTION[ F_HOTEL13_SERVEME ]
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    generate page title | generate-page-title | make-page-name
+    generatepagetitle | gen page title | genpagetitle
+    gen_page_title | page title generation | make_page_name
+    page_title_generation | pagetitlegeneration | makepagename
+    -----------------------------------------------------------
+    SEE[ #_GENERATE_FILE_NAME_# | #_GENERATE_PAGE_NAME_# ]
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    serve the server | serve server | servetheserver
+    serve_the_server | serve_server | serve yourself
+    serve-the-server | serve-server | serve your own source
+    serve_your_own_source | serveyourownsource
+    self-serve | selfserve | self_serve | self serve icecream
+    -----------------------------------------------------------
+    F_HOTEL13_SERVEME
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    use coordinate hash to get png file
+    F_HOTEL13_USE_COOHASH_GET_PNG
+    F_HOTEL13_COOHASH_PNG
+    F_HOTEL13_CAS_COOHASH_PNG | SCATPNG 
+    -----------------------------------------------------------
+    F_HOTEL13_CAS_COOHASH_SCATPNG <-- Use coordhash to get .PNG
+    -----------------------------------------------------------
+    
+    -----------------------------------------------------------
+    Server_And_Client | ser ver-and-client |
+    server and client | serverandclient | server_and_client
+    SAC | SAC_FUNCTIONS | SAC_FUNCS
+    SERVER_AND_CLIENT 
+    -----------------------------------------------------------
+    YOU_MEAN[ #_CLIENT_AND_SERVER_# ]
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    IS_COOHASH | is-coohash | HAS_COOHASH | ISA_COOHASH
+    is-a-coohash | is a coohash | is a coordinate has
+    is coordinate hash | is coord hash | is_coord_hash
+    isa_coohash | isa-coohash | isa coohash | isa hash
+    isa_hash | isahash
+    -----------------------------------------------------------
+    F_HOTEL13_YES_COOHASH
+    F_HOTEL13_NOT_COOHASH
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    not a coordinate hash
+    not_a_coordinate_hash
+    notacoordinatehash
+    -----------------------------------------------------------
+    F_HOTEL13_NOT_COOHASH
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    is a coordinate hash
+    is_a_coordinate_hash
+    isacoordinatehash
+    -----------------------------------------------------------
+    F_HOTEL13_YES_COOHASH
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    [ F_HOTEL_STR_ASC | F_HOTEL_ASC_STR                       ]
+    [ F_HOTEL_STR_INT | F_HOTEL_INT_STR                       ]
+    [ is string integer character | is string int char        ]
+    [ intchar | int_char | int-char                           ]
+    [ F_HOTEL13_0_9_STR_YES | F_HOTEL13_0_9_STR               ]
+    -----------------------------------------------------------
+    F_HOTEL13_STR_0_9_YES
+    -----------------------------------------------------------
+
+    -----------------------------------------------------------
+    [ F_HOTEL13_ASS | hotel assert | hotel ass | hotel_ass    ]
+    [ hotel assert function | hotel_assert | hotel-assert     ]
+    -----------------------------------------------------------
+    LOOKING_FOR[ F_PRIVATE_HOTEL13_ASS ]
+    -----------------------------------------------------------
+
+
+--- ----------- -------------------------------- ----------- ---
+
+    TAG[ tag_section | tag-section | tagsection ]
+
+--- ----------- -------------------------------- ----------- ---
+*** *********** ******************************** TAG_SECTION ***
+*** *********** ******************************** CTRL_F_HELP **/
 /** BOMB_LASER_ECHOBOX_SPARKPIN **************************** ***
 
     TAG[ bomb-types | bomb types | types-of-bombs ]
     TAG[ types of bombs ]
+    TAG[ BOMB_TYPES ]
 
     DATE[ 2022_07_07 ]KANJICODER_CANT_SLEEP
 
@@ -5654,7 +12441,7 @@
 *** **************************** BOMB_LASER_ECHOBOX_SPARKPIN **/
 /** DEVELOPER_TODO_NOTE ************************************ ***
 
-
+    TAG[ DEVTODO | DEVEL_TODO ]
 
     #_MAKE_EXPLOSIVE_AUTOMATA_ON_E_Z_2D_CANVAS_# 
     
@@ -5684,6 +12471,8 @@
             
 *** ************************************ DEVELOPER_TODO_NOTE **/
 /** ******************************************************** ***
+
+    TAG[ BASIC_DATA_LAYOUT | BASIC_LAYOUT ]
 
               [ ]
            [ ][ ][ ]
@@ -5798,6 +12587,7 @@
     
 *** ******************************************************** **/
 /** HASHTAG_NOTES ****************************************** ***
+*** HASHTAG_SEC - ****************************************** ***
 
     #PUT_ANY# :
     
@@ -6969,6 +13759,1349 @@
         So... The code __IS__ working properly.
 
         NOW_DATE[ 2022_07_12 ]TIME[ 633 ]PM
+
+    #_SPARKS_CANT_BE_FADA_# :
+
+        If we want to be able to have sparks over destroyed
+        materials, the sparks  CANNOT be "FADA" they need
+        to be something else.
+
+        If we want sparks and flames to exist on same tile
+        simultaniously, sparks CANNOT be "FADA".
+
+        Solution? We need to break up the bits of geom tile's
+        uint32 a bit more.
+        
+        |<-----------#_STANDARD_TILE_BIT_LAYOUT_#----------->|
+        |                                                    |
+        |<------- RED CHANNEL ------>|<- G ->|<- B ->|<- A ->|
+        |  v16  | tb1  tb2  tb3  tb4 | 8_BIT | 8_BIT | 8_BIT |
+        | 11 11 |  1    1    1    1  |                       |
+                |<--SPK-->||<--FAL-->|<-ANI->|<-ANI->|<-ANI->|
+                                     |<-SPK->|<-SPK->|<-FAL->|
+                                     |<-ta1->|<-ta2->|<-ta3->|
+
+        tb1 : TileBit #1 : Is there a "static spark" here ?
+        tb2 : TileBit #2 : Is there a "fallingspark" here ?
+        tb3 : TileBit #3 : Is this TOP of falling tile    ?
+        tb4 : TileBit #4 : Is this BOT of falling tile    ?
+
+        ta1 : TileAnimation 1 : 255 frames for "static spark"
+        ta2 : TileAnimation 2 : 255 frames for "fallin spark"
+        ta3 : TileAnimation 3 : 255 frames for "falling tile"
+
+        #_HOW_DO_BIG_TILES_FALL_# ???
+
+            I was thinking about not allowing bigger tiles
+            to fall, but it wrecks consistency of simulation.
+
+            Instead... If a tile is __NOT__ snapped to grid
+            because it is falling, it animates as flashing
+            and transparent. You have until it locks into
+            place to get away.
+
+        #_TILE_EXTRA_BITS_RENDER_# :
+
+            A note to myself that I need to implement
+            correct rendering of these extra bits in
+            a tile __BEFORE__ I work on the
+            obliterate ( OBE ) function.
+
+            For the same reason I worked on making bombs
+            render correctly before deciding I was ready
+            to work on the tile-obliteration logic.
+
+    #_HOW_DO_GIANT_FALLING_TILES_WORK_# :----------------------:
+    |                                                          |
+    |   Giant falling tiles DONT FALL , they must be           |
+    |   fractionated by blasts first. Though invincible        |
+    |   type, they can be cracked. Once cracked into           |
+    |   game sized tiles, they will fall.                      |
+    |                                                          |
+    |   TAG[ cleavage patterns | tits or GTFO ]                |
+    |                                                          |
+    |   #_FALLING_CLEAVAGE_#                                   |
+    |                                                          |
+    |       16x16 grid of alice sized tiles :                  |
+    |                                                          |
+    |       [0][1][2][3][4][5][6][7][8][9][A][B][C][D][E][F]   |
+    |       [1][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [2][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [3][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [4][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [5][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [6][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [7][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [8][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [9][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [A][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [B][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [C][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [D][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [E][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |       [F][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |                                                          |
+    |       Giant 16 pebble sized tile ( te7==4 ) :            |
+    |        ______________________________________________    |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [      Q:                                      ]   |
+    |       [      Giant Falling Horizontal Beam Block     ]   |
+    |       [      What happens when hit by tiny bomb?     ]   |
+    |       [                                              ]   |
+    |       [      A:                                      ]   |
+    |       [      The material will cleave and visually   ]   |
+    |       [      appear as seen in 1st diagram below.    ]   |
+    |       [                                              ]   |
+    |       [      The actual block replacement is seen    ]   |
+    |       [      in the 2nd diagram below.               ]   |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [______________________________________________]   |
+    |                                                          |
+    |   This giant tile gets hit by a bomb, taking             |
+    |   out an ALICE sized tile chunk , this is what           |
+    |   HORIZONTAL BEAM block looks like after taking          |
+    |   a blast ( WITH auto_tiling applied )                   |
+    |        ______________________________________________    |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [______________________________________________]__ |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [                                              ]   |
+    |       [______________________________________________]__ |
+    |       [                                              ]   |
+    |       [______________________________________________]__ |
+    |       [______________________________________________]__ |
+    | [B]> > > [___________________________________________]__ |
+    |                                                          |
+    |         :--------------------------------------------:   |
+    |   BELOW : What different fractionation patterns look :   |
+    |         : like WITHOUT their auto_tiling methods     :   |
+    |         : applied to the materials.                  :   |
+    |         :--------------------------------------------:   |
+    |                                                          |
+    |   FALLING HORIZONTAL CLEAVAGE PATTERN :                  |
+    |   #_FALLING_CLEAVAGE_# : HORBEAM (autotiles horizontal)  |
+    |        ______________________  ______________________    |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [______________________][______________________]   |
+    |       [          ][          ][          ][          ]   |
+    |       [          ][          ][          ][          ]   |
+    |       [          ][          ][          ][          ]   |
+    |       [__________][__________][__________][__________]   |
+    |       [    ][    ][    ][    ][    ][    ][    ][    ]   |
+    |       [____][____][____][____][____][____][____][____]   |
+    |       [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    | [B]> > > [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]   |
+    |                                                          |
+    |   FALLING VERTICAL CLEAVAGE PATTERN :                    |
+    |   #_FALLING_CLEAVAGE_# : VERBEAM (autotiles vertically)  |
+    |        _  _  ____  __________  ______________________    |
+    |       [ ][ ][    ][          ][                      ]   |
+    |       [ ][ ][____][          ][                      ]   |
+    |       [ ][ ][    ][          ][                      ]   |
+    |       [ ][ ][____][__________][                      ]   |
+    |       [ ][ ][    ][          ][                      ]   |
+    |       [ ][ ][____][          ][                      ]   |
+    |       [ ][ ][    ][          ][                      ]   |
+    |       [ ][ ][____][__________][______________________]   |
+    |       [ ][ ][    ][          ][                      ]   |
+    |       [ ][ ][____][          ][                      ]   |
+    |       [ ][ ][    ][          ][                      ]   |
+    |       [ ][ ][____][__________][                      ]   |
+    |       [ ][ ][    ][          ][                      ]   |
+    |       [ ][ ][____][          ][                      ]   |
+    |       [_][ ][    ][          ][                      ]   |
+    | [B]> > > [_][____][__________][______________________]   |
+    |                                                          |
+    |                                                          |
+    |   FALLING MARBLE CLEAVAGE PATTERN :                      |
+    |   #_FALLING_CLEAVAGE_# : MARBEAM (autotiles __NEVER__)   |
+    |        ______________________  ______________________    |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [                      ][                      ]   |
+    |       [______________________][______________________]   |
+    |       [          ][          ][                      ]   |
+    |       [          ][          ][                      ]   |
+    |       [          ][          ][                      ]   |
+    |       [__________][__________][                      ]   |
+    |       [    ][    ][          ][                      ]   |
+    |       [____][____][          ][                      ]   |
+    |       [E][_][    ][          ][                      ]   |
+    |          [_][____][__________][______________________]   |
+    |                                                          |
+    |   NON_MOVING TILE FRACTIONATION PATTERN :                |
+    |                                                          |
+    |       ************************************************   |
+    |       *                                              *   |
+    |       *     Same as MARBEAM pattern.                 *   |
+    |       *                                              *   |
+    |       ************************************************   |
+    |                                                          |
+    |   #_WHY_NOT_ANIMATE_GIANT_FALLING_TILES_# :              |
+    |                                                          |
+    |       If we animate a giant tile falling, it doesn't     |
+    |       collide with anything until it snapps into the     |
+    |       next tile position for that tile size.             |
+    |                                                          |
+    |       When in the inbetween state... The whole tile      |
+    |       flashes. That could be a giant flashing danger     |
+    |       area the size of a level with a big enough         |
+    |       falling tile... That will look horrible.           |
+    |                                                          |
+    |       Also... Does it slip behind ALICE sized tiles or   |
+    |       does it fractionate when it hits ALICE sized tiles |
+    |       like an iceburg hitting spikes?                    |
+    |                                                          |
+    |       All of these rules seem :                          |
+    |                                                          |
+    |           1. Weird to look at.                           |
+    |                                                          |
+    |           2. Logically strange.                          |
+    |                                                          |
+    |           3. Hard to impliment.                          |
+    |                                                          |
+    |       Instead , we should just do #_FALLING_CLEAVAGE_#   |
+    :----------------------------------------------------------:
+
+    #SEG_D2D# : SEGment : Draw_2D  
+    @SEG_D2D@ : SEGment : Draw_2D
+
+        The draw2d section is really big, so we have
+        "segment markers" to remind us where we are
+        in the file.
+        DATE[2022_07_13]KANJICODER ( 714PM )
+
+    #JS_DYNA_KEY# : https://stackoverflow.com/questions/6500573
+
+        How to make dyamic/computed properties in
+        Javascript object literal.
+
+    #_R_W_R_T_U_O_M_B_# :
+        R______W____R_____T__U___O_____M______B
+        Remove When Ready To Use Other Memory Blocks.
+
+        Right now only using the [ 512 x 512 ]block
+        of memory in cell[ 1 , 1 ]of[ d_pix2048 ].
+
+        CURRENT_DATE[ 2022_07_14 ]
+
+    @buf_3pc@ : buffer:3rd_party_code 
+    @img_3pc@ : image::3rd_party_code 
+
+    @obj_x@ : Object that MIGHT contain X coordinate.
+    @obj_y@ : Object that MIGHT contain Y coordinate.
+
+    @seg_x@ : URL segment integer containing X axis value.
+    @seg_y@ : URL segment integer containing Y axis value.
+
+    
+    #_BILLBOARD_OR_SPRITE_UNION_# :  
+
+        WRITTEN_DATE[2022_07_14]TIME[ 830PM ]KANJICODER
+
+        Materials 14 and 15 ( v16 == 14 && v16 == 15 )
+        should be used for __BOTH__
+
+        1. Static Environment Sprites
+        2. Billboard Text
+
+        KEY:
+            t16   : Tile value. Only 14 & 15 valid here.
+            tos   : text_or_sprite flag
+            co7   : COlor of text or type of enemy. 7 values.
+            l15_x : Local Coord X ( 0 to 15 )
+            l15_y : Local Coord Y ( 0 to 15 )
+
+        |  NIB  |    NIB    | l15_x  l15_y| @MISC_STATE_INFO@ |
+        | 11 11 |  1  | 111 | 1111 | 1111 | 11111111|11111111 |
+        |  t16  | tos | co7 |             | msi_lef | msi_rig |
+
+    @MISC_STATE_INFO@ :
+
+        WRITTEN_DATE[2022_07_14]TIME[ 830PM ]KANJICODER
+
+        TAG[ flame piston | flamepiston | flame_piston ]
+        TAG[ flame-piston ]
+        
+        [MISC_STATE_INFO] bits represent whatever is needed
+         to get the job done. For example , if this is a 
+        flame piston, [MISC_STATE_INFO] could encode the 
+        timestamp of when the flame piston was last activated.
+
+        co7 could be co-opted a bit.
+    
+        |<-------co7-------->|
+        |  co7_rgb  co7_tob  |
+        |     11       1     |
+
+        co7_rgb : White , Red, Green or Blue Piston Color?
+
+        co7_tob : Is this the body of the piston or
+                : the moving button of the piston?
+
+    @NG@ : www.newgrounds.com
+
+    #l15_x# :
+    #l15_y# :
+
+        This means that static environment sprites can
+        be no bigger that 16x16 tiles in size. Which is
+        __PLENTY__ . ( from experience : Atomic Alice @NG@ )
+
+    #_FLAME_PISTON_MISC_DATA_# :
+
+        WRITTEN_DATE[2022_07_14]TIME[ 850PM ]KANJICODER
+
+        |     msi_lef   |
+        | 11  11 | 1111 |
+        | fd  sc | flen |
+
+        @fd@ : Flamepiston direction facing?
+             : 00 : LEF
+             : 01 : RIG
+             : 10 : TOP
+             : 11 : BOG
+        
+        @sc@ : Size Class of flame piston.
+
+             : 00 : 2x2 : Classic 2X2
+             : 01 : 3x2 : Classic 3X2
+             : 10 : 1x3 : Cattle_Prod_Trip_Rod
+             : 11 : 1x6 : Cattle_Prod_Trip_Rod
+
+
+             [S][1][2] //: <------: Cattle_Prod_Trip_Rod: 1x3
+
+             [S][1][2][3][4][5] //: Cattle_Prod_Trip_Rod: 1x6
+
+             Works like a flame piston , but stays on as
+             long as you are touching the rod part.
+
+             The [S] part of the tile emits spark like
+             the[ sparkpin ]bombs, with a 1x1 box explosion
+             style around it's perimeter.
+
+        |  msi_rig  |
+        | 1111 1111 |
+        | TIMESTAMP |
+
+            msi_rig on flamepiston holds a short last
+            activated timestamp used to animate it's 
+            motion and actions.
+
+            8 bits == 0 to 255 , so no more than 256
+            unique frames of animation/behavior.
+
+    @msi_lef@ : Misc_State_Info : LEFt  byte
+    @msi_rig@ : Misc_State_Info : RIGht byte
+
+    #_W_D_A_I_C_# : Write_Data_As_It_Comes
+                    W_____D____A__I__C
+
+    #_WHAT_DO_ZERO_TILES_DO_# :--------------------------------:
+    :                                                          :
+    :   I guess sitting in bed for 5 hours without going       :
+    :   to sleep has some benifit. Manic caffiene induced      :
+    :   insomiac creativity.                                   :
+    :   NOW_DATE[ 2022_07_15 ]TIME[ 6:23 ]AM                   :
+    :                                                          :
+    :  :-------------------------------------------------------:
+    :                                                          :
+    :   Zero tiles are STATIC BACKGROUND AND FOREGROUND!!!     :
+    :                                                          :
+    :   You can pass through them, no need to modify           :
+    :   engine to give special case for them because           :
+    :   they are already "zero tiles".                         :
+    :                                                          :
+    :                                                          :
+    :   |<-----------#_STANDARD_TILE_BIT_LAYOUT_#----------->| :
+    :   |                                                    | :
+    :   |<------- RED CHANNEL ------>|<- G ->|<- B ->|<- A ->| :
+    :   |  v16  | tb1  tb2  tb3  tb4 | 8_BIT | 8_BIT | 8_BIT | :
+    :   | 11 11 |  1    1    1    1  |                       | :
+    :           |<--SPK-->||<--FAL-->|<-ANI->|<-ANI->|<-ANI->| :
+    :                                |<-SPK->|<-SPK->|<-FAL->| :
+    :                                |<-ta1->|<-ta2->|<-ta3->| :
+    :                                                          :
+    :                                                          :
+    :   |<-------------#_ZERO_TILE_BIT_LAYOUT_#------------->| :
+    :   |                                                    | :
+    :   |<------- RED CHANNEL ------>|<- G ->|<- B ->|<- A ->| :
+    :   |  v16  | tb1  tb2  tb3  tb4 | 8_BIT | 8_BIT | 8_BIT | :
+    :   | 11 11 |  1    1    1    1  |                       | :
+    :           |<--B_G-->||<--F_G-->|<-???->|<-B_G->|<-F_G->| :
+    :                                |<-tm1->|<-tm2->|<-tm3->| :
+    :                                                          :
+    :   tb1 : TileBit  #1 : B_G : TRANSPARENT_GLASS ?          :
+    :   tb2 : TileBit  #2 : B_G : One of two accent colors.    :
+    :   tb3 : TileBit  #3 : F_G : TRANSPARENT_GLASS ?          :
+    :   tb4 : TileBit  #4 : F_G : One of two accent colors.    :
+    :                                                          :
+    :   tm1 : TileMisc #1 : UNKNOWN DATA , FREE SPACE!         :
+    :   tm2 : TileMisc #2 : ASCII_LETTER Or GEOM_TEXTURE       :
+    :   tm3 : TileMisc #3 : ASCII_LETTER Or GEOM_TEXTURE       :
+    :                                                          :
+    :   | 0 | 111 1111 | === ASCII_LETTER                      :
+    :   | 1 | 111 1111 | === GEOM_TEXTURE ( no color info )    :
+    :                                                          :
+    :   | 0 | ### #### | === ASCII_LETTER                      :
+    :   | 1 | ### #### | === GEOM_TEXTURE ( no color info )    :
+    :                                                          :
+    :----------------------------------------------------------:
+
+    #_PARALLAX_THOUGHTS_# :------------------------------------:
+    |                                                          :
+    |   NOW_DATE[ 2022_07_15 ]TIME[ 0641 ]AM                   :
+    |                                                          :
+    |   THESE ARE JUST THOUGHTS!!! RESERVE                     :
+    |   [ PAR ]block of[ LEVELPACK ]for this , but             :
+    |   _DO_NOT_WRITE_ANY_CODE_ for it until you have.         :
+    |                                                          :
+    |   1. A working game.                                     :
+    |                                                          :
+    |   2. People playing it.                                  :
+    |                                                          :
+    |   3. Shown it on Kyootbot's show.                        :
+    |                                                          :
+    |   |<--------------0512-------------->|                   :
+    |   |<-----0256----->||<-----0256----->|                   :
+    |   +--128--++--128--++--128--++--128--+                   :
+    |   |       ||       ||       ||       |                   :
+    |   |  r00  ||  r01  ||  r02  ||  r03  |                   :
+    |   |       ||       ||       ||       |                   :
+    |   +-------++-------++-------++-------+                   :
+    |   +--128--++--128--++--128--++--128--+                   :
+    |   |       ||       ||       ||       |                   :
+    |   |  r04  ||  r05  ||  r06  ||  r07  |                   :
+    |   |       ||       ||       ||       |                   :
+    |   +-------++-------++-------++-------+                   :
+    |   +--128--++--128--++--128--++--128--+                   :
+    |   |       ||       ||       ||       |                   :
+    |   |  r08  ||  r09  ||  r10  ||  r11  |                   :
+    |   |       ||       ||       ||       |                   :
+    |   +-------++-------++-------++-------+                   :
+    |   +--128--++--128--++--128--++--128--+                   :
+    |   |       ||       ||       ||       |                   :
+    |   |  r12  || [PAR] || [ANY] || [ANY] |                   :
+    |   |       ||   |   ||       ||       |                   :
+    |   +-------++---|---++-------++-------+                   :
+    |                |                                         :
+    |                |                                         :
+    |   Sparse Parallax Scaffold Tiles.                        :
+    |   For Background and foreground.                         :
+    |                                                          :
+    |   +------------------------+                             :
+    |   |Dense TileMap:          |                             :
+    |   +------------------------+                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   |[ ][ ][ ][ ][ ][ ][ ][ ]|                             :
+    |   +------------------------+                             :
+    |   |Sparse TileMap:         |                             :
+    |   +------------------------+                             :
+    |   |[ ]      [ ][ ]      [ ]|                             :
+    |   |                        |                             :
+    |   |                        |                             :
+    |   |[ ]      [ ][ ]      [ ]|                             :
+    |   |[ ]      [ ][ ]      [ ]|                             :
+    |   |                        |                             :
+    |   |                        |                             :
+    |   |[ ]      [ ][ ]      [ ]|                             :
+    |   +------------------------+                             :
+    |   |Sparse TileMap:(Render) |                             :
+    |   +------------------------+                             :
+    |   |[ ]------[ ][ ]------[ ]|                             :
+    |   | |sudopan |  |sudopan | |                             :
+    |   | |        |  |        | |                             :
+    |   |[ ]------[ ][ ]------[ ]|                             :
+    |   |[ ]------[ ][ ]------[ ]|                             :
+    |   | |sudopan |  |sudopan | |                             :
+    |   | |        |  |        | |                             :
+    |   |[ ]------[ ][ ]------[ ]|                             :
+    |   +------------------------+                             :
+    |                                                          :
+    |   sudopan : A panel created by connecting tiles          :
+    |           : with rods in the renderer.                   :
+    |                                                          :
+    |   Now, lets say some of these sparse tiles               :
+    |   are [ zero / off ]and others are [ one / on ]...       :
+    |                                                          :
+    |   +------------------------+                             :
+    |   |Sparse TileMap:(Render2)|                             :
+    |   +------------------------+                             :
+    |   |[1]------[1][1]------[1]|                             :
+    |   | |sudopan |  |sudopan | |                             :
+    |   | |        |  |        | |                             :
+    |   |[1]------[1][1]------[1]|                             :
+    |   |[1]------[1][0]      [0]|                             :
+    |   | |      /               |                             :
+    |   | |   //                 |                             :
+    |   |[1]/     [0][0]      [0]|                             :
+    |   +------------------------+                             :
+    |                                                          :
+    :----------------------------------------------------------:
+
+    69TH COMMIT , NICE . 2022_07_15 , 644 AM 
+                                                 
+
+    #_HEROKU_APP_NAME_# : / #HEROKU_APP_NAME# :
+
+        You need to run special heroku command in
+        terminal on your heroku project for this
+        environment variable to be available.
+
+        USE:
+        heroku labs:enable  runtime-dyno-metadata --app APPNAME
+    
+
+
+    #BGT# : www.tinyurl.com/BOMB-GAME-TUTORIAL
+
+    @i_urlpath@ : website address path to API endpoint.
+    @i_payload@ : The data to send. I don't know it's format
+                : at the time of writing. I'll figure it
+                : out.
+
+    #set_request_header# :
+
+        "you must call it after calling open() , "
+        "but before calling send()               "
+
+        -Developer Mozilla Org , Circa 2022
+        
+    @nsh_pngname@ : Non_Standard_Header____PNG_Name
+    #nsh_pngname# :
+        
+        Using a prefix to let me know that this header
+        is something I( KANJICODER )made up and not some
+        type of standard with XMLHTTPREQUEST.
+
+    #_AB_URL_# : AddressBar_URL 
+               : window.location.href is the address
+               : bar url.
+
+    #_SLASH_XYZ_# / #_X_SLASH_Y_# :
+
+        //:::::::::::::::::::::::::::::::::::::::://
+        //:  [_X_SLASH_Y_] url sceme looks too   ://
+        //:  much like weird facebook bullshit.  ://
+        //:  Allow inputs that can be read as    ://
+        //:  coordinate hashes like:             ://
+        //:                                      ://
+        //:  XY  : 000_000                       ://
+        //:  XYZ : 000_000_000                   ://
+        //:                                      ://
+        //:::::::::::::::::::::::::::::::::::::::://
+
+    #_MIS_SPELLINGS_# :
+
+        Sometimes I wonder to myself , "how was that "
+        "function spelled"? So I will make mis-spelling
+        permutations into "monkey wrench macros" to
+        make sure I use the correct names.
+
+    #_TAKEOFF_AIM_P_# : take off "AIM_" prefix.
+
+
+    #_TAKEOFF_DOTJS_# : take off ".JS"  postfix
+
+    #_MONEY_MAKING_IDEA_# : Virtual Subdivision :--------------:
+    |                                                          :
+    |                                                          :
+    |     one_level_pack_for_sale             DATE[2022_07_05] :
+    |       |                                                  :
+    |       V                                                  :
+    |   [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]                   :
+    |   [ ]+----------------------------+[ ]                   :
+    |   [ ]| main_game_path > > > > >.  |[ ]                   :
+    |   [ ]+-----------------------+ V  +[ ]                   :
+    |   [ ][ ][ ][ ][ ][ ][ ][ ][ ]| V  |[ ]                   :
+    |                           [ ]| V  |[ ]                   :
+    |   We keep for sale level  [ ]| V  |[ ]                   :
+    |   packs directly off the  [ ]| V  |[ ]                   :
+    |   main game path so that  [ ]| V  |[ ]                   :
+    |   users don't get land    [ ]| V  |[ ]                   :
+    |   locked by malicious     [ ]| V  |[ ]                   :
+    |   neighbors. We don't     [ ]| V  |[ ][ ][ ][ ][ ][ ][ ] :
+    |   want to have to setup   [ ]| V  +-----------------+[ ] :
+    |   an H.O.A. for our game. [ ]| .> > > > > > > > > > |[ ] :
+    |                           [ ]+----------------------+[ ] :
+    |                           [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ] :
+    |                                                          :
+    :----------------------------------------------------------:
+
+    @rfp@:RelativeFilePath 
+    @s_i@:Segment_Index
+
+    @url_x@ : Like @seg_x@ , but string from path.
+    @url_y@ : Like @seg_y@ , but string from path.
+    @url_z@ : Like @seg_z@ , but string from path.
+
+    @obj_xzy@ : TYPO_YOU_WANT[ obj_xyz ]
+
+    @sob_xyz@ : StringOBject With [ m_s_x , m_s_y , m_s_z ]
+    
+    @m_s_x@ : Member(var) : string_x
+    @m_s_y@ : Member(var) : string_y
+    @m_s_z@ : Member(var) : string_z
+
+    #_ZERO_PAD_# : Marking a section of code where we
+                 : are applying zero padding to string.
+
+    @NOTCIE_ME_SENPAI@ : TYPO. You know what it is.
+
+    @URL_NE_F_N@ : URL NotEqualTo File_Name
+
+    [mstr_x]:MemberString_X BUT_USE[ m_s_x ]
+    [mstr_y]:MemberString_X BUT_USE[ m_s_y ]
+    [mstr_z]:MemberString_X BUT_USE[ m_s_z ]
+
+    @jft@ : TYPO , you want[ @jtf@ ]
+    @jtf@ : Just_The_Folder
+
+    @d_pngpath_upp@ : pngpath for "UPLOAD"
+    @d_pngpath_dow@ : pngpath for "DOWNLOAD"
+
+    #_NON_STANDARD_HEADER_# :
+
+        TAG[ non-standard-header | nonstandardheader   ]
+        TAG[ non-standard | non standard | nonstandard ]
+
+        @nsh@ : Prefix used to denote headers that 
+              : KANJICODER is making up for this MMO.
+
+        @nsh_pngname@ : name of the .png file.
+        
+        @nsh_yehotel@ : YE Hotel , YES a hotel exists here.
+                      : Meaning the image did not 404 and
+                      : it is indeed an already existing
+                      : [ levelpack / hotel ]
+
+        NOW_DATE[ 2022_07_17 ]TIME[ 738 ]PM
+
+
+    @nsh_yeshotel@ : WRONG_YOU_WANT[ nsh_yehotel ]
+    @nsh_hashotel@ : WRONG_YOU_WANT[ nsh_yehotel ]
+    @nsh_hahotel@  : WRONG_YOU_WANT[ nsh_yehotel ]
+
+    @HERSYNC@ : HERE - SYNCHRONOUS , opposite of NODESYS
+              : PROBLEMATIC... No longer using  "NODESYS"
+              : PRECISELY BECAUSE I used it to mean both
+              : "client" and "server" namespace.
+
+    @HERESYS@ : YOU_MEAN[ HERSYNC ]
+
+    #_HEROKU_IMGUR_VARS_# :
+        --------------------------------------------------------
+        I have a helper script that does this before
+        I push to heroku to help setup these confidential
+        values for accessing imgur api.
+        WRITTEN_DATE[ 2022_07_18 ]KANJICODER
+        --------------------------------------------------------
+
+        VAR_REDACTED="[REDACTED]"
+
+        VAR_IMGUR_CID=$(cat "./VIP/001/API_IMGUR/CID._")
+        VAR_IMGUR_C_S=$(cat "./VIP/001/API_IMGUR/C_S._")
+
+        echo "[VAR_IMGUR_CID]:"$VAR_REDACTED
+        echo "[VAR_IMGUR_C_S]:"$VAR_REDACTED
+
+        ECHO_PIT=""
+
+        ECHO_PIT=$( heroku config:set --app aim-hotel13 \
+                       "VAR_IMGUR_CID"=$VAR_IMGUR_CID )
+
+        ## echo $ECHO_PIT
+
+        ECHO_PIT=$( heroku config:set --app aim-hotel13 \
+                       "VAR_IMGUR_C_S"=$VAR_IMGUR_C_S )
+
+        ## echo $ECHO_PIT
+
+        --------------------------------------------------------
    
-*** ******************************************************** **/
+    @T_V@ : [ Too / overly / excessively ] Verbose
+
+    #_IMPLIED_PROMISE_# :
+
+        One of the confusing things about javascript
+        is the "return" statement inside of different
+        sections of a "promise chain". There is some
+        "compiler magic" going on here.
+
+        An "implied promise" is being created if you use
+        the "return" statement inside of a promise object.
+
+        https://www.youtube.com/watch?v=RXN7169vBGw&t=130s
+
+        I don't know if this works for a regular promise,
+        or if this is only specifically NODE.js "await".
+
+    #LOGANOK# :
+
+        If it's all capital, it is a local function that
+        pushes a message into the @loganok@ object.
+
+        ADDED_DATE[ 2022_07_19 ]TIME[ 336PM ]
+
+    @uro@ : Use "loganok" from now on. 
+          : We are going to use this for things other
+          : than just "upload"...
+          :
+          : @loganok_uro@ could be okay too.
+         
+    @loganok@     : LOG_ANd_OK object. 
+    @loganok_uro@ : LOGANOK Upload_Response_Object
+            @uro@ : Use Either[ loganok ]OR[ loganok_uro ]
+
+    @SBH@ : Shouldnt_Be_Here
+          : Means that you should __NOT__ be in this
+          : section of code, and that the error is
+          : a programmer error. No matter what the
+          : user does, not matter what data gets sent
+          : to the server, it doesn't matter, you should
+          : __NOT__ be inside this block of code.
+
+          : ADDED_DATE[ 2022_07_19 ]TIME[ 348 ]PM
+
+    @LOGANOK_ERR@ : USE local "ABORT()" , pairs nicely
+                  : with local "NEXT()" and makes it easy
+                  : to spot success and fail cases.
+                  :     
+                  : Actually, I am not 100% on this.
+                  : 
+                  : LOGANOK_[ ERR | ADD | END | NEX ]
+                  : Is very homogonous.
+
+    @LOGANOK_ADD@ : Adds a message to our loganok object.
+    @LOGANOK_END@ : Ends response to server.
+
+    @i_ignored@   : Ignored Input Argument
+
+    #MAKE_COORD_HASH# :
+
+        Turn X,Y,Z input strings into coordinate hash.
+        This is a bit convoluted. The result of
+        refactoring.
+
+        All of our "upload" api paths need to be
+        called in the exact same way.
+
+        GOING WITH: 
+            PATH[ XXX/YYY/ZZZ ]
+            FUNC( XXX,YYY,ZZZ )
+
+        INSTEAD OF:
+            PATH[ XXX_YYY_ZZZ ]
+            FUNC( XXX_YYY_ZZZ )
+
+        Still like coordinate hashes for the
+        FRONT END. Though in retrospect, we should
+        have just picked one and stuck with it.
+
+        DATE[ 2022_07_19 ]TIME[ 0820 ]PM
+
+    #ABORT_IF_NOT_HTTPPOST# :
+
+        Not 100% necessary , but figure this gives me
+        a bit of extra sanity so why not?
+
+    #ABORT_IF_FILE_TOO_BIG# :
+
+        //:::::::::::::::::::::::::::::::::::://  
+        //: Encoding a 512_x_512 .PNG image  ://
+        //: of[ NOISE/STATIC/MAXENTROPY]     ://
+        //: gives me a file of[ 697 KB ].    ://
+        //:                                  ://
+        //: So, 1024KB of wiggle room should ://
+        //: be enough to cover any 512_x_512 ://
+        //: .PNG file we get.                ://    
+        //:::::::::::::::::::::::::::::::::::://
+        
+    #SAVE_TO_HEROKU_HARDDISK# :
+
+        Before uploading to IMGUR, we save to our own
+        heroku server hard disk. That way, if upload
+        to imgur FAILS, but we can verify it on the
+        HEROKU SERVER VIA:
+    
+            www.app.com/PNG/X_123/Y_456/Z_789/
+                           AIM_123_456_789.PNG
+
+        Then we know the problem with imgur upload is
+        __NOT__ the data, but rather:
+
+            1. How we are loading data into outgoing
+               request to IMGUR.
+            
+            2. How we are writing our request object
+               to IMGUR.
+
+            3. In general, something wrong with how we
+               are making the request to imgur.
+
+            DATE[ 2022_07_19 ]TIME[ 0507 ]PM
+
+    #ABORT_IF_NO_IMGUR_CRED# :
+
+        If IMGUR credentials have not been setup in
+        environment variables of this server ,
+        abort now.
+
+        We are aborting AFTER we upload to HEROKU
+        just so that we can still get something done.
+        
+        Possibly if IMGUR is down the game does
+        not fail 100%.
+    
+        DATE[ 2022_07_19 ]TIME[ 0515 ]PM
+
+    #LOAD_FROM_HEROKU_HARDDISK# :
+
+        We are going to load to heroku harddisk first
+        because if we FAIL to upload to imgur, but
+        can verify .PNG exists by going to :
+
+        [ www.app.com / PNG / X_### / Y_### / Z_### /  ]
+        [             / AIM_    ### _   ### _   ###    ]
+
+        Then we know the failure is somewhere in how
+        we are calling the API. The data upload part
+        is working fine.
+
+        DATE[ 2022_07_19 ]
+
+    #GET_JUST_FILENAME# :
+
+        GET: filename with extension ( png_nam )
+        GET: title of image          ( png_tit )
+
+        DATE[ 2022_07_20 ]
+
+    #GET_IMGUR_BEARER_TOKEN# :
+
+        We need a bearer token. I think the mysterious
+
+        INTERNAL_EXPECTATION_FAILED 
+        internal expectation failed
+
+        is because we do not have access rights.
+
+        EVENTUALLY : We want to save access token
+                   : in[ ./TXT/ACCESS_TOKEN.TXT ]
+                   :
+                   : So we don't have to authenticate
+                   : every time. Put timestamp on
+                   : token file because expires
+                   : in 24 hours.
+
+        EVENTUALLY : Put access tokens in database
+                   : and associate them with
+                   : different users.
+
+        DATE[ 2022_07_21 ]TIME[ 0836 ]PM
+
+    #BUILD_FORM_DATA# :
+
+        Create the form data payload that imgur expects.
+        We could use a 3rd party library for this, but
+        I want avoid putting things in "package.json"
+        unless they are "really fucking hard" to do.
+
+        Open These Tabs In This Order To Learn More :
+
+        https://stackoverflow.com/questions/49053193
+        https://tanaikech.github.io/2017/07/27 
+                        /multipart-post-request-using-node.js/
+        https://developer.mozilla.org/en-US/docs/Web/HTTP
+                        /Basics_of_HTTP/MIME_types
+        https://community.axway.com/s/question
+            /0D52X00005ziQqVSAU/rest-request-with
+            -contenttype-multipartformdata-header
+            -doesnt-handle-content
+        https://apidocs.imgur.com/#de179b6a-3eda
+            -4406-a8d7-1fb06c17cb9c
+        https://nodejs.org/api/buffer.html
+
+        Wow, that is fucking ugly.. Lets make tinyurls:
+
+            1 : www.tinyurl.com/BFD-URL-001
+            2 : www.tinyurl.com/BFD-URL-002
+            3 : www.tinyurl.com/BFD-URL-003
+            4 : www.tinyurl.com/BFD-URL-004
+            5 : www.tinyurl.com/BFD-URL-005
+            6 : www.tinyurl.com/BFD-URL-006
+
+    #SEND_PNG_TO_IMGUR# : 
+
+        Pack up .PNG read from hard disk and send it
+        off to imgur. This is the hardest part I 
+        anticipate, because I've never done this before.
+
+        DATE[ 2022_07_19 ]TIME[ 509 ]PM
+
+    #ADD_IMGUR_URL_TO_DATABASE# :
+
+        We need to store the imgur hashes in a database.
+        I don't know how the fuck to reliably collect
+        the images via the API, and this makes us
+        less platform dependant anyways.
+
+        DATABASE__TABLE : tab_hotel13 
+
+        DATABASE_COLUMN : col_coohash : EX[ 101_202_303 ]
+        DATABASE_COLUMN : col_verni32 : VERsion_Number_I32
+        DATABASE_COLUMN : col_png_url : .PNG file's URL.
+
+        col_verni32 needs to be an integer because looking
+        it up, will be a pain in the ass to try and
+        lexographically short a version string like:
+        "000.000.001" , though when serializing we 
+        could store it like that.
+
+        DATE[ 2022_07_21 ]TIME[ 1059 ]PM
+
+    #STOP_TALKING_TO_ME# :
+
+        Conversation is over with the server.
+        Stop talking with server. This is the
+        official end. This is not an error, 
+        you did nothing wrong. I just don't
+        want to talk to anyone right now.
+
+        DATE[ 2022_07_19 ]TIME[ 510 ]PM
+
+
+    #_TELL_IMGUR_HOW_TO_RESPOND_#
+    #_NOT_OUTGOING_DATA_TYPE_#
+
+        xhr.setRequestHeader( 
+        
+            //:::::::::::::::::::::::::::::::://
+            //: This is __NOT__ the type     ://
+            //: of data being uploaded ,     ://
+            //: This tells IMGUR what        ://
+            //: type of response we want     ://
+            //: IMGUR to send us back.       ://
+            //:::::::::::::::::::::::::::::::://
+
+            "accept" , "application/json"
+        
+        );;
+
+        DATE[ 2022_07_19 ]TIME[ 0548 ]PM
+
+
+    #NODESYS# / @NODESYS@ :
+
+        Don't use this. I read this as "sever code" but
+        it is client code.
+
+        Hmm.. Try... @HEROKUA@
+
+    @IMGURAP@ : CLIENT_SIDE_CODE
+              : Making requests to: IMGUR  server.
+
+    @HEROKUA@ : CLIENT SIDE CODE
+              : Making requests to: HEROKU server.
+
+    @NODESYS@ : YOU_MEAN[ HEROKUA ]
+
+    #NODESYSTEM_SAVE# : YOU_MEAN[ HEROKUA_SAVE ]
+    #NODESYSTEM_LOAD# : YOU_MEAN[ HEROKUA_LOAD ]
+
+    #HEROKU_HARD_DISK# / [HEROKU_HARD_DISK] :
+
+        I mean the filesystem of your heroku deployment.
+
+        This storage gets erased every time you re-deploy
+        so just use it to help verify levelpack data
+        made it to our server un-mangled.
+    
+        If we verify that, it helps give us sanity of
+        mind when trying to use 3rd-party image API(s)
+        to upload to permanant[ image ]store.
+
+        DATE[ 2022_07_19 ]KANJICODER
+
+    #_OUTGOING_DATA_TYPE_# :
+
+        I think this is how you tell IMGUR api what
+        type of data you are sending it. But not
+        100% on this.
+
+    #_NODEJS_HTTP_REQ_# :
+
+        https://nodejs.org/api/http.html#agentrequests
+
+    @nor_opt@ : Node_Outbound_Request _ OPTions
+
+    @A_I_A@ : Accessed_Imgur_API
+    #A_I_A# :
+
+        Stolen message from this stack overlfow post:
+
+        https://stackoverflow.com/questions/41063529
+
+    [ Client Request Interrupted ] :
+    [ Client_Request_Interrupted ] :
+
+        Did you call ::::: LOGANOK_END()
+
+        When should have : LOGANOK_NEX() ?
+
+    @nor_ask@ : NodeOutboundRequest_ASK 
+
+    [I_H_N_I_W_I_A_D] : I Have No Idea What I Am Doing
+    [I H N I W I A D] :[I H    N  I    W    I A  D    ]
+    @I_H_N_I_W_I_A_D@ : I_Have_No_Idea_What_I_Am_Doing
+    
+    [I_H_A_S_I_W_I_A_D] : I have a slight idea what I am doing.
+
+    #_NJS_CLOSE_# :
+    #_NJS_END_#   :
+
+        close : emitted when stream resource is closed and
+              : indicates no more events will be emitted
+              : in the future.
+
+        finish: when all data is written to the stream but
+              : the stream may not be closed.
+              : https://stackoverflow.com/questions/65004497
+
+          end : Not sure about the difference between this 
+              : and "close" but this event is not 
+              : guaranteed to fire.
+              :
+              : https://stackoverflow.com/questions/35805759/
+              : nodejs.org/api/stream.html#stream_event_end
+
+        ------------------------------------------------
+        DATE[ 2022_07_20 ]TIME[ 222 ]AM
+        ------------------------------------------------
+        Getting pretty tired of trying to figure this
+        out. But with "close" the api is only partially
+        broken. Doesn't upload to IMGUR but re-loading
+        level after refresh will work.
+        ------------------------------------------------
+
+    @IAG@ : Imgur_API_Get
+
+    #l_buffer# : A byte buffer object in node.js
+               : Used for low-level API requests.
+               :
+               : https://nodejs.org/api/buffer.html 
+
+    @norform@  : Node Outgoing Request - FORM (data)
+
+    @norform_obj@ : WRONG, use[ norform_jso ]
+    @norform_jso@ : norform - JSON Object
+    @norform_pay@ : norform - PAYLOAD (what gets sent)
+    @norform_bou@ : norform - BOUNDARY string
+    @norform_c_t@ : norform - Content Type
+
+    WRONG[ "mulipart/form-data;"  ]
+      YES[ "multipart/form-data;" ]
+
+    @arr_k_v@ : ARRay - Key_Value , key value pairs.
+        @k_v@ : Key_Value == [ key , val ]
+              : k_v[ 0 ] == KEY
+              : k_v[ 1 ] == VAL
+
+    @arr_m_i@ : Array, maxindex (max valid index)
+
+    @kv0@ : k_v = arr_k_v[ kv0 ] , FIRST INDEX
+    @kv1@ : k_v = arr_k_v[ kv1 ] , LAST  INDEX
+    @kvi@ : k_v = arr_k_v[ kvi ] , INDEX[ kv0 to kv1 ]
+    @k_v@ : Key_Value Pair , k_v = [ key , val ]
+
+    @jso_key@ : JSonObject - KEY
+    @jso_val@ : JSonOBject - VAL
+    @norform_jso_key@ : norform . jso_key
+    @norform_jso_val@ : norform . jso_val
+
+    @norform_pay_buf_001@ : Payload buffer section #1
+    @norform_pay_buf_002@ : Payload buffer section #2
+    @norform_pay_buf_003@ : Payload buffer section #3
+
+    @png_nam@ : USE[ NAMAEXT | NAMONLY ]( nam ==  name )
+    @png_tit@ : USE[ NAMONLY           ]( tit == title )
+
+    @bearask@ : BEAR-ASK , an outgoing request from
+              : HOTEL13.JS server to IMGUR asking
+              : for a "bearer token"
+              : DATE[ 2022_07_21 ]TIME[ 0855PM ]
+
+    #IMGUR_UPLOAD_SUCCESS# :
+    
+        I think I know what it is... Your APPLICATION
+        and your ACCOUNT are distinct. Your application
+        does __NOT__ have access to your ACCOUNT's 
+        albums. Trying to use your application to upload
+        to your ACCOUNT is an access violation.
+
+        DATE[ 2022_07_21 ]TIME[ 0935 ]AM
+
+        I ANSWERED THIS:
+
+            https://stackoverflow.com/questions/69041370
+
+        CORRECT :
+
+            payload=Buffer.concat([
+                Buffer.from( str_form_data      , "utf8"   ) 
+            ,   Buffer.from( png_binary_file    , "binary" ) 
+            ,   Buffer.from( final_form_boundary, "utf8"   ) 
+            ]);;
+
+        WRONG: Will Corrupt Your PNG BINARY:
+
+            payload=Buffer.concat([
+                Buffer.from( str_form_data      , "utf8"   )     
+            ,   Buffer.from( png_binary_file    , "binary" )  
+            ,   Buffer.from( final_form_boundary, "utf8"   ) 
+            ]).toString( "utf8" );
+
+        DATE[ 2022_07_21 ]TIME[ 09:55 ]AM
+
+    #_LOOSE_RULE_CAUSE_FUCKING_PROBLEMS_# :
+
+        Interpreting "1_1_1" === "001_001_001"
+
+        Causes a lot of fucking problems with database
+        records. We added more code to make "1_1_1"
+        be detected as an INVALID coordinate hash.
+
+        Coordinate hashes need 3 segments.
+        Each segment being 3 digits.
+
+        DATE[ 2022_07_22 ]TIME[ 0257 ]AM
+
+    #12_STEP_PROGRAM# : It's a 13 step program now.
+                      : SEE[ 13_STEP_PROGRAM ]
+
+    @verni32@ : VERsion_Number_Int32
+              : The version number of a given 
+              : [ levelpack / hotel ]
+
+    #CLIENT_REQUEST_INTERRUPTED# :
+
+        https://aim-hotel13.herokuapp.com/001_001_003
+
+        FIGURE OUT WHY THE FUCK WHY ?
+
+        Our re-factor has broken the file name
+        generation that we doing zero-padding.
+
+        HAVE[  AIM_1_1_1.JS       ]
+        WANT[  AIM_001_001_001_JS ]
+    
+        DATE[ 2022_07_22 ]TIME[ 0406 ]AM
+
+    @nod@ : Number_Of_Digits
+    @miz@ : Missing_Zeros
+
+    @act_p_w@ : ACTual PassWord
+    @got_p_w@ : GOTten PassWord
+
+    #PWE_GAURD# : Password must be non-blank , or else
+                : I will always refuse to drop the table.
+                : This extra gaurd exists in case the
+                : file where client secret is read from
+                : accidentially gets [ nuked / erased ].
+                :
+                : PWE   == PassWordExtra
+                : GUARD == GAURD
+
+    @CAS@ : Client_And_Server
+    @SAC@ : Typo_Of[ CAS ]
+
+    @yes_o_k@ : YOU_MEAN[ o_k_yes ]
+    @o_k_yes@ : ACCEPTOR Function in Executor of promise.
+    @wontsay@ : REJECTOR Function in Executor of promise.
+              : Called "wontsay" means "never called".
+
+    @i_scatpng@ : Input_SCATPNG
+    @scatpng@   : Schrodinger's CAT PNG
+                : The .PNG binary file may or may not
+                : exist.
+
+    @wavepng@   : USE[ scatpng ]
+    @darkpng@   : USE[ scatpng ]
+    @mayepng@   : USE[ scatpng ] ( maye   ==  maybe png )
+    @evilpng@   : USE[ scatpng ]
+    @strapng@   : USE[ scatpng ] ( strapng==strange png )
+    
+    @m_ooi@     : Member_ OriginOfImage
+                : VALUES:
+                :       "[M_OOI.HEROKU:::::FILE_SYSTEM]"
+                :       "[M_OOI.IMGUR:::IMAGE_DOWNLOAD]"
+    #m_ooi# :
+        Adding this variable because I want a way to
+        confirm from where my server got the image.
+        Message is not to be used to execute logic on,
+        just for debugging and sanity.
+
+
+    #_THIS_IS_NOT_K_I_S_S_#
+        //:----------------------------------://
+        //: THIS IS GETTING WAY TO FUCKING   ://
+        //: COMPLICATED. MAYBE WE SHOULD...  ://
+        //: "KEEP IT SIMPLE STUPID".         ://
+        //:----------------------------------://
+
+        I am really questioning if this is a good
+        idea or not. We are going to do it and
+        see how we like it. DATE[ 2022_07_23 ]
+
+    @i_taskarr@ : Use[ i_tar ]
+    @taskarr@   : Use[   tar ]
+    @o_taskarr@ : Use[ o_tar ]
+
+    @i_tar@ : Input  task array object.
+    @o_tar@ : Output task array object.
+      @tar@ : Local  task array object.
+
+    @e_s@ : Extra_Slash
+
+    @nsh_ooi@ : NonStandardHeader_OriginOfImage
+
+    @EDCL@ : Expected_Dead_Code_Line
+
+    @_void_@ : A note to myself that the function 
+             : returns void.
+    
+    @o_vod_promise@ : A promise that when resolved,
+                    : gives ZERO ARGUMENTS to it's
+                    : "ACCEPTOR" function. ( o_k_yes() )
+
+    NOW_DATE[ 2022_07_23 ]TIME[ 0336 ]PM
+
+        Just finished writing 1st draft of :
+        [ F_HOTEL13_CAS_COOHASH_SCATPNG ]
+
+        A bit nervous to run the code because I don't
+        know what the fuck I am doing and a lot of
+        experimental stuff in this.
+
+        General idea: Tightly couple the server
+        and client code so that code is less
+        "spaghetti" and easy to find what I am 
+        looking for.
+
+        CAS_COOHASH_SCATPNG is used to get a levelpack
+        .PNG file using a coordinate has. It is designed
+        so that is can be called on the client side
+        or server side.
+
+        Always returns a promise. Promise resolves
+        iself by returning a[ scatpng ]object which
+        may or may not contain a .PNG binary file.
+
+    #_ABOUT_CAS_FUNCTIONS_# :
+
+        //:#_ABOUT_CAS_FUNCTIONS_#:==========================://
+        //:                                                  ://
+        //:  CAS : Client_And_Server                         ://
+        //:      : Designed to tightly couple a function     ://
+        //:      : that is available on both the client      ://
+        //:      : and server, to make routing less          ://
+        //:      : of hard-to-follow spaghetti code.         ://
+        //:                                                  ://
+        //:      : Since it is called "Client_And_Server"    ://
+        //:      : The "Client" section should always        ://
+        //:      : come first.                               ://
+        //:                                                  ://
+        //:      : TAG[ #_CLIENT_AND_SERVER_# | #CAS# ]      ://
+        //:                                                  ://
+        //:  UPDATE:                                         ://
+        //:                                                  ://
+        //:     There is OTHER CODE that runs on both        ://
+        //:     client and server, but[ CAS ]is              ://
+        //:     specifically for SERVER ROUTES.              ://
+        //:                                                  ://
+        //:     DATE[ 2022_07_23 ]TIME[ 0427 ]AM             ://
+        //:                                                  ://
+        //:==========================:#_ABOUT_CAS_FUNCTIONS_#://
+
+
+    #_TASK_ARRAY_MIGHT_BE_TOO_COMPLEX_# ://
+
+        //:----------------------------------------------://
+        //: I question if "re-inventing" promises is     ://
+        //: a good idea. But... You have to try things   ://
+        //: and see if they work. Maybe this is          ://
+        //: a whole bunch of code that overly            ://
+        //: complicates things, maybe it's a good        ://
+        //: idea... We will see.                         ://
+        //: DATE[ 2022_07_23 ]TIME[ 116AM ]              ://
+        //:----------------------------------------------://
+
+    #_DONT_UPLICATE_CONTENT_TYPES_IF_PART_OF_AIM_# :
+
+        The "not_aim" gaurd is here because it is okay
+        for these to exist on CLIENT and SERVER side,
+        but if[ HOTEL13.JS ]is injected into
+        [ AIM/server.js ]then we want to __NOT__ define
+        these mimetypes here because[ AIM/server.js ]
+        already defines them.
+
+        DATE[ 2022_07_23 ]TIME[ 508 ]AM
+
+    #_CAN_EXIST_IN_ALL_NODE_JS_ENVIRONMENTS_# :
+
+        We might want these database commands to be
+        available when[ HOTEL13.JS ]is integrated
+        into the main[ AIM/server.js ]code.
+    
+        So we will allow it to be declared in 
+            
+        ANY node.js environment.
+
+        DATE[ 2022_07_23 ]TIME[ 508 ]AM
+
+    #_HOTEL13_SERVER_ONLY_# :
+
+        These libraries should only be included if
+        we are in stand-alone hotel.js server mode.
+
+        If we are injecting[ HOTEL.JS ]into
+        [ AIM/server.js ]then these libraries have
+        already been declared by other code.
+    
+        DATE[ 2022_07_23 ]TIME[ 508 ]AM
+
+    @arr_dat@ : Array of "data" chunks.
+    @cat_dat@ : All data chunks concatinated together.
+    
+
+*** ****************************************** HASHTAG_SEC - ***
+*** ****************************************** HASHTAG_NOTES **/
 
