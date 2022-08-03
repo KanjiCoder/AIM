@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_103             :// // [103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_104             :// // [104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:SYSTEM_INDEX:[102]:=======================================://
@@ -2577,6 +2577,8 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                 // [104]
         i_evt_key                                               // [104]
     ){                                                          // [104]
+        //:#_DOWN_HANDLER_WHEN_BEHAVING_AS_AN_EDITOR_#://       // [104]
+
         var asc_key = F_KEYMAST_EVT_ASC( i_evt_key );           // [104] 
         let a_k     =( asc_key /** Key Down **/ );              // [104] 
 
@@ -2691,6 +2693,8 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                 // [104]
         i_evt_key                                               // [104]
     ){                                                          // [104]
+        //:#_DOWN_HANDLER_WHEN_BEHAVING_AS_A_GAME_#://          // [104]
+                                                                // [104]
         console.log("[no_game_control_bindings_yet]");          // [104]
     };;                                                         // [104]
 
@@ -2698,6 +2702,8 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     PRIVATE_F_KEYMAST_DOW(                                      // [057] 
         i_evt_key                                               // [068] 
     ){                                                          // [057] 
+        //:#_HIGHEST_LEVEL_KEYBOARD_DOWN_HANDLER_#://           // [104]
+
         var asc_key = F_KEYMAST_EVT_ASC( i_evt_key );           // [068] 
         let a_k     =( asc_key /** Key Down **/ );              // [068] 
 
@@ -4543,6 +4549,23 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         the behavior is.                                        // [103]
                                                                 // [103]
         We will call the function[ F_CYC ]for "Cycle".          // [103]
+
+    #_DOWN_HANDLER_WHEN_BEHAVING_AS_A_GAME_# :                  // [104]
+                                                                // [104]
+        Main key down handler for when[ AIM ]project is         // [104]
+        behaving as an EDITOR.                                  // [104]
+                                                                // [104]
+    #_DOWN_HANDLER_WHEN_BEHAVING_AS_AN_EDITOR_# :               // [104]
+                                                                // [104]
+        Main key down handler for when[ AIM ]project is         // [104]
+        behaving as a GAME.                                     // [104]
+                                                                // [104]
+    #_HIGHEST_LEVEL_KEYBOARD_DOWN_HANDLER_# :                   // [104]
+                                                                // [104]
+        The keyboard handler that routes to either the          // [104]
+        "EDITOR MODE" keyboard handler or the "GAME MODE"       // [104]
+        keyboard handler, depending on the state of the         // [104]
+        [ d_edigame_mod ]flag.                                  // [104]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
