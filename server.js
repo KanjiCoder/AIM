@@ -4024,6 +4024,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : where bug is in our RENDERING(GLSL) code.           // [106][105]
           : ( BUG NOT FOUND YET , 2022_08_03 )                  // [106][105]
 
+    [106] : Sample points outside of[ THE_DUM ]are now          // [107][106]
+          : darkened. This greatly helps diagnose the           // [107][106]
+          : error in our fragment shader code.                  // [107][106]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4679,9 +4683,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [106] : Sample points outside of[ THE_DUM ]are now          // [106]
-          : darkened. This greatly helps diagnose the           // [106]
-          : error in our fragment shader code.                  // [106]
+    [107] : Found bug in our renderer, our code for             // [107]
+          : calculating[ u_mv1 ]was... [TRASH/WRONG/INCORRECT]. // [107]
 
 
 *** ******************************************************** **/
