@@ -453,11 +453,26 @@
                                                                 // [067]
 //:====================================:NON_CONST_ARRAY:[067]://// [---]
 //:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]:==================://
+//:MONKEY_WRENCH_MACROS:[108]:===============================://
 
     //:CTRL_F_TAGS[ #illegal# ]                          ://    // [063] 
     //:TAG[ disallowed | its wrong carl | monkey wrench ]://    // [085]
     //:TAG[ its-wrong-carl | itswrongcarl | wrong_carl  ]://    // [086]
     //:TAG[ its_wrong_carl .............................]://    // [086]
+
+    const c_camerah_zebasis_du0 ="[DOUBLY_WRONG]";              // [108]
+    const c_camerah_zebasis_du6 ="[DOUBLY_WRONG]";              // [108]
+    const c_camerah_cir_cum_off ="[FIX:cir_cum_not]" ;          // [108]
+                                                                // [108]
+    const c_camerah_zebasis_dut =("[FIX:c_camerah_zeb_dut]");   // [108]
+    const c_camerah_zebasis_du1 =("[FIX:c_camerah_zeb_du1]");   // [108]
+    const c_camerah_zebasis_du2 =("[FIX:c_camerah_zeb_du2]");   // [108]
+    const c_camerah_zebasis_du3 =("[FIX:c_camerah_zeb_du3]");   // [108]
+    const c_camerah_zebasis_du4 =("[FIX:c_camerah_zeb_du4]");   // [108]
+    const c_camerah_zebasis_du5 =("[FIX:c_camerah_zeb_du5]");   // [108]
+    const c_camerah_zebasis_dur =("[FIX:c_camerah_zeb_dur]");   // [108]
+    const c_camerah_zebasis_duh =("[FIX:c_camerah_zeb_duh]");   // [108]
+    const c_camerah_zebasis_dum =("[FIX:c_camerah_zeb_dum]");   // [108]
                                                                  
     const d_fps =( "[MORE_SENSIBLE::c_fps]" );                  // [085]
     const i_tim =( "[REFACTORED_USE:d_tik]" );                  // [085]
@@ -504,6 +519,7 @@
     const d_wgl   =( "[FIX:a_g.wgl]" );              //:[063]://
     const   wgl   =( "[FIX:a_g.wgl]" );              //:[063]://
 
+//:===============================:MONKEY_WRENCH_MACROS:[108]://
 //:==================:ILLEGAL_STUFF_GO_STRAIGHT_TO_JAIL:[042]://
 //:XMLHTTPREQUEST_WIREUP_HACK:[058]:=========================://
 
@@ -718,6 +734,28 @@ if( yesnode ){ //:-------------------------------------------://
                                                                 
     const c_artgirl_ren_def = (      //:Default_Render       :// // [068]    
           c_artgirl_ren_001    );;   //:Pipeline_To_Use      :// // [068]    
+
+//: __CAMERAH__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [108]
+                                                                 // [108]
+    const c_camerah_zeb_du0 = "[FIX:c_camerah_zeb_dut]";         // [108]
+    const c_camerah_zeb_du6 = "[FIX:c_camerah_zeb_dur]";         // [108]
+                                                                 // [108]
+    const c_camerah_zeb_dut =( 0 );   //:FOR[ #ZEBASIS# ]://     // [108]
+    const c_camerah_zeb_du1 =( 1 );   //:FOR[ ^^^^^^^^^ ]://     // [108]
+    const c_camerah_zeb_du2 =( 2 );   //:FOR[ ^^^^^^^^^ ]://     // [108]
+    const c_camerah_zeb_du3 =( 3 );   //:FOR[ ^^^^^^^^^ ]://     // [108]
+    const c_camerah_zeb_du4 =( 4 );   //:FOR[ ^^^^^^^^^ ]://     // [108]
+    const c_camerah_zeb_du5 =( 5 );   //:FOR[ ^^^^^^^^^ ]://     // [108]
+    const c_camerah_zeb_dur =( 6 );   //:FOR[ ^^^^^^^^^ ]://     // [108]
+    const c_camerah_zeb_duh =( 7 );   //:FOR[ ^^^^^^^^^ ]://     // [108]
+    const c_camerah_zeb_dum =( 8 );   //:FOR[ ^^^^^^^^^ ]://     // [108]
+                                                                 // [108]
+    //:#_HOW_TO_USE_ZERO_BASIS_GEOMETRIC_ELEMENTS_#://           // [108]
+                                                                 // [108]
+    const c_camerah_cir_cum_inn =( 1 );     //:INN_SCRIBE://     // [108]
+    const c_camerah_cir_cum_out =( 2 );     //:OUT_SCRIBE://     // [108]
+    const c_camerah_cir_cum_not =( 3 );     //:NOT_SCRIBE://     // [108]
+
                                                                              
 //: __ASERVER__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103]
                                                                          
@@ -1300,6 +1338,24 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     console.log( d_artgirl );                                   //      [065] 
                                                                 //      [065] 
 };;                                                             //      [063] 
+if( /** __CAMERAH__ **/ notnode ){
+
+    var d_camerah_use =( 1 ); //:UseHighLevelCamera?://
+
+    var d_camerah ={ laxcoma:"[HACK]"
+
+        ,   zebasis : c_camerah_zeb_dut
+        ,   camsnap : 0  //: IsCameraSnapOn?        ://
+        ,   camdu_x : 0  //: Camera Discrete Unit X ://
+        ,   camdu_y : 0  //: Camera Discrete Unit Y ://
+        ,   camzoom : 0  //: 0 === NEUTRAL ZOOM     ://
+
+            //:#_CIR_CUM_DIAGRAM_#://
+
+        ,   cir_cum : c_camerah_cir_cum_inn
+    };;
+
+};;
 if( /** __ASERVER__ **/ yesnode ){                              // [102]
                                                                 // [102]
     //:NO_DATA://                                               // [102]
@@ -4028,6 +4084,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : darkened. This greatly helps diagnose the           // [107][106]
           : error in our fragment shader code.                  // [107][106]
 
+    [107] : Found bug in our renderer, our code for             // [108][107]
+          : calculating[ u_mv1 ]was... [TRASH/WRONG/INCORRECT]. // [108][107]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -4678,14 +4737,87 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         The magnitude (aka length) of VIEWPORT ONE (VP1).       // [107]
         VP1 == off screen data selection viewport.              // [107]
 
+    #ZEBASIS# :                                                 // [108]
+                                                                // [108]
+        @zebasis@ == Zero Basis                                 // [108]
+        The geometric element type that defines what it         // [108]
+        means for the camera (camerah) to be __NEITHER__        // [108]
+        zoomed-in nor zoomed-out.                               // [108]
+                                                                // [108]
+        For example, if the ZEBASIS is[ c_camerah_dut ],        // [108]
+        then the camera is NEUTRAL when VP1 data viewport       // [108]
+        is selecting exactly 1 game sized tile.                 // [108]
+                                                                // [108]
+        If ZEBASIS is[ c_camerah_dur ], the camera is           // [108]
+        NEUTRAL when VP1 is selecting exactly an entire         // [108]
+        [ ROOM / LEVEL ] worth of data.                         // [108]
+                                                                // [108]
+        The camera position itself is a discrete unit           // [108]
+        in [worldspace/dumspace] that may or may not            // [108]
+        snap to a geometric unit of the active ZEBASIS          // [108]
+        type.                                                   // [108]
+                                                                // [108]
+    @zeb@ : ZEB == ZEBASIS , ZEBASIS == Zero Basis              // [108]
+                                                                // [108]
+    #_HOW_TO_USE_ZERO_BASIS_GEOMETRIC_ELEMENTS_# :              // [108]
+                                                                // [108]
+        Tells us how to rectify the issue that, the             // [108]
+        geometric element we are using as a ZERO BASIS,         // [108]
+        is a PERFECT SQUARE, yet the camera is most             // [108]
+        likely a NON-SQUARE RECTANGLE.                          // [108]
+                                                                // [108]
+        Do we create our rectangle by INSCRIBING the            // [108]
+        zero-basis shape? Or by CIRCUMSCRIBING the              // [108]
+        zero-basis shape? Or do we perform NO ACTION,           // [108]
+        and allow the rendering to become squashed              // [108]
+        or stretched on a given axis?                           // [108]
+                                                                // [108]
+    #_CIR_CUM_DIAGRAM_# :-------------------------------------: // [108]
+                                                              : // [108]
+                +---=---+     +---=---++---=---++---=---+     : // [108]
+                |       |     |       ||       ||       |     : // [108]
+                |zebasis|     |<----------vp0---------->|     : // [108]
+                |       |     |       ||       ||       |     : // [108]
+                +---=---+     +---=---++---=---++---=---+     : // [108]
+                                                              : // [108]
+                +---=---+                                     : // [108]
+                +=======+                                     : // [108]
+                |       | <---------- c_camerah_cir_cum_inn   : // [108]
+                +=======+                                     : // [108]
+                +---=---+                                     : // [108]
+                                                              : // [108]
+        +=======================+                             : // [108]
+        |       +---=---+       |                             : // [108]
+        |       |       |       |                             : // [108]
+        |       |       |       | <-- c_camerah_cir_cum_out   : // [108]
+        |       |       |       |                             : // [108]
+        |       +---=---+       |                             : // [108]
+        +=======================+                             : // [108]
+                                                              : // [108]
+              +===========+                                   : // [108]
+              | +---=---+ |                                   : // [108]
+              | |       | |                                   : // [108]
+              | |zebasis| | <-------- c_camerah_cir_cum_not   : // [108]
+              | |       | |                                   : // [108]
+              | +---=---+ |                                   : // [108]
+              +===========+                                   : // [108]
+                                                              : // [108]
+    :---------------------------------------------------------:
+
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [107] : Found bug in our renderer, our code for             // [107]
-          : calculating[ u_mv1 ]was... [TRASH/WRONG/INCORRECT]. // [107]
-
+    [108] : Created "CameraH" struct and supporting              // [108]
+          : constants. Also wrote some diagrams to               // [108]
+          : explain how the camera will be used.                 // [108]
+          :                                                      // [108]
+          : NO FUNCTIONS WERE WRITTEN THIS VIDEO ,               // [108]
+          : just focusing on the data structures                 // [108]
+          : because a problem well defined is a                  // [108]
+          : problem half solved. 2022_08_03                      // [108]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
