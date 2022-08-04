@@ -1338,24 +1338,25 @@ if( /** __ARTGIRL__ **/ notnode ){                              // [063]
     console.log( d_artgirl );                                   //      [065] 
                                                                 //      [065] 
 };;                                                             //      [063] 
-if( /** __CAMERAH__ **/ notnode ){
-
-    var d_camerah_use =( 1 ); //:UseHighLevelCamera?://
-
-    var d_camerah ={ laxcoma:"[HACK]"
-
-        ,   zebasis : c_camerah_zeb_dut
-        ,   camsnap : 0  //: IsCameraSnapOn?        ://
-        ,   camdu_x : 0  //: Camera Discrete Unit X ://
-        ,   camdu_y : 0  //: Camera Discrete Unit Y ://
-        ,   camzoom : 0  //: 0 === NEUTRAL ZOOM     ://
-
-            //:#_CIR_CUM_DIAGRAM_#://
-
-        ,   cir_cum : c_camerah_cir_cum_inn
-    };;
-
-};;
+if( /** __CAMERAH__ **/ notnode ){                              // [108]
+                                                                // [108]
+    var d_camerah_use =( 1 ); //:UseHighLevelCamera?://         // [108]
+                                                                // [108]
+    var d_camerah ={ laxcoma:"[HACK]"                           // [108]
+                                                                // [108]
+        ,   zebasis : c_camerah_zeb_dut                         // [108]
+        ,   camsnap : 0  //: IsCameraSnapOn?        ://         // [108]
+        ,   camdu_x : 0  //: Camera Discrete Unit X ://         // [108]
+        ,   camdu_y : 0  //: Camera Discrete Unit Y ://         // [108]
+        ,   camzoom : 0.0//: 0 === NEUTRAL ZOOM     ://         // [108]
+                                                                // [108]
+            //:#_CIR_CUM_DIAGRAM_#://                           // [108]
+                                                                // [108]
+        ,   cir_cum : c_camerah_cir_cum_inn                     // [108]
+    };;                                                         // [108]
+                                                                // [108]
+};;                                                             // [108]
+                                                                // [---]
 if( /** __ASERVER__ **/ yesnode ){                              // [102]
                                                                 // [102]
     //:NO_DATA://                                               // [102]
