@@ -5058,6 +5058,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :   : [ zebasis ==> @D_U@ Span ].                      // [109]
           : 3 : Boiler plate configuration section.              // [109]
           : 4 : Boiler plate: MAYBEDO , VITALDO , ASS_NUM        // [109]
+          : 5 : F_ARR_U32 , F_CAR_U32 helper functions.          // [109]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
