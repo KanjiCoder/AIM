@@ -1675,7 +1675,6 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         };;                                                      // [110]
     };;                                                          // [110]
 
-
     function VITALDO( i_msg ){                                   // [109]
                                                                  // [109]
         var  msg_vitaldo =( "[VITALDO]:" + i_msg );              // [109]
@@ -2572,6 +2571,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                  // [109]
         var zes =( 0 ); //: @zes@ : zero span in @D_U@   ://     // [109]
         zes = d_camerah_zeb_zes[ d_camerah.zebasis ];            // [109]
+                                                                 // [---]
                                                                  // [110]
         var  zom = d_camerah.camzoom ;                           // [110]
         ASS( zom >= (0 - 1.0) ); //:MAX_ZOOM_OUT://              // [110]
@@ -2594,7 +2594,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             if( zom > 0.0   ){     //:ZOOM_INN://                // [110]
                                                                  // [110]
                 dun =( zes - ( zom * zes ) );                    // [110]
-                if( dun < 0 ){ dun = 2 ; };                      // [110]
+                if( dun <= 0 ){ dun = 2 ; };                     // [110]
             }else                                                // [110]
             if( zom < 0.0   ){     //:ZOOM_OUT://                // [110]
                                                                  // [110]
@@ -4525,6 +4525,14 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : because a problem well defined is a                  // [109][108]
           : problem half solved. 2022_08_03                      // [109][108]
 
+    [109] : 1 : Wrote a VERY SMALL chunk of high level           // [110][109]
+          :   : camera FUNCTION code.                            // [110][109]
+          : 2 : A LOOKUP TABLE for high level camera             // [110][109]
+          :   : [ zebasis ==> @D_U@ Span ].                      // [110][109]
+          : 3 : Boiler plate configuration section.              // [110][109]
+          : 4 : Boiler plate: MAYBEDO , VITALDO , ASS_NUM        // [110][109]
+          : 5 : F_ARR_U32 , F_CAR_U32 helper functions.          // [110][109]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -5257,13 +5265,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [109] : 1 : Wrote a VERY SMALL chunk of high level           // [109]
-          :   : camera FUNCTION code.                            // [109]
-          : 2 : A LOOKUP TABLE for high level camera             // [109]
-          :   : [ zebasis ==> @D_U@ Span ].                      // [109]
-          : 3 : Boiler plate configuration section.              // [109]
-          : 4 : Boiler plate: MAYBEDO , VITALDO , ASS_NUM        // [109]
-          : 5 : F_ARR_U32 , F_CAR_U32 helper functions.          // [109]
+    [110] : 1 : Added Assert Close To Equal Function             // [110]
+          : 2 : Camera Zoom Code Calculates Final VP1 Size       // [110]
+          NEXT: Figure out translation of VP1                    // [110]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
