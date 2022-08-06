@@ -2588,7 +2588,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         let     cam =( d_camerah /**@CAM_PAN@**/          );     // [113]
         let     b_0 =( 0 /**LowerDiscreteUnitBound**/     );     // [113]
         let     b_1 =( c_camerah_maxunit /**UpperBou**/   );     // [113]
-        var pan_fac =( 1 );                                      // [113]
+        var pan_fac =( 1 ); //:SEE[ @pan_fac@ ]://               // [113]
         var zebspan =( d_camerah_zeb_zes[ cam.zebasis ]   );     // [113]
         var n_x,n_y ; //: @n_x@@n_y@ : NewX , NewY       ://     // [113]
         /// n_a     ; //: @n_a@: New[x|y]ABSOLUTEVALUE   ://     // [113]
@@ -5754,7 +5754,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         user pushes the camera into the bounds of the            // [113]
         words is __NOT__ going to use any camera                 // [113]
         state [ members / variables ] to achieve this.           // [113]
-                                                          
+                                                                 // [113]
+    @pan_fac@ : PANning scalefactor to affect panning speed.     // [113]
+    @fac_pan@ : YOU_MEAN[ pan_fac ]( @P_O_A_S_T_I@ )             // [113]
+    @P_O_A_S_T_I@ : Pick One And Stick To It                     // [113]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
