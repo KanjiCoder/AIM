@@ -3147,7 +3147,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         
         //:#_SHAKE_WHEN_PRESSED_#:[113]:=================://     // [113]
                                                                  // [113]
-            VITALDO( "[Translate_Or_Shake]" );                   // [113]
+        //: X_X < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < <   VITALDO( "[Translate_Or_Shake]" );   NOTICE_ME_SENPAI                // [117][113]
                                                                  // [113]
         //:=================:#_SHAKE_WHEN_PRESSED_#:[113]://     // [113]
 
