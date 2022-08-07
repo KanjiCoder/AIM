@@ -2702,7 +2702,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     const     F_CAMERAH_ZOM = function                           // [117]
     F_PRIVATE_F_CAMERAH_ZOM(                                     // [117]
                                                                  // [117]
-        i_ioo                                                    // [117]
+        i_ioo   //: @ioo@ : In_Or_Out? ://                       // [117]
     ){                                                           // [117]
         if( d_eci >= 1 ){                                        // [117]
                                                                  // [117]
@@ -5101,6 +5101,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : 4 : ASS_TRINARY                                      // [116][115]
           : 5 : F_CAMERAH_TIK                                    // [116][115]
 
+    [116] : Low Level Panning Code Finished.                     // [117][116]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6093,7 +6095,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [116] : Low Level Panning Code Finished.                     // [116]
+    [117] : DONE : Added High Level Camera Zoom Function.        // [117]
+          : ---- :                                               // [117]
+          : NEXT : Dirty Flag When Toggle Letterboxing           // [117]
+          : NEXT : Fix bugs in camera code, currently we         // [117]
+          : ---- : are rendering out of bounds.                  // [117]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
