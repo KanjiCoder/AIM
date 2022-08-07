@@ -1639,8 +1639,8 @@ if( /** __KEYMAST__ **/ notnode ){                              // [102]
         , (   0   )     //: @ark_rig@ : Arrow Key Right  ://    // [114]
         , ( 0 + 1 )     //: @ark_dow@ : Arrow Key Down   ://    // [114]
     );;                                                         // [114]
-
-    let k0 =( c_keymast_ark_k_0 );
+                                                                // [114]
+    let k0 =( c_keymast_ark_k_0 );                              // [114]
                                                                 // [114]
     ASS((0-1)===d_keymast_ark_dvx[ c_keymast_ark_lef -k0 ]);    // [114]
     ASS(( 0 )===d_keymast_ark_dvx[ c_keymast_ark_upp -k0 ]);    // [114]
