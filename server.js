@@ -6035,7 +6035,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [115] : 1 : Turned of CAMERAH usage ( d_camerah_use )        // [115]
+    [115] : 1 : Turned off CAMERAH usage ( d_camerah_use )       // [115]
           : 2 : F_KEYMAST_ZOM ( keymaster - zoom    )            // [115]
           : 3 : F_KEYMAST_PAN ( keymaster - panning )            // [115]
           : 4 : ASS_TRINARY                                      // [115]
