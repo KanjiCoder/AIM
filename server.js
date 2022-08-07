@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_115             :// // [115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_116             :// // [116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -3551,8 +3551,33 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                  // [115]
         if( d_camerah_use <= 0 ){   //: #_LOW_L_CAM_C_#  ://     // [115]
                                                                  // [115]
-            VITALDO(     "[Low_Level_Panning_Code]" );           // [115]
             console.log( "[Low_Level_Panning_Code]" );           // [115]
+                                                                 // [---]
+            let o_x =( i_dvx * c_dut );  //:#_1TILE_PAN_#://     // [116]
+            let o_y =( i_dvy * c_dut );  //:#_1TILE_PAN_#://     // [116]
+                                                                 // [116]
+            var new_x_0 =( vp1[ x_0 ] += o_x );                  // [116]
+            var new_x_1 =( vp1[ x_1 ] += o_x );                  // [116]
+            var new_y_0 =( vp1[ y_0 ] += o_y );                  // [116]
+            var new_y_1 =( vp1[ y_1 ] += o_y );                  // [116]
+                                                                 // [116]
+            if( new_x_0 < 0 || new_x_1 >( c_dum - 1 ) ){         // [116]
+                                                                 // [116]
+                //:DO_NOTHING_BECAUSE_OUT_OF_BOUNDS://           // [116]
+            }else{                                               // [116]
+                                                                 // [116]
+                vp1[ x_0 ]= new_x_0 ;                            // [116]
+                vp1[ x_1 ]= new_x_1 ;                            // [116]
+            };;                                                  // [116]
+            if( new_y_0 < 0 || new_y_1 >( c_dum - 1 ) ){         // [116]
+                                                                 // [116]
+                //:DO_NOTHING_BECAUSE_OUT_OF_BOUNDS://           // [116]
+            }else{                                               // [116]
+                                                                 // [116]
+                vp1[ y_0 ]= new_y_0 ;                            // [116]
+                vp1[ y_1 ]= new_y_1 ;                            // [116]
+            };;                                                  // [116]
+                                                                 // [---]
         }else                                                    // [115]
         if( d_camerah_use >= 1 ){   //: #_HIG_L_CAM_C_#  ://     // [115]
                                                                  // [115]
@@ -5045,6 +5070,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : # : __NOT__YET__ : ArrowKey ==> PanFunc( )     :     // [115][114]
           :---:--------------------------------------------:     // [115][114]
 
+    [115] : 1 : Turned off CAMERAH usage ( d_camerah_use )       // [116][115]
+          : 2 : F_KEYMAST_ZOM ( keymaster - zoom    )            // [116][115]
+          : 3 : F_KEYMAST_PAN ( keymaster - panning )            // [116][115]
+          : 4 : ASS_TRINARY                                      // [116][115]
+          : 5 : F_CAMERAH_TIK                                    // [116][115]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6029,17 +6060,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                    : be fully applied. Basically it means        // [115]
                    : we have a "cache coherency" problem         // [115]
                    : that is in need of being fixed.             // [115]
+
+    #_1TILE_PAN_# : Pan by 1 tile offset in low level code.      // [116]
                                                                
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [115] : 1 : Turned off CAMERAH usage ( d_camerah_use )       // [115]
-          : 2 : F_KEYMAST_ZOM ( keymaster - zoom    )            // [115]
-          : 3 : F_KEYMAST_PAN ( keymaster - panning )            // [115]
-          : 4 : ASS_TRINARY                                      // [115]
-          : 5 : F_CAMERAH_TIK                                    // [115]
+    [116] : Low Level Panning Code Finished.                     // [116]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
