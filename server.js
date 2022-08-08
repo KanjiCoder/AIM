@@ -5208,6 +5208,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :      : boarder around screen for how far the         // [120][119]
           :      : camera was leaking off a given edge!!!        // [120][119]
 
+    [120] : DONE : Letterboxing toggle no longer distorts.       // [121][120]
+          : NEXT : Red Boarder Feedback For Camera Correction.   // [121][120]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6217,8 +6220,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [120] : DONE : Letterboxing toggle no longer distorts.       // [120]
-          : NEXT : Red Boarder Feedback For Camera Correction.   // [120]
+    [121] : Preparing shader uniforms on CPU-side to give        // [121]
+          : us feedback in shader for how strongly               // [121]
+          : "pressed into the wall" the high level camera        // [121]
+          : is. DATE[ 2022_08_08 ]KANJICODER( 539AM )            // [121]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
