@@ -1367,13 +1367,13 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
                 out_f_c.z /= 4.0 ;                              // [106]
             };;                                                 // [106]
 
-            //:#_CAMERA_STRESS_FEEDBACK_#:---------------://    // [122]
-                                                                // [122]
-            #define c_w     d_camwall                           // [122]
-            #define e_lef ( u_0         + c_w[ x_0 ] - u_1 )    // [122]
-            #define e_top ( u_0         + c_w[ y_0 ] - u_1 )    // [122]
-            #define e_rig ( d_vpc[ x_1 ]- c_w[ x_1 ] + u_1 )    // [122]
-            #define e_bot ( d_vpc[ y_1 ]- c_w[ y_1 ] + u_1 )    // [122]
+            //:#_CAMERA_STRESS_FEEDBACK_#:---------------://    //      [122]
+                                                                //      [122]
+            #define c_w     d_camwall                           //      [122]
+            #define e_lef ( c_w[ x_0 ] )                        // [123][122]
+            #define e_top ( c_w[ y_0 ] )                        // [123][122]
+            #define e_rig ( c_w[ x_1 ] )                        // [123][122]
+            #define e_bot ( c_w[ y_1 ] )                        // [123][122]
 
                 /** @u_c_m@ : U32 d_camwall [MPV]        **/    // [123]
                 /** @f_c_m@ : F32 d_camwall [MPV]        **/    // [123]
@@ -1405,10 +1405,10 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
                 #define f_w_h ( f_vpc_wid_haf )
                 #define f_h_h ( f_vpc_hig_haf )
 
-                U32 u_lef =U32( f_lef * (f_w_h) );              // [123]
-                U32 u_top =U32( f_top * (f_w_h) );              // [123]
-                U32 u_rig =U32( f_rig * (f_h_h) );              // [123]
-                U32 u_bot =U32( f_bot * (f_h_h) );              // [123]
+                U32 u_lef =d_vpc[x_0]+U32(f_lef*(f_w_h))-u_1;   // [123]
+                U32 u_top =d_vpc[y_0]+U32(f_top*(f_w_h))-u_1;   // [123]
+                U32 u_rig =d_vpc[x_1]-U32(f_rig*(f_h_h))+u_1;   // [123]
+                U32 u_bot =d_vpc[y_1]-U32(f_bot*(f_h_h))+u_1;   // [123]
 
                 #undef  f_w_h
                 #undef  f_h_h
