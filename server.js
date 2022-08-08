@@ -1374,12 +1374,19 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
             #define e_rig ( d_vpc[ x_1 ]- c_w[ x_1 ] + u_1 )    // [122]
             #define e_bot ( d_vpc[ y_1 ]- c_w[ y_1 ] + u_1 )    // [122]
 
-                U32 u_c_m =( c_dut / u_2 ); //:@u_c_m@://       // [123]
-                U32 f_c_m =F32( u_c_m );    //:@f_c_m@://       // [123]
-                F32 f_lef =( F32(e_lef) / f_c_m );              // [123]
-                F32 f_top =( F32(e_top) / f_c_m );              // [123]
-                F32 f_rig =( F32(e_rig) / f_c_m );              // [123]
-                F32 f_bot =( F32(e_bot) / f_c_m );              // [123]
+                /** @u_c_m@ : U32 d_camwall [MPV]        **/     // [123]
+                /** @f_c_m@ : F32 d_camwall [MPV]        **/     // [123]
+                /** @f_lef@ : F32 Edge Thickness - LEFT  **/     // [123]
+                /** @f_top@ : F32 Edge Thickness - TOP   **/     // [123]
+                /** @f_rig@ : F32 Edge Thickness - RIGHT **/     // [123]
+                /** @f_bot@ : F32 Edge Thickness - BOTTOM**/     // [123]
+                                                                 // [123]
+                U32 u_c_m =( c_dut / u_2 );                      // [123]
+                F32 f_c_m =F32(   u_c_m  );                      // [123]
+                F32 f_lef =( F32(e_lef) / f_c_m );               // [123]
+                F32 f_top =( F32(e_top) / f_c_m );               // [123]
+                F32 f_rig =( F32(e_rig) / f_c_m );               // [123]
+                F32 f_bot =( F32(e_bot) / f_c_m );               // [123]
  
 
                                                                 // [122]
@@ -6406,7 +6413,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         Reason? To make it more OBVIOUS what I am looking at.    // [123]
                       
     @u_c_m@ : U32 - c_m , c_m == d_camwall MAX POSSIBLE VALUE    // [124]
-    @f_c_m@ : F32 - c_m , c_m == d_camwall MAX POSSIBLE VALUE    // [123]
+    @f_c_m@ : F32 - c_m , c_m == d_camwall MAX POSSIBLE VALUE    // [124]
+    @MPV@ / #MPV# / [MPV] :  Max Possible Value (Like:"m_i")     // [124]
                                                                
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
