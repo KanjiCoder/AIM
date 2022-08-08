@@ -6474,32 +6474,32 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
               
-          :---------------------------------------------------:
-    [124] : Edited shader code. VP1 Camera stress             :
-          : boundary markers move way too fucking             :
-          : fast and exceed the halfway point of              :
-          : the screen.                                       :
-          :                                                   :
-          : We are close, but the shader code is              :
-          : still [ WRONG / INCORRECT ].                      :
-          :                                                   :
-          : ------------------------------------------------- :
-          :                                                   :
-          : I cannot think straight. It is [12:38] PM.        :
-          : I got up at 10PM yesterday. That is...            :
-          : 14 hours of mostly coding with short breaks       :
-          : in-between. There is no way in hell I can         :
-          : make "10 videos per day".                         :
-          :                                                   :
-          : 1 video per day === 999 days to 999 videos.       :
-          : 999 days is very roughly 3 years...               :
-          :                                                   :
-          : I'd very much like to be faster than that...      :
-          : 100 videos per month is what?                     :
-          : 100 / 30 === 3.333 videos per day...              :
-          :                                                   :
-          : I think "4 videos per day" is managable.          :
-          :---------------------------------------------------:
+          :---------------------------------------------------:  // [124]
+    [124] : Edited shader code. VP1 Camera stress             :  // [124]
+          : boundary markers move way too fucking             :  // [124]
+          : fast and exceed the halfway point of              :  // [124]
+          : the screen.                                       :  // [124]
+          :                                                   :  // [124]
+          : We are close, but the shader code is              :  // [124]
+          : still [ WRONG / INCORRECT ].                      :  // [124]
+          :                                                   :  // [124]
+          : ------------------------------------------------- :  // [124]
+          :                                                   :  // [124]
+          : I cannot think straight. It is [12:38] PM.        :  // [124]
+          : I got up at 10PM yesterday. That is...            :  // [124]
+          : 14 hours of mostly coding with short breaks       :  // [124]
+          : in-between. There is no way in hell I can         :  // [124]
+          : make "10 videos per day".                         :  // [124]
+          :                                                   :  // [124]
+          : 1 video per day === 999 days to 999 videos.       :  // [124]
+          : 999 days is very roughly 3 years...               :  // [124]
+          :                                                   :  // [124]
+          : I'd very much like to be faster than that...      :  // [124]
+          : 100 videos per month is what?                     :  // [124]
+          : 100 / 30 === 3.333 videos per day...              :  // [124]
+          :                                                   :  // [124]
+          : I think "4 videos per day" is managable.          :  // [124]
+          :---------------------------------------------------:  // [124]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
