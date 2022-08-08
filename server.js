@@ -5133,6 +5133,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [116] : Low Level Panning Code Finished.                     // [117][116]
 
+    [117] : DONE : Added High Level Camera Zoom Function.        // [118][117]
+          : ---- :                                               // [118][117]
+          : NEXT : Dirty Flag When Toggle Letterboxing           // [118][117]
+          : NEXT : Fix bugs in camera code, currently we         // [118][117]
+          : ---- : are rendering out of bounds.                  // [118][117]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6134,11 +6140,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [117] : DONE : Added High Level Camera Zoom Function.        // [117]
-          : ---- :                                               // [117]
-          : NEXT : Dirty Flag When Toggle Letterboxing           // [117]
-          : NEXT : Fix bugs in camera code, currently we         // [117]
-          : ---- : are rendering out of bounds.                  // [117]
+    [118] : Misc Code In Lots Of Random Spots To Identify        // [118]
+          : why[ VP1 ]bounds correction code is not              // [118]
+          : working properly.                                    // [118]
+          : FOUND_PROBLEM : d_vp1 is UNSIGNED and thus the       // [118]
+          : [ vp1 < 0 ]check can never be true.                  // [118]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
