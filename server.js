@@ -17,7 +17,7 @@
     var   d_eci =( 1 );                                          // [109]
     var   d_eco =( 1 );                                          // [109]
 
-    const d_keymast_log_upp =( 0 );                              // [118]
+    const d_keymast_log_upp =( 0 ); /** Log The Up Key? **/      // [118]
 
 //:======================================:CONFIGURATION:[109]://
 //:SYSTEM_INDEX:[102]:=======================================://
@@ -1534,8 +1534,8 @@ if( /** __CAMERAH__ **/ notnode ){                               // [108]
     var d_camerah_dir =( 1 ); //:DirtyFlagInitallySet://         // [115]
                                                                  // [---]
     //: @FUCK_YOUR_GARBAGE_COLLECTOR@ ://                        // [---]
-    var d_camerah_org = F_ARR_I32( 4 , 0 , 0 , 0 , 0 );          // [118][111]
-    var d_camerah_vp1 = F_ARR_I32( 4 , 0 , 0 , 0 , 0 );          // [118]
+    var d_camerah_org = F_ARR_I32( 4 , 0,0,0,0 ); //:@SIGNED@:// // [118][111]
+    var d_camerah_vp1 = F_ARR_I32( 4 , 0,0,0,0 ); //:@SIGNED@:// // [118]
                                                                  // [---]
     var d_camerah ={ laxcoma:"[HACK]"                            // [108]
                                                                  // [108]
@@ -3839,10 +3839,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     PRIVATE_F_KEYMAST_UPP(                                       // [057] 
         i_evt_key                                                // [068] 
     ){                                                           // [057] 
-                                                                 // [057] 
-        if( d_keymast_log_upp >= 1 ){
+        if( d_keymast_log_upp >= 1 ){                            // [118]
             console.log( "[LOG_UPP]:" + i_evt_key );             // [118][068] 
-        };;
+        };;                                                      // [118]
     };;                                                          // [057] 
 
     const   F_KEYMAST_INI = function                 //:[057]://
@@ -6125,8 +6124,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                     : SIGNED[ vp1 ]value if we are to do         // [118]
                     : bounds checking.                           // [118]
                                                                  // [118]
-    @POINTER@       : Tagging reference types where I            // [118]
-                    : expect pointer-like behavior.              // [118]
+    @POINTER@ : Tagging reference types where I                  // [118]
+              : expect pointer-like behavior.                    // [118]
+                                                                 // [118]
+    @SIGNED@  : Tagging Variable As SIGNED (can be negative )    // [118]
                                                                
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
