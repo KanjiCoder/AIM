@@ -5390,6 +5390,17 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : the wrong location. But it is __CLOSE__              // [123][122]
           : to being CORRECT.                                    // [123][122]
 
+          :---:                                                  // [124][123]
+    [123] : 1 : d_camwall calculations are correct now.          // [124][123]
+          : 2 : d_camwall calcs in the correct location.         // [124][123]
+          : 3 : d_camwall code tints MONOCHROME RED in shader.   // [124][123]
+          :---:                                                  // [124][123]
+          : 4 : SHADER code is __NOT__ using d_camwall           // [124][123]
+          : . : values correctly. Specifically , shader          // [124][123]
+          : . : logic is mixing "frag coord" units and           // [124][123]
+          : . : "discrete plank units" together.                 // [124][123]
+          :---:                                                  // [124][123]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6463,17 +6474,32 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
               
-          :---:                                                  // [123]
-    [123] : 1 : d_camwall calculations are correct now.          // [123]
-          : 2 : d_camwall calcs in the correct location.         // [123]
-          : 3 : d_camwall code tints MONOCHROME RED in shader.   // [123]
-          :---:                                                  // [123]
-          : 4 : SHADER code is __NOT__ using d_camwall           // [123]
-          : . : values correctly. Specifically , shader          // [123]
-          : . : logic is mixing "frag coord" units and           // [123]
-          : . : "discrete plank units" together.                 // [123]
-          :---:                                                  // [123]
-
+          :---------------------------------------------------:
+    [124] : Edited shader code. VP1 Camera stress             :
+          : boundary markers move way too fucking             :
+          : fast and exceed the halfway point of              :
+          : the screen.                                       :
+          :                                                   :
+          : We are close, but the shader code is              :
+          : still [ WRONG / INCORRECT ].                      :
+          :                                                   :
+          : ------------------------------------------------- :
+          :                                                   :
+          : I cannot think straight. It is [12:38] PM.        :
+          : I got up at 10PM yesterday. That is...            :
+          : 14 hours of mostly coding with short breaks       :
+          : in-between. There is no way in hell I can         :
+          : make "10 videos per day".                         :
+          :                                                   :
+          : 1 video per day === 999 days to 999 videos.       :
+          : 999 days is very roughly 3 years...               :
+          :                                                   :
+          : I'd very much like to be faster than that...      :
+          : 100 videos per month is what?                     :
+          : 100 / 30 === 3.333 videos per day...              :
+          :                                                   :
+          : I think "4 videos per day" is managable.          :
+          :---------------------------------------------------:
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
