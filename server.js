@@ -17,6 +17,8 @@
     var   d_eci =( 1 );                                          // [109]
     var   d_eco =( 1 );                                          // [109]
 
+    const d_keymast_log_upp =( 0 );                              // [118]
+
 //:======================================:CONFIGURATION:[109]://
 //:SYSTEM_INDEX:[102]:=======================================://
 /** ******************************************************** *** // [102]
@@ -3820,13 +3822,15 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         };;                                                     // [104]
     };; //:[F_KEYMAST_DOW]:----------------------------:[057]://
 
-    const   F_KEYMAST_UPP = function                 //:[057]://
-    PRIVATE_F_KEYMAST_UPP(                           //:[057]://
-        i_evt_key                                    //:[068]://
-    ){                                               //:[057]://
-                                                     //:[057]://
-        console.log( i_evt_key );                    //:[068]://
-    };;                                              //:[057]://
+    const   F_KEYMAST_UPP = function                             // [057] 
+    PRIVATE_F_KEYMAST_UPP(                                       // [057] 
+        i_evt_key                                                // [068] 
+    ){                                                           // [057] 
+                                                                 // [057] 
+        if( d_keymast_log_upp >= 1 ){
+            console.log( "[LOG_UPP]:" + i_evt_key );             // [118][068] 
+        };;
+    };;                                                          // [057] 
 
     const   F_KEYMAST_INI = function                 //:[057]://
     PRIVATE_F_KEYMAST_INI(                           //:[057]://
