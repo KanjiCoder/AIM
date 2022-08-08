@@ -1377,6 +1377,8 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
                 U32 u_wal =( u_0 );
                 
                 if( d_camwall[ x_0 ] > u_0 ){                   // [122]
+
+                    u_wal =( u_1 ); 
                                                                 
                     if( u_fcx <= e_lef ){ //:@edg_lef@://                  
                                                                 
