@@ -1401,10 +1401,17 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
                     /                                           // [123]
                     f_2                                         // [123]
                 );;                                             // [123]
-                U32 u_lef =U32( f_lef * (f_vpc_wid_haf) );      // [123]
-                U32 u_top =U32( f_top * (f_vpc_wid_haf) );      // [123]
-                U32 u_rig =U32( f_rig * (f_vpc_hig_haf) );      // [123]
-                U32 u_bot =U32( f_bot * (f_vpc_hig_haf) );      // [123]
+
+                #define f_w_h ( f_vpc_wid_haf )
+                #define f_h_h ( f_vpc_hig_haf )
+
+                U32 u_lef =U32( f_lef * (f_w_h) );              // [123]
+                U32 u_top =U32( f_top * (f_w_h) );              // [123]
+                U32 u_rig =U32( f_rig * (f_h_h) );              // [123]
+                U32 u_bot =U32( f_bot * (f_h_h) );              // [123]
+
+                #undef  f_w_h
+                #undef  f_h_h
 
                                                                 // [122]
                 U32 u_wal =( u_0 );                             // [122]
