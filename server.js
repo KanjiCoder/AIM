@@ -5175,6 +5175,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : FOUND_PROBLEM : d_vp1 is UNSIGNED and thus the       // [119][118]
           : [ vp1 < 0 ]check can never be true.                  // [119][118]
 
+    [119] : DONE : Camera No Longer Renders Out Of Bounds.       // [120][119]
+          : NEXT : Larger Camera Corrections === Stronger        // [120][119]
+          :      : screen shaking or something...                // [120][119]
+          :      : ORRRR..... Larger and larger red              // [120][119]
+          :      : boarder around screen for how far the         // [120][119]
+          :      : camera was leaking off a given edge!!!        // [120][119]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6179,12 +6186,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [119] : DONE : Camera No Longer Renders Out Of Bounds.       // [119]
-          : NEXT : Larger Camera Corrections === Stronger        // [119]
-          :      : screen shaking or something...                // [119]
-          :      : ORRRR..... Larger and larger red              // [119]
-          :      : boarder around screen for how far the         // [119]
-          :      : camera was leaking off a given edge!!!        // [119]
+    [120] : DONE : Letterboxing toggle no longer distorts.       // [120]
+          : NEXT : Red Boarder Feedback For Camera Correction.   // [120]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
