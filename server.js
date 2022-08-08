@@ -1368,44 +1368,50 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 
             //:#_CAMERA_STRESS_FEEDBACK_#:---------------://    // [122]
 
-                #define c_w       d_camwall
-                #define edg_lef ( u_0         + c_w[ x_0 ] - u_1 )
-                #define edg_top ( u_0         + c_w[ y_0 ] - u_1 )
-                #define edg_rig ( d_vpc[ x_1 ]- c_w[ x_1 ] + u_1 )
-                #define edg_bot ( d_vpc[ y_1 ]- c_w[ y_1 ] + u_1 )
+            #define c_w     d_camwall
+            #define e_lef ( u_0         + c_w[ x_0 ] - u_1 )
+            #define e_top ( u_0         + c_w[ y_0 ] - u_1 )
+            #define e_rig ( d_vpc[ x_1 ]- c_w[ x_1 ] + u_1 )
+            #define e_bot ( d_vpc[ y_1 ]- c_w[ y_1 ] + u_1 )
 
-                U32 u_wal =( 0 );
+                U32 u_wal =( u_0 );
                 
                 if( d_camwall[ x_0 ] > u_0 ){                   // [122]
                                                                 
-                    if( u_fcx <= edg_lef ){                     
+                    if( u_fcx <= e_lef ){ //:@edg_lef@://                  
                                                                 
-                        u_wal =( 1 );                           
+                        u_wal =( u_1 );                           
                     };;                                         
                 };;                                             // [122]
                 if( d_camwall[ x_1 ] > u_0 ){                   // [122]
                                                                 
-                    if( u_fcx >= edg_rig ){                     
+                    if( u_fcx >= e_top ){ //:@edg_rig@://                       
                                                                 
-                        u_wal =( 1 );                           
+                        u_wal =( u_1 );                           
                     };;                                         
                 };;                                             // [122]
                 if( d_camwall[ y_0 ] > u_0 ){                   // [122]
                                                                 
-                    if( u_fcy <= edg_top ){                     
+                    if( u_fcy <= e_rig ){ //:@edg_top@://                       
                                                                 
-                        u_wal =( 1 );                           
+                        u_wal =( u_1 );                           
                     };;                                         
                                                                 
                 };;                                             // [122]
                 if( d_camwall[ y_1 ] > u_0 ){                   // [122]
                                                                 
-                    if( u_fcy >= edg_bot ){                     
+                    if( u_fcy >= e_bot ){ //:@edg_bot@://                       
                                                                 
-                        u_wal =( 1 );                           
+                        u_wal =( u_1 );                           
                     };;                                         
-                };;                                             // [122]
-            //:---------------:#_CAMERA_STRESS_FEEDBACK_#://        
+                };; 
+
+            #undef  c_w    //:---------------------------://    // [122]
+            #undef  e_lef  //:---------------------------://    // [122]
+            #undef  e_top  //:---------------------------://    // [122]
+            #undef  e_rig  //:---------------------------://    // [122]
+            #undef  e_bot  //:---------------------------://    // [122]
+            //:---------------:#_CAMERA_STRESS_FEEDBACK_#://    // [122]   
 
 
                                                                 // [099]
