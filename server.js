@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_123             :// // [123][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_124             :// // [124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -1373,6 +1373,15 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
             #define e_top ( u_0         + c_w[ y_0 ] - u_1 )    // [122]
             #define e_rig ( d_vpc[ x_1 ]- c_w[ x_1 ] + u_1 )    // [122]
             #define e_bot ( d_vpc[ y_1 ]- c_w[ y_1 ] + u_1 )    // [122]
+
+                U32 u_c_m =( c_dut / u_2 ); //:@u_c_m@://       // [123]
+                U32 f_c_m =F32( u_c_m );    //:@f_c_m@://       // [123]
+                F32 f_lef =( F32(e_lef) / f_c_m );              // [123]
+                F32 f_top =( F32(e_top) / f_c_m );              // [123]
+                F32 f_rig =( F32(e_rig) / f_c_m );              // [123]
+                F32 f_bot =( F32(e_bot) / f_c_m );              // [123]
+ 
+
                                                                 // [122]
                 U32 u_wal =( u_0 );                             // [122]
                                                                 // [122]
@@ -6396,6 +6405,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         pixels mono-chrome red based on their lumonosity.        // [123]
         Reason? To make it more OBVIOUS what I am looking at.    // [123]
                       
+    @u_c_m@ : U32 - c_m , c_m == d_camwall MAX POSSIBLE VALUE    // [124]
+    @f_c_m@ : F32 - c_m , c_m == d_camwall MAX POSSIBLE VALUE    // [123]
                                                                
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
