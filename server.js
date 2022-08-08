@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_121             :// // [121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_122             :// // [122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -1124,6 +1124,8 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
     //: TAG[fragment shaders|frag shaders | frag_shaders]://    // [093]
     //: TAG[shader-code | shader_code | shadercode      ]://    // [095]
 
+    //: TAG[fragshader5 | frag5 | fragmentshader5 ]      ://    // [122]
+
     #define F32 float      //: Shorthand Type == U_CASE  ://    // [089]
     #define U32 uint       //: Shorthand Type == U_CASE  ://    // [089]
     #define I32  int       //: Shorthand Type == U_CASE  ://    // [099]
@@ -1357,7 +1359,6 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
             ,   1.0                                             // [099]
             );;                                                 // [099]
 
-
             //: #_OUT_OF_BOUNDS_DIAGNOSIS_#://                  // [106]
             if( u_dsc.x > ( c_dum - u_1 )                       // [106]
             ||  u_dsc.y > ( c_dum - u_1 )                       // [106]
@@ -1366,6 +1367,31 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
                 out_f_c.y /= 4.0 ;                              // [106]
                 out_f_c.z /= 4.0 ;                              // [106]
             };;                                                 // [106]
+
+            //:#_CAMERA_STRESS_FEEDBACK_#:---------------://    // [122]
+
+            if( d_camwall[ x_0 ] > u_0 ){                       // [122]
+
+
+                
+            };;                                                 // [122]
+            if( d_camwall[ x_1 ] > u_0 ){                       // [122]
+
+
+
+            };;                                                 // [122]
+            if( d_camwall[ y_0 ] > u_0 ){                       // [122]
+
+
+    
+            };;                                                 // [122]
+            if( d_camwall[ y_1 ] > u_0 ){                       // [122]
+
+
+
+            };;                                                 // [122]
+            //:---------------:#_CAMERA_STRESS_FEEDBACK_#://        
+
 
                                                                 // [099]
         //:-----------------------:use_the_sample_point:[099]://// [099]
@@ -6214,6 +6240,14 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                 : camera is pressed into the "wall"              // [121]
                 : of the [ world / dum / renderable region ]     // [121]
                 : Used to give better feedback.                  // [121]
+
+    #_CAMERA_STRESS_FEEDBACK_# :                                 // [122]
+                                                                 // [122]
+        How "hard" is the camera pushed into the boundaries      // [122]
+        of the renderable region? The greater the value          // [122]
+        in[ d_camwall[ x_0 | x_1 | y_0 | y_1 ], the              // [122]
+        more firmly you are pressed into the respective          // [122]
+        sides.                                                   // [122]
                                                                
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
