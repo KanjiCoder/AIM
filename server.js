@@ -1368,26 +1368,43 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 
             //:#_CAMERA_STRESS_FEEDBACK_#:---------------://    // [122]
 
-            if( d_camwall[ x_0 ] > u_0 ){                       // [122]
+                #define c_w       d_camwall
+                #define edg_lef ( u_0         + c_w[ x_0 ] - u_1 )
+                #define edg_top ( u_0         + c_w[ y_0 ] - u_1 )
+                #define edg_rig ( d_vpc[ x_1 ]- c_w[ x_1 ] + u_1 )
+                #define edg_bot ( d_vpc[ y_1 ]- c_w[ y_1 ] + u_1 )
 
-
+                U32 u_wal =( 0 );
                 
-            };;                                                 // [122]
-            if( d_camwall[ x_1 ] > u_0 ){                       // [122]
-
-
-
-            };;                                                 // [122]
-            if( d_camwall[ y_0 ] > u_0 ){                       // [122]
-
-
-    
-            };;                                                 // [122]
-            if( d_camwall[ y_1 ] > u_0 ){                       // [122]
-
-
-
-            };;                                                 // [122]
+                if( d_camwall[ x_0 ] > u_0 ){                   // [122]
+                                                                
+                    if( u_fcx <= edg_lef ){                     
+                                                                
+                        u_wal =( 1 );                           
+                    };;                                         
+                };;                                             // [122]
+                if( d_camwall[ x_1 ] > u_0 ){                   // [122]
+                                                                
+                    if( u_fcx >= edg_rig ){                     
+                                                                
+                        u_wal =( 1 );                           
+                    };;                                         
+                };;                                             // [122]
+                if( d_camwall[ y_0 ] > u_0 ){                   // [122]
+                                                                
+                    if( u_fcy <= edg_top ){                     
+                                                                
+                        u_wal =( 1 );                           
+                    };;                                         
+                                                                
+                };;                                             // [122]
+                if( d_camwall[ y_1 ] > u_0 ){                   // [122]
+                                                                
+                    if( u_fcy >= edg_bot ){                     
+                                                                
+                        u_wal =( 1 );                           
+                    };;                                         
+                };;                                             // [122]
             //:---------------:#_CAMERA_STRESS_FEEDBACK_#://        
 
 
