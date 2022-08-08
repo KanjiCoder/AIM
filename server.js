@@ -1367,58 +1367,60 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
             };;                                                 // [106]
 
             //:#_CAMERA_STRESS_FEEDBACK_#:---------------://    // [122]
-
-            #define c_w     d_camwall
-            #define e_lef ( u_0         + c_w[ x_0 ] - u_1 )
-            #define e_top ( u_0         + c_w[ y_0 ] - u_1 )
-            #define e_rig ( d_vpc[ x_1 ]- c_w[ x_1 ] + u_1 )
-            #define e_bot ( d_vpc[ y_1 ]- c_w[ y_1 ] + u_1 )
-
-                U32 u_wal =( u_0 );
-                
+                                                                // [122]
+            #define c_w     d_camwall                           // [122]
+            #define e_lef ( u_0         + c_w[ x_0 ] - u_1 )    // [122]
+            #define e_top ( u_0         + c_w[ y_0 ] - u_1 )    // [122]
+            #define e_rig ( d_vpc[ x_1 ]- c_w[ x_1 ] + u_1 )    // [122]
+            #define e_bot ( d_vpc[ y_1 ]- c_w[ y_1 ] + u_1 )    // [122]
+                                                                // [122]
+                U32 u_wal =( u_0 );                             // [122]
+                                                                // [122]
                 if( d_camwall[ x_0 ] > u_0 ){                   // [122]
-
-                    u_wal =( u_1 ); 
-                                                                
-                    if( u_fcx <= e_lef ){ //:@edg_lef@://                  
-                                                                
-                        u_wal =( u_1 );                           
-                    };;                                         
+                                                                // [122]
+                    u_wal =( u_1 );                             // [122]
+                                                                // [122]
+                    if( u_fcx <= e_lef ){ //:@edg_lef@://       // [122]
+                                                                // [122]
+                        u_wal =( u_1 );                         // [122]
+                    };;                                         // [122]
                 };;                                             // [122]
                 if( d_camwall[ x_1 ] > u_0 ){                   // [122]
-                                                                
-                    if( u_fcx >= e_top ){ //:@edg_rig@://                       
-                                                                
-                        u_wal =( u_1 );                           
-                    };;                                         
+                                                                // [122]
+                    if( u_fcx >= e_top ){ //:@edg_rig@://       // [122]
+                                                                // [122]
+                        u_wal =( u_1 );                         // [122]
+                    };;                                         // [122]
                 };;                                             // [122]
                 if( d_camwall[ y_0 ] > u_0 ){                   // [122]
-                                                                
-                    if( u_fcy <= e_rig ){ //:@edg_top@://                       
-                                                                
-                        u_wal =( u_1 );                           
-                    };;                                         
-                                                                
+                                                                // [122]
+                    if( u_fcy <= e_rig ){ //:@edg_top@://       // [122]
+                                                                // [122]
+                        u_wal =( u_1 );                         // [122]
+                    };;                                         // [122]
+                                                                // [122]
                 };;                                             // [122]
                 if( d_camwall[ y_1 ] > u_0 ){                   // [122]
-                                                                
-                    if( u_fcy >= e_bot ){ //:@edg_bot@://                       
-                                                                
-                        u_wal =( u_1 );                           
-                    };;                                         
-                };; 
-
-                if( u_wal >= u_1 ){
-
-                    out_f_c.r += 0.20 ; //:ADD_RED://
-                };;
-
+                                                                // [122]
+                    if( u_fcy >= e_bot ){ //:@edg_bot@://       // [122]
+                                                                // [122]
+                        u_wal =( u_1 );                         // [122]
+                    };;                                         // [122]
+                };;                                             // [122]
+                                                                // [122]
+                if( u_wal >= u_1 ){                             // [122]
+                                                                // [122]
+                    out_f_c.r += 0.20 ; //:ADD_RED  ://         // [122]
+                    out_f_c.g -= 0.20 ; //:SUB_GREEN://         // [122]
+                    out_f_c.b -= 0.20 ; //:SUB_BLUE ://         // [122]
+                };;                                             // [122]
+                                                                // [122]
             #undef  c_w    //:---------------------------://    // [122]
             #undef  e_lef  //:---------------------------://    // [122]
             #undef  e_top  //:---------------------------://    // [122]
             #undef  e_rig  //:---------------------------://    // [122]
             #undef  e_bot  //:---------------------------://    // [122]
-            //:---------------:#_CAMERA_STRESS_FEEDBACK_#://    // [122]   
+            //:---------------:#_CAMERA_STRESS_FEEDBACK_#://    // [122]
 
 
                                                                 // [099]
@@ -5297,6 +5299,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [120] : DONE : Letterboxing toggle no longer distorts.       // [121][120]
           : NEXT : Red Boarder Feedback For Camera Correction.   // [121][120]
 
+    [121] : Preparing shader uniforms on CPU-side to give        // [122][121]
+          : us feedback in shader for how strongly               // [122][121]
+          : "pressed into the wall" the high level camera        // [122][121]
+          : is. DATE[ 2022_08_08 ]KANJICODER( 539AM )            // [122][121]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6319,11 +6326,14 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
+                                                                 
+    [122] : Camera Out Of Bound Feedback is PARTIALLY            // [122]
+          : written on both[ CPU ]and[ GPU ]side.                // [122]
+          :                                                      // [122]
+          : The[ CPU ]side code is INCORRECT and in              // [122]
+          : the wrong location. But it is __CLOSE__              // [122]
+          : to being CORRECT.                                    // [122]
 
-    [121] : Preparing shader uniforms on CPU-side to give        // [121]
-          : us feedback in shader for how strongly               // [121]
-          : "pressed into the wall" the high level camera        // [121]
-          : is. DATE[ 2022_08_08 ]KANJICODER( 539AM )            // [121]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
