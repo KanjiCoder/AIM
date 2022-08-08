@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_118             :// // [118][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_119             :// // [119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -2782,7 +2782,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             n_x = cam.camdu_x + ( i_pax * pan_fac );             // [113]
             n_y = cam.camdu_y + ( i_pay * pan_fac );             // [113]
                                                                  // [113]
-            if( n_x < b_0 || n_x > b_1 ){  //:#_OOB_CAM_#://     // [119][113]
+            if( n_x < b_0 || n_x > b_1 ){  //:#_OOB_CAM_#://     // [!#!][119][118][113]
                                                                  // [113]
                 if( n_x < b_0 ){ cam.nopan_x =( 0 - 1 ); };      // [113]
                 if( n_x > b_1 ){ cam.nopan_x =( 0 + 1 ); };      // [113]
@@ -2790,7 +2790,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                 cam.nopan_x =(  0  );                            // [113]
                 cam.camdu_x =( n_x );                            // [113]
             };;                                                  // [113]
-            if( n_y < b_0 || n_y > b_1 ){  //:#_OOB_CAM_#://     // [119][113]
+            if( n_y < b_0 || n_y > b_1 ){  //:#_OOB_CAM_#://     // [!#!][119][118][113]
                                                                  // [113]
                 if( n_y < b_0 ){ cam.nopan_y =( 0 - 1 ); };      // [113]
                 if( n_y > b_1 ){ cam.nopan_y =( 0 + 1 ); };      // [113]
@@ -3112,8 +3112,8 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             let  b_1 =(c_dum-1); //: @b_1@ : INC_BOU_MAX ://     //      [112]
             let  duo =( 0-666 ); //: @duo@ : @D_U@Overflo://     //      [112]
                                                                  //      [112]
-            if( new_vp1[ x_0 ] < b_0                             //      [112]
-            &&  new_vp1[ x_1 ] > b_1                             //      [112]
+            if( new_vp1[ x_0 ] < b_0                             // [119][112]
+            &&  new_vp1[ x_1 ] > b_1                             // [119][112]
             ){  ERR("[IM_FUCKING_POSSIBLE:AXIS_X]"); };          //      [112]
             if( new_vp1[ y_0 ] < b_0                             // [119][112]
             &&  new_vp1[ y_1 ] > b_1                             // [119][112]
@@ -5162,6 +5162,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : NEXT : Fix bugs in camera code, currently we         // [118][117]
           : ---- : are rendering out of bounds.                  // [118][117]
 
+    [118] : Misc Code In Lots Of Random Spots To Identify        // [119][118]
+          : why[ VP1 ]bounds correction code is not              // [119][118]
+          : working properly.                                    // [119][118]
+          : FOUND_PROBLEM : d_vp1 is UNSIGNED and thus the       // [119][118]
+          : [ vp1 < 0 ]check can never be true.                  // [119][118]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6157,17 +6163,21 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
               : expect pointer-like behavior.                    // [118]
                                                                  // [118]
     @SIGNED@  : Tagging Variable As SIGNED (can be negative )    // [118]
+                                                                 
+    [!#!] : Denotes a delta where I put the                      // [119]
+          : WRONG NUMBER ( [###] ) in a previous tutorial.       // [119]
                                                                
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
 
-    [118] : Misc Code In Lots Of Random Spots To Identify        // [118]
-          : why[ VP1 ]bounds correction code is not              // [118]
-          : working properly.                                    // [118]
-          : FOUND_PROBLEM : d_vp1 is UNSIGNED and thus the       // [118]
-          : [ vp1 < 0 ]check can never be true.                  // [118]
+    [119] : DONE : Camera No Longer Renders Out Of Bounds.       // [119]
+          : NEXT : Larger Camera Corrections === Stronger        // [119]
+          :      : screen shaking or something...                // [119]
+          :      : ORRRR..... Larger and larger red              // [119]
+          :      : boarder around screen for how far the         // [119]
+          :      : camera was leaking off a given edge!!!        // [119]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
