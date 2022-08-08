@@ -5329,6 +5329,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : "pressed into the wall" the high level camera        // [122][121]
           : is. DATE[ 2022_08_08 ]KANJICODER( 539AM )            // [122][121]
 
+    [122] : Camera Out Of Bound Feedback is PARTIALLY            // [123][122]
+          : written on both[ CPU ]and[ GPU ]side.                // [123][122]
+          :                                                      // [123][122]
+          : The[ CPU ]side code is INCORRECT and in              // [123][122]
+          : the wrong location. But it is __CLOSE__              // [123][122]
+          : to being CORRECT.                                    // [123][122]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6394,13 +6401,17 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
-                                                                 
-    [122] : Camera Out Of Bound Feedback is PARTIALLY            // [122]
-          : written on both[ CPU ]and[ GPU ]side.                // [122]
-          :                                                      // [122]
-          : The[ CPU ]side code is INCORRECT and in              // [122]
-          : the wrong location. But it is __CLOSE__              // [122]
-          : to being CORRECT.                                    // [122]
+              
+          :---:                                                  // [123]
+    [123] : 1 : d_camwall calculations are correct now.          // [123]
+          : 2 : d_camwall calcs in the correct location.         // [123]
+          : 3 : d_camwall code tints MONOCHROME RED in shader.   // [123]
+          :---:                                                  // [123]
+          : 4 : SHADER code is __NOT__ using d_camwall           // [123]
+          : . : values correctly. Specifically , shader          // [123]
+          : . : logic is mixing "frag coord" units and           // [123]
+          : . : "discrete plank units" together.                 // [123]
+          :---:                                                  // [123]
 
 
 *** ******************************************************** **/
