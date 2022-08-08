@@ -2309,18 +2309,19 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     //:     :( Rendering Loop Calls Are Her Job Too.    )://    
     //:--------------------------------------------------:// 
 
-    const   F_ARTGIRL_UNI_PUT = function
-    PRIVATE_F_ARTGIRL_UNI_PUT(
-
-        /** VOID **/
-    ){
-
-        wgl.uniform1ui(  d_tik_loc , d_tik   );                 // [121][091]
-        wgl.uniform4uiv( d_vpc_loc , d_vpc   );                 // [121][091]
-        wgl.uniform4uiv( d_vp0_loc , d_vp0   );                 // [121][091]
-        wgl.uniform4uiv( d_vp1_loc , d_vp1   );                 // [121][091]
-
-    };;
+    const   F_ARTGIRL_UNI_PUT = function                        // [121]
+    PRIVATE_F_ARTGIRL_UNI_PUT(                                  // [121]
+                                                                // [121]
+        /** VOID **/                                            // [121]
+    ){                                                          // [121]
+        let wgl = d_artgirl.wgl ;                               // [121]
+                                                                // [121]
+        wgl.uniform1ui(      d_tik_loc , d_tik     );           // [121][091]
+        wgl.uniform4uiv(     d_vpc_loc , d_vpc     );           // [121][091]
+        wgl.uniform4uiv(     d_vp0_loc , d_vp0     );           // [121][091]
+        wgl.uniform4uiv(     d_vp1_loc , d_vp1     );           // [121][091]
+        wgl.uniform4uiv( d_camwall_loc , d_camwall );           // [121]
+    };;                                                         // [121]
 
     const   F_ARTGIRL_RPL = function                            // [068] 
     PRIVATE_F_ARTGIRL_RPL( //:Render Pipeline Load @RPL@ ://    // [068] 
