@@ -6464,7 +6464,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     @u_c_m@ : U32 - c_m , c_m == d_camwall MAX POSSIBLE VALUE    // [124]
     @f_c_m@ : F32 - c_m , c_m == d_camwall MAX POSSIBLE VALUE    // [124]
     @MPV@ / #MPV# / [MPV] :  Max Possible Value (Like:"m_i")     // [124]
-
+                                                                 // [124]
     #_NOW_MAG_# : The variables here are now magnitudes rather   // [124]
                 : than edge boundary markers as they were        // [124]
                 : in video #122.                                 // [124]
