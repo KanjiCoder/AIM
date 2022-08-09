@@ -5474,6 +5474,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :      : trying to navigate camera into position.   :  // [125][124]
           :---------------------------------------------------:  // [125][124]
 
+    [125] : Stubbing In[ SEXYCAM ]Hotkey System.                 // [126][125]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -6628,7 +6630,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
               
-    [125] : Stubbing In[ SEXYCAM ]Hotkey System.                 // [125]
+    [125] : Added : F_KEYMAST_PAD_NUM                            // [126]
+          : Added : F_SEXYCAM_PAD_NUM                            // [126]
+          : NEXT  : Body/Logic of F_SEXYCAM_PAD_NUM              // [126]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
