@@ -6728,6 +6728,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
               
     [127] : 1 : Added Lookup Table Mapping Numkeys To            // [127]
           :   : Hotel Index.                                     // [127]
+          : 2 : Derived Hotel Cell X & Y In SEXYCAM_PAD_NUM      // [127]
           
 
 *** ******************************************************** **/
