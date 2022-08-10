@@ -1604,7 +1604,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
                                 out_f_c.g =( lum );             // [134][124]
                                 out_f_c.b =( lum );             // [134][124]
                             };;                                 // [134][124]
-                        #endif
+                        #endif                                  // [134]
                                                                 // [---][123]
                     //:------------:#_MONOCHROME_STRESS_#://    // [---][123]
                                                                 // [---]
@@ -5948,6 +5948,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : high level camera use the default                    // [133][132]
           : "scribing" mode. ( cir_cum )                         // [133][132]
 
+    [133] : Outscribing when zerobasis is "THE_DUM"(c_dum)       // [134][133]
+          : no longer causes an out of bounds camera.            // [134][133]
+          : The camera will get SQUASHED, but better to          // [134][133]
+          : squash the camera than to get ZERO FEEDBACK          // [134][133]
+          : when zooming in and out.                             // [134][133]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7221,11 +7227,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [133] : Outscribing when zerobasis is "THE_DUM"(c_dum)       // [133]
-          : no longer causes an out of bounds camera.            // [133]
-          : The camera will get SQUASHED, but better to          // [133]
-          : squash the camera than to get ZERO FEEDBACK          // [133]
-          : when zooming in and out.                             // [133]
+    [134] : Fixed bug in camera stress. We were using            // [134]
+          : VP1 when it should have been VP0.                    // [134]
+          :                                                      // [134]
+          : NEXT : Numpad ENTER to cycle[ cir_cum ]modes.        // [134]
+          : NEXT : Numpad ZERO  to "zoom extents"                // [134]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
