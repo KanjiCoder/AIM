@@ -1055,7 +1055,7 @@ if( yesnode ){ //:-------------------------------------------://
     const c_sexycam_act_cir_nex =( 3 ); //:cir_cum:NEXT   ://    // [135]
     const c_sexycam_act_npa_num =( 4 ); //: #_NPA_NUM_#   ://    // [135]
 
-    const                                                        // [137]
+    const laxcoma_hak_2022_08_10                                 // [137]
     ,   c_sexycam_npa_zoomext ="[FIX:c_sexycam_act_zoomext]"     // [137]
     ,   c_sexycam_npa_cir_def ="[FIX:c_sexycam_act_cir_def]"     // [137]
     ,   c_sexycam_npa_cir_nex ="[FIX:c_sexycam_act_cir_nex]"     // [137]
