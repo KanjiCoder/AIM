@@ -5910,6 +5910,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :      : inscribed camera mode.                        // [132][131]
           : NEXT : Find bug in camera when hitting numpad 0      // [132][131]
 
+    [132] : The decimal key on number pad now makes              // [133][132]
+          : high level camera use the default                    // [133][132]
+          : "scribing" mode. ( cir_cum )                         // [133][132]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7149,9 +7153,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [132] : The decimal key on number pad now makes              // [132]
-          : high level camera use the default                    // [132]
-          : "scribing" mode. ( cir_cum )                         // [132]
+    [133] : Outscribing when zerobasis is "THE_DUM"(c_dum)       // [133]
+          : no longer causes an out of bounds camera.            // [133]
+          : The camera will get SQUASHED, but better to          // [133]
+          : squash the camera than to get ZERO FEEDBACK          // [133]
+          : when zooming in and out.                             // [133]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
