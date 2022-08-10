@@ -7054,6 +7054,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
             
     [131] : Numpad zero cycles through[ cir_cum ]modes           // [131]
           : of high level camera ( d_camerah )                   // [131]
+          :                                                      // [131]
+          : NEXT : "." key on numpad to default to               // [131]
+          :      : inscribed camera mode.                        // [131]
+          : NEXT : Find bug in camera when hitting numpad 0      // [131]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
