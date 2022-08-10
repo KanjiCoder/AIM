@@ -5884,6 +5884,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : keys.... Figure that out sometime, it looks          // [131][130]
           : horrible. DATE[ 2022_08_09 ]TIME[10:20]AM            // [131][130]
 
+    [131] : Numpad zero cycles through[ cir_cum ]modes           // [132][131]
+          : of high level camera ( d_camerah )                   // [132][131]
+          :                                                      // [132][131]
+          : NEXT : "." key on numpad to default to               // [132][131]
+          :      : inscribed camera mode.                        // [132][131]
+          : NEXT : Find bug in camera when hitting numpad 0      // [132][131]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7090,12 +7097,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [131] : Numpad zero cycles through[ cir_cum ]modes           // [131]
-          : of high level camera ( d_camerah )                   // [131]
-          :                                                      // [131]
-          : NEXT : "." key on numpad to default to               // [131]
-          :      : inscribed camera mode.                        // [131]
-          : NEXT : Find bug in camera when hitting numpad 0      // [131]
+    [132] : The decimal key on number pad now makes              // [132]
+          : high level camera use the default                    // [132]
+          : "scribing" mode. ( cir_cum )                         // [132]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
