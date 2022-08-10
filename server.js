@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_135             :// // [135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_136             :// // [136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -6109,6 +6109,17 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : NEXT : Numpad ENTER to cycle[ cir_cum ]modes.        // [135][134]
           : NEXT : Numpad ZERO  to "zoom extents"                // [135][134]
 
+          :---------------------------------------------------:  // [136][135]
+    [135] : Jumbled things around to get ready to write       :  // [136][135]
+          : the "zoom extents" behavior for "sexycam"         :  // [136][135]
+          :                                                   :  // [136][135]
+          : Turns out the refactor is not as trivial as       :  // [136][135]
+          : I expected.                                       :  // [136][135]
+          :                                                   :  // [136][135]
+          : ADDED : number pad action constants.              :  // [136][135]
+          : ADDED : key set behaviors (npa) in d_sexycam      :  // [136][135]
+          :       : struct.                                   :  // [136][135]
+          :---------------------------------------------------:  // [136][135]
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -7435,17 +7446,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-          :---------------------------------------------------:
-    [135] : Jumbled things around to get ready to write       :
-          : the "zoom extents" behavior for "sexycam"         :
-          :                                                   :
-          : Turns out the refactor is not as trivial as       :
-          : I expected.                                       :
-          :                                                   :
-          : ADDED : number pad action constants.              :
-          : ADDED : key set behaviors (npa) in d_sexycam      :
-          :       : struct.                                   :
-          :---------------------------------------------------:
+    [136] : Zoom Extents now happens when you press              // [136]
+          : the zero key on the number pad.                      // [136]
+                                                                 // [136]
+          : NEXT : sexycam action bindings maybe?                // [136]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
