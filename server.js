@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_136             :// // [136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_137             :// // [137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -1054,7 +1054,14 @@ if( yesnode ){ //:-------------------------------------------://
     const c_sexycam_act_cir_def =( 2 ); //:cir_cum:DEFAULT://    // [135]
     const c_sexycam_act_cir_nex =( 3 ); //:cir_cum:NEXT   ://    // [135]
     const c_sexycam_act_npa_num =( 4 ); //: #_NPA_NUM_#   ://    // [135]
-    
+
+    const                                                        // [137]
+    ,   c_sexycam_npa_zoomext ="[FIX:c_sexycam_act_zoomext]"     // [137]
+    ,   c_sexycam_npa_cir_def ="[FIX:c_sexycam_act_cir_def]"     // [137]
+    ,   c_sexycam_npa_cir_nex ="[FIX:c_sexycam_act_cir_nex]"     // [137]
+    ,   c_sexycam_npa_npa_num ="[FIX:c_sexycam_act_npa_num]"     // [137]
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [137]
+
 //: __ASERVER__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [103]
                                                                          
     /** NOTHING_HERE_YET **/                                     // [103]
@@ -3924,11 +3931,12 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 
     };; //:ENDFUNC[ F_SEXYCAN_NEXTEXT ]::::::::::::::::::://     // [135]
 
-    const   F_SEXYCAM_NPE = function                             // [135]
-    PRIVATE_F_SEXYCAM_NPE( //:@NPE@:Num_Pad_Enterkey://          // [135]
-                                                                 // [135]
-        /** VOID **/                                             // [135]
-    ){                                                           // [135]
+    const   F_SEXYCAM_CIR_NEX = function                         // [137][135]
+    PRIVATE_F_SEXYCAM_CIR_NEX(                                   // [137][135]
+                                                                 //      [135]
+        /** VOID **/                                             //      [135]
+    ){                                                           //      [135]
+        //:[ F_SEXYCAM_NPE ]AKA[ F_SEXYCAM_NPE ]://              // [137]
                                                                  // [---]
             LOG( "[OLD:cir_cum]" , d_camerah.cir_cum );          // [131]
                                                                  // [131]
@@ -3960,6 +3968,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             //: "zoom extents" button.                   ://     // [135]
             //:::::::::::::::::::::::::::::::::::::::::::://     // [135]
                                                                  // [---]
+            let  cir_def = c_sexycam_act_cir_def ;               // [137]
+            ASS( cir_def === d_sexycam.npa_dot  );               // [137]
+                                                                 // [---]
             d_camerah.cir_cum =( c_camerah_cir_cum_def    );     // [132]
             d_camerah_dir =( 1 /**SET_DIRTY_FLAG_TRUE**/  );     // [132]
         };;                                                      // [132]
@@ -3975,11 +3986,15 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                  // [---]
         if( i_pad_num === 0 ){                                   // [131]
                                                                  // [---]
+            let  zoomext = c_sexycam_act_zoomext ;               // [137]
+            ASS( zoomext === d_sexycam.npa_000  );               // [137]
             F_SEXYCAM_ZOOMEXT( );                                // [135]
                                                                  // [---]
         }else                                                    // [131]
         if( i_pad_num >= 1 && i_pad_num <= 9 ){                  // [127]
                                                                  // [127]
+            let npa_num = c_sexycam_act_npa_num ;                // [137]
+            ASS(npa_num === d_sexycam.npa_num  );                // [137]
             F_SEXYCAM_NEXTEXT( i_pad_num );                      // [135]
         };;                                                      // [127]
                                                                  // [---]
@@ -4555,7 +4570,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                 // [135]
         if( oh_my_god_it_is_number_pad_enter_key >= 1 ){        // [135]
                                                                 // [135]
-            F_SEXYCAM_NPE();                                    // [135]
+            let cir_nex = c_sexycam_act_cir_nex ;               // [137]
+            ASS(cir_nex === d_sexycam.npa_ent  );               // [137]
+            F_SEXYCAM_CIR_NEX();                                // [135]
                                                                 // [135]
         }else                                                   // [135]
         if( oh_my_god_its_the_arrow_keys ){                     //      [114]
@@ -6121,6 +6138,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :       : struct.                                   :  // [136][135]
           :---------------------------------------------------:  // [136][135]
 
+    [136] : Zoom Extents now happens when you press              // [137][136]
+          : the zero key on the number pad.                      // [137][136]
+                                                                 // [137][136]
+          : NEXT : sexycam action bindings maybe?                // [137][136]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7441,15 +7463,17 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         the[ .but_num ]and[ .but_not ]variables                  // [136]
         to achieve this in[ ZOOMEXT ]function.                   // [136]
 
+    @NPE@:Num_Pad_Enterkey                                       // [137]
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [136] : Zoom Extents now happens when you press              // [136]
-          : the zero key on the number pad.                      // [136]
-                                                                 // [136]
-          : NEXT : sexycam action bindings maybe?                // [136]
+    [137] : Key bindings are not actually changeable, but        // [137]
+          : now using asserts to help "self document" the        // [137]
+          : code and make[ sexycam ]function calls easier        // [137]
+          : to find.                                             // [137]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
