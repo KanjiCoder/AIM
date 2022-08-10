@@ -6079,6 +6079,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : squash the camera than to get ZERO FEEDBACK          // [134][133]
           : when zooming in and out.                             // [134][133]
 
+    [134] : Fixed bug in camera stress. We were using            // [135][134]
+          : VP1 when it should have been VP0.                    // [135][134]
+          :                                                      // [135][134]
+          : NEXT : Numpad ENTER to cycle[ cir_cum ]modes.        // [135][134]
+          : NEXT : Numpad ZERO  to "zoom extents"                // [135][134]
+
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7384,17 +7391,30 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         This is why "npa_num" is set to:                         // [135]
         "c_sexycam_act_npa_num" which seems like                 // [135]
         a cylical self-reference.                                // [135]
+                                                                 // [135]
+    #_SEXYCAM_MWM_# :                                            // [135]
+                                                                 // [135]
+        SexyCam Monkey_Wrench_Macros                             // [135]
+                                                                 // [135]
+        These tokens should be member variables                  // [135]
+        not global top level namespaced variables.               // [135]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [134] : Fixed bug in camera stress. We were using            // [134]
-          : VP1 when it should have been VP0.                    // [134]
-          :                                                      // [134]
-          : NEXT : Numpad ENTER to cycle[ cir_cum ]modes.        // [134]
-          : NEXT : Numpad ZERO  to "zoom extents"                // [134]
+          :---------------------------------------------------:
+    [135] : Jumbled things around to get ready to write       :
+          : the "zoom extents" behavior for "sexycam"         :
+          :                                                   :
+          : Turns out the refactor is not as trivial as       :
+          : I expected.                                       :
+          :                                                   :
+          : ADDED : number pad action constants.              :
+          : ADDED : key set behaviors (npa) in d_sexycam      :
+          :       : struct.                                   :
+          :---------------------------------------------------:
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
