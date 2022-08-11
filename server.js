@@ -7674,6 +7674,16 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                                                                  // [146]
     #PT_OOB_OF_CANVAS# : Point is out of bounds of the           // [146]
                        : HTML5 Canvas.                           // [146]
+                                                                 // [146]
+    @DO_CALC_FORWARD_WITH@ :                                     // [146]
+    @DO_CALC_BAKWARD_WITH@ :                                     // [146]
+                                                                 // [146]
+        When mapping from one coordinate space to another,       // [146]
+        we basically do the math "forward" with one variable     // [146]
+        and then "undo" the math by working backwards , but      // [146]
+        with a different variable. I don't know if that makes    // [146]
+        any sense, but it helped me understand what I was        // [146]
+        doing. -KanjiCoder DATE[2022_08_11]                      // [146]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
