@@ -4869,7 +4869,7 @@ if( yesnode ){
         //:----------------:Create_Table_Statements:[041]://    
     };;                                                         
 
-require( "http" ).createServer( function( i_ask , i_giv ){
+require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
 
     const   sob ={  //:----------------------------------://    
         m_ask : "[nil][!s!:m_ask]"  //: < < < < < < [042]://    
@@ -4879,25 +4879,25 @@ require( "http" ).createServer( function( i_ask , i_giv ){
     ,   m_seg : "[nil][!s!:m_seg]"  //: < < < < < < [042]://    
     };; //:----------------------------------------------://    
     //:load_state_object_bundle:-------------------------://
-                                                         ;;;
-    sob.m_ask = i_ask                                    ;;;
-    sob.m_giv = i_giv                                    ;;;
-    sob.m_url = l_url.parse( i_ask.url , 1 ).pathname    ;;;
-    sob.m_pam = l_qs .parse( i_ask.url , 1 ).query       ;;;
-    sob.m_seg = [ "URLPATH_SEGMENTS_NOT_LOADED]" ]       ;;;
-                                                         ;;;
+                                                         ;;;     // [139][019]
+    sob.m_ask = i_ask                                    ;;;     // [139][019]
+    sob.m_giv = i_giv                                    ;;;     // [139][019]
+    sob.m_url = l_url.parse( i_ask.url , 1 ).pathname    ;;;     // [139][019]
+    sob.m_pam = l_qs .parse( i_ask.url , 1 ).query       ;;;     // [139][019]
+    sob.m_seg = [ "URLPATH_SEGMENTS_NOT_LOADED]" ]       ;;;     // [139][019]
+                                                         ;;;     // [139][019]
     //:-------------------------:load_state_object_bundle://
     //:load_state_object_bundle:[043]:-------------------://
 
-    sob.m_url =( sob.m_url.toUpperCase() );      //!#MRI#!//
+    sob.m_url =( sob.m_url.toUpperCase() );      //!#MRI#!//     // [139][019]
 	sob.m_seg =( sob.m_url.split( "/" ).filter( n => n ) );
 
     //:-------------------:load_state_object_bundle:[043]://
  
-    if( sob.m_url == "/HELLO" ){
-
-        sob.m_giv.end( "WORLD" );
-    }else
+    if( sob.m_url == "/HELLO" ){                                 // [139][024]
+                                                                 // [139][024]
+        sob.m_giv.end( "WORLD" );                                // [139][024]
+    }else                                                        // [139][024]
     if( sob.m_url == "/ENV" ){                       //:[058]://
                                                      //:[058]://
         var str_env = F_DTS( process.env );          //:[058]://
@@ -5025,7 +5025,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){
         sob.m_giv.end( d_webpage , "utf-8" );
     };;
 
-}).listen(process.env.PORT);
+}).listen(process.env.PORT); //:ENDFUNC[ SERVER ]::::::::://     // [139][017]
 
 };;
 //:================================:INIT_SERVER_BACKEND:[035]://
@@ -6161,6 +6161,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : now using asserts to help "self document" the        // [138][137]
           : code and make[ sexycam ]function calls easier        // [138][137]
           : to find.                                             // [138][137]
+
+    [138] : Removed Scrollbars , Padding , Margin                // [139][138]
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -7489,7 +7491,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [138] : Removed Scrollbars , Padding , Margin                // [138]
+    [139] : Retro-active commentary for vids 17,19,24            // [139] 
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
