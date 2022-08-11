@@ -4813,12 +4813,15 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             o_dux =( c_dum /**OUT_OF_BOUNDS**/ );                // [146]
         }else{                                                   // [146]
             //: @f_x@ : Float/Percentage - X axis :------://     // [146]
+
+           
+
                                                                  // [146]
             //: @DO_CALC_FORWARD_WITH@[ vp0 ] ://                // [146]
                                                                  // [146]
-                var vp0_wid =( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );    // [146]
-                var vp0_pos =( i_p_x       -d_vp0[ x_0 ]   );    // [146]
-                var f_x =( vp0_pos / ( vp0_wid - 1 )       );    // [146]
+                var vp0_wid =( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1)+0.0; // [148][146]
+                var vp0_pos =( i_p_x       -d_vp0[ x_0 ]  )+0.0; // [148][146]
+                var f_x =( vp0_pos / ( vp0_wid - 1 )      )+0.0; // [148][146]
                                                                  // [146]
             //: @DO_CALC_BAKWARD_WITH@[ vp1 ] ://                // [146]
                                                                  // [146]
