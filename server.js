@@ -4829,6 +4829,10 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                 var vp1_pos =( ( vp1_rng ) * f_x       )+0.0;    // [148][146]
                 var     dux =( d_vp1[ x_0 ] + vp1_pos      )+0.0;    // [148][148][146]
                       o_dux =Math.floor( dux );                  // [148][146]
+
+
+            ASS( o_dux >= d_vp0[ x_0 ] , "[DUX:X_0]" );
+            ASS( o_dux <= d_vp0[ x_1 ] , "[DUX:X_1]" );
         };;                                                      // [146]
                                                                  // [---]
         return( o_dux );                                         // [145]
