@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_137             :// // [137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_138             :// // [138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -889,6 +889,8 @@ if( yesnode ){ //:-------------------------------------------://
     //:::::::::::::::::::::::::::::::::::::::::::::::::::://     // [138]
     //: TAG[ <html> | <HTML> | </html> | </HTML> ]       ://     // [138]
     //: TAG[ <body> | <BODY> | </body> | </BODY> ]       ://     // [138]
+    //: TAG[ <head> | <HEAD> | </head> | </HEAD> ]       ://     // [138]
+    //: TAG[ <title>| <TITLE>| </title>| </TITLE>]       ://     // [138]
     //:::::::::::::::::::::::::::::::::::::::::::::::::::://     // [138]
     var d_webpage =( "" //:------------------://
     +'      <!DOCTYPE HTML><head>              '
@@ -2477,13 +2479,14 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         LOG( "[dom_bod]" , dom_bod );
 
     //:-----------------------------:html_dom_setup:[029]://
-    //:remove_fucking_scrollbars:[138]:------------------://
-
-        dom_bod.style.padding  = "0"     ;
-        dom_bod.style.margin   = "0"     ;
-        dom_bod.style.overflow = "hidden"; 
-
-    //:------------------:remove_fucking_scrollbars:[138]://
+    //:remove_fucking_scrollbars:[138]:------------------://     // [---]
+                                                                 // [138]
+        dom_bod.style.padding  = "0"     ;                       // [138]
+        dom_bod.style.margin   = "0"     ;                       // [138]
+        dom_bod.style.overflow = "hidden";                       // [138]
+        dom_bod.style.scroll   = "no"    ;     //:IE_ONLY://     // [138]
+                                                                 // [138]
+    //:------------------:remove_fucking_scrollbars:[138]://     // [---]
     //:html_dom_setup:[031]:-----------------------------://    
     {
         d_can = document.createElement( "canvas" );
@@ -6154,6 +6157,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                                                                  // [137][136]
           : NEXT : sexycam action bindings maybe?                // [137][136]
 
+    [137] : Key bindings are not actually changeable, but        // [138][137]
+          : now using asserts to help "self document" the        // [138][137]
+          : code and make[ sexycam ]function calls easier        // [138][137]
+          : to find.                                             // [138][137]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7481,10 +7489,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [137] : Key bindings are not actually changeable, but        // [137]
-          : now using asserts to help "self document" the        // [137]
-          : code and make[ sexycam ]function calls easier        // [137]
-          : to find.                                             // [137]
+    [138] : Removed Scrollbars , Padding , Margin                // [138]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
