@@ -4907,12 +4907,12 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
     }else
     if( sob.m_url == "/ATOMIC_IVY_MMO" ){  //:#SELFSERVE#://     // [140][027][025]
 
-        l_fs.readFile( "./server.js" , function(i_err,i_cof){
+        l_fs.readFile( "./server.js" , function(i_err,i_cof){    // [140][---][025]
 
-            if(i_err){
-                i_cof = "[we messed up]" ;
-            }else{
-                sob.m_giv.writeHead( 200 , d_js );
+            if(i_err){                                           // [140][---][025]
+                i_cof = "[we messed up]" ;                       // [140][---][025]
+            }else{                                               // [140][---][025]
+                sob.m_giv.writeHead( 200 , d_js );               // [140][---][025]
 
                 //:get_app_domain:[059]:---------------------://
                 var n =( "\n" );                     //:[059]://
@@ -4955,7 +4955,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
                 //:--------------:#MYSBSYS#:[058]:// //:[058]://
 
             };;
-            sob.m_giv.end( i_cof , "utf-8" );
+            sob.m_giv.end( i_cof , "utf-8" );                    // [140][---][025]
         });;
     }else
     //:dabitch_crud:[046]:-----------------------------------://
