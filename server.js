@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_145             :// // [145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_146             :// // [146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -4795,11 +4795,29 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         //:[ATF]: Pixel_X ===> DiscreteUnits X :[ATF]://         // [145]
         //:::::::::::::::::::::::::::::::::::::::::::://         // [145]
         var o_dux =( c_dum /**OUTOFBOUNDSBYONE**/ );             // [145]
-                                                                 // [145]
-        
-        o_dux =( 0 ); //:TODO: Actual Calculations://            // [145]
-
-                                                                 // [145]
+                                                                 // [---]
+        if( i_p_x < d_vp0[ x_0 ]  //: #vp0_is_on_screen# ://     // [146]
+        ||  i_p_x > d_vp0[ x_1 ]  //: #vp0_is_on_screen# ://     // [146]
+        ||  i_p_x < 0             //: #PT_OOB_OF_CANVAS# ://     // [146]
+        ||  i_p_x >= d_can.width  //: #PT_OOB_OF_CANVAS# ://     // [146]    
+        ){                                                       // [146]
+            o_dux =( c_dum /**OUT_OF_BOUNDS**/ );                // [146]
+        }else{                                                   // [146]
+            //: @f_x@ : Float/Percentage - X axis :------://     // [146]
+                                                                 // [146]
+            //: @DO_CALC_FORWARD_WITH@[ vp0 ] ://                // [146]
+                                                                 // [146]
+                var vp0_wid =( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );    // [146]
+                var vp0_pos =( i_p_x       -d_vp0[ x_0 ]   );    // [146]
+                var f_x =( vp0_pos / ( vp0_wid - 1 )       );    // [146]
+                                                                 // [146]
+            //: @DO_CALC_BAKWARD_WITH@[ vp1 ] ://                // [146]
+                                                                 // [146]
+                var vp1_wid =( d_vp1[ x_1 ]-d_vp1[ x_0 ]+1 );    // [146]
+                var vp1_pos =( ( vp1_wid - 1 ) * f_x       );    // [146]
+                      o_dux =( d_vp1[ x_0 ] + vp1_pos      );    // [146]
+        };;                                                      // [146]
+                                                                 // [---]
         return( o_dux );                                         // [145]
     };;                                                          // [145]
     const   F_MOUMAST_P_Y_DUY = function                         // [145]
@@ -4811,11 +4829,29 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         //:[ATF]: Pixel_Y ===> DiscreteUnits Y :[ATF]://         // [145]
         //:::::::::::::::::::::::::::::::::::::::::::://         // [145]
         var o_duy =( c_dum /**OUTOFBOUNDSBYONE**/ );             // [145]
-                                                                 // [145]
-
-        o_duy =( 0 ); //:TODO: Actual Calculations://            // [145]
-
-                                                                 // [145]
+                                                                 // [---]
+        if( i_p_y < d_vp0[ y_0 ]  //: #vp0_is_on_screen# ://     // [146]
+        ||  i_p_y > d_vp0[ y_1 ]  //: #vp0_is_on_screen# ://     // [146]
+        ||  i_p_y < 0             //: #PT_OOB_OF_CANVAS# ://     // [146]
+        ||  i_p_y >= d_can.height //: #PT_OOB_OF_CANVAS# ://     // [146]
+        ){                                                       // [146]
+            o_duy =( c_dum /**OUT_OF_BOUNDS**/ );                // [146]
+        }else{                                                   // [146]
+            //: @f_y@ : Float/Percentage - Y axis :------://     // [146]
+                                                                 // [146]
+            //: @DO_CALC_FORWARD_WITH@[ vp0 ] ://                // [146]
+                                                                 // [146]
+                var vp0_hig =( d_vp0[ y_1 ]-d_vp0[ y_0 ]+1);     // [146]
+                var vp0_pos =( i_p_y       -d_vp0[ y_0 ]  );     // [146]
+                var f_y =( vp0_pos / ( vp0_hig - 1 )      );     // [146]
+                                                                 // [146]
+            //: @DO_CALC_BAKWARD_WITH@[ vp1 ] ://                // [146]
+                                                                 // [146]
+                var vp1_hig =( d_vp1[ y_1 ]-d_vp1[ y_0 ]+1);     // [146]
+                var vp1_pos =( ( vp1_hig - 1 ) * f_y      );     // [146]
+                      o_duy =( d_vp1[ y_0 ] + vp1_pos     );     // [146]
+        };;                                                      // [146]
+                                                                 // [---]
         return( o_duy );                                         // [145]
     };;                                                          // [145]
         
@@ -6307,6 +6343,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [144] : Mouse listeners load mouse position into             // [145][144]
           : the edigame_edi object now.                          // [145][144]
 
+    [145] : Stubbed In Pixel To DiscreteUnit Conversion Funcs.   // [146][145]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7631,12 +7669,19 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     @H13@: This tag means the code was stolen from HOTEL13.JS    // [144]
 
+    #vp0_is_on_screen# : A reminder to me that vp0 is the        // [146]
+                       : on-screen viewport of pixels.           // [146]
+                                                                 // [146]
+    #PT_OOB_OF_CANVAS# : Point is out of bounds of the           // [146]
+                       : HTML5 Canvas.                           // [146]
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [145] : Stubbed In Pixel To DiscreteUnit Conversion Funcs.   // [145]
+    [146] : 1 : FINISHED MATH FOR : F_MOUMAST_P_X_DUX            // [146]
+          : 2 : FINISHED MATH FOR : F_MOUMAST_P_Y_DUY            // [146]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
