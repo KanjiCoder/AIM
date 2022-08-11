@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_143             :// // [143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_144             :// // [144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -698,6 +698,10 @@
     //:TAG[ illegal-section | illegal-section | illegals]://     // [109]
     //:TAG[ illegal section | illegalsection | illsec   ]://     // [109]
                                                                  // [---]
+    const i_mou_evt = "[FIX:i_evt_mou(GeneralToSpecific)]";      // [144]
+    const   mou_evt = "[FIX:i_evt_mou(GeneralToSpecific)]";      // [144]
+    const   evt_mov = "[FIX:i_evt_mou(MoreGeneric)]" ;           // [144]
+    const i_evt_mov = "[FIX:i_evt_mou(MoreGeneric)]" ;           // [144]
     const d_mou = "[FIX:USE[ d_m_x , d_m_y ]]" ;                 // [141]
                                                                  // [---]
     const d_hi9_duc = "[FIX:d_hi9_dcx && d_hi9_dcy]" ;           // [128]
@@ -2062,7 +2066,13 @@ if( /** __EDIGAME__ **/ notnode ){                               // [102]
     var d_edigame_edi ={ laxcoma:"[HACK]"                        // [103]
                                                                  // [103]
         /** Members when acting as EDITOR **/                    // [103]
-                                                                 // [103]
+                                                                 // [---]
+    ,   mou_p_x :(0-1)  //: Last_Mouse_Move Pix_Y @H13@  ://     // [144]
+    ,   mou_p_y :(0-1)  //: Last_Mouse_Move Pix_X @H13@  ://     // [144]
+                                                                 // [144]
+    ,   clk_p_x :(0-1)  //: Last_Clicked    Pix_X @H13@  ://     // [144]
+    ,   clk_p_y :(0-1)  //: Last_Clicked    Pix_Y @H13@  ://     // [144]
+                                                                 // [---]
     };;                                                          // [103]
     var d_edigame_gam ={ laxcoma:"[HACK]"                        // [103]
                                                                  // [103]
@@ -4777,8 +4787,13 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                  // [143]
         i_evt_mou                                                // [143]
     ){                                                           // [143]
-                                                                 // [143]
-        console.log( "[TODO:F_MOUMAST_MOV]" );                   // [143]
+                                                                 // [---]
+        var mov_p_x = i_evt_mou.offsetX ;                        // [144]
+        var mov_p_y = i_evt_mou.offsetY ;                        // [144]
+                                                                 // [144]
+        d_edigame_edi.mou_p_x =( mov_p_x );                      // [144]
+        d_edigame_edi.mou_p_y =( mov_p_y );                      // [144]
+                                                                 // [---]
     };;                                                          // [143]
                                                                  // [143]
     const   F_MOUMAST_CLK = function                             // [143]
@@ -4786,8 +4801,15 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                  // [143]
         i_evt_mou                                                // [143]
     ){                                                           // [143]
-                                                                 // [143]
-        console.log( "[TODO:F_MOUMAST_CLK]" );                   // [143]
+                                                                 // [---]
+        var clk_p_x = i_evt_mou.offsetX ;                        // [144]
+        var clk_p_y = i_evt_mou.offsetY ;                        // [144]
+                                                                 // [144]
+        d_edigame_edi.clk_p_x =( clk_p_x );                      // [144]
+        d_edigame_edi.clk_p_y =( clk_p_y );                      // [144]
+                                                                 // [144]
+        LOG( "[clk_pxy]:" , [clk_p_x,clk_p_y] );                 // [144]
+                                                                 // [---]
     };;                                                          // [143]
 
     const   F_MOUMAST_INI = function                             // [143] 
@@ -6239,6 +6261,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [142] : Stubbed In "MOUMAST" (Mouse Master) System.          // [143][142]
 
+    [143] : Stubbed In Mouse Master Functions.                   // [144][143]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7561,12 +7585,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     @NPE@:Num_Pad_Enterkey                                       // [137]
 
+    @H13@: This tag means the code was stolen from HOTEL13.JS    // [144]
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [143] : Stubbed In Mouse Master Functions.                   // [143]
+    [144] : Mouse listeners load mouse position into             // [144]
+          : the edigame_edi object now.                          // [144]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
