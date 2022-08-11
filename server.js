@@ -886,6 +886,10 @@ if( yesnode ){ //:-------------------------------------------://
     };;                                         //:[040] --- ://
     var d_dcp = "[nil][!s!:d_dcp]"       ;      //:[040]@dcp@://
 
+    //:::::::::::::::::::::::::::::::::::::::::::::::::::://     // [138]
+    //: TAG[ <html> | <HTML> | </html> | </HTML> ]       ://     // [138]
+    //: TAG[ <body> | <BODY> | </body> | </BODY> ]       ://     // [138]
+    //:::::::::::::::::::::::::::::::::::::::::::::::::::://     // [138]
     var d_webpage =( "" //:------------------://
     +'      <!DOCTYPE HTML><head>              '
     +'      <meta charset="utf-8"><title>      '
@@ -2473,6 +2477,12 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         LOG( "[dom_bod]" , dom_bod );
 
     //:-----------------------------:html_dom_setup:[029]://
+    //:remove_fucking_scrollbars:[138]:------------------://
+
+        dom_bod.style.padding = "0" ;
+        dom_bod.style.margin  = "0" ;
+
+    //:------------------:remove_fucking_scrollbars:[138]://
     //:html_dom_setup:[031]:-----------------------------://    
     {
         d_can = document.createElement( "canvas" );
