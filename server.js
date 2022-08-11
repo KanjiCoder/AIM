@@ -6164,6 +6164,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [138] : Removed Scrollbars , Padding , Margin                // [139][138]
 
+    [139] : Retro-active commentary for vids 17,19,24            // [140][139] 
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7491,7 +7493,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [139] : Retro-active commentary for vids 17,19,24            // [139] 
+    [140] : Retro-Active Commentary : 25,26,27,42                // [140]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
