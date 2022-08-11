@@ -4831,8 +4831,11 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                       o_dux =Math.floor( dux );                  // [148][146]
 
 
-            ASS( o_dux >= d_vp0[ x_0 ] , "[DUX:X_0]" );
-            ASS( o_dux <= d_vp0[ x_1 ] , "[DUX:X_1]" );
+            if( o_dux < d_vp1[ x_0 ] 
+            ||  o_dux > d_vp1[ x_1 ] 
+            ){
+                ERR("[OUT_OF_FUCKING_BOUNDS:DUX]");
+            };;
         };;                                                      // [146]
                                                                  // [---]
         return( o_dux );                                         // [145]
