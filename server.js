@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_142             :// // [142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_143             :// // [143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -4750,16 +4750,16 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         };;                                                      // [118]
     };;                                                          // [057] 
 
-    const   F_KEYMAST_INI = function                 //:[057]://
-    PRIVATE_F_KEYMAST_INI(                           //:[057]://
-        /** No Arguments **/                         //:[057]://
-    ){                                               //:[057]://
-                                                     //:[057]://
-        var ADD = document.addEventListener ;        //:[057]://
-                                                     //:[057]://
-        ADD( "keyup"   , F_KEYMAST_UPP );            //:[057]://
-        ADD( "keydown" , F_KEYMAST_DOW );            //:[057]://
-    };;                                              //:[057]://
+    const   F_KEYMAST_INI = function                             // [057] 
+    PRIVATE_F_KEYMAST_INI(                                       // [057] 
+        /** No Arguments **/                                     // [057] 
+    ){                                                           // [057] 
+                                                                 // [057] 
+        var ADD = document.addEventListener ;                    // [057] 
+                                                                 // [057] 
+        ADD( "keyup"   , F_KEYMAST_UPP );                        // [057] 
+        ADD( "keydown" , F_KEYMAST_DOW );                        // [057] 
+    };;                                                          // [057] 
 
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
 //|                                               [ @$$$$$@ ]|//
@@ -4772,7 +4772,35 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 //|[ @$$$$$@ ]                                               |// // [142]
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [142]
 
-    /** Mouse Functions Go In This Section **/                   // [142]
+    const   F_MOUMAST_MOV = function                             // [143]
+    PRIVATE_F_MOUMAST_MOV(                                       // [143]
+                                                                 // [143]
+        i_evt_mou                                                // [143]
+    ){                                                           // [143]
+                                                                 // [143]
+        console.log( "[TODO:F_MOUMAST_MOV]" );                   // [143]
+    };;                                                          // [143]
+                                                                 // [143]
+    const   F_MOUMAST_CLK = function                             // [143]
+    PRIVATE_F_MOUMAST_CLK(                                       // [143]
+                                                                 // [143]
+        i_evt_mou                                                // [143]
+    ){                                                           // [143]
+                                                                 // [143]
+        console.log( "[TODO:F_MOUMAST_CLK]" );                   // [143]
+    };;                                                          // [143]
+
+    const   F_MOUMAST_INI = function                             // [143] 
+    PRIVATE_F_MOUMAST_INI(                                       // [143] 
+        /** No Arguments **/                                     // [143] 
+    ){                                                           // [143] 
+                                                                 // [143] 
+        var ADD = document.addEventListener ;                    // [143] 
+                                                                 // [143] 
+        ADD( "mousemove", F_MOUMAST_MOV );                       // [143] 
+        ADD( "click"    , F_MOUMAST_CLK );                       // [143] 
+    };;                                                          // [143] 
+
 
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [142]
 //|                                               [ @$$$$$@ ]|// // [142]
@@ -4872,18 +4900,19 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 //:INIT_CLIENT_FRONTEND:[035]:===============================://
 if( notnode ){  window.onload = function( /** [030] **/ ){
 
-    if( "[NOT_O_K]" === d_urlsite_o_k ){                        // [059] 
-        ERR( d_msgkill_001 );                                   // [059] 
-    };;                                                         // [059] 
-                                                                // [059]
-    F_INI_CLI();    //:INIt: CLIent :------------------://      // [???] 
-                                                                // [063]
-    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :----://      // [063] 
-    F_KEYMAST_INI();//:INIt: Client Keyboard Handler   ://      // [???] 
-                                                                // [071]
-    F_ARTGIRL_RPL( c_artgirl_ren_def );                         // [071]
-                                                                // [071]
-    F_CLIGAME_GUL( 0.0 );   //:Enter_Game_Loop ://              // [063] 
+    if( "[NOT_O_K]" === d_urlsite_o_k ){                         // [059] 
+        ERR( d_msgkill_001 );                                    // [059] 
+    };;                                                          // [059] 
+                                                                 // [059]
+    F_INI_CLI();    //:INIt: CLIent :--------------------://     // [???] 
+                                                                 // [063]
+    F_ARTGIRL_INI();//:Init Webgl And Frag Shader :------://     // [063] 
+    F_KEYMAST_INI();//:INIt: Client Keyboard Handler     ://     // [???] 
+    F_MOUMAST_INI();//:INIt: Master Mouse Input Handler  ://     // [143]
+                                                                 // [071]
+    F_ARTGIRL_RPL( c_artgirl_ren_def );                          // [071]
+                                                                 // [071]
+    F_CLIGAME_GUL( 0.0 );   //:Enter_Game_Loop ://               // [063] 
 
 };; };;
 //:===============================:INIT_CLIENT_FRONTEND:[035]://
@@ -6207,6 +6236,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [141] : Added Mouse Uniform Vars : d_m_x , d_m_x_loc         // [142][141]
           :::::::::::::::::::::::::::: d_m_y , d_m_y_loc         // [142][141]
+
+    [142] : Stubbed In "MOUMAST" (Mouse Master) System.          // [143][142]
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -7535,7 +7566,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [142] : Stubbed In "MOUMAST" (Mouse Master) System.          // [142]
+    [143] : Stubbed In Mouse Master Functions.                   // [143]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
