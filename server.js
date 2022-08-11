@@ -2479,8 +2479,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     //:-----------------------------:html_dom_setup:[029]://
     //:remove_fucking_scrollbars:[138]:------------------://
 
-        dom_bod.style.padding = "0" ;
-        dom_bod.style.margin  = "0" ;
+        dom_bod.style.padding  = "0"     ;
+        dom_bod.style.margin   = "0"     ;
+        dom_bod.style.overflow = "hidden"; 
 
     //:------------------:remove_fucking_scrollbars:[138]://
     //:html_dom_setup:[031]:-----------------------------://    
