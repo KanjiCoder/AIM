@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_148             :// // [148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_149             :// // [149][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]://
 //:CONFIGURATION:[109]:======================================://
@@ -4876,8 +4876,26 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                  // [---]
         }else                                                    // [148]
         if( enu_fsm === c_artgirl_fsm_000 ){                     // [148]
-                                                                 // [148]
-            o_dux = d_vp1[ x_0 ];                                // [148]
+ 
+            var vp0_wid =( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );
+            var vp1_wid =( d_vp1[ x_1 ]-d_vp1[ x_0 ]+1 );
+            ASS( vp1_wid > vp0_wid , "[EXP:VP1_GT_VP0]");
+
+            //: @D_U@ : Discrete Units (plank units)     ://
+            //: @s_w@ : Sample Tile  WID In @D_U@        ://   
+            //: @s_x@ : Sample Tiles On X Axis           ://
+            //: @p_w@ : Screen Pixel WID In @D_U@        ://        
+            //: @h_w@ : Half Discreet Sample Tile Width  ://
+            //: @t_x@ : Tile X                           ://
+
+            var s_w = Math.floor( vp1_wid / vp0_wid );
+            var s_x = Math.floor( vp1_wid /     s_w );
+            var p_w = Math.floor( vp0_wid /     s_x );
+            var h_w = Math.floor(     s_w / 2 )  -1  ;
+            var t_x = Math.floor( i_p_x / p_w );
+
+            o_dux =( d_vp1[ x_0 ] + h_w )+( t_x * s_w );
+
         }else                                                    // [148]
         if( enu_fsm === c_artgirl_fsm_001 ){                     // [148]
                                                                  // [148]
