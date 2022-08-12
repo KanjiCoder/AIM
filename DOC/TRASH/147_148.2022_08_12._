@@ -1,0 +1,14 @@
+            //: @DO_CALC_FORWARD_WITH@[ vp0 ] ://                // [146]
+                                                                 // [146]
+                var vp0_rng =( d_vp0[ x_1 ]-d_vp0[ x_0 ]+0)+0.0; // [148][146]
+                var vp0_pos =( i_p_x       -d_vp0[ x_0 ]  )+0.0; // [148][146]
+                var f_x =( vp0_pos / ( vp0_rng )          )+0.0; // [148][146]
+                                                                 // [146]
+            //: @DO_CALC_BAKWARD_WITH@[ vp1 ] ://                // [146]
+                                                                 // [146]
+                var vp1_rng =( d_vp1[ x_1 ]-d_vp1[ x_0 ]+0 )+0.0;    // [148][146]
+                var vp1_pos =( ( vp1_rng ) * f_x           )+0.0;    // [148][146]
+                var     dux =( d_vp1[ x_0 ] + vp1_pos      )+0.0;    // [148][148][146]
+                      o_dux =Math.floor( dux );                  // [148][146]
+
+                o_dux =( d_vp1[ x_1 ] ); //:HARDCODE TO RIGHT EDGE://
