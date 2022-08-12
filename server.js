@@ -4890,7 +4890,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 
             var s_w = Math.floor( vp1_wid / vp0_wid );
             var s_x = Math.floor( vp1_wid /     s_w );
-            var p_w = Math.floor( vp0_wid /     s_x );
+            var p_w =           ( vp0_wid /     s_x );
             var h_w = Math.floor(     s_w / 2 )  -1  ;
             var t_x = Math.floor( i_p_x / p_w );
 
