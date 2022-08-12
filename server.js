@@ -4902,10 +4902,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         //:[ATF]: Pixel_Y ===> DiscreteUnits Y :[ATF]://         // [145]
         //:::::::::::::::::::::::::::::::::::::::::::://         // [145]
         var o_duy =( c_dum /**OUTOFBOUNDSBYONE**/ );             // [145]
-                                                                 // [---]
-
-        if( d_vp
-                                                                
+                                                                 // [---] 
         //:[enu_fsm]AKA[ fragren ]://                            // [148]
         var enu_fsm = d_artgirl.arr_fsm[                         // [148]
                       d_artgirl.ren_pin ];;                      // [148]
