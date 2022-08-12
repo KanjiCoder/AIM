@@ -4975,7 +4975,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             ASS( v1h > v0h , "[V1H_V0H]" );                      // [149]
             var  s_h = Math.floor( v1h / v0h );                  // [149]
             var  h_h = Math.floor(     s_h / 2 ) - 1 ;           // [149]
-            var  t_h =( i_p_y - d_vp0[ y_0 ] );                  // [149]
+            var  t_y =( i_p_y - d_vp0[ y_0 ] );                  // [149]
                                                                  // [149]
             o_duy =( d_vp1[ y_0 ] + h_h )+( t_y * s_h );         // [149]
 
