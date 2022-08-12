@@ -1396,7 +1396,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
                                                                 // [097]
         u_duv = u_mv1 ; //:@SYNONYMOUS_VARIABLES@://            // [097]
                                                                 // [097]
-    //:#u_dup#://                                               // [097]
+    //:#u_dup#://   //:@FRAG_SHADER_MAPPING@:@FSM_000@://       // [149][097]
     //: u_dup =( DiscreteUnitSelection )/( NumPixelsOnScreen ); // [097]
         u_dup =(         u_duv         )/(       u_mv0       ); // [097]
                                                                 // [097]
@@ -4877,24 +4877,23 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         }else                                                    // [148]
         if( enu_fsm === c_artgirl_fsm_000 ){                     // [148]
  
-            var vp0_wid =( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );
-            var vp1_wid =( d_vp1[ x_1 ]-d_vp1[ x_0 ]+1 );
-            ASS( vp1_wid > vp0_wid , "[EXP:VP1_GT_VP0]");
+            /// var vp0_wid =( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );
+            /// var vp1_wid =( d_vp1[ x_1 ]-d_vp1[ x_0 ]+1 );
+            /// ASS( vp1_wid > vp0_wid , "[EXP:VP1_GT_VP0]");
 
+            //: @v0w@ : vp0_wid (VP0 WIDTH)              ://
+            //: @v1w@ : vp1_wid (VP1 WIDTH)              ://
             //: @D_U@ : Discrete Units (plank units)     ://
-            //: @s_w@ : Sample Tile  WID In @D_U@        ://   
-            //: @s_x@ : Sample Tiles On X Axis           ://
-            //: @p_w@ : Screen Pixel WID In @D_U@        ://        
+            //: @s_w@ : Sample Tile  WID In @D_U@        ://          
             //: @h_w@ : Half Discreet Sample Tile Width  ://
             //: @t_x@ : Tile X                           ://
 
-            var s_w = Math.floor( vp1_wid / vp0_wid );
-            /// s_x = Math.floor( vp1_wid /     s_w );
-            /// p_w =           ( vp0_wid /     s_x );
-            var h_w = Math.floor(     s_w / 2 ) - 1 ;
-            /// p_x = i_p_x - d_vp0[ x_0 ];
-            /// t_x = Math.floor( p_x / p_w );
-            var t_x =( i_p_x - d_vp0[ x_0 ] );
+            var  v0w = ( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );
+            var  v1w = ( d_vp1[ x_1 ]-d_vp1[ x_0 ]+1 );
+            ASS( v1w > v0w , "[V1W_V0W]" );
+            var  s_w = Math.floor( v1w / v0w );
+            var  h_w = Math.floor(     s_w / 2 ) - 1 ;
+            var  t_x =( i_p_x - d_vp0[ x_0 ] );
 
             o_dux =( d_vp1[ x_0 ] + h_w )+( t_x * s_w );
 
@@ -7898,6 +7897,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         What it sounds like. We are making sure our              // [148]
         calculations did not result going out of the             // [148]
         valid bounds of whatever those bounds might be.          // [148]
+
+    @FRAG_SHADER_MAPPING@ : Denoting where a certain             // [149]
+                          : [ enu_fsm ]implementation is         // [149]
+                          : being used.                          // [149]
+                                                                 // [149]
+    @FSM_000@ : Denotes implementation site of                   // [149]
+              : [ c_artgirl_fsm_000 ].                           // [149]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
