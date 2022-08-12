@@ -4877,25 +4877,23 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         }else                                                    // [148]
         if( enu_fsm === c_artgirl_fsm_000 ){                     // [148]
  
-            /// var vp0_wid =( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );
-            /// var vp1_wid =( d_vp1[ x_1 ]-d_vp1[ x_0 ]+1 );
-            /// ASS( vp1_wid > vp0_wid , "[EXP:VP1_GT_VP0]");
-
-            //: @v0w@ : vp0_wid (VP0 WIDTH)              ://
-            //: @v1w@ : vp1_wid (VP1 WIDTH)              ://
-            //: @D_U@ : Discrete Units (plank units)     ://
-            //: @s_w@ : Sample Tile  WID In @D_U@        ://          
-            //: @h_w@ : Half Discreet Sample Tile Width  ://
-            //: @t_x@ : Tile X                           ://
-
-            var  v0w = ( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );
-            var  v1w = ( d_vp1[ x_1 ]-d_vp1[ x_0 ]+1 );
-            ASS( v1w > v0w , "[V1W_V0W]" );
-            var  s_w = Math.floor( v1w / v0w );
-            var  h_w = Math.floor(     s_w / 2 ) - 1 ;
-            var  t_x =( i_p_x - d_vp0[ x_0 ] );
-
-            o_dux =( d_vp1[ x_0 ] + h_w )+( t_x * s_w );
+            //:::::::::::::::::::::::::::::::::::::::::::://     // [149]
+            //: @v0w@ : vp0_wid (VP0 WIDTH)              ://     // [149]
+            //: @v1w@ : vp1_wid (VP1 WIDTH)              ://     // [149]
+            //: @D_U@ : Discrete Units (plank units)     ://     // [149]
+            //: @s_w@ : Sample Tile  WID In @D_U@        ://     // [149]
+            //: @h_w@ : Half Discreet Sample Tile Width  ://     // [149]
+            //: @t_x@ : Tile X                           ://     // [149]
+            //:::::::::::::::::::::::::::::::::::::::::::://     // [149]
+                                                                 // [149]
+            var  v0w = ( d_vp0[ x_1 ]-d_vp0[ x_0 ]+1 );          // [149]
+            var  v1w = ( d_vp1[ x_1 ]-d_vp1[ x_0 ]+1 );          // [149]
+            ASS( v1w > v0w , "[V1W_V0W]" );                      // [149]
+            var  s_w = Math.floor( v1w / v0w );                  // [149]
+            var  h_w = Math.floor(     s_w / 2 ) - 1 ;           // [149]
+            var  t_x =( i_p_x - d_vp0[ x_0 ] );                  // [149]
+                                                                 // [149]
+            o_dux =( d_vp1[ x_0 ] + h_w )+( t_x * s_w );         // [149]
 
         }else                                                    // [148]
         if( enu_fsm === c_artgirl_fsm_001 ){                     // [148]
@@ -4962,8 +4960,25 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                                                                  // [---]
         }else                                                    // [148]
         if( enu_fsm === c_artgirl_fsm_000 ){                     // [148]
-                                                                 // [148]
-            o_duy = d_vp1[ y_0 ];                                // [148]
+
+            //:::::::::::::::::::::::::::::::::::::::::::://     // [149]
+            //: @v0h@ : vp0_hig (VP0 HEIGHT)             ://     // [149]
+            //: @v1h@ : vp1_hig (VP1 HEIGHT)             ://     // [149]
+            //: @D_U@ : Discrete Units (plank units)     ://     // [149]
+            //: @s_h@ : Sample Tile  HIG In @D_U@        ://     // [149]
+            //: @h_h@ : Half Discreet Sample Tile HEIGHT ://     // [149]
+            //: @t_y@ : Tile Y                           ://     // [149]
+            //:::::::::::::::::::::::::::::::::::::::::::://     // [149]
+                                                                 // [149]
+            var  v0h = ( d_vp0[ y_1 ]-d_vp0[ y_0 ]+1 );          // [149]
+            var  v1h = ( d_vp1[ y_1 ]-d_vp1[ y_0 ]+1 );          // [149]
+            ASS( v1h > v0h , "[V1H_V0H]" );                      // [149]
+            var  s_h = Math.floor( v1h / v0h );                  // [149]
+            var  h_h = Math.floor(     s_h / 2 ) - 1 ;           // [149]
+            var  t_h =( i_p_y - d_vp0[ y_0 ] );                  // [149]
+                                                                 // [149]
+            o_duy =( d_vp1[ y_0 ] + h_h )+( t_y * s_h );         // [149]
+
         }else                                                    // [148]
         if( enu_fsm === c_artgirl_fsm_001 ){                     // [148]
                                                                  // [148]
