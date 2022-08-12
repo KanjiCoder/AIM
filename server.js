@@ -6449,6 +6449,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [146] : 1 : FINISHED MATH FOR : F_MOUMAST_P_X_DUX            // [147][146]
           : 2 : FINISHED MATH FOR : F_MOUMAST_P_Y_DUY            // [147][146]
 
+    [147] : Rendering crosshairs for cursor position, but        // [148][147]
+          : the math seems SLIGHTLY OFF. Cursor drifts           // [148][147]
+          : the further away from VP0 origin you are.            // [148][147]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -7880,9 +7884,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [147] : Rendering crosshairs for cursor position, but        // [147]
-          : the math seems SLIGHTLY OFF. Cursor drifts           // [147]
-          : the further away from VP0 origin you are.            // [147]
+    [148] : Added fragment shader rendering modes ( fsm )        // [148]
+          : that will declare my "intention" of the              // [148]
+          : way the fragment shader gets pixels onto screen.     // [148]
+          :                                                      // [148]
+          : Different[ enu_fsm ]values will require              // [148]
+          : different math to map mouse canvas coord to          // [148]
+          : discrete unit world space (THE_DUM) coord.           // [148]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
