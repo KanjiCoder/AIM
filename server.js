@@ -4830,7 +4830,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                 var     dux =( d_vp1[ x_0 ] + vp1_pos      )+0.0;    // [148][148][146]
                       o_dux =Math.floor( dux );                  // [148][146]
 
-                o_dux =( d_vp1[ x_1 ] ); //:HARDCODE TO RIGHT EDGE://
+                o_dux =( d_vp1[ x_0 ] ); //:HARDCODE TO RIGHT EDGE://
 
             if( o_dux < d_vp1[ x_0 ] 
             ||  o_dux > d_vp1[ x_1 ] 
