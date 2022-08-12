@@ -4891,8 +4891,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             var s_w =           ( vp1_wid / vp0_wid );
             var s_x =           ( vp1_wid /     s_w );
             var p_w =           ( vp0_wid /     s_x );
-            var h_w = Math.floor(     s_w / 2 )  -1  ;
-            var t_x = Math.floor( i_p_x / p_w );
+            var h_w = Math.floor(     s_w / 2 );
+            var p_x = i_p_x - d_vp0[ x_0 ];
+            var t_x = Math.floor( p_x / p_w );
 
             o_dux =( d_vp1[ x_0 ] + h_w )+( t_x * s_w );
 
