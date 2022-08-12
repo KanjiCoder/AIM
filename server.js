@@ -4888,9 +4888,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             //: @h_w@ : Half Discreet Sample Tile Width  ://
             //: @t_x@ : Tile X                           ://
 
-            var s_w =           ( vp1_wid / vp0_wid );
-            var s_x =           ( vp1_wid /     s_w );
-            var p_w =           ( vp0_wid /     s_x );
+            var s_w = Math.floor( vp1_wid / vp0_wid );
+            var s_x = Math.floor( vp1_wid /     s_w );
+            var p_w = Math.floor( vp0_wid /     s_x );
             var h_w = Math.floor(     s_w / 2 );
             var p_x = i_p_x - d_vp0[ x_0 ];
             var t_x = Math.floor( p_x / p_w );
