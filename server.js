@@ -4889,11 +4889,12 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
             //: @t_x@ : Tile X                           ://
 
             var s_w = Math.floor( vp1_wid / vp0_wid );
-            var s_x = Math.floor( vp1_wid /     s_w );
-            var p_w =           ( vp0_wid /     s_x );
-            var h_w = Math.floor(     s_w / 2 );
-            var p_x = i_p_x - d_vp0[ x_0 ];
-            var t_x = Math.floor( p_x / p_w );
+            /// s_x = Math.floor( vp1_wid /     s_w );
+            /// p_w =           ( vp0_wid /     s_x );
+            var h_w = Math.floor(     s_w / 2 ) - 1 ;
+            /// p_x = i_p_x - d_vp0[ x_0 ];
+            /// t_x = Math.floor( p_x / p_w );
+            var t_x =( i_p_x - d_vp0[ x_0 ] );
 
             o_dux =( d_vp1[ x_0 ] + h_w )+( t_x * s_w );
 
