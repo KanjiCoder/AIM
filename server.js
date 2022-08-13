@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_153             :// // [153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_154             :// // [154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---]
 //:CONFIGURATION:[109]:======================================:// // [---]
@@ -4484,10 +4484,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     ){                                                           //      [152]
         //:[ATF]:  DiscreteUnit_X => GlobalTile_X  :[ATF]://     //      [152]
 
-        var dunspan = d_te7_dun[ i_te7 ];                        // [153]
-
-        //: TODO : THE REST OF THE MATH !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:// [153]
-        return( 0 ); //:TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! [152]
+        var   dunspan = d_te7_dun[ i_te7 ];                      // [154][153]
+        var     o_gtx =Math.floor( i_dux / dunspan );               [154]
+        return( o_gtx );                                         // [154][152]
     };;                                                          // [152]
                                                                  // [---]
     const   F_EDIGAME_MGY_TGY     = "[FIX:TE7_DUY_GTY]" ;        // [153][152]
@@ -4506,11 +4505,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     ){                                                           //      [152]
         //:[ATF]:  DiscreteUnit_Y => GlobalTile_Y  :[ATF]://     //      [152]
 
-        var dunspan = d_te7_dun[ i_te7 ];                        // [153]
-
-        //: TODO : THE REST OF THE MATH !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:// [153]
-        return( 0 ); //:TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! [152]
-
+        var   dunspan = d_te7_dun[ i_te7 ];                      // [154][153]
+        var     o_gty =Math.floor( i_duy / dunspan );               [154]
+        return( o_gty );                                         // [154][152]
     };;                                                          // [152]
 
     const   F_EDIGAME_MOD_LOG = function                         // [103]
@@ -6772,6 +6769,14 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : Also added annoying code to remind myself to         // [153][152]
           : refactor one functions are finished.                 // [153][152]
 
+    [153] : Added_Lookup_Table : d_te7_dun                       // [154][153]
+          : Added_Lookup_Table : d_te7_peb                       // [154][153]
+          : REFACTORED[ DUX_GTX ]===>[ TE7_DUX_GTX ]             // [154][153]
+          : REFACTORED[ DUY_GTY ]===>[ TE7_DUY_GTY ]             // [154][153]
+          :                                                      // [154][153]
+          : NEXT[ CORE_LOGIC_OF[ TE7_DUX_GTX ] ]                 // [154][153]
+          : NEXT[ CORE_LOGIC_OF[ TE7_DUY_GTY ] ]                 // [154][153]
+
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -8293,13 +8298,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [153] : Added_Lookup_Table : d_te7_dun                       // [153]
-          : Added_Lookup_Table : d_te7_peb                       // [153]
-          : REFACTORED[ DUX_GTX ]===>[ TE7_DUX_GTX ]             // [153]
-          : REFACTORED[ DUY_GTY ]===>[ TE7_DUY_GTY ]             // [153]
-          :                                                      // [153]
-          : NEXT[ CORE_LOGIC_OF[ TE7_DUX_GTX ] ]                 // [153]
-          : NEXT[ CORE_LOGIC_OF[ TE7_DUY_GTY ] ]                 // [153]
+    [154] : Finished Math For DiscreteUnits ==> GlobalTile       // [154]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
