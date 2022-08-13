@@ -8299,6 +8299,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 /** ******************************************************** ***
             
     [154] : Finished Math For DiscreteUnits ==> GlobalTile       // [154]
+          : NEXT : Render active tile in GPU code.               // [154]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
