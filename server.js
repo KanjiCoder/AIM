@@ -6578,6 +6578,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : different math to map mouse canvas coord to          // [149][148]
           : discrete unit world space (THE_DUM) coord.           // [149][148]
 
+    [149] : Implemented[ FSM_000 ]in canvas mouse position       // [150][149]
+          : to world mouse position methods.                     // [150][149]
+          : ( MOUMAST_P_X_DUX && MOUMAST_P_Y_DUY )               // [150][149]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -8038,15 +8042,33 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                                                               :  // [149]
     :---------------------------------------------------------:  // [149]
 
+    @d_t_x@ : Active Global Tile Y ( tile version of d_m_x )     // [150]
+    @d_t_y@ : Active Global Tile X ( tile version of d_m_y )     // [150]
+    @d_te7@ : Active Tile Size Exponent To Render In Shader      // [150]
+                                                                 // [150]
+    #d_t_x# : #d_t_y# :---------------------------------------:  // [150]
+                                                              :  // [150]
+        These values are GLOBAL.( local to "THE_DUM" ),       :  // [150]
+        __NOT__ local to a LEVEL_PACK(hotel) or LEVEL(room).  :  // [150]
+                                                              :  // [150]
+        d_t_x === local tile x in THE_DUM                     :  // [150]
+        d_t_y === local tile y in THE_DUM                     :  // [150]
+                                                              :  // [150]
+    :---------------------------------------------------------:  // [150]
+
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [149] : Implemented[ FSM_000 ]in canvas mouse position       // [149]
-          : to world mouse position methods.                     // [149]
-          : ( MOUMAST_P_X_DUX && MOUMAST_P_Y_DUY )               // [149]
+    [150] : 1 : Added : te7_tmi lookup table                     // [150]
+          : 2 : Added : te7_lat lookup table                     // [150]
+          : 3 : Added : tmi_### constants                        // [150]
+          : 4 : Added : lat_### constants                        // [150]
+          : 5 : Added : d_t_x   uniform (Not In Shader Yet)      // [150]
+          : 6 : Added : d_t_y   uniform (Not In Shader Yet)      // [150]
+          : 7 : Added : d_te7   uniform (Not In Shader Yet)      // [150]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
