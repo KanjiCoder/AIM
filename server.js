@@ -1458,7 +1458,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
     ,   ${c_du4}    //:  calculus papers.                ://    // [155]
     ,   ${c_du5}    //:                                  ://    // [155]
     ,   ${c_du6}    //:  It's free real estate boys.     ://    // [155]
-    ,   ${c_du7}    //:                                  ://    // [155]
+    ////            //:                                  ://    // [155]
     );              //:----------------------------------://    // [155]
                                                                 // [---]
     //:--------------------------------------------------://    //      [089]
@@ -8320,6 +8320,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     @d_dty@ : USE[ d_gty ](Tiles are discrete , D is Redundant)  // [152]
 
     @dunspan@ : Discrete Unit Span ( width or height in [D_U] )  // [153]
+                                                                  
+    @c_du7@   : THAT ISN'T A FUCKING THING YOU GOD DAMNED        // [154]
+              : SMOOTH BRAIN LOW IQ PERSON WITH A SCIENTIFICALLY // [154]
+              : ACCURATE BUT POLITICALLY INCORRECT DESCRIPTOR.   // [154]
+              : ( starts with m , ends with on )                 // [154]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
