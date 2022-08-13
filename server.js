@@ -4445,9 +4445,9 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 
     };;                                                          // [152]
                                                                  // [152]
-    const   F_EDIGAME_MGY_TGY = "[FIX:DUY_DTY]" ;                // [152]
-    const   F_EDIGAME_MGY_DTY = "[FIX:DUY_DTY]" ;                // [152]
-    const   F_EDIGAME_DUY_TGY = "[FIX:DUY_DTY]" ;                // [152]
+    const   F_EDIGAME_MGY_TGY = "[FIX:DUY_GTY]" ;                // [152]
+    const   F_EDIGAME_MGY_DTY = "[FIX:DUY_GTY]" ;                // [152]
+    const   F_EDIGAME_DUY_TGY = "[FIX:DUY_GTY]" ;                // [152]
     const   F_EDIGAME_DUY_DTY = "[FIX:DUY_GTY]" ;                // [152]
                                                                  // [152]
     const   F_EDIGAME_DUY_GTY = function                         // [152]
@@ -5017,6 +5017,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     const   F_EDIGAME_P_X_DUX = "[FIX:MOUMAST_NOT_EDIGAME]" ;    // [148]
 
     const   F_MOUMAST_P_X_DMX = "[DOESNT_HAVE_TO_BE_MOUSE]" ;    // [152]
+    const   F_MOUMAST_P_X_DCX = "[DOESNT_HAVE_TO_BE_CLICK]" ;    // [152]
     const   F_MOUMAST_P_X_DUX = function                         // [145]
     PRIVATE_F_MOUMAST_P_X_DUX(                                   // [145]
                                                                  // [145]
@@ -5102,6 +5103,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
     const   F_EDIGAME_P_Y_DUY = "[FIX:MOUMAST_NOT_EDIGAME]" ;    // [148]
 
     const   F_MOUMAST_P_Y_DMY = "[DOESNT_HAVE_TO_BE_MOUSE]" ;    // [152]
+    const   F_MOUMAST_P_Y_DCY = "[DOESNT_HAVE_TO_BE_CLICK]" ;    // [152]
     const   F_MOUMAST_P_Y_DUY = function                         // [145]
     PRIVATE_F_MOUMAST_P_Y_DUY(                                   // [145]
                                                                  // [145]
@@ -8221,8 +8223,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     @i_mgy@ : DONT_USE[ i_mgy /AKA/ Input - Mouse Global Y ]     // [152]
     @i_dux@ : Input Discrete Unit X ( could be global mouse )    // [152]
     @i_duy@ : Input Discrete Unit Y ( could be global mouse )    // [152]
-
-
+                                                                 // [152]
+    @d_dtx@ : USE[ d_gtx ](Tiles are discrete , D is Redundant)  // [152]
+    @d_dty@ : USE[ d_gty ](Tiles are discrete , D is Redundant)  // [152]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
