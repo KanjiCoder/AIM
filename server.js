@@ -6651,6 +6651,14 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : to world mouse position methods.                     // [150][149]
           : ( MOUMAST_P_X_DUX && MOUMAST_P_Y_DUY )               // [150][149]
 
+    [150] : 1 : Added : te7_tmi lookup table                     // [151][150]
+          : 2 : Added : te7_lat lookup table                     // [151][150]
+          : 3 : Added : tmi_### constants                        // [151][150]
+          : 4 : Added : lat_### constants                        // [151][150]
+          : 5 : Added : d_t_x   uniform (Not In Shader Yet)      // [151][150]
+          : 6 : Added : d_t_y   uniform (Not In Shader Yet)      // [151][150]
+          : 7 : Added : d_te7   uniform (Not In Shader Yet)      // [151][150]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -8134,13 +8142,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [150] : 1 : Added : te7_tmi lookup table                     // [150]
-          : 2 : Added : te7_lat lookup table                     // [150]
-          : 3 : Added : tmi_### constants                        // [150]
-          : 4 : Added : lat_### constants                        // [150]
-          : 5 : Added : d_t_x   uniform (Not In Shader Yet)      // [150]
-          : 6 : Added : d_t_y   uniform (Not In Shader Yet)      // [150]
-          : 7 : Added : d_te7   uniform (Not In Shader Yet)      // [150]
+    [151] : Shift held down to zoom. Otherwise cycle through     // [151]
+          : tile size exponents.                                 // [151]
+          : NEXT: Render Tile Size In SHADER CODE.               // [151]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
