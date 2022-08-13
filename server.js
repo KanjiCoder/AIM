@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_151             :// // [151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_152             :// // [152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---]
 //:CONFIGURATION:[109]:======================================:// // [---]
@@ -4429,6 +4429,38 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 //|[ @$$$$$@ ]                                               |// // [102]
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [102]
 
+    const   F_EDIGAME_MGX_TGX = "[FIX:DUX_GTX]" ;                // [152]
+    const   F_EDIGAME_MGX_DTX = "[FIX:DUX_GTX]" ;                // [152]
+    const   F_EDIGAME_DUX_TGX = "[FIX:DUX_GTX]" ;                // [152]
+    const   F_EDIGAME_DUX_DTX = "[FIX:DUX_GTX]" ;                // [152]
+                                                                 // [152]
+    const   F_EDIGAME_DUX_GTX = function                         // [152]
+    PRIVATE_F_EDIGAME_DUX_GTX(        //: [DUX]===>[GTX] ://     // [152]
+                                                                 // [152]
+        i_dux //: @i_dux@ : Input - DiscreteUnit X :-----://     // [152]
+    ){                                                           // [152]
+        //:[ATF]:  DiscreteUnit_X => GlobalTile_X  :[ATF]://     // [152]
+
+        return( 0 ); //:TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! [152]
+
+    };;                                                          // [152]
+                                                                 // [152]
+    const   F_EDIGAME_MGY_TGY = "[FIX:DUY_DTY]" ;                // [152]
+    const   F_EDIGAME_MGY_DTY = "[FIX:DUY_DTY]" ;                // [152]
+    const   F_EDIGAME_DUY_TGY = "[FIX:DUY_DTY]" ;                // [152]
+    const   F_EDIGAME_DUY_DTY = "[FIX:DUY_GTY]" ;                // [152]
+                                                                 // [152]
+    const   F_EDIGAME_DUY_GTY = function                         // [152]
+    PRIVATE_F_EDIGAME_DUY_GTY(                                   // [152]
+                                                                 // [152]
+        i_duy //: @i_duy@ : Input - DiscreteUnit Y :-----://     // [152]
+    ){                                                           // [152]
+        //:[ATF]:  DiscreteUnit_Y => GlobalTile_Y  :[ATF]://     // [152]
+
+        return( 0 ); //:TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! [152]
+
+    };;                                                          // [152]
+
     const   F_EDIGAME_MOD_LOG = function                         // [103]
     PRIVATE_F_EDIGAME_MOD_LOG(                                   // [103]
                                                                  // [103]
@@ -4984,6 +5016,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 
     const   F_EDIGAME_P_X_DUX = "[FIX:MOUMAST_NOT_EDIGAME]" ;    // [148]
 
+    const   F_MOUMAST_P_X_DMX = "[DOESNT_HAVE_TO_BE_MOUSE]" ;    // [152]
     const   F_MOUMAST_P_X_DUX = function                         // [145]
     PRIVATE_F_MOUMAST_P_X_DUX(                                   // [145]
                                                                  // [145]
@@ -5068,6 +5101,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 
     const   F_EDIGAME_P_Y_DUY = "[FIX:MOUMAST_NOT_EDIGAME]" ;    // [148]
 
+    const   F_MOUMAST_P_Y_DMY = "[DOESNT_HAVE_TO_BE_MOUSE]" ;    // [152]
     const   F_MOUMAST_P_Y_DUY = function                         // [145]
     PRIVATE_F_MOUMAST_P_Y_DUY(                                   // [145]
                                                                  // [145]
@@ -5161,8 +5195,17 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         d_edigame_edi.mou_p_x =( mov_p_x );                      // [144]
         d_edigame_edi.mou_p_y =( mov_p_y );                      // [144]
                                                                  // [---]
+    
+        //: [152] TODO: d_m_x ==> d_dmx  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI [152]
+        //: [152] TODO: d_m_y ==> d_dmy  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI [152]
+        //: [152] TODO: d_t_x ==> d_gtx  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI [152]
+        //: [152] TODO: d_t_y ==> d_gty  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< NOTICE_ME_SENPAI [152]
+
         d_m_x =( F_MOUMAST_P_X_DUX( mov_p_x ) );                 // [145]
         d_m_y =( F_MOUMAST_P_Y_DUY( mov_p_y ) );                 // [145]
+                                                                 // [---]
+        d_t_x =( F_EDIGAME_DUX_GTX(   d_m_x ) );                 // [152]
+        d_t_y =( F_EDIGAME_DUY_GTY(   d_m_y ) );                 // [152]
                                                                  // [---]
     };;                                                          // [143]
                                                                  // [143]
@@ -6665,6 +6708,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : 6 : Added : d_t_y   uniform (Not In Shader Yet)      // [151][150]
           : 7 : Added : d_te7   uniform (Not In Shader Yet)      // [151][150]
 
+    [151] : Shift held down to zoom. Otherwise cycle through     // [152][151]
+          : tile size exponents.                                 // [152][151]
+          : NEXT: Render Tile Size In SHADER CODE.               // [152][151]
+
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -8146,14 +8193,45 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     @TE7_NEX@ : Next te7 value                                   // [151]
     @TE7_BAK@ : Back te7 value ( backwards / previous )          // [151]
 
+    @MGY_TGY@ : WRONG, USE[ DUX_GTX ]                            // [152]
+    @MGX_TGX@ : WRONG, USE[ DUY_GTY ]                            // [152]
+    @MGX@ ::::: WRONG, USE[ DMX ] mgx:mouseglobalx               // [152]
+    @MGY@ ::::: WRONG, USE[ DMY ] mgy:mouseglobaly               // [152]
+    @TGX@ ::::: WRONG, USE[ GTX ] tgx:tileglobalx                // [152]
+    @TGY@ ::::: WRONG, USE[ GTY ] tgy:tileglobaly                // [152]
+                                                                 // [152]
+    d_m_x ==> d_mgx ==> d_dux ==> FINAL_ANSWER[ d_dmx ]          // [152] <<<<<<<<<<<<<<<< [152] NOTICE_ME_SENPAI : TODO : MONKEY_WRENCH_MACROS [152]
+    d_m_y ==> d_mgy ==> d_duy ==> FINAL_ANSWER[ d_dmy ]          // [152] <<<<<<<<<<<<<<<< [152] NOTICE_ME_SENPAI : TODO : MONKEY_WRENCH_MACROS [152]
+    d_t_x ==> d_tgx ==> d_dtx ==> FINAL_ANSWER[ d_gtx ]          // [152] <<<<<<<<<<<<<<<< [152] NOTICE_ME_SENPAI : TODO : MONKEY_WRENCH_MACROS [152]
+    d_t_y ==> d_tgy ==> d_dty ==> FINAL_ANSWER[ d_gty ]          // [152] <<<<<<<<<<<<<<<< [152] NOTICE_ME_SENPAI : TODO : MONKEY_WRENCH_MACROS [152]
+                                                                 // [152]
+    @d_dmx@ : Discrete Mouse Position Y (in THE_DUM)             // [152]
+    @d_dmy@ : Discrete Mouse Position X (in THE_DUM)             // [152]
+    @d_gtx@ : Global Tile X                                      // [152]
+    @d_gty@ : Global Tile Y                                      // [152]
+                                                                 // [152]
+    @DUX_GTX@ : DiscreteUnitX ===> GlobalTileX                   // [152]
+    @DUY_GTY@ : DiscreteUnitY ===> GlobalTileY                   // [152]
+    @DUX@     : DiscreteUnitX                                    // [152]
+    @DUY@     : DiscreteUnitY                                    // [152]
+    @GTX@     : GlobalTileX                                      // [152]
+    @GTY@     : GlobalTileY                                      // [152]
+                                                                 // [152]
+    @i_mgx@ : DONT_USE[ i_mgx /AKA/ Input - Mouse Global X ]     // [152]
+    @i_mgy@ : DONT_USE[ i_mgy /AKA/ Input - Mouse Global Y ]     // [152]
+    @i_dux@ : Input Discrete Unit X ( could be global mouse )    // [152]
+    @i_duy@ : Input Discrete Unit Y ( could be global mouse )    // [152]
+
+
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [151] : Shift held down to zoom. Otherwise cycle through     // [151]
-          : tile size exponents.                                 // [151]
-          : NEXT: Render Tile Size In SHADER CODE.               // [151]
+    [151] : Figured out function names and variable names.       // [152]
+          : Also added annoying code to remind myself to         // [152]
+          : refactor one functions are finished.                 // [152]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
