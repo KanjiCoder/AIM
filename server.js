@@ -6805,6 +6805,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : NEXT[ CORE_LOGIC_OF[ TE7_DUX_GTX ] ]                 // [154][153]
           : NEXT[ CORE_LOGIC_OF[ TE7_DUY_GTY ] ]                 // [154][153]
 
+    [154] : Finished Math For DiscreteUnits ==> GlobalTile       // [155][154]
+          : NEXT : Render active tile in GPU code.               // [155][154]
 
 *** *************************************** CHANGE_LOG _____ ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -8331,8 +8333,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [154] : Finished Math For DiscreteUnits ==> GlobalTile       // [154]
-          : NEXT : Render active tile in GPU code.               // [154]
+    [155] : Added shader code to render the active tile          // [155]
+          : that user's mouse is over. Lights up red.            // [155]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
