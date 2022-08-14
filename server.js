@@ -2258,11 +2258,6 @@ if( /** __PIX2048__ **/ notnode ){                               // [156]
     var d_pix0512 = new Uint8Array( 4 *  512 *  512 );           // [156]
 };;                                                              // [156]
                                                                  // [---]
-if( /** __PIX2048__ **/ notnode ){                               // [156]
-                                                                 // [156]
-    /** NO_DATA_HERE_YET **/                                     // [156]
-                                                                 // [156]
-};;                                                              // [156]
 if( /** __TILEBOI__ **/ notnode ){                               // [156]
                                                                  // [156]
     /** NO_DATA_HERE_YET **/                                     // [156]
@@ -6861,7 +6856,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [154] : Finished Math For DiscreteUnits ==> GlobalTile       // [155][154]
           : NEXT : Render active tile in GPU code.               // [155][154]
 
-*** *************************************** CHANGE_LOG _____ ***   [088]
+    [155] : Added shader code to render the active tile          // [156][155]
+          : that user's mouse is over. Lights up red.            // [156][155]
+
+*** *************************************** CHANGE_LOG [CLB] ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
 //:HASHTAG_OR_ATTED_COMMENTS:[085]:==========================://
@@ -8381,13 +8379,16 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
               : ACCURATE BUT POLITICALLY INCORRECT DESCRIPTOR.   // [154]
               : ( starts with m , ends with on )                 // [154]
 
+    C__L__B   : C_H_A_N_G_E____L_O_G____B_O_T_T_O_M              // [156]
+              : (written weirdly to prevent me from              // [156]
+              : (getting her when pressing CTRL+F)               // [156]
+
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [155] : Added shader code to render the active tile          // [155]
-          : that user's mouse is over. Lights up red.            // [155]
+    [156] : Stubbed in: TILEBOI , PIX2048 , PIX0512              // [156]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
