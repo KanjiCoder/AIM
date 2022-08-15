@@ -6878,7 +6878,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [159] : [_VIDEO_159_TILE_DATA_LAYOUT_EXPLAINED_]             // [160][159]
           :      :                                               // [160][159]
-          : NEXT : Add constants that appear in COMMENT          // [160][159]
+    : WASNT_NEXT : Add constants that appear in COMMENT          // [160][159]
           :      : diagrams to the CODE sections.                // [160][159]
 
 *** *************************************** CHANGE_LOG [CLB] ***   [088]
