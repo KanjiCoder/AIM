@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_160             :// // [160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_161             :// // [161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---]
 //:CONFIGURATION:[109]:======================================:// // [---]
@@ -93,10 +93,10 @@
 //:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]:===================://
 /**----------------------------------------------------------:::
     
-    Coding Convention ( s ):                               [063]
-                                                           [063]
-        let : Only for temporary [object/system] references[063]
-        let : Okay... And for "temp macros"                [066]
+    Coding Convention ( s ):                                     // [063]
+                                                                 // [063]
+        let : Only for temporary [object/system] references      // [063]
+        let : Okay... And for "temp macros"                      // [066]
 
     DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
 
@@ -109,16 +109,16 @@
         i_    : input    ( LOCAL  )
         o_    : output   ( LOCAL  )
 
-    SQL Table Prefixes :                             //:[041]://
-                                                     //:[041]://
-        @tab@ : tab_ : A Normal Table                //:[041]://
-        @lnk@ : lnk_ : A Link   Table                //:[041]://    
-        @con@ : con_ : A CONstraint                  //:[042]://
-         @c_@ :   c_ : Column Name                   //:[041]://
-         @k_@ :   k_ : Foriegn_Key ( id )            //:[041]://
-        @iid@ : iid  : Primary_Key , NOT A PREFIX    //:[041]://
-                                                     //:[041]://
-        NO MORE SQL PREFIXES THAN THAT!!!            //:[041]://
+    SQL Table Prefixes :                                         // [041] 
+                                                                 // [041] 
+        @tab@ : tab_ : A Normal Table                            // [041] 
+        @lnk@ : lnk_ : A Link   Table                            // [041]    
+        @con@ : con_ : A CONstraint                              // [042] 
+         @c_@ :   c_ : Column Name                               // [041] 
+         @k_@ :   k_ : Foriegn_Key ( id )                        // [041] 
+        @iid@ : iid  : Primary_Key , NOT A PREFIX                // [041] 
+                                                                 // [041] 
+        NO MORE SQL PREFIXES THAN THAT!!!                        // [041] 
 
 :::----------------------------------------------------------**/
 //:===================:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]://
@@ -139,10 +139,60 @@
 //:TOP_LEVEL_CONSTANT_MACROS:[085]:==========================:// // [085]
                                                                  // [085]
     //:TAG[ constants | macros | constant | macro ]://           // [088]
-                                                                 
+    //:TAG[ CONSTANTS_SECTION | constants-section ]://           // [161]
+    //:TAG[ constants_section | constants_section ]://           // [161]
+    //:TAG[ constantssection  | CONSTANTSSECTION  ]://           // [161]
+                                                       
     const c_fps =(  30  );  /** Simulation FrameRate **/         // [088][085]
                                                                  
     const c_dud = "[YOU_MEAN:c_dum:NO:DiscreteUnits:DUM]" ;      // [088]
+
+    //:master_memory_cell_constants:[161]:---------------://     // [161]
+                                                                 // [161]
+        //:SEE[ AT[ AIM_MASTER_MEMORY_LAYOUT ] ]://              // [161]
+        const      _AIM_MASTER_MEMORY_LAYOUT_ ="[HACK]"          // [161]
+                                                                 // [161]
+        ,   c_mm0 =( 0),c_mm1 =( 1),c_mm2 =( 2),c_mm3 =( 3)      // [161]
+                                                                 // [161]
+        ,   c_mm4 =( 4),c_mm5 =( 5),c_mm6 =( 6),c_mm7 =( 7)      // [161]
+                                                                 // [161]
+        ,   c_mm8 =( 8),c_mm9 =( 9),c_mma =(10),c_mmb =(11)      // [161]
+                                                                 // [161]
+        ,   c_mmc =(12),c_mmd =(13),c_mme =(14),c_mmf =(15)      // [161]
+                                                                 // [161]
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [161]
+                                                                 // [161]
+    //:---------------:master_memory_cell_constants:[161]://     // [161]
+    //:rooms_in_hotels_constants:[161]:------------------://     // [161]
+                                                                 // [161]
+        //:SEE[ AT[  LEVEL_PACK_DATA_LAYOUT  ] ]://              // [161]
+        const       _LEVEL_PACK_DATA_LAYOUT_ ="[HACK]"           // [161]
+                                                                 // [161]
+    ,                      c_r00=( 0)                            // [161]
+                                                                 // [161]
+    ,           c_r01=( 1),c_r02=( 2),c_r03=( 3)                 // [161]
+                                                                 // [161]
+    ,c_r04=( 4),c_r05=( 5),c_r06=( 6),c_r07=( 7),c_r08=( 8)      // [161]
+                                                                 // [161]
+    ,           c_r09=( 9),c_r10=(10),c_r11=(11)                 // [161]
+                                                                 // [161]
+    ,                      c_r12=(12)                            // [161]
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [161]
+                                                                 // [161]
+    //:------------------:rooms_in_hotels_constants:[161]://     // [161]
+    //:room_aka_level_constants:[161]:-------------------://     // [161]
+                                                                 // [161]
+        //:SEE[ AT[ LEVEL_DATA_LAYOUT ] ]://                     // [161]
+        const      _LEVEL_DATA_LAYOUT_ = "[HACK]"                // [161]
+                                                                 // [161]
+        ,   c_lay_til =( 0 )    //: LAYER_FOR_TILES ://          // [161]
+        ,   c_lay_bom =( 1 )    //: LAYER_FOR_BOMBS ://          // [161]
+        ,   c_lay_fad =( 2 )    //: LAYER_FOR_FADA  ://          // [161]
+                                                                 // [161]
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [161]
+                                                                 // [161]
+    //:-------------------:room_aka_level_constants:[161]://     // [161]
+
                                                                  
     //:#_DEFINE_ALL_DISCRETE_PLANK_CONSTANTS_#                   // [098]
                                                                  // [098]
@@ -793,6 +843,13 @@
     //:TAG[ its_wrong_carl .............................]://     // [086]
     //:TAG[ illegal-section | illegal-section | illegals]://     // [109]
     //:TAG[ illegal section | illegalsection | illsec   ]://     // [109]
+                                                                 // [---]
+    const i_c_x = "[TOO_AMBIGIOUS_USE:i_h3x]______________";     // [161]
+    const i_c_y = "[TOO_AMBIGIOUS_USE:i_h3y]______________";     // [161]
+    const i_h_x = "[TOO_AMBIGIOUS_USE:i_r5x]______________";     // [161]
+    const i_h_y = "[TOO_AMBIGIOUS_USE:i_r5y]______________";     // [161]
+    const i_t_x = "[TOO_AMBIGIOUS_USE:i_ltx || i_gtx ]____";     // [161]
+    const i_t_y = "[TOO_AMBIGIOUS_USE:i_ltx || i_gtx ]____";     // [161]
                                                                  // [---]
     const d_te7_t_s = "[:::FIX:::te7_peb]" ;                     // [153]
     const d_te7_t_w = "[:::FIX:::te7_peb]" ;                     // [153]
@@ -4530,7 +4587,88 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
 //|[ @$$$$$@ ]                                               |// // [156]
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [156]
 
-    /** TILEBOI functions go here **/                            // [156]
+    const _TILEBOI_WRONG_FUNCTION_NAMES_ = "[HACK]" ////////     // [161]
+                                                    ////////     // [161]
+    //: FTB_ES_PG_U32 == [F_TILEBOI_[E_S]_[P_G]_U32]:::::://     // [161]
+    //: FTB ......... == "F_TILEBOI"                :::::://     // [161]
+    //: ....ES....... == "EDI" || "SIM"             :::::://     // [161]
+    //: .......PG.... == "PUT" || "GET"             :::::://     // [161]
+    //: ..........U32 == "U32" (uint32 input)       :::::://     // [161]
+                                                    ////////     // [161]
+    ,   F_TILEBOI_U32_PUT     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_PUT_U32     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_U32_GET     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_GET_U32     = "[FTB_ES_PG_U32]"   ////////     // [161]
+                                                    ////////     // [161]
+    ,   F_TILEBOI_U32_PUT_ANY = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_U32_GET_ANY = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_U32_ANY_GET = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_U32_ANY_PUT = "[FTB_ES_PG_U32]"   ////////     // [161]
+                                                    ////////     // [161]
+    ,   F_TILEBOI_PUT_SIM     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_GET_SIM     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_PUT_EDI     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_GET_EDI     = "[FTB_ES_PG_U32]"   ////////     // [161]
+                                                    ////////     // [161]
+    ,   F_TILEBOI_SIM_PUT     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_SIM_GET     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_EDI_PUT     = "[FTB_ES_PG_U32]"   ////////     // [161]
+    ,   F_TILEBOI_EDI_GET     = "[FTB_ES_PG_U32]"   ////////     // [161]
+                                                    ////////     // [161]
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [161]
+                                                                 // [161]
+    //:--------------------------------------------------://     // [161]
+    //: I didn't like these variable names in HOTEL13.JS ://     // [161]
+    //: I found them a bit too ambigious, avoid them.    ://     // [161]
+    //:--------------------------------------------------://     // [161]
+    //: @i_c_x@ : Used in Hotel13.JS , use[ i_h3x ] :----://     // [161]
+    //: @i_c_y@ : Used in Hotel13.JS , use[ i_h3y ] :----://     // [161]
+    //: @i_h_x@ : Used in Hotel13.JS , use[ i_r5x ] :----://     // [161]
+    //: @i_h_y@ : Used in Hotel13.JS , use[ i_r5y ] :----://     // [161]
+    //: @i_t_x@ : USE_SIM[ i_ltx ] USE_EDI[ i_gtx ] :----://     // [161]
+    //: @i_t_y@ : USE_SIM[ i_lty ] USE_EDI[ i_gty ] :----://     // [161]
+    //:--------------------------------------------------://     // [161]
+                                                                 // [161]
+    const   F_TILEBOI_EDI_PUT_U32 = function                     // [161]
+    PRIVATE_F_TILEBOI_EDI_PUT_U32(    //:TAG[ FTB_ES_PG_U32 ]:// // [161]
+                     //:-------------------------------------:// // [161]
+        i_te7,i_la3  //:<--TileSize_And_Layer                :// // [161]
+    ,   i_gtx,i_gty  //:<--Dum_Global_Coordinate             :// // [161]
+    ,   i_u32        //:<--Raw_U32_Tile_Value                :// // [161]
+                     //:-------------------------------------:// // [161]
+    ){                                                           // [161]
+        ERR("[TODO:CORE_LOGIC]");                                // [161]
+    };;                                                          // [161]
+    const   F_TILEBOI_EDI_GET_U32 = function                     // [161]
+    PRIVATE_F_TILEBOI_EDI_GET_U32(    //:TAG[ FTB_ES_PG_U32 ]:// // [161]
+                     //:-------------------------------------:// // [161]
+        i_te7,i_la3  //:<--TileSize_And_Layer                :// // [161]
+    ,   i_gtx,i_gty  //:<--Dum_Global_Coordinate             :// // [161]
+    ,   i_u32        //:<--Raw_U32_Tile_Value                :// // [161]
+                     //:-------------------------------------:// // [161]
+    ){                                                           // [161]
+        ERR("[TODO:CORE_LOGIC]");                                // [161]
+    };;                                                          // [161]
+    const   F_TILEBOI_SIM_PUT_U32 = function                     // [161]
+    PRIVATE_F_TILEBOI_SIM_PUT_U32(    //:TAG[ FTB_ES_PG_U32 ]:// // [161]
+                     //:-------------------------------------:// // [161]
+        i_te7,i_la3  //:<--TileSize_And_Layer                :// // [161]
+    ,   i_stx,i_sty  //:<--#_Simulation_Tile_#(coord)[x|y]   :// // [161]
+    ,   i_u32        //:<--Raw_U32_Tile_Value                :// // [161]
+                     //:-------------------------------------:// // [161]
+    ){                                                           // [161]
+        ERR("[TODO:CORE_LOGIC]");                                // [161]
+    };;                                                          // [161]
+    const   F_TILEBOI_SIM_GET_U32 = function                     // [161]
+    PRIVATE_F_TILEBOI_SIM_GET_U32(    //:TAG[ FTB_ES_PG_U32 ]:// // [161]
+                     //:-------------------------------------:// // [161]
+        i_te7,i_la3  //:<--TileSize_And_Layer                :// // [161]
+    ,   i_stx,i_sty  //:<---#_Simulation_Tile_#(coord)[x|y]  :// // [161]
+    ,   i_u32        //:<--Raw_U32_Tile_Value                :// // [161]
+                     //:-------------------------------------:// // [161]
+    ){                                                           // [161]
+        ERR("[TODO:CORE_LOGIC]");                                // [161]
+    };;                                                          // [161]
 
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [156]
 //|                                               [ @$$$$$@ ]|// // [156]
@@ -5591,66 +5729,66 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
         });;
     }else
     //:dabitch_crud:[046]:-----------------------------------://
-    if(  1                                           //:[046]://
-    &&   "DABITCH" === sob.m_seg[ 0 ]                //:[046]://
-                                                     //:[046]://
-    &&      (  0                                     //:[046]://
+    if(  1                                                       // [046] 
+    &&   "DABITCH" === sob.m_seg[ 0 ]                            // [046] 
+                                                                 // [046] 
+    &&      (  0                                                 // [046] 
             || "C" === sob.m_seg[ 1 ]  //: DABITCH/C/TAB_HEX ://
             || "R" === sob.m_seg[ 1 ]  //: DABITCH/R/TAB_HEX ://
             || "U" === sob.m_seg[ 1 ]  //: DABITCH/U/TAB_HEX ://
             || "D" === sob.m_seg[ 1 ]  //: DABITCH/D/TAB_HEX ://
-            )                                        //:[046]://
-    &&   "TAB_HEX" === sob.m_seg[ 2 ]                //:[046]://
-    ){                                               //:[046]://
-        var     nam = sob.m_seg[ 3 ];                //:[046]://
-        var     hex = sob.m_seg[ 4 ];                //:[046]://
-        var c_r_u_d = sob.m_seg[ 1 ];                //:[046]://
-        var crud ={                                  //:[046]://
+            )                                                    // [046] 
+    &&   "TAB_HEX" === sob.m_seg[ 2 ]                            // [046] 
+    ){                                                           // [046] 
+        var     nam = sob.m_seg[ 3 ];                            // [046] 
+        var     hex = sob.m_seg[ 4 ];                            // [046] 
+        var c_r_u_d = sob.m_seg[ 1 ];                            // [046] 
+        var crud ={                                              // [046] 
             "C" : F_DABITCH_C_TAB_HEX  //: DABITCH/C/TAB_HEX ://
         ,   "R" : F_DABITCH_R_TAB_HEX  //: DABITCH/R/TAB_HEX ://
         ,   "U" : F_DABITCH_U_TAB_HEX  //: DABITCH/U/TAB_HEX ://
         ,   "D" : F_DABITCH_D_TAB_HEX  //: DABITCH/D/TAB_HEX ://
-        };;                                          //:[046]://
-        (crud[ c_r_u_d ])(                           //:[046]://
-            nam                                      //:[046]://
-        ,   hex                                      //:[046]://
-        ).then( ( i_saywhat )=>{                     //:[046]://
-                                                     //:[046]://
-            F_ASERVER_ENDJSON( sob , i_saywhat );    //:[046]://
-                                                     //:[046]://
-        }, F_NICEGUY );;                             //:[046]://
-    }else                                            //:[046]://
+        };;                                                      // [046] 
+        (crud[ c_r_u_d ])(                                       // [046] 
+            nam                                                  // [046] 
+        ,   hex                                                  // [046] 
+        ).then( ( i_saywhat )=>{                                 // [046] 
+                                                                 // [046] 
+            F_ASERVER_ENDJSON( sob , i_saywhat );                // [046] 
+                                                                 // [046] 
+        }, F_NICEGUY );;                                         // [046] 
+    }else                                                        // [046] 
     //:-----------------------------------:dabitch_crud:[046]://
     if(  1                                                      
-    &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [049]://
-    &&   "MAKETAB" === sob.m_seg[ 1 ] //: < < < < < < < [049]://
-    &&   "TAB_HEX" === sob.m_seg[ 2 ] //: < < < < < < < [049]://
-    ){   //: PATH :   DABITCH/MAKETAB/TAB_HEX < < < < < [049]://
-         //: FUNC : F_DABITCH_MAKETAB_TAB_HEX < < < < < [049]://
+    &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [049]:// // [049]
+    &&   "MAKETAB" === sob.m_seg[ 1 ] //: < < < < < < < [049]:// // [049]
+    &&   "TAB_HEX" === sob.m_seg[ 2 ] //: < < < < < < < [049]:// // [049]
+    ){   //: PATH :   DABITCH/MAKETAB/TAB_HEX < < < < < [049]:// // [049]
+         //: FUNC : F_DABITCH_MAKETAB_TAB_HEX < < < < < [049]:// // [049]
                                                                 
-        F_DABITCH_MAKETAB_TAB_HEX(  )                //:[049]://
-        .then( ( i_saywhat )=>{                      //:[049]://
-                                                     //:[049]://
-            F_ASERVER_ENDJSON( sob , i_saywhat );    //:[049]://
-                                                     //:[049]://
-        }, F_NICEGUY );;                             //:[049]://
+        F_DABITCH_MAKETAB_TAB_HEX(  )                            // [049] 
+        .then( ( i_saywhat )=>{                                  // [049] 
+                                                                 // [049] 
+            F_ASERVER_ENDJSON( sob , i_saywhat );                // [049] 
+                                                                 // [049] 
+        }, F_NICEGUY );;                                         // [049] 
     }else
     if(  1
-    &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [042]://
-    &&   "DROPTAB" === sob.m_seg[ 1 ] //: < < < < < < < [042]://
-    &&   "TAB_HEX" === sob.m_seg[ 2 ] //: < < < < < < < [042]://
-    ){   //: PATH :   DABITCH/DROPTAB/TAB_HEX < < < < < [042]://
-         //: FUNC : F_DABITCH_DROPTAB_TAB_HEX < < < < < [042]://
-                                                  
-        F_DABITCH_DROPTAB_TAB_HEX(                   //:[042]://
-                                                     //:[044]://
-            sob.m_seg[ 3 ] //:Password://            //:[044]://
-                                                     //:[044]://
-        ).then( ( i_saywhat )=>{                     //:[044]://
-                                                     //:[044]://
-            F_ASERVER_ENDJSON( sob , i_saywhat );    //:[044]://
-                                                     //:[044]://
-        }, F_NICEGUY );;                             //:[044]://
+    &&   "DABITCH" === sob.m_seg[ 0 ] //: < < < < < < < [042]:// // [042]
+    &&   "DROPTAB" === sob.m_seg[ 1 ] //: < < < < < < < [042]:// // [042]
+    &&   "TAB_HEX" === sob.m_seg[ 2 ] //: < < < < < < < [042]:// // [042]
+    ){   //: PATH :   DABITCH/DROPTAB/TAB_HEX < < < < < [042]:// // [042]
+         //: FUNC : F_DABITCH_DROPTAB_TAB_HEX < < < < < [042]:// // [042]
+                                                                 // [---]
+        F_DABITCH_DROPTAB_TAB_HEX(                               // [042] 
+                                                                 //      [044] 
+            sob.m_seg[ 3 ] //:Password://                        //      [044] 
+                                                                 //      [044] 
+        ).then( ( i_saywhat )=>{                                 //      [044] 
+                                                                 //      [044] 
+            F_ASERVER_ENDJSON( sob , i_saywhat );                //      [044] 
+                                                                 //      [044] 
+        }, F_NICEGUY );;                                         //      [044] 
     }else{                                                       // [140][027]
                                                                  // [140][027]
         sob.m_giv.writeHead( 200 ,  d_htm  );                    // [140][027]
@@ -6880,6 +7018,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :      :                                               // [160][159]
     : WASNT_NEXT : Add constants that appear in COMMENT          // [160][159]
           :      : diagrams to the CODE sections.                // [160][159]
+
+    [160] : Diagarammed Master Memory Layout In Comments.        // [161][160]
 
 *** *************************************** CHANGE_LOG [CLB] ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -8677,13 +8817,59 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         @mmf@ : M_M_C_I 15 :  *mmf* #DTUFP#               :::::  // [160]
                                                           :::::  // [160]
     :-----------------------------------------------------:::::  // [160]
+    
+    @A_L_P@ : Active_Level_Pack                                  // [161]
+    @TOO_AMBIG@ : #TOO_AMBIG# : Too Ambiguous , Avoid Using      // [161]
+                              : Identifier in code.              // [161]
+                                                                 // [161]
+    @i_h3x@ / @h3x@ : Which Hotel ? X coordinate . [ 0|1|2 ]     // [161]
+    @i_h3y@ / @h3y@ : Which Hotel ? Y coordinate . [ 0|1|2 ]     // [161]
+    @i_r5x@ / @r5x@ : Which Room/Level ? X Coord. [ 0 to 4 ]     // [161]
+    @i_r5y@ / @r5y@ : Which Room/Level ? Y Coord. [ 0 to 4 ]     // [161]
+                                                                 // [161]
+    @i_gtx@ / @gtx@ : Input Global Tile X For EDI_PUT | EDI_GET  // [161]
+    @i_gty@ / @gty@ : Input Global Tile Y For EDI_PUT | EDI_GET  // [161]
+                                                                 // [161]
+    @i_hlx@ / @hlx@ : Hotel/LevelPack Local X <--@TOO_AMBIG@     // [161]
+    @i_hly@ / @hly@ : Hotel/LevelPack Local Y <--@TOO_AMBIG@     // [161]
+    @i_rlx@ / @rlx@ : Room/Level      Local X <--@TOO_AMBIG@     // [161]
+    @i_rly@ / @rly@ : Room/Level      Local Y <--@TOO_AMBIG@     // [161]
+    @i_llx@ / @llx@ : USE[ r l x ]                               // [161]
+    @i_lly@ / @lly@ : USE[ r l y ]                               // [161]
+                                                                 // [161]
+    @i_ltx@ / @ltx@ / #i_ltx# / #ltx# :                          // [161]
+    @i_lty@ / @lty@ / #i_lty# / #lty# :                          // [161]
+                                                                 // [161]
+        Input Local Tile X For SIM_PUT | SIM_GET                 // [161]
+        Input Local Tile Y For SIM_PUT | SIM_GET                 // [161]
+                                                                 // [161]
+        [ i_ltx / ltx ]TOO_AMBIGUOUS_USE[ i_stx , i_sty ]        // [161]
+                                                                 // [161]
+    @i_stx@ / @stx@ : Simulation Tile X (Local To @A_L_P@ )      // [161]
+    @i_sty@ / @sty@ : Simulation Tile Y (Local To @A_L_P@ )      // [161]
+                                                                 // [161]
+    #_Simulation_Tile_# :                                        // [161]
+                                                                 // [161]
+        A simulation tile coordinate is local to the             // [161]
+        active level pack. It's coordinate can be greater        // [161]
+        than ( 64-1 ) because it exists within a 5x5             // [161]
+        grid of levels. Known as a [levelpack/hotel].            // [161]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
             
-    [160] : Diagarammed Master Memory Layout In Comments.        // [160]
+    [161] : 1. Added Constants For :               :::::::::     // [161]
+          :     1.1 : Master Memory Layout         :::::::::     // [161]
+          :     1.2 : Room Indexes                 :::::::::     // [161]
+          :     1.3 : Layer Constants              :::::::::     // [161]
+          :                                        :::::::::     // [161]
+          : 2. Stubbed In Four TILEBOI Functions.  :::::::::     // [161]
+          :     2.1 : F _ TILEBOI _ EDI_PUT _ U32  :::::::::     // [161]
+          :     2.2 : F _ TILEBOI _ EDI_GET _ U32  :::::::::     // [161]
+          :     2.3 : F _ TILEBOI _ SIM_PUT _ U32  :::::::::     // [161]
+          :     2.4 : F _ TILEBOI _ SIM_GET _ U32  :::::::::     // [161]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
