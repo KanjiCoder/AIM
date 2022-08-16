@@ -7538,6 +7538,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [164] : 1 : Added ASS_TUP_EQU function.                      // [165][164]
           : 2 : Error Checked r4x & r4y lookup tables.           // [165][164]
 
+    [165] : More lookup tables for going from the                // [166][165]
+          : [RENDERING_LAYOUT] of levelpack to the               // [166][165]
+          : [DATA______LAYOUT].                                  // [166][165]
+
 *** *************************************** CHANGE_LOG [CLB] ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -9558,9 +9562,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
                                                                   
-    [165] : More lookup tables for going from the                // [165]
-          : [RENDERING_LAYOUT] of levelpack to the               // [165]
-          : [DATA______LAYOUT].                                  // [165]
+    [166] : Finally Wrote Conversion From Tile Coordinate        // [166]
+          : on levelpack to data location within our             // [166]
+          : master memory bitmap. ( d_pix2048 ).                 // [166]
+          : [ F_TILEBOI _ HI9 _ TE7 _ LA3 _ TLX _ TLY _ DPC ]    // [166]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
