@@ -9697,6 +9697,11 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [166]
                                                               |  // [166]
     :---------------------------------------------------------+  // [166]
+                                                                 // [166]
+    @PIX_DEX@ : Pixel INDEX     ( 1D location of a pixel   )     // [166]
+    @PIX_COM@ : Pixel COMPONENT ( 1D Location of pixel's   )     // [166]
+                                ( 1st byte. RED BYTE if    )     // [166]
+                                ( using RGBA,which we are. )     // [166]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
