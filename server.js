@@ -5141,7 +5141,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
                      //:-------------------------------------:// //      [161]
         i_te7,i_la3  //:<--TileSize_And_Layer                :// //      [161]
     ,   i_gtx,i_gty  //:<--Dum_Global_Coordinate             :// //      [161]
-    ,   i_u32        //:<--Raw_U32_Tile_Value                :// //      [161]
+    //- i_u32     -////:<--Raw_U32_Tile_Value (#FIX_003#)    :// //      [161]
                      //:-------------------------------------:// //      [161]
     ){                                                           //      [161]
                                                                  // [---]
@@ -9886,6 +9886,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         together after they are shifted into place,           |  // [168]
         we get 0xFFFFFFFF.                                    |  // [168]
     +---------------------------------------------------------+  // [168]
+
+    #FIX_003# : Me being an idiot , the[ GET ]function does      // [169]
+              : __NOT__ take an input u32 ( i_u32 ) value!!!     // [169]
+              : FIX_003 AKA BUG_FIX_003                          // [169]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
