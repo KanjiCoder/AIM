@@ -7105,7 +7105,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 *** CHANGE_LOG _____ *************************************** ***   [088]
 
     TAG[ CHANGE_HISTORY | MISC_DELTA_NOTES ]                    // [088]
-    TAG[ LOG_SECTION ]                                          // [097]
+    TAG[ LOG_SECTION | change-log | changelog ]                 // [169][097]
 
     [018] : TUTORIAL PART 018                                   // [088]
           : https://pastebin.com/ZCFNxebJ                       // [088]
@@ -7703,6 +7703,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [167] : 1 : Fixed bug in comments.                           // [168][167]
           : 2 : Added annotations for comments.                  // [168][167]
+
+    [168] : Added bit UN-packing logic for TILE_PUT              // [169][168]
+          : Added bit    PACKING logic for TILE_GET              // [169][168]
 
 *** *************************************** CHANGE_LOG [CLB] ***   [088]
 *** *************************************** CHANGE_HISTORY _ ***   [088]
@@ -9974,8 +9977,11 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
                                                                   
-    [168] : Added bit UN-packing logic for TILE_PUT              // [168]
-          : Added bit    PACKING logic for TILE_GET              // [168]
+    [169] : Tile cursor now updates correctly when :             // [169]
+                                                                 // [169]
+          : 1 : Panning                                          // [169]
+          : 2 : Zooming                                          // [169]
+          : 3 : Changing Tile Size Exponent Loaded Into Brush    // [169]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
