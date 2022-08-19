@@ -1737,6 +1737,9 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
 
     //: TAG[fragshader5 | frag5 | fragmentshader5 ]      ://    // [122]
 
+    precision highp usampler2D; //:#_SAMPLER_PRECISION_#://     // [173][---]
+    precision mediump float ;                                   // [173][074]
+
     #define SAM usampler2D //: Uint32 Texture Sampler    ://    // [173]
     #define STF texelFetch //: EX: STF( d_pix2048,iv2,0 )://    // [173]
     #define F32 float      //: Shorthand Type == U_CASE  ://    // [089]
@@ -1814,8 +1817,6 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
     //:inn_: innput variable of function.                ://    //      [089]
     //:--------------------------------------------------://    //      [089]
                                                                 // [---]
-    precision highp usampler2D; //:#_SAMPLER_PRECISION_#://     // [173]
-    precision mediump float ;                                   // [074]
                                                                 // [074]
     in  vec2  i_o_tex ; //: @i_o_tex@ :#_I_O_TEX_POINTLESS_#:// // [074]
     out vec4  out_f_c ; //: @out_f_c@ ://                       // [074]
