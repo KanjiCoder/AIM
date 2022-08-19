@@ -1738,7 +1738,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://   [070][069]
     //: TAG[fragshader5 | frag5 | fragmentshader5 ]      ://    // [122]
 
     precision highp usampler2D; //:#_SAMPLER_PRECISION_#://     // [173][---]
-    precision mediump float ;                                   // [173][074]
+    precision mediump float ;   //:#_PRECISION_FIRST_#  ://     // [173][074]
 
     #define SAM usampler2D //: Uint32 Texture Sampler    ://    // [173]
     #define STF texelFetch //: EX: STF( d_pix2048,iv2,0 )://    // [173]
@@ -2278,9 +2278,9 @@ if( /** __ARTGIRL__ **/ notnode ){                               // [063]
     ,   vbo : "[nil][d_artgirl_vbo]"  //:@vbo@://                // [067]  
     ,   vao : "[nil][d_artgirl_vao]"  //:@vao@://                // [067]  
                                                                  // [067]  
-    //- ,   tex : "[nil][d_artgirl_tex]" @tex@ #REM_TEX# -//     // [171][067]  
-    //- ,   lot : "[nil][d_artgirl_lot]" @lot@ #REM_LOT# -//     // [171][067]  
-    //- ,   sam : "[nil][d_artgirl_sam]" @sam@ #REM_SAM# -//     // [171][067]  
+    //- ,   tex : "[nil][d_artgirl_tex]" @tex@ #REM_TEX# -//     // [173][067]  
+    //- ,   lot : "[nil][d_artgirl_lot]" @lot@ #REM_LOT# -//     // [173][067]  
+    //- ,   sam : "[nil][d_artgirl_sam]" @sam@ #REM_SAM# -//     // [173][067]  
                                                                  // [067]  
         /** #_O_P_P_# : One Per Program **/                      // [067]
 
@@ -10365,13 +10365,29 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         use "high precision".                                 |  // [173]
                                                               |  // [173]
     :---------------------------------------------------------+  // [173]
+                                                                 // [173]
+    #_PRECISION_FIRST_# :-------------------------------------+  // [173]
+                                                              |  // [173]
+        You must put precision declarations BEFORE            |  // [173]
+        declaring any variables that use that precision.      |  // [173]
+        Your precision for float probably did NOTHING         |  // [173]
+        and the only reason shader didn't crash long          |  // [173]
+        ago was because floats have a default precision,      |  // [173]
+        but SAMPLERS do not.                                  |  // [173]
+                                                              |  // [173]
+    :---------------------------------------------------------+  // [173]
 
 *** ******************************************************** **/
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://
 /** ******************************************************** ***
                                                                   
-
+    [173] : Wired Up Texture Sampler Uniform                :::  // [173]
+          : NEXT :----: Initial Texture Push On             :::  // [173]
+          :      :----: Render_Pipeline_Load                :::  // [173]
+          : NEXT_NEXT : Dirty 128x128 Blocks Of LevelPacks. :::  // [173]
+          :-----------: SubTexturePush levels where tiles   :::  // [173]
+          :-----------: have changed.                       :::  // [173]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
