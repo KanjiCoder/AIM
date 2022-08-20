@@ -1082,6 +1082,8 @@
     const GET_UV3     = "[FIX:GET_UV3_P2K]" ;                    // [175]
     const GET_UV4     = "[FIX:GET_UV3_P2K]" ;                    // [175]
     const GET_UV4_P2K = "[FIX:GET_UV3_P2K]" ;                    // [175]
+    const GET_P2K_UV3 = "[FIX:GET_UV3_P2K]" ;                    // [175]
+    const GET_P2K_UV4 = "[FIX:GET_UV3_P2K]" ;                    // [175]
                                                                  // [---]
     const uniformi = "[FIX:I32:uniform1i:U32:uniform1ui]"   ;    // [174]
     const c_artgirl_p2k_dex = "[FIX:c _ artgirl _ p2k_lot]" ;    // [174]
