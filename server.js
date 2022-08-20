@@ -1804,8 +1804,8 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
     UNI U32 d_gtx     ;  //: Global_Tile_X               ://     // [157][155]
     UNI U32 d_gty     ;  //: Global_Tile_Y               ://     // [157][155]
     UNI U32 d_te7     ;  //: Active Tile Size Exponent   ://     //      [155]
-    /// UV4   uv4_p2k ;  //: RGBA Sample Of[ d_pix2048 ] ://     // [---][173]
-    /// UV3   uv3_p2k ;  //: All 3 tiles on fragment.    ://     // [175]
+    /// UV4   uv4_p2k ;  //: RGBA Sample Of[ d_pix2048 ] ://     // [175][173]
+    /// UV3   uv3_p2k ;  //: All 3 tiles on fragment.    ://     // [175][---]
     UNI SAM     d_p2k ;  //: Master Memory Sampler       ://     // [---][173]
                                                                  // [---]
     U32 d_te7_dun[ 7 ]=U32[ 7 ](                                 // [155]
@@ -8083,6 +8083,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :-----------: SubTexturePush levels where tiles   :::  // [174][173]
           :-----------: have changed.                       :::  // [174][173]
 
+    [174] : When render pipeline loads , we now push up          // [175][174]
+          : d_pix2048 CPU Side Texture to GPU Side Texture.      // [175][174]
+          :                                                      // [175][174]
+          : NEXT : Shader code so we can see tiles put           // [175][174]
+          : NEXT_NEXT : Confirm texture upload with download     // [175][174]
+          : NEXT_NEXT_NEXT : Sub Texture Push When Put Tiles     // [175][174]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -10948,12 +10955,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
        YES   who doesn't know I exist. -KanjiCoder            |  // [175]
                                                               |  // [175]
     +---------------------------------------------------------+  // [175]
-
+                                                                 // [175]
     @fv4comp@ : FloatVec4 (RGBA Normalized Color)                // [175]
               : COMPosite of all tiles in a given layer          // [175]
               : merged together.                                 // [175]
     @out_fv4comp@ : OUTput fv4comp , in GLSL shader code.        // [175]
-
+                                                                 // [175]
     @M_W_M@ : Denoting is a "Monkey_Wrench_Macro"                // [175]
                                                                          
 *** ******************************************************** **/         
@@ -10961,12 +10968,13 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                          
-    [174] : When render pipeline loads , we now push up          // [174]
-          : d_pix2048 CPU Side Texture to GPU Side Texture.      // [174]
-          :                                                      // [174]
-          : NEXT : Shader code so we can see tiles put           // [174]
-          : NEXT_NEXT : Confirm texture upload with download     // [174]
-          : NEXT_NEXT_NEXT : Sub Texture Push When Put Tiles     // [174]
+    [175] : Began work on layer rendering function   ::::::::::  // [175]
+          : that will take all tile sizes of a given ::::::::::  // [175]
+          : type and composite them together into a  ::::::::::  // [175]
+          : IV4 normalized color pixel.              ::::::::::  // [175]
+          :                                          ::::::::::  // [175]
+          : Rendering will be back-to-front          ::::::::::  // [175]
+          : so we can support transparency.          ::::::::::  // [175]    
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
