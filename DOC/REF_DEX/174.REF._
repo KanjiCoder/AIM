@@ -1,0 +1,66 @@
+       
+    Stolen From : R:\G\A2_JC\_.02._
+    Using for video # 174 , will use to 
+    do initial texture upload.
+
+        const aa2_GPUVCON_pix_Put_Tex_Pix
+        =function(
+            ada_gra
+        ,   uni_pix
+        ){ "use strict"
+
+            var G = ada_gra.con_gra;
+            
+            //: Extract_Variables_From_Container:
+            //:-   -   -   -   -   --==--   -   -   -   -   -://
+            var tex_lot = uni_pix.tex_lot;
+            var tex_han = uni_pix.tex_han;
+            var pix_wid = uni_pix.pix_wid;
+            var pix_hig = uni_pix.pix_hig;
+            var pix_arr = uni_pix.pix_arr;
+            //:-   -   -   -   -   --==--   -   -   -   -   -://
+            
+            //:TP:Texture_Push:------------------------------://
+            //:tp_tp_tp_tp_tp_tp_tp_tptp_tp_tp_tp_tp_tp_tp_tp://
+            
+            G.activeTexture( G.TEXTURE0   + tex_lot );
+            G.bindTexture(   G.TEXTURE_2D , tex_han );
+            
+            //: NEAREST_MIPMAP_NEAREST:
+            //: gamedev.stackexchange.com/questions/158738
+            var T_2D = G.TEXTURE_2D   ;
+            var NEAR = G.NEAREST      ;
+            var EDGE = G.CLAMP_TO_EDGE;
+            
+            var MIN_FIL = G.TEXTURE_MIN_FILTER;
+            var MAG_FIL = G.TEXTURE_MAG_FILTER;
+            var TWRAP_S = G.TEXTURE_WRAP_S;
+            var TWRAP_T = G.TEXTURE_WRAP_T;
+            
+            G.texParameteri( T_2D, MIN_FIL , NEAR );
+            G.texParameteri( T_2D, MAG_FIL , NEAR );
+            G.texParameteri( T_2D, TWRAP_S , EDGE );
+            G.texParameteri( T_2D, TWRAP_T , EDGE );
+            
+            //:Before pushing, set alignment:
+            const ALN = 4; //:ALN:"Alignment"
+            G.pixelStorei(G.UNPACK_ALIGNMENT, ALN);   
+            
+            //:SEE[ DOC/TEX_IMAGE_2D_NOTES.TXT ]
+            G.texImage2D(  //:-------------------------------://
+                G.TEXTURE_2D         //:TARGET
+            ,   0                     //:LEVEL
+            ,   G.RGBA8UI            //:INTERNAL_FORMAT   
+                //:------------------------------------------://
+            ,   pix_wid               //:WIDTH  / PIX_WID
+            ,   pix_hig               //:HEIGHT / PIX_HIG
+            ,   0                     //:BORDER
+                //:------------------------------------------://
+            ,   G.RGBA_INTEGER       //:SOURCE_FORMAT     
+            ,   G.UNSIGNED_BYTE      //:SOURCE_TYPE       
+            ,   pix_arr               //:ARRAY_BUFFER_VIEW
+            );//:--------------------------------------------://
+            
+            //:tp_tp_tp_tp_tp_tp_tp_tptp_tp_tp_tp_tp_tp_tp_tp://
+
+        };;

@@ -1,0 +1,39 @@
+        
+    Stolen From : R:\G\A2_JC\_.02._
+    Use to do a texture download in video 176 to confirm
+    that the upload actually worked. Only do this in
+    debug mode as it is going to abuse the garbage
+    collection.
+
+        const   aa2_GPUVCON_pix_Get_Tex_Pix
+        =function(
+            ada_gra
+        ,   uni_pix
+        ){ "use strict"
+        
+            //:DATE[ 2020_05_17 ]
+            //:Looked around the web for usage....
+            //:I think I ahve the function call correct
+            //:but not certain.
+            throw("[I_DONT_KNOW_IF_THIS_CODE_WORKS_YET]");
+
+            var G = ada_gra.con_gra;
+            
+            //: Extract_Variables_From_Container:
+            //:EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE://
+            var tex_lot = uni_pix.tex_lot;
+            var tex_han = uni_pix.tex_han;
+            var pix_arr = uni_pix.pix_arr;
+            //:EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE://
+
+            G.activeTexture( G.TEXTURE0   + tex_lot );
+            G.bindTexture(   G.TEXTURE_2D , tex_han );
+
+            G.getTexImage( //:RELATED[ texImage2D ]
+                GL_TEXTURE_2D   //:TARGET
+            ,   0               //:LEVEL
+            ,   G.RGBA_INTEGER  //:SOURCE_FORMAT
+            ,   pix_arr         //:ARRAY_BUFFER_VIEW
+            );;
+
+        };; //://////////////:[ aa2_GPUVCON_pix_Get_Tex_Pix ]://

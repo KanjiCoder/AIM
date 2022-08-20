@@ -1,0 +1,92 @@
+      
+    Reference that will probably be used for video #177
+    Use every time we set a tile
+
+    Stolen From : R:\G\A2_JC\_.02._
+
+        const   AA2_tau_con_Uni_Com //://////////////////////://
+        =function(  tau_con         //://////////////////////://
+        ){ "use strict"             //://////////////////////://
+            AA2_Ass_Poi_Sat_002(tau_con, "[2020_06_10_0101AM]");
+
+            //:If dirty flag is not set, exit.
+            if( tau_con.use_dir <= 0 ){ return; };
+                tau_con.use_dir  = 0 ;//:MUS_RES_EXA_ZER
+
+            //:SEE[ DOC/TAU_CON_COMMIT_DIRTY_RECT_PIXELS.TXT ]
+
+            var G =( AA2.GLO_CLA.ada_gra.con_gra );
+
+            //:BD:Borrowed_Data:-----------------------------://
+            //:BDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBD://
+    
+            const PIX_ARR = tau_con.poi_uni_pix.pix_arr;//:01://
+            const PIX_WID = tau_con.poi_uni_pix.pix_wid;//:02://
+            const PIX_HIG = tau_con.poi_uni_pix.pix_hig;//:03://
+            const PIX_COM = tau_con.poi_uni_pix.pix_com;//:04://
+            //:...........................................:--://
+            const TEX_LOT = tau_con.poi_uni_pix.tex_lot;//:05://
+            const TEX_HAN = tau_con.poi_uni_pix.tex_han;//:06://
+         
+            //:BDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBD://
+
+                //:BEFORE[ G.texSubImage2D ]//:////://///////://
+                //:SEE[ DOC/TAU_CON_BEFORE_TEXSUBIMAGE2D.TXT ]
+                G.activeTexture( G.TEXTURE0   +  TEX_LOT );
+                G.bindTexture(   G.TEXTURE_2D ,  TEX_HAN );
+                const ALN = 4; //:ALN:"Alignment" GUESS?
+                G.pixelStorei(G.UNPACK_ALIGNMENT, ALN); 
+                //:SEE[ DOC/TEXSUBIMAGE2D_STRIDE.TXT ]
+                G.pixelStorei( G.UNPACK_ROW_LENGTH , PIX_WID );
+                //:BEFORE[ G.texSubImage2D ]//:////://///////://
+        
+            var org_lef =(0); //:TOP_LEFT_ORIGIN
+            var org_top =(0); //:TOP_LEFT_ORIGIN
+            var rec_wid =(0); //:SPAN_OF_RECT__X
+            var rec_hig =(0); //:SPAN_OF_RECT__Y
+            { //:[SCOPE]:....................................://
+                        const REC=( tau_con.rec_dir );
+                org_lef=(     REC.x_0 );
+                org_top=(     REC.y_0 );
+                rec_wid=(   ( REC.x_1 )
+                          - ( REC.x_0 ) + 1 );
+                rec_hig=(   ( REC.y_1 )
+                          - ( REC.y_0 ) + 1 );
+            } //:[SCOPE]:....................................://
+
+            //:SEE[ DOC/TAU_CON_CALC_SOURCE_OFFSET.TXT ]
+            var p_x =( org_lef ); //:TOP_LEF:X
+            var p_y =( org_top ); //:TOP_LEF:Y
+            var pix_dex = p_x + ( PIX_WID * p_y);
+            var src_oip = pix_dex * (  1  );//:PixelOffset
+            var src_oib = pix_dex * PIX_COM;//:ComponentOffset
+ 
+            G.texSubImage2D(
+            /**/  G.TEXTURE_2D //:TARGET
+            ,     0            //:LEVEL (LOD/LevelOfDetail)
+
+            , org_lef //:<<<[ DIRTY_SUB_SELECTION_RECTANGLE ]
+            , org_top //:<<<[ DIRTY_SUB_SELECTION_RECTANGLE ]
+            , rec_wid //:<<<[ DIRTY_SUB_SELECTION_RECTANGLE ]
+            , rec_hig //:<<<[ DIRTY_SUB_SELECTION_RECTANGLE ]
+
+                //:------------------------------------------://
+                //:FORMAT_OF_CPU_SIDE_DATA:SEE[#TSI2D_FORMAT#]
+            ,   G.RGBA_INTEGER       //:SOURCE_FORMAT
+            ,   G.UNSIGNED_BYTE      //:SOURCE_TYPE 
+                //:------------------------------------------://
+
+            ,   PIX_ARR              //:ARRAY_BUFFER_VIEW 
+
+                //:SEE[ DOC/SRC_OIB_TEXSUBIMAGE2D.TXT ]
+            ,   src_oib              //:SOURCE_OFFSET
+            );;
+        
+            AA2_HAK_UND=( PIX_ARR ); //: 01 :////:///////////://
+            AA2_HAK_UND=( PIX_WID ); //: 02 :////:///////////://
+            AA2_HAK_UND=( PIX_HIG ); //: 03 :////:///////////://
+            AA2_HAK_UND=( PIX_COM ); //: 04 :////:///////////://
+            AA2_HAK_UND=( TEX_LOT ); //: 05 :////:///////////://
+            AA2_HAK_UND=( TEX_HAN ); //: 06 :////:///////////://
+
+        };;//://///////////////////////:[AA2_tau_con_Uni_Com]://
