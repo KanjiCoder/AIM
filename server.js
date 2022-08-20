@@ -1839,7 +1839,8 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                                                                  // [175]
     UV3 GET_UV3_P2K( /////////////////////////////////////////// // [175]
                                                                  // [175]
-        //: VOID , uses [ d_gtx , d_gty ] ://                    // [175]
+        U32 inn_u_gtx   //: INNput - U32 - GlobalTileX   ://
+    ,   U32 inn_u_gty   //: INNput - U32 - GlobalTileY   ://
                                                                  // [175]
     ){ /// #_WHY_UV3_P2K_# ///////////////////////////////////// // [175]
                                                                  // [175]
