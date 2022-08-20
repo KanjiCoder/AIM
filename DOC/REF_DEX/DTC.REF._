@@ -1,4 +1,6 @@
         
+    DTC.REF._ : DTC == Download To Confirm
+
     Stolen From : R:\G\A2_JC\_.02._
     Use to do a texture download in video 176 to confirm
     that the upload actually worked. Only do this in
