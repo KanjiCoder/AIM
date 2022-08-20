@@ -3412,7 +3412,7 @@ if( /** __CLIGAME__ **/ notnode ){                              // [102][085]
         wgl.texParameteri( t2d, _s_ , _e_ ); //::::::::::://     // [174]
         wgl.texParameteri( t2d, _t_ , _e_ ); //::::::::::://     // [174]
                                                                  // [174]
-                       //: #_WHAT_IS_ALIGNMENT_# ::::::::://
+                       //: #_WHAT_IS_ALIGNMENT_# ::::::::://     // [174]
         const ALN = 4; //: #_SET_ALN_BEFORE_PUSH_# ::::::://     // [174]
         wgl.pixelStorei(wgl.UNPACK_ALIGNMENT, ALN);              // [174]
                                                                  // [174]
