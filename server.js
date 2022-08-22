@@ -1836,7 +1836,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
         ,   (  _  ),(r4x_1),(r4x_2),(r4x_3),(  _  )              // [176](163)
         ,   (  _  ),(  _  ),(r4x_0),(  _  ),(  _  )              // [176](163)
                                                                  // [176]
-        );;                                                      // [176]
+        );//:@NESC@://                                           // [176]
         U32 d_g25_r4y[ 25 ]=U32[ 25 ](                           // [176]
                                                                  // [176]
             (  _  ),(  _  ),(r4y_0),(  _  ),(  _  )              // [176](163)
@@ -1845,7 +1845,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
         ,   (  _  ),(r4y_2),(r4y_2),(r4y_2),(  _  )              // [176](163)
         ,   (  _  ),(  _  ),(r4y_3),(  _  ),(  _  )              // [176](163)
                                                                  // [176]
-        );;                                                      // [176]
+        );//:@NESC@://                                           // [176]
     #undef _                                                     // [176]
                                                                  // [176]
                                                                  //      [---]
@@ -11051,6 +11051,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @out_fv4comp@ : OUTput fv4comp , in GLSL shader code.        // [175]
                                                                  // [175]
     @M_W_M@ : Denoting is a "Monkey_Wrench_Macro"                // [175]
+
+    @NESC@  : No_Extra_Semi_Colin                                // [176]
+            : I like doing this, but when declaring data         // [176]
+            : In C99 Code ( GLSL Code ) This is a syntax         // [176]
+            : error. TOP LEVEL / GLOBALS only. Inside a          // [176]
+            : function is fine.                                  // [176]
                                                                          
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
