@@ -11325,17 +11325,23 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
               : final_var = off_by_one_var - 1  <-- either       // [178]
               :                                                  // [178]
               : Example: any_te7 = obi_wan - u_1 ;               // [178]
+                                                                 // [178]
+    @NXT@ : Abbreviation for "NEXT" , but use "NEX"              // [178]
+    @NEX@ : Means "Next" As in "the next thing we are doing"     // [178]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                          
-    [178] : GLSL's [ GET _ LA3 _ FV4 ] function is __NOT__  :::  // [178]
-          : finished yet, but FINISHED_ENOUGH to start      :::  // [178]
-          : using it to get valuable feedback.              :::  // [178]
-          :                                                 :::  // [178]
-          : NEXT : _COMPOSITE_GBF_LAYERS_                   :::  // [178]
+    [178] : 1 : GLSL's [ GET _ LA3 _ FV4 ] function is      :::  // [178]
+          :   : __NOT__finished yet, but FINISHED_ENOUGH    :::  // [178]
+          :   : to start using it to get valuable feedback. :::  // [178]
+          :   :                                             :::  // [178]
+          : 2 : Used[ obi_wan ]to avoid infinite loop       :::  // [178]
+          :   : in our GLSL shader code.                    :::  // [178]
+          :   :                                             :::  // [178]
+          :NEX: _COMPOSITE_GBF_LAYERS_                      :::  // [178]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
