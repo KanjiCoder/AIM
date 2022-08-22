@@ -11221,8 +11221,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 /** ******************************************************** ***         
                                                                          
     [177] : 1 : Added diagonal offset L_U_T to shader code.      // [177]
-          : 2 : Pixel Holding Tile Data Fully Calculated         // [177]
-          : 3 : Replaced hard coded TILDE with "96"              // [177]
+          : 2 : Added lateral multiplier L_U_T to shader code.   // [177]
+          : 3 : Pixel Holding Tile Data Fully Calculated         // [177]
+          : 4 : Replaced hard coded TILDE with "96"              // [177]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
