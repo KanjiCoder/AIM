@@ -2009,7 +2009,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                                                                  // [176]
             );;                                                  // [176]
 
-            p2k_x_y.xy =UV2( te7_txy[ any_te7 ] );               // [176]
+            p2k_x_y.xy =IV2( te7_txy[ any_te7 ] );               // [176]
 
                                                                  // [---]
             uv4_p2k = STF( d_p2k,p2k_x_y,0 );                    //      [175]
