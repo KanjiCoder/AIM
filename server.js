@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_181             :// // [181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_182             :// // [182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---]
 //:CONFIGURATION:[109]:======================================:// // [---]
@@ -1604,6 +1604,9 @@ if( yesnode ){ //:-------------------------------------------://
                                                                  // [---]
 //: __KONAMIC__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [180]
 
+    const c_konamic_az0 =( 65  /** UPPERCASE "A" **/ );          // [182]
+    const c_konamic_az1 =( 90  /** UPPERCASE "Z" **/ );          // [182]
+
     //:::::::::::::::::::( (upp) + (dow) + (l_r) + (l_r) - 1):// // [181]
     const c_konamic_m_i =( (1+1) + (1+1) + (1+1) + (1+1) - 1);   // [181]
     ASS(  c_konamic_m_i ===( 7 ) , "[8_Key_Presses_Fool]"   );   // [181]
@@ -1615,6 +1618,11 @@ if( yesnode ){ //:-------------------------------------------://
     const c_konamic_ark_upp =( 38 ); //: ARROW_KEYCODE : UPP :// // [181]
     const c_konamic_ark_rig =( 39 ); //: ARROW_KEYCODE : RIG :// // [181]
     const c_konamic_ark_dow =( 40 ); //: ARROW_KEYCODE : DOW :// // [181]
+
+    const c_konamic_dumfill = "[FIX:c_konamic_dumones]" ;        // [182]
+    const c_konamic_dum_fil = "[FIX:c_konamic_dumones]" ;        // [182]
+    const c_konamic_dumempt = "[FIX:c_konamic_dumzero]" ;        // [182]
+    const c_konamic_dum_emp = "[FIX:c_konamic_dumzero]" ;        // [182]
 
     const c_konamic_invalid =( 0 ); //:[ 0 is a fatal error ]:// // [180]
     const c_konamic_nothing =( 1 ); //:[ 1 is for empty slot]:// // [180]
@@ -2988,6 +2996,8 @@ if( /** __KONAMIC__ **/ notnode ){ //:::::BEG[ KONAMIC_DATA ]:// // [180]
     ]);;                                                         // [181]
     ASS( 8 === d_konamic_ark.length , "[konamic_ark:001]" );     // [181]
                                                                  // [---]
+    var d_konamic_lut = "[FIX:d_konamic_lut_a_z]" ;              // [182]
+                                                                 // [---]
     var d_konamic_lut_a_z = new Uint8Array([                     // [180]
                                                                  // [180]
         c_konamic_dumones //: ( "A" / 0 ) ://                    // [180]
@@ -3084,92 +3094,92 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [102][085]
                                                                  // [102][085]
 };;                                                              // [102][085]
-
-//:=====================================:DATA_BY_SYSTEM:[063]://
-//:MASTER_DECLARATION_FUNC:[035]:============================://
-    
-    /** ************************************************ **/
-    /** This section was a BAD IDEA. Because functions   **/
-    /** end up too deeply nested. Just give each         **/
-    /** function it's own unique code section and        **/    
-    /** stack all functions in continguous strip         **/
-    /** within the sourc code. -KanjiCoder               **/
-    /** ************************************************ **/
-
-//:============================:MASTER_DECLARATION_FUNC:[035]://
-//:FUNC_BOILERPLATE:[028]+[035]:=============================://
-
-    function ERR( i_msg ){
-    
-        if( 1 === 1 ){ console.log( "[ERR]:" + i_msg ); };      
-        if( notnode ){       alert( "[ERR]:" + i_msg ); };      
-        if( notnode ){       throw( "[ERR]:" + i_msg ); };      
-        if( yesnode ){  process.exit( 40 /**[040]**/ ); };      
-    };;
-    function LOG( i_msg , i_any ){
-    
-        if( undefined != i_any ){                    //:[040]://
-
-            console.log( i_msg , ":" , i_any  );
-        }else{
-            console.log( i_msg , ":" , "[UND]" );    //:[040]://
-        };;
-    };;
-    function MSG( i_msg ){                           //:[040]://
-        if( typeof i_msg != "string" ){              //:[040]://
-            console.log( "[MSG_IS_FOR_STRINGS]" );   //:[040]://
-        }else{                                       //:[040]://
-            console.log( i_msg );                    //:[040]://
-        };;                                          //:[040]://
-    };;                                              //:[040]://
-    function HAS( i_obj ){
-    
-        var o_has =( 0 );
-    
-        if( typeof i_obj === "string" ){
-
-            /** Detect Custom Nil ( "[nil]" ) **/
-
-            if( 1
-            &&   ( "[" === i_obj[0] )
-            &&   ( "n" === i_obj[1] )
-            &&   ( "i" === i_obj[2] )
-            &&   ( "l" === i_obj[3] )
-            &&   ( "]" === i_obj[4] )
-            ){
-                o_has =( 0 );  
-            }else{
-                o_has =( 1 );
-            };;
-        }else{
-            if( null      == i_obj
-            ||  undefined == i_obj
-            ||            ( !i_obj )
-            || ""         == i_obj
-            ){
-                o_has =( 0 );
-            }else{
-                o_has =( 1 );
-            };;
-        };;
-
-        return( o_has );
-    };;
-    function NIL( i_obj ){                       //:[040]://    
-                                                                
-        /** ******************************************** **/    
-        /** DONT: return( ! HAS( i_obj ) ) ************* **/    
-        /** We want an integer , not bool "true"/"false" **/    
-        /** ******************************************** **/    
-                                                                
-        var o_nil = ( 666 );                     //:[040]://    
-        var   has =( HAS( i_obj ) );             //:[040]://    
-        if( 0 == has ){ o_nil =( 1 ); };         //:[040]://    
-        if( 1 == has ){ o_nil =( 0 ); };         //:[040]://    
-                                                 //:[040]://    
-        return( o_nil );                         //:[040]://    
-    };;                  
-
+                                                                 // [---]
+//:=====================================:DATA_BY_SYSTEM:[063]:// // [---]
+//:MASTER_DECLARATION_FUNC:[035]:============================:// // [---]
+                                                                 // [???]
+    /** ************************************************ **/     // [???]
+    /** This section was a BAD IDEA. Because functions   **/     // [???]
+    /** end up too deeply nested. Just give each         **/     // [???]
+    /** function it's own unique code section and        **/     // [???]
+    /** stack all functions in continguous strip         **/     // [???]
+    /** within the sourc code. -KanjiCoder               **/     // [???]
+    /** ************************************************ **/     // [???]
+                                                                 // [???]
+//:============================:MASTER_DECLARATION_FUNC:[035]:// // [---]
+//:FUNC_BOILERPLATE:[028]+[035]:=============================:// // [---]
+                                                                 // [---]
+    function ERR( i_msg ){                                       // [???]
+                                                                 // [???]
+        if( 1 === 1 ){ console.log( "[ERR]:" + i_msg ); };       // [???]
+        if( notnode ){       alert( "[ERR]:" + i_msg ); };       // [???]
+        if( notnode ){       throw( "[ERR]:" + i_msg ); };       // [???]
+        if( yesnode ){  process.exit( 40 /**[040]**/ ); };       // [???]
+    };;                                                          // [???]
+    function LOG( i_msg , i_any ){                               // [???]
+                                                                 // [???]
+        if( undefined != i_any ){                                // [040]
+                                                                 // [???]
+            console.log( i_msg , ":" , i_any  );                 // [???]
+        }else{                                                   // [???]
+            console.log( i_msg , ":" , "[UND]" );                // [040] 
+        };;                                                      // [???]
+    };;                                                          // [???]
+    function MSG( i_msg ){                                       // [---][040] 
+        if( typeof i_msg != "string" ){                          // [---][040] 
+            console.log( "[MSG_IS_FOR_STRINGS]" );               // [---][040] 
+        }else{                                                   // [---][040] 
+            console.log( i_msg );                                // [---][040] 
+        };;                                                      // [---][040] 
+    };;                                                          // [---][040] 
+    function HAS( i_obj ){  //:TAG[ F_HAS ]://                   // [182]
+                                                                 // [---][???]
+        var o_has =( 0 );                                        // [---][???]
+                                                                 // [---][???]
+        if( typeof i_obj === "string" ){                         // [---][???]
+                                                                 // [---][???]
+            /** Detect Custom Nil ( "[nil]" ) **/                // [---][???]
+                                                                 // [---][???]
+            if( 1                                                // [---][???]
+            &&   ( "[" === i_obj[0] )                            // [---][???]
+            &&   ( "n" === i_obj[1] )                            // [---][???]
+            &&   ( "i" === i_obj[2] )                            // [---][???]
+            &&   ( "l" === i_obj[3] )                            // [---][???]
+            &&   ( "]" === i_obj[4] )                            // [---][???]
+            ){                                                   // [---][???]
+                o_has =( 0 );                                    // [---][???]
+            }else{                                               // [---][???]
+                o_has =( 1 );                                    // [---][???]
+            };;                                                  // [---][???]
+        }else{                                                   // [---][???]
+            if( null      == i_obj                               // [---][???]
+            ||  undefined == i_obj                               // [---][???]
+            ||            ( !i_obj )                             // [---][???]
+            || ""         == i_obj                               // [---][???]
+            ){                                                   // [---][???]
+                o_has =( 0 );                                    // [---][???]
+            }else{                                               // [---][???]
+                o_has =( 1 );                                    // [---][???]
+            };;                                                  // [---][???]
+        };;                                                      // [---][???]
+                                                                 // [---][???]
+        return( o_has );                                         // [---][???]
+    };;                                                          // [---][???]
+    function NIL( i_obj ){                                       // [040]    
+                                                                 // [???]
+        /** ******************************************** **/     // [???]
+        /** DONT: return( ! HAS( i_obj ) ) ************* **/     // [???]
+        /** We want an integer , not bool "true"/"false" **/     // [???]
+        /** ******************************************** **/     // [???]
+                                                                 // [???]
+        var o_nil = ( 666 );                                     // [040]  
+        var   has =( HAS( i_obj ) );                             // [040]  
+        if( 0 == has ){ o_nil =( 1 ); };                         // [040]  
+        if( 1 == has ){ o_nil =( 0 ); };                         // [040]  
+                                                                 // [040]  
+        return( o_nil );                                         // [040]  
+    };;                                                          // [???]
+                                                                 // [???]
     function YEL( i_msg ){                                       // [098]
                                                                  // [098]
         if( notnode ){ window.alert( i_msg ); };                 // [098]
@@ -5983,41 +5993,91 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         //:                                              ://     // [180]
         //:----------------------------------------:[ATF]://     // [180]
                                                                  // [---]
-        ASS( c_konamic_ark_k_0 === 37 ,  "[@KONAMIC_K_0@]");     // [181]
-        ASS( c_konamic_ark_k_1 === 40 ,  "[@KONAMIC_K_1@]");     // [181]
-        if( i_evt_key.keyCode  >=  37    //: @ARK_LEF@   ://     // [181]
-        &&  i_evt_key.keyCode  <=  40    //: @ARK_DOW@   ://     // [181]
-        ){                                                       // [181]
-            const NO_OFFSET =( 0 );                              // [181]
-            var ark_raw =( 0-1 );  //: ARrow_Key:eNUM    ://     // [181]
-            var ark_exp =( 0-1 );  //: ARrow_Key:EXPECTED://     // [181]
-            ark_raw=( i_evt_key.keyCode + NO_OFFSET );           // [181]
-                                                                 // [181]
-            var ark_exp =( d_konamic_ark[ d_konamic_ptr ] );     // [181]
-                                          d_konamic_ptr ++ ;     // [181]
-            if( ark_exp != ark_raw ){     d_konamic_ptr=(0); };  // [181]
-                                                                 // [181]
-            if( d_konamic_ptr > c_konamic_m_i ){                 // [181]
-                                                                 // [181]
-                d_konamic_act =( 1 );  //:ACTIVATED/READY://     // [181]
-                d_konamic_ptr =( 0 );                            // [181]
-            };;                                                  // [181]
-        }else                                                    // [181]
-        if( d_konamic_act <= 0 ){                                // [181]
-            /** DO NOTHING **/                                   // [181]
-        }else                                                    // [181]
-        if( d_konamic_act >= 1 /** Konami code Active ? **/ ){   // [181]
-            d_konamic_act =( 0 );                                // [181]
-                                                                 // [181]
-            var str_key =(                                       // [181]
-                String.prototype.toUpperCase.call(               // [181]
-                    ( i_evt_key.key || "[nil][str_key]" )        // [181]
-                                                                 // [181]
-                ));;                                             // [181]
-            var k26 =( 0xFF );                                   // [181]
-                                                                 // [181]
-            MSG( "[TODO:KONAMI_CODE_DO_STUFF]" );                // [181]
-                                                                 // [181]
+        ASS( c_konamic_ark_k_0 === 37 ,  "[@KONAMIC_K_0@]");     //      [181]
+        ASS( c_konamic_ark_k_1 === 40 ,  "[@KONAMIC_K_1@]");     //      [181]
+        if( i_evt_key.keyCode  >=  37    //: @ARK_LEF@   ://     //      [181]
+        &&  i_evt_key.keyCode  <=  40    //: @ARK_DOW@   ://     //      [181]
+        ){                                                       //      [181]
+            const NO_OFFSET =( 0 );                              //      [181]
+            var ark_raw =( 0-1 );  //: ARrow_Key:eNUM    ://     //      [181]
+            var ark_exp =( 0-1 );  //: ARrow_Key:EXPECTED://     //      [181]
+            ark_raw=( i_evt_key.keyCode + NO_OFFSET );           //      [181]
+                                                                 //      [181]
+            var ark_exp =( d_konamic_ark[ d_konamic_ptr ] );     //      [181]
+                                          d_konamic_ptr ++ ;     //      [181]
+            if( ark_exp != ark_raw ){     d_konamic_ptr=(0); };  //      [181]
+                                                                 //      [181]
+            if( d_konamic_ptr > c_konamic_m_i ){                 //      [181]
+                                                                 //      [181]
+                d_konamic_act =( 1 );  //:ACTIVATED/READY://     //      [181]
+                d_konamic_ptr =( 0 );                            //      [181]
+            };;                                                  //      [181]
+        }else                                                    //      [181]
+        if( d_konamic_act <= 0 ){                                //      [181]
+            /** DO NOTHING **/                                   //      [181]
+        }else                                                    //      [181]
+        if( d_konamic_act >= 1 /** Konami code Active ? **/ ){   //      [181]
+            d_konamic_act =( 0 );                                //      [181]
+                                                                 //      [181]
+            var asc_key =( 0 ); /** ASCII 0 to 127   **/         // [182][---]
+            var asc_has =( 0 ); /** ASCII Exists ?   **/         // [182][---]
+            var k26_has =( 0 ); /** A-Z   Ascii ?    **/         // [182]
+            var k26     =( 0 ); /** Zero Indexed A-Z **/         // [182]
+            var str_key =(                                       // [182][181]
+                String.prototype.toUpperCase.call(               // [182][181]
+                    ( i_evt_key.key || "[nil][str_key]" )        // [182][181]
+                                                                 // [182][181]
+                ));;                                             // [182][181]
+            if( HAS( str_key ) ){                                // [182]
+                                                                 // [182]
+                var str_upp = str_key.toUpperCase();             // [182]
+                asc_key =( str_upp.charCodeAt( 0 ) );            // [182]
+                if( asc_key >= 0 && asc_key <= 127 ){            // [182]
+                                                                 // [182]
+                    asc_has =( 1 );                              // [182]
+                    if( asc_key >= c_konamic_az0                 // [182]
+                    &&  asc_key <= c_konamic_az1                 // [182]
+                    ){                                           // [182]
+                                                                 // [182]
+                        k26_has =( 1 );                          // [182]
+                        k26     =( asc_key - c_konamic_az0 );    // [182]
+                        ASS( k26 >=  0 , "[K26_LOW]" );          // [182]
+                        ASS( k26 <= 26 , "[K26_HIG]" );          // [182]
+                    };;                                          // [182]
+                };;                                              // [182]
+            };;                                                  // [182]
+                                                                 // [182]
+            if(!k26_has ){                                       // [182]
+                                                                 // [182]
+                MSG( "[U_U_D_D_L_R_L_R]THEN[ 'A' - 'Z' ]" );     // [182]
+            }else                                                // [182]
+            if( k26_has ){                                       // [182]
+                                                                 // [182]
+                var enuproc =( d_konamic_lut_a_z[ k26 ] );       // [182]
+                                                                 // [182]
+                if( c_konamic_dumones === enuproc ){             // [182]
+                                                                 // [182]
+                                                                 // [182]
+                    MSG( "[TODO:1_FILL]" );                      // [182]
+                }else                                            // [182]
+                if( c_konamic_dumzero === enuproc ){             // [182]
+                                                                 // [182]
+                    MSG( "[TODO:0_FILL]" );                      // [182]
+                }else                                            // [182]
+                if( c_konamic_nothing === enuproc ){             // [182]
+                                                                 // [182]
+                    MSG("[O_K:AVAILABLE_FOR_BINDING!!]");        // [182]
+                }else                                            // [182]
+                if( c_konamic_invalid === enuproc ){             // [182]
+                                                                 // [182]
+                    ERR("[ERR:NOT_ALLOWED_TO_USE_THIS]");        // [182]
+                }else{                                           // [182]
+                    ERR("[ERR:FORGOT_TO_ADD_PROCEDURE]");        // [182]
+                };;                                              // [182]
+            }else{                                               // [182]
+                ERR("[SILENT_HILL_SLOT_MACHINES_ARE_LAME]");     // [182]
+            };;                                                  // [182]
+                                                                 // [---]
         }else{                                                   // [181]
             ERR("[INVALID_KONAMIC_CASE_2022]");                  // [181]
         };;                                                      // [181]
@@ -11544,6 +11604,18 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
               : be "zero-indexed". In other words, we don't      // [181]
               : start counting from "0" with the set             // [181]
               : of numbers[ ark_raw ]belongs to.                 // [181]
+
+    @enuproc@ : ENUmeration - signifiying PROCedure              // [182][BLINK]
+    @enufunc@ : YOU_MEAN[ enuproc ]                              // [182][BLINK]
+    #enuproc# :                                                  // [182][BLINK]
+                                                                 // [182][BLINK]
+        We use[ enuproc ]instead of[ enufunc ]because the        // [182][BLINK]
+        code that we want to call is likely to be inlined        // [182][BLINK]
+        inside of the[ konamic ]function, and thus               // [182][BLINK]
+        calling it an[ enumeration for function ]would           // [182][BLINK]
+        be improper. A[ enumeration for procedure ]is            // [182][BLINK]
+        more general and proper, because the "procedure"         // [182][BLINK]
+        code may not actually exist within a function.           // [182][BLINK]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
