@@ -8580,6 +8580,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : a fancy little [ jig / dance ] with our              // [181][180]
           : fingers every time shouldn't be a big deal.          // [181][180]
 
+    [181] : DONE : Console will log a message           :::::::  // [182][181]
+          :      : when we type the konami code.        :::::::  // [182][181]
+          : NEXT : Perform function when konami code    :::::::  // [182][181]
+          :      : is typed and then [A-Z] is pressed.  :::::::  // [182][181]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -11622,10 +11627,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                          
-    [181] : DONE : Console will log a message           :::::::  // [181]
-          :      : when we type the konami code.        :::::::  // [181]
-          : NEXT : Perform function when konami code    :::::::  // [181]
-          :      : is typed and then [A-Z] is pressed.  :::::::  // [181]
+    [182] : DONE : Konami code procedure detection is done.      // [182]
+          : NEXT : Fill in procedure code for 1-filling          // [182]
+          :      : and 0-filling the region of                   // [182]
+          :      : [ d _ pix 2048 ]that contains @THE_DUM@.      // [182]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
