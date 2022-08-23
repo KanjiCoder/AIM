@@ -11830,9 +11830,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                          
-    [186] : Konamic Zeroing Or Filling Of LevelPacks             // [186]
-          : is now finished. Depending on what we see            // [186]
-          : when doing[ konami_code + "A" ]                      // [186]
+    [186] : [ konami_code + "A" ] ===> Binary 1 Fills Hotels     // [186]
+          : [ konami_code + "B" ] ===> Binary 0 Fille Hotels     // [186]
           : ( Actually , just the arrow part of konamicode )     // [186]
 
 *** ******************************************************** **/
