@@ -11831,7 +11831,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 /** ******************************************************** ***         
                                                                          
     [186] : [ konami_code + "A" ] ===> Binary 1 Fills Hotels     // [186]
-          : [ konami_code + "B" ] ===> Binary 0 Fille Hotels     // [186]
+          : [ konami_code + "B" ] ===> Binary 0 Fills Hotels     // [186]
           : ( Actually , just the arrow part of konamicode )     // [186]
 
 *** ******************************************************** **/
