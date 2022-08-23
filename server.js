@@ -8696,6 +8696,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : We will pick-up Konami-C-Part-4 in video #1_8_5      // [184][183]
           : ( not a guarantee but a PROBABLY )                   // [184][183]
 
+    [184] : Texture push if master memory is dirty.              // [185][184]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -11799,7 +11801,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                          
-    [184] : Texture push if master memory is dirty.              // [184]
+    [185] : Moved ( SYSTEM_PIX2048 )and( SYSTEM_TILEBOI )        // [185]
+          : to the very fucking __TOP__ of the dependency        // [185]
+          : chain.                                               // [185]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
