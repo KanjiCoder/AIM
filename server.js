@@ -12324,7 +12324,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                  
-    [190] : Void room cells now render as BLACK on               // [190]
+    [190] : Void room cells now render as VERY_DARK_RED on       // [190]
           : [THE_DUM]. Entertaining the thought of               // [190]
           : also rendering a neon grid in these sections...      // [190]
           :                                                      // [190]
