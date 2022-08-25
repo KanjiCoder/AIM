@@ -9049,6 +9049,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :                                                      // [191][190]
           : My vote is on WASTED_TIME , right now.               // [191][190]
 
+    [191] : 1 : Added constants to tell us how much we           // [192][191]
+          :---: should inset for each layer type.                // [192][191]
+          : 2 : Added CPU-SIDE LUT : ( la3 )==>( dui )           // [192][191]
+          : 3 : Added GPU-SIDE LUT : ( la3 )==>( dui )           // [192][191]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -12590,17 +12595,26 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [191]
         Don't fucking do this.                                |  // [191]
     +---------------------------------------------------------+  // [191]
-
+                                                                 // [---]
+    #VIDEO_192_OBSERVATION_NOTE# :----------------------------+  // [192]
+                                                              |  // [192]
+        The tile with the least inset is inset by             |  // [192]
+        ONE 21st ( 1/21 ) of [ c _ dut ]. No wonder           |  // [192]
+        the insetting looks so small.                         |  // [192]
+                                                              |  // [192]
+        (1/3)of(1/7)===( 1 / 7 / 3 )===( 1 / (7*3) )===( 1/21 )  // [192]
+                                                              |  // [192]
+    :---------------------------------------------------------+  // [192]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                  
-    [191] : 1 : Added constants to tell us how much we           // [191]
-          :---: should inset for each layer type.                // [191]
-          : 2 : Added CPU-SIDE LUT : ( la3 )==>( dui )           // [191]
-          : 3 : Added GPU-SIDE LUT : ( la3 )==>( dui )           // [191]
+    [192] : DONE : 1/7th based insets are rendering.             // [192]
+          : NEXT : Create 1/3 of [ c _ dut ] based               // [192]
+          : ---- : configuration to make absolutely sure         // [192]
+          : ---- : our inset rendering logic really works.       // [192]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
