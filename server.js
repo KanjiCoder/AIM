@@ -6128,10 +6128,10 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         //:              V                           V   ://     // [188]
         //:  arr_ark = [ U , U , D , D , L , R , L , R ] ://     // [188]
         //:                                              ://     // [188]
-        //:      a_0                 W_0                 ://     // [188]
+        //:      a_0                 w_0                 ://     // [188]
         //:       V                   V                  ://     // [188]
         //:      [U][U][D]           [U][U][D]           ://     // [188]
-        //:  a_1>[R]   [D]  ===  W_1>[R]   [D]           ://     // [188]
+        //:  a_1>[R]   [D]  ===  w_1>[R]   [D]           ://     // [188]
         //:      [L][R][L]           [L][R][L]           ://     // [188]
         //:                                              ://     // [188]
         //:  arr_win = [ L , R , U , U , D , D , L , R ] ://     // [188]
@@ -8832,6 +8832,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [186] : [ konami_code + "A" ] ===> Binary 1 Fills Hotels     // [187][186]
           : [ konami_code + "B" ] ===> Binary 0 Fills Hotels     // [187][186]
           : ( Actually , just the arrow part of konamicode )     // [187][186]
+
+    [187] : Konamic now uses a scrolling window.         ::::::  // [188][187]
+          : Basically a small 8 character key-logger     ::::::  // [188][187]
+          : of previous keys pressed.                    ::::::  // [188][187]
+          :                                              ::::::  // [188][187]
+          : Reason : Konami code was not activating      ::::::  // [188][187]
+          :        : consistently. It wasn't a bug.      ::::::  // [188][187]
+          :        : More like... Highly user unfriendly ::::::  // [188][187]
+          :        : behavior we had coded.              ::::::  // [188][187]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -12123,20 +12132,21 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         what is being done is a bit easier to                 |  // [188]
         understand.                                           |  // [188]
     :---------------------------------------------------------+  // [188]
+                                                                 // [188]
+    @konamic_ark@ : AKA[ arr_ark / d_konamic_ark ]               // [188]
+    @konamic_win@ : AKA[ arr_win / d_konamic_win ]               // [188]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                          
-    [187] : Konamic now uses a scrolling window.         ::::::  // [187]
-          : Basically a small 8 character key-logger     ::::::  // [187]
-          : of previous keys pressed.                    ::::::  // [187]
-          :                                              ::::::  // [187]
-          : Reason : Konami code was not activating      ::::::  // [187]
-          :        : consistently. It wasn't a bug.      ::::::  // [187]
-          :        : More like... Highly user unfriendly ::::::  // [187]
-          :        : behavior we had coded.              ::::::  // [187]
+    [188] : Added more code and diagrams to help further ::::::  // [188]
+          : explain how our scrolling window for         ::::::  // [188]
+          : konami code detection works.                 ::::::  // [188]
+          :                                              ::::::  // [188]
+          : Code changes are to help easily connect      ::::::  // [188]
+          : the diagrams with the related code.          ::::::  // [188]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
