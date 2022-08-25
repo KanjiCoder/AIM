@@ -12036,8 +12036,24 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [187]
             [2/8] forever and ever if we keep pressing up.    |  // [187]   
     :---------------------------------------------------------+  // [187]
-
-
+                                                                 // [187]
+    @kon_win@ : Means "KonamiCode - scrolling WINdow             // [187]
+    @kon_ark@ : Means "KonamiCode - ARRow keys list              // [187]
+    @kon_arc@ : TYPO_OF[ kon_ark ]                               // [187]
+                                                                 // [187]
+    #_TODO_TO_HELP_UNDERSTAND_CODE_2022_08_24_# :-------------+  // [187]
+                                                              |  // [187]
+            let arr_win =( d_konamic_w_p );                   |  // [187]
+            let arr_ark =( d_konamic_ptr );                   |  // [187]
+                                                              |  // [187]
+            let ptr_win =( d_konamic_w_p );                   |  // [187]
+            let ptr_ark =( d_konamic_win );                   |  // [187]
+                                                              |  // [187]
+                                                              |  // [187]
+            kon_win = [ L , R , U , U , D , D , L , R ]       |  // [187]
+            kon_ark = [ U , U , D , D , L , R , L , R ]       |  // [187]
+                                                              |  // [187]
+    :---------------------------------------------------------+  // [187]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
