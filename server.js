@@ -2091,7 +2091,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
         u_g25 = ( u_r5x + ( u_r5y * u_5 ) );                     //      [176]
         u_r4x = ( d_g25_r4x[ u_g25 ]      );                     //      [176]
         u_r4y = ( d_g25_r4y[ u_g25 ]      );                     //      [176]
-        u_vod = ( d_g25_vod[ u_g25 ]      );                     // [189]
+        u_vod = ( d_g25_vod[ u_g25 ]      );                     // [189][---]
                                                                  //      [176]
         #define T_O_D_O ( U32( 0 ) )                             //      [176]
                                                                  // [---]
@@ -8876,6 +8876,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :        : More like... Highly user unfriendly ::::::  // [188][187]
           :        : behavior we had coded.              ::::::  // [188][187]
 
+    [188] : Added more code and diagrams to help further ::::::  // [189][188]
+          : explain how our scrolling window for         ::::::  // [189][188]
+          : konami code detection works.                 ::::::  // [189][188]
+          :                                              ::::::  // [189][188]
+          : Code changes are to help easily connect      ::::::  // [189][188]
+          : the diagrams with the related code.          ::::::  // [189][188]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -12204,12 +12211,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                          
-    [188] : Added more code and diagrams to help further ::::::  // [188]
-          : explain how our scrolling window for         ::::::  // [188]
-          : konami code detection works.                 ::::::  // [188]
-          :                                              ::::::  // [188]
-          : Code changes are to help easily connect      ::::::  // [188]
-          : the diagrams with the related code.          ::::::  // [188]
+    [189] : Do __NOT__ draw tiles in void rooms, because         // [189]
+          : tile(s) __CANNOT__ ever exist in void rooms.         // [189]
+          :                                                      // [189]
+          : Any tile data we have for void room locations        // [189]
+          : is some bogus sample point that should be            // [189]
+          : [ discarded / overridden to zero ].                  // [189]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
