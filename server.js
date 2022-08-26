@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-002   (NINJACODER):// // [102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-002   ( WEEBCODER):// // [102]
 //:                                                          :// // [102]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_197             :// // [197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_198             :// // [198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---]
 //:CONFIGURATION:[109]:======================================:// // [---]
@@ -27,8 +27,7 @@
                                                                  // [102]
     C : Chronological Order (by creation order)                  // [102]
     D : Dependency    Order (LOW === LESS DEPS)                  // [102]
-                                                                 // [102]
-
+                                                                 // [---]
     PIX2048 [C:13] [D:01] : Data Storage For Game.               // [185][MOV][156]
     TILEBOI [C:12] [D:02] : Tile GET,PUT,SAVE,LOAD Stuff         // [185][MOV][156]
     ARTDUDE [C:04] [D:03] : Art Assets Used By Renderer          // [102]
@@ -45,28 +44,28 @@
     CLIGAME [C:07] [D:14] : HIGH_LEVEL_GAME_CODE - Client Side   // [102]
                                                                  // [102]
 *** ******************************************************** **/ // [102]
-//:=======================================:SYSTEM_INDEX:[102]://
-//:DEPLOY_THIS_SERVER_YOURSELF:[034]:========================://
-/**----------------------------------------------------------:::
-
-    Atomic_Ivy_MMO (AIM) client _AND_ server.
-
-    If you are looking at this code in a debugger, 
-    you could copy+paste it and deploy it RIGHT NOW!
-
-    Deployment Steps :
-    
-    1. Copy Everything You See And Save As "server.js"
-    
-    2. create package.json that looks like this:
-
-        STEP 2 FOR PROGRAMMERS :
-
+//:=======================================:SYSTEM_INDEX:[102]:// // [---]
+//:DEPLOY_THIS_SERVER_YOURSELF:[034]:========================:// // [---]
+/**----------------------------------------------------------::: // [???]
+                                                                 // [???]
+    Atomic_Ivy_MMO (AIM) client _AND_ server.                    // [???]
+                                                                 // [???]
+    If you are looking at this code in a debugger,               // [???]
+    you could copy+paste it and deploy it RIGHT NOW!             // [???]
+                                                                 // [???]
+    Deployment Steps :                                           // [???]
+                                                                 // [???]
+    1. Copy Everything You See And Save As "server.js"           // [???]
+                                                                 // [???]
+    2. create package.json that looks like this:                 // [???]
+                                                                 // [???]
+        STEP 2 FOR PROGRAMMERS :                                 // [???]
+                                                                 // [???]
         touch package.json                                       // [073]
         echo '{ "dependencies":{"pg":"8.7.3"}}' > package.json   // [073]
-                                                                 
-        STEP 2 FOR ARTISTS :                                     
-                                                                 
+                                                                 // [???]
+        STEP 2 FOR ARTISTS :                                     // [???]
+                                                                 // [???]
             +-------------------------------------------------+  // [073]
             | Notepad ++ : server.js                  |[-]|[X]|  // [073]
             +-------------------------------------------------+  // [073]
@@ -77,42 +76,42 @@
             | 04 |  }                                         |  // [073]
             |    |                                            |  // [073]
             +----+--------------------------------------------+  // [073]
-    
-    3. git init . && git add . && git commit -m "[AIM]"
-    
-    4. heroku apps:create APPNAME     ## Example: "aim-kanji" ##
-                                                                
-    5. heroku addons:create              \                      
-            heroku-postgresql:hobby-dev  \                      
-            --version=14                 \                      
-            --app  "APPNAME"             \                      
-            --name "APPNAME-database"    ## END OF COMMAND ##   
-                                                                
-    6. heroku labs:enable  runtime-dyno-metadata --app APPNAME  
-    
-    7. git push heroku master
-    
-:::----------------------------------------------------------**/
-//:========================:DEPLOY_THIS_SERVER_YOURSELF:[034]://
-//:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]:===================://
-/**----------------------------------------------------------:::
-    
+                                                                 // [???]
+    3. git init . && git add . && git commit -m "[AIM]"          // [???]
+                                                                 // [???]
+    4. heroku apps:create APPNAME     ## Example: "aim-kanji" ## // [???]
+                                                                 // [???]
+    5. heroku addons:create              \                       // [???]
+            heroku-postgresql:hobby-dev  \                       // [???]
+            --version=14                 \                       // [???]
+            --app  "APPNAME"             \                       // [???]
+            --name "APPNAME-database"    ## END OF COMMAND ##    // [???]
+                                                                 // [???]
+    6. heroku labs:enable  runtime-dyno-metadata --app APPNAME   // [???]
+                                                                 // [???]
+    7. git push heroku master                                    // [???]
+                                                                 // [???]
+:::----------------------------------------------------------**/ // [---]
+//:========================:DEPLOY_THIS_SERVER_YOURSELF:[034]:// // [---]
+//:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]:===================:// // [---]
+/**----------------------------------------------------------::: // [---]
+                                                                 // [???]
     Coding Convention ( s ):                                     // [063]
                                                                  // [063]
         let : Only for temporary [object/system] references      // [063]
         let : Okay... And for "temp macros"                      // [066]
-
-    DODS Hungarian Notation :       [DODS: DataOrientedDesign's]              
-
-        c_    : const    ( GLOBAL ) ( use like c99 macros )[064]
-        d_    : data     ( GLOBAL ) 
-        f_    : function ( GLOBAL ) 
-        l_    : library  ( GLOBAL ) 
-        
-        m_    : member   ( LOCAL  )(SERVER SIDE CODE ONLY) [067]
-        i_    : input    ( LOCAL  )
-        o_    : output   ( LOCAL  )
-
+                                                                 // [???]
+    DODS Hungarian Notation :       [DODS: DataOrientedDesign's] // [???]     
+                                                                 // [???]
+        c_    : const    ( GLOBAL ) ( use like c99 macros )[064] // [???]
+        d_    : data     ( GLOBAL )                              // [???]
+        f_    : function ( GLOBAL )                              // [???]
+        l_    : library  ( GLOBAL )                              // [???]
+                                                                 // [???]
+        m_    : member   ( LOCAL  )(SERVER SIDE CODE ONLY) [067] // [???]
+        i_    : input    ( LOCAL  )                              // [???]
+        o_    : output   ( LOCAL  )                              // [???]
+                                                                 // [???]
     SQL Table Prefixes :                                         // [041] 
                                                                  // [041] 
         @tab@ : tab_ : A Normal Table                            // [041] 
@@ -123,14 +122,14 @@
         @iid@ : iid  : Primary_Key , NOT A PREFIX                // [041] 
                                                                  // [041] 
         NO MORE SQL PREFIXES THAN THAT!!!                        // [041] 
-
-:::----------------------------------------------------------**/
-//:===================:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]://
+                                                                 // [---]
+:::----------------------------------------------------------**/ // [---]
+//:===================:HIT_THE_GROUND_RUNNING_MY_FRIEND:[034]:// // [---]
 //:ENVIRONMENT_DETECTION:[026]:==============================:// // [140][---][026]
-
+                                                                 // [---]
     const yesnode =( "undefined" === typeof window );            // [140][042][026]
     const notnode =( "undefined"  != typeof window );            // [140][042][026]
-
+                                                                 // [---]
     const firefox =(                                             // [077]    
         notnode                                                  // [077]
         &&                                                       // [077]
@@ -138,7 +137,7 @@
         &&                                                       // [077]
         / rv:/.test( navigator.userAgent )                       // [077]
     );;                                                          // [077]
-
+                                                                 // [---]
 //:==============================:ENVIRONMENT_DETECTION:[026]:// // [140][026]
 //:TOP_LEVEL_CONSTANT_MACROS:[085]:==========================:// // [085]
                                                                  // [085]
@@ -146,11 +145,11 @@
     //:TAG[ CONSTANTS_SECTION | constants-section ]://           // [161]
     //:TAG[ constants_section | constants_section ]://           // [161]
     //:TAG[ constantssection  | CONSTANTSSECTION  ]://           // [161]
-                                                       
+                                                                 // [---]
     const c_fps =(  30  );  /** Simulation FrameRate **/         // [088][085]
-                                                                 
+                                                                 // [---]                      
     const c_dud = "[YOU_MEAN:c_dum:NO:DiscreteUnits:DUM]" ;      // [088]
-
+                                                                 // [---]
     //:master_memory_cell_constants:[161]:---------------://     // [161]
                                                                  // [161]
         //:SEE[ AT[ AIM_MASTER_MEMORY_LAYOUT ] ]://              // [161]
@@ -2826,14 +2825,49 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                 //: had in video                         ://     // [195]
                 //: #[ 1_7_9 - TO - 1_9_4 ]#             ://     // [195]
                 //:::::::::::::::::::::::::::::::::::::::://     // [195]
+                
                                                                  // [---]
                     if( f_0 != f_geo.a  //:#_ALPHAGAURD_#://     // [---][179]
                     ||  f_0 != f_bom.a  //:#_ALPHAGAURD_#://     // [---][179]
                     ||  f_0 != f_fad.a  //:#_ALPHAGAURD_#://     // [---][179]
                     ){                                           // [---][179]
-                        out_f_c =( (f_geo+f_bom+f_fad)/3.0 );    // [195]
-                    };;                                          // [---][179]
-                                                                 // [---]
+                    #define o out_f_c   ////////////////////     
+
+                        ///out_f_c =( (f_geo+f_bom+f_fad)/3.0 );    // [195]
+
+                        F32 b_g_a ; //:background_alpha://
+                        F32 f_g_a ; //:foreground_alpha://
+
+                        b_g_a =( f_1 - f_geo.a );
+                        f_g_a =( f_0 + f_geo.a );
+                        o=UV4(
+                            ( o.r * b_g_a )+( f_geo.r * f_g_a )
+                        ,   ( o.g * b_g_a )+( f_geo.g * f_g_a )
+                        ,   ( o.b * b_g_a )+( f_geo.b * f_g_a )
+                        ,   min(f_1 , max(o.a,f_geo.a) )
+                        );;
+
+                        b_g_a =( f_1 - f_bom.a );
+                        f_g_a =( f_0 + f_bom.a );
+                        o=UV4(
+                            ( o.r * b_g_a )+( f_bom.r * f_g_a )
+                        ,   ( o.g * b_g_a )+( f_bom.g * f_g_a )
+                        ,   ( o.b * b_g_a )+( f_bom.b * f_g_a )
+                        ,   min(f_1 , max(o.a,f_bom.a) )
+                        );;
+
+                        b_g_a =( f_1 - f_fad.a );
+                        f_g_a =( f_0 + f_fad.a );
+                        o=UV4(
+                            ( o.r * b_g_a )+( f_fad.r * f_g_a )
+                        ,   ( o.g * b_g_a )+( f_fad.g * f_g_a )
+                        ,   ( o.b * b_g_a )+( f_fad.b * f_g_a )
+                        ,   min(f_1 , max(o.a,f_fad.a) )
+                        );;
+
+                    #undef  o  /////////////////////////////
+                    };; //:::::::::::::[ #_ALPHAGAURD_# ]://     // [---][179]
+
                 //:-------:#_COMPOSITE_GBF_LAYERS_#:[179]://     // [---]
                                                                  // [---]
             #undef  G    //:::::::::::::[GET_GEO_BOM_FAD]://     //      [178]
