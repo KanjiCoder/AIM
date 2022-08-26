@@ -18,7 +18,6 @@
     var   d_eco =( 1 );                                          // [109]
                                                                  // [---]
     const c_duideno =( 3 ); //:[ 3 | 7 ]://                      // [193]
-    ////// _123_123_123_123 =( # ); //:---------://              // [193]
     var   d_keymast_log_upp =( 0 ); /** Log The Up Key? **/      // [193][118]
                                                                  // [---]
 //:======================================:CONFIGURATION:[109]:// // [---]
@@ -12693,7 +12692,14 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                  
-    [193] : xxxxxxxxxxxxxxxxxxxx
+    [193] : Added denominator configuration macro for   :::::::  // [193]
+          : how much to inset different tile layers by. :::::::  // [193]
+          : Can now boot up with (1/3) or (1/7) of      :::::::  // [193]
+          : [ c _ dut ]based insets.                    :::::::  // [193]
+          :                                             :::::::  // [193]
+          : NEXT : Color Different Layers Different     :::::::  // [193]
+          :      : Colors. White Blob Isn't Much        :::::::  // [193]
+          :      : information.                         :::::::  // [193]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
