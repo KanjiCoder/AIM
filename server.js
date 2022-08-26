@@ -2840,7 +2840,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
 
                         b_g_a =( f_1 - f_geo.a );
                         f_g_a =( f_0 + f_geo.a );
-                        o=UV4(
+                        o=FV4(
                             ( o.r * b_g_a )+( f_geo.r * f_g_a )
                         ,   ( o.g * b_g_a )+( f_geo.g * f_g_a )
                         ,   ( o.b * b_g_a )+( f_geo.b * f_g_a )
@@ -2849,7 +2849,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
 
                         b_g_a =( f_1 - f_bom.a );
                         f_g_a =( f_0 + f_bom.a );
-                        o=UV4(
+                        o=FV4(
                             ( o.r * b_g_a )+( f_bom.r * f_g_a )
                         ,   ( o.g * b_g_a )+( f_bom.g * f_g_a )
                         ,   ( o.b * b_g_a )+( f_bom.b * f_g_a )
@@ -2858,7 +2858,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
 
                         b_g_a =( f_1 - f_fad.a );
                         f_g_a =( f_0 + f_fad.a );
-                        o=UV4(
+                        o=FV4(
                             ( o.r * b_g_a )+( f_fad.r * f_g_a )
                         ,   ( o.g * b_g_a )+( f_fad.g * f_g_a )
                         ,   ( o.b * b_g_a )+( f_fad.b * f_g_a )
