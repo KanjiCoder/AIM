@@ -2253,7 +2253,6 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
         F32 flatlum ; //: FlattenedLayer.ONE_LAYER:::://         //      [196]
         F32 flatsum ; //: FlattenedLayer.NUM_LAYER(S)://         //      [196]
                                                                  //      [---]
-                                                                 //      [175]
         //:::::::::::::::::::::::::::::::::::::::::::::::://     //      [175]
         //: NOTE :[ uv3_p2k != uv4_p2k ................ ]://     //      [175]
         //: ---- :[ uv3_p2k : 3 tiles of data ......... ]://     //      [175]
@@ -2462,24 +2461,22 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
         //:--:#_INVALIDATE_OUT_OF_BOUNDS_SAMPLING_#:[189]://     // [---]
         //:---------------:#_OOB_SAM_ALWAYS_EMPTY_#:[189]://     // [---]
 
-        //:#_Simple_Yes_No_For_Now_#:[178]:--------------://     // [178]
-                                                                 // [178]
-
-        /////////// FV4 strobecolor =((u_0 != ( d_tik & u_1 ))           // [178]
-        ///////////                                                      // [178]
-        ///////////     ? ( FV4( 1.0,0.5,0.0,1.0 ) ) //: YES ://         // [195][178]
-        ///////////     : ( FV4( 0.0,1.0,0.0,1.0 ) ) //: _NO ://         // [195][178]
-        /////////// );;                                                  // [178]
-
-            FV4 empty_color =( FV4( 0.0 , 0.0 , 0.0 , 0.0 ) );   // [178]
-                                                                 // [178]
-            out_fv4comp =(( u_0 != nonzero )                     // [178]
-                                                                 // [178]
+        //:#_Simple_Yes_No_For_Now_#:[178]:--------------://     // [---][178]
+                                                                 // [---][178]
+            //:::::::::::::::::::::::::::::::::::::::::::://     // [196]
+            //:@R_I_P@ : strobecolor , 1_7_8 - 1_9_5     ://     // [196]
+            //:(R.I.P.): You were a pulsating FV4.       ://     // [196]
+            //:::::::::::::::::::::::::::::::::::::::::::://     // [196]
+                                                                 // [---]
+            FV4 empty_color =( FV4( 0.0 , 0.0 , 0.0 , 0.0 ) );   // [---][178]
+                                                                 // [---][178]
+            out_fv4comp =(( u_0 != nonzero )                     // [---][178]
+                                                                 // [---][178]
                 ? (     flatlay ) //: YES ://                    // [196][178]
-                : ( empty_color ) //: _NO ://                    // [178]
-            //////( 123_123_123 )///////////////////////////     // [178]
-            );;                                                  // [178]
-        //:--------------:#_Simple_Yes_No_For_Now_#:[178]://     // [178]
+                : ( empty_color ) //: _NO ://                    // [---][178]
+            //////( 123_123_123 )///////////////////////////     // [---][178]
+            );;                                                  // [---][178]
+        //:--------------:#_Simple_Yes_No_For_Now_#:[178]://     // [---][178]
                                                                  // [---][---]
         return( out_fv4comp );                                   //      [175]
                                                                  //      [175]
@@ -9251,6 +9248,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : bugs in it. NO VISIBLE CHANGES TO RENDERER           // [195][194]
           : IN THIS DELTA, JUST LOOKUP TABLES AND CONSTS.        // [195][194]
 
+    [195] : Hackish Alpha Compositing. Tile Colors Returned      // [196][195]
+          : strobe between green and orange.                     // [196][195]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -12949,14 +12949,21 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         optimized if we keep all this bullshit out of         |  // [196]
         the [ #_ACCUMULATOR_SECTION_# ].                      |  // [196]
     :---------------------------------------------------------+  // [196]
+                                                                 // [196]
+    @R_I_P@ : Rest_In_Piece , the variable is dead now.          // [196]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                  
-    [195] : Hackish Alpha Compositing. Tile Colors Returned      // [195]
-          : strobe between green and orange.                     // [195]
+    [196] : UP+UP+DOWN+DOWN+LEFT+RIGHT+LEFT+RIGHT+A  (1 fill) :  // [196]
+          :                                                   :  // [196]
+          : Now we see all the tiles that have been set       :  // [196]
+          : when we binary 1 fill all of the levelpacks.      :  // [196]
+          :                                                   :  // [196]
+          : UP+UP+DOWN+DOWN+LEFT+RIGHT+LEFT+RIGHT+B  (0 fill) :  // [196]
+
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
