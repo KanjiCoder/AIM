@@ -9202,6 +9202,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :      : Colors. White Blob Isn't Much        :::::::  // [194][193]
           :      : information.                         :::::::  // [194][193]
 
+    [194] : Added lookup tables that will help us render         // [195][194]
+          : different tiles different colors, so we can          // [195][194]
+          : further debug tile setting code that has             // [195][194]
+          : bugs in it. NO VISIBLE CHANGES TO RENDERER           // [195][194]
+          : IN THIS DELTA, JUST LOOKUP TABLES AND CONSTS.        // [195][194]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -12860,11 +12866,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                  
-    [194] : Added lookup tables that will help us render         // [194]
-          : different tiles different colors, so we can          // [194]
-          : further debug tile setting code that has             // [194]
-          : bugs in it. NO VISIBLE CHANGES TO RENDERER           // [194]
-          : IN THIS DELTA, JUST LOOKUP TABLES AND CONSTS.        // [194]
+    [195] : Hackish Alpha Compositing. Tile Colors Returned      // [195]
+          : strobe between green and orange.                     // [195]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
