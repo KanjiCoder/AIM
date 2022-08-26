@@ -17,7 +17,7 @@
     var   d_eci =( 1 );                                          // [109]
     var   d_eco =( 1 );                                          // [109]
                                                                  // [---]
-    const c_duideno =( 7 ); //:[ 3 | 7 ]://                      // [193]
+    const c_duideno =( 3 ); //:[ 3 | 7 ]://                      // [193]
     ////// _123_123_123_123 =( # ); //:---------://              // [193]
     var   d_keymast_log_upp =( 0 ); /** Log The Up Key? **/      // [193][118]
                                                                  // [---]
@@ -276,7 +276,7 @@
         , dui_3_3 : [ 0,1,2, 0xB5E , 4,5,6 , 0x4E0 , 8,9 ]       // [193]
         };; ////////////////////////////////////////////////     // [193]
         if( 7 === c_duideno ){                                   // [193]
-
+                                                                 // [---]
             ASS( 0x1A0 ===  416 , "[HEX:1A0:DEC:_416]" );        // [---][191]
             ASS( 0x340 ===  832 , "[HEX:340:DEC:_832]" );        // [---][191]
             ASS( 0x4E0 === 1248 , "[HEX:4E0:DEC:1248]" );        // [---][191]
@@ -290,13 +290,11 @@
         }else{                                                   // [193]
             ERR("[UNSUPPORTED:DUIDENO]");                        // [193]
         };;                                                      // [193]
-
-        const c_dui_max =(_c_dui_obj_.dui_max[ c_duideno ]);     // [---][191]
-        const c_dui_1_3 =(_c_dui_obj_.dui_1_3[ c_duideno ]);     // [---][191]
-        const c_dui_2_3 =(_c_dui_obj_.dui_2_3[ c_duideno ]);     // [---][191]
-        const c_dui_3_3 =(_c_dui_obj_.dui_3_3[ c_duideno ]);     // [---][191]
-                                                                 // [---][191]
-
+                                                                 // [---]
+        const c_dui_max =(_c_dui_obj_.dui_max[ c_duideno ]);     // [193][191]
+        const c_dui_1_3 =(_c_dui_obj_.dui_1_3[ c_duideno ]);     // [193][191]
+        const c_dui_2_3 =(_c_dui_obj_.dui_2_3[ c_duideno ]);     // [193][191]
+        const c_dui_3_3 =(_c_dui_obj_.dui_3_3[ c_duideno ]);     // [193][191]
                                                                  // [---][191]
         //:#_BACKGROUND_TILES_SHOULD_BE_BIGGEST_#:://            // [---][191]
         //:#_FOREGROUND_TILES_SHOULD_BE_SMALLEST_#://            // [---][191]
@@ -305,14 +303,11 @@
         const c_dui_bom =( c_dui_2_3 ); //:M_G ==> MEDIUM ://    // [---][191]
         const c_dui_fad =( c_dui_3_3 ); //:F_G ==> SMALL  ://    // [---][191]
                                                                  // [---][191]
-
-
-
         ASS( c_duideno === 7 || c_duideno === 3 , "[DENO]");     // [193][---]
         ASS( c_dui_max ===F_M_F( c_dut / c_duideno ) ///////     // [193][191]
         ,   "[IMAX:RELOADED_REVALATIONS_LEGACY_ANNIHILATION]"    // [193][191]
         );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;    // [193][191]
-
+                                                                 // [---][---]
         ASS( c_dui_1_3 ===F_M_F( c_dui_max / 3 ),"[I_13]" );     // [---][191]
         ASS( c_dui_2_3 ===( c_dui_1_3      * 2 ),"[I_23]" );     // [---][191]
         ASS( c_dui_3_3 ===( c_dui_1_3      * 3 ),"[I_33]" );     // [---][191]
