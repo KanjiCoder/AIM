@@ -1172,7 +1172,6 @@
     //:TAG[ illegal-section | illegal-section | illegals]://     // [109]
     //:TAG[ illegal section | illegalsection | illsec   ]://     // [109]
                                                                  // [---]
-
     const c_denomim         = "[FIX:c_duideno]";                 // [193]
     const c_dui_denominator = "[FIX:c_duideno]";                 // [193]
                                                                  // [---]
