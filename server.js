@@ -9337,6 +9337,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [195] : Hackish Alpha Compositing. Tile Colors Returned      // [196][195]
           : strobe between green and orange.                     // [196][195]
 
+    [196] : UP+UP+DOWN+DOWN+LEFT+RIGHT+LEFT+RIGHT+A  (1 fill) :  // [197][196]
+          :                                                   :  // [197][196]
+          : Now we see all the tiles that have been set       :  // [197][196]
+          : when we binary 1 fill all of the levelpacks.      :  // [197][196]
+          :                                                   :  // [197][196]
+          : UP+UP+DOWN+DOWN+LEFT+RIGHT+LEFT+RIGHT+B  (0 fill) :  // [197][196]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -13059,13 +13066,14 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                  
-    [196] : UP+UP+DOWN+DOWN+LEFT+RIGHT+LEFT+RIGHT+A  (1 fill) :  // [196]
-          :                                                   :  // [196]
-          : Now we see all the tiles that have been set       :  // [196]
-          : when we binary 1 fill all of the levelpacks.      :  // [196]
-          :                                                   :  // [196]
-          : UP+UP+DOWN+DOWN+LEFT+RIGHT+LEFT+RIGHT+B  (0 fill) :  // [196]
-
+    [197] : Added debug checks to tile setting code on           // [197]
+          : the CPU-side. Everything looks correct.              // [197]
+          : I am suspecting that we CANNOT SEE a tile            // [197]
+          : unless tile exists on ALL_3_LAYERS with how          // [197]
+          : the current GPU-side code hackishly composites       // [197]
+          : things together. Next video will attempt             // [197]
+          : more sophisticated layer compositing in our          // [197]
+          : GPU-rendering code.                                  // [197]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
