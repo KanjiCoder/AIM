@@ -4628,10 +4628,18 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 let put_h3x =F_M_F(  put_dpx / 512 );            // [197][--------]
                 let put_h3y =F_M_F(  put_dpy / 512 );            // [197][--------]
                                                                  // [197][--------]
+
+                let h3x_dpx =( put_dpx - (put_h3x*512) );        // [197][--------]
+                let h3y_dpy =( put_dpy - (put_h3y*512) );        // [197][--------]
+
                 LOG( "[put_dpx]:" , put_dpx );                   // [197][--------]
                 LOG( "[put_dpy]:" , put_dpy );                   // [197][--------]
                 LOG( "[put_h3x]:" , put_h3x );                   // [197][--------]
                 LOG( "[put_h3y]:" , put_h3y );                   // [197][--------]
+                LOG( "[h3x_dpx]:" , h3x_dpx );                   // [197][--------]
+                LOG( "[h3y_dpy]:" , h3y_dpy );                   // [197][--------]
+
+
                                                                  // [197][--------]       
                 if( put_h3x < 0 || put_h3x > (3-1)               // [197][--------]
                 ||  put_h3y < 0 || put_h3y > (3-1)               // [197][--------]
@@ -13042,12 +13050,17 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @i_g@ : Input Green Byte ( IN_FUNC:TILEBOI.EDI_PUT_U32 )     // [197]
     @i_b@ : Input Blue  Byte ( IN_FUNC:TILEBOI.EDI_PUT_U32 )     // [197]
     @i_a@ : Input Alpha Byte ( IN_FUNC:TILEBOI.EDI_PUT_U32 )     // [197]
-
+                                                                 // [197]
     #_DPC_COORD_CHECK_# : Maybe we are setting tiles to          // [197]
                         : parts of pix2048 where levelpack       // [197]
                         : data is __NOT__ supposed to exist.     // [197]
                         : Convert DPC back into tile x/y         // [197]
                         : to find out.                           // [197]
+                                                                 // [197]
+    @h3x_dpx@ : DataPixel[ X ]Local_To_Levelpack.X === h3x       // [197]
+    @h3y_dpy@ : DataPixel[ Y ]Local_To_Levelpack.Y === h3y       // [197]
+    @h3x_dpx@ : DataPixel[ X ]Local_To_____HOTEL.X === h3x       // [197]
+    @h3y_dpy@ : DataPixel[ Y ]Local_To_____HOTEL.Y === h3y       // [197]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
