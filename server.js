@@ -2817,63 +2817,57 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                                                                  // [---]
                 //:#_COMPOSITE_GBF_LAYERS_#:[179]:-------://     // [179]
                                                                  // [---]
-                //:::::::::::::::::::::::::::::::::::::::://     // [195]
-                //: TODO: Alpha Compositing, right now   ://     // [195]
-                //: just averaging the 3 layers          ://     // [195]
-                //: together to get better feedback      ://     // [195]
-                //: than the pure white pixels we        ://     // [195]
-                //: had in video                         ://     // [195]
-                //: #[ 1_7_9 - TO - 1_9_4 ]#             ://     // [195]
-                //:::::::::::::::::::::::::::::::::::::::://     // [195]
-                
-                                                                 // [---]
                     if( f_0 != f_geo.a  //:#_ALPHAGAURD_#://     // [---][179]
                     ||  f_0 != f_bom.a  //:#_ALPHAGAURD_#://     // [---][179]
                     ||  f_0 != f_fad.a  //:#_ALPHAGAURD_#://     // [---][179]
                     ){                                           // [---][179]
-                    #define o out_f_c   ////////////////////     
-
-                        ///out_f_c =( (f_geo+f_bom+f_fad)/3.0 );    // [195]
-
-                        F32 b_g_a ; //:background_alpha://
-                        F32 f_g_a ; //:foreground_alpha://
-
-                        b_g_a =( f_1 - f_geo.a );
-                        f_g_a =( f_0 + f_geo.a );
-                        o=FV4(
-                            ( o.r * b_g_a )+( f_geo.r * f_g_a )
-                        ,   ( o.g * b_g_a )+( f_geo.g * f_g_a )
-                        ,   ( o.b * b_g_a )+( f_geo.b * f_g_a )
-                        ,   min(f_1 , max(o.a,f_geo.a) )
-                        );;
-
-                        b_g_a =( f_1 - f_bom.a );
-                        f_g_a =( f_0 + f_bom.a );
-                        o=FV4(
-                            ( o.r * b_g_a )+( f_bom.r * f_g_a )
-                        ,   ( o.g * b_g_a )+( f_bom.g * f_g_a )
-                        ,   ( o.b * b_g_a )+( f_bom.b * f_g_a )
-                        ,   min(f_1 , max(o.a,f_bom.a) )
-                        );;
-
-                        b_g_a =( f_1 - f_fad.a );
-                        f_g_a =( f_0 + f_fad.a );
-                        o=FV4(
-                            ( o.r * b_g_a )+( f_fad.r * f_g_a )
-                        ,   ( o.g * b_g_a )+( f_fad.g * f_g_a )
-                        ,   ( o.b * b_g_a )+( f_fad.b * f_g_a )
-                        ,   min(f_1 , max(o.a,f_fad.a) )
-                        );;
-
-                    #undef  o  /////////////////////////////
+                    #define o out_f_c   ////////////////////     // [198][---]
+                                                                 // [198][---]
+                        F32 b_g_a ; //:background_alpha://       // [198][---]
+                        F32 f_g_a ; //:foreground_alpha://       // [198][---]
+                                                                 // [198][---]
+                    //:#_B_G_GEOM_#://                           // [198][---]
+                                                                 // [198][---]
+                        b_g_a =( f_1 - f_geo.a );                // [198][---]
+                        f_g_a =( f_0 + f_geo.a );                // [198][---]
+                        o=FV4(                                   // [198][---]
+                            ( o.r * b_g_a )+( f_geo.r * f_g_a )  // [198][---]
+                        ,   ( o.g * b_g_a )+( f_geo.g * f_g_a )  // [198][---]
+                        ,   ( o.b * b_g_a )+( f_geo.b * f_g_a )  // [198][---]
+                        ,   min(f_1 , max(o.a,f_geo.a) )         // [198][---]
+                        );;                                      // [198][---]
+                                                                 // [198][---]
+                    //:#_M_G_BOMB_#://                           // [198][---]
+                                                                 // [198][---]
+                        b_g_a =( f_1 - f_bom.a );                // [198][---]
+                        f_g_a =( f_0 + f_bom.a );                // [198][---]
+                        o=FV4(                                   // [198][---]
+                            ( o.r * b_g_a )+( f_bom.r * f_g_a )  // [198][---]
+                        ,   ( o.g * b_g_a )+( f_bom.g * f_g_a )  // [198][---]
+                        ,   ( o.b * b_g_a )+( f_bom.b * f_g_a )  // [198][---]
+                        ,   min(f_1 , max(o.a,f_bom.a) )         // [198][---]
+                        );;                                      // [198][---]
+                                                                 // [198][---]
+                    //:#_F_G_FADA_#://                           // [198][---]
+                                                                 // [198][---]
+                        b_g_a =( f_1 - f_fad.a );                // [198][---]
+                        f_g_a =( f_0 + f_fad.a );                // [198][---]
+                        o=FV4(                                   // [198][---]
+                            ( o.r * b_g_a )+( f_fad.r * f_g_a )  // [198][---]
+                        ,   ( o.g * b_g_a )+( f_fad.g * f_g_a )  // [198][---]
+                        ,   ( o.b * b_g_a )+( f_fad.b * f_g_a )  // [198][---]
+                        ,   min(f_1 , max(o.a,f_fad.a) )         // [198][---]
+                        );;                                      // [198][---]
+                                                                 // [198][---]
+                    #undef  o  /////////////////////////////     // [198][---]
                     };; //:::::::::::::[ #_ALPHAGAURD_# ]://     // [---][179]
-
+                                                                 // [---]
                 //:-------:#_COMPOSITE_GBF_LAYERS_#:[179]://     // [---]
                                                                  // [---]
-            #undef  G    //:::::::::::::[GET_GEO_BOM_FAD]://     //      [178]
-            //:-----------:#_draw_tile_2022_08_22_#:[178]://     //      [178]
+            #undef  G    //:::::::::::::[GET_GEO_BOM_FAD]://     // [178]
+            //:-----------:#_draw_tile_2022_08_22_#:[178]://     // [178]
             //:Active_Tile_Highlight:[155]:--------------://     // [---]
-            {                                                    //      [155]
+            {                                                    // [---][155]
                 U32 u_dunspan =( d_te7_dun[ d_te7 ] );           //      [155]
                 U32 gtx = u_dsc.x / u_dunspan ;                  //      [155]
                 U32 gty = u_dsc.y / u_dunspan ;                  //      [155]
@@ -2885,9 +2879,9 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                     out_f_c.g =( out_f_c.g / 4.0 );              //      [155]
                     out_f_c.b =( out_f_c.b / 4.0 );              //      [155]
                 };;                                              //      [155]
-            }                                                    //      [155]
+            }                                                    // [---][155]
             //:--------------:Active_Tile_Highlight:[155]://     // [---]
-            //:cursor_dot:[147]:-------------------------://     // [---]
+            //:cursor_dot:[147]:-------------------------://     // [---][---]
             if( 1 != 1                                           //      [147]
             || abs( I32( u_dsc.x ) - I32( d_dmx ) ) < 256        // [157][149][147]
             || abs( I32( u_dsc.y ) - I32( d_dmy ) ) < 256        // [157][149][147]
@@ -2897,13 +2891,12 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                 out_f_c.b =( 1.0 - out_f_c.b );                  //      [147]
             };;                                                  //      [147]
             //:-------------------------:cursor_dot:[147]://     // [---]
-                                                                 
-                                                                 // [099]
+                                                                 // [---]
         //:-----------------------:use_the_sample_point:[099]:// // [099]
                                                                  // [---]
                                                                  // [095]
     }   //////////////////////////////////////////////////////// // [074]                                                       
-                                                                        
+                                                                 // [---]
 `));; //////////////////////////////////////////////////////////    [069]
 const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
 ////////////////////////////////////////////////////////////////    [069]
@@ -9378,6 +9371,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :                                                   :  // [197][196]
           : UP+UP+DOWN+DOWN+LEFT+RIGHT+LEFT+RIGHT+B  (0 fill) :  // [197][196]
 
+    [197] : Added debug checks to tile setting code on           // [198][197]
+          : the CPU-side. Everything looks correct.              // [198][197]
+          : I am suspecting that we CANNOT SEE a tile            // [198][197]
+          : unless tile exists on ALL_3_LAYERS with how          // [198][197]
+          : the current GPU-side code hackishly composites       // [198][197]
+          : things together. Next video will attempt             // [198][197]
+          : more sophisticated layer compositing in our          // [198][197]
+          : GPU-rendering code.                                  // [198][197]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -13095,19 +13097,24 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @h3x_dpx@ : DataPixel[ X ]Local_To_____HOTEL.X === h3x       // [197]
     @h3y_dpy@ : DataPixel[ Y ]Local_To_____HOTEL.Y === h3y       // [197]
 
+    #_B_G_GEOM_# : GeomTile , alpha composited in #_B_G_#        // [198]
+    #_M_G_BOMB_# : BombTile , alpha composited in #_M_G_#        // [198]
+    #_F_G_FADA_# : FadaTile , alpha composited in #_F_G_#        // [198]
+                                                                 // [198]
+    #_B_G_# : Background layer of alpha composite.               // [198]
+    #_M_G_# : Background layer of alpha composite.               // [198]
+    #_F_G_# : Background layer of alpha composite.               // [198]
+
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                                                                  
-    [197] : Added debug checks to tile setting code on           // [197]
-          : the CPU-side. Everything looks correct.              // [197]
-          : I am suspecting that we CANNOT SEE a tile            // [197]
-          : unless tile exists on ALL_3_LAYERS with how          // [197]
-          : the current GPU-side code hackishly composites       // [197]
-          : things together. Next video will attempt             // [197]
-          : more sophisticated layer compositing in our          // [197]
-          : GPU-rendering code.                                  // [197]
+    [198] : Proper alpha compositing for the three tile   :::::  // [198]
+          : layers that exist on our tilemaps.            :::::  // [198]
+          : I say proper, but I am just guessing at what  :::::  // [198]
+          : I think alpha compositing should be.          :::::  // [198]
+          : -KanjiCoder , 2022.08.26 : 844AM , Tired.     :::::  // [198]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
