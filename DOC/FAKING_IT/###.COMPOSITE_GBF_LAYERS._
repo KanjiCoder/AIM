@@ -1,4 +1,8 @@
                
+    At some point we integrated this code back into 
+    server.js , we can now close this file and never
+    look at it again for the rest of our life.
+
     We have more work to do before we get this fancy.
 
 
@@ -16,7 +20,7 @@
                 (   ( f_gbf.b * (f_1-f_geo.a ) )                 // [181]
                 +   ( f_geo.b * (f_0+f_geo.a ) ) )               // [181]
                 ,                                                // [181]
-                min(f_1 , f_gbf.a   +f_geo.a     )               // [181]
+                min(f_1 , f_gbf.a   +f_geo.a     )  < < < < < < < < THIS IS WONG ANYWAYS
                 );;                                              // [181]
                 f_gbf=FV4(                                       // [181]
                 (   ( f_gbf.r * (f_1-f_bom.a ) )                 // [181]
@@ -28,7 +32,7 @@
                 (   ( f_gbf.b * (f_1-f_bom.a ) )                 // [181]
                 +   ( f_bom.b * (f_0+f_bom.a ) ) )               // [181]
                 ,                                                // [181]
-                min(f_1 , f_gbf.a   +f_bom.a     )               // [181]
+                min(f_1 , f_gbf.a   +f_bom.a     )  < < < < < < < < THIS IS WONG ANYWAYS
                 );;                                              // [181]
                 f_gbf=FV4(                                       // [181]
                 (   ( f_gbf.r * (f_1-f_fad.a ) )                 // [181]
@@ -40,7 +44,7 @@
                 (   ( f_gbf.b * (f_1-f_fad.a ) )                 // [181]
                 +   ( f_fad.b * (f_0+f_fad.a ) ) )               // [181]
                 ,                                                // [181]
-                min(f_1 , f_gbf.a   +f_fad.a     )               // [181]
+                min(f_1 , f_gbf.a   +f_fad.a     )  < < < < < < < < THIS IS WONG ANYWAYS
                 );;                                              // [181]
                                                                  // [181]
                 out_f_c = f_gbf ;                                // [181]
