@@ -13459,6 +13459,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
           :   : function to listen for [ 0 - 9 ]on    :::::::::  // [203]
           :   : numpad after KONAMI_ARROW_CODE has    :::::::::  // [203]
           :___: been typed.                           :::::::::  // [203]
+          :   :                                                  // [203]
+          :[!]: Only "7" key on numpad works.            ::::::  // [203]
+          :   : !!!!!!!!! THIS IS A CLUE !!!!!!!!!!!     ::::::  // [203]
+          :   : Tile setting sort of works on the first  ::::::  // [203]
+          :   : level of the levelpack associate with    ::::::  // [203]
+          :   : the "7" key. The top left levelpack.     ::::::  // [203]
+          :   : INDICATIVE OF FORGETTING TO TRANSLATE.   ::::::  // [203]
+          :   : My guess is the __SHADER__ code is not   ::::::  // [203]
+          :   : sampling correctly from[ d _ pix2048 ].  ::::::  // [203]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
