@@ -13281,6 +13281,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
             in videos #2_0_1 -to- #3_0_0 . As such, no           // [201]
             code changes (besides commentary) have been          // [201]
             made for delta #2_0_1.                               // [201]
+                                                                 // [201]
+            WAIT!! 1 code change, the auto commit script         // [201]
+            ( AIM/VIP/001/###.SH )has been updated with          // [201]
+            the new playlist for it's commit message.            // [201]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
