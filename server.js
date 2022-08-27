@@ -7166,11 +7166,11 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [---]
     const   F_KEYMAST_EVT_KEY_PAD_N10 = "[FIX:EVT_N10]" ;        // [203]
                                                                  // [203]
-    const   F_KEYMAST_EVT_N10 = function                         // [203]
-    PRIVATE_F_KEYMAST_EVT_N10(                                   // [203]
-                                                                 // [203]
-        i_evt_key                                                // [203]
-    ){                                                           // [203]
+    const   F_KEYMAST_EVT_N10 = function                         // [203] NOTICE_ME_SENPAI : Remove the namespacing and!!!
+    PRIVATE_F_KEYMAST_EVT_N10(                                   // [203] put this function up above all of the        !!!
+                                                                 // [203] sub-system sections. Code ABOVE THIS CODE    !!!
+        i_evt_key                                                // [203] (KONAMIC) is referencing this function.      !!!
+    ){                                                           // [203] THAT IS A DEPENDENCY VIOLATION!!!            !!!
         //:[ATF]: ( evt )===>( n10 ) :[ATF]://                   // [203]
                                                                  // [203]
         var o_n10=( 0-1 );     //:AKA[ pad_num ]://              // [203][MAE][105][---]
