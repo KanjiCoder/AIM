@@ -909,7 +909,7 @@
                                                                  // [000_3RD][206][FMT]
             UZIP._readLocal(                                     // [000_3RD][206][FMT]
                 data, roff, out, csize, usize, onlyNames );;     // [000_3RD][206][FMT]
-        }                                                        // [000_3RD][206][FMT]
+        };;                                                      // [000_3RD][206][FMT]
         //console.log(out);                                      // [000_3RD][206][FMT]
         return out;                                              // [000_3RD][206][FMT]
     };;                                                          // [000_3RD][206][FMT]
@@ -2864,7 +2864,7 @@ UPNG.encode.concatRGBA = function(bufs) {
 //:    WEB_URL : github.com/photopea/UPNG.js                 :// // [000_3RD][206][---]
 //:    SSH_URL : git@github.com:photopea/UPNG.js.git         :// // [000_3RD][206][---]
 //:                                                          :// // [000_3RD][206][---]
-//:===================================:000_3RD:UPNG_LIB:[206]:// // [000_3RD][206][---]  
+//:===================================:000_3RD:UPNG_LIB:[206]:// // [000_3RD][206][---]
 //:TOP_LEVEL_FUNCTIONS:[205]:================================://
 //:TOP_LEVEL_HELPER_FUNCTIONS:[096]:=========================://
 
@@ -11684,6 +11684,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : Wrote it in a more verbose way to             :::::  // [205][204]
           : prevent things hinging on a single character. :::::  // [205][204]
 
+    [205] : Numpad detection function is now a top-level         // [206][205]
+          : function. Whoooo!                                    // [206][205]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -15677,13 +15680,37 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
               : MODE #3 : Edit Mode , for creative play.         // [205]
               : TAG[ DEV MODE , GAME MODE , EDIT MODE ]          // [205]
 
+    #_15_K_IS_OUR_NEW_ZERO_# :                                   // [206]
+                                                                 // [206]
+        15K is our new "ZERO.                                    // [206]
+        After pasting in the PNG library, our code base          // [206]
+        is roughly 15K lines total, including these              // [206]
+        comments. Let's call "15K" the new zero. It              // [206]
+        doesn't count. I haven't written shit until              // [206]
+        I get to 30K. Just look at that .PNG code.               // [206]
+        It is fucking giant. I am sitting on the                 // [206]
+        shoulder's of giants.                                    // [206]
+                                                                 // [206]
+    @KANJI_EDIT@ : An edit to some code that is not my           // [206]
+                 : code. Currently only edit is inside           // [206]
+                 : 3rd party P_N_G library. Putting this         // [206]
+                 : tag here because I don't trust myself         // [206]
+                 : editing a fucking P_N_G library.              // [206]
+                 : I am paranoid and scared, hold me.            // [206]
+
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
          
-    [205] : Numpad detection function is now a top-level         // [205]
-          : function. Whoooo!                                    // [205]
+    [206] : Cut+Pasted .PNG encoding and decoding library        // [206]
+          : into this code base. It is fucking huge.             // [206]
+          :                                                      // [206]
+          : NEXT : Write a simple unit test to make sure         // [206]
+          :      : this code is correct. Throw in a              // [206]
+          :      : hex-dump of a few .PNG hex dumps and          // [206]
+          :      : make sure they can be decoded and             // [206]
+          :      : encoded.                                      // [206]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
