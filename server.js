@@ -2398,7 +2398,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
             //:#_ITS_THE_FINAL_OFFSET_#:[204]:---------------://
                 p2k_x_y.xy =(                                    // [204][BUG][176]
                 p2k_x_y.xy                                       // [204][BUG][176]      
-                +   IV2( te7_txy[ any_te7 ]                      // [204][BUG][176]
+                +   IV2( te7_txy[ any_te7 ] )                    // [204][BUG][176]
                 );;                                              // [204][BUG][176]
             //:---------------:#_ITS_THE_FINAL_OFFSET_#:[204]://
                                                                  // [---]
