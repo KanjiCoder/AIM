@@ -13638,6 +13638,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         of other functions that increase the level of         |  // [205]
         abstraction.                                          |  // [205]
     +---------------------------------------------------------+  // [205]
+                                                                 // [205]
+    [THOUGHT] : We need 3 modes for this game.                   // [205]
+              : MODE #1 : Dev  Mode , for development.           // [205]
+              : MODE #2 : Game Mode , for playing.               // [205]
+              : MODE #3 : Edit Mode , for creative play.         // [205]
+              : TAG[ DEV MODE , GAME MODE , EDIT MODE ]          // [205]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
