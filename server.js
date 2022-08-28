@@ -2397,7 +2397,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                                                                  //      [176]
             //:#_ITS_THE_FINAL_OFFSET_#:[204]:---------------://
                 p2k_x_y.xy =(                                    // [204][BUG][176]
-                p2k_x_y.xy                                       // [204][BUG][176]      
+                p2k_x_y.xy                                       // [204][BUG][176]
                 +   IV2( te7_txy[ any_te7 ] )                    // [204][BUG][176]
                 );;                                              // [204][BUG][176]
             //:---------------:#_ITS_THE_FINAL_OFFSET_#:[204]://
@@ -9590,6 +9590,24 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :   :                                 :::::::::::::::  // [203][202]
           NEXT: Numpad Key Detection In Konamic.:::::::::::::::  // [203][202]
 
+    [203] :---:                                       :::::::::  // [204][203]
+          : 1 : Refactored numpad detection in        :::::::::  // [204][203]
+          :   : KEYMAST into re-usable function.      :::::::::  // [204][203]
+          :   :                                       :::::::::  // [204][203]
+          : 2 : Konamic uses KEYMAST numpad detection :::::::::  // [204][203]
+          :   : function to listen for [ 0 - 9 ]on    :::::::::  // [204][203]
+          :   : numpad after KONAMI_ARROW_CODE has    :::::::::  // [204][203]
+          :___: been typed.                           :::::::::  // [204][203]
+          :   :                                                  // [204][203]
+          :[!]: Only "7" key on numpad works.            ::::::  // [204][203]
+          :   : !!!!!!!!! THIS IS A CLUE !!!!!!!!!!!     ::::::  // [204][203]
+          :   : Tile setting sort of works on the first  ::::::  // [204][203]
+          :   : level of the levelpack associate with    ::::::  // [204][203]
+          :   : the "7" key. The top left levelpack.     ::::::  // [204][203]
+          :   : INDICATIVE OF FORGETTING TO TRANSLATE.   ::::::  // [204][203]
+          :   : My guess is the __SHADER__ code is not   ::::::  // [204][203]
+          :   : sampling correctly from[ d _ pix2048 ].  ::::::  // [204][203]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -13464,29 +13482,23 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         The final OFFSET                                      |  // [204]
     +---------------------------------------------------------+  // [204]
 
-
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
          
-    [203] :---:                                       :::::::::  // [203]
-          : 1 : Refactored numpad detection in        :::::::::  // [203]
-          :   : KEYMAST into re-usable function.      :::::::::  // [203]
-          :   :                                       :::::::::  // [203]
-          : 2 : Konamic uses KEYMAST numpad detection :::::::::  // [203]
-          :   : function to listen for [ 0 - 9 ]on    :::::::::  // [203]
-          :   : numpad after KONAMI_ARROW_CODE has    :::::::::  // [203]
-          :___: been typed.                           :::::::::  // [203]
-          :   :                                                  // [203]
-          :[!]: Only "7" key on numpad works.            ::::::  // [203]
-          :   : !!!!!!!!! THIS IS A CLUE !!!!!!!!!!!     ::::::  // [203]
-          :   : Tile setting sort of works on the first  ::::::  // [203]
-          :   : level of the levelpack associate with    ::::::  // [203]
-          :   : the "7" key. The top left levelpack.     ::::::  // [203]
-          :   : INDICATIVE OF FORGETTING TO TRANSLATE.   ::::::  // [203]
-          :   : My guess is the __SHADER__ code is not   ::::::  // [203]
-          :   : sampling correctly from[ d _ pix2048 ].  ::::::  // [203]
+    [204] : My guess was correct. Problem was in the      :::::  // [204]
+          : GLSL shader and was not translating to        :::::  // [204]
+          : correct location in texture sample.           :::::  // [204]
+          :                                               :::::  // [204]
+          : I thought I was calculating hotel offset      :::::  // [204]
+          : incorrectly, but turned out I was BLOWING     :::::  // [204]
+          : AWAY THOSE CALCULATIONS by writing            :::::  // [204]
+          :                                               :::::  // [204]
+          :     "+" instead of "+=".                      :::::  // [204]
+          :                                               :::::  // [204]
+          : Wrote it in a more verbose way to             :::::  // [204]
+          : prevent things hinging on a single character. :::::  // [204]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
