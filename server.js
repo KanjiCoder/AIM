@@ -7528,8 +7528,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
 //|[ @$$$$$@ ]                                               |// // [207]
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [207]
 
-    const   F_BINFONT_STAMONE = function
-    PRIVATE_F_BINFONT_STAMONE(
+    const   F_BINFONT_STAMONE = function                         // [209]
+    PRIVATE_F_BINFONT_STAMONE(                                   // [209]
                                                                  // [209]
         i_stamone //: <-- @_BINFONT_ARGLIST:STAMONE_@ :::://     // [209]
                   //:     @_BINFONT_ARGLIST_STAMONE_@ :::://     // [209]
