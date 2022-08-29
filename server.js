@@ -12658,6 +12658,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :                 : a levelpack and see what    :::::  // [214][213]
           :                 : happens.                    :::::  // [214][213]
 
+    [214] : 1 : Added "Next power of two(2) function"            // [215][214]
+          : 2 : Added unit tests for next power 2 func           // [215][214]
+          NEXT: String to ascii helper converter function.       // [215][214]
+                ( ascii value and char not interchangable )      // [215][214]
+                ( in JavaScript. This isn't C99 people.   )      // [215][214]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -17058,11 +17064,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
          
-    [214] : 1 : Added "Next power of two(2) function"            // [214]
-          : 2 : Added unit tests for next power 2 func           // [214]
-          NEXT: String to ascii helper converter function.       // [214]
-                ( ascii value and char not interchangable )      // [214]
-                ( in JavaScript. This isn't C99 people.   )      // [214]
+    [215] : 1 : Added[ string/char ]to ascii char code func.     // [215]
+          : 2 : Added tests for (char)==>(asc) function.         // [215]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
