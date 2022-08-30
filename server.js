@@ -10863,7 +10863,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
     ,   i_clidrag                                                // [223][--------][---]
     ){                                                           // [223][--------][---]
         //:#_STORE_MOUSE_POS_IN_EDIGAME_#:[223]:---------://     // [223][--------][---]
-                                                                 // [222][--------][---]
+                                                                 // [223][--------][---]
             VITALDO( "[#_NEED_E_G_GETTER_#]" );                  // [223][--------][---]
             let e_g =( d_edigame_edi );                          // [223][MOV][170][---]
                                                                  // [223][MOV][170][---]
@@ -10939,7 +10939,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [223][---]
             //:--------:#_CLICK_OR_DRAG_CODE_HERE_#:[223]://     // [223][---]
         };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [223][---]
-    };;                                                          // [---][222]
+    };; //:ENDFUNC[ F_MOUMAST_CLIDRAG ]:::::::::::::::::::::::// // [223][222]
 
     const   F_MOUMAST_MOV = function                             // [143]
     PRIVATE_F_MOUMAST_MOV(                                       // [143]
@@ -10969,16 +10969,13 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             );;                                     ////////     // [222] 
         };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [222] 
                                                                  // [---]
-    };;                                                          //      [143]
-                                                          
-
-
-
-    const   F_MOUMAST_CLK = function                             //      [143]
-    PRIVATE_F_MOUMAST_CLK(                                       //      [143]
-                                                                 //      [143]
-        i_evt_mou                                                //      [143]
-    ){                                                           //      [143]
+    };;                                                          // [---][143]
+                                                                 // [---]
+    const   F_MOUMAST_CLK = function                             // [---][143]
+    PRIVATE_F_MOUMAST_CLK(                                       // [---][143]
+                                                                 // [---][143]
+        i_evt_mou                                                // [---][143]
+    ){                                                           // [---][143]
                                                                  // [---]
         var clk_p_x = i_evt_mou.offsetX ;                        // [144]
         var clk_p_y = i_evt_mou.offsetY ;                        // [144]
@@ -11001,7 +10998,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         LOG( "[clk_pxy]:" , [clk_p_x,clk_p_y] );                 // [144]
                                                                  // [---]
     };;                                                          // [143]
-
+                                                                 // [---]
     const   F_MOUMAST_INI = function                             // [143] 
     PRIVATE_F_MOUMAST_INI(                                       // [143] 
         /** No Arguments **/                                     // [143] 
@@ -12997,6 +12994,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [221] : Game now starts up zoomed in at a decent level       // [222][221]
           : for setting player-sized tiles.                      // [222][221]
+
+    [222] : 1 : Added constants for button keys.      :::::::::  // [223][222]
+          : 2 : Added click or drag state constants.  :::::::::  // [223][222]
+          : 3 : Added click or drag function.         :::::::::  // [223][222]
+          : 4 : Added detection for if primary mouse  :::::::::  // [223][222]
+          :   : button is down when mouse is moving.  :::::::::  // [223][222]
+          :   : AKA[ added click+drag detection ].    :::::::::  // [223][222]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -17637,70 +17641,71 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 
     @CAE@ : Copied And Edited, like @MAE@ but means the          // [223]
     ::::::: line was duplicated instead of just moved.           // [223]
-
-    #_NEED_E_G_GETTER_# :
-
-        Our code is a bit broken. We are writing 
-        everything for[ edigame_edi ]but eventually 
-        when we switch to[ edigame_gam ]we will have
-        lots of broken behavior unless we start
-        cleaning up some of our shit.
-    
-        For example...
-
-        The Line :
-
-            let e_g = d_edigame_edi ;
-
-        Should Be :
-    
-            let e_g = F_EDIGAME_ACT( );
-
-        Which should return the active game mode object
-        of either[ d_edigame_gam ]OR[ d_edigame_edi ].
-
-    #_FORCE_UPDATE_MAT_GLOBALS_# :
-
-        Force update Mouse_And_Tile( MAT )Globals.
-        Not 100% this is needed here. But just to
-        be on the safe side I am going to do it here.
-
-    #_CALL_EDITOR_TILE_PUTTER_# : 
-        
-        Call the core function that allows user to
-        edit levels by setting tiles.
-    
-    #_STORE_MOUSE_POS_IN_EDIGAME_# :
-
-        Store the mouse position in our EDIGAME
-        object. An object that is "kind of" an 
-        editor state object, but also stores 
-        game state for normal gameplay.
-
-        Hence "edigame" not quite an "editor state"
-        object and not quite a "game play state" object.
-
-    #_CLICK_OR_DRAG_CODE_HERE_# :
-
-        Code that should execute on both a 
-        "click" and a "drag".
-
-        For example, setting tiles is nicer when
-        you can hold down the mouse and drag and
-        set multiple tiles as if they were 
-        brush strokes.
+                                                                 // [223]
+    #_NEED_E_G_GETTER_# :-------------------------------------+  // [223]
+                                                              |  // [223]
+        Our code is a bit broken. We are writing              |  // [223]
+        everything for[ edigame_edi ]but eventually           |  // [223]
+        when we switch to[ edigame_gam ]we will have          |  // [223]
+        lots of broken behavior unless we start               |  // [223]
+        cleaning up some of our shit.                         |  // [223]
+                                                              |  // [223]
+        For example...                                        |  // [223]
+                                                              |  // [223]
+        The Line :                                            |  // [223]
+                                                              |  // [223]
+            let e_g = d_edigame_edi ;                         |  // [223]
+                                                              |  // [223]
+        Should Be :                                           |  // [223]
+                                                              |  // [223]
+            let e_g = F_EDIGAME_ACT( );                       |  // [223]
+                                                              |  // [223]
+        Which should return the active game mode object       |  // [223]
+        of either[ d_edigame_gam ]OR[ d_edigame_edi ].        |  // [223]
+    :---------------------------------------------------------+  // [223]
+    #_FORCE_UPDATE_MAT_GLOBALS_# :----------------------------+  // [223]
+                                                              |  // [223]
+        Force update Mouse_And_Tile( MAT )Globals.            |  // [223]
+        Not 100% this is needed here. But just to             |  // [223]
+        be on the safe side I am going to do it here.         |  // [223]
+    :---------------------------------------------------------+  // [223]
+    #_CALL_EDITOR_TILE_PUTTER_# :-----------------------------+  // [223]
+                                                              |  // [223]
+        Call the core function that allows user to            |  // [223]
+        edit levels by setting tiles.                         |  // [223]
+    :---------------------------------------------------------+  // [223]
+    #_STORE_MOUSE_POS_IN_EDIGAME_# :--------------------------+  // [223]
+                                                              |  // [223]
+        Store the mouse position in our EDIGAME               |  // [223]
+        object. An object that is "kind of" an                |  // [223]
+        editor state object, but also stores                  |  // [223]
+        game state for normal gameplay.                       |  // [223]
+                                                              |  // [223]
+        Hence "edigame" not quite an "editor state"           |  // [223]
+        object and not quite a "game play state" object.      |  // [223]
+    :---------------------------------------------------------+  // [223]
+    #_CLICK_OR_DRAG_CODE_HERE_# :-----------------------------+  // [223]
+                                                              |  // [223]
+        Code that should execute on both a                    |  // [223]
+        "click" and a "drag".                                 |  // [223]
+                                                              |  // [223]
+        For example, setting tiles is nicer when              |  // [223]
+        you can hold down the mouse and drag and              |  // [223]
+        set multiple tiles as if they were                    |  // [223]
+        brush strokes.                                        |  // [223]
+    :---------------------------------------------------------+  // [223]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [222] : 1 : Added constants for button keys.      :::::::::  // [222]
-          : 2 : Added click or drag state constants.  :::::::::  // [222]
-          : 3 : Added click or drag function.         :::::::::  // [222]
-          : 4 : Added detection for if primary mouse  :::::::::  // [222]
-          :   : button is down when mouse is moving.  :::::::::  // [222]
-          :   : AKA[ added click+drag detection ].    :::::::::  // [222]
+    [223] : Can now set tiles by clicking or dragging            // [223]
+          : with the primary mouse button held down.             // [223]
+          : Main work was done creating tileboi wrapper          // [223]
+          : function[ F _ MOUMAST _ EDI _ PUT _ U32 ]            // [223]
+          :                                                      // [223]
+          : NEXT : Tile Setting Optimizations                    // [223]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
