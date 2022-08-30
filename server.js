@@ -42,9 +42,10 @@
     EDIGAME [C:08] [D:10] : Editor State + Game State            // [102]
     KONAMIC [C:14] [D:11] : Konami Code Debugger                 // [180]
     KEYMAST [C:03] [D:12] : Keyboard Listeners                   // [102]
-    MOUMAST [C:11] [D:13] : Mouse Master (Mouse Listeners)       // [142]
-    SERGAME [C:06] [D:14] : HIGH_LEVEL_GAME_CODE - Server Side   // [102]
-    CLIGAME [C:07] [D:15] : HIGH_LEVEL_GAME_CODE - Client Side   // [102]
+    KEYEMMA [C:16] [D:13] : Keyboard Emulator                    // [219]
+    MOUMAST [C:11] [D:14] : Mouse Master (Mouse Listeners)       // [142]
+    SERGAME [C:06] [D:15] : HIGH_LEVEL_GAME_CODE - Server Side   // [102]
+    CLIGAME [C:07] [D:16] : HIGH_LEVEL_GAME_CODE - Client Side   // [102]
                                                                  // [102]
 *** ******************************************************** **/ // [102]
 //:=======================================:SYSTEM_INDEX:[102]:// // [---]
@@ -4165,6 +4166,10 @@ if( yesnode ){ //:-------------------------------------------://
     ASS( c_keymast_ark_rig === c_konamic_ark_rig , "[ARK_R]" );  // [181]
     ASS( c_keymast_ark_dow === c_konamic_ark_dow , "[ARK_D]" );  // [181]
 
+//: __KEYEMMA__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [219]
+
+    /** NOTHING HERE YET **/                                     // [219]
+
 //: __MOUMAST__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [142]
 
     /** Nothing Here Yet **/                                     // [142]
@@ -6229,12 +6234,17 @@ if( /** __KEYMAST__ **/ notnode ){                               // [102]
     ASS(( 0 )===d_keymast_ark_dvy[ c_keymast_ark_rig -k0 ]);     // [114]
     ASS((0+1)===d_keymast_ark_dvy[ c_keymast_ark_dow -k0 ]);     // [114]
                                                                  // [---]
-};;                                                              //      [102]
-if( /** __MOUMAST__ **/ notnode ){                               // [142]
-                                                                 // [142]
-    var d_moumast_dir =( 0 ); //:MOUSE_MASTER_DIRTY?://          // [169]
-                                                                 // [142]
-};;                                                              // [142]
+};;                                                              // [---][102]
+if( /** __KEYEMMA__ **/ notnode ){                               // [219]
+                                                                 // [219]
+    //:NO_DATA://                                                // [219]
+                                                                 // [219]
+};;                                                              // [219]
+if( /** __MOUMAST__ **/ notnode ){                               // [---][142]
+                                                                 // [---][142]
+    var d_moumast_dir =( 0 ); //:MOUSE_MASTER_DIRTY?://          // [169][---]
+                                                                 // [---][142]
+};;                                                              // [---][142]
 if( /** __SERGAME__ **/ yesnode ){                               //      [102]
                                                                  //      [102]
     //:NO_DATA://                                                //      [102]
@@ -10486,17 +10496,32 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         ADD( "keyup"   , F_KEYMAST_UPP );                        // [057] 
         ADD( "keydown" , F_KEYMAST_DOW );                        // [057] 
     };;                                                          // [057] 
+                                                                 // [---]
+//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [---][???]
+//|                                               [ @$$$$$@ ]|// // [---][???]
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __KEYMAST__|// // [---][???]
+//|                                               [ @$$$$$@ ]|// // [---][???]
+//|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|// // [---][???]
+//|16|16|16|16|16|16|16|16|16|SUBS|16|16|16|16|16|16|16|16|16|// // [219]
+//|[ @$$$$$@ ]                                               |// // [219]
+//|__KEYEMMA__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |// // [219]
+//|[ @$$$$$@ ]                                               |// // [219]
+//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [219]
 
-//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|//
-//|                                               [ @$$$$$@ ]|//
-//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __KEYMAST__|//
-//|                                               [ @$$$$$@ ]|//
-//|03|03|03|03|03|03|03|03|03|SUBS|03|03|03|03|03|03|03|03|03|//
-//|11|11|11|11|11|11|11|11|11|SUBS|11|11|11|11|11|11|11|11|11|// // [142]
-//|[ @$$$$$@ ]                                               |// // [142]
-//|__MOUMAST__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |// // [142]
-//|[ @$$$$$@ ]                                               |// // [142]
-//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [142]
+
+    VITALDO( "[KEYEMMA_FUNCTION_SECTION]" );                     // [219]
+
+
+//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [219]
+//|                                               [ @$$$$$@ ]|// // [219]
+//| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ __KEYEMMA__|// // [219]
+//|                                               [ @$$$$$@ ]|// // [219]
+//|16|16|16|16|16|16|16|16|16|SUBS|16|16|16|16|16|16|16|16|16|// // [219]
+//|11|11|11|11|11|11|11|11|11|SUBS|11|11|11|11|11|11|11|11|11|// // [---][142]
+//|[ @$$$$$@ ]                                               |// // [---][142]
+//|__MOUMAST__ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV |// // [---][142]
+//|[ @$$$$$@ ]                                               |// // [---][142]
+//|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [---][142]
 
     const   F_MOUMAST_PIX_DUN = "[FIX:...P_X_DUX()|P_Y_DUY]" ;   // [145]
     const   F_MOUMAST_P_X_DUN = "[FIX:...P_X_DUX()]"         ;   // [145]
@@ -12764,6 +12789,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [217] : Created "NeverNo" helper function, which             // [218][217]
           : creates promises that are NEVER REJECTED.            // [218][217]
+
+    [218] +---+                                                  // [219][218]
+          : 1 : Added Startup Mode Constant To ::::::::::::::::  // [219][218]
+          :   : Configuration section of file. ::::::::::::::::  // [219][218]
+          :   :                                ::::::::::::::::  // [219][218]
+          : 2 : Stubbed in code for changing   ::::::::::::::::  // [219][218]
+          :   : behavior on startup depending  ::::::::::::::::  // [219][218]
+          :   : on startup mode selection.     ::::::::::::::::  // [219][218]
+          +---+                                                  // [219][218]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -17387,15 +17421,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
-         
-    [218] +---+                                                  // [218]
-          : 1 : Added Startup Mode Constant To ::::::::::::::::  // [218]
-          :   : Configuration section of file. ::::::::::::::::  // [218]
-          :   :                                ::::::::::::::::  // [218]
-          : 2 : Stubbed in code for changing   ::::::::::::::::  // [218]
-          :   : behavior on startup depending  ::::::::::::::::  // [218]
-          :   : on startup mode selection.     ::::::::::::::::  // [218]
-          +---+                                                  // [218]
+            
+    [219] : Stubbed in keyboard emulator system (keyemma).       // [219]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
