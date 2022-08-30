@@ -17498,8 +17498,6 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [218]
     :---------------------------------------------------------+  // [218]
 
-    #_NO_NOTES_WERE_MADE_IN_THIS_SECTION_FOR_VIDEO_219_#:::::::  // [219]
-
     #_SEPERATOR_KEY_# :---------------------------------------+  // [220]
                                                               |  // [220]
         Keycode 108 is mysteriously missing from              |  // [220]
