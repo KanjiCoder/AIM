@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-003   (NINJACODER):// // [200][102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-003   ( WEEBCODER):// // [200][102]
 //:                                                          :// // [102][---]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_222             :// // [222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_223             :// // [223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102][---]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---][---]
 //:CONFIGURATION:[109]:======================================:// // [---][---]
@@ -10906,7 +10906,59 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [222]
                                                                  // [---]
     };;                                                          //      [143]
-                                                                 //      [143]
+                                                          
+
+    const   F_MOUMAST_EDI_PUT_U32 = function                     // [223][--------][---]
+    PRIVATE_F_MOUMAST_EDI_PUT_U32(                               // [223][--------][---]
+                                                                 // [223][--------][---]
+        i_mou_p_x                                                // [223][--------][---]
+    ,   i_mou_p_y                                                // [223][--------][---]
+    ,   i_clidrag                                                // [223][--------][---]
+    ){                                                           // [223][--------][---]
+        //:#_STORE_MOUSE_POS_IN_EDIGAME_#:[223]:---------://     // [223][--------][---]
+                                                                 // [222][--------][---]
+            VITALDO( "[#_NEED_E_G_GETTER_#]" );                  // [223][--------][---]
+            let e_g =( d_edigame_edi );                          // [223][MOV][170][---]
+                                                                 // [223][MOV][170][---]
+            if( 0+c_moumast_clidrag_clk+0 === i_clidrag ){       // [223][-------------]
+                                                                 // [223][-------------]
+                e_g.clk_p_x =( i_mou_p_x );                      // [223][MAE][170][144]
+                e_g.clk_p_y =( i_mou_p_y );                      // [223][MAE][170][144]
+            }else                                                // [223][-------------]
+            if( 0+c_moumast_clidrag_mid+0 === i_clidrag ){       // [223][-------------]
+                                                                 // [223][-------------]
+                e_g.mou_p_x =( i_mou_p_x );                      // [223][CAE][170][144]
+                e_g.mou_p_y =( i_mou_p_y );                      // [223][CAE][170][144]
+            }else{                                               // [223][-------------]
+                ERR("[NOT_CLICKING_AND_NOT_DRAGGING]");          // [223][-------------]
+            };;                                                  // [223][-------------]
+        //:---------:#_STORE_MOUSE_POS_IN_EDIGAME_#:[223]://     // [223][-------------]
+        //:#_FORCE_UPDATE_MAT_GLOBALS_#:[223]:-----------://     // [223][-------------]
+                                                                 // [223][-------------]
+            e_g.mou_p_x =( i_mou_p_x );                          // [223][-------------]
+            e_g.mou_p_y =( i_mou_p_y );                          // [223][-------------]
+            F_MOUMAST_FUP(); //: UPDATE[ d_dmx , d_dmy ]:://     // [223][-------------]
+                             //: UPDATE[ d_gtx , d_gty ]:://     // [223][-------------]
+                                                                 // [223][-------------]
+        //:-----------:#_FORCE_UPDATE_MAT_GLOBALS_#:[223]://     // [223][-------------]
+        //:#_CALL_EDITOR_TILE_PUTTER_#:[223]:------------://     // [223][-------------]
+                                                                 // [223][-------------]
+            let te7 =( e_g.edi_te7 );                            // [223][MOV][170][---]
+            let la3 =( e_g.edi_la3 );                            // [223][MOV][170][---]
+            let v16 =( e_g.edi_v16 );                            // [223][MOV][170][---]
+            let gtx =(       d_gtx );                            // [223][MOV][170][---]
+            let gty =(       d_gty );                            // [223][MOV][170][---]
+            let u32 =( F_TILEBOI_LA3_V16_U32( la3 , v16 ) );     // [223][MOV][170][---]
+                                                                 // [223][MOV][170][---]
+            F_TILEBOI_EDI_PUT_U32(                               // [223][MOV][170][---]
+                                                                 // [223][MOV][170][---]
+                te7,la3 //:<--[ TileSize , Layer[0|1|2] ]://     // [223][MOV][170][---]
+            ,   gtx,gty //:<--[ Global Tile X & Y       ]://     // [223][MOV][170][---]
+            ,   u32     //:<--[ Bit_Packed_Tile_Data    ]://     // [223][MOV][170][---]
+            );;                                                  // [223][MOV][170][---]
+        //:------------:#_CALL_EDITOR_TILE_PUTTER_#:[223]://     // [223][--------][---]
+    };;                                                          // [223][--------][---]
+
     const   F_MOUMAST_CLK = function                             //      [143]
     PRIVATE_F_MOUMAST_CLK(                                       //      [143]
                                                                  //      [143]
@@ -10916,33 +10968,20 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         var clk_p_x = i_evt_mou.offsetX ;                        // [144]
         var clk_p_y = i_evt_mou.offsetY ;                        // [144]
                                                                  // [144]
-        if( c_edigame_edi === d_edigame_mod ){                   // [170]
-                                                                 // [170]
-            let e_g =( d_edigame_edi );                          // [170]
-                                                                 // [170]
-            e_g.clk_p_x =( clk_p_x );                            // [170][144]
-            e_g.clk_p_y =( clk_p_y );                            // [170][144]
-                                                                 // [170]
-            let te7 =( e_g.edi_te7 );                            // [170]
-            let la3 =( e_g.edi_la3 );                            // [170]
-            let v16 =( e_g.edi_v16 );                            // [170]
-            let gtx =(       d_gtx );                            // [170]
-            let gty =(       d_gty );                            // [170]
-            let u32 =( F_TILEBOI_LA3_V16_U32( la3 , v16 ) );     // [170]
-                                                                 // [170]
-            F_TILEBOI_EDI_PUT_U32(                               // [170]
-                                                                 // [170]
-                te7,la3 //:<--[ TileSize , Layer[0|1|2] ]://     // [170]
-            ,   gtx,gty //:<--[ Global Tile X & Y       ]://     // [170]
-            ,   u32     //:<--[ Bit_Packed_Tile_Data    ]://     // [170]
-            );;                                                  // [170]
-        }else                                                    // [170]
-        if( c_edigame_gam === d_edigame_mod ){                   // [170]
-                                                                 // [170]
-            YEL("[I_DONT_KNOW_WHAT_GOES_HERE_YET_2022]");        // [170]
-        }else{                                                   // [170]
-            ERR("[WHO_DO_YOU_THINK_YOU_ARE_2022]");              // [170]
-        };;                                                      // [170]
+        if( c_edigame_edi === d_edigame_mod ){                   // [---][170]
+                                                                 // [---][170]
+            F_MOUMAST_EDI_PUT_U32(      ////////////////////     // [223](170)
+                clk_p_x                 ////////////////////     // [223](170)
+            ,   clk_p_y                 ////////////////////     // [223](170)
+            ,   c_moumast_clidrag_clk   ////////////////////     // [223](170)
+            );;;;;;;;;;;;;;;;;;;;;;;;   ////////////////////     // [223](170)
+        }else                                                    // [---][170]
+        if( c_edigame_gam === d_edigame_mod ){                   // [---][170]
+                                                                 // [---][170]
+            YEL("[I_DONT_KNOW_WHAT_GOES_HERE_YET_2022]");        // [---][170]
+        }else{                                                   // [---][170]
+            ERR("[WHO_DO_YOU_THINK_YOU_ARE_2022]");              // [---][170]
+        };;                                                      // [---][170]
                                                                  // [---]
         LOG( "[clk_pxy]:" , [clk_p_x,clk_p_y] );                 // [144]
                                                                  // [---]
@@ -17580,6 +17619,51 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @clidrag_clk@ : Mouse is clicking.                           // [222]
     @clidrag_mid@ : [ Mouse Is Down ] / [ Mouse Is Dragging ]    // [222]
     @CLIKOLD@ : "Click" -or- "Hold" <--DONTUSE,USE[ CLIDRAG ]    // [222]
+
+    @CAE@ : Copied And Edited, like @MAE@ but means the          // [223]
+    ::::::: line was duplicated instead of just moved.           // [223]
+
+    #_NEED_E_G_GETTER_# :
+
+        Our code is a bit broken. We are writing 
+        everything for[ edigame_edi ]but eventually 
+        when we switch to[ edigame_gam ]we will have
+        lots of broken behavior unless we start
+        cleaning up some of our shit.
+    
+        For example...
+
+        The Line :
+
+            let e_g = d_edigame_edi ;
+
+        Should Be :
+    
+            let e_g = F_EDIGAME_ACT( );
+
+        Which should return the active game mode object
+        of either[ d_edigame_gam ]OR[ d_edigame_edi ].
+
+    #_FORCE_UPDATE_MAT_GLOBALS_# :
+
+        Force update Mouse_And_Tile( MAT )Globals.
+        Not 100% this is needed here. But just to
+        be on the safe side I am going to do it here.
+
+    #_CALL_EDITOR_TILE_PUTTER_# : 
+        
+        Call the core function that allows user to
+        edit levels by setting tiles.
+    
+    #_STORE_MOUSE_POS_IN_EDIGAME_# :
+
+        Store the mouse position in our EDIGAME
+        object. An object that is "kind of" an 
+        editor state object, but also stores 
+        game state for normal gameplay.
+
+        Hence "edigame" not quite an "editor state"
+        object and not quite a "game play state" object.
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
