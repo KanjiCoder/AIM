@@ -10854,59 +10854,6 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         //:-------------------------:perform_update:[169]://     // [169]
         return; //:RETURN_VOID://                                // [169]
     };;                                                          // [169]
-                                                         
-    const   F_MOUMAST_CLIKOLD = "[FIX:CLIDRAG]" ;                // [222]
-                                                                 // [222]
-    const   F_MOUMAST_CLIDRAG = function //:::@CLIDRAG@::://     // [222]
-    PRIVATE_F_MOUMAST_CLIDRAG(                                   // [222]
-                                                                 // [222]
-        i_mou_w_x //: @mou_w_x@ : Mouse_Whatever_X ::::::://     // [222]
-    ,   i_mou_w_y //: @mou_w_y@ : Mouse_Whatever_Y ::::::://     // [222]
-    ,   i_clidrag //: @clidrag@ : Clicking Or Dragging? :://     // [222]
-    ){                                                           // [222]
-        if( c_moumast_clidrag_clk === i_clidrag ){               // [222]
-                                                                 // [222]
-            MSG( "[ITS_JUST_A_CLICK]" );                         // [222]
-        }else                                                    // [222]
-        if( c_moumast_clidrag_mid === i_clidrag ){               // [222]
-                                                                 // [222]
-            MSG( "[MY_FUCKING_GOD_THE_MOUSE_IS_DOWN]" );         // [222]
-            MSG( "[SOMEONE_ALERT_THE_MEDIA_CALL_911]" );         // [222]
-        }else{                                                   // [222]
-            ERR("[INVALID_CLIDRAG]");                            // [222]
-        };;                                                      // [222]
-    };;                                                          // [222]
-
-    const   F_MOUMAST_MOV = function                             // [143]
-    PRIVATE_F_MOUMAST_MOV(                                       // [143]
-                                                                 // [143]
-        i_evt_mou                                                // [143]
-    ){                                                           // [143]
-                                                                 // [---]
-        var mov_p_x = i_evt_mou.offsetX ;                        // [144]
-        var mov_p_y = i_evt_mou.offsetY ;                        // [144]
-                                                                 // [144]
-        d_edigame_edi.mou_p_x =( mov_p_x );                      // [144]
-        d_edigame_edi.mou_p_y =( mov_p_y );                      // [144]
-                                                                 // [---]
-        F_MOUMAST_FUP( /**FORCE_UPDATE**/ );                     // [169](157)(153)(152)(145)
-                                                                 // [---]
-        //: TAG[ mouse down | mousedown | mouse-down  ]::://     // [222]
-        //: TAG[ mouse_down | is-mouse-down | imd_chk ]::://     // [222]
-                                                                 // [222]
-        var butmask = i_evt_mou.buttons ; //: @PLURAL@ ::://     // [222]
-                                                                 // [222]
-        if( (butmask & c_moumast_001) > 0 ){ //:@PRIMARY@://     // [222]
-                                                    ////////     // [222]
-            F_MOUMAST_CLIDRAG(                      ////////     // [222]
-                mov_p_x  //:argname[ mou_w_x ]://   ////////     // [222]
-            ,   mov_p_y  //:argname[ mou_w_y ]://   ////////     // [222]
-            ,   c_moumast_clidrag_mid //:@mid@://   ////////     // [222]
-            );;                                     ////////     // [222]
-        };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [222]
-                                                                 // [---]
-    };;                                                          //      [143]
-                                                          
 
     const   F_MOUMAST_EDI_PUT_U32 = function                     // [223][--------][---]
     PRIVATE_F_MOUMAST_EDI_PUT_U32(                               // [223][--------][---]
@@ -10958,6 +10905,74 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             );;                                                  // [223][MOV][170][---]
         //:------------:#_CALL_EDITOR_TILE_PUTTER_#:[223]://     // [223][--------][---]
     };;                                                          // [223][--------][---]
+                                                         
+    const   F_MOUMAST_CLIKOLD = "[FIX:CLIDRAG]" ;                // [---][222]
+                                                                 // [---][222]
+    const   F_MOUMAST_CLIDRAG = function //:::@CLIDRAG@::://     // [---][222]
+    PRIVATE_F_MOUMAST_CLIDRAG(                                   // [---][222]
+                                                                 // [---][222]
+        i_mou_w_x //: @mou_w_x@ : Mouse_Whatever_X ::::::://     // [---][222]
+    ,   i_mou_w_y //: @mou_w_y@ : Mouse_Whatever_Y ::::::://     // [---][222]
+    ,   i_clidrag //: @clidrag@ : Clicking Or Dragging? :://     // [---][222]
+    ){                                                           // [---][222]
+        if( c_moumast_clidrag_clk === i_clidrag ){               // [---][222]
+                                                                 // [---][222]
+            MSG( "[ITS_JUST_A_CLICK]" );                         // [---][222]
+        }else                                                    // [---][222]
+        if( c_moumast_clidrag_mid === i_clidrag ){               // [---][222]
+                                                                 // [---][---]
+            //: MOUSE IS DOWN ONLY CODE HERE ://                 // [223][222]
+                                                                 // [---][---]
+        }else                                                    // [223][---]
+        if( c_moumast_clidrag_clk === i_clidrag                  // [223][---]
+        ||  c_moumast_clidrag_mid === i_clidrag                  // [223][---]
+        ){                                                       // [223][---]
+            //:#_CLICK_OR_DRAG_CODE_HERE_#:[223]:--------://     // [223][---]
+                                                                 // [223][---]
+            F_MOUMAST_EDI_PUT_U32(      ////////////////////     // [223](170)
+                i_mou_w_x               ////////////////////     // [223](170)
+            ,   i_mou_w_y               ////////////////////     // [223](170)
+            ,   c_moumast_clidrag_mid   ////////////////////     // [223](170)
+            );;;;;;;;;;;;;;;;;;;;;;;;   ////////////////////     // [223](170)
+                                                                 // [223][---]
+            //:--------:#_CLICK_OR_DRAG_CODE_HERE_#:[223]://     // [223][---]
+        )else{                                                   // [---][222]
+            ERR("[INVALID_CLIDRAG]");                            // [---][222]
+        };;                                                      // [---][222]
+    };;                                                          // [---][222]
+
+    const   F_MOUMAST_MOV = function                             // [143]
+    PRIVATE_F_MOUMAST_MOV(                                       // [143]
+                                                                 // [143]
+        i_evt_mou                                                // [143]
+    ){                                                           // [143]
+                                                                 // [---]
+        var mov_p_x = i_evt_mou.offsetX ;                        // [144]
+        var mov_p_y = i_evt_mou.offsetY ;                        // [144]
+                                                                 // [144]
+        d_edigame_edi.mou_p_x =( mov_p_x );                      // [144]
+        d_edigame_edi.mou_p_y =( mov_p_y );                      // [144]
+                                                                 // [---]
+        F_MOUMAST_FUP( /**FORCE_UPDATE**/ );                     // [169](157)(153)(152)(145)
+                                                                 // [---]
+        //: TAG[ mouse down | mousedown | mouse-down  ]::://     // [222]
+        //: TAG[ mouse_down | is-mouse-down | imd_chk ]::://     // [222]
+                                                                 // [222]
+        var butmask = i_evt_mou.buttons ; //: @PLURAL@ ::://     // [222]
+                                                                 // [222]
+        if( (butmask & c_moumast_001) > 0 ){ //:@PRIMARY@://     // [222]
+                                                    ////////     // [222]
+            F_MOUMAST_CLIDRAG(                      ////////     // [222] 
+                mov_p_x  //:argname[ mou_w_x ]://   ////////     // [222] 
+            ,   mov_p_y  //:argname[ mou_w_y ]://   ////////     // [222] 
+            ,   c_moumast_clidrag_mid //:@mid@://   ////////     // [222] 
+            );;                                     ////////     // [222] 
+        };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [222] 
+                                                                 // [---]
+    };;                                                          //      [143]
+                                                          
+
+
 
     const   F_MOUMAST_CLK = function                             //      [143]
     PRIVATE_F_MOUMAST_CLK(                                       //      [143]
@@ -10970,11 +10985,11 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [144]
         if( c_edigame_edi === d_edigame_mod ){                   // [---][170]
                                                                  // [---][170]
-            F_MOUMAST_EDI_PUT_U32(      ////////////////////     // [223](170)
-                clk_p_x                 ////////////////////     // [223](170)
-            ,   clk_p_y                 ////////////////////     // [223](170)
-            ,   c_moumast_clidrag_clk   ////////////////////     // [223](170)
-            );;;;;;;;;;;;;;;;;;;;;;;;   ////////////////////     // [223](170)
+            F_MOUMAST_CLIDRAG(          ////////////////////     // [223][---]
+                clk_p_x                 ////////////////////     // [223][---]
+            ,   clk_p_y                 ////////////////////     // [223][---]
+            ,   c_moumast_clidrag_clk   ////////////////////     // [223][---]
+            );;;;;;;;;;;;;;;;;;;;;;;;   ////////////////////     // [223][---]
         }else                                                    // [---][170]
         if( c_edigame_gam === d_edigame_mod ){                   // [---][170]
                                                                  // [---][170]
@@ -17664,6 +17679,16 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 
         Hence "edigame" not quite an "editor state"
         object and not quite a "game play state" object.
+
+    #_CLICK_OR_DRAG_CODE_HERE_# :
+
+        Code that should execute on both a 
+        "click" and a "drag".
+
+        For example, setting tiles is nicer when
+        you can hold down the mouse and drag and
+        set multiple tiles as if they were 
+        brush strokes.
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
