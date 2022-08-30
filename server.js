@@ -17912,7 +17912,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-
+    [224] : Added dirty rectangle regions and dirty :::::::::::  // [224]
+          : bitmasks to help us optimize partial    :::::::::::  // [224]
+          : texture pushes when tiles are set.      :::::::::::  // [224]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
