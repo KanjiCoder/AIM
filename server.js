@@ -11069,6 +11069,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
                                                                  // [---]
         F_KEYEMMA_HOMEROW( "5" , {} );                           // [221]
         F_KEYEMMA_KEY_PAD( "5" , {} );                           // [221]
+        F_KEYEMMA_KEY_PAD( "5" , {} );                           // [221]
                                                                  // [---]
     }else                                                        // [218]
     if( "[SUM_REL]" === c_sum ){                                 // [218]
