@@ -10,7 +10,7 @@
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---][---]
 //:CONFIGURATION:[109]:======================================:// // [---][---]
                                                                  // [---][---]
-    const c_sum =(["[SUM_TUT]","[SUM_REL]"]( 0 )); //:#_SUM_#:// // [218][---]
+    const c_sum =(["[SUM_TUT]","[SUM_REL]"][ 0 ]); //:#_SUM_#:// // [218][---]
                                                                  // [--------]
     const c_crash_on_vital_todo =( 0 ); //:#Necessary#   ://     // [218][109]
     const c_crash_on_maybe_todo =( 0 ); //:#FeatureCreep#://     // [109][---]
