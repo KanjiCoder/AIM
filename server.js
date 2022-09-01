@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-003   (NINJACODER):// // [200][102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-003   ( WEEBCODER):// // [200][102]
 //:                                                          :// // [102][---]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_226             :// // [226][225][224][223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_227             :// // [227][226][225][224][223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102][---]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---][---]
 //:CONFIGURATION:[109]:======================================:// // [---][---]
@@ -3867,9 +3867,21 @@ if( yesnode ){ //:-------------------------------------------://
     //: @USED____BY@[ GPUSYNC ]                          ://     // [226]
     //: @TIGHT_PAIR@[ GPUDATA_GPUSYNC / GPUSYNC_GPUDATA ]://     // [226]
     //:::::::::::::::::::::::::::::::::::::::::::::::::::://     // [226]
-                                                                 // [226]
-    /** NOTHING_HERE_YET **/                                     // [226]
-                                                                 // [226]
+                                                                 // [---]
+    const c_gpudata_p2k_lot =( 0 );      //: #_P2K_LOT_# ://     // [227](173)
+
+    //:#_Shader_Attribute_AND_Uniform_Locations_#://             // [227](086)(077)
+
+    const c_gpudata_loc_pos =( 0 /** #S_POS# **/ );              // [227](077)
+    const c_gpudata_loc_tex =( 1 /** #S_TEX# **/ );              // [227](077)
+    const c_gpudata_loc_tik =( "[#NO_LOC_TIK#]"  );              // [227](086)
+
+    //: #_What_Version_Of_WebGl_Are_We_Using_#?  ://             // [227](074)
+
+    const c_gpudata_wgl_tag =("#version 300 es");                // [227](074)
+    const c_gpudata_wgl_ask =(         "webgl2");                // [227](074)
+
+                                                                 // [---]
 //: __GPUSYNC__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [226]
                                                                  // [226]
     //:::::::::::::::::::::::::::::::::::::::::::::::::::://     // [226]
@@ -4000,7 +4012,8 @@ if( yesnode ){ //:-------------------------------------------://
 //: TAG[ artgirl-constants | artgirlconstants  ] :::::::::::::// // [148]
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::// // [148]
                                                                  // [---]
-        const c_artgirl_p2k_lot =(  0 ); //: #_P2K_LOT_# ://     // [173]
+        const c_artgirl_p2k_lot =(      //: #_P2K_LOT_# ://      // [227][173]
+              c_gpudata_p2k_lot  );;    //: #_P2K_LOT_# ://      // [227][173]
                                                                  // [---]
         //: SEE[ #_FSM_EXPLAINED_# ]://                          // [148]
                                                                  // [148]
@@ -4011,20 +4024,27 @@ if( yesnode ){ //:-------------------------------------------://
         const c_artgirl_fsm_per =(  4  );  //: PERCENT   ://     // [148]
  
                                                                  // [---]
-    /** Shader Attribute AND Uniform Locations. **/              // [086][077]
+    /** #_Shader_Attribute_AND_Uniform_Locations_# **/           // [227][086][077]
                                                                  // [077]
-        const c_artgirl_loc_pos =( 0 /** #S_POS# **/ );          // [077]
-        const c_artgirl_loc_tex =( 1 /** #S_TEX# **/ );          // [077]
+        const c_artgirl_loc_pos =(                               // [227][077]
+              c_gpudata_loc_pos   );;                            // [227][077]
+ 
+        const c_artgirl_loc_tex =(                               // [227][077]
+              c_gpudata_loc_tex   );;                            // [227][077]
+
         const c_artgirl_loc_tik =( "[#NO_LOC_TIK#]"  );          // [086]
 
-    /** What Version Of WebGl Are We Using? **/
+    /** #_What_Version_Of_WebGl_Are_We_Using_#? **/              // [227][074]
 
-        const c_artgirl_wgl_tag =("#version 300 es");            // [074]
-        const c_artgirl_wgl_ask =(         "webgl2");            // [074]
+        const c_artgirl_wgl_tag =(                               // [227][074]
+              c_gpudata_wgl_tag   );;                            // [227][074]
+                                                                 // [227][074]
+        const c_artgirl_wgl_ask =(                               // [227][074]
+              c_gpudata_wgl_ask   );;                            // [227][074]
                                                                  
-    /** WebGL Surface Quad Macros ********* **/                  // [066] 
-                                                                 // [066] 
-        const c_artgirl_vbd_len =( 20 );                         // [066] 
+    /** WebGL Surface Quad Macros ********* **/                  // [---][066] 
+                                                                 // [---][066] 
+        const c_artgirl_vbd_len =( 20 );    //:#_VBD_LEN_AG_#:// // [074][066] 
                                                                           
     /** *********************************** **/                  // [064] 
     /** Different Rendering Pipelines [064] **/                  // [064] 
@@ -5443,9 +5463,9 @@ if( /** __PIX2048__ **/ notnode ){                               // [185][MOV][1
                                                                  // [---]
 };;                                                              // [---][185][MOV][156]
 if( /** __GPUDATA__ **/ notnode ){                               // [226]
-                                                                 // [226]
-    /** NOTHING_HERE_YET / NO_DATA_HERE_YET **/                  // [226]
-                                                                 // [226]
+                                                                 // [227]
+    //: THIS_IS_THE_DATA_SECTION_NOT_THE_CONSTANT_SECTION ://    // [227]
+                                                                 // [227]
 };;                                                              // [226]
 if( /** __GPUSYNC__ **/ notnode ){                               // [226]
                                                                  // [226]
@@ -18727,6 +18747,44 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [226]
         https://en.wikipedia.org/wiki/Separation_of_concerns  |  // [226]
     :---------------------------------------------------------+  // [226]
+
+    #_Shader_Attribute_AND_Uniform_Locations_# :--------------+  // [227]
+                                                              |  // [227]
+        UNIFORMS :: Variables that have the same value for    |  // [227]
+                 :: all invokations of a fragment shader      |  // [227]
+                 :: on a given draw call.                     |  // [227]
+                                                              |  // [227]
+        ATTRIBUTES: Same idea as UNIFORMS but for vertex      |  // [227]
+                    shader instead of fragment shader.        |  // [227]
+                                                              |  // [227]
+                    ########################################  |  // [227]
+                    ##  !!                             !! ##  |  // [227]
+                    ##  Seems "Attribute" is also used as ##  |  // [227]
+                    ##  a more general category that also ##  |  // [227]
+                    ##  encompases "uniforms"             ##  |  // [227]
+                    ##  !!                             !! ##  |  // [227]
+                    ########################################  |  // [227]
+    +---------------------------------------------------------+  // [227]
+                                                                 // [227]
+    #_What_Version_Of_WebGl_Are_We_Using_# :------------------+  // [227]
+                                                              |  // [227]
+        You have to use AT LEAST[ Web GL TWO(2) ]             |  // [227]
+        because the entire engine heavily relies on           |  // [227]
+        UNSIGNED 32 BIT INTEGER TEXTURES.                     |  // [227]
+                                                              |  // [227]
+        Lose the ability to do this, and you lose your        |  // [227]
+        engine. It is too heavily engrained in the            |  // [227]
+        engine. If you lost this ability you might as         |  // [227]
+        well start re-writing the engine from scratch.        |  // [227]
+    :---------------------------------------------------------+  // [227]
+                                                                 // [227]
+    #_VBD_LEN_AG_# :------------------------------------------+  // [227]
+                                                              |  // [227]
+        The vertex buffer data length can STAY IN[ ARTGIRL ]  |  // [227]
+        and not go to[ GPUDATA ]because[ GPUDATA ]is mainly   |  // [227]
+        concerned with the data needed to do texture          |  // [227]
+        pushes.                                               |  // [227]
+    :---------------------------------------------------------+  // [227]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
