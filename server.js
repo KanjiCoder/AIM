@@ -3868,19 +3868,18 @@ if( yesnode ){ //:-------------------------------------------://
     //: @TIGHT_PAIR@[ GPUDATA_GPUSYNC / GPUSYNC_GPUDATA ]://     // [226]
     //:::::::::::::::::::::::::::::::::::::::::::::::::::://     // [226]
                                                                  // [---]
-    const c_gpudata_p2k_lot =( 0 );      //: #_P2K_LOT_# ://     // [227](173)
-
-    //:#_Shader_Attribute_AND_Uniform_Locations_#://             // [227](086)(077)
-
-    const c_gpudata_loc_pos =( 0 /** #S_POS# **/ );              // [227](077)
-    const c_gpudata_loc_tex =( 1 /** #S_TEX# **/ );              // [227](077)
-    const c_gpudata_loc_tik =( "[#NO_LOC_TIK#]"  );              // [227](086)
-
-    //: #_What_Version_Of_WebGl_Are_We_Using_#?  ://             // [227](074)
-
-    const c_gpudata_wgl_tag =("#version 300 es");                // [227](074)
-    const c_gpudata_wgl_ask =(         "webgl2");                // [227](074)
-
+    const c_gpudata_p2k_lot =( 0 );      //: #_P2K_LOT_# ://     // [227][MAR](173)
+                                                                 // [227]
+    //:#_Shader_Attribute_AND_Uniform_Locations_#://             // [227][MAR](086)(077)
+                                                                 // [227]
+    const c_gpudata_loc_pos =( 0 /** #S_POS# **/ );              // [227][MAR](077)
+    const c_gpudata_loc_tex =( 1 /** #S_TEX# **/ );              // [227][MAR](077)
+    const c_gpudata_loc_tik =( "[#NO_LOC_TIK#]"  );              // [227][MAR](086)
+                                                                 // [227]
+    //: #_What_Version_Of_WebGl_Are_We_Using_#?  ://             // [227][MAR](074)
+                                                                 // [227]
+    const c_gpudata_wgl_tag =("#version 300 es");                // [227][MAR](074)
+    const c_gpudata_wgl_ask =(         "webgl2");                // [227][MAR](074)
                                                                  // [---]
 //: __GPUSYNC__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [226]
                                                                  // [226]
@@ -4022,30 +4021,29 @@ if( yesnode ){ //:-------------------------------------------://
         const c_artgirl_fsm_000 =(  2  );  //: UNDERSHOOT://     // [148]
         const c_artgirl_fsm_001 =(  3  );  //: OVERSHOOT ://     // [148]
         const c_artgirl_fsm_per =(  4  );  //: PERCENT   ://     // [148]
- 
                                                                  // [---]
     /** #_Shader_Attribute_AND_Uniform_Locations_# **/           // [227][086][077]
                                                                  // [077]
         const c_artgirl_loc_pos =(                               // [227][077]
               c_gpudata_loc_pos   );;                            // [227][077]
- 
+                                                                 // [---]
         const c_artgirl_loc_tex =(                               // [227][077]
               c_gpudata_loc_tex   );;                            // [227][077]
-
+                                                                 // [---]
         const c_artgirl_loc_tik =( "[#NO_LOC_TIK#]"  );          // [086]
-
+                                                                 // [---]
     /** #_What_Version_Of_WebGl_Are_We_Using_#? **/              // [227][074]
-
+                                                                 // [---]
         const c_artgirl_wgl_tag =(                               // [227][074]
               c_gpudata_wgl_tag   );;                            // [227][074]
                                                                  // [227][074]
         const c_artgirl_wgl_ask =(                               // [227][074]
               c_gpudata_wgl_ask   );;                            // [227][074]
-                                                                 
+                                                                 // [---]
     /** WebGL Surface Quad Macros ********* **/                  // [---][066] 
                                                                  // [---][066] 
         const c_artgirl_vbd_len =( 20 );    //:#_VBD_LEN_AG_#:// // [074][066] 
-                                                                          
+                                                                 // [---]    
     /** *********************************** **/                  // [064] 
     /** Different Rendering Pipelines [064] **/                  // [064] 
     /** *********************************** **/                  // [064] 
@@ -5463,9 +5461,9 @@ if( /** __PIX2048__ **/ notnode ){                               // [185][MOV][1
                                                                  // [---]
 };;                                                              // [---][185][MOV][156]
 if( /** __GPUDATA__ **/ notnode ){                               // [226]
-                                                                 // [227]
+                                                                 // [---]
     //: THIS_IS_THE_DATA_SECTION_NOT_THE_CONSTANT_SECTION ://    // [227]
-                                                                 // [227]
+                                                                 // [---]
 };;                                                              // [226]
 if( /** __GPUSYNC__ **/ notnode ){                               // [226]
                                                                  // [226]
@@ -13373,6 +13371,23 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :                                                      // [226][225]
           : NEXT : Dirty Rectangle   CLEARING code.( TURN_OFF )  // [226][225]
 
+    [226] : We have stubbed in systems                     ::::  // [227][226]
+          :[ GPUSYNC ]&[ GPUDATA ]so that we can have a    ::::  // [227][226]
+          : more organized (less-spaghetti-code) way of    ::::  // [227][226]
+          : syncing GPU-Side texture ([ d _ pix _ 2048 ]). ::::  // [227][226]
+          :                                                ::::  // [227][226]
+          : Also, added crashing code where we are doing   ::::  // [227][226]
+          : GPU-SYNC currently in[ ARTGIRL ]. Won't crash  ::::  // [227][226]
+          : unless[ crash on vital todo ]is turned on.     ::::  // [227][226]
+          :                                                ::::  // [227][226]
+          : @SEPERATION_OF_CONCERNS@                       ::::  // [227][226]
+          :                                                  ::  // [227][266]
+          :     JOB_STACK :                                  ::  // [227][266]
+          :         [0] : UNIT TESTING UPNG                  ::  // [227][266]
+          :         [1] : Glyph Stamping To Texture Code     ::  // [227][266]
+          :         [2] : Dirty Flagging + Cleaning Memory   ::  // [227][266]
+          :         [3] : Spaghetti Code Cleanup Refactoring ::  // [227][266]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -18785,28 +18800,51 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         concerned with the data needed to do texture          |  // [227]
         pushes.                                               |  // [227]
     :---------------------------------------------------------+  // [227]
+                                                                 // [227]
+    @MAR@ :  Moved_And_Refactored /  Moved_And_Renamed           // [227]
+          : CAN ALSO MEAN :                                      // [227]
+          : COPIED_And_Refactored / COPIED_And_Renamed           // [227]
+                                                                 // [227]
+    #MAR# :---------------------------------------------------+  // [227]
+                                                              |  // [227]
+        Deltas marked with [MAR] are mentioning that          |  // [227]
+        the code has been [ moved || copied ]                 |  // [227]
+        AND [ renamed / refactored ].                         |  // [227]
+                                                              |  // [227]
+        Should be on the marigins, to the RIGHT               |  // [227]
+        of the [###] delta number it applies to.              |  // [227]
+                                                              |  // [227]
+        EXAMPLE :                                             |  // [227]
+                                                              |  // [227]
+            Some_Copy_Refactored_Code // [227][MAR]           |  // [227]
+                                                              |  // [227]
+    +---------------------------------------------------------+  // [227]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [226] : We have stubbed in systems                     ::::  // [226]
-          :[ GPUSYNC ]&[ GPUDATA ]so that we can have a    ::::  // [226]
-          : more organized (less-spaghetti-code) way of    ::::  // [226]
-          : syncing GPU-Side texture ([ d _ pix _ 2048 ]). ::::  // [226]
-          :                                                ::::  // [226]
-          : Also, added crashing code where we are doing   ::::  // [226]
-          : GPU-SYNC currently in[ ARTGIRL ]. Won't crash  ::::  // [226]
-          : unless[ crash on vital todo ]is turned on.     ::::  // [226]
-          :                                                ::::  // [226]
-          : @SEPERATION_OF_CONCERNS@                       ::::  // [226]
-          :                                                  ::  // [266]
-          :     JOB_STACK :                                  ::  // [266]
-          :         [0] : UNIT TESTING UPNG                  ::  // [266]
-          :         [1] : Glyph Stamping To Texture Code     ::  // [266]
-          :         [2] : Dirty Flagging + Cleaning Memory   ::  // [266]
-          :         [3] : Spaghetti Code Cleanup Refactoring ::  // [266]
+    [227] :------------------------------------------------::::  // [227]
+          : SOME (not all) artgirl constants have been     ::::  // [227]
+          : refactored and put into[ GPUDATA ].            ::::  // [227]
+          : We have __NOT__ removed the artgirl constants, ::::  // [227]
+          : but they are now setup by referencing the      ::::  // [227]
+          : [ GPUDATA ] constants of the same name.        ::::  // [227]
+          :                                                ::::  // [227]
+          : Constant belongs in GPUDATA if :               ::::  // [227]
+          :                                                ::::  // [227]
+          :     1. Required to create WebGL Context        ::::  // [227]
+          :     2. Required to do texture upload to GPU    ::::  // [227]
+          :      ( Required to do texture push   to GPU )  ::::  // [227]
+          :     3. Required by texture sampler setup    )  ::::  // [227]
+          :                                                ::::  // [227]
+          :     Hmmm... #3 is a bit dicy. But I put it     ::::  // [227]
+          :     here because if it is directly related     ::::  // [227]
+          :     to pix2048 texture , it somewhat makes     ::::  // [227]
+          :     sense here... But #3 stuff could logically ::::  // [227]
+          :     stay in artgirl.                           ::::  // [227]
+          :------------------------------------------------::::  // [227]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
