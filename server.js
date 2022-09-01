@@ -11560,6 +11560,7 @@ if( notnode ){  window.onload = function( /** [030] **/ ){
                                                                  // [059]
     F_INI_CLI();    //:INIt: CLIent :--------------------://     // [???] 
                                                                  // [063]
+    F_GPUDATA_INI();//:BARE BONES WEBGL INIT :-----------://     // [229]
     F_ARTGIRL_INI();//:Init Webgl And Frag Shader :------://     // [063] 
     F_KEYMAST_INI();//:INIt: Client Keyboard Handler     ://     // [???] 
     F_MOUMAST_INI();//:INIt: Master Mouse Input Handler  ://     // [143]
