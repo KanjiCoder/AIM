@@ -1,0 +1,41 @@
+    //:#_CLEAN_UP_DIRTY_MEMORY_#:[###]:----------------------://
+
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+        //:TAG[ push dirty sectors of memory to gpu   ]::://
+        //:TAG[ dirty sector push | dirty-sector-push ]::://
+        //:  @INVERSE_OF@[ F_PIX2048_DIR_DPC ]:::::::::::://
+        //:::::::::::::::::::::::::::::::::::::::::::::::://
+
+        const   F_PIX2048_GPUSYNC = function
+        PRIVATE_F_PIX2048_GPUSYNC( 
+
+            /**VOID**/ 
+        ){
+            if( d_eci >=1 ){
+                if( d_pix2048_dir_mem_dum <= 0 
+                &&  d_pix2048_dir_mem_e_e <= 0 
+                ){
+                    MSG("[WARNING:TOP_LEVEL_DIRTY_SECTOR]");
+                    MSG("[WAS_NOT_SPECIFIE::.PUSHING_ALL]");
+                };;
+            };;
+
+            if( d_pix2048_dir_mem_dum <= 0 /////////////////
+            &&  d_pix2048_dir_mem_e_e <= 0 /////////////////
+            ){ /////////////////////////////////////////////
+
+
+            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+            if( d_pix2048_dir_mem_dum >= 1 ){ //////////////
+
+
+            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+            if( d_pix2048_dir_mem_e_e >= 1 ){ //////////////
+
+
+            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        
+            
+
+        };;
+    //:----------------------:#_CLEAN_UP_DIRTY_MEMORY_#:[###]://
