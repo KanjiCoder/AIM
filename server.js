@@ -3868,18 +3868,18 @@ if( yesnode ){ //:-------------------------------------------://
     //: @TIGHT_PAIR@[ GPUDATA_GPUSYNC / GPUSYNC_GPUDATA ]://     // [226]
     //:::::::::::::::::::::::::::::::::::::::::::::::::::://     // [226]
                                                                  // [---]
-    const c_gpudata_p2k_lot =( 0 );      //: #_P2K_LOT_# ://     // [227][MAR](173)
-                                                                 // [227]
+    const c_gpudata_p2k_lot =( 0 );      //: #_P2K_LOT_# ://     // [227][MAR](173)(---)
+                                                                 // [227][-------------]
     //:#_Shader_Attribute_AND_Uniform_Locations_#://             // [227][MAR](086)(077)
-                                                                 // [227]
-    const c_gpudata_loc_pos =( 0 /** #S_POS# **/ );              // [227][MAR](077)
-    const c_gpudata_loc_tex =( 1 /** #S_TEX# **/ );              // [227][MAR](077)
-    const c_gpudata_loc_tik =( "[#NO_LOC_TIK#]"  );              // [227][MAR](086)
-                                                                 // [227]
-    //: #_What_Version_Of_WebGl_Are_We_Using_#?  ://             // [227][MAR](074)
-                                                                 // [227]
-    const c_gpudata_wgl_tag =("#version 300 es");                // [227][MAR](074)
-    const c_gpudata_wgl_ask =(         "webgl2");                // [227][MAR](074)
+                                                                 // [227][-------------]
+    const c_gpudata_loc_pos =( "[#_NO_GPUDATA_L_P_#]" );         // [227][MAR](077)(---)
+    const c_gpudata_loc_tex =( "[#_NO_GPUDATA_L_T_#]" );         // [227][MAR](077)(---)
+    const c_gpudata_loc_tik =( "[#NO_LOC_TIK#]"       );         // [227][MAR](086)(---)
+                                                                 // [227][-------------]
+    //: #_What_Version_Of_WebGl_Are_We_Using_#?  ://             // [227][MAR](074)(---)
+                                                                 // [227][-------------]
+    const c_gpudata_wgl_tag =("#version 300 es");                // [227][MAR](074)(---)
+    const c_gpudata_wgl_ask =(         "webgl2");                // [227][MAR](074)(---)
                                                                  // [---]
 //: __GPUSYNC__ V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V_V:// // [226]
                                                                  // [226]
@@ -4023,22 +4023,22 @@ if( yesnode ){ //:-------------------------------------------://
         const c_artgirl_fsm_per =(  4  );  //: PERCENT   ://     // [148]
                                                                  // [---]
     /** #_Shader_Attribute_AND_Uniform_Locations_# **/           // [227][086][077]
-                                                                 // [077]
-        const c_artgirl_loc_pos =(                               // [227][077]
-              c_gpudata_loc_pos   );;                            // [227][077]
-                                                                 // [---]
-        const c_artgirl_loc_tex =(                               // [227][077]
-              c_gpudata_loc_tex   );;                            // [227][077]
-                                                                 // [---]
-        const c_artgirl_loc_tik =( "[#NO_LOC_TIK#]"  );          // [086]
-                                                                 // [---]
-    /** #_What_Version_Of_WebGl_Are_We_Using_#? **/              // [227][074]
-                                                                 // [---]
-        const c_artgirl_wgl_tag =(                               // [227][074]
-              c_gpudata_wgl_tag   );;                            // [227][074]
-                                                                 // [227][074]
-        const c_artgirl_wgl_ask =(                               // [227][074]
-              c_gpudata_wgl_ask   );;                            // [227][074]
+                                                                 // [077][---][---]
+        const c_artgirl_loc_pos =(  ( 0 )  /** #S_POS# **/       // [227][077][---]
+        /** [ c_gpudata_loc_pos ]<--#_NO_GPUDATA_L_P_# **/ );;   // [227][077][---]
+                                                                 // [--------][---]
+        const c_artgirl_loc_tex =(  ( 1 )  /** #S_TEX# **/       // [227][077][---]
+        /** [ c_gpudata_loc_tex ]<--#_NO_GPUDATA_L_T_# **/ );;   // [227][077][---]
+                                                                 // [---][--------]
+        const c_artgirl_loc_tik =( "[#NO_LOC_TIK#]"  );          // [086][--------]
+                                                                 // [---][--------]
+    /** #_What_Version_Of_WebGl_Are_We_Using_#? **/              // [227][074][---]
+                                                                 // [---][--------]
+        const c_artgirl_wgl_tag =(                               // [227][074][---]
+              c_gpudata_wgl_tag   );;                            // [227][074][---]
+                                                                 // [227][074][---]
+        const c_artgirl_wgl_ask =(                               // [227][074][---]
+              c_gpudata_wgl_ask   );;                            // [227][074][---]
                                                                  // [---]
     /** WebGL Surface Quad Macros ********* **/                  // [---][066] 
                                                                  // [---][066] 
@@ -18819,6 +18819,26 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
             Some_Copy_Refactored_Code // [227][MAR]           |  // [227]
                                                               |  // [227]
     +---------------------------------------------------------+  // [227]
+                                                                 // [227]
+    #_NO_GPUDATA_L_P_# :--------------------------------------+  // [227]
+    #_NO_GPUDATA_L_T_# :--------------------------------------+  // [227]
+                                                              |  // [227]
+        @_NO_GPUDATA_L_P_@ : No GPU Data - Loc_Pos            |  // [227]
+        @_NO_GPUDATA_L_T_@ : No GPU Data - Loc_Tex            |  // [227]
+                                                              |  // [227]
+        These constants are not related to texture            |  // [227]
+        pushing. They are not even related to our             |  // [227]
+        texture. They are related to our                      |  // [227]
+        "TEXTURE QUAD"... But that is a                       |  // [227]
+        VERTEX SHADER THING, not a fragment shader            |  // [227]
+        thing. It is the thing that we use to draw            |  // [227]
+        texture data to, but it has no relation to            |  // [227]
+        helping us setup the texture or sync the              |  // [227]
+        texture with our GPU<==>CPU.                          |  // [227]
+                                                              |  // [227]
+        Therefor, should only exist in[ ARTGIRL ]             |  // [227]
+        and __NOT__ in[ GPUDATA ].                            |  // [227]
+    :---------------------------------------------------------+  // [227]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
