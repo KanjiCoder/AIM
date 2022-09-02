@@ -19037,6 +19037,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         Don't make re-usable functions for code that          |  // [229]
         isn't re-used.                                        |  // [229]
     :---------------------------------------------------------+  // [229]
+                                                                 // [229]
+    @VIDEO_IDEA@ : Draw out old NES characters in grid in        // [229]
+    @VIDIDEA@    : your tilemap. For extra bonus, apply          // [229]
+    @VID@        : CRAY_CRAY mode to them.                       // [229]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
