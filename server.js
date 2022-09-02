@@ -19614,7 +19614,14 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
               : when talking about our "cpu-side bitmap"         // [234]
               : because it is an array of bytes in               // [234]
               : R,G,B,A order.                                   // [234]
-      
+                                                                 // [234]
+    @VIDEO_IDEA@: Weird focusing hack I found that works ::::::  // [234]
+    @VIDIDEA@:::: pretty good if you are egotistical and ::::::  // [234]
+    @VID@:::::::: narcassistic like myself.              ::::::  // [234]
+    :::::::::::::                                        ::::::  // [234]
+    :::::::::::::  Pretend the person talking is you.    ::::::  // [234]
+    :::::::::::::                                        ::::::  // [234]
+    :::::::::::::  -KanjiCoder                           ::::::  // [234]
       
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
