@@ -13505,6 +13505,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :   :         : 1ST[ GPUDATA_TIK ]      :::::::::::::  // [230][229]
           :   :         : 2ND[ ARTGIRL_TIK ]      :::::::::::::  // [230][229]
 
+    [230] : Dirty flagger code that was in[ PIX2048 ]  ::::::::  // [231][230]
+          : system has been moved to[ GPUSYNC ].       ::::::::  // [231][230]
+          :                                            ::::::::  // [231][230]
+          : NEXT : Back to optimized tile setting      ::::::::  // [231][230]
+          :      : code by manipulating dirty sectors. ::::::::  // [231][230]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -19085,11 +19091,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [230] : Dirty flagger code that was in[ PIX2048 ]  ::::::::  // [230]
-          : system has been moved to[ GPUSYNC ].       ::::::::  // [230]
-          :                                            ::::::::  // [230]
-          : NEXT : Back to optimized tile setting      ::::::::  // [230]
-          :      : code by manipulating dirty sectors. ::::::::  // [230]
+    [231] : Fixed the error message that pops up when you :::::  // [231]
+          : do not have access to                         :::::  // [231]
+          : process.env[ "HEROKU_APP_NAME" ] because you  :::::  // [231]
+          : did not enable[ runtime-dyno-metadata ]       :::::  // [231]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
