@@ -7386,8 +7386,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [229][-------------]
             if( d_gpudata_fum >= 1 ){    //:FORCE_UPDATE_MODE:// // [236][229][MOV][184][---]
                 d_pix2048_dir =(         0 - 333 );              // [236][229][MOV][184][---]
-                d_pix2048_dir_mem_dum =( 0 - 777 );                 [236]
-                d_pix2048_dir_mem_e_e =( 0 - 999 );                 [236]
+                d_pix2048_dir_mem_dum =( 0 - 777 );              // [236]
+                d_pix2048_dir_mem_e_e =( 0 - 999 );              // [236]
                                                                  // [229][-------------]
                 //:DONE_ISH:#_REFACTOR_GPU_SYNC_CODE_#   ://     // [229][MAE][226][---]
                 //:    TODO:#_UPDATE_ONLY_DIRTY_SECTORS_#://     // [229][-------------]
@@ -13872,6 +13872,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : NEXT : Sub Texture Push                ::::::::::::  // [235][234]
           ::::::::( Partial Texture Update )       ::::::::::::  // [235][234]
 
+    [235] : Sub Texture Push Code Finished.              ::::::  // [236][235]
+          : NEXT : Clean up loose ends and fully         ::::::  // [236][235]
+          : ---- : implement our cache friendly quad-ish ::::::  // [236][235]
+          : ---- : tree used for partial texture updates ::::::  // [236][235]
+          : ---- : when setting tiles.                   ::::::  // [236][235]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -19824,11 +19830,11 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [235] : Sub Texture Push Code Finished.              ::::::  // [235]
-          : NEXT : Clean up loose ends and fully         ::::::  // [235]
-          : ---- : implement our cache friendly quad-ish ::::::  // [235]
-          : ---- : tree used for partial texture updates ::::::  // [235]
-          : ---- : when setting tiles.                   ::::::  // [235]
+    [236] : 1 : Created gpu sync tick function           ::::::  // [236]
+          : 2 : gpu data tick function body wrapped      ::::::  // [236]
+          :   : with "force update mode" flag.           ::::::  // [236]
+          : 3 : A lot of misc logging flags to clean up  ::::::  // [236]
+          :   : the output in the javascript console.    ::::::  // [236]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
