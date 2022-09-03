@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-003   (NINJACODER):// // [200][102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-003   ( WEEBCODER):// // [200][102]
 //:                                                          :// // [102][---]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_237             :// // [237][236][235][234][233][232][231][230][229][228][227][226][225][224][223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_238             :// // [238][237][236][235][234][233][232][231][230][229][228][227][226][225][224][223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102][---]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---][---]
 //:CONFIGURATION:[109]:======================================:// // [---][---]
@@ -5936,9 +5936,508 @@ if( /** __BINFONT__ **/ notnode ){                               // [207]
                                                                  // [---]
 };; //: __BINFONT__ ::: DATASEC ::: END ::::::::::::::::::::::// // [212][207]
 if( /** __ARTDUDE__ **/ notnode ){                               // [102]
-                                                                 // [102]
-    //:Art Assets Go Here://                                     // [102]
-                                                                 // [102]
+
+    let _ =( 0 );  /////////////////////////////////////////     // [238]
+    let X =( 1 );  /////////////////////////////////////////     // [238]
+
+    var d_artdude_fourset_src_any_000 = new Uint8Array([
+/**0**/
+/**0**/ _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ////
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ////
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ////
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ]);;
+    var d_artdude_fourset_src_any_001 = new Uint8Array([
+/**1**/
+/**1**/ X,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,X
+    ,   X,_,_,_,X , _,X,_,X,_ , _,X,_,X,_ , X,_,_,_,X
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ,   X,_,_,X,X , X,X,X,_,X , X,_,X,X,X , X,X,_,_,X
+    ,   X,X,_,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,_,X,X
+    ////
+    ,   X,_,_,X,_ , X,X,X,_,X , X,_,X,X,X , _,X,_,_,X
+    ,   X,X,_,X,_ , X,_,_,_,_ , _,_,_,_,X , _,X,_,X,X
+    ,   _,_,_,X,_ , X,_,_,_,X , X,_,_,_,X , _,X,_,_,_
+    ,   X,X,_,_,_ , _,_,_,_,X , X,_,_,_,_ , _,_,_,X,X
+    ,   X,_,_,X,_ , X,_,X,X,X , X,X,X,_,X , _,X,_,_,X
+    ////
+    ,   X,_,_,X,_ , X,_,X,X,X , X,X,X,_,X , _,X,_,_,X
+    ,   X,X,_,_,_ , _,_,_,_,X , X,_,_,_,_ , _,_,_,X,X
+    ,   _,_,_,X,_ , X,_,_,_,X , X,_,_,_,X , _,X,_,_,_
+    ,   X,X,_,X,_ , X,_,_,_,_ , _,_,_,_,X , _,X,_,X,X
+    ,   X,_,_,X,_ , X,X,X,_,X , X,_,X,X,X , _,X,_,_,X
+    ////
+    ,   X,X,_,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,_,X,X
+    ,   X,_,_,X,X , X,X,X,_,X , X,_,X,X,X , X,X,_,_,X
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ,   X,_,_,_,X , _,X,_,X,_ , _,X,_,X,_ , X,_,_,_,X
+    ,   X,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,X
+    ]);;
+    var d_artdude_fourset_src_any_002 = new Uint8Array([
+/**2**/
+/**2**/ _,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,_
+    ,   _,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,_
+    ,   X,X,X,X,_ , _,_,_,X,X , X,X,_,_,_ , _,X,X,X,X
+    ,   X,X,X,X,_ , _,_,_,X,X , X,X,_,_,_ , _,X,X,X,X
+    ,   X,X,_,_,X , X,X,_,_,_ , _,_,_,X,X , X,_,_,X,X
+    ////
+    ,   X,X,_,_,X , X,X,_,X,X , X,X,_,X,X , X,_,_,X,X
+    ,   X,X,_,X,X , _,_,_,X,X , X,X,_,_,_ , X,X,_,X,X
+    ,   X,_,_,_,X , _,_,_,X,X , X,X,_,_,_ , X,_,_,_,X
+    ,   X,X,_,X,X , _,X,X,X,X , X,X,X,X,_ , X,X,_,X,X
+    ,   X,X,_,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,_,X,X
+    ////
+    ,   X,X,_,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,_,X,X
+    ,   X,X,_,X,X , _,X,X,X,X , X,X,X,X,_ , X,X,_,X,X
+    ,   X,_,_,_,X , _,_,_,X,X , X,X,_,_,_ , X,_,_,_,X
+    ,   X,X,_,X,X , _,_,_,X,X , X,X,_,_,_ , X,X,_,X,X
+    ,   X,X,_,_,X , X,X,_,X,X , X,X,_,X,X , X,_,_,X,X
+    ////
+    ,   X,X,_,_,X , X,X,_,_,_ , _,_,_,X,X , X,_,_,X,X
+    ,   X,X,X,X,_ , _,_,_,X,X , X,X,_,_,_ , _,X,X,X,X
+    ,   X,X,X,X,_ , _,_,_,X,X , X,X,_,_,_ , _,X,X,X,X
+    ,   _,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,_
+    ,   _,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,_
+    ]);;
+    var d_artdude_fourset_src_any_003 = new Uint8Array([
+/**3**/
+/**3**/ X,X,X,X,X , X,X,_,_,_ , _,_,_,X,X , X,X,X,X,X
+    ,   X,X,X,X,_ , _,X,X,X,X , X,X,X,X,_ , _,X,X,X,X
+    ,   X,X,X,X,X , X,X,_,_,_ , _,_,_,X,X , X,X,X,X,X
+    ,   X,X,_,X,_ , _,_,_,_,_ , _,_,_,_,_ , _,X,_,X,_
+    ,   _,X,X,X,_ , X,_,X,_,X , X,_,X,_,X , _,X,X,X,_
+    ////
+    ,   _,X,X,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,X,X,_
+    ,   _,X,_,X,_ , X,_,_,X,X , X,X,_,_,X , _,X,_,X,_
+    ,   _,X,_,X,_ , X,_,_,_,_ , _,_,_,_,X , _,X,_,X,_
+    ,   _,X,_,X,_ , X,X,_,_,_ , _,_,_,X,X , _,X,_,X,_
+    ,   _,X,X,X,_ , X,X,_,X,X , X,X,_,X,X , _,X,X,X,_
+    ////                                    
+    ,   _,X,X,X,_ , X,X,_,X,X , X,X,_,X,X , _,X,X,X,_
+    ,   _,X,_,X,_ , X,X,_,_,_ , _,_,_,X,X , _,X,_,X,_
+    ,   _,X,X,X,_ , X,X,X,X,_ , _,X,X,X,X , _,X,X,X,_
+    ,   _,_,X,_,_ , X,_,_,X,_ , _,X,_,_,X , _,_,X,_,_
+    ,   _,_,X,_,_ , X,X,_,X,_ , _,X,_,X,X , _,_,X,_,_
+    ////
+    ,   _,_,X,_,_ , _,X,_,X,_ , _,X,_,X,_ , _,_,X,_,_
+    ,   _,_,X,_,_ , _,X,_,X,_ , _,X,_,X,_ , _,_,X,_,_
+    ,   _,_,X,_,_ , _,X,_,X,_ , _,X,_,X,_ , _,_,X,_,_
+    ,   _,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,_
+    ,   _,_,_,X,X , X,X,X,X,X , X,X,X,X,X , X,X,_,_,_
+    ]);;
+
+    var d_artdude_fourset_src_any_004 = new Uint8Array([
+/**4**/
+/**4**/ X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ,   X,_,_,_,X , _,_,_,_,_ , _,_,_,_,_ , X,_,_,_,X
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ,   X,_,_,_,X , _,_,_,_,_ , _,_,_,_,_ , X,_,_,_,X
+    ////
+    ,   X,_,_,_,_ , X,X,X,X,X , X,X,X,X,X , _,_,_,_,X
+    ,   X,X,X,_,X , X,_,_,_,_ , _,_,_,_,X , X,_,X,X,X
+    ,   X,_,_,_,_ , X,X,_,X,X , X,X,_,X,X , _,_,_,_,X
+    ,   X,X,X,_,X , X,X,_,X,X , X,X,_,X,X , X,_,X,X,X
+    ,   X,_,_,_,_ , X,_,_,_,_ , _,_,_,_,X , _,_,_,_,X
+    ////                                             
+    ,   X,_,_,_,X , X,_,_,_,_ , _,_,_,_,X , X,_,_,_,X
+    ,   X,_,_,_,_ , X,X,_,X,X , X,X,_,X,X , _,_,_,_,X
+    ,   X,_,_,_,X , X,X,_,X,X , X,X,_,X,X , X,_,_,_,X
+    ,   X,_,_,_,_ , X,_,_,_,_ , _,_,_,_,X , _,_,_,_,X
+    ,   X,_,_,_,X , X,X,X,X,X , X,X,X,X,X , X,_,_,_,X
+    ////                                            
+    ,   X,_,_,_,X , X,X,X,X,X , X,X,X,X,X , X,_,_,_,X
+    ,   X,_,_,_,X , X,X,X,X,X , X,X,X,X,X , X,_,_,_,X
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ]);;
+
+    var d_artdude_fourset_src_any_005 = new Uint8Array([
+/**5**/
+/**5**/ X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,X,_,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,_,X,X
+    ,   X,_,_,_,X , X,X,X,X,X , X,X,X,X,X , X,_,_,_,X
+    ,   X,X,_,_,X , _,X,_,X,_ , _,X,_,X,_ , X,_,_,X,X
+    ,   X,X,_,_,X , X,_,X,_,X , X,_,X,_,X , X,_,_,X,X
+    ////
+    ,   X,_,_,_,X , X,X,X,X,X , X,X,X,X,X , X,_,_,_,X
+    ,   X,X,X,_,X , X,_,_,X,X , X,X,_,_,X , X,_,X,X,X
+    ,   X,_,_,_,X , X,X,_,_,X , X,_,_,X,X , X,_,_,_,X
+    ,   X,X,X,_,X , X,X,_,_,X , X,_,_,X,X , X,_,X,X,X
+    ,   X,_,_,_,X , X,X,_,_,_ , _,_,_,X,X , X,_,_,_,X
+    ////                                             
+    ,   X,_,_,X,X , X,X,_,_,_ , _,_,_,X,X , X,X,_,_,X
+    ,   X,_,_,X,_ , X,X,_,X,X , X,X,_,X,X , _,X,_,_,X
+    ,   X,_,_,X,X , X,X,_,X,X , X,X,_,X,X , X,X,_,_,X
+    ,   X,_,_,X,_ , X,_,_,_,_ , _,_,_,_,X , _,X,_,_,X
+    ,   X,_,_,X,X , X,X,X,X,X , X,X,X,X,X , X,X,_,_,X
+    ////                                            
+    ,   X,X,_,X,X , X,X,X,X,X , X,X,X,X,X , X,X,_,X,X
+    ,   X,X,_,X,X , X,X,X,X,X , X,X,X,X,X , X,X,_,X,X
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ,   X,X,_,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,_,X,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ]);;
+    var d_artdude_fourset_src_any_006 = new Uint8Array([
+/**6**/
+/**6**/ _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ////
+    ,   _,_,_,_,_ , X,X,X,_,_ , _,_,X,X,X , _,_,_,_,_
+    ,   _,X,X,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,X,X,_
+    ,   _,X,X,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,X,X,_
+    ,   _,X,X,X,_ , _,X,_,_,_ , _,_,_,X,_ , _,X,X,X,_
+    ,   _,_,_,_,_ , _,X,_,_,_ , _,_,_,X,_ , _,_,_,_,_
+    ////
+    ,   _,_,_,_,_ , _,X,_,_,_ , _,_,_,X,_ , _,_,_,_,_
+    ,   _,X,X,X,_ , _,X,_,_,_ , _,_,_,X,_ , _,X,X,X,_
+    ,   _,X,X,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,X,X,_
+    ,   _,X,X,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,X,X,_
+    ,   _,_,_,_,_ , X,X,X,_,_ , _,_,X,X,X , _,_,_,_,_
+    ////
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_
+    ]);;
+    var d_artdude_fourset_src_any_007 = new Uint8Array([
+/**7**/
+/**7**/ _,_,_,X,X , X,X,_,X,X , X,X,_,X,X , X,X,_,_,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   X,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,X
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ////
+    ,   X,_,_,_,_ , X,X,X,_,_ , _,_,X,X,X , _,_,_,_,X
+    ,   X,X,X,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,X,X,X
+    ,   _,X,X,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,X,X,_
+    ,   X,X,X,X,_ , _,X,_,_,_ , _,_,_,X,_ , _,X,X,X,X
+    ,   X,_,_,_,_ , _,X,_,_,_ , _,_,_,X,_ , _,_,_,_,X
+    ////
+    ,   X,_,_,_,_ , _,X,_,_,_ , _,_,_,X,_ , _,_,_,_,X
+    ,   X,X,X,X,_ , _,X,_,_,_ , _,_,_,X,_ , _,X,X,X,X
+    ,   _,X,X,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,X,X,_
+    ,   X,X,X,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,X,X,X
+    ,   X,_,_,_,_ , X,X,X,_,_ , _,_,X,X,X , _,_,_,_,X
+    ////
+    ,   X,_,_,_,_ , _,_,_,_,_ , _,_,_,_,_ , _,_,_,_,X
+    ,   X,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,X
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,_,_,X,X , X,X,_,X,X , X,X,_,X,X , X,X,_,_,_
+    ]);;
+    var d_artdude_fourset_src_any_008 = new Uint8Array([
+/**8**/
+/**8**/ _,_,_,X,X , X,X,_,X,X , X,X,_,X,X , X,X,_,_,_
+    ,   _,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,_
+    ,   _,X,X,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,X,X,_
+    ,   X,X,X,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,X,X,X
+    ,   X,_,_,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,_,_,X
+    ////
+    ,   X,_,_,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,_,_,X
+    ,   X,X,X,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,X,X,X
+    ,   _,X,X,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,X,X,_
+    ,   X,X,X,X,_ , X,X,_,_,_ , _,_,_,X,X , _,X,X,X,X
+    ,   X,_,_,X,_ , X,X,_,_,_ , _,_,_,X,X , _,X,_,_,X
+    ////
+    ,   X,_,_,X,_ , X,X,_,_,_ , _,_,_,X,X , _,X,_,_,X
+    ,   X,X,X,X,_ , X,X,_,_,_ , _,_,_,X,X , _,X,X,X,X
+    ,   _,X,X,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,X,X,_
+    ,   X,X,X,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,X,X,X
+    ,   X,_,_,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,_,_,X
+    ////
+    ,   X,_,_,X,_ , _,_,X,_,_ , _,_,X,_,_ , _,X,_,_,X
+    ,   X,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,X
+    ,   _,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,_
+    ,   _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_ , _,X,X,X,_
+    ,   _,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,_
+    ]);;
+    var d_artdude_fourset_src_any_009 = new Uint8Array([
+/**9**/
+/**9**/ X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ,   X,_,_,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,_,_,X
+    ,   X,_,_,_,X , _,X,_,X,_ , _,X,_,X,_ , X,_,_,_,X
+    ,   X,_,_,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,_,_,X
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ,   X,_,_,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,_,_,X
+    ,   X,_,_,_,X , _,X,_,X,_ , _,X,_,X,_ , X,_,_,_,X
+    ,   X,_,_,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,_,_,X
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ]);;
+    var d_artdude_fourset_src_any_010 = new Uint8Array([
+/**A**/
+/**A**/ X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,X
+    ,   X,_,X,_,X , X,_,_,_,X , X,_,_,_,X , X,_,X,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ,   X,_,X,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,X,_,X
+    ,   X,_,X,_,X , _,X,_,X,_ , _,X,_,X,_ , X,_,X,_,X
+    ,   X,_,X,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,X,_,X
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ,   X,_,X,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,X,_,X
+    ,   X,_,X,_,X , _,X,_,X,_ , _,X,_,X,_ , X,_,X,_,X
+    ,   X,_,X,_,X , _,X,X,X,_ , _,X,X,X,_ , X,_,X,_,X
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,X,_,X , X,_,_,_,X , X,_,_,_,X , X,_,X,_,X
+    ,   X,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ]);;
+    var d_artdude_fourset_src_any_011 = new Uint8Array([
+/**B**/
+/**B**/ X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,X
+    ,   X,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ,   X,_,X,X,X , _,X,X,X,_ , _,X,X,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,_,X,_ , _,X,_,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,X,X,X , X,X,X,X,_ , X,X,X,_,X
+    ,   X,X,X,X,X , _,_,_,X,X , X,X,_,_,_ , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , _,_,_,X,X , X,X,_,_,_ , X,X,X,X,X
+    ,   X,_,X,X,X , _,X,X,X,X , X,X,X,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,_,X,_ , _,X,_,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,X,X,_ , _,X,X,X,_ , X,X,X,_,X
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,X
+    ,   X,_,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ]);;
+    var d_artdude_fourset_src_any_012 = new Uint8Array([
+/**C**/
+/**C**/ X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,_,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,_,X
+    ,   X,_,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,_,X
+    ,   X,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ,   X,_,X,X,X , _,X,_,X,_ , _,X,_,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,_,X,_ , _,X,_,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,X,X,X , X,X,X,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,_,_,X,X , X,X,_,_,_ , X,X,X,_,X
+    ////                                    
+    ,   X,_,X,X,X , _,_,_,X,X , X,X,_,_,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,X,X,X , X,X,X,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,_,X,_ , _,X,_,X,_ , X,X,X,_,X
+    ,   X,_,X,X,X , _,X,_,X,_ , _,X,_,X,_ , X,X,X,_,X
+    ,   X,X,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,X
+    ,   X,_,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,_,X
+    ,   X,_,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,_,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ]);;
+    var d_artdude_fourset_src_any_013 = new Uint8Array([
+/**D**/
+/**D**/ X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,_,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,_,X
+    ,   X,_,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,_,X
+    ,   X,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,_,X
+    ,   X,_,X,_,_ , _,X,_,X,_ , _,X,_,X,_ , _,_,X,_,X
+    ,   X,_,X,_,_ , _,X,X,X,_ , _,X,X,X,_ , _,_,X,_,X
+    ,   X,_,X,_,_ , _,X,X,X,_ , _,X,X,X,_ , _,_,X,_,X
+    ////                                    
+    ,   X,_,X,_,_ , _,X,X,X,_ , _,X,X,X,_ , _,_,X,_,X
+    ,   X,_,X,_,_ , _,X,X,X,_ , _,X,X,X,_ , _,_,X,_,X
+    ,   X,_,X,_,_ , X,X,_,X,_ , _,X,_,X,X , _,_,X,_,X
+    ,   X,_,X,_,_ , X,X,_,X,X , X,X,_,X,X , _,_,X,_,X
+    ,   X,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,X
+    ////                                    
+    ,   X,X,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,X,X
+    ,   X,_,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,_,X
+    ,   X,_,X,X,X , X,X,_,X,X , X,X,_,X,X , X,X,X,_,X
+    ,   X,_,_,_,X , X,_,_,_,X , X,_,_,_,X , X,_,_,_,X
+    ,   X,X,X,X,X , X,X,X,X,X , X,X,X,X,X , X,X,X,X,X
+    ]);;
+    var d_artdude_fourset_src_any_014 = new Uint8Array([
+/**E**/
+/**E**/ X,X,X,_,X , X,X,X,X,X , X,X,X,X,X , X,_,X,X,X
+    ,   X,X,X,_,_ , X,X,X,X,X , X,X,X,X,X , _,_,X,X,X
+    ,   X,X,X,X,_ , _,_,_,_,_ , _,_,_,_,_ , _,X,X,X,X
+    ,   _,_,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,_,_
+    ,   X,_,_,X,X , X,_,_,_,_ , _,_,_,_,X , X,X,_,_,X
+    ////
+    ,   X,X,_,_,X , X,X,X,_,_ , _,_,X,X,X , X,_,_,X,X
+    ,   X,X,_,_,_ , X,X,X,_,_ , _,_,X,X,X , _,_,_,X,X
+    ,   X,X,_,_,_ , X,X,X,X,_ , _,X,X,X,X , _,_,_,X,X
+    ,   X,X,_,_,_ , _,_,X,X,X , X,X,X,_,_ , _,_,_,X,X
+    ,   X,X,_,_,_ , _,_,_,X,X , X,X,_,_,_ , _,_,_,X,X
+    ////
+    ,   X,X,_,_,_ , _,_,_,X,X , X,X,_,_,_ , _,_,_,X,X
+    ,   X,X,_,_,_ , _,_,X,X,X , X,X,X,_,_ , _,_,_,X,X
+    ,   X,X,_,_,_ , X,X,X,X,_ , _,X,X,X,X , _,_,_,X,X
+    ,   X,X,_,_,_ , X,X,X,_,_ , _,_,X,X,X , _,_,_,X,X
+    ,   X,X,_,_,X , X,X,X,_,_ , _,_,X,X,X , X,_,_,X,X
+    ////
+    ,   X,_,_,X,X , X,_,_,_,_ , _,_,_,_,X , X,X,_,_,X
+    ,   _,_,X,X,X , _,_,_,_,_ , _,_,_,_,_ , X,X,X,_,_
+    ,   X,X,X,X,_ , _,_,_,_,_ , _,_,_,_,_ , _,X,X,X,X
+    ,   X,X,X,_,_ , X,X,X,X,X , X,X,X,X,X , _,_,X,X,X
+    ,   X,X,X,_,X , X,X,X,X,X , X,X,X,X,X , X,_,X,X,X
+    ]);;
+    var d_artdude_fourset_src_any_015 = new Uint8Array([
+/**F**/
+/**F**/ X,X,X,_,X , X,X,X,X,X , X,X,X,X,X , X,_,X,X,X
+    ,   X,X,X,_,_ , X,X,X,X,X , X,X,X,X,X , _,_,X,X,X
+    ,   X,X,X,X,_ , _,_,_,_,_ , _,_,_,_,_ , _,X,X,X,X
+    ,   _,_,X,X,X , _,X,X,X,X , X,X,X,X,_ , X,X,X,_,_
+    ,   X,_,_,X,X , X,_,_,_,_ , _,_,_,_,X , X,X,_,_,X
+    ////
+    ,   X,X,_,_,X , X,X,X,X,X , X,X,X,X,X , X,_,_,X,X
+    ,   X,X,_,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,_,X,X
+    ,   X,X,_,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,_,X,X
+    ,   X,X,_,X,_ , X,_,X,X,_ , _,X,X,_,X , _,X,_,X,X
+    ,   X,X,_,X,_ , X,_,X,_,_ , _,_,X,_,X , _,X,_,X,X
+    ////
+    ,   X,X,_,X,_ , X,_,X,_,_ , _,_,X,_,X , _,X,_,X,X
+    ,   X,X,_,X,_ , X,_,X,X,_ , _,X,X,_,X , _,X,_,X,X
+    ,   X,X,_,X,_ , X,X,X,X,X , X,X,X,X,X , _,X,_,X,X
+    ,   X,X,_,X,_ , X,X,X,_,_ , _,_,X,X,X , _,X,_,X,X
+    ,   X,X,_,_,X , X,X,X,X,X , X,X,X,X,X , X,_,_,X,X
+    ////
+    ,   X,_,_,X,X , X,_,_,_,_ , _,_,_,_,X , X,X,_,_,X
+    ,   _,_,X,X,X , _,X,X,X,X , X,X,X,X,_ , X,X,X,_,_
+    ,   X,X,X,X,_ , _,_,_,_,_ , _,_,_,_,_ , _,X,X,X,X
+    ,   X,X,X,_,_ , X,X,X,X,X , X,X,X,X,X , _,_,X,X,X
+    ,   X,X,X,_,X , X,X,X,X,X , X,X,X,X,X , X,_,X,X,X
+    ]);;
+
+    //:#_FOURSET_DESIGN_LOOKUP_TABLES_#:[238]:-----------://
+        
+        //:FOURSET_GEO:[238]:----------------------------://
+
+            var d_artdude_fourset_src_geo_arr =([
+
+                d_artdude_fourset_src_any_000    
+            ,   d_artdude_fourset_src_any_001    
+            ,   d_artdude_fourset_src_any_002    
+            ,   d_artdude_fourset_src_any_003    
+            ,   d_artdude_fourset_src_any_004    
+            ,   d_artdude_fourset_src_any_005    
+            ,   d_artdude_fourset_src_any_006    
+            ,   d_artdude_fourset_src_any_007    
+            ,   d_artdude_fourset_src_any_008    
+            ,   d_artdude_fourset_src_any_009    
+            ,   d_artdude_fourset_src_any_010    
+            ,   d_artdude_fourset_src_any_011    
+            ,   d_artdude_fourset_src_any_012    
+            ,   d_artdude_fourset_src_any_013    
+            ,   d_artdude_fourset_src_any_014    
+            ,   d_artdude_fourset_src_any_015    
+            ]);;
+        //:----------------------------:FOURSET_GEO:[238]://    
+        //:FOURSET_GEO:[238]:----------------------------://
+
+            var d_artdude_fourset_src_bom_arr =([
+
+                d_artdude_fourset_src_any_000    
+            ,   d_artdude_fourset_src_any_001    
+            ,   d_artdude_fourset_src_any_002    
+            ,   d_artdude_fourset_src_any_003    
+            ,   d_artdude_fourset_src_any_004    
+            ,   d_artdude_fourset_src_any_005    
+            ,   d_artdude_fourset_src_any_006    
+            ,   d_artdude_fourset_src_any_007    
+            ,   d_artdude_fourset_src_any_008    
+            ,   d_artdude_fourset_src_any_009    
+            ,   d_artdude_fourset_src_any_010    
+            ,   d_artdude_fourset_src_any_011    
+            ,   d_artdude_fourset_src_any_012    
+            ,   d_artdude_fourset_src_any_013    
+            ,   d_artdude_fourset_src_any_014    
+            ,   d_artdude_fourset_src_any_015    
+            ]);;
+        //:----------------------------:FOURSET_GEO:[238]://  
+        //:FOURSET_GEO:[238]:----------------------------://  
+
+            var d_artdude_fourset_src_fad_arr =([
+
+                d_artdude_fourset_src_any_000    
+            ,   d_artdude_fourset_src_any_001    
+            ,   d_artdude_fourset_src_any_002    
+            ,   d_artdude_fourset_src_any_003    
+            ,   d_artdude_fourset_src_any_004    
+            ,   d_artdude_fourset_src_any_005    
+            ,   d_artdude_fourset_src_any_006    
+            ,   d_artdude_fourset_src_any_007    
+            ,   d_artdude_fourset_src_any_008    
+            ,   d_artdude_fourset_src_any_009    
+            ,   d_artdude_fourset_src_any_010    
+            ,   d_artdude_fourset_src_any_011    
+            ,   d_artdude_fourset_src_any_012    
+            ,   d_artdude_fourset_src_any_013    
+            ,   d_artdude_fourset_src_any_014    
+            ,   d_artdude_fourset_src_any_015    
+            ]);;
+        //:----------------------------:FOURSET_GEO:[238]:// 
+        //:FOURSET_LAY:[238]:============================://
+
+            var d_artdude_fourset_src_til_arr =([
+
+                d_artdude_fourset_src_geo_arr //:GEOMETRY://
+            ,   d_artdude_fourset_src_bom_arr //:BOMB____://
+            ,   d_artdude_fourset_src_fad_arr //:FADA____://
+            ]);;
+        //:============================:FOURSET_LAY:[238]://
+    //:------------:#_FOURSET_DESIGN_LOOKUP_TABLES_:[238]://
+
 };;                                                              // [102]
 if( /** __ARTGIRL__ **/ notnode ){                               // [---][---][063] 
                                                                  // [---][---][063] 
@@ -19882,6 +20381,17 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         Same idea as our glyph stamper code ( BINFONT )       |  // [237]
         but for rendering tilemap data.                       |  // [237]
     :---------------------------------------------------------+  // [237]
+
+    #_FOURSET_DESIGN_LOOKUP_TABLES_# :------------------------+  // [238]
+                                                              |  // [238]
+        These lookup tables will be used to create            |  // [238]
+        the sets of bitpacked uint32(U32) values that         |  // [238]
+        encode the FOURSET designs for all 16 of              |  // [238]
+        our tile values on all 3 layers.                      |  // [238]
+        ( Total of 16*3 designs , 3 which are empty sets )    |  // [238]
+        ( 15 * 3 == 45 non-zero geometric designs        )    |  // [238]
+                                                              |  // [238]
+    :---------------------------------------------------------+  // [238]
       
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
