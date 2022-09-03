@@ -20,7 +20,7 @@
     var   d_eco =( 1 );                                          // [109][---]
                                                                  // [---][---]
     const c_duideno =( 3 ); //:[ 3 | 7 ]://                      // [193][---]
-    var   d_gpudata_fum     =( 1 ); /** Force Update Mode**/     // [236]
+    var   d_gpudata_fum     =( 0 ); /** Force Update Mode**/     // [236]
                                                                  // [236]
     //:RELATED_SECTION[ LOGGING_CONFIGURATION ]< < < < < ://     // [236]    
                                                                  // [---][---]
