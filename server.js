@@ -7828,8 +7828,11 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [236]
         /** VOID **/                                             // [236]
     ){                                                           // [236]
-        F_GPUSYNC_CLEANIT_ALL( );                                // [236]
+        if( d_pix2048_dir >= 1 ){                                // [236]
                                                                  // [236]
+            F_GPUSYNC_CLEANIT_ALL( );                            // [236]
+            ASS( d_pix2048_dir <= 0 , "[G_S_CIA]" );             // [236]
+        };;                                                      // [236]
     };; //////////////////////////////////////////////////////// // [236]                 
                                                                  // [---]
 //|--|--|--|--|--|--|--|--|--|SUBS|--|--|--|--|--|--|--|--|--|// // [226]
@@ -19742,6 +19745,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 
     @d_gpudata_fum@ : global Data - GPU Data - ForceUpdateMode   // [236]
     @@@gpudata_fum@ : ............. GPU Data - ForceUpdateMode   // [236]
+    @G_S_CIA@ : GPU_Sync_CleanItAll                              // [236]
       
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
