@@ -59,6 +59,7 @@
 
     var   d_log_npk         =( 0 ); /** Log:NumPadKey    **/     // [236]
     var   d_sexycam_npk     =( 0 ); /** Log:NumPadKey    **/     // [236]
+    var   d_sexycam_log_zeb =( 0 ); /** Log:ZeroBasis ?  **/     // [236]
     var   d_keymast_ukm     =( 0 ); /** Unbound_Key_MSG  **/     // [236]
     var   d_moumast_lcp     =( 0 ); /** LogClickPosition **/     // [236]
     var   d_artgirl_gmc     =( 0 ); /** Give_Me_Complime **/     // [236]
@@ -9975,8 +9976,10 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 d_camerah.zebasis =( zeb_enu );                  // [---][130]
                 d_camerah_dir =(        1    );                  // [---][130]
                 d_moumast_dir =(        1    );  //:#DIL_001#:// // [169]
-                LOG( "[zeb_enu]" , zeb_enu   );                  // [---][130]
 
+                if( d_sexycam_log_zeb >= 1 ){ ;;;;;;;;;;;;;;     // [236]
+                    LOG( "[log_zeb:zeb_enu]" , zeb_enu   );      // [236][130]
+                };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [236]
 
                 //- F_SEXYCAM_TIK(); /**UPDATE_SEXYCAM**/-//     // [135]
                                                                  // [---]
