@@ -57,6 +57,7 @@
     var   d_keymast_log_upp =( 0 ); /** Log The Up Key?  **/     // [193][118]
     var   d_tileboi_log_put =( 0 ); /** Log Put Tile?    **/     // [203][197][---]
 
+    var   d_log_cli_ini     =( 0 ); /** Log_Client_Init  **/     // [236]
     var   d_log_npk         =( 0 ); /** Log:NumPadKey    **/     // [236]
     var   d_log_vpc         =( 0 ); /** Log:ViewPortC    **/     // [236]
     var   d_sexycam_npk     =( 0 ); /** Log:NumPadKey    **/     // [236]
@@ -3426,6 +3427,8 @@ UPNG.encode.concatRGBA = function(bufs) {
     //:TAG[ its_wrong_carl .............................]://     // [086]
     //:TAG[ illegal-section | illegal-section | illegals]://     // [109]
     //:TAG[ illegal section | illegalsection | illsec   ]://     // [109]
+                                                                 // [---]
+    const   d_log_ini_cli   = "[FIX:d_log_cli_ini]" ;;;;;;;;     // [236]
                                                                  // [---]
     const           eei     = "[FIX:::ee7::::]" ;;;;;;;;;;;;     // [234]
     const         d_eei_mmi = "[FIX:d_ee7_mmi]" ;;;;;;;;;;;;     // [234]
@@ -6884,9 +6887,12 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         var   dom_bod = document.body           ; 
 
         if( HAS( dom_roo ) ){
-            LOG( "[dom_roo]" , dom_roo );
+                                                
+            if( d_log_cli_ini >= 1 ){   ;;;;;;;;;;;;;;;;;;;;     // [236][---]
+                LOG( "[dom_roo]" , dom_roo );;;;;;;;;;;;;;;;     // [236][???]
+            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [236][---]
         }else{
-            ERR( "[dom_roo]" );
+                ERR( "[dom_roo]" );
         };;
         if( HAS( dom_bod ) ){
 
@@ -6898,7 +6904,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             document.body = dom_bod ;
         };;
 
-        LOG( "[dom_bod]" , dom_bod );
+        if( d_log_cli_ini >= 1 ){ ;;;;;;;;;;;;;;;;;;;;;;;;;;     // [236][---]
+            LOG( "[dom_bod]" , dom_bod );;;;;;;;;;;;;;;;;;;;     // [236][???]
+        };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [236][---]
 
     //:-----------------------------:html_dom_setup:[029]://
     //:remove_fucking_scrollbars:[138]:------------------://     // [---]
