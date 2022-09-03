@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-003   (NINJACODER):// // [200][102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-003   ( WEEBCODER):// // [200][102]
 //:                                                          :// // [102][---]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_236             :// // [236][235][234][233][232][231][230][229][228][227][226][225][224][223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_237             :// // [237][236][235][234][233][232][231][230][229][228][227][226][225][224][223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102][---]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---][---]
 //:CONFIGURATION:[109]:======================================:// // [---][---]
@@ -7561,9 +7561,15 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 )>>>0);;                                         // [230][MOV][225]
                                                                  // [230][MOV][225]
             d_pix2048_dir_mem_mmi[ mmi ] =(  bitmask );          // [230][MOV][225]
-
-            wasadir =( 0 ) ; //////// BREAKING IT.
-
+                                                                 // [-------------]
+            if( c_crash_on_vital_todo >= 1 ){ ;;;;;;;;;;;;;;     // [237]
+                ERR( "[#_BUGHUNT_WASADIR_FLAGGING_#]" );;;;;     // [237]
+                //:::::::::::::::::::::::::::::::::::::::://     // [237]
+                //:                                      ://     // [237]
+                //:     #_BUGHUNT_WASADIR_FLAGGING_#     ://     // [237]
+                //:                                      ://     // [237]
+                //:::::::::::::::::::::::::::::::::::::::://     // [237]
+            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [237]
                                                                  // [-------------]
         //:--------------------:Memory_Cell_BitMask:[225]://     // [230][MOV][225]
         //:Grab_That_Dirty_Rect_By_The_Hair:[225]:-------://     // [230][MOV][225]
@@ -19854,28 +19860,76 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
             Only differences from texSubImage2D               |  // [237]
             in WebGL 1.0 are described here.                  |  // [237]
     +---------------------------------------------------------+  // [237]
+    #_BUGHUNT_WASADIR_FLAGGING_# :----------------------------+  // [237]
+                                                              |  // [237]
+        When I manually set[ wasadir = 0 ]so that the         |  // [237]
+        dirty rectangle is always 1x1 , the effect            |  // [237]
+        seems to be an exacerbation of the bug I am           |  // [237]
+        trying to fix.                                        |  // [237]
+                                                              |  // [237]
+        The symptom will occur for vertical _AND_ horizonal   |  // [237]
+        strokes instead of only on vertical strokes.          |  // [237]
+                                                              |  // [237]
+        So maybe look into that?                              |  // [237]
+                                                              |  // [237]
+        But I really think we need to update the              |  // [237]
+        renderer to give us more visual feedback.             |  // [237]
+                                                              |  // [237]
+        Let's create hard coded 8x8 or 5x4 patterns           |  // [237]
+        for different materials using mini-bitmaps            |  // [237]
+        packed int uint32 values.                             |  // [237]
+                                                              |  // [237]
+        Same idea as our glyph stamper code ( BINFONT )       |  // [237]
+        but for rendering tilemap data.                       |  // [237]
+    :---------------------------------------------------------+  // [237]
       
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [237] : No code changes , observing that laying a        ::
-          : HORIZONTAL stroke of tiles works , but a         ::
-          : VERITCAL stroke of tiles has holes in it.        ::
-          :                                                  ::
-          : When turing force update mode off                ::
-          : ( d_gpudata_fum = 0 ) , the problem goes away.   ::
-          :                                                  ::
-          : Looking at all my code, the possible problem     ::
-          : in the order of suspect :                        ::
-          :                                                  ::
-          : 1. texSubImage2D src_oib value is incorrect      ::
-          : 2. texSubImage2D rec_wid value is incorrect      ::
-          : 3. DIRTYIT_DPC for some reason is forgetting     ::
-          :    about it's dirty flag ledger and              ::
-          :    [ wasadir ] never ends up true, meaning       ::
-          :    the dirty rectangle is ALWAYS 1x1 .           ::
+    [237] :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [237]
+          : No code changes , observing that laying a        ::  // [237]
+          : HORIZONTAL stroke of tiles works , but a         ::  // [237]
+          : VERITCAL stroke of tiles has holes in it.        ::  // [237]
+          :                                                  ::  // [237]
+          : When turing force update mode off                ::  // [237]
+          : ( d_gpudata_fum = 0 ) , the problem goes away.   ::  // [237]
+          :                                                  ::  // [237]
+          : Looking at all my code, the possible problem     ::  // [237]
+          : in the order of suspect :                        ::  // [237]
+          :                                                  ::  // [237]
+          : 1. texSubImage2D src_oib value is incorrect      ::  // [237]
+          : 2. texSubImage2D rec_wid value is incorrect      ::  // [237]
+          : 3. DIRTYIT_DPC for some reason is forgetting     ::  // [237]
+          :    about it's dirty flag ledger and              ::  // [237]
+          :    [ wasadir ] never ends up true, meaning       ::  // [237]
+          :    the dirty rectangle is ALWAYS 1x1 .           ::  // [237]
+          :                                                  ::  // [237]
+          : NOTE : Going over tiles that have ALREADY BEEN   ::  // [237]
+          :      : [ SET / PUT ]appears to occassionally     ::  // [237]
+          :      : erase them. Making different graphical    ::  // [237]
+          :      : patterns for differnet tile values will   ::  // [237]
+          :      : help debug the issue, because then we     ::  // [237]
+          :      : can differentiate tile types and see      ::  // [237]
+          :      : when data is getting corrupted if we      ::  // [237]
+          :      : have a brush setting designed to set      ::  // [237]
+          :      : down a CHECKERBOARD pattern of            ::  // [237]
+          :      : tile values.                              ::  // [237]
+          :      :                                           ::  // [237]
+          :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [237]
+          : NEXT ::::::::::::::::::::::::::::::::::::::::::::::  // [237]
+          :                                                  ::  // [237]
+          :     Create uint32 bit-packed tiles to be         ::  // [237]
+          :     used with our auto-tiling method that        ::  // [237]
+          :     we wrote for the unreal engine grant         ::  // [237]
+          :     paper. Diagrams explaining how this          ::  // [237]
+          :     method works should be in the[ AA3 ]repo.    ::  // [237]
+          :                                                  ::  // [237]
+          :      NEXT_NEXT : Render Those Patterns           ::  // [237]
+          : NEXT_NEXT_NEXT : Checker Mode Brush              ::  // [237]
+          :                                                  ::  // [237]
+          :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [237]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
