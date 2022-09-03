@@ -9298,7 +9298,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         //:::::::::::::( 0xRRGGBBAA )::::::::::::::::::::://     // [240]
         var o_binfour =( 0x00000000 );                           // [240]
                                                                  // [240]
-        ERR( "[TODO: Finish This Code In Video #2_4_1 ]" );      // [240]
+        MSG( "[TODO: Finish This Code In Video #2_4_1 ]" );      // [240] NOTICE_ME_SENPAI
                                                                  // [240]
         return( o_binfour );                                     // [240]
                                                                  // [240]
