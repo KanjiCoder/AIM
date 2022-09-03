@@ -7561,6 +7561,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 )>>>0);;                                         // [230][MOV][225]
                                                                  // [230][MOV][225]
             d_pix2048_dir_mem_mmi[ mmi ] =(  bitmask );          // [230][MOV][225]
+
+            wasadir =( 0 ) ; //////// BREAKING IT.
+
                                                                  // [-------------]
         //:--------------------:Memory_Cell_BitMask:[225]://     // [230][MOV][225]
         //:Grab_That_Dirty_Rect_By_The_Hair:[225]:-------://     // [230][MOV][225]
@@ -13880,6 +13883,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : ---- : tree used for partial texture updates ::::::  // [236][235]
           : ---- : when setting tiles.                   ::::::  // [236][235]
 
+    [236] : 1 : Created gpu sync tick function           ::::::  // [237][236]
+          : 2 : gpu data tick function body wrapped      ::::::  // [237][236]
+          :   : with "force update mode" flag.           ::::::  // [237][236]
+          : 3 : A lot of misc logging flags to clean up  ::::::  // [237][236]
+          :   : the output in the javascript console.    ::::::  // [237][236]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -19851,11 +19860,22 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [236] : 1 : Created gpu sync tick function           ::::::  // [236]
-          : 2 : gpu data tick function body wrapped      ::::::  // [236]
-          :   : with "force update mode" flag.           ::::::  // [236]
-          : 3 : A lot of misc logging flags to clean up  ::::::  // [236]
-          :   : the output in the javascript console.    ::::::  // [236]
+    [237] : No code changes , observing that laying a        ::
+          : HORIZONTAL stroke of tiles works , but a         ::
+          : VERITCAL stroke of tiles has holes in it.        ::
+          :                                                  ::
+          : When turing force update mode off                ::
+          : ( d_gpudata_fum = 0 ) , the problem goes away.   ::
+          :                                                  ::
+          : Looking at all my code, the possible problem     ::
+          : in the order of suspect :                        ::
+          :                                                  ::
+          : 1. texSubImage2D src_oib value is incorrect      ::
+          : 2. texSubImage2D rec_wid value is incorrect      ::
+          : 3. DIRTYIT_DPC for some reason is forgetting     ::
+          :    about it's dirty flag ledger and              ::
+          :    [ wasadir ] never ends up true, meaning       ::
+          :    the dirty rectangle is ALWAYS 1x1 .           ::
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
