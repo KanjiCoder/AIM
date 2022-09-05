@@ -21290,6 +21290,18 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     +---------------------------------------------------------+  // [242]
                                                                  // [242]
     @binclust@ : Mis-Spelling of[ binclus ](7 LETTERS PEOPLE!)   // [242]
+    
+    #_BINCLUS_VS_UDESIGN_# :----------------------------------+
+    #_UDESIGN_VS_BINCLUS_# :----------------------------------+
+
+        @udesign@ : UNN_compressed IMPLEMENTATION of FOURSET
+        @binclus@ : U32_Compressed IMPLEMENTATION of FOURSET
+
+        A[FOURSET]being a Kanji's version of a wang-tile
+        style auto-tile set. Standard 16-tile "rule tile"
+        sets.
+        REFERENCE:
+        R_T_URL[ www.youtube.com/watch?v=dd4KrKCa3Yg&t=3s ]
       
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
