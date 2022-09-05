@@ -21290,18 +21290,21 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     +---------------------------------------------------------+  // [242]
                                                                  // [242]
     @binclust@ : Mis-Spelling of[ binclus ](7 LETTERS PEOPLE!)   // [242]
-    
-    #_BINCLUS_VS_UDESIGN_# :----------------------------------+
-    #_UDESIGN_VS_BINCLUS_# :----------------------------------+
-
-        @udesign@ : UNN_compressed IMPLEMENTATION of FOURSET
-        @binclus@ : U32_Compressed IMPLEMENTATION of FOURSET
-
-        A[FOURSET]being a Kanji's version of a wang-tile
-        style auto-tile set. Standard 16-tile "rule tile"
-        sets.
-        REFERENCE:
-        R_T_URL[ www.youtube.com/watch?v=dd4KrKCa3Yg&t=3s ]
+                                                                 // [242]
+    #_BINCLUS_VS_UDESIGN_# :----------------------------------+  // [242]
+    #_UDESIGN_VS_BINCLUS_# :----------------------------------+  // [242]
+                                                              |  // [242]
+        @udesign@ : UNN_compressed IMPLEMENTATION of FOURSET  |  // [242]
+        @binclus@ : U32_Compressed IMPLEMENTATION of FOURSET  |  // [242]
+                                                              |  // [242]
+        A[FOURSET]being a Kanji's version of a wang-tile      |  // [242]
+        style auto-tile set. Standard 16-tile "rule tile"     |  // [242]
+        sets.                                                 |  // [242]
+        REFERENCE:                                            |  // [242]
+        R_T_URL[ www.youtube.com/watch?v=dd4KrKCa3Yg&t=3s ]   |  // [242]
+                                                              |  // [242]
+    +---------------------------------------------------------+  // [242]
+    +---------------------------------------------------------+  // [242]
       
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
