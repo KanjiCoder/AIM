@@ -15314,6 +15314,16 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : Discovered our TEST DATA seems slightly              // [248][247]
           : corrupted. I do not know why.                        // [248][247]
 
+    [248] : I was the idiot. The u32 value I got out of the :::  // [249][248]
+          : calculator gave me a hex digit with LESS THAN   :::  // [249][248]
+          : 8 nybles, so I zero padded it. But I zero       :::  // [249][248]
+          : padded on the RIGHT when I should have been     :::  // [249][248]
+          : zero padding on the LEFT. Zero padding on the   :::  // [249][248]
+          : wrong side led to a BIT SHIFT. Hence why the    :::  // [249][248]
+          : printout of the expected value had the correct  :::  // [249][248]
+          : number of set buts, but had them in the         :::  // [249][248]
+          : WRONG LOCATIONS.                                :::  // [249][248]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -22222,21 +22232,36 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         https://blog.logrocket.com/interesting-use            |  // [247]
             -cases-for-javascript-bitwise-operators           |  // [247]
     +---------------------------------------------------------+  // [247]
+
+                                                                 // [248][BLANK_LINE]
+
+    @VIDEO_IDEA@ : Time lapse of my personal shortcuts and       // [249]
+    @VIDIDEA@ :::: make the video title : "My own personal"      // [249]
+    @VID@ :::::::: "search engine better than google."           // [249]
+                                                                 // [249]
+    @BLANK_LINE@ / [BLANK_LINE] / #BLANK_LINE# :--------------+  // [249]
+                                                              |  // [249]
+        When I need [###] spacers to keep myself from         |  // [249]
+        accidentially numbering a line with the               |  // [249]
+        wrong delta number. As seen a few lines above         |  // [249]
+        this line in the gap between [247] and [249].         |  // [249]
+                                                              |  // [249]
+    +---------------------------------------------------------+  // [249]
+                                                                 // [249]
+    @ssf_raw@ : ShaderSourceFrag - RAW ( un-processed )          // [249]
+    @ssf_pps@ : ShaderSourceFrag - Pre_Processed_String          // [249]
+                                                                 // [249]
+    @ShaderSourceFrag@ : Shader Source Fragment                  // [249]
+    ::::::::::::::::::::(Fragment Shader Source Code String)     // [249]
+
       
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [248] : I was the idiot. The u32 value I got out of the :::  // [248]
-          : calculator gave me a hex digit with LESS THAN   :::  // [248]
-          : 8 nybles, so I zero padded it. But I zero       :::  // [248]
-          : padded on the RIGHT when I should have been     :::  // [248]
-          : zero padding on the LEFT. Zero padding on the   :::  // [248]
-          : wrong side led to a BIT SHIFT. Hence why the    :::  // [248]
-          : printout of the expected value had the correct  :::  // [248]
-          : number of set buts, but had them in the         :::  // [248]
-          : WRONG LOCATIONS.                                :::  // [248]
+    [249] : Stubbed In The Rough Pipeline For     :::::::::::::  // [249]
+          : The Pre-Processing Of Shader Strings. :::::::::::::  // [249]  
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
