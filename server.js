@@ -4352,6 +4352,7 @@ if( yesnode ){ //:-------------------------------------------://
         //: @smacros@ :Shader_MACROS ://                         // [251]
                                                                  // [251]
         #define UNI uniform    //:SEE[ d_artgirl_uniform ]://    // [251]
+        #define SAM usampler2D //: Uint32 Texture Sampler ://    // [251]
                                                                  // [251]
         #define x_0  ( 0 )     //: Accessors[ vpc,vp0,vp1 ]  :// // [251]
         #define x_1  ( 1 )     //: Accessors[ vpc,vp0,vp1 ]  :// // [251]
