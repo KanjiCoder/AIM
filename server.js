@@ -5535,26 +5535,39 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
             (       u_0   + U32(f_raw_fcx - 0.5))       ////     // [251](095)(089)
         ,   (d_vpc[ y_1 ] - U32(f_raw_fcy - 0.5))       ////     // [251](095)(089)
         );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [251]
-                                                                 // [251]
-        f_out = FV4(                                             // [251]
-            F32( ufc.x ) / 255.0                                 // [251]
-        ,   F32( ufc.y ) / 255.0                                 // [251]
-        ,   0.5                                                  // [251]
-        ,   1.0                                                  // [251]
-        );;                                                      // [251]
-
-        //:#_LETTERBOX_DISCARD_#:[252]:------------------://
-        
-            f_out =( ufc.x < d_vp0[ x_0 ] //
-                  || ufc.x > d_vp0[ x_1 ] //
-                  || ufc.y < d_vp0[ y_0 ] //
-                  || ufc.y > d_vp0[ y_1 ] //
-                  )                       //
-            ? FV4( 0.0 , 0.0 , 0.0 , 1.0 )//
-            : f_out ;;;;;;;;;;;;;;;;;;;;;;;;
-
-        //:------------------:#_LETTERBOX_DISCARD_#:[252]://
-                                                                 // [251]
+                                                                 // [---]
+        //:#_LPC_LOCAL_PERCENT_COORD_#:[252]:------------://     // [252]
+                                                                 // [252]
+            FV2 lpc = FV2(                                       // [252]
+                                                                 // [252]
+                F32( ufc.x        - d_vp0[ x_0 ] )               // [252]
+              / F32( d_vp0[ x_1 ] - d_vp0[ x_0 ] )               // [252]
+            ,                                                    // [252]
+                F32( ufc.y        - d_vp0[ y_0 ] )               // [252]
+              / F32( d_vp0[ y_1 ] - d_vp0[ y_0 ] )               // [252]
+            );;                                                  // [252]
+        //:------------:#_LPC_LOCAL_PERCENT_COORD_#:[252]://     // [252]
+        //:#_FINAL_FRAG_#:[252]:-------------------------://     // [---]
+                                                                 // [---]
+            f_out = FV4(                                         // [---][251]
+                lpc.x                                            // [252][251]
+            ,   lpc.y                                            // [252][251]
+            ,   0.5                                              // [---][251]
+            ,   1.0                                              // [---][251]
+            );;                                                  // [---][251]
+        //:-------------------------:#_FINAL_FRAG_#:[252]://     // [252]
+        //:#_LETTERBOX_DISCARD_#:[252]:------------------://     // [252]
+                                                                 // [252]
+            f_out =( ufc.x < d_vp0[ x_0 ] //                     // [252]
+                  || ufc.x > d_vp0[ x_1 ] //                     // [252]
+                  || ufc.y < d_vp0[ y_0 ] //                     // [252]
+                  || ufc.y > d_vp0[ y_1 ] //                     // [252]
+                  )                       //                     // [252]
+            ? FV4( 0.0 , 0.0 , 0.0 , 1.0 )//                     // [252]
+            : f_out ;;;;;;;;;;;;;;;;;;;;;;;;                     // [252]
+                                                                 // [252]
+        //:------------------:#_LETTERBOX_DISCARD_#:[252]://     // [252]
+                                                                 // [---]
     }   //:ENDFUNC[ main : ssf_006 ]::::::::::::::::::::::::::// // [251]                                             
                                                                         
 `));; //////////////////////////////////////////////////////////    [069]
@@ -6869,18 +6882,18 @@ if( /** __ARTGIRL__ **/ notnode ){                               // [---][---][0
             ,      d_artgirl_ssf_009                             // [081]
             )      /////////////////                             // [069]
                                                                  // [---]
-    ,arr_fsm:F_CAR(c_artgirl_ren_tot + 1  //: #_1_BASED_ARR_#:// // [148]
-            ,      c_artgirl_fsm_bad         //: [0] ://         // [148]
-            ,      c_artgirl_fsm_nil         //: [1] ://         // [148]
-            ,      c_artgirl_fsm_nil         //: [2] ://         // [148]
-            ,      c_artgirl_fsm_nil         //: [3] ://         // [148]
-            ,      c_artgirl_fsm_nil         //: [4] ://         // [148]
-            ,      c_artgirl_fsm_000         //: [5] ://         // [148]
-            ,      c_artgirl_fsm_nil         //: [6] ://         // [148]
-            ,      c_artgirl_fsm_nil         //: [7] ://         // [148]
-            ,      c_artgirl_fsm_nil         //: [8] ://         // [148]
-            ,      c_artgirl_fsm_nil         //: [9] ://         // [148]
-            )      /////////////////                             // [148]
+    ,arr_fsm:F_CAR(c_artgirl_ren_tot + 1  //: #_1_BASED_ARR_#:// // [---][148]
+            ,      c_artgirl_fsm_bad         //: [0] ://         // [---][148]
+            ,      c_artgirl_fsm_nil         //: [1] ://         // [---][148]
+            ,      c_artgirl_fsm_nil         //: [2] ://         // [---][148]
+            ,      c_artgirl_fsm_nil         //: [3] ://         // [---][148]
+            ,      c_artgirl_fsm_nil         //: [4] ://         // [---][148]
+            ,      c_artgirl_fsm_000         //: [5] ://         // [---][148]
+            ,      c_artgirl_fsm_per         //: [6] ://         // [252][148]
+            ,      c_artgirl_fsm_nil         //: [7] ://         // [---][148]
+            ,      c_artgirl_fsm_nil         //: [8] ://         // [---][148]
+            ,      c_artgirl_fsm_nil         //: [9] ://         // [---][148]
+            )      /////////////////                             // [---][148]
 
     ,   vbl :          c_artgirl_vbd_len //:@vbd@://             // [066] 
     ,   vbd :F_CAR_F32(c_artgirl_vbd_len //:@vbd@://             // [066] 
@@ -12960,6 +12973,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             o_dux =( c_dum /**OUT_OF_BOUNDS**/ );                //      [146]
         }else                                                    // [148][146]
         if( enu_fsm === c_artgirl_fsm_per ){                     // [148]
+                                                                 // [---]
+            //: @RELATED@[ _LPC_LOCAL_PERCENT_COORD_ ]:::://     // [252]
+            //: @RELATED@[ ssf_006 Uses This Mapping ]:::://     // [252]
                                                                  // [---] 
             //: @f_x@ : Float/Percentage - X axis :------://     //      [146]
                                                                  //      [146]
@@ -13047,6 +13063,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         }else                                                    // [148][146]
         if( enu_fsm === c_artgirl_fsm_per ){                     // [148] 
                                                                  // [---]
+            //: @RELATED@[ _LPC_LOCAL_PERCENT_COORD_ ]:::://     // [252]
+            //: @RELATED@[ ssf_006 Uses This Mapping ]:::://     // [252]
+                                                                 // [---] 
             //: @f_y@ : Float/Percentage - Y axis :------://     //      [146]
                                                                  //      [146]
             //: @DO_CALC_FORWARD_WITH@[ vp0 ] ://                //      [146]
@@ -22563,6 +22582,38 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         discard the frag color if you are outside of the      |  // [252]
         letterboxing region. ( VP0 / destination viewport )   |  // [252]
     +---------------------------------------------------------+  // [252]
+    #_LPC_LOCAL_PERCENT_COORD_# :-----------------------------+
+                                                              |
+          @lpc@ : Local_Percent_Coord                         |
+        @f_lpc@ : SEE[ lpc ]:::::::::                         |
+                                                              |
+        Local percent coord is LOCAL to __BOTH__              |
+        [ d _ vp0 ]AND[ d _ vp1 ].                            |
+                                                              |
+        [ d _ vp0 ] : The On  Screen Viewport                 |
+        [ d _ vp1 ] : The Off Screen Data Selection Viewport  |
+
+        Fragment shader 6 is going to use some floating
+        point math for this mapping rather than pure
+        integer math, because pure integer math is what
+        is causing heavy JITTER when zooming in an out.
+
+        (Not the jitter from rotating sample coords , )
+        (the jitter when we are actively zooming in   )
+        (and out.                                     )
+
+        TAG[ shader_rendering_method | rendering_method ]
+        TAG[ shader-rendering-method | rendering-method ]
+        TAG[ shader rendering method | rendering method ]
+        SEE[ enu_fsm ]( fsm : Fragment_Shader_Mapping   )
+
+        TAG[ click_pixel_x | click-pixel-x | click-x    ]
+        TAG[ click_pixel_y | click-pixel-y | click-y    ]
+        TRY[ F _ MOUMAST _ P_X _ DUX ](DUX:DiscreteUnitX)
+        TRY[ F _ MOUMAST _ P_Y _ DUY ](DUY:DiscreteUnitY)
+                                                              |
+    +---------------------------------------------------------+
+        
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
