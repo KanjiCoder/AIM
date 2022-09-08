@@ -15532,6 +15532,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [249] : Stubbed In The Rough Pipeline For     :::::::::::::  // [250][249]
           : The Pre-Processing Of Shader Strings. :::::::::::::  // [250][249]  
 
+    [250] : Injecting large uint32 array into shader ::::::::::  // [251][250]
+          : string using pre-processing functions.   ::::::::::  // [251][250]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -22525,8 +22528,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [250] : Injecting large uint32 array into shader ::::::::::  // [250]
-          : string using pre-processing functions.   ::::::::::  // [250]
+    [251] : 1 : Created Shader Macros Code Injection Source      // [251]
+          : 2 : Created Uniform Vars  Code Injection Source      // [251]
+          ( SEE[ d _ artgirl _ ( s m a c r o s ) ] )             // [251]
+          ( SEE[ d _ artgirl _ ( u n i f o r m ) ] )             // [251]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
