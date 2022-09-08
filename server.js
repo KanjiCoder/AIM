@@ -4395,6 +4395,8 @@ if( yesnode ){ //:-------------------------------------------://
                                                                  // [251]
     const d_artgirl_uniform =(` //////////////////////////////// // [251]
                                                                  // [251]
+    precision highp usampler2D;  //:#_SAMPLER_PRECISION_FIX_#:// // [251]
+                                                                 // [251]
     UNI U32 d_tik     ;  //: TICKER   : Logic Frame      ://     // [251]
     UNI UV4 d_vpc     ;  //: Viewport : CANVAS/CLIENT    ://     // [251]
     UNI UV4 d_vp0     ;  //: Viewport : DEST/SCREEN      ://     // [251]
@@ -22504,9 +22506,19 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         uv3_var ===can_be===> u_var                           |  // [251]
         uv4_var ===can_be===> u_var                           |  // [251]
     +---------------------------------------------------------+  // [251]
+                                                                 // [251]
+    #_SAMPLER_PRECISION_FIX_#:--------------------------------+  // [251]
+                                                              |  // [251]
+        ERROR: 0:61: 'usampler2D' : No precision specified    |  // [251]
+                                                              |  // [251]
+        ADD TO SHADER TO GET RID OF ERROR :                   |  // [251]
+        -----------------------------------                   |  // [251]
+        precision highp usampler2D; //:#_SAMPLER_PRECISION_#://  // [251]
+                                                              |  // [251]
+        SEE[ _SAMPLER_PRECISION_ ]FOR_MORE_NOTES              |  // [251]
+                                                              |  // [251]
+    +---------------------------------------------------------+  // [251]
     
-
-
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
