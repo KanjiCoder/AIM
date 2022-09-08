@@ -22543,6 +22543,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
             
     [251] : 1 : Created Shader Macros Code Injection Source      // [251]
           : 2 : Created Uniform Vars  Code Injection Source      // [251]
+          : 3 : Added a bit of code to shader # 6.               // [251]
           ( SEE[ d _ artgirl _ ( s m a c r o s ) ] )             // [251]
           ( SEE[ d _ artgirl _ ( u n i f o r m ) ] )             // [251]
 
