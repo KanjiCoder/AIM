@@ -15570,6 +15570,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [250] : Injecting large uint32 array into shader ::::::::::  // [251][250]
           : string using pre-processing functions.   ::::::::::  // [251][250]
 
+    [251] : 1 : Created Shader Macros Code Injection Source      // [252][251]
+          : 2 : Created Uniform Vars  Code Injection Source      // [252][251]
+          : 3 : Added a bit of code to shader # 6.               // [252][251]
+          ( SEE[ d _ artgirl _ ( s m a c r o s ) ] )             // [252][251]
+          ( SEE[ d _ artgirl _ ( u n i f o r m ) ] )             // [252][251]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -22582,37 +22588,37 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         discard the frag color if you are outside of the      |  // [252]
         letterboxing region. ( VP0 / destination viewport )   |  // [252]
     +---------------------------------------------------------+  // [252]
-    #_LPC_LOCAL_PERCENT_COORD_# :-----------------------------+
-                                                              |
-          @lpc@ : Local_Percent_Coord                         |
-        @f_lpc@ : SEE[ lpc ]:::::::::                         |
-                                                              |
-        Local percent coord is LOCAL to __BOTH__              |
-        [ d _ vp0 ]AND[ d _ vp1 ].                            |
-                                                              |
-        [ d _ vp0 ] : The On  Screen Viewport                 |
-        [ d _ vp1 ] : The Off Screen Data Selection Viewport  |
-
-        Fragment shader 6 is going to use some floating
-        point math for this mapping rather than pure
-        integer math, because pure integer math is what
-        is causing heavy JITTER when zooming in an out.
-
-        (Not the jitter from rotating sample coords , )
-        (the jitter when we are actively zooming in   )
-        (and out.                                     )
-
-        TAG[ shader_rendering_method | rendering_method ]
-        TAG[ shader-rendering-method | rendering-method ]
-        TAG[ shader rendering method | rendering method ]
-        SEE[ enu_fsm ]( fsm : Fragment_Shader_Mapping   )
-
-        TAG[ click_pixel_x | click-pixel-x | click-x    ]
-        TAG[ click_pixel_y | click-pixel-y | click-y    ]
-        TRY[ F _ MOUMAST _ P_X _ DUX ](DUX:DiscreteUnitX)
-        TRY[ F _ MOUMAST _ P_Y _ DUY ](DUY:DiscreteUnitY)
-                                                              |
-    +---------------------------------------------------------+
+    #_LPC_LOCAL_PERCENT_COORD_# :-----------------------------+  // [252]
+                                                              |  // [252]
+          @lpc@ : Local_Percent_Coord                         |  // [252]
+        @f_lpc@ : SEE[ lpc ]:::::::::                         |  // [252]
+                                                              |  // [252]
+        Local percent coord is LOCAL to __BOTH__              |  // [252]
+        [ d _ vp0 ]AND[ d _ vp1 ].                            |  // [252]
+                                                              |  // [252]
+        [ d _ vp0 ] : The On  Screen Viewport                 |  // [252]
+        [ d _ vp1 ] : The Off Screen Data Selection Viewport  |  // [252]
+                                                              |  // [252]
+        Fragment shader 6 is going to use some floating       |  // [252]
+        point math for this mapping rather than pure          |  // [252]
+        integer math, because pure integer math is what       |  // [252]
+        is causing heavy JITTER when zooming in an out.       |  // [252]
+                                                              |  // [252]
+        (Not the jitter from rotating sample coords , )       |  // [252]
+        (the jitter when we are actively zooming in   )       |  // [252]
+        (and out.                                     )       |  // [252]
+                                                              |  // [252]
+        TAG[ shader_rendering_method | rendering_method ]     |  // [252]
+        TAG[ shader-rendering-method | rendering-method ]     |  // [252]
+        TAG[ shader rendering method | rendering method ]     |  // [252]
+        SEE[ enu_fsm ]( fsm : Fragment_Shader_Mapping   )     |  // [252]
+                                                              |  // [252]
+        TAG[ click_pixel_x | click-pixel-x | click-x    ]     |  // [252]
+        TAG[ click_pixel_y | click-pixel-y | click-y    ]     |  // [252]
+        TRY[ F _ MOUMAST _ P_X _ DUX ](DUX:DiscreteUnitX)     |  // [252]
+        TRY[ F _ MOUMAST _ P_Y _ DUY ](DUY:DiscreteUnitY)     |  // [252]
+                                                              |  // [252]
+    +---------------------------------------------------------+  // [252]
         
 
 *** ******************************************************** **/         
@@ -22620,11 +22626,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [251] : 1 : Created Shader Macros Code Injection Source      // [251]
-          : 2 : Created Uniform Vars  Code Injection Source      // [251]
-          : 3 : Added a bit of code to shader # 6.               // [251]
-          ( SEE[ d _ artgirl _ ( s m a c r o s ) ] )             // [251]
-          ( SEE[ d _ artgirl _ ( u n i f o r m ) ] )             // [251]
+    [252] Modifed : ShaderSourceFragment # 6 With : :::::::::::  // [252]
+          : 1 ::::: Added Letter Boxing             :::::::::::  // [252]
+          : 2 ::::: Added Local Percentage Coords.  :::::::::::  // [252]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
