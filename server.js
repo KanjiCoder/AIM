@@ -15813,6 +15813,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : 6 : Calculated[ dug ]in our shader #6.               // [254][253]
           :   : DUG == Discrete_Unit_Global (coord)              // [254][253]
 
+    254 : Shader #6 now renders shilloutte  :::::::::::::::::::  // [255][254]
+        : of it's 3x3 grid of levelpacks.   :::::::::::::::::::  // [255][254]
+
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -23176,22 +23179,16 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 
         
 
-
-
-
-
-
-
-
-        
-
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    254 : Shader #6 now renders shilloutte  :::::::::::::::::::  // [254]
-        : of it's 3x3 grid of levelpacks.   :::::::::::::::::::  // [254]
+    [255] : I have discovered "Binary Smash Coords"(BSC).  ::::  // [255]
+          : I am sure it's nothing new to math maticians,  ::::  // [255]
+          : but it's new to me and I am calling the        ::::  // [255]
+          : concept "Binary_Smash_Coords".                 ::::  // [255]
+          : -KanjiCoder : 2022_09_09 , 12:44AM             ::::  // [255]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
