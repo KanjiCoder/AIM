@@ -5779,8 +5779,8 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                                              //:@01_X_01@://     // [256]
                                                                  // [256]
             te7_dil[ 5 ] = UV2(              //:@02_X_02@://     // [256]
-                        dll.x -(( bsc.x >> 5 )*c_du5)            // [256]
-            ,           dll.y -(( bsc.y >> 5 )*c_du5)            // [256]
+                        dll.x -(( bsc.x >> 5 )* u_0 )            // [256] ///// c_du5
+            ,           dll.y -(( bsc.y >> 5 )* u_0 )            // [256] ///// c_du5
             );;                                                  // [256]
             te7_dil[ 4 ] = UV2(              //:@04_X_04@://     // [256]
                         dll.x -(( bsc.x >> 4 )*c_du4)            // [256]
@@ -5850,7 +5850,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;         // [257]
 
             //: f_pil =( F(D[ 6 ]) / M_6 );  //:@LOOK_OK@://
-                f_pil =( F(D[ 5 ]) / M_5 );  
+                f_pil =( F(D[ 5 ]) / M_5 );  //:@BADLOOK@://
                                                                  // [257]
         #undef    D  ///////////////////////////////////////     // [257]
         #undef    F  ///////////////////////////////////////     // [257]
@@ -23467,6 +23467,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                                  // [257]
     @LOOK_OK@ : The code on this line gets results that          // [257]
               : "Look Okay" / "Looks Correct" / "Not Buggy"      // [257]
+                                                                 // [257]
+    @BADLOOK@ : Looks bad. Looks like buggy code. You need       // [257]
+              : to look more into this code and figure out       // [257]
+              : what you are doing wrong.                        // [257]
                                                              
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
