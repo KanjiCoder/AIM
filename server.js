@@ -23391,6 +23391,13 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @16_X_16@ : Relates to a[16-x-16]grid somehow.(GeneralHint)  // [256]
     @32_X_32@ : Relates to a[32-x-32]grid somehow.(GeneralHint)  // [256]
     @64_X_64@ : Relates to a[64-x-64]grid somehow.(GeneralHint)  // [256]
+                                                                 // [256]
+    @VIDEO_IDEA@ : Use tilemap code to create a cellular         // [256]
+    @VID_IDEA@   : atomata breeding simulator. Record            // [256]
+    @VID@        : two videos. One video that proves             // [256]
+                 : "we are making pills for the wrong person"    // [256]
+                 : another that proves opposite point.           // [256]
+                 : https://imgur.com/a/70VEtYF                   // [256]
                                                              
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
