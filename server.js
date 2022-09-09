@@ -5849,7 +5849,8 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                   :                  ( F(D[ 0 ]) / M_0 )         // [257]
                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;         // [257]
 
-            f_pil =( F(D[ 6 ]) / M_6 ); //:@BUGHUNT@://
+            //: f_pil =( F(D[ 6 ]) / M_6 );  //:@LOOK_OK@://
+                f_pil =( F(D[ 5 ]) / M_5 );  
                                                                  // [257]
         #undef    D  ///////////////////////////////////////     // [257]
         #undef    F  ///////////////////////////////////////     // [257]
@@ -23463,6 +23464,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                                  // [257]
     @PREVIOUSLY_IN_256@ : What the value was previously          // [257]
                         : in video/delta #2_5_6.                 // [257]
+                                                                 // [257]
+    @LOOK_OK@ : The code on this line gets results that          // [257]
+              : "Look Okay" / "Looks Correct" / "Not Buggy"      // [257]
                                                              
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
