@@ -4448,6 +4448,24 @@ const d_artgirl_smacros =(` //////////////////////////////////// // [251]
     #define u_6   U32(  6 ) //:  @D_I__S_I@  ://                 // [251]
     #define u_7   U32(  7 ) //:  @D_I__S_I@  ://                 // [---]
                                                                  // [257]
+    #define u_01  U32(  1 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_02  U32(  2 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_03  U32(  3 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_04  U32(  4 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_05  U32(  5 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_06  U32(  6 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_07  U32(  7 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_08  U32(  8 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_09  U32(  9 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_10  U32( 10 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_11  U32( 11 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_12  U32( 12 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_13  U32( 13 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_14  U32( 14 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_15  U32( 15 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+    #define u_16  U32( 16 ) //: @IDENTICAL_MACROS_OKAY@ :://     // [257]
+                                                                 // [257]
+                                                                 // [257]
     #define u_01  U32(  1 )                                      // [257]
     #define u_02  U32(  2 )                                      // [257]
     #define u_04  U32(  4 )                                      // [257]
@@ -5893,7 +5911,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
 
 
             f_pil = u_dud*u_16  >= c_du1 ? ( F(T7D[ 6 ]) / M_6 )         // [257]
-                  : u_dud*u_08  >= c_du1 ? ( F(T7D[ 5 ]) / M_5 )         // [257]
+                  : u_dud*u_15  >= c_du1 ? ( F(T7D[ 5 ]) / M_5 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 4 ]) / M_4 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 3 ]) / M_3 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 2 ]) / M_2 )         // [257]
@@ -23539,6 +23557,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @BADLOOK@ : Looks bad. Looks like buggy code. You need       // [257]
               : to look more into this code and figure out       // [257]
               : what you are doing wrong.                        // [257]
+
+    @IDENTICAL_MACROS_OKAY@ : Identical Macros _CAN_ be okay.
+    #IDENTICAL_MACROS_OKAY# :---------------------------------+
+                                                              |
+        In C99 (thus GLSL too) you can re-define a macro      |
+        __IF__ and __ONLY_IF__ the redefinition matches       |
+        the _PREVIOUS_DEFINITION_                             |
+                                                              |
+    +---------------------------------------------------------+
                                                              
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
