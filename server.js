@@ -5886,7 +5886,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
 
             f_git =( min( f_pil.x , f_pil.y ) );       // [258]
 
-            f_git = step( 0.0 , f_git );
+            f_git = ( step( 0.0 , f_git ) / 2.0 );
 
                                                                  // [258]
         //:-----------------:#_GROUTED_INSET_TILE_#:[258]://     // [258]
@@ -5895,7 +5895,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
             f_out = FV4(                                         // [---][251]
                 f_git    //: @PREVIOUSLY_IN_256@ : lpc.x ://     // [258][257][252][251]
             ,   f_git    //: @PREVIOUSLY_IN_256@ : lpc.y ://     // [258][257][252][251]
-            ,   0.0                                              // [---][251]
+            ,   f_git                                            // [---][251]
             ,   1.0                                              // [---][251]
             );;                                                  // [---][251]
         //:-------------------------:#_FINAL_FRAG_#:[252]://     // [252]
