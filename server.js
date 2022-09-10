@@ -5720,14 +5720,14 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                                                                  // [254]
                 //:@DIAGRAM_MATH@[ #_DIA_GWD_# ]:::::::::://     // [254]
                                                                  // [254]
-            G[ 0 ]=(( dug-O ) / D[ 0 ]); O+=(G[ 0 ]*D[ 0 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
-            G[ 1 ]=(( dug-O ) / D[ 1 ]); O+=(G[ 1 ]*D[ 1 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
-            G[ 2 ]=(( dug-O ) / D[ 2 ]); O+=(G[ 2 ]*D[ 2 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
-            G[ 3 ]=(( dug-O ) / D[ 3 ]); O+=(G[ 3 ]*D[ 3 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
-            G[ 4 ]=(( dug-O ) / D[ 4 ]); O+=(G[ 4 ]*D[ 4 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
-            G[ 5 ]=(( dug-O ) / D[ 5 ]); O+=(G[ 5 ]*D[ 5 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
-            G[ 6 ]=(( dug-O ) / D[ 6 ]); O+=(G[ 6 ]*D[ 6 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
-            G[ 7 ]=(( dug-O ) / D[ 7 ]); O+=(G[ 7 ]*D[ 7 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
+            G[ 0 ]=(( dug-O ) / D[ 0 ]); O+=(G[ 0 ]*D[ 0 ]);     // [257][BUG][254]
+            G[ 1 ]=(( dug-O ) / D[ 1 ]); O+=(G[ 1 ]*D[ 1 ]);     // [257][BUG][254]
+            G[ 2 ]=(( dug-O ) / D[ 2 ]); O+=(G[ 2 ]*D[ 2 ]);     // [257][BUG][254]
+            G[ 3 ]=(( dug-O ) / D[ 3 ]); O+=(G[ 3 ]*D[ 3 ]);     // [257][BUG][254]
+            G[ 4 ]=(( dug-O ) / D[ 4 ]); O+=(G[ 4 ]*D[ 4 ]);     // [257][BUG][254]
+            G[ 5 ]=(( dug-O ) / D[ 5 ]); O+=(G[ 5 ]*D[ 5 ]);     // [257][BUG][254]
+            G[ 6 ]=(( dug-O ) / D[ 6 ]); O+=(G[ 6 ]*D[ 6 ]);     // [257][BUG][254]
+            G[ 7 ]=(( dug-O ) / D[ 7 ]); O+=(G[ 7 ]*D[ 7 ]);     // [257][BUG][254]
                                                                  // [254]
             //:=============:#_GEOELM_WIDDLE_DOWN_#:[254]://     // [254]
                                                                  // [254]
@@ -5850,7 +5850,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
             U32   u_dud =( ((dup.x+dup.y)/u_2) );                // [257]
             FV2   f_pil =FV2( 0,0 ); //:@f_pil@://               // [257]
                                                                  // [257]
-            #define T c_du1 //// T==Threshold   ////////////     // [257]
+            #define T c_du0 //// T==Threshold   ////////////     // [257]
                                                                  // [257]
             f_pil = u_dud*u_016  >= T ? ( F(T7D[ 6 ]) / M6 )     // [257]
                   : u_dud*u_032  >= T ? ( F(T7D[ 5 ]) / M5 )     // [257]
