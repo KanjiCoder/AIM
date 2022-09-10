@@ -5881,6 +5881,10 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
             F32 f_git ; //:@git@:GroutedInsetTile://             // [258]
                                                                  // [258]
             f_git =( min( abs(f_pil.x) , abs(f_pil.y) ) );       // [258]
+
+            f_git = ( f_git * 2.0 ) ;
+            if( f_git > 1.0 ){ f_git = 1.0-(f_git - 1.0); };
+
                                                                  // [258]
         //:-----------------:#_GROUTED_INSET_TILE_#:[258]://     // [258]
         //:#_FINAL_FRAG_#:[252]:-------------------------://     // [---]
@@ -14749,11 +14753,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     TAG[ stalking | list-of-devs | dev-stalking | stalker ]      // [258]
                                                                  // [258]
-    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-    SUBS:::: [ 20K ]( 6,143,096 )
-    TITLE::: I built a 1Hz Redstone Computer...
-    VIDEO::: https://www.youtube.com/watch?v=tDxKhiJfgYk
-    CHANNEL: youtube.com/channel/UC2bWoD1AHvZM80cEkRx3Rmw
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::     // [258]
+    SUBS:::: [ 20K ]( 6,143,096 )                                // [258]
+    TITLE::: I built a 1Hz Redstone Computer...                  // [258]
+    VIDEO::: https://www.youtube.com/watch?v=tDxKhiJfgYk         // [258]
+    CHANNEL: youtube.com/channel/UC2bWoD1AHvZM80cEkRx3Rmw        // [258]
     ::::::::::::::::::::::::::::::::::::::::::::::::::::::::     // [258]
     SUBS:::: [ 1.94 M ]( 73,563 )                                // [258]
     TITLE::: Why Developers Should Have a YouTube Channel        // [258]
@@ -23561,13 +23565,13 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 
                     =
         +   +---=---=---=---+   +
-            |       =
-            |
-            |
-            -
-            |
-            |
-            |
+            |       =       |
+            |               |
+            |               |
+            -               -
+            |               |
+            |               |
+            |               |
         +   +---=---=---=---+   +
                                                              
 *** ******************************************************** **/         
