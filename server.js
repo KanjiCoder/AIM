@@ -5911,7 +5911,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
 
 
             f_pil = u_dud*u_16  >= c_du1 ? ( F(T7D[ 6 ]) / M_6 )         // [257]
-                  : u_dud*u_15  >= c_du1 ? ( F(T7D[ 5 ]) / M_5 )         // [257]
+                  : u_dud*u_32  >= c_du1 ? ( F(T7D[ 5 ]) / M_5 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 4 ]) / M_4 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 3 ]) / M_3 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 2 ]) / M_2 )         // [257]
@@ -23557,15 +23557,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @BADLOOK@ : Looks bad. Looks like buggy code. You need       // [257]
               : to look more into this code and figure out       // [257]
               : what you are doing wrong.                        // [257]
-
-    @IDENTICAL_MACROS_OKAY@ : Identical Macros _CAN_ be okay.
-    #IDENTICAL_MACROS_OKAY# :---------------------------------+
-                                                              |
-        In C99 (thus GLSL too) you can re-define a macro      |
-        __IF__ and __ONLY_IF__ the redefinition matches       |
-        the _PREVIOUS_DEFINITION_                             |
-                                                              |
-    +---------------------------------------------------------+
+                                                                 // [257]
+    @IDENTICAL_MACROS_OKAY@ : Identical Macros _CAN_ be okay.    // [257]
+    #IDENTICAL_MACROS_OKAY# :---------------------------------+  // [257]
+                                                              |  // [257]
+        In C99 (thus GLSL too) you can re-define a macro      |  // [257]
+        __IF__ and __ONLY_IF__ the redefinition matches       |  // [257]
+        the _PREVIOUS_DEFINITION_                             |  // [257]
+                                                              |  // [257]
+    +---------------------------------------------------------+  // [257]
                                                              
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
