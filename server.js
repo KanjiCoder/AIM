@@ -5880,10 +5880,14 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                                                                  // [258]
             F32 f_git ; //:@git@:GroutedInsetTile://             // [258]
                                                                  // [258]
-            f_git =( min( abs(f_pil.x) , abs(f_pil.y) ) );       // [258]
+            f_pil = f_pil * 2.0 ;
+            if( f_pil.x > 1.0 ){ f_pil.x = 1.0-(f_pil.x - 1.0); };
+            if( f_pil.y > 1.0 ){ f_pil.y = 1.0-(f_pil.y - 1.0); };
 
-            f_git = ( f_git * 2.0 ) ;
-            if( f_git > 1.0 ){ f_git = 1.0-(f_git - 1.0); };
+            f_git =( min( f_pil.x , f_pil.y ) );       // [258]
+
+        /// f_git = ( f_git * 2.0 ) ;
+        /// if( f_git > 1.0 ){ f_git = 1.0-(f_git - 1.0); };
 
                                                                  // [258]
         //:-----------------:#_GROUTED_INSET_TILE_#:[258]://     // [258]
