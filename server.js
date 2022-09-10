@@ -4446,9 +4446,16 @@ const d_artgirl_smacros =(` //////////////////////////////////// // [251]
     #define u_4   U32(  4 ) //:  @D_I__S_I@  ://                 // [251]
     #define u_5   U32(  5 ) //:  @D_I__S_I@  ://                 // [251]
     #define u_6   U32(  6 ) //:  @D_I__S_I@  ://                 // [251]
-    #define u_7   U32(  7 ) //:  @D_I__S_I@  ://                 // [251]
-                                                                 // [251]
-
+    #define u_7   U32(  7 ) //:  @D_I__S_I@  ://                 // [---]
+                                                                 // [257]
+    #define u_01  U32(  1 )                                      // [257]
+    #define u_02  U32(  2 )                                      // [257]
+    #define u_04  U32(  4 )                                      // [257]
+    #define u_08  U32(  8 )                                      // [257]
+    #define u_16  U32( 16 )                                      // [257]
+    #define u_32  U32( 32 )                                      // [257]
+    #define u_64  U32( 64 )                                      // [257]
+                                                                 // [---]
     //:#_GEOMETRIC_ELEMENT_SIZES_#:[253]:----------------://     // [253]
                                                                  // [253]
         //:----------------------------------------------://     // [253]
@@ -5710,14 +5717,14 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                                                                  // [254]
                 //:@DIAGRAM_MATH@[ #_DIA_GWD_# ]:::::::::://     // [254]
                                                                  // [254]
-            G[ 0 ]=(( dug-O ) / D[ 0 ]); O+=(G[ 0 ]*D[ 0 ]);     // [254]  We need += for "OWE( O )" I think.
-            G[ 1 ]=(( dug-O ) / D[ 1 ]); O+=(G[ 1 ]*D[ 1 ]);     // [254]  We need += for "OWE( O )" I think.
-            G[ 2 ]=(( dug-O ) / D[ 2 ]); O+=(G[ 2 ]*D[ 2 ]);     // [254]  We need += for "OWE( O )" I think.
-            G[ 3 ]=(( dug-O ) / D[ 3 ]); O+=(G[ 3 ]*D[ 3 ]);     // [254]  We need += for "OWE( O )" I think.
-            G[ 4 ]=(( dug-O ) / D[ 4 ]); O+=(G[ 4 ]*D[ 4 ]);     // [254]  We need += for "OWE( O )" I think.
-            G[ 5 ]=(( dug-O ) / D[ 5 ]); O+=(G[ 5 ]*D[ 5 ]);     // [254]  We need += for "OWE( O )" I think.
-            G[ 6 ]=(( dug-O ) / D[ 6 ]); O+=(G[ 6 ]*D[ 6 ]);     // [254]  We need += for "OWE( O )" I think.
-            G[ 7 ]=(( dug-O ) / D[ 7 ]); O+=(G[ 7 ]*D[ 7 ]);     // [254]  We need += for "OWE( O )" I think.
+            G[ 0 ]=(( dug-O ) / D[ 0 ]); O+=(G[ 0 ]*D[ 0 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
+            G[ 1 ]=(( dug-O ) / D[ 1 ]); O+=(G[ 1 ]*D[ 1 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
+            G[ 2 ]=(( dug-O ) / D[ 2 ]); O+=(G[ 2 ]*D[ 2 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
+            G[ 3 ]=(( dug-O ) / D[ 3 ]); O+=(G[ 3 ]*D[ 3 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
+            G[ 4 ]=(( dug-O ) / D[ 4 ]); O+=(G[ 4 ]*D[ 4 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
+            G[ 5 ]=(( dug-O ) / D[ 5 ]); O+=(G[ 5 ]*D[ 5 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
+            G[ 6 ]=(( dug-O ) / D[ 6 ]); O+=(G[ 6 ]*D[ 6 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
+            G[ 7 ]=(( dug-O ) / D[ 7 ]); O+=(G[ 7 ]*D[ 7 ]);     // [257][BUG][254]  We need += for "OWE( O )" I think.
                                                                  // [254]
             //:=============:#_GEOELM_WIDDLE_DOWN_#:[254]://     // [254]
                                                                  // [254]
@@ -5860,12 +5867,12 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
 ////////          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;         // [257]
 
 
-            f_pil = u_dud >= c_du6 ? ( F(T7D[ 6 ]) / M_6 )         // [257]
-                  : u_dud >= c_du5 ? ( F(T7D[ 5 ]) / M_5 )         // [257]
-                  : u_dud >= c_du4 ? ( F(T7D[ 4 ]) / M_4 )         // [257]
-                  : u_dud >= c_du3 ? ( F(T7D[ 3 ]) / M_3 )         // [257]
-                  : u_dud >= c_du2 ? ( F(T7D[ 2 ]) / M_2 )         // [257]
-                  : u_dud >= c_du1 ? ( F(T7D[ 1 ]) / M_1 )         // [257]
+            f_pil = u_dud*u_32 >= c_du6 ? ( F(T7D[ 6 ]) / M_6 )         // [257]
+                  : u_dud*u_16 >= c_du5 ? ( F(T7D[ 5 ]) / M_5 )         // [257]
+                  : u_dud*u_08 >= c_du4 ? ( F(T7D[ 4 ]) / M_4 )         // [257]
+                  : u_dud*u_04 >= c_du3 ? ( F(T7D[ 3 ]) / M_3 )         // [257]
+                  : u_dud*u_02 >= c_du2 ? ( F(T7D[ 2 ]) / M_2 )         // [257]
+                  : u_dud*u_01 >= c_du1 ? ( F(T7D[ 1 ]) / M_1 )         // [257]
                   :                  ( F(T7D[ 0 ]) / M_0 )         // [257]
                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;         // [257]
 
