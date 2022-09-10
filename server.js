@@ -5886,7 +5886,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
 
             f_git =( min( f_pil.x , f_pil.y ) );       // [258]
 
-            f_git = ( step( 0.0 , f_git ) / 2.0 );
+            f_git = ( step( 0.0 , f_git ) );
 
                                                                  // [258]
         //:-----------------:#_GROUTED_INSET_TILE_#:[258]://     // [258]
