@@ -5893,7 +5893,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
 
 
             f_pil = u_dud*u_16  >= c_du1 ? ( F(T7D[ 6 ]) / M_6 )         // [257]
-                  : u_dud*u_01  >= c_du1 ? ( F(T7D[ 5 ]) / M_5 )         // [257]
+                  : u_dud*u_08  >= c_du1 ? ( F(T7D[ 5 ]) / M_5 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 4 ]) / M_4 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 3 ]) / M_3 )         // [257]
                   : u_dud*u_01  >= c_du1 ? ( F(T7D[ 2 ]) / M_2 )         // [257]
