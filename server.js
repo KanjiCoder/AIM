@@ -5980,73 +5980,73 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                                                                  // [258]
         #undef  P  /////////////////////////////////////////     // [258]
         //:-----------------:#_GROUTED_INSET_TILE_#:[258]://     // [258]
-        //:#_GET_GEOM_TILE_AND_FRIENDS_#:[259]:----------://
-        //:                                              ://
-        //:  @d_p2k@   : Sampler   ,   samples d_pix2048 ://
-        //:  @p2k_x_y@ : XY Sample Coord Into  d_pix2048 ://
-        //:  @uv4_p2k@ : The RGBA data from    d_pix2048 ://
-        //:                                              ://
-        //:- - - - - - - - - - - -- - - - - - - - - - - -://
-        #define  H3X ( gt8_gec[ 0 ].x )    /////////////////
-        #define  H3Y ( gt8_gec[ 0 ].y )    /////////////////
-        #define  HXY ( gt8_gec[ 0 ]   )    /////////////////
-        #define  R5X ( gt8_gec[ 0 ].x )    /////////////////
-        #define  R5Y ( gt8_gec[ 0 ].y )    /////////////////
-        #define  hi9 "[WE_DONT_NEED_1D_HOTEL_INDEX_HERE]"
-        //-  U32 hi9 =( H3X + ( H3Y * u_3 ) ); -------- --//
-        #define    U uv4_p2k               /////////////////
-
-            U32     g25 =( R5X + ( R5Y * 5 ) );
-            UV2     rxy =( d_g25_rxy[ g25 ]  );  
-            UV4 uv4_p2k ; //:RGBA Bytes From Texture://
-            IV2 p2k_x_y ; //:XY Sample Coord,Texture://
-
-            UV2 lmc ;       //: @lmc@ :Level_Map_Coord ::://
-            U32 dia ;
-
-            U32 te7 =( 7 );
-            U32 a5g[  5  ]; //: @a5g@ : Array_5_Geomtiles://
-            for(U32    _1_7_ = 7 ; _1_7_ >=( 1 ) ; _1_7_--){    
-                te7 =( _1_7_ - u_1 ); //:[ 0 to (7-1) ]::://
-
-                dia = d_te7_dia[ dia ];
-
-                lmc.x =(  bsc.x >> te7 );
-                lmc.y =(  bsc.y >> te7 );
-
-                p2k_x_y =( IV2(0,0)
-                +   ( HXY * u_512 )
-                +   ( rxy * u_128 )
-                //: (#__LAM_GEO__#) ://
-                +   ( dia         )
-                +   ( lmc         )
-                );;;;;;;;;;;;;;;;;;
-
-                //:#__For_Layers_Other_Than_Zero__#://
-                //-  p2k_x_y +=( lat * lmx );      -//
-                //-  p2k_x_y +=( lat * lmy );      -//
- 
-                uv4_p2k = STF( d_p2k,p2k_x_y,0 );
-                ag5[ 4 ]=( U<<24 | U<<16 | U<<8 | U<<0 );
-
-                //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://
-                //:TODO:Put Adjacent Tiles Into ://
-                //:    :ag5[ 0|1|2|3 ]          ://
-                //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://
-
-                //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://
-                //:TODO:Use Bits In Extracted   ://
-                //:    :Geom Tile Data Here     ://
-                //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://
-            };;
-        #undef  H3X   //////////////////////////////////////
-        #undef  H3Y   //////////////////////////////////////
-        #undef  HXY   //////////////////////////////////////
-        #undef  R5X   //////////////////////////////////////
-        #undef  R5Y   //////////////////////////////////////
-        #undef  hi9   //////////////////////////////////////
-        #undef    U   //////////////////////////////////////
-        //:----------:#_GET_GEOM_TILE_AND_FRIENDS_#:[259]://
+        //:#_GET_GEOM_TILE_AND_FRIENDS_#:[259]:----------://     // [259]
+        //:                                              ://     // [259]
+        //:  @d_p2k@   : Sampler   ,   samples d_pix2048 ://     // [259]
+        //:  @p2k_x_y@ : XY Sample Coord Into  d_pix2048 ://     // [259]
+        //:  @uv4_p2k@ : The RGBA data from    d_pix2048 ://     // [259]
+        //:                                              ://     // [259]
+        //:- - - - - - - - - - - -- - - - - - - - - - - -://     // [259]
+        #define  H3X ( gt8_gec[ 0 ].x )    /////////////////     // [259]
+        #define  H3Y ( gt8_gec[ 0 ].y )    /////////////////     // [259]
+        #define  HXY ( gt8_gec[ 0 ]   )    /////////////////     // [259]
+        #define  R5X ( gt8_gec[ 0 ].x )    /////////////////     // [259]
+        #define  R5Y ( gt8_gec[ 0 ].y )    /////////////////     // [259]
+        #define  hi9 "[WE_DONT_NEED_1D_HOTEL_INDEX_HERE]"        // [259]
+        //-  U32 hi9 =( H3X + ( H3Y * u_3 ) ); -------- --//     // [259]
+        #define    U uv4_p2k               /////////////////     // [259]
+                                                                 // [259]
+            U32     g25 =( R5X + ( R5Y * 5 ) );                  // [259]
+            UV2     rxy =( d_g25_rxy[ g25 ]  );                  // [259]
+            UV4 uv4_p2k ; //:RGBA Bytes From Texture://          // [259]
+            IV2 p2k_x_y ; //:XY Sample Coord,Texture://          // [259]
+                                                                 // [259]
+            UV2 lmc ;       //: @lmc@ :Level_Map_Coord ::://     // [259]
+            U32 dia ;                                            // [259]
+                                                                 // [259]
+            U32 te7 =( 7 );                                      // [259]
+            U32 a5g[  5  ]; //: @a5g@ : Array_5_Geomtiles://     // [259]
+            for(U32    _1_7_ = 7 ; _1_7_ >=( 1 ) ; _1_7_--){     // [259]
+                te7 =( _1_7_ - u_1 ); //:[ 0 to (7-1) ]::://     // [259]
+                                                                 // [259]
+                dia = d_te7_dia[ dia ];                          // [259]
+                                                                 // [259]
+                lmc.x =(  bsc.x >> te7 );                        // [259]
+                lmc.y =(  bsc.y >> te7 );                        // [259]
+                                                                 // [259]
+                p2k_x_y =( IV2(0,0)                              // [259]
+                +   ( HXY * u_512 )                              // [259]
+                +   ( rxy * u_128 )                              // [259]
+                //: (#__LAM_GEO__#) ://                          // [259]
+                +   ( dia         )                              // [259]
+                +   ( lmc         )                              // [259]
+                );;;;;;;;;;;;;;;;;;                              // [259]
+                                                                 // [259]
+                //:#__For_Layers_Other_Than_Zero__#://           // [259]
+                //-  p2k_x_y +=( lat * lmx );      -//           // [259]
+                //-  p2k_x_y +=( lat * lmy );      -//           // [259]
+                                                                 // [259]
+                uv4_p2k = STF( d_p2k,p2k_x_y,0 );                // [259]
+                ag5[ 4 ]=( U<<24 | U<<16 | U<<8 | U<<0 );        // [259]
+                                                                 // [259]
+                //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://              // [259]
+                //:TODO:Put Adjacent Tiles Into ://              // [259]
+                //:    :ag5[ 0|1|2|3 ]          ://              // [259]
+                //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://              // [259]
+                                                                 // [259]
+                //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://              // [259]
+                //:TODO:Use Bits In Extracted   ://              // [259]
+                //:    :Geom Tile Data Here     ://              // [259]
+                //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://              // [259]
+            };;                                                  // [259]
+        #undef  H3X   //////////////////////////////////////     // [259]
+        #undef  H3Y   //////////////////////////////////////     // [259]
+        #undef  HXY   //////////////////////////////////////     // [259]
+        #undef  R5X   //////////////////////////////////////     // [259]
+        #undef  R5Y   //////////////////////////////////////     // [259]
+        #undef  hi9   //////////////////////////////////////     // [259]
+        #undef    U   //////////////////////////////////////     // [259]
+        //:----------:#_GET_GEOM_TILE_AND_FRIENDS_#:[259]://     // [259]
         //:#_FINAL_FRAG_#:[252]:-------------------------://     // [---]
                                                                  // [---]
             f_out = FV4(                                         // [---][251]
@@ -14914,6 +14914,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     TAG[ stalking | list-of-devs | dev-stalking | stalker ]      // [258]
     TAG[ dev stalking | list of devs | beginners          ]      // [259]
     TAG[ devs-to-stalk | devs_to_stalk | devstostalk      ]      // [259]
+    TAG[ dev stalk | dev_stalk | devstalk | devstalker    ]      // [259]
+    TAG[ dev_stalker | dev-stalker | dev stalker          ]      // [259]
                                                                  // [258]
     ::::::::::::::::::::::::::::::::::::::::::::::::::::::::     // [259]
     SUBS:::: [ 6.23 M ]( 335,131 )                               // [259]
@@ -14967,6 +14969,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     TITLE::: RULE TILE tutorial - UNITY ( 2020 )                 // [259]
     VIDEO::: https://www.youtube.com/watch?v=dd4KrKCa3Yg         // [259]
     CHANNEL: youtube.com/channel/UCD7su0UF7u8qApkLJEO-Iqw        // [259]
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::     // [259]
+    SUBS:::: [   64 ](  36 views , in video below )              // [259]
+    TITLE::: TILEMAP System From Scratch in UNITY ...            // [259]
+    VIDEO::: https://www.youtube.com/watch?v=gxtrC1Zimvo         // [259]
+    CHANNEL: youtube.com/channel/UC0fZn0XcjRZNxakHUXC277A        // [259]
+
     ::::::::::::::::::::::::::::::::::::::::::::::::::::::::     // [259]
                                                                  // [---]
 *** ****************************** YOUTUBE_DEVELOPERS:[257]: *** // [257]
