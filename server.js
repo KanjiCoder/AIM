@@ -6053,7 +6053,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                 //-  p2k_x_y +=( lat * lmx );      -//           // [259]
                 //-  p2k_x_y +=( lat * lmy );      -//           // [259]
                                                                  // [259]
-////////////    uv4_p2k = STF( d_p2k,p2k_x_y,0 );                // [259]
+////////////    uv4_p2k = STF( d_p2k,p2k_x_y,0 );                // [259] NOTICE_ME_SENPAI
 ////////////    a5g[ 4 ]=( B_P );                                // [259] NOTICE_ME_SENPAI
                                                                  // [259]
                 //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://              // [259]
@@ -16263,6 +16263,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :   : coordinates based on the density of         :::  // [258][257]
           :   : discrete units within one pixel on screen.  :::  // [258][257]
 
+    [258] : We have a nice clean grid on which to start   :::::  // [259][258]
+          : laying tiles now. The grid can signify        :::::  // [259][258]
+          : a space with "No tiles" without being         :::::  // [259][258]
+          : confused for "Void Space" which can kill you. :::::  // [259][258]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -24232,10 +24237,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [258] : We have a nice clean grid on which to start   :::::  // [258]
-          : laying tiles now. The grid can signify        :::::  // [258]
-          : a space with "No tiles" without being         :::::  // [258]
-          : confused for "Void Space" which can kill you. :::::  // [258]
+    [259] : Stubbing in some of the logic for auto-tile          // [259]
+          : rendering of the GEOMETRY LAYER ONLY in              // [259]
+          : shader_source_fragment_six ( ssf _ 006 )             // [259]
+          : We have a bug in our texture sample call,            // [259]
+          : so commented out that line of code for now till      // [259]
+          : I figure out what is wrong.                          // [259]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
