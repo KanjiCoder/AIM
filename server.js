@@ -6054,7 +6054,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                 //-  p2k_x_y +=( lat * lmy );      -//           // [259]
                                                                  // [259]
                 uv4_p2k = STF( d_p2k,p2k_x_y,0 );                // [259]
-                a5g[ 4 ]=( B_P );                                // [259]
+////////////    a5g[ 4 ]=( B_P );                                // [259] NOTICE_ME_SENPAI
                                                                  // [259]
                 //:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!://              // [259]
                 //:TODO:Put Adjacent Tiles Into ://              // [259]
