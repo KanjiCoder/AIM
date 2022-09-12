@@ -5240,7 +5240,6 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                                                                  // [---]
             //: LITERALLY : uv4_p2k = STF( d_p2k,p2k_x_y,0 );    // [260][175]
                     IMF_GET_UV4_P2K ;;;;;;;;;;;;;;;;;;;;;;;;;    // [260]
-
                                                                  // [---]
             //: ....<< 24......<< 16......<<  8......<<  0...:// // [178]
             //: [ 31 - 24 ][ 23 - 16 ][ 15 - 08 ][ 07 - 00 ] :// // [178]
@@ -16293,6 +16292,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : a space with "No tiles" without being         :::::  // [259][258]
           : confused for "Void Space" which can kill you. :::::  // [259][258]
 
+    [259] : Stubbing in some of the logic for auto-tile          // [260][259]
+          : rendering of the GEOMETRY LAYER ONLY in              // [260][259]
+          : shader_source_fragment_six ( ssf _ 006 )             // [260][259]
+          : We have a bug in our texture sample call,            // [260][259]
+          : so commented out that line of code for now till      // [260][259]
+          : I figure out what is wrong.                          // [260][259]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -24263,12 +24269,11 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [259] : Stubbing in some of the logic for auto-tile          // [259]
-          : rendering of the GEOMETRY LAYER ONLY in              // [259]
-          : shader_source_fragment_six ( ssf _ 006 )             // [259]
-          : We have a bug in our texture sample call,            // [259]
-          : so commented out that line of code for now till      // [259]
-          : I figure out what is wrong.                          // [259]
+    [260] : Fixed bug in art girl macro section.      :::::::::  // [260]
+          : [IV2,IV3,IV4] were float vectors instead  :::::::::  // [260]
+          : of integer vectors.                       :::::::::  // [260]
+          : FLOATS ===========[ vec2 | vec3 | vec4 ]  :::::::::  // [260]
+          : SIGNED_INTEGERS ==[ivec2 |ivec3 |ivec4 ]  :::::::::  // [260]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
