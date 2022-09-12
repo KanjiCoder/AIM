@@ -5788,6 +5788,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
     ${d_artgirl_smacros} //:@smacros@:ShaderMacros://            // [251](250)
     ${d_artgirl_shadlut} //:Shader Lookup Tables  ://            // [253]
     ${d_artgirl_uniform} //:ArtGirl Uniforms      ://            // [251]
+    ${d_artgirl_imf}     //:@imf@:Inlined_Macro_Functions://     // [260]
                                                                  // [251]
     precision mediump float ;                                    // [074]
                                                                  // [---]
