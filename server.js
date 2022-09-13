@@ -6080,8 +6080,8 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
             U32 a5g[  5  ]; //: @a5g@ : Array_5_Geomtiles://     // [259]
 
             //:#_FRONT_TO_BACK_RENDERING_#:[262]:------------:// // [262]
-
-            for( IMF_FTB /** @FTB@ : Front_To_Back **/    ){     // [262][259]
+                         /** @BTF@ : Back_To_Front **/           // [262]
+            for( IMF_BTF /** @FTB@ : Front_To_Back **/    ){     // [262][259]
                 te7 =(_1_7_ - u_1); //:[ 0 to (7-1) ]::://       // [259]
                                                                  // [259]
                 dia = d_te7_dia[ te7 ];                          // [259]   
