@@ -24597,9 +24597,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [262] : 1 : Blocked in geometry tile rendering. :::::::::::  // [262]
-          : 2 : Fixed Mal-Alignment Of Tile Grid.   :::::::::::  // [262]
-          :   : SEE_TAG[ FIX_004 ]                  :::::::::::  // [262]
+    [262] : 1 : Blocked in geometry tile rendering.  ::::::::::  // [262]
+          : 2 : Fixed Mal-Alignment Of Tile Grid.    ::::::::::  // [262]
+          :   : SEE_TAG[ FIX_004 ]                   ::::::::::  // [262]
+          : 3 : Macros to swap between BACK_TO_FRONT ::::::::::  // [262]
+          :   : and FRONT_TO_BACK rendering.         ::::::::::  // [262]
+          :   : ( IMF_BTF & IMF_FTB )                ::::::::::  // [262]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
