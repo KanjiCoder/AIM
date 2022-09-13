@@ -193,7 +193,6 @@
     //:TAG[ constantssection  | CONSTANTSSECTION        ]://     // [161]
     //:TAG[ top-level-constants | top level constants   ]://     // [263]
                                                                  // [---]
-                          
     const __auto_tile_constants__ = "[HACK]"                     // [263]
     /////////////////////////  //:BIN[ X X Y Y ]://              // [263]
     ,   c_notouch_x = ( 0x3 )  //:BIN[ 0 0 1 1 ]://              // [263]
@@ -212,7 +211,6 @@
     ASS( (0x1) ===( c_bit_hor   >> 1       ) , "[BIT_HOR]" );    // [263]
     ASS( (0x1) ===( c_bit_ver   >> 0       ) , "[BIT_VER]" );    // [263]
     ASS( (0x3) ===( c_bit_hor | c_bit_ver  ) , "[HOR_VER]" );    // [263]
-
                                                                  // [---]
     const c_fps =(  30  );  /** Simulation FrameRate **/         // [088][085]
                                                                  // [---]                      
@@ -5860,9 +5858,10 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
     //: FRAG_SHADER_STR[ d_artgirl_ssf_006 ] ://                 // [081]
     //: FRAG_SHADER_ENU[ c_artgirl_ren_006 ] ://                 // [081] 
                                                                  // [---]
-    ${d_artgirl_smacros} //:@smacros@:ShaderMacros://            // [251](250)
-    ${d_artgirl_shadlut} //:Shader Lookup Tables  ://            // [253]
-    ${d_artgirl_uniform} //:ArtGirl Uniforms      ://            // [251]
+    ${d_artgirl_use}     //:Conditional_Compilation :::::://     // [263]
+    ${d_artgirl_smacros} //:@smacros@:ShaderMacros  :::::://     // [251](250)
+    ${d_artgirl_shadlut} //:Shader Lookup Tables    :::::://     // [253]
+    ${d_artgirl_uniform} //:ArtGirl Uniforms        :::::://     // [251]
     ${d_artgirl_imf}     //:@imf@:Inlined_Macro_Functions://     // [260]
                                                                  // [251]
     precision mediump float ;                                    // [074]
