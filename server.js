@@ -16350,6 +16350,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : so commented out that line of code for now till      // [260][259]
           : I figure out what is wrong.                          // [260][259]
 
+    [260] : Fixed bug in art girl macro section.      :::::::::  // [261][260]
+          : [IV2,IV3,IV4] were float vectors instead  :::::::::  // [261][260]
+          : of integer vectors.                       :::::::::  // [261][260]
+          : FLOATS ===========[ vec2 | vec3 | vec4 ]  :::::::::  // [261][260]
+          : SIGNED_INTEGERS ==[ivec2 |ivec3 |ivec4 ]  :::::::::  // [261][260]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -24340,7 +24346,6 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                |         |    |               |  // [261]
                                |<--032-->| 16 |               |  // [261]
     +---------------------------------------------------------+  // [261]
-                                                                 // [261]
     #_RANDOM_THOUGHTS_001_# :---------------------------------+  // [261]
                                                               |  // [261]
         Somone seems to be getting hostile with me on         |  // [261]
@@ -24402,11 +24407,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [260] : Fixed bug in art girl macro section.      :::::::::  // [260]
-          : [IV2,IV3,IV4] were float vectors instead  :::::::::  // [260]
-          : of integer vectors.                       :::::::::  // [260]
-          : FLOATS ===========[ vec2 | vec3 | vec4 ]  :::::::::  // [260]
-          : SIGNED_INTEGERS ==[ivec2 |ivec3 |ivec4 ]  :::::::::  // [260]
+    [261] : Collected adjacent geometry tile values ,  ::::::::  // [261]
+          : ready to calculate touching value for      ::::::::  // [261]
+          : auto tiling.                               ::::::::  // [261]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
