@@ -6426,7 +6426,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                 **** than 3 videos when we get to it.      ****  // [---][264]
                                                                  // [---][264]
                     Video #2_6_5 : Finish Bare Bones AutoTiling  // [---][264]
-                    Video #2_6_6 : Finish lookup tables          // [---][264]
+                    Video #2_6_6 : Finish_lookup_tables          // [---][264]
                     Video #2_6_7 : Get Correct[ s4x,s4y ]        // [---][264]
                     Video #2_6_8 : Render Fourset Graphic        // [---][264]
                                  : for geometry tiles.           // [---][264]
@@ -16696,6 +16696,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : we can implement auto tiling. No visual changes      // [264][263]
           : since the last [ delta/video ].                      // [264][263]
 
+    [264] : Stubbed in more auto tiling code. We should   :::::  // [265][264]
+          : now be rendering tiles with dark green        :::::  // [265][264]
+          : edges. But __NO_AUTO_TILE_VISUALS_YET__       :::::  // [265][264]
+          :                                               :::::  // [265][264]
+          : Everything is "Hermit_Auto_Tiling" visually.  :::::  // [265][264]
+          :                                               :::::  // [265][264]
+          : NEXT : #2_6_5 : Fully implement rudimentary   :::::  // [265][264]
+          :               : auto tile shading.            :::::  // [265][264]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -25515,14 +25524,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [264] : Stubbed in more auto tiling code. We should   :::::  // [264]
-          : now be rendering tiles with dark green        :::::  // [264]
-          : edges. But __NO_AUTO_TILE_VISUALS_YET__       :::::  // [264]
-          :                                               :::::  // [264]
-          : Everything is "Hermit_Auto_Tiling" visually.  :::::  // [264]
-          :                                               :::::  // [264]
-          : NEXT : #2_6_5 : Fully implement rudimentary   :::::  // [264]
-          :               : auto tile shading.            :::::  // [264]
+    [265] : Rudimentary Auto Tiling Fully Implemented.  :::::::  // [265]
+          : NEXT : Finish_lookup_tables for[ fourset ]  :::::::  // [265]
+          :      : style auto-tiling.                   :::::::  // [265]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
