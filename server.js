@@ -17014,6 +17014,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : in them. Because right now we are focusing     ::::  // [267][266]
           : ONLY ON GEOMETRY_TILE(GEOM_TILE,geo)Rendering. ::::  // [267][266]
 
+    [267] : Tile's render with configured body and edge :::::::  // [268][267]
+          : colors in both the SIMPLE and FOURSET       :::::::  // [268][267]
+          : rendering modes.                            :::::::  // [268][267]
+          :                                             :::::::  // [268][267]
+          : Simple  ===> ( USE_ATF <= 0 )               :::::::  // [268][267]
+          : Fourset ===> ( USE_ATF >= 1 )               :::::::  // [268][267]
+          :                                             :::::::  // [268][267]
+          : USE_ATF : USE____AutoTilingFourset          :::::::  // [268][267]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -26041,14 +26050,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [267] : Tile's render with configured body and edge :::::::  // [267]
-          : colors in both the SIMPLE and FOURSET       :::::::  // [267]
-          : rendering modes.                            :::::::  // [267]
-          :                                             :::::::  // [267]
-          : Simple  ===> ( USE_ATF <= 0 )               :::::::  // [267]
-          : Fourset ===> ( USE_ATF >= 1 )               :::::::  // [267]
-          :                                             :::::::  // [267]
-          : USE_ATF : USE____AutoTilingFourset          :::::::  // [267]
+    [268] : 1 : Square bracket keys to change tile value.        // [268]
+          : 2 : Tweeked the geometry tile color pallet.          // [268]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
