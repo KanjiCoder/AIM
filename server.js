@@ -26051,7 +26051,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 /** ******************************************************** ***         
             
     [268] : 1 : Square bracket keys to change tile value.        // [268]
-          : 2 : Tweeked the geometry tile color pallet.          // [268]
+          : 2 : Tweeked the [geometry tile][color pallet.]       // [268]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
