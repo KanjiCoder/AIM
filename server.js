@@ -816,7 +816,7 @@
     //:#_STOLEN_HOTEL_13_COLORS_#:[266]:=====================:// // [266]
     //:#_TILE_COLOR_LOOKUPTABLE_#:[266]:=====================:// // [266]
                                                                  // [266]
-    var d_la3_v16_c04_hex = new Uint8Array([                     // [266]
+    var d_la3_v16_c04_hex = new Uint32Array([                    // [267][BUG][266]
                                                                  // [266]
         //: @la3@ : Layer[ 0 | 1 | 2 ](Geom:0,Bomb:1,Fada:2) :// // [266]
         //: @v16@ : Value[ 0 -(16-1) ](Value/Type Of Tile  ) :// // [266]
