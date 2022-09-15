@@ -267,8 +267,8 @@
     ,   c_comsoli2 = c________2  //: soli: SOLID         ://     // [---][266]
     ,   c_comsoli3 = c________3  //: Coal ?              ://     // [---][266]
                                                                  // [---][266]
-    ,   c_comliqu0 = 0xFF8800FF  //: @_TENATIVE_@        ://     // [267][266]
-    ,   c_comliqu1 = 0x884400FF  //: com : COMBUSTABLE   ://     // [267][266]
+    ,   c_comliqu0 = c________0  //: @_TENATIVE_@        ://     // [267][266] 0xFF8800FF
+    ,   c_comliqu1 = c________1  //: com : COMBUSTABLE   ://     // [267][266] 0x884400FF
     ,   c_comliqu2 = c________2  //: liqu: LIQUID        ://     // [---][266]
     ,   c_comliqu3 = c________3  //: Coal ?              ://     // [---][266]
                                                                  // [---][266]
