@@ -248,7 +248,7 @@
     ,   c_falbeam3 = c________3  //: Leaves NOTHING      ://     // [---][266]
                                                                  // [---][266]
     ,   c_faliron0 = 0x995533FF  //: Falling Iron        ://     // [---][266]
-    ,   c_faliron1 = 0x636975FF  //: Only royable    ://     // [268][266]
+    ,   c_faliron1 = 0x636975FF  //: Only Destroyable    ://     // [268][266]
     ,   c_faliron2 = c________2  //: By #_BOX_BOMBS_#    ://     // [---][266]
     ,   c_faliron3 = c________3  //: Leaves NOTHING      ://     // [---][266]
                                                                  // [---][266]
