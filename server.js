@@ -202,7 +202,7 @@
     ,   c________2 = 0x42424242  //: Temp Body Alt_Color ://     // [---][266]
     ,   c________3 = 0x23232323  //: Temp Edge Alt_Color ://     // [---][266]
                                                                  // [---][266]
-    ,   c_vacglow0 = 0x69FF02FF  //:Glass Light Fixtures ://     // [268][BUG][266]
+    ,   c_vacglow0 = 0xFFFF02FF  //:Glass Light Fixtures ://     // [268][BUG][266]
     ,   c_vacglow1 = 0x69FF00FF  //:HAVE The Lowest Level://     // [268][BUG][266]
     ,   c_vacglow2 = c________2  //:Of Material Strength ://     // [268][BUG][266]
     ,   c_vacglow3 = c________3  //:Strength: NONE       ://     // [268][BUG][266]
