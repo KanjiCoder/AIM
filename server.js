@@ -262,8 +262,8 @@
     ,   c_godiron2 = c________2  //: and IMPERMIABLE     ://     // [---][266]
     ,   c_godiron3 = c________3  //: to flames.          ://     // [---][266]
                                                                  // [---][266]
-    ,   c_comsoli0 = 0xFF8800FF  //: @_TENATIVE_@        ://     // [267][266]
-    ,   c_comsoli1 = 0x221100FF  //: com : COMBUSTABLE   ://     // [267][266]
+    ,   c_comsoli0 = c________0  //: @_TENATIVE_@        ://     // [267][266] 0xFF8800FF
+    ,   c_comsoli1 = c________1  //: com : COMBUSTABLE   ://     // [267][266] 0x221100FF
     ,   c_comsoli2 = c________2  //: soli: SOLID         ://     // [---][266]
     ,   c_comsoli3 = c________3  //: Coal ?              ://     // [---][266]
                                                                  // [---][266]
