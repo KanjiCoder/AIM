@@ -6946,10 +6946,13 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                         //: @d20@ : Discrete_Tile_5THS ://       // [271]
                                                                  // [271]
                         U32 u_d20 = d_te7_d20[ te7 ];            // [271]
+
+                        //: D20 IS WRONG! SHOULD BE D10  ://     // [272] NOTICE_ME_SENPAI
+
                                                                  // [---]
-                        U32 u_20x =( dil.x / u_d20          );   // [272]
-                        U32 u_20y =( dil.y / u_d20          );   // [272]
-                        U32 u_d5x =( u_20x -( u_f4x * u_5 ) );   // [272]
+                        U32 u_20x =( dil.x / u_d20          );   // [272] < < D20 MATH WRONG
+                        U32 u_20y =( dil.y / u_d20          );   // [272] < < USE D10 !!!!!!
+                        U32 u_d5x =( u_20x -( u_f4x * u_5 ) );   // [272] 
                         U32 u_d5y =( u_20y -( u_f4y * u_5 ) );   // [272]
                         U32 u_d25 =( u_d5x +( u_d5y * u_5 ) );   // [272]
                                                                  // [272]
