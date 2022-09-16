@@ -5,7 +5,7 @@
 //: 10_MIN : www.tinyurl.com/BOOM-PLAYLIST-003   (NINJACODER):// // [200][102]
 //: 1_HOUR : www.tinyurl.com/WEEB-PLAYLIST-003   ( WEEBCODER):// // [200][102]
 //:                                                          :// // [102][---]
-//: SOURCE__CODE : github.com/KanjiCoder/AIM_270             :// // [270][269][268][267][266][265][264][263][262][261][260][259][258][257][256][255][254][253][252][251][250][249][248][247][246][245][244][243][242][241][240][239][238][237][236][235][234][233][232][231][230][229][228][227][226][225][224][223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
+//: SOURCE__CODE : github.com/KanjiCoder/AIM_271             :// // [271][270][269][268][267][266][265][264][263][262][261][260][259][258][257][256][255][254][253][252][251][250][249][248][247][246][245][244][243][242][241][240][239][238][237][236][235][234][233][232][231][230][229][228][227][226][225][224][223][222][221][220][219][218][217][216][215][214][213][212][211][210][209][208][207][206][205][204][203][202][201][200][199][198][197][196][195][194][193][192][191][190][189][188][187][186][185][184][183][182][181][180][179][177][176][175][174][173][172][171][170][169][168][167][166][165][164][163][162][161][160][159][158][157][156][155][154][153][152][151][150][148][147][146][145][144][143][142][141][140][139][138][137][136][135][134][133][132][131][130][129][128][127][126][125][124][122][121][120][119][117][116][115][113][112][111][110][109][108][107][106][105][104][103][102][100][099][098][097][096][095][094][093][092][091][090][089][088][087][086][085][084][083][082][081][080][079]                               
 //: CONTACT_INFO : KanjiCoder@gmail.com                      :// // [102][---]
 //:=========================:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:// // [---][---]
 //:CONFIGURATION:[109]:======================================:// // [---][---]
@@ -448,6 +448,21 @@
     ASS(             c_dum / 960 === c_dut , "[@DUA@014]" );     // [098]
     ASS(             c_duh / 320 === c_dut , "[@DUA@015]" );     // [098]
                                                                  // [---]
+    //:#_DISCRETE_TILE_5THS_#:[271]:---------------------://     // [271]
+                                                                 // [271]
+        //:#_D20_HAS_A_REMAINDER_#://                            // [271]
+        //:#_D20_IS_RIGHT_IDEA_BUT_NOT_GOOD_ENOUGH_#:::::://     // [271]
+        //:#USE[ _TREE_RING_OVERLAY_FOR_FOURSETS_ ]::::::://     // [271]
+                                                                 // [271]
+        const c_d20_du0 =F_M_F( c_du0 / (4*5) );                 // [271]
+        const c_d20_du1 =F_M_F( c_du1 / (4*5) );                 // [271]
+        const c_d20_du2 =F_M_F( c_du2 / (4*5) );                 // [271]
+        const c_d20_du3 =F_M_F( c_du3 / (4*5) );                 // [271]
+        const c_d20_du4 =F_M_F( c_du4 / (4*5) );                 // [271]
+        const c_d20_du5 =F_M_F( c_du5 / (4*5) );                 // [271]
+        const c_d20_du6 =F_M_F( c_du6 / (4*5) );                 // [271]
+                                                                 // [271]
+    //:---------------------:#_DISCRETE_TILE_5THS_#:[271]://     // [271]
     //:#_EIGHT_GEOMETRIC_ELEMENT_TYPES_#:[253]:----------://     // [253]
                                                                  // [253]
         const c_gt8_000 = "[FIX:c_gt0]" ; //:HOTEL SIZED ://     // [253]
@@ -812,7 +827,21 @@
     //: TAG[ top-level-lookup-tables | lut-section |lutsec]  :// // [253]
     //:------------------------------------------------------:// // [---][128]
                                                                  // [---]
-    //:#_FOURSET_REMIX_TABLES_#:[269]:=======================:// // [269]
+    //:#_DISCRETE_TILE_5THS_#:[271]:=========================:// // [271]
+                                                                 // [271]
+        const d_te7_d20 = new Uint32Array([                      // [271]
+                  c_d20_du0                                      // [271]
+        ,         c_d20_du1                                      // [271]
+        ,         c_d20_du2                                      // [271]
+        ,         c_d20_du3                                      // [271]
+        ,         c_d20_du4                                      // [271]
+        ,         c_d20_du5                                      // [271]
+        ,         c_d20_du6                                      // [271]
+        ]);;                                                     // [271]
+                                                                 // [271]
+        ASS( 7 === d_te7_d20.length , "[TE7_DU0_LEN]" );         // [271]
+    //:=========================:#_DISCRETE_TILE_5THS_#:[271]:// // [271]
+    //:#_FOURSET_REMIX_TABLES_#:[269]:=======================:// // [---]
     {                                                            // [269]
         let __dont_you_fucking_touch_my_battle_ship__ = "!!"     // [269]
                                                                  // [269]
@@ -4797,6 +4826,8 @@ const d_artgirl_use =(` //////////////////////////////////////// // [263]
     #define USE_ATM ( 0 ) //: SEE[ #_USE_ATM_DIAGRAM_# ] ://     // [263]
                                                                  // [---]
     #define USE_ATF ( 1 ) //: SEE[ #_USE_ATF_DIAGRAM_# ] ://     // [269][264]
+
+    #define USE_RIN ( 0 ) //: SEE[ #_USE_RIN_DIAGRAM_# ] ://     // [271]
                                                                  // [---]
 `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; // [263]
 //:=====================:__ARTGIRL__:USE_FEATURE_MACROS:[263]:// // [---]
@@ -4977,7 +5008,19 @@ const d_artgirl_shadlut =(` //////////////////////////////////// // [253]
     //:TAG[ artgirl-shader-luts | shader-luts | shader_lut]:::// // [266]
     //:TAG[ artgirl_shader_luts | shader_luts | shaderslut]:::// // [270]
                                                                  // [---]
-    //:#_HARDCODED_FOURSET_GRAPHICS_#:[270]:-----------------:// // [270][--------]
+    //:#_DISCRETE_TILE_5THS_#:[271]:=========================:// // [271]
+                                                                 // [271]
+        U32    d_te7_d20[ 7 ]=U32[ 7 ](                          // [271]
+            U32( ${c_d20_du0} )                                  // [271]
+        ,   U32( ${c_d20_du1} )                                  // [271]
+        ,   U32( ${c_d20_du2} )                                  // [271]
+        ,   U32( ${c_d20_du3} )                                  // [271]
+        ,   U32( ${c_d20_du4} )                                  // [271]
+        ,   U32( ${c_d20_du5} )                                  // [271]
+        ,   U32( ${c_d20_du6} )                                  // [271]
+        );//@NESC@://                                            // [271]
+    //:=========================:#_DISCRETE_TILE_5THS_#:[271]:// // [271]
+    //:#_HARDCODED_FOURSET_GRAPHICS_#:[270]:-----------------:// // [---][--------]
                                                                  // [270][--------]
         //:AKA[ d_fourset_la3_v16_f16_binfour ]://               // [270][MOV][249]
         [[[d_fourset_la3_v16_f16_u25clus]]]                      // [270][MOV][249]
@@ -5222,6 +5265,15 @@ const d_artgirl_imf =(` //////////////////////////////////////// // [260]
     #endif  //////////////////////////////////////////////////// // [263]
     #if( USE_ATM >= 1 ) //////////////////////////////////////// // [263]
                                                                  // [263]
+
+        //: REFACTOR : We now want mirroring modes    :::://     // [271]
+        //:          : encoded into the tile.         :::://     // [271]
+        //:          : shift by 24 to get ENTIRE      :::://     // [271]
+        //:          : RED BYTE OUT.                  :::://     // [271] NOTICE_ME_SENPAI
+        //:          : NOT[ u_v64 ]BUT[ u_vff ]       :::://     // [271]
+        //:          : @vff@ : Value 0xFF # of tiles. :::://     // [271]
+        //:          : AKA: 255 tile values.          :::://     // [271]
+
     #define IMF_A5G_TX0 (u_v64==((a5g[x_0]>>26) & SEX)?u_1:u_0)  // [263]
     #define IMF_A5G_TX1 (u_v64==((a5g[x_1]>>26) & SEX)?u_1:u_0)  // [263]
     #define IMF_A5G_TY0 (u_v64==((a5g[y_0]>>26) & SEX)?u_1:u_0)  // [263]
@@ -6878,11 +6930,34 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                         ];;                                      // [270]
                     }                                            // [270]
                     //:-----------:#_GRAB_5X5_GRAPHIC_#:[270]:// // [270]
-                    //:#_GET_BINARY_PIXEL_#:[270]:-----------:// // [270]
-                                                                 // [270]
-                        //: Probably Do In : VIDEO #2_7_1 ://    // [270]
-                                                                 // [270]
-                    //:-----------:#_GET_BINARY_PIXEL_#:[270]:// // [270]
+                    //:#_GET_BINARY_PIXEL_#:[270]:-----------:// // [---]
+                    #if( USE_RIN <= 0 ) //////////////////////// // [271]
+                                                                 // [271]
+                        //: @d20@ : Discrete_Tile_5THS ://       // [271]
+                                                                 // [271]
+                        U32 u_d20 = d_te7_d20[ te7 ];            // [271]
+                                                                 // [271]
+                        //:------------------------------://     // [271]
+                        //: REST OF CODE IN VIDEO #2_7_2 ://     // [271]
+                        //: (60% certainity I am doing   ://     // [271] < < < NOTICE_ME_SENPAI
+                        //: (this part next.)            ://     // [271]
+                        //:------------------------------://     // [271]
+                                                                 // [271]
+                    #endif ///////////////////////////////////// // [271]
+                    #if( USE_RIN >= 1 ) //////////////////////// // [271]
+                                                                 // [271]
+                                                                 // [271]
+                        THIS IS THE PREFERRED METHOD , BUT       // [271]
+                        WE NEED TO SEE SOME FUCKING RESULTS      // [271]
+                        IN THE BASIC RENDERING BEFORE WE         // [271]
+                        START WORKING ON THIS CRAZY ASS          // [271]
+                        SHIT RIGHT HERE.                         // [271]
+                                                                 // [271]
+                        -KanjiCoder , 2022_09_16 : 255PM         // [271]
+                                                                 // [271]
+                                                                 // [271]
+                    #endif ///////////////////////////////////// // [271]
+                    //:-----------:#_GET_BINARY_PIXEL_#:[270]:// // [---]
                                                                  // [270]
                 #undef  MACRO_LA3_GEO  ///////////////////////// // [270]
                 #undef        DUN_2    ///////////////////////// // [270]
@@ -15138,6 +15213,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
 //:================================:INIT_SERVER_BACKEND:[035]://
 //:TODO_SECTION:[270]:=======================================:// // [270]
 /** TODO *************************************************** *** // [270]
+
+    TAG[ todo-section | todo_section | todosection ]             // [271]
+
                                                                  // [270]
     TODO001 : <REMOVED,IT WAS A BULLSHIT NOTION>                 // [118][067]
                                                                  // [---]
@@ -15154,6 +15232,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
                @L_Y@ : Latch  Y                         :::::::  // [270]
                @M_X@ : Mirror X                         :::::::  // [270]
                @M_Y@ : Mirror Y                         :::::::  // [270]
+
+    TODO004 :[ _WARPED_FOURSET_EDGES_ ] < < < < < < < < < < < <  // [271]
+
                                                                  // [270]
 *** *************************************************** TODO **/ // [270]
 //:=======================================:TODO_SECTION:[270]:// // [270]
@@ -15444,300 +15525,301 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 *** *************************************** @ATTED_COMMENTS@ **/
 /** #HASH_TAGGED_COMMENTS# ********************************* ***
 
-    //:--------------------------------------------------://    // [069]
-    //: #'s are used to describe a comment that has [069]://    // [069]
-    //: been EXTRACTED from the code somewhere.     [069]://    // [069]
-    //: This may be a 1-line comment, multi-line    [069]://    // [069]
-    //: comment, __OR__ an abbreviated error msg.   [069]://    // [069]
-    //:--------------------------------------------------://    // [069]
-    //: TAG[ hashsec | poundsec | octosec | hashtagsec ] ://    // [069]
-    //: TAG[ hashtag | hashtagsec | hash-tag-sec | hts ] ://    // [069]
-    //: TAG[ hashnotes | hash-notes | hash notes       ] ://    // [074]
-    //: TAG[ hashsect | hash-section | hashnotes       ] ://    // [075]
-    //: TAG[ has-section | has-sect | hassect          ] ://    // [077]
-    //:--------------------------------------------------://    // [069]
+    #_EMPTY_OUT_THE_HASH_TAGGED_COMMENTS_SECTION_#               // [271]
 
-    #TLO# : Top Left Origin Hack. The mapping of Y-axis         // [083]
-          : from vertex position to texture coord value         // [083]
-          : is intentionally inverted so that we can            // [083]
-          : write our shader logic with a __SANE__              // [083]
-          : top-left graphical origin.                          // [083]
-          :                                                     // [083]
-          : Specifically the mapping from VERTEX-Y to           // [083]
-          : TEXTURE-COORD-Y has been [flipped/inverted]         // [083]
-
-    #VBO_IS_AI0# : I am full of shit see[ GLSNAPSHOT ]          // [078]
-    #VAO_IS_AI1# : I am full of shit see[ GLSNAPSHOT ]          // [078]
-                                                                // [078]
-    #GFD_001# : GOD_FUCKING_DAMINT ( number 1 of #TBD# )        // [078]
-    #TBD#     : To Be Determined                                // [078]
-                                                                // [078]
-    #GLSNAPSHOT# : A VAO is basically a "snapshot" of           // [078]
-                 : configured VBO state. My idea of             // [078]
-                 : analogy of VI0 & VI1 is totally              // [078]
-                 : wrong. I am full of shit. Go                 // [078]
-                 : watch this guy if you want to be             // [078]
-                 : taught WebGL2 by someone who knows           // [078]
-                 : what they are doing. I am....                // [078]
-                                                                // [078]
-                 : a jack of all trades is a master of none,    // [078]
-                 : but oftentimes better than a master of one   // [078]
-                 :                                              // [078]
-                 : www.youtube.com/watch?v=0nZn5YPNf5k          // [078]
-                 : ( Good WebGL2 Tutorial )                     // [078]
-    #SS_BEG# : SnapShotBegin                                    // [078]
-    #SS_END# : SnapShotEnd                                      // [078]
-    #SSE#    : SnapShotEnd , But Written Shorter.               // [228]
-    @SSE@    : SnapShotEnd , but with "AT" symbol instead.      // [228]
-                                                                // [078]
-    #S_POS# : Slot Index Of POSITION Attribute data.            // [078]
-    #S_TEX# : Slot Index Of TEXTURE  Attribute data.            // [078]
-
-    #KFNFR# : Keep Function Name For Readability                // [075]
-                                                                // [075]
-    #_DRY_INSTEAD_OF_KISS_WARNING_BECAUSE_LAZY_# :              // [075]
-                                                                // [075]
-        I decided on D_R_Y instead of K_I_S_S because           // [075]
-        I am lazy and don't want to type more. Also             // [075]
-        wanted to have fun and mess around with some            // [075]
-        javascript. Let's see if it bytes me later.             // [075]
-        -KanjiCoder                                             // [075]
-                                                                // [075]
-    #YSMITF# : You Shot Marvin In The Face                      // [075]
-                                                                // [075]
-    #FAS# : Fixed_Array_Size ( Object.seal( myArray ) );        // [075]
-
-    #TESTYLE# : Tesselation Style , how to  +--------------+    // [074]
-              : connect verts  to create polygons.         |    // [074]
-              |                                            |    // [074]
-              |     TRIANGLE_STRIP :     TRIANGLE_FAN :    |    // [074]
-              |                                            |    // [074]
-              |     [0]-------[1]        [1]-------[2]     |    // [074]
-              |      |        /|          | \     / |      |    // [074]
-              |      |       / |          |  \   /  |      |    // [074]
-              |      |      /  |          |   [0]   |      |    // [074]
-              |      |     /   |          |  /   \  |      |    // [074]
-              |      |    /    |          | /     \ |      |    // [074]
-              |      |   /     |         [4]-------[3]     |    // [074]
-              |      |  /      |                           |    // [074]
-              |      | /       |                           |    // [074]
-              |      |/        |                           |    // [074]
-              |     [2]-------[3]                          |    // [074]
-              |     #ITS_A_ZEE#                            |    // [074]
-              +--------------------------------------------+    // [074]
-
-                                                                // [069]
-    #IAI# : Improper_Array_Initialization                       // [069]
-    #_1_BASED_ARR_# : Array index 0 not used for anything.      // [069]
-
-    #IPR# : Is_Postgres_Response , we want to get rid           
-          : of all the bloat and return the[ rows ]             
-          : member as { arr_rows : [ ... ] } response.          
-          : TUTORIAL [050]     
-
-    #MRI# : Make Routing ( case ) Insensitive 
-    #MWM# : Monkey Wrench Macros
-    #_P_N_C_# : Paranoid_Null_Check
-
-    #_KISS_BEATS_DRY_# : #KISS# Beats #DRY#                [052]
-    #KISS# : Keep_It_Simple_Stupid                         [052]
-    #DRY#  : Dont_Repeat_Yourself                          [052]
-
-    #RES_NAE# : resolve func , NOT_AN_ERROR                [055]
-    #REJ_NAE# : reject  func , NOT_AN_ERROR                [055]
-
-    #MUO_RBP# : Mock_Up(sql)Obj_Returned_By_PG(lib)        [056]
-
-    #MYSBSYS# : ModifyYourSelf _ Before _ ServingYourSelf  [058]
-
-    #_ONLY_RENDERS_THE_MAIN_GAME_LAYER_# :                 [064]
-                                                           [064]
-        A render pipeline like this does __NOT__           [064]
-        render all level data. It only renders             [064]
-        the main gameplay layer. The layer with            [064]
-        the geometry [ IVY ] interacts with.               [064]
-        This layer is the main layer of                    [064]
-        destructable geometry.                             [064]
-                                                           [064]
-        ( We probably will have a BG and FG    )           [064]
-        ( game layer that is also destructable )           [064]
-        ( but is only for ASTHETICS, and does  )           [064]
-        ( __NOT__ affect gameplay. Thus __NOT__)           [064]
-        ( considered part of the main game     )           [064]
-        ( layer .                              )           [064]
-
-    #NOKISS# : NO, dont do this. Keep It Simple Stupid.    [068]
-
-
-    #_OPENGL_VS_WEBGL_#                                         // [071]
-        ----------------------------------------------------    // [071]
-                                                                // [071]
-        OGL : Open GL                                           // [071]
-        WGL : Web  GL                                           // [071]
-                                                                // [071]
-        0x8B81 : GL_COMPILE_STATUS                              // [071]
-        0x8B30 : GL_FRAGMENT_SHADER                             // [071]
-        0x8B84 : GL_INFO_LOG_LENGTH                             // [071]
-                                                                // [071]
-        OGL : glGetShaderiv( vid , 0x8B84 , &( res ));          // [071]
-        WGL : NO SUCH EQUIVALENT IN WEBGL                       // [071]
-                                                                // [071]
-        OGL : glGetShaderiv(    vid , 0x8B81)                   // [071]
-        WGL : getShaderInfoLog( vid         )                   // [071]
-                                                                // [071]
-        OGL : glCreateShader( 0x8B30 )                          // [071]
-        WGL : wgl.createShader( wgl.FRAGMENT_SHADER )           // [071]
-                                                                // [071]
-        OGL : glShaderSource(   vid , 1 , &(ssv) , 0 )          // [071]
-        WGL : wgl.shaderSource( vid     ,   ssv      )          // [071]
-                                                                // [071]
-        OGL : glCompileShader(    vid );                        // [071]
-        WGL : wgl.compileShader(  vid );                        // [071]
-                                                                // [071]
-        ----------------------------------------------------    // [071]
-
-    #_OPENGL_VS_WEBGL_PART_002_#                                // [077]
-                                                                // [077]
-        0x8892 : GL_ARRAY_BUFFER                                // [077]
-        0x88E4 : GL_STATIC_DRAW                                 // [077]
-                                                                // [077]
-        OGL : glGenBuffers( 1      , &( a3d_ledit64_vbo )  );   // [077]
-        WGL : a_g.vbo = createBuffer( );                        // [077]
-                                                                // [077]
-        OGL : glBindBuffer( 0x8892 ,  a3d_ledit64_vbo    );     // [077]
-        WGL : wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );     // [077]
-                                                                // [077]
-        OGL : siz = VBL * sizeof( VBD[ 0 ] );                   // [077]
-            : glBufferData( 0x8892 , siz , VBD ,0x88E4 );       // [077]
-        WGL : wgl.bufferData(                                   // [077]
-                wgl.ARRAY_BUFFER                                // [077]
-              , a_g.vbd                                         // [077]
-              , wgl.STATIC_DRAW                                 // [077]
-              , 20                                              // [077]
-              );;                                               // [077]
-
-    #_OPENGL_VS_WEBGL_PART_003_#
-
-        OGL : glGenVertexArrays( 1 , &( a3d_ledit64_vao )  );
-        WGL : vao = wgl.createVertexArray( );
-
-        OGL : OGL.glBindVertexArray(        a3d_ledit64_vao    );
-        WGL : wgl.bindVertexArray( vao )
-
-*** ********************************* #HASH_TAGGED_COMMENTS# **/
-/** !EXCLAIMED_COMMENTS! *********************************** ***
-
-    !MWM! : Or we could do this, doxygen style comment.
-    !NDC! : Not_Deep_Copy ( Not a deep copy )
-
-*** *********************************** !EXCLAIMED_COMMENTS! **/
-/** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** ***
-
-    Just because the physical structure of the code is
-    "just dump it all in one file" doesn't mean we can't
-    have a conceptual structure of how the project is
-    organized.
-
-    1234567                                                     
-    DABITCH : DAtabase BITCH , anything that involves           
-   @DABITCH@: database access goes through her. Because         
-            : she is a gossipy bitch and collects               
-            : all information she hears.                           
-
-    1234567                                                     
-    SOCREEP : SOcket CREEP , you say one god damned nice        
-   @SOCREEP@: thing to him in passing and he gets the           
-            : wrong idea and keeps talking to you.              
-            : He will keep talking to you until you             
-            : bluntly cut him off and tell him to               
-            : stop talking to you. Because, that is             
-            : how SOCKETs are.                                                                
-    
-    @$$$$$@ : Sub-system marker for seeking between different
-            : systems by using CTRL+F. (2022_06_26)
-
-*** *********************** CONCEPTUAL_SUB_SYSTEM_NAMESPACES **/
-/** I_TAKE_IT_BACK ***************************************** ***
-
-    @col@ : col_ , use c_ for column prefix instead.
-
-    @fid@ : fid_ : Foriegn_Key ( id ) , use "k_" instead.
-
-    DATA_BOTHENDS       : Section deleted in [042]              
-    DATA_SERVER_BACKEND : Section deleted in [042]              
-
-    @d_dbp@ : No Such Thing As Data_Base_Pool
-            : Probably_Looking_For[ d_dcp ]
-            : dcp == Database_Client_Pool
-
-
-*** ***************************************** I_TAKE_IT_BACK **/
-/** ERRORS ************************************************* ***
-
-    Errors should :                                        [063]
-                                                                
-        1. Crash the program.                                   
-        2. l_e_t us know exactly where the offending code is.   
-                                                                
-    Errors should not :                                    [063]
-                                                                
-        1. Be detailed human-readable messages describing  [063]
-           the problem. Java may have led you to believe   [063]
-           this is the job of an error, it is not.         [063]
-                                                                
-        -KanjiCoder ( 2022_06_27 )                              
-
-*** ************************************************* ERRORS **/
-/** CTRL_F_HELP ******************************************** ***
-
-    
-    TAGS[ CTRL_F | CTRL_F_SECTION | ctrl-f-section        ]     // [081]
-    TAGS[ ctrl f section | ctrl f help | ctrl eff  ctrl f ]     // [081]
-    TAGS[ CTRLF_HELP | ctrl-f-help | ctrl f help          ]     // [081]
-    TAGS[ control f help | hackish google search          ]     // [081]
-
-    shader numbers | shadernumbers | shader_numbers             // [084]
-    shader number | shadernumber | shader_number                // [084]
-    shader index | shaderindex | shader_index                   // [084]
-    SEE[ c_artgirl_ren_001 ]TO[ c_artgirl_ren_009 ]             // [084]
-    PASTE_LINE
-     
-    load program | use program | load-program | use-program     // [082]
-    load_program | use_program | use that one gl program        // [082]
-    USE[ wgl.useProgram ]                                       // [082]
-    PASTE_LINE                                                  // [082]
-
-    slated render pipelines | slated renderers | slated-render  // [081]
-    renderes-slated | rendereres slated | renderer enums        // [081]
-    renderers-slated | renderers slated | render eneums         // [081]
-    render enums | renderer eneums                              // [081]
-    SEE[ c_artgirl_ren_001 -to- c_artgirl_ren_007 ]             // [081]
-
-    template edit | template_edit | template string edit
-    finds and replaces tokens | find and replace
-    TRY[ F_TED ]( Template_EDit , for sql strings )
-
-    serve youself | serve_yourself | serve this file
-    self serve | self serve icecream
-    SEE[ #SELFSERVE# ]
-
-    xml http request | xmlhttprequest | httprequest | httpreq
-    SEE[ FUNC_XML_HTTP_REQUEST | XMLHTTPREQUEST_WIREUP_HACK ]
-
-    event to key | event to ascii key | keyboard event to key   
-    turn keyboard event into keypress | evt_cto_key | evt_key   
-    SEE[ F_KEYMAST_EVT_ASC ][068]                               
-                                                                
-    F_ARTGIRL_REN_SEL | REN_SEL | render pipeline select   [068]
-    render select | select render pipeline | load pipeline [068]
-    load render pipeline | artgirl pipeline load           [068]
-    F_ARTGIRL_RPS | ARTGIRL_RPS | render pipeline load     [068]
-    load render pipeline | select pipeline                 [068]
-    SEE[ F_ARTGIRL_RPL ]( Render_Pipeline_Load )           [068]
-    
-*** ******************************************************** **/
-/** FEATURE_CREEP ****************************************** ***
-
+    //:--------------------------------------------------://     // [069]
+    //: #'s are used to describe a comment that has [069]://     // [069]
+    //: been EXTRACTED from the code somewhere.     [069]://     // [069]
+    //: This may be a 1-line comment, multi-line    [069]://     // [069]
+    //: comment, __OR__ an abbreviated error msg.   [069]://     // [069]
+    //:--------------------------------------------------://     // [069]
+    //: TAG[ hashsec | poundsec | octosec | hashtagsec ] ://     // [069]
+    //: TAG[ hashtag | hashtagsec | hash-tag-sec | hts ] ://     // [069]
+    //: TAG[ hashnotes | hash-notes | hash notes       ] ://     // [074]
+    //: TAG[ hashsect | hash-section | hashnotes       ] ://     // [075]
+    //: TAG[ has-section | has-sect | hassect          ] ://     // [077]
+    //:--------------------------------------------------://     // [069]
+                                                                 
+    #TLO# : Top Left Origin Hack. The mapping of Y-axis          // [083]
+          : from vertex position to texture coord value          // [083]
+          : is intentionally inverted so that we can             // [083]
+          : write our shader logic with a __SANE__               // [083]
+          : top-left graphical origin.                           // [083]
+          :                                                      // [083]
+          : Specifically the mapping from VERTEX-Y to            // [083]
+          : TEXTURE-COORD-Y has been [flipped/inverted]          // [083]
+                                                                 
+    #VBO_IS_AI0# : I am full of shit see[ GLSNAPSHOT ]           // [078]
+    #VAO_IS_AI1# : I am full of shit see[ GLSNAPSHOT ]           // [078]
+                                                                 // [078]
+    #GFD_001# : GOD_FUCKING_DAMINT ( number 1 of #TBD# )         // [078]
+    #TBD#     : To Be Determined                                 // [078]
+                                                                 // [078]
+    #GLSNAPSHOT# : A VAO is basically a "snapshot" of            // [078]
+                 : configured VBO state. My idea of              // [078]
+                 : analogy of VI0 & VI1 is totally               // [078]
+                 : wrong. I am full of shit. Go                  // [078]
+                 : watch this guy if you want to be              // [078]
+                 : taught WebGL2 by someone who knows            // [078]
+                 : what they are doing. I am....                 // [078]
+                                                                 // [078]
+                 : a jack of all trades is a master of none,     // [078]
+                 : but oftentimes better than a master of one    // [078]
+                 :                                               // [078]
+                 : www.youtube.com/watch?v=0nZn5YPNf5k           // [078]
+                 : ( Good WebGL2 Tutorial )                      // [078]
+    #SS_BEG# : SnapShotBegin                                     // [078]
+    #SS_END# : SnapShotEnd                                       // [078]
+    #SSE#    : SnapShotEnd , But Written Shorter.                // [228]
+    @SSE@    : SnapShotEnd , but with "AT" symbol instead.       // [228]
+                                                                 // [078]
+    #S_POS# : Slot Index Of POSITION Attribute data.             // [078]
+    #S_TEX# : Slot Index Of TEXTURE  Attribute data.             // [078]
+                                                                 
+    #KFNFR# : Keep Function Name For Readability                 // [075]
+                                                                 // [075]
+    #_DRY_INSTEAD_OF_KISS_WARNING_BECAUSE_LAZY_# :               // [075]
+                                                                 // [075]
+        I decided on D_R_Y instead of K_I_S_S because            // [075]
+        I am lazy and don't want to type more. Also              // [075]
+        wanted to have fun and mess around with some             // [075]
+        javascript. Let's see if it bytes me later.              // [075]
+        -KanjiCoder                                              // [075]
+                                                                 // [075]
+    #YSMITF# : You Shot Marvin In The Face                       // [075]
+                                                                 // [075]
+    #FAS# : Fixed_Array_Size ( Object.seal( myArray ) );         // [075]
+                                                                 
+    #TESTYLE# : Tesselation Style , how to  +--------------+     // [074]
+              : connect verts  to create polygons.         |     // [074]
+              |                                            |     // [074]
+              |     TRIANGLE_STRIP :     TRIANGLE_FAN :    |     // [074]
+              |                                            |     // [074]
+              |     [0]-------[1]        [1]-------[2]     |     // [074]
+              |      |        /|          | \     / |      |     // [074]
+              |      |       / |          |  \   /  |      |     // [074]
+              |      |      /  |          |   [0]   |      |     // [074]
+              |      |     /   |          |  /   \  |      |     // [074]
+              |      |    /    |          | /     \ |      |     // [074]
+              |      |   /     |         [4]-------[3]     |     // [074]
+              |      |  /      |                           |     // [074]
+              |      | /       |                           |     // [074]
+              |      |/        |                           |     // [074]
+              |     [2]-------[3]                          |     // [074]
+              |     #ITS_A_ZEE#                            |     // [074]
+              +--------------------------------------------+     // [074]
+                                                                 // [---]
+                                                                 // [069]
+    #IAI# : Improper_Array_Initialization                        // [069]
+    #_1_BASED_ARR_# : Array index 0 not used for anything.       // [069]
+                                                                 // [---]
+    #IPR# : Is_Postgres_Response , we want to get rid            // [???]
+          : of all the bloat and return the[ rows ]              // [???]
+          : member as { arr_rows : [ ... ] } response.           // [???]
+          : TUTORIAL [050]                                       // [???]
+                                                                 // [???]
+    #MRI# : Make Routing ( case ) Insensitive                    // [???]
+    #MWM# : Monkey Wrench Macros                                 // [???]
+    #_P_N_C_# : Paranoid_Null_Check                              // [???]
+                                                                 // [---]         
+    #_KISS_BEATS_DRY_# : #KISS# Beats #DRY#                      // [052]
+    #KISS# : Keep_It_Simple_Stupid                               // [052]
+    #DRY#  : Dont_Repeat_Yourself                                // [052]
+                                                                 // [---]  
+    #RES_NAE# : resolve func , NOT_AN_ERROR                      // [055]
+    #REJ_NAE# : reject  func , NOT_AN_ERROR                      // [055]
+                                                                 // [---]  
+    #MUO_RBP# : Mock_Up(sql)Obj_Returned_By_PG(lib)              // [056]
+                                                                 // 
+    #MYSBSYS# : ModifyYourSelf _ Before _ ServingYourSelf        // [058]
+                                                                 // [---]  
+    #_ONLY_RENDERS_THE_MAIN_GAME_LAYER_# :                       // [064]
+                                                                 // [064]
+        A render pipeline like this does __NOT__                 // [064]
+        render all level data. It only renders                   // [064]
+        the main gameplay layer. The layer with                  // [064]
+        the geometry [ IVY ] interacts with.                     // [064]
+        This layer is the main layer of                          // [064]
+        destructable geometry.                                   // [064]
+                                                                 // [064]
+        ( We probably will have a BG and FG    )                 // [064]
+        ( game layer that is also destructable )                 // [064]
+        ( but is only for ASTHETICS, and does  )                 // [064]
+        ( __NOT__ affect gameplay. Thus __NOT__)                 // [064]
+        ( considered part of the main game     )                 // [064]
+        ( layer .                              )                 // [064]
+                                                                 // [---]  
+    #NOKISS# : NO, dont do this. Keep It Simple Stupid.          // [068]
+                                                                 // [---]
+                                                                 // [---]
+    #_OPENGL_VS_WEBGL_#                                          // [071]
+        ----------------------------------------------------     // [071]
+                                                                 // [071]
+        OGL : Open GL                                            // [071]
+        WGL : Web  GL                                            // [071]
+                                                                 // [071]
+        0x8B81 : GL_COMPILE_STATUS                               // [071]
+        0x8B30 : GL_FRAGMENT_SHADER                              // [071]
+        0x8B84 : GL_INFO_LOG_LENGTH                              // [071]
+                                                                 // [071]
+        OGL : glGetShaderiv( vid , 0x8B84 , &( res ));           // [071]
+        WGL : NO SUCH EQUIVALENT IN WEBGL                        // [071]
+                                                                 // [071]
+        OGL : glGetShaderiv(    vid , 0x8B81)                    // [071]
+        WGL : getShaderInfoLog( vid         )                    // [071]
+                                                                 // [071]
+        OGL : glCreateShader( 0x8B30 )                           // [071]
+        WGL : wgl.createShader( wgl.FRAGMENT_SHADER )            // [071]
+                                                                 // [071]
+        OGL : glShaderSource(   vid , 1 , &(ssv) , 0 )           // [071]
+        WGL : wgl.shaderSource( vid     ,   ssv      )           // [071]
+                                                                 // [071]
+        OGL : glCompileShader(    vid );                         // [071]
+        WGL : wgl.compileShader(  vid );                         // [071]
+                                                                 // [071]
+        ----------------------------------------------------     // [071]
+                                                                 // [---]
+    #_OPENGL_VS_WEBGL_PART_002_#                                 // [077]
+                                                                 // [077]
+        0x8892 : GL_ARRAY_BUFFER                                 // [077]
+        0x88E4 : GL_STATIC_DRAW                                  // [077]
+                                                                 // [077]
+        OGL : glGenBuffers( 1      , &( a3d_ledit64_vbo )  );    // [077]
+        WGL : a_g.vbo = createBuffer( );                         // [077]
+                                                                 // [077]
+        OGL : glBindBuffer( 0x8892 ,  a3d_ledit64_vbo    );      // [077]
+        WGL : wgl.bindBuffer( wgl.ARRAY_BUFFER , a_g.vbo );      // [077]
+                                                                 // [077]
+        OGL : siz = VBL * sizeof( VBD[ 0 ] );                    // [077]
+            : glBufferData( 0x8892 , siz , VBD ,0x88E4 );        // [077]
+        WGL : wgl.bufferData(                                    // [077]
+                wgl.ARRAY_BUFFER                                 // [077]
+              , a_g.vbd                                          // [077]
+              , wgl.STATIC_DRAW                                  // [077]
+              , 20                                               // [077]
+              );;                                                // [077]
+                                                                 // [???]
+    #_OPENGL_VS_WEBGL_PART_003_#                                 // [???]
+                                                                 // [???]
+        OGL : glGenVertexArrays( 1 , &( a3d_ledit64_vao )  );    // [???]
+        WGL : vao = wgl.createVertexArray( );                    // [???]
+                                                                 // [???]
+        OGL : OGL.glBindVertexArray(    a3d_ledit64_vao    );    // [???]
+        WGL : wgl.bindVertexArray( vao )                         // [???]
+                                                                 // [???]
+*** ********************************* #HASH_TAGGED_COMMENTS# **/ // [???]
+/** !EXCLAIMED_COMMENTS! *********************************** *** // [???]
+                                                                 // [???]
+    !MWM! : Or we could do this, doxygen style comment.          // [???]
+    !NDC! : Not_Deep_Copy ( Not a deep copy )                    // [???]
+                                                                 // [???]
+*** *********************************** !EXCLAIMED_COMMENTS! **/ // [???]
+/** CONCEPTUAL_SUB_SYSTEM_NAMESPACES *********************** *** // [???]
+                                                                 // [???]
+    Just because the physical structure of the code is           // [???]
+    "just dump it all in one file" doesn't mean we can't         // [???]
+    have a conceptual structure of how the project is            // [???]
+    organized.                                                   // [???]
+                                                                 // [???]
+    1234567                                                      // [???]
+    DABITCH : DAtabase BITCH , anything that involves            // [???]
+   @DABITCH@: database access goes through her. Because          // [???]
+            : she is a gossipy bitch and collects                // [???]
+            : all information she hears.                         // [???]
+                                                                 // [???]
+    1234567                                                      // [???]
+    SOCREEP : SOcket CREEP , you say one god damned nice         // [???]
+   @SOCREEP@: thing to him in passing and he gets the            // [???]
+            : wrong idea and keeps talking to you.               // [???]
+            : He will keep talking to you until you              // [???]
+            : bluntly cut him off and tell him to                // [???]
+            : stop talking to you. Because, that is              // [???]
+            : how SOCKETs are.                                   // [???]              
+                                                                 // [???]
+    @$$$$$@ : Sub-system marker for seeking between different    // [???]
+            : systems by using CTRL+F. (2022_06_26)              // [???]
+                                                                 // [???]
+*** *********************** CONCEPTUAL_SUB_SYSTEM_NAMESPACES **/ // [???]
+/** I_TAKE_IT_BACK ***************************************** *** // [???]
+                                                                 // [???]
+    @col@ : col_ , use c_ for column prefix instead.             // [???]
+                                                                 // [???]
+    @fid@ : fid_ : Foriegn_Key ( id ) , use "k_" instead.        // [???]
+                                                                 // [???]
+    DATA_BOTHENDS       : Section deleted in [042]               // [???]
+    DATA_SERVER_BACKEND : Section deleted in [042]               // [???]
+                                                                 // [???]
+    @d_dbp@ : No Such Thing As Data_Base_Pool                    // [???]
+            : Probably_Looking_For[ d_dcp ]                      // [???]
+            : dcp == Database_Client_Pool                        // [???]
+                                                                 // [???]
+                                                                 // [???]
+*** ***************************************** I_TAKE_IT_BACK **/ // [???]
+/** ERRORS ************************************************* *** // [063]
+                                                                 // [063]
+    Errors should :                                              // [063]
+                                                                 // [063]
+        1. Crash the program.                                    // [063]
+        2. l_e_t us know exactly where the offending code is.    // [063]
+                                                                 // [063]
+    Errors should not :                                          // [063]
+                                                                 // [063]
+        1. Be detailed human-readable messages describing        // [063]
+           the problem. Java may have led you to believe         // [063]
+           this is the job of an error, it is not.               // [063]
+                                                                 // [063]
+        -KanjiCoder ( 2022_06_27 )                               // [063]
+                                                                 // [063]
+*** ************************************************* ERRORS **/ // [063]
+/** CTRL_F_HELP ******************************************** *** // [???]
+                                                                 // [???]
+    TAGS[ CTRL_F | CTRL_F_SECTION | ctrl-f-section        ]      // [081]
+    TAGS[ ctrl f section | ctrl f help | ctrl eff  ctrl f ]      // [081]
+    TAGS[ CTRLF_HELP | ctrl-f-help | ctrl f help          ]      // [081]
+    TAGS[ control f help | hackish google search          ]      // [081]
+                                                                 // [---]
+    shader numbers | shadernumbers | shader_numbers              // [084]
+    shader number | shadernumber | shader_number                 // [084]
+    shader index | shaderindex | shader_index                    // [084]
+    SEE[ c_artgirl_ren_001 ]TO[ c_artgirl_ren_009 ]              // [084]
+    PASTE_LINE                                                   // [---]
+                                                                 // [---]
+    load program | use program | load-program | use-program      // [082]
+    load_program | use_program | use that one gl program         // [082]
+    USE[ wgl.useProgram ]                                        // [082]
+    PASTE_LINE                                                   // [082]
+                                                                 // [---]
+    slated render pipelines | slated renderers | slated-render   // [081]
+    renderes-slated | rendereres slated | renderer enums         // [081]
+    renderers-slated | renderers slated | render eneums          // [081]
+    render enums | renderer eneums                               // [081]
+    SEE[ c_artgirl_ren_001 -to- c_artgirl_ren_007 ]              // [081]
+                                                                 // [???]
+    template edit | template_edit | template string edit         // [???]
+    finds and replaces tokens | find and replace                 // [???]
+    TRY[ F_TED ]( Template_EDit , for sql strings )              // [???]
+                                                                 // [???]
+    serve youself | serve_yourself | serve this file             // [???]
+    self serve | self serve icecream                             // [???]
+    SEE[ #SELFSERVE# ]                                           // [???]
+                                                                 // [???]
+    xml http request | xmlhttprequest | httprequest | httpreq    // [???]
+    SEE[ FUNC_XML_HTTP_REQUEST | XMLHTTPREQUEST_WIREUP_HACK ]    // [???]
+                                                                 // [???]
+    event to key | event to ascii key | keyboard event to key    // [???]
+    turn keyboard event into keypress | evt_cto_key | evt_key    // [???]
+    SEE[ F_KEYMAST_EVT_ASC ][068]                                // [???]
+                                                                 // [???]
+    F_ARTGIRL_REN_SEL | REN_SEL | render pipeline select         // [068]
+    render select | select render pipeline | load pipeline       // [068]
+    load render pipeline | artgirl pipeline load                 // [068]
+    F_ARTGIRL_RPS | ARTGIRL_RPS | render pipeline load           // [068]
+    load render pipeline | select pipeline                       // [068]
+    SEE[ F_ARTGIRL_RPL ]( Render_Pipeline_Load )                 // [068]
+                                                                 // [---]
+*** ******************************************************** **/ // [???]
+/** FEATURE_CREEP ****************************************** *** // [???]
+                                                                 // [---]
     DEATHMATCH_CREW / DEATHMATCH_OVERLOAD :                      // [074]
                                                                  // [074]
         When too many people are in the server, everyone is      // [074]
@@ -15817,7 +15899,7 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
         If a block appears where you exist, you die.             // [074]
                                                                  // [074]
         GOD is whoever has level editing priviledges.            // [074]
-
+                                                                 // [---]
     Let people extend my code : ( 2022_06_24 ) :                 // [???]
                                                                  // [???]
         We should make it so that people can extend the game     // [???]
@@ -15832,11 +15914,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                                                                  // [???]
         Inspired by:                                             // [???]
         https://stackoverflow.com/questions/477816               // [???]
-
+                                                                 // [---]
 *** ****************************************** FEATURE_CREEP **/ // [???]
 /** PEOPLE_ON_YOUTUBE_KANJI_CODER_IS_STALKING:[257]: ******* *** // [257]
 *** YOUTUBE_DEVELOPERS:[257]: ****************************** *** // [257]
-
+                                                                 // [---]
     TAG[ stalking | list-of-devs | dev-stalking | stalker ]      // [258]
     TAG[ dev stalking | list of devs | beginners          ]      // [259]
     TAG[ devs-to-stalk | devs_to_stalk | devstostalk      ]      // [259]
@@ -15900,298 +15982,295 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     TITLE::: TILEMAP System From Scratch in UNITY ...            // [259]
     VIDEO::: https://www.youtube.com/watch?v=gxtrC1Zimvo         // [259]
     CHANNEL: youtube.com/channel/UC0fZn0XcjRZNxakHUXC277A        // [259]
-
     ::::::::::::::::::::::::::::::::::::::::::::::::::::::::     // [259]
                                                                  // [---]
 *** ****************************** YOUTUBE_DEVELOPERS:[257]: *** // [257]
 *** ******* PEOPLE_ON_YOUTUBE_KANJI_CODER_IS_STALKING:[257]: **/ // [257]
-/** MISC_DELTA_NOTES *************************************** ***
-*** CHANGE_HISTORY _ *************************************** ***   [088]
-*** CHANGE_LOG _____ *************************************** ***   [088]
+/** MISC_DELTA_NOTES *************************************** *** // [???]
+*** CHANGE_HISTORY _ *************************************** *** // [088]
+*** CHANGE_LOG _____ *************************************** *** // [088]
+                                                                 // [---]
+    TAG[ CHANGE_HISTORY | MISC_DELTA_NOTES ]                     // [088]
+    TAG[ LOG_SECTION | change-log | changelog ]                  // [169][097]
+                                                                 // [---]
+    [018] : TUTORIAL PART 018                                    // [088]
+          : https://pastebin.com/ZCFNxebJ                        // [088]
+          : tinyurl.com/SERVER-JS-PART-18                        // [088]
+          : git@github.com:KanjiCoder/AIM_018.git                // [088]
+          : https://github.com/KanjiCoder/AIM_018                // [088]
+                                                                 // [---]
+    [044] : Will crash randomly if you supply correct            // [044]
+          : password. This is by design. We will fix it          // [044]
+          : in future deltas.                                    // [044]
+                                                                 // [---]
+    [048] : This snapshot can be difficult to get started        // [048]
+          : without crashing server because it requires us       // [048]
+          : to re-build the schema/table for[ tab_hex ]          // [048]
+          : before the api call[ DABITCH/C/TAB_HEX/red/40 ]      // [048]
+          :                    [ DABITCH/C/TAB_HEX/blue/69 ]     // [048]
+          : will work. We will make it easier by adding          // [048]
+          : helper api to re-create table in [049]               // [048]
+                                                                 // [---]
+    [049] : Added helper : <yourappurl>/DABITCH/MAKTAB/TAB_HEX   // [049]
+                                                                 // [---]
+    [052] : Noticed that: <app>/DABITCH/C/TAB_HEX/blue           // [052]
+          : will crash the sever with a "missing column"         // [052]
+          : error.                                               // [052]
+          :                                                      // [052]
+          : If argument is undefined, we should use an           // [052]
+          : "empty" name.                                        // [052]
+          :                                                      // [052]
+          : null string ==> "[NIL][SQL_NIL]"                     // [052]
+          : null number ==> 0                                    // [052]
+          :                                                      // [052]
+                                                                 // [---]
+    [056] : Return[ err_msg ]object from JSON response always.   // [056]
+          : If error in SQL , rather than crash server,          // [056]
+          : we pack meaningful error message into[ err_msg ].    // [056]
+          : If no error , [ err_msg == "" ].                     // [056]
+          : ADDED_DATE[ 2022_06_25 ]                             // [056]
+                                                                 // [---]
+    [057] : KEYMAIN - Politically Correct Version Of             // [057]
+          : KEYMAST ( Key Master )                               // [057]
+                                                                 // [---]
+    [059] : Added helpful message to help you configure          // [059]
+          : your heroku installation properly if you             // [059]
+          : cannot get access to your application name.          // [059]
+          : RUN:                                                 // [059]
+                                                                 // [059]
+        heroku labs:enable runtime-dyno-metadata --app APPNAME   // [059]
+                                                                 // [---]
+    [060] : We didn't change any source code here.               // [060]
+          : (except this comment message)                        // [060]
+          : I Ran :                                              // [060]
+                                                                 // [---]
+    heroku labs:enable runtime-dyno-metadata --app "aim-kanji"   // [063]
+          :                                                      // [063]
+          : You might need to use :                              // [063]
+          :                                                      // [063]
+          git commit --allow-empty -m "[EMPTY_COMMIT]"           // [063]
+          :                                                      // [063]
+          : To force server to restart after adding              // [063]
+          : "runtime-dyno-metadata"                              // [063]
+                                                                 // [063]
+    [063] : Refactored project a bit to give ARTGIRL the         // [063]
+          : things she rightfully owns and has                   // [063]
+          : jurisdiction over.                                   // [063]
+                                                                 // [---]
+    [064] : Waterfalled some design by adding render             // [064]
+          : pipeline constants. This is literally our            // [064]
+          : ______ nth draft.                                    // [064]
+          :                                                      // [064]
+          : 1st draft : Atomic Alice (newgrounds)                // [064]
+          : 2nd draft : M128.JS  (still japanese)                // [064]
+          : 3rd draft : A2_JC (for josh project   2020)          // [064]
+          : 4rd draft : A2_JS (repo. Tile editor? 2021)          // [064]
+          :           : Tilde("~") + 2 to get to                 // [064]
+          :           : interesting stuff.                       // [064]
+          : 5rd draft : AAC2020                                  // [064]
+          : 6th draft : A3 's CPU world map render.              // [064]
+          : 7th draft : A3 's LEDIT64 system.                    // [064]
+          : 8th draft : This source code. Atomic Ivy MMO         // [064]
+          :                                                      // [077]
+          : #_LIST_OF_TRIES_2022_07_02_#                         // [077]
+                                                                 // [---] 
+    [065] : J++ , Previously known as                            // [065]
+          : "JavaScript With Structs".                           // [065]
+          :                                                      // [065]
+          : NinjaCoder Title: "JavaScript With Structs"          // [065]
+          : KanjiCoder Title: "JavaScript Struct Keyword"        // [065]
+                                                                 // [---] 
+    [066] : Added hardcoded vertex buffer data for               // [066]
+          : the shader quad needed for creating                  // [066]
+          : 2D graphics pipeline in WebGL.                       // [066]
+          :                                                      // [066]
+          : Also created nifty const-array                       // [066]
+          : constructor function for immutable                   // [066]
+          : arrays of a fixed size to mimmick                    // [066]
+          : C99 behavior.                                        // [066]
+                                                                 // [---] 
+    [067] : Added all ( I think ) member variables               // [067]
+          : needed by[ ARTGIRL ]to setup our OpenGL              // [067]
+          : rendering quad and display it on screen.             // [067]
+          :                                                      // [067]
+          : Created an[ ARR ]function so that we dont            // [067]
+          : have to type[ new Array( len ) ]and can              // [067]
+          : instead type[     F_ARR( len ) ].                    // [069][067]
+                                                                 // [---]
+    [073] : 1 : More robust error checking.                      // [073]
+          : 2 : Updated deployment documentation.                // [073]
+                                                                 // [---]
+    [076] : Created Uint8 Array Constructor Functions.           // [076]
+          : F_ARR_U08 & F_CAR_U08                                // [076]
+                                                                 // [---]
+    [077] : Created "Vertex Buffer Object" ( VBO )         :     // [077]
+          : VBO is just a GPU copy of a raw array          :     // [077]
+          : that we give to WebGL. The name makes          :     // [077]
+          : no fucking sense.                              :     // [077]
+          :                                                :     // [077]
+          : I am going to think of VBO == AI0              :     // [077]
+          : AI0 == Array Indirect 0                        :     // [077]
+          : ( zero indirection because raw array without ) :     // [077]
+          : ( any interpretation yet )                     :     // [077]
+          :                                                :     // [077]
+          : ---------------------------------------------- :     // [077]
+          : ALSO... created constants for the array        :     // [077]
+          :         attribute slots.                       :     // [077]
+          : c_artgirl_loc_pos <-- slot location : pos      :     // [077]
+          : c_artgirl_loc_tex <-- slot location : tex      :     // [077]
+          :                                                :     // [077]
+          : ---------------------------------------------- :     // [077]
+                                                                 // [---]
+    [078] : Vertex fetch requires 4, but attribs only supply 0   // [078]
+          : ------------------------------------------------     // [078]
+          : Fuckyou WebGl. How many times have I fucking         // [078]
+          : done this in my life? And I still can't get          // [078]
+          : it right the first time? This part is                // [078]
+          : easier in C99 because in WEBGL there are             // [078]
+          : multiple overrides for functions.                    // [078]
+          :                                                      // [078]
+          : I say this because I don't get stuck like            // [078]
+          : this when I am doing this in C99.                    // [078]
+          :                                                      // [078]
+          : SILENTFAIL : wgl.bufferData( a1,a2,a3,a4    );       // [078]
+          : THE____FIX : wgl.bufferData( a1,a2,a3,a4,a5 );       // [078]
+                                                                 // [---]
+    [079] : No code changes. Just demonstrated the end           // [079]
+          : result of tutorial [078] . We didn't have            // [079]
+          : enough time to go over the end-result                // [079]
+          : in the previous video.                               // [079]
+                                                                 // [---]
+    [080] : 1: gl.viewport changes when canvas size changed now. // [080]
+          : 2: Retroactively added some video number tags        // [080]
+                                                                 // [---]
+    [081] : Getting Ready For Pipeline Swapping. Added           // [081]
+          : A "Flat Lime" color shader.                          // [081]
+          :                                                      // [081]
+          : Made "Flat Cyan" color shader an official            // [081]
+          : shader in our shader enums.                          // [081]
+                                                                 // [---]
+    [082] : Gradient Quad With TOP-LEFT origin. This is __NOT__  // [082]
+          : the origin standard to [ OPENGL || WEBGL ] ,         // [082]
+          : we were "clever" with our texture coord values       // [082]
+          : so that we could get [hack] a __SANE__ top-left      // [082]
+          : graphical origin.                                    // [082]
+                                                                 // [---]
+    [084] : We are delirious right now. I wrote this off         // [084]
+          : camera. We are too tired to do more tutorial.        // [084]
+          : You only have so much mental strength.               // [084]
+          : SEARCH_FOR[ FLASH_GRAD ]And pick this back           // [084]
+          : up on camera later.                                  // [084]
+                                                                 // [---] 
+    [085] : Setting up the simulation ticker before we can       // [085]
+          : setup the flashing shader code.                      // [085]
+                                                                 // [---]      
+    [086] : Now uploading[ d_tik ]value to shader uniform        // [087][086]
+          : variable of same name every frame.                   // [087][086]
+          :                                                      // [087][086]
+          : Numkey 4 ==> Gradient Shader. Got a bit fancy        // [087][086]
+          : with making tiles with modulus so it is              // [087][086]
+          : visually distinct enough from Numkey 3.              // [087][086]
+                                                                 // [---]
+    [087] : 1 : Calculated the "shape" of nothingness.        :  // [088][087]
+          : 2 : Figured out addressing space for rendering.   :  // [088][087]
+          :::::                                               :  // [088][087]
+              : c_dum ( 0x7F_FFFF ) : DiscreteUnits - THE_DUM :  // [088][087]
+              : c_dut ( 0x2222    ) : DiscreteUnits -  G_TILE :  // [088][087]
+                                                                 //
+    [088] : Added Variables For Camera & Plank Units             // [089][088]
+          : ( Plank Units == Discrete Units )                    // [089][088]
+                                                                 // 
+    [089] : Added Camera Vars [ vp0 , vp1 , vpc ]                // [090][089]
+          : to shader code, but have not wired them              // [090][089]
+          : up in the CPU code yet.                              // [090][089]
+                                                                 // 
+    [090] : Added variables for uniform locations of             // [091][090]
+          : [ d_tik , d_vp0 , d_vp1 , d_vpc ]                    // [091][090]
+          : [ d_tik_loc , d_vp0_loc , d_vp1_loc , d_vpc_loc ]    // [091][090]
+                                                                 // 
+    [091] : GPU/CPU sync of [ d_tik , d_vp0 , d_vp1 , d_vpc ]    // [092][091]
+                                                                 // 
+    [092] : [ d_vpc ]is now size of wgl.viewport , and resizes   // [093][092]
+          : correctly when user resizes the window.              // [093][092]
+                                                                 // 
+    [093] : Added the logic for zooming in and out.              // [094][093]
+          : HOWEVER... Nothing can be observed yet,              // [094][093]
+          : because the fragment shader code does                // [094][093]
+          : __NOT__ make use of[ d_vp1 ]yet.                     // [094][093]
+          : ( d_vp1 === Data Selection Viewport Rectangle )      // [094][093]
+                                                                 // 
+    [094] : Added letter boxing math so that we can              // [095][094]
+          : verify rendering code uses[ vp0 ]and[ vpc ]          // [095][094]
+          : correctly.                                           // [095][094]
+                                                                 // 
+    [095] : Added letter boxing to shader code.                  // [096][095]
+                                                                 //
+    [096] : "L" Key To Toggle Letter Boxing.                     // [097][096]
+                                                                 //
+    [097] : Figured Out Sample Coordinate For Data Set.          // [098][097]
+          : HOWEVER:                                             // [098][097]
+          : 1. Not using sample coord yet.                       // [098][097]
+          : 2. Don't have any data yet.                          // [098][097]
+          : Next thing to do: Use sample coord to                // [098][097]
+          : visualize the space we are in.                       // [098][097]
+                                                                 //
+    [098] : 1 : _____FIXED_____  "Discrete_Unit" constants.      // [099][098]
+          : 2 : Added  __MORE__  "Discrete_Unit" constants.      // [099][098]
+                                                                 //
+    [099] : Basic space visualization coded, however the         // [100][099]
+          : camera math is __NOT__ 100% correct. Seems the       // [100][099]
+          : bottom-right corner of the camera is "pinned".       // [100][099]
+          :                                                      // [100][099]
+          : Suspect error is in [GLSL/GPU] code , and            // [100][099]
+          : __NOT__ cpu code.                                    // [100][099]
+          :                                                      // [100][099]
+          : TODO:                                                // [100][099]
+          : Make a CPU debug button that                         // [100][099]
+          : snaps camera exactly onto a 1 tile in the            // [100][099]
+          : game to help diagnose problem.                       // [100][099]
+                                                                 //
+    [100] : GO TO THE NEXT PLAYLIST FOR VIDEO # 101 :            // [101][100]
+          : www.tinyurl.com/BOMB-PLAYLIST-002                    // [101][100]
+                                                                 //
+    [101] : No code changes. The first video of each playlist    // [102][101]
+          : will be used to DEMO/PREVIEW all of the work done    // [102][101]
+          : in that playlist. So video 101 summarizes            // [102][101]
+          : videos[ 101 - to - 200 ].                            // [102][101]
+                                                                 //
+    [102] : Organizing code before we stubb in                   // [103][102]
+          : EDIGAME container which will contain high            // [103][102]
+          : level camera controls. (among other things )         // [103][102]
+          :                                                      // [103][102]
+          : Will use these high level camera controls            // [103][102]
+          : to help debug the incorrect rendering code.          // [103][102]
+                                                                 //
+    [103] : Stubbed in EDIGAME controls. Pressing                // [104][103]
+          : [ tilde(~) / backtick(`) ] switches between          // [104][103]
+          : "editor mode" and "game mode" style                  // [104][103]
+          : controls.                                            // [104][103]
+          :                                                      // [104][103]
+          : Will be plagerizing parts of                         // [104][103]
+          : HOTEL13.JS('s)[ d_hotel13_sam ]object to             // [104][103]
+          : populate[ d_edigame_edi ], so updated                // [104][103]
+          : HOTEL13.JS snapshot to be latest revision.           // [104][103]
+                                                                 //
+    [104] : Trivial refactoring, keyboard down handler           // [105][104]
+          : now split into two sub functions. One for            // [105][104]
+          : when[ AIM ]is behaving as an __EDITOR__ ,            // [105][104]
+          : the other for when[ AIM ]is behaving as              // [105][104]
+          : a __GAME__.                                          // [105][104]
 
-    TAG[ CHANGE_HISTORY | MISC_DELTA_NOTES ]                    // [088]
-    TAG[ LOG_SECTION | change-log | changelog ]                 // [169][097]
-
-    [018] : TUTORIAL PART 018                                   // [088]
-          : https://pastebin.com/ZCFNxebJ                       // [088]
-          : tinyurl.com/SERVER-JS-PART-18                       // [088]
-          : git@github.com:KanjiCoder/AIM_018.git               // [088]
-          : https://github.com/KanjiCoder/AIM_018               // [088]
-
-    [044] : Will crash randomly if you supply correct           // [044]
-          : password. This is by design. We will fix it         // [044]
-          : in future deltas.                                   // [044]
-                                                                // [---]
-    [048] : This snapshot can be difficult to get started       // [048]
-          : without crashing server because it requires us      // [048]
-          : to re-build the schema/table for[ tab_hex ]         // [048]
-          : before the api call[ DABITCH/C/TAB_HEX/red/40 ]     // [048]
-          :                    [ DABITCH/C/TAB_HEX/blue/69 ]    // [048]
-          : will work. We will make it easier by adding         // [048]
-          : helper api to re-create table in [049]              // [048]
-                                                                // [---]
-    [049] : Added helper : <yourappurl>/DABITCH/MAKTAB/TAB_HEX  // [049]
-                                                                // [---]
-    [052] : Noticed that: <app>/DABITCH/C/TAB_HEX/blue          // [052]
-          : will crash the sever with a "missing column"        // [052]
-          : error.                                              // [052]
-          :                                                     // [052]
-          : If argument is undefined, we should use an          // [052]
-          : "empty" name.                                       // [052]
-          :                                                     // [052]
-          : null string ==> "[NIL][SQL_NIL]"                    // [052]
-          : null number ==> 0                                   // [052]
-          :                                                     // [052]
-                                                                // [---]
-    [056] : Return[ err_msg ]object from JSON response always.  // [056]
-          : If error in SQL , rather than crash server,         // [056]
-          : we pack meaningful error message into[ err_msg ].   // [056]
-          : If no error , [ err_msg == "" ].                    // [056]
-          : ADDED_DATE[ 2022_06_25 ]                            // [056]
-                                                                // [---]
-    [057] : KEYMAIN - Politically Correct Version Of            // [057]
-          : KEYMAST ( Key Master )                              // [057]
-                                                                // [---]
-    [059] : Added helpful message to help you configure         // [059]
-          : your heroku installation properly if you            // [059]
-          : cannot get access to your application name.         // [059]
-          : RUN:                                                // [059]
-                                                                // [059]
-        heroku labs:enable runtime-dyno-metadata --app APPNAME  // [059]
-                                                                // [---]
-    [060] : We didn't change any source code here.              // [060]
-          : (except this comment message)                       // [060]
-          : I Ran :                                             // [060]
-                                                                // [---]
-    heroku labs:enable runtime-dyno-metadata --app "aim-kanji"  // [063]
-          :                                                     // [063]
-          : You might need to use :                             // [063]
-          :                                                     // [063]
-          git commit --allow-empty -m "[EMPTY_COMMIT]"          // [063]
-          :                                                     // [063]
-          : To force server to restart after adding             // [063]
-          : "runtime-dyno-metadata"                             // [063]
-                                                                // [063]
-    [063] : Refactored project a bit to give ARTGIRL the        // [063]
-          : things she rightfully owns and has                  // [063]
-          : jurisdiction over.                                  // [063]
-                                                                // [---]
-    [064] : Waterfalled some design by adding render            // [064]
-          : pipeline constants. This is literally our           // [064]
-          : ______ nth draft.                                   // [064]
-          :                                                     // [064]
-          : 1st draft : Atomic Alice (newgrounds)               // [064]
-          : 2nd draft : M128.JS  (still japanese)               // [064]
-          : 3rd draft : A2_JC (for josh project   2020)         // [064]
-          : 4rd draft : A2_JS (repo. Tile editor? 2021)         // [064]
-          :           : Tilde("~") + 2 to get to                // [064]
-          :           : interesting stuff.                      // [064]
-          : 5rd draft : AAC2020                                 // [064]
-          : 6th draft : A3 's CPU world map render.             // [064]
-          : 7th draft : A3 's LEDIT64 system.                   // [064]
-          : 8th draft : This source code. Atomic Ivy MMO        // [064]
-          :                                                     // [077]
-          : #_LIST_OF_TRIES_2022_07_02_#                        // [077]
-                                                                // [---] 
-    [065] : J++ , Previously known as                           // [065]
-          : "JavaScript With Structs".                          // [065]
-          :                                                     // [065]
-          : NinjaCoder Title: "JavaScript With Structs"         // [065]
-          : KanjiCoder Title: "JavaScript Struct Keyword"       // [065]
-                                                                // [---] 
-    [066] : Added hardcoded vertex buffer data for              // [066]
-          : the shader quad needed for creating                 // [066]
-          : 2D graphics pipeline in WebGL.                      // [066]
-          :                                                     // [066]
-          : Also created nifty const-array                      // [066]
-          : constructor function for immutable                  // [066]
-          : arrays of a fixed size to mimmick                   // [066]
-          : C99 behavior.                                       // [066]
-                                                                // [---] 
-    [067] : Added all ( I think ) member variables              // [067]
-          : needed by[ ARTGIRL ]to setup our OpenGL             // [067]
-          : rendering quad and display it on screen.            // [067]
-          :                                                     // [067]
-          : Created an[ ARR ]function so that we dont           // [067]
-          : have to type[ new Array( len ) ]and can             // [067]
-          : instead type[     F_ARR( len ) ].                   // [069][067]
-                                                                // [---]
-    [073] : 1 : More robust error checking.                     // [073]
-          : 2 : Updated deployment documentation.               // [073]
-                                                                // [---]
-    [076] : Created Uint8 Array Constructor Functions.          // [076]
-          : F_ARR_U08 & F_CAR_U08                               // [076]
-
-    [077] : Created "Vertex Buffer Object" ( VBO )         :    // [077]
-          : VBO is just a GPU copy of a raw array          :    // [077]
-          : that we give to WebGL. The name makes          :    // [077]
-          : no fucking sense.                              :    // [077]
-          :                                                :    // [077]
-          : I am going to think of VBO == AI0              :    // [077]
-          : AI0 == Array Indirect 0                        :    // [077]
-          : ( zero indirection because raw array without ) :    // [077]
-          : ( any interpretation yet )                     :    // [077]
-          :                                                :    // [077]
-          : ---------------------------------------------- :    // [077]
-          : ALSO... created constants for the array        :    // [077]
-          :         attribute slots.                       :    // [077]
-          : c_artgirl_loc_pos <-- slot location : pos      :    // [077]
-          : c_artgirl_loc_tex <-- slot location : tex      :    // [077]
-          :                                                :    // [077]
-          : ---------------------------------------------- :    // [077]
-                                                                // [---]
-    [078] : Vertex fetch requires 4, but attribs only supply 0  // [078]
-          : ------------------------------------------------    // [078]
-          : Fuckyou WebGl. How many times have I fucking        // [078]
-          : done this in my life? And I still can't get         // [078]
-          : it right the first time? This part is               // [078]
-          : easier in C99 because in WEBGL there are            // [078]
-          : multiple overrides for functions.                   // [078]
-          :                                                     // [078]
-          : I say this because I don't get stuck like           // [078]
-          : this when I am doing this in C99.                   // [078]
-          :                                                     // [078]
-          : SILENTFAIL : wgl.bufferData( a1,a2,a3,a4    );      // [078]
-          : THE____FIX : wgl.bufferData( a1,a2,a3,a4,a5 );      // [078]
-                                                                // [---]
-    [079] : No code changes. Just demonstrated the end          // [079]
-          : result of tutorial [078] . We didn't have           // [079]
-          : enough time to go over the end-result               // [079]
-          : in the previous video.                              // [079]
-
-    [080] : 1: gl.viewport changes when canvas size changed now.// [080]
-          : 2: Retroactively added some video number tags       // [080]
-
-    [081] : Getting Ready For Pipeline Swapping. Added          // [081]
-          : A "Flat Lime" color shader.                         // [081]
-          :                                                     // [081]
-          : Made "Flat Cyan" color shader an official           // [081]
-          : shader in our shader enums.                         // [081]
-
-    [082] : Gradient Quad With TOP-LEFT origin. This is __NOT__ // [082]
-          : the origin standard to [ OPENGL || WEBGL ] ,        // [082]
-          : we were "clever" with our texture coord values      // [082]
-          : so that we could get [hack] a __SANE__ top-left     // [082]
-          : graphical origin.                                   // [082]
-
-    [084] : We are delirious right now. I wrote this off        // [084]
-          : camera. We are too tired to do more tutorial.       // [084]
-          : You only have so much mental strength.              // [084]
-          : SEARCH_FOR[ FLASH_GRAD ]And pick this back          // [084]
-          : up on camera later.                                 // [084]
-
-    [085] : Setting up the simulation ticker before we can      // [085]
-          : setup the flashing shader code.                     // [085]
-
-    [086] : Now uploading[ d_tik ]value to shader uniform       // [087][086]
-          : variable of same name every frame.                  // [087][086]
-          :                                                     // [087][086]
-          : Numkey 4 ==> Gradient Shader. Got a bit fancy       // [087][086]
-          : with making tiles with modulus so it is             // [087][086]
-          : visually distinct enough from Numkey 3.             // [087][086]
-
-
-    [087] : 1 : Calculated the "shape" of nothingness.         :   [088][087]
-          : 2 : Figured out addressing space for rendering.    :   [088][087]
-          :::::                                                :   [088][087]
-              : c_dum ( 0x7F_FFFF ) : DiscreteUnits - THE_DUM  :   [088][087]
-              : c_dut ( 0x2222    ) : DiscreteUnits -  G_TILE  :   [088][087]
-
-    [088] : Added Variables For Camera & Plank Units               [089][088]
-          : ( Plank Units == Discrete Units )                      [089][088]
-
-    [089] : Added Camera Vars [ vp0 , vp1 , vpc ]                  [090][089]
-          : to shader code, but have not wired them                [090][089]
-          : up in the CPU code yet.                                [090][089]
-
-    [090] : Added variables for uniform locations of               [091][090]
-          : [ d_tik , d_vp0 , d_vp1 , d_vpc ]                      [091][090]
-          : [ d_tik_loc , d_vp0_loc , d_vp1_loc , d_vpc_loc ]      [091][090]
-
-    [091] : GPU/CPU sync of [ d_tik , d_vp0 , d_vp1 , d_vpc ]      [092][091]
-
-    [092] : [ d_vpc ]is now size of wgl.viewport , and resizes     [093][092]
-          : correctly when user resizes the window.                [093][092]
-
-    [093] : Added the logic for zooming in and out.                [094][093]
-          : HOWEVER... Nothing can be observed yet,                [094][093]
-          : because the fragment shader code does                  [094][093]
-          : __NOT__ make use of[ d_vp1 ]yet.                       [094][093]
-          : ( d_vp1 === Data Selection Viewport Rectangle )        [094][093]
-
-    [094] : Added letter boxing math so that we can                [095][094]
-          : verify rendering code uses[ vp0 ]and[ vpc ]            [095][094]
-          : correctly.                                             [095][094]
-
-    [095] : Added letter boxing to shader code.                 // [096][095]
-
-    [096] : "L" Key To Toggle Letter Boxing.                    // [097][096]
-
-    [097] : Figured Out Sample Coordinate For Data Set.         // [098][097]
-          : HOWEVER:                                            // [098][097]
-          : 1. Not using sample coord yet.                      // [098][097]
-          : 2. Don't have any data yet.                         // [098][097]
-          : Next thing to do: Use sample coord to               // [098][097]
-          : visualize the space we are in.                      // [098][097]
-
-    [098] : 1 : _____FIXED_____  "Discrete_Unit" constants.     // [099][098]
-          : 2 : Added  __MORE__  "Discrete_Unit" constants.     // [099][098]
-
-    [099] : Basic space visualization coded, however the        // [100][099]
-          : camera math is __NOT__ 100% correct. Seems the      // [100][099]
-          : bottom-right corner of the camera is "pinned".      // [100][099]
-          :                                                     // [100][099]
-          : Suspect error is in [GLSL/GPU] code , and           // [100][099]
-          : __NOT__ cpu code.                                   // [100][099]
-          :                                                     // [100][099]
-          : TODO:                                               // [100][099]
-          : Make a CPU debug button that                        // [100][099]
-          : snaps camera exactly onto a 1 tile in the           // [100][099]
-          : game to help diagnose problem.                      // [100][099]
-
-
-    [100] : GO TO THE NEXT PLAYLIST FOR VIDEO # 101 :           // [101][100]
-          : www.tinyurl.com/BOMB-PLAYLIST-002                   // [101][100]
-
-    [101] : No code changes. The first video of each playlist   // [102][101]
-          : will be used to DEMO/PREVIEW all of the work done   // [102][101]
-          : in that playlist. So video 101 summarizes           // [102][101]
-          : videos[ 101 - to - 200 ].                           // [102][101]
-
-    [102] : Organizing code before we stubb in                  // [103][102]
-          : EDIGAME container which will contain high           // [103][102]
-          : level camera controls. (among other things )        // [103][102]
-          :                                                     // [103][102]
-          : Will use these high level camera controls           // [103][102]
-          : to help debug the incorrect rendering code.         // [103][102]
-
-    [103] : Stubbed in EDIGAME controls. Pressing               // [104][103]
-          : [ tilde(~) / backtick(`) ] switches between         // [104][103]
-          : "editor mode" and "game mode" style                 // [104][103]
-          : controls.                                           // [104][103]
-          :                                                     // [104][103]
-          : Will be plagerizing parts of                        // [104][103]
-          : HOTEL13.JS('s)[ d_hotel13_sam ]object to            // [104][103]
-          : populate[ d_edigame_edi ], so updated               // [104][103]
-          : HOTEL13.JS snapshot to be latest revision.          // [104][103]
-
-    [104] : Trivial refactoring, keyboard down handler          // [105][104]
-          : now split into two sub functions. One for           // [105][104]
-          : when[ AIM ]is behaving as an __EDITOR__ ,           // [105][104]
-          : the other for when[ AIM ]is behaving as             // [105][104]
-          : a __GAME__.                                         // [105][104]
-
-    [105] : Numpad keys snap camera to respective levelpacks    // [106][105]
-          : of @THE_DUM@. We are doing this to figure out       // [106][105]
-          : where bug is in our RENDERING(GLSL) code.           // [106][105]
-          : ( BUG NOT FOUND YET , 2022_08_03 )                  // [106][105]
-
-    [106] : Sample points outside of[ THE_DUM ]are now          // [107][106]
-          : darkened. This greatly helps diagnose the           // [107][106]
-          : error in our fragment shader code.                  // [107][106]
-
-    [107] : Found bug in our renderer, our code for             // [108][107]
-          : calculating[ u_mv1 ]was... [TRASH/WRONG/INCORRECT]. // [108][107]
+    [105] : Numpad keys snap camera to respective levelpacks     // [106][105]
+          : of @THE_DUM@. We are doing this to figure out        // [106][105]
+          : where bug is in our RENDERING(GLSL) code.            // [106][105]
+          : ( BUG NOT FOUND YET , 2022_08_03 )                   // [106][105]
+                                                                 
+    [106] : Sample points outside of[ THE_DUM ]are now           // [107][106]
+          : darkened. This greatly helps diagnose the            // [107][106]
+          : error in our fragment shader code.                   // [107][106]
+                                                                 
+    [107] : Found bug in our renderer, our code for              // [108][107]
+          : calculating[ u_mv1 ]was... [TRASH/WRONG/INCORRECT].  // [108][107]
 
     [108] : Created "CameraH" struct and supporting              // [109][108]
           : constants. Also wrote some diagrams to               // [109][108]
@@ -26713,7 +26792,522 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                         : Sparks which detonate bombs.        |  // [270]
                                                               |  // [270]
     +---------------------------------------------------------+  // [270]
+                                                                 // [---]
+    #_EMPTY_OUT_THE_HASH_TAGGED_COMMENTS_SECTION_# :----------+  // [271]
+                                                              |  // [271]
+        I think the "hashtag comments" section is too         |  // [271]
+        granular. The big dump of "@" and "#" comments        |  // [271]
+        at the bottom of the file seems to be working         |  // [271]
+        out pretty well. Don't add to this section            |  // [271]
+        any more. Maybe move what is in here to the           |  // [271]
+        bottom of the file. Actually... "@" comments          |  // [271]
+        consolidated above seems good. But hash tagged        |  // [271]
+        comments does not....                                 |  // [271]
+                                                              |  // [271]
+    +---------------------------------------------------------+  // [271]
+                                                                 // [271]
+    #_WARPED_FOURSET_EDGES_# :--------------------------------+  // [271]
+                                                              |  // [271]
+                                              +------------+  |  // [271]
+        -------===------ +---+---+---+---+    | [][][][][] |  |  // [271]
+                |        |000|001|002|003<----| [][][][][] |  |  // [271]
+                |        +---+---+---+---+    | [][][][][] |  |  // [271]
+                |        |004|005|006|007|    | [][][][][] |  |  // [271]
+            [fourset]    +---+---+---+---+    | [][][][][] |  |  // [271]
+                |        |008|009|010|011|    +------------+  |  // [271]
+                |        +---+---+---+---+    |<--u_5x5 -->|  |  // [271]
+                |        |012|013|014|015|                    |  // [271]
+        -------===------ +---+---+---+---+                    |  // [271]
+                        /                 \                   |  // [271]
+              +--------+                   +-------+          |  // [271]
+             /                                      \         |  // [271]
+            /                                        \        |  // [271]
+           /                                          \       |  // [271]
+          /                                            \      |  // [271]
+         +---------------------------------------------+      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         |                                             |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         |                                             |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         |                                             |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         | [][][][][] [][][][][] [][][][][] [][][][][] |      |  // [271]
+         +----------------------|----------------------+      |  // [271]
+                                |                             |  // [271]
+         +----------------------V----------------------+      |  // [271]
+         | Warping the rendering by making the 5x5     |      |  // [271]
+         | partitions un-even could help give better   |      |  // [271]
+         | edge dillination by creating higher         |      |  // [271]
+         | density patterns on the edges.              |      |  // [271]
+         |                                             |      |  // [271]
+         | We could also alpha blend warped an         |      |  // [271]
+         | non-warped fourset tile rendering to        |      |  // [271]
+         | create interesting pattern.                 |      |  // [271]
+         +----------------------|----------------------+      |  // [271]
+                                |                             |  // [271]
+    +---------------------------V-----------------------------+  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    |                                                         |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    |                                                         |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    |                                                         |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    | [][][][][] [][][ ][  ][   ] [   ][  ][ ][][] [][][][][] |  // [271]
+    +---------------------------------------------------------+  // [271]
+                                                              |  // [271]
+                                            @END_OF_SECTION@  |  // [271]
+                                                              |  // [271]
+    +------------------------------: #_WARPED_FOURSET_EDGES_# +  // [271]
+                                                                 // [271]
+    @END_OF_SECTION@ : Marking end of section explicitly.        // [271]
+                                                                 // [271]
+    #_DISCRETE_TILE_5THS_# :----------------------------------+  // [271]
+                                                              |  // [271]
+        To figure out which[ binary_color_bit ]of             |  // [271]
+        fourset sub-tile ( f16 cell ) we are in, we           |  // [271]
+        need to divide the cell into 5ths.                    |  // [271]
+                                                              |  // [271]
+        Rather than compute this division all the time,       |  // [271]
+        store it in a lookup table.                           |  // [271]
+                                                              |  // [271]
+        |<- u_5x5 graphic ->|                                 |  // [271]
+        |<- f16 sub__cell ->|                                 |  // [271]
+        +---+---+---+---+---+ --- ---=---                     |  // [271]
+        |   |   |   |   |   | d20    |                        |  // [271]
+        |  -+- -+- -+- -+-  | ---   du0 <---------+           |  // [271]
+        |   |   |   |   |   | d20   du1           |           |  // [271]
+        |  -+- -+- -+- -+-  | ---   du2           |           |  // [271]
+        |   |   |   |   |   | d20   du3 [_D20_HAS_A_REMAINDER_]  // [271]
+        |  -+- -+- -+- -+-  | ---   du4           |           |  // [271]
+        |   |   |   |   |   | d20   du5           |           |  // [271]
+        |  -+- -+- -+- -+-  | ---   du6 <---------+           |  // [271]
+        |   |   |   |   |   | d20    |                        |  // [271]
+        +---+---+---+---+---+ --- ---=---                     |  // [271]
+        |d20|d20|d20|d20|d20| \                               |  // [271]
+        |<------ du0 ------>|  +                              |  // [271]
+        |<------ du1 ------>|  |                              |  // [271]
+        |<------ du2 ------>|+-V-+---+---+---+ ---------      |  // [271]
+        |<------ du3 ------>||000|001|002|003| ( d20*5 )      |  // [271]
+        |<------ du4 ------>|+---+---+---+---+ ---------      |  // [271]
+        |<------ du5 ------>||004|005|006|007| ( d20*5 )      |  // [271]
+        |<------ du6 ------>|+---+---+---+---+ ---------      |  // [271]
+                             |008|009|010|011| ( d20*5 )      |  // [271]
+                             +---+---+---+---+ ---------      |  // [271]
+                             |012|013|014|015| ( d20*5 )      |  // [271]
+                             +---+---+---+---+ ---------      |  // [271]
+                                                              |  // [271]
+    +---------------------------------------------------------+  // [271]
+    #_D20_HAS_A_REMAINDER_# :---------------------------------+  // [271]
+                                                              |  // [271]
+        D20 is not a perfect integer.... We should            |  // [271]
+        manually define all 20 sub-section widths             |  // [271]
+        as cutoff thresholds.                                 |  // [271]
+                                                              |  // [271]
+        Solves divisibility problem, and opens gateway        |  // [271]
+        to warpability really easy.                           |  // [271]
+                                        |    Threshold    |   |  // [271]
+                                        |     Markers     |   |  // [271]
+                                        |                 |   |  // [271]
+                                       t1 t2  t3   t4    t5   |  // [271]
+                                        |  |   |    |     |   |  // [271]
+        +---+---+---+---+---+ > > > > +-+--+---+----+-----+   |  // [271]
+        |   |   |   |   |   | > > > > | |  |   |    |     |   |  // [271]
+        |  -+- -+- -+- -+-  | > > > > |-+--+- -+-  -+-    |   |  // [271]
+        |   |   |   |   |   | > > > > | |  |   |    |     |   |  // [271]
+        |  -+- -+- -+- -+-  | > > > > |-+--+- -+-  -+-    |   |  // [271]
+        |   |   |   |   |   | WARP_IT | |  |   |    |     |   |  // [271]
+        |  -+- -+- -+- -+-  | > > > > |-+--+- -+-  -+-    |   |  // [271]
+        |   |   |   |   |   | > > > > | |  |   |    |     |   |  // [271]
+        |  -+- -+- -+- -+-  | > > > > |-+--+- -+-  -+-    |   |  // [271]
+        |   |   |   |   |   | > > > > | |  |   |    |     |   |  // [271]
+        +---+---+---+---+---+ > > > > +-+--+---+----+-----+   |  // [271]
+                                                              |  // [271]
+    +---------------------------------------------------------+  // [271]
+    #_D20_IS_RIGHT_IDEA_BUT_NOT_GOOD_ENOUGH_# :---------------+  // [271]
+                                                              |  // [271]
+        I think the "D20" values are in general the           |  // [271]
+        "right general idea" for what needs to be done...     |  // [271]
+                                                              |  // [271]
+        But... NOT GOOD ENOUGH... We need a:                  |  // [271]
+                                                              |  // [271]
+        1. Pixel Performant Solution                          |  // [271]
+        2. With Fast Lookup Times (no if if if checks)        |  // [271]
+        3. Capable of warping the partitions flexibly.        |  // [271]
+                                                              |  // [271]
+        I am delirious. Going back to bed.                    |  // [271]
+        2022_09_16 , 5:51 AM                                  |  // [271]
+                                                              |  // [271]
+        -KanjiCoder                                           |  // [271]
+    +---------------------------------------------------------+  // [271]
+    #_TREE_RING_OVERLAY_FOR_FOURSETS_# :----------------------+   
+                                                              |   
+        +---------------------------------------------+       |   
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |   
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |   
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |   
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |   
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |   
+        |                                             |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        |                                             |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        |                                             |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        | [][][][][] [][][][][] [][][][][] [][][][][] |       |
+        +----------------------|----------------------+       |
+                               |                              |
+                               |                              |
+                               V                              |
+                       +---+---+---+---+                      |
+                       |000|001|002|003|                      |
+                       +---+---+---+---+                      |
+                       |004|005|006|007|                      |
+                       +---+---+---+---+                      |
+                       |008|009|010|011|                      |
+                       +---+---+---+---+                      |
+                       |012|013|014|015|                      |
+                       +---+---+---+---+                      |
+                                                              |
+        Make a concentric uniformily spaced "tree ring"       |
+        overlay over this fourset. To create warping,         |
+        "tree rings" are grouped, mapping to the same         |
+        "R20" value. ( Ring20 Value ).                        |
+                                                              |
+        R20 because 4x4 cells, each containing u_5x5          |
+        bitmap, that makes for 20x20 binary pixels to         |
+        be carved into rings.                                 |
+                                                              |
+        Wait...  That would make 10 rings, not 20.            |
+        Two edges make 1 ring.                                |
+                                                              |
+        So... "tree_rings" ===> "R10" value.                  |
+                                                              |
+        Basic Idea :( 1st draft ):-----------------+          |
+                                                   |          |
+            UNIFORM_DENSE_TREE_RING(s)             |          |
+                                                   |          |
+            map to                                 |          |
+                                                   |          |
+            NON_UNIFORM_WARPED_TREE_RINGS.         |          |
+                                                   |          |
+            non-uniform tree-rings made by joining |          |
+            uniform rings.                         |          |
+        +------------------------------------------+          |
+        Basic Idea :( 2nd draft ):-------------------------+  |
+                                                           |  |
+            TWO DENSE "tree ring arrays" with EXACT        |  |
+            SAME NUMBER OF RINGS.                          |  |
+                                                           |  |
+            But the mapping from one to the other          |  |
+            is what creates warping.                       |  |
+                                                           |  |
+            TOO_HARD:--------------------------------------+  |
+                                                           |  |
+                Having one uniform distortion grid will    |  |
+                be difficult. Because we already picked    |  |
+                out a quad that belongs to either the      |  |
+                inner or outer ring.                       |  |
+                                                           |  |
+                TRING70_ORING10 ( TreeRing70 ==> OutRing10 )  |
+                                                           |  |
+            WE_CAN_DO_THIS!!!! :---------------------------+  |
+                                                           |  |
+            IRING35_URING05 ( InnerRing35 ==> UniformRing5 )  |
+            ORING35_URING05 ( OuterRing35 ==> UniformRing5 )  |
+                                                           |  |
+                                                           |  |
+        +--------------------------------------------------+  |
+                                                              |
+        +---------------------------------------+             |
+        | #_IOU_DIAGRAM_# (Iri___Ori___Uri)     |             |
+        +---------------------------------------+             |
+        |   @IRI@ : IRING35 ( inner   ring )    |             |
+        |   @ORI@ : ORING35 ( outer   ring )    |             |
+        |   @URI@ : URING05 ( uniform ring )    |             |
+        |                                       |             |
+        |   @i35@ : Inner   Ring , 35 of them.  |             |
+        |   @o35@ : Outer   Ring , 35 of them.  |             |
+        |   @u05@ : Uniform Ring , 10 of them.  |             |
+        |   @iu5@ : Uniform Ring ( INNER OUTPUT)|             |
+        |   @ou5@ : Uniform Ring ( OUTER OUTPUT)|             |
+        |                                       |             |
+        |   d_i35_iu5[ i35 ] ===> iu5 (u05)     |             |
+        |   d_o35_ou5[ o35 ] ===> ou5 (u05)     |             |
+        |                                       |             |
+        |   +-------------------------------+   |             |
+        |   | +---+   +---+   +---+   +---+ |   |             |
+        |   | |5x5|   |5x5|   |5x5|   |5x5| |   |             |
+        |   | +---+   +---+   +---+   +---+ |   |             |
+        |   |       +---------------+       |   |             |
+        |   | +---+ | +---+   +---+ | +---+ |   |             |
+        |   | |5x5| | |5x5|   |5x5| | |5x5| |   |             |
+        |   | +---+ | +---+   +---+ | +---+ |   |             |
+        |   |       |               |       |   |             |
+        |   | +---+ | +---+   +---+ | +---+ |   |             |
+        |   | |5x5| | |5x5|   |5x5| | |5x5| |   |             |
+        |   | +---+ | +---+   +---+ | +---+ |   |             |
+        |   |       +---------------+       |   |             |
+        |   | +---+   +---+   +---+   +---+ |   |             |
+        |   | |5x5|   |5x5|   |5x5|   |5x5| |   |             |
+        |   | +---+   +---+   +---+   +---+ |   |             |
+        |   +-------------------------------+   |             |
+        |                                       |             |
+        |   +-------------------------------+   |             |
+        |   | +---+   +---+   +---+   +---+ |   |             |
+        |   | |ORI|   |ORI|   |ORI|   |ORI| |   |             |
+        |   | +---+   +---+   +---+   +---+ |   |             |
+        |   |       +---------------+       |   |             |
+        |   | +---+ | +---+   +---+ | +---+ |   |             |
+        |   | |ORI| | |IRI|   |IRI| | |ORI| |   |             |
+        |   | +---+ | +---+   +---+ | +---+ |   |             |
+        |   |       |               |       |   |             |
+        |   | +---+ | +---+   +---+ | +---+ |   |             |
+        |   | |ORI| | |IRI|   |IRI| | |ORI| |   |             |
+        |   | +---+ | +---+   +---+ | +---+ |   |             |
+        |   |       +---------------+       |   |             |
+        |   | +---+   +---+   +---+   +---+ |   |             |
+        |   | |ORI|   |ORI|   |ORI|   |ORI| |   |             |
+        |   | +---+   +---+   +---+   +---+ |   |             |
+        |   +-------------------------------+   |             |
+        +---------------------------------------+             |
+        | END_OF_DIAGRAM[ #_IOU_DIAGRAM_# ]     |             |
+        +---------------------------------------+             |
+                                                              |
+            This "ring warping" introduces more               |
+            potential for mistakes while coding.              |
+            So to WORK UP TO THIS POINT, we should            |
+            have conditional compilation to shut              |
+            this feature off.                                 |
+                                                              |
+            We need to get visual feedback before             |
+            we layer on yet ANOTHER CRAZY ASS TRANSFORMATION. |
+                                                              |
+            USE_RIN <-- Use Ring Warping ? (OptionMacro)      |
+                                                              |
+    +---------------------------------------------------------+
+    #_USE_RIN_DIAGRAM_# :-------------------------------------+
+                                                              |
+        RELATED_DIAGRAM[ _IOU_DIAGRAM_ ]                      |
+                                                              |
+        @f_4_x@ : F4X , written for diagram.                  |
+        @f_4_y@ : F4Y , written for diagram.                  |
+        @f_1_6@ : F16 , written for diagram.                  |
+                                                              |
+        +-----+-----+-----+-----+   +-----+-----+-----+-----+ |
+        |f_4_x|f_4_x|f_4_x|f_4_x|   | 000 | 001 | 002 | 003 | |
+        |f_4_y|f_4_y|f_4_y|f_4_y|   |f_1_6|f_1_6|f_1_6|f_1_6| |
+        +-----+-----+-----+-----+   +-----+-----+-----+-----+ |
+        |f_4_x|f_4_x|f_4_x|f_4_x|   | 004 | 005 | 006 | 007 | |
+        |f_4_y|f_4_y|f_4_y|f_4_y|   |f_1_6|f_1_6|f_1_6|f_1_6| |
+        +-----+-----+-----+-----+   +-----+-----+-----+-----+ |
+        |f_4_x|f_4_x|f_4_x|f_4_x|   | 008 | 009 | 010 | 011 | |
+        |f_4_y|f_4_y|f_4_y|f_4_y|   |f_1_6|f_1_6|f_1_6|f_1_6| |
+        +-----+-----+-----+-----+   +-----+-----+-----+-----+ |
+        |f_4_x|f_4_x|f_4_x|f_4_x|   | 012 | 013 | 014 | 015 | |
+        |f_4_y|f_4_y|f_4_y|f_4_y|   |f_1_6|f_1_6|f_1_6|f_1_6| |
+        +-----+-----+-----+-----+   +-----+-----+-----+-----+ |
+                                                              |
+        +-----------------------+   +-----------------------+ |
+        |[5x5]=[5x5]=[5x5]=[5x5]|   |[ORI]=[ORI]=[ORI]=[ORI]| |
+        |||                   |||   |||                   ||| |
+        |||                   |||   |||                   ||| |
+        |[5x5] [5x5]=[5x5] [5x5]|   |[ORI] [IRI]=[IRI] [ORI]| |
+        |||    ||       ||    |||   |||    ||       ||    ||| |
+        |||    ||       ||    |||   |||    ||       ||    ||| |
+        |[5x5] [5x5]=[5x5] [5x5]|   |[ORI] [IRI]=[IRI] [ORI]| |
+        |||                   |||   |||                   ||| |
+        |||                   |||   |||                   ||| |
+        |[5x5]=[5x5]=[5x5]=[5x5]|   |[ORI]=[ORI]=[ORI]=[ORI]| |
+        +-----------------------+   +-----------------------+ |
+                                                              |
+        @o35_ou5@  : 35 outer rings mapping to 5 outer rings. |
+        @i35_iu5@  : 35 inner rings mapping to 5 inner rings. |
+                                                              |
+        @o35_u05@  : First Draft. U05 == Uniform(OUTER)5_RINGS|
+        @i35_u05@  : First Draft. U05 == Uniform(INNER)5_RINGS|
+                                                              |
+        +---------------------------------------------------+ |
+        | +-----------------------------------------------+ | |
+        | | +-------------------------------------------+ | | |
+        | | | +---------------------------------------+ | | | |
+        | | | | +-----------------------------------+ | | | | |
+        | | | | | +-------------------------------+ | | | | | |
+        | | | | | | +---------------------------+ | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | |                           | | | | | | | |
+        | | | | | | +---------------------------+ | | | | | | |
+        | | | | | +-.-----------------------------+ | | | | | |
+        | | | | +---.-------------------------------+ | | | | |
+        | | | +-----.---------------------------------+ | | | |
+        | | +-------.-----------------------------------+ | | |
+        | +---------.-------------------------------------+ | |
+        +-----------.---------------------------------------+ |
+        |<--@u05@-->| : Uniform_rings_____5         ^^^       |
+        |<--@ou5@-->| : Outer___Uniform___5         |||       |
+             ^^^                                    |||       |
+         d_o35_ou5[ o35 ]==>( ou5 )           #_O35_OU5_DIA_# |
+             ^^^                                    |||       |
+        |<--@o35@-->|                               VVV       |
+        +-----------.---------------------------------------+ |
+        | +---------.-------------------------------------+ | |
+        | | +-------.-----------------------------------+ | | |
+        | | | +-----.---------------------------------+ | | | |
+        | | | | +---.-------------------------------+ | | | | |
+        | | | | | +-.-----------------------------+ | | | | | |
+        | | | | | | +---------------------------+ | | | | | | |
+        | | | | | | | +-----------------------+ | | | | | | | |
+        | | | | | | | | +-------------------+ | | | | | | | | |
+        | | | | | | | | | +---------------+ | | | | | | | | | |
+        | | | | | | | | | | +-----------+ | | | | | | | | | | |
+        | | | | | | | | | | | +-------+ | | | | | | | | | | | |
+        | | | | | | | | | | | | +---+ | | | | | | | | | | | | |
+        | | | | | | | | | | | | |   | | | | | | | | | | | | | |
+        | | | | | | | | | | | | +---+ | | | | | | | | | | | | |
+        | | | | | | | | | | | +-------+ | | | | | | | | | | | |
+        | | | | | | | | | | +-.---------+ | | | | | | | | | | |
+        | | | | | | | | | +---.-----------+ | | | | | | | | | |
+        | | | | | | | | +-----.-------------+ | | | | | | | | |
+        | | | | | | | +-------.---------------+ | | | | | | | |
+        | | | | | | +---------.-----------------+ | | | | | | |
+        | | | | | +-.---------.-------------------+ | | | | | |
+        | | | | +---.---------.---------------------+ | | | | |
+        | | | +-----.---------.-----------------------+ | | | |
+        | | +-------.---------.-------------------------+ | | |
+        | +---------.---------.---------------------------+ | |
+        +-----------.---------.-----------------------------+ |
+                    |         |                         ^^^   |
+                    |<-@i35@->|                         |||   |
+                        VVV                   #_I35_IU5_DIA_# |
+                    d_i35_iu5[ i35 ]==>( iu5 )          |||   |
+                        VVV                             |||   |
+                    |<-@u05@->| : Uniform_rings_____5   |||   |
+                    |<-@iu5@->| : Inner___Uniform___5   VVV   |
+        +-----------.---------.-----------------------------+ |
+        |           .         .                             | |
+        |           .         .                             | |
+        |           .         .                             | |
+        |           .         .                             | |
+        |           .         .                             | |
+        |           +---------.-----------------+           | |
+        |           | +-------.---------------+ |           | |
+        |           | | +-----.-------------+ | |           | |
+        |           | | | +---.-----------+ | | |           | |
+        |           | | | | +-.---------+ | | | |           | |
+        |           | | | | | +-------+ | | | | |           | |
+        |           | | | | | | +---+ | | | | | |           | |
+        |           | | | | | | |   | | | | | | |           | |
+        |           | | | | | | +---+ | | | | | |           | |
+        |           | | | | | +-------+ | | | | |           | |
+        |           | | | | +-----------+ | | | |           | |
+        |           | | | +---------------+ | | |           | |
+        |           | | +-------------------+ | |           | |
+        |           | +-----------------------+ |           | |
+        |           +---------------------------+           | |
+        |                                                   | |
+        |                                                   | |
+        |                                                   | |
+        |                                                   | |
+        |                                                   | |
+        +---------------------------------------------------+ |
+                                                              |
+    :-----------------------------------: #_USE_RIN_DIAGRAM_# +
+    #_THE_WRONG_RINGS_# :-------------------------------------+
+                                                              |
+        I like these table names. But it ALIASES two          |
+        different[ u05 ]variables.                            |
+                                                              |
+            d_i35_u05[ i35 ] ===> u05 < < < DIFFERING_U05(s). |
+            d_o35_u05[ o35 ] ===> u05 < < < DIFFERING_U05(s). |
+                                                              |
+        This is uglier & harder to type :                     |
+        This is better...                                     |
+                                                              |
+            d_i35_i05[ i35 ] ===> i05 < < Uniform Inner 5     |
+            d_o35_o05[ o35 ] ===> o05 < < Uniform Outer 5     |
+                                                              |
+        Actually... Replace the zero with letter....          |
+        USE THESE NAMES!                                      |
+                                                              |
+            d_i35_iu5[ i35 ] ===> iu5 < < Inner Uniform 5     |
+            d_o35_ou5[ o35 ] ===> ou5 < < Outer Uniform 5     |
+                                                              |
+    +---------------------------------------------------------+
+    #_THE_TWO_RINGS_OF_POWER_# :------------------------------+
+    #_AKA_THE_RIGHT_RINGS_# :---------------------------------+
+                                                              |
+            d_i35_iu5[ i35 ] ===> iu5 < < Inner Uniform 5     |
+            d_o35_ou5[ o35 ] ===> ou5 < < Outer Uniform 5     |
+                                                              |
+    :---------------------------------------------------------+
+    :---------------------------------------------------------+
 
+    @d20@ : Discrete_Tile_5THS
                                                                   
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
