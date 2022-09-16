@@ -17335,6 +17335,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :          : sample point is in, and shift out     ::  // [271][270]
           :          : the associated bit.                   ::  // [271][270]
 
+    [271] : Before we get the correct binary-pixel-bit   ::::::  // [272][271]
+          : of our u_5x5 graphic, we need a lookup table ::::::  // [272][271]
+          : to help us partition discrete internal       ::::::  // [272][271]
+          : local coords of current tile into cells.     ::::::  // [272][271]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -27357,10 +27362,14 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
             
-    [271] : Before we get the correct binary-pixel-bit   ::::::  // [271]
-          : of our u_5x5 graphic, we need a lookup table ::::::  // [271]
-          : to help us partition discrete internal       ::::::  // [271]
-          : local coords of current tile into cells.     ::::::  // [271]
+    [272] : We are rendering[ u_5x5 ]bitmaps. But they look :::  // [272]
+          : scrambled. This is why we added[ USE_RIN ].     :::  // [272]
+          : Because we want to layer on transformations     :::  // [272]
+          : ONE AT A TIME BECAUSE GOD HELP YOU IF YOU       :::  // [272]
+          : END UP WITH TWO BUGS COMPOUNDED ON TOP OF       :::  // [272]
+          : EACH OTHER. ( I am an atheist by the way )      :::  // [272]
+          :             ( so it's even worse because )      :::  // [272]
+          :             ( god will not help you.     )      :::  // [272]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
