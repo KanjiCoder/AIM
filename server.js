@@ -930,8 +930,8 @@
         var d_tou_s4x = new Uint8Array([                         // [269]
                                   //: O[ x_0  x_1  y_0  y_1 ]:// // [269]
             A_1 , A_4 , D_1 , D_4 //: BIN[ 0____0____0____0 ]:// // [269]
-        ,   A_1 , A_4 , B_1 , B_4 //: BIN[ 0____0____0____1 ]:// // [274][BUG][269]  
-        ,   C_1 , C_4 , D_1 , D_4 //: BIN[ 0____0____1____0 ]:// // [274][BUG][269]  
+        ,   A_1 , A_4 , B_1 , B_4 //: BIN[ 0____0____0____1 ]:// // [274][BUG][269]
+        ,   C_1 , C_4 , D_1 , D_4 //: BIN[ 0____0____1____0 ]:// // [274][BUG][269]
         ,   B_1 , B_4 , C_1 , C_4 //: BIN[ 0____0____1____1 ]:// // [269]
         ,   A_1 , A_2 , D_1 , D_2 //: BIN[ 0____1____0____0 ]:// // [269]
         ,   A_1 , A_2 , B_1 , B_2 //: BIN[ 0____1____0____1 ]:// // [269]
@@ -6935,7 +6935,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                     u_b_1 =( ( dun - u_1 ) - c_dui_geo );        // [---][264][CAE][192]
                     //:      ( @_L_V_A_@ ) : : : : : : : ://     // [---][264][--------]
                     u_oob =(                                     // [---][264][COP][192]
-                    (                                            // [---][274][COP][192]
+                    (                                            // [---][264][COP][192]
                      (( IMF_VAC_LEF )&&( dil.x < u_b_0 ))?u_1 :  // [265][264][CAE][192]
                      (( IMF_VAC_TOP )&&( dil.y < u_b_0 ))?u_1 :  // [265][264][CAE][192]
                      (( IMF_VAC_RIG )&&( dil.x > u_b_1 ))?u_1 :  // [265][264][CAE][192]
@@ -17416,6 +17416,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :             ( so it's even worse because )      :::  // [273][272]
           :             ( god will not help you.     )      :::  // [273][272]
 
+    [273] : Auto tiles now render as                       ::::  // [274][273]
+          : 10x10 binary pixel graphics.                   ::::  // [274][273]
+          :                                                ::::  // [274][273]
+          : NEXT : Fix[ Fourset_Remix_Table ]              ::::  // [274][273]
+          :      : (A few things look wrong, but mapping)  ::::  // [274][273]
+          :      : (Is mostly correct)                     ::::  // [274][273]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -27495,12 +27502,11 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                 
-    [273] : Auto tiles now render as                       ::::  // [273]
-          : 10x10 binary pixel graphics.                   ::::  // [273]
-          :                                                ::::  // [273]
-          : NEXT : Fix[ Fourset_Remix_Table ]              ::::  // [273]
-          :      : (A few things look wrong, but mapping)  ::::  // [273]
-          :      : (Is mostly correct)                     ::::  // [273]
+    [274] : Fixed Fourset Remix Table. Two entries      :::::::  // [274]
+          : were inverted. They are fixed now.          :::::::  // [274]
+          : The engine is starting to look cool. After  :::::::  // [274]
+          : 2_7_4 videos I am now starting to get       :::::::  // [274]
+          : pretty excited about this.                  :::::::  // [274]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
