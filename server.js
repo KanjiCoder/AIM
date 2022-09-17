@@ -17407,6 +17407,15 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : to help us partition discrete internal       ::::::  // [272][271]
           : local coords of current tile into cells.     ::::::  // [272][271]
 
+    [272] : We are rendering[ u_5x5 ]bitmaps. But they look :::  // [273][272]
+          : scrambled. This is why we added[ USE_RIN ].     :::  // [273][272]
+          : Because we want to layer on transformations     :::  // [273][272]
+          : ONE AT A TIME BECAUSE GOD HELP YOU IF YOU       :::  // [273][272]
+          : END UP WITH TWO BUGS COMPOUNDED ON TOP OF       :::  // [273][272]
+          : EACH OTHER. ( I am an atheist by the way )      :::  // [273][272]
+          :             ( so it's even worse because )      :::  // [273][272]
+          :             ( god will not help you.     )      :::  // [273][272]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -27485,15 +27494,13 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
-            
-    [272] : We are rendering[ u_5x5 ]bitmaps. But they look :::  // [272]
-          : scrambled. This is why we added[ USE_RIN ].     :::  // [272]
-          : Because we want to layer on transformations     :::  // [272]
-          : ONE AT A TIME BECAUSE GOD HELP YOU IF YOU       :::  // [272]
-          : END UP WITH TWO BUGS COMPOUNDED ON TOP OF       :::  // [272]
-          : EACH OTHER. ( I am an atheist by the way )      :::  // [272]
-          :             ( so it's even worse because )      :::  // [272]
-          :             ( god will not help you.     )      :::  // [272]
+                
+    [273] : Auto tiles now render as                       ::::  // [273]
+          : 10x10 binary pixel graphics.                   ::::  // [273]
+          :                                                ::::  // [273]
+          : NEXT : Fix[ Fourset_Remix_Table ]              ::::  // [273]
+          :      : (A few things look wrong, but mapping)  ::::  // [273]
+          :      : (Is mostly correct)                     ::::  // [273]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
