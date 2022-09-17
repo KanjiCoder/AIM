@@ -27527,31 +27527,39 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                 
-        REFACTORING[ d_tou_s4x ] ===> [ d_tou_f4x ]DONE
-        REFACTORING[ d_tou_s4y ] ===> [ d_tou_f4y ]DONE
-        REFACTORING[       s4x ] ===> [       f4x ]DONE
-        REFACTORING[       s4y ] ===> [       f4y ]DONE
-        REFACTORING[ s4i ] ===> [ f16 ] DONE (no changes)
-        REFACTORING[ fx4 ] ===> [ f4x ] DONE
-        REFACTORING[ fy4 ] ===> [ f4y ] DONE
-        REFACTORING[ fi4 ] ===> [ f16 ] DONE (no changes)
-
-        REFACTOR_FROM[ d_fourset_la3_v16_f16_binfour ] DONE
-        REFACTOR___TO[ d_fourset_la3_v16_f16_u25clus ] DONE
-        
-        REFACTOR_FROM[ i_binfour   ] DONE
-        REFACTOR___TO[ i_u25clus   ] DONE
-        
-        REFACTOR_FROM[ all_binfour ] DONE
-        REFACTOR___TO[ all_u25clus ] DONE
-
-        REFACTOR_FROM[ ALL_BINFOUR ] DONE
-        REFACTOR___TO[ ALL_U25CLUS ] DONE
-
-        REFACTOR[ binfour ] ===> [ u25clus ]DONE
-
-        LOOK_FOR_MISTAKE[ u25clust ]===>[ u25clus ]DONE
-        LOOK_FOR_MISTAKE[ binclust ]===>[ u25clus ]DONE
+    [275] :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [275]
+    ||                                                       ::  // [275]
+    ||  A long overdue refactoring of names for better       ::  // [275]
+    ||  consistency. A problem well defined is a problem     ::  // [275]
+    ||  half solved. And consistent variable names are       ::  // [275]
+    ||  key to clearly defining a problem.                   ::  // [275]
+    ||                                                       ::  // [275]
+    ||  REFACTORING[ d_tou_s4x ] ===> [ d_tou_f4x ]DONE      ::  // [275]
+    ||  REFACTORING[ d_tou_s4y ] ===> [ d_tou_f4y ]DONE      ::  // [275]
+    ||  REFACTORING[       s4x ] ===> [       f4x ]DONE      ::  // [275]
+    ||  REFACTORING[       s4y ] ===> [       f4y ]DONE      ::  // [275]
+    ||  REFACTORING[ s4i ] ===> [ f16 ] DONE (no changes)    ::  // [275]
+    ||  REFACTORING[ fx4 ] ===> [ f4x ] DONE                 ::  // [275]
+    ||  REFACTORING[ fy4 ] ===> [ f4y ] DONE                 ::  // [275]
+    ||  REFACTORING[ fi4 ] ===> [ f16 ] DONE (no changes)    ::  // [275]
+    ||                                                       ::  // [275]
+    ||  REFACTOR_FROM[ d_fourset_la3_v16_f16_binfour ] DONE  ::  // [275]
+    ||  REFACTOR___TO[ d_fourset_la3_v16_f16_u25clus ] DONE  ::  // [275]
+    ||                                                       ::  // [275]
+    ||  REFACTOR_FROM[ i_binfour   ] DONE                    ::  // [275]
+    ||  REFACTOR___TO[ i_u25clus   ] DONE                    ::  // [275]
+    ||                                                       ::  // [275]
+    ||  REFACTOR_FROM[ all_binfour ] DONE                    ::  // [275]
+    ||  REFACTOR___TO[ all_u25clus ] DONE                    ::  // [275]
+    ||                                                       ::  // [275]
+    ||  REFACTOR_FROM[ ALL_BINFOUR ] DONE                    ::  // [275]
+    ||  REFACTOR___TO[ ALL_U25CLUS ] DONE                    ::  // [275]
+    ||                                                       ::  // [275]
+    ||  REFACTOR[ binfour ] ===> [ u25clus ]DONE             ::  // [275]
+    ||                                                       ::  // [275]
+    ||  LOOK_FOR_MISTAKE[ u25clust ]===>[ u25clus ]DONE      ::  // [275]
+    ||  LOOK_FOR_MISTAKE[ binclust ]===>[ u25clus ]DONE      ::  // [275]
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [275]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
