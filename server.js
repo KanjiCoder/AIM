@@ -17754,6 +17754,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : SEE[ _USE_RIN_IS_NOT_META_BULGE_ ]         ::::::::  // [279][278]
           : :::::::::::::::::::::::::::::::::::::::::::::::::::  // [279][278]
 
+    [279] : Animated the bulging effect on tiles for fun. :::::  // [280][279]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -28252,7 +28254,17 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                 
-    [279] : Animated the bulging effect on tiles for fun. :::::  // [279]
+    [280] : Composited :...:                     ::::::::::::::
+          : :::::::::::: 1 : Bluge Out           ::::::::::::::
+          : :::::::::::: 2 : No Bulge            ::::::::::::::
+          : :::::::::::: 3 : Bluge In            ::::::::::::::
+          :                                      ::::::::::::::
+          : All on top of each other. Used       ::::::::::::::
+          : "BulgeOut" for base colors.          ::::::::::::::
+          : Resultant tiles have an interesting  ::::::::::::::
+          : "inner drop shadow" look to them.    ::::::::::::::
+          :                                      ::::::::::::::
+          : NEXT: Shader Optimizations.          ::::::::::::::
           
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
