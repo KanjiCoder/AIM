@@ -195,9 +195,6 @@
                                                                  // [---]
     //:#_BULGE_CONSTANTS_#:[278]:========================://     // [278]
                                                                  // [278]
-
-
-                                                                 // [278]
         const c_bu3_bulgout =( 0 ); //: BulgeMode : OUT  ://     // [278]
         const c_bu3_bulgnot =( 1 ); //: BulgeMode : NOT  ://     // [278]
         const c_bu3_bulginn =( 2 ); //: BulgeMode : INN  ://     // [278]
@@ -5065,7 +5062,6 @@ const d_artgirl_smacros =(` //////////////////////////////////// // [251]
     //: TAG[ artgirl-shader-constants | artgirl-sc         ]     // [263]
     //: TAG[ artgirl-shader-macros | shader-macros         ]     // [264]
                                                                  // [---]
-
     //:#_BULGE_CONSTANTS_#:[278]:========================://     // [278]
                                                                  // [278]
         #define c_bu3_bulgout ( U32( ${c_bu3_bulgout} ) )        // [278]
@@ -28212,21 +28208,25 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         In the future.                                        |  // [278]
                                                               |  // [278]
     :-------------------------: #_USE_RIN_IS_NOT_META_BULGE_# +  // [278]
-
-
-                                                            
+                                            
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***         
                 
-    [278] : Shader hard coded for "bulging in" mode.   ::::::::  // [278]
+    [278] : :::::::::::::::::::::::::::::::::::::::::::::::::::  // [278]
+          : DONE:::::::::::::::::::::::::::::::::::::::::::::::  // [278]
+          : Shader hard coded for "bulging in" mode.   ::::::::  // [278]
+          :                                            ::::::::  // [278]
+          : NOTE ::::::::::::::::::::::::::::::::::::::::::::::  // [278]
           : REMEMBER!!! This is on a "per-tile" basis. ::::::::  // [278]
           : So when you put down a 2x2 cluster of      ::::::::  // [278]
           : the same tile on the tilemap, the OVERALL  ::::::::  // [278]
           : EMERGENT AUTO TILED PATTERN IS NOT GOING   ::::::::  // [278]
           : TO BULGE. _NOT_GOING_TO_BULGE_             ::::::::  // [278]
+          :                                            ::::::::  // [278]
           : SEE[ _USE_RIN_IS_NOT_META_BULGE_ ]         ::::::::  // [278]
+          : :::::::::::::::::::::::::::::::::::::::::::::::::::  // [278]
           
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
