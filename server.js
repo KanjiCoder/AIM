@@ -4060,7 +4060,13 @@ UPNG.encode.concatRGBA = function(bufs) {
     //:TAG[ illegal-section | illegal-section | illegals]://     // [109]
     //:TAG[ illegal section | illegalsection | illsec   ]://     // [109]
                                                                  // [---]
-
+    //:#_DU3_AND_BU3_ARE_DIFFERENT_THINGS_#:[278]:-------://     // [278]
+                                                                 // [278]
+        const d_d34_du3_r10 = "[FIX:d_r34_bu3_r10]" ;            // [278]
+        const d_r34_du3_r10 = "[FIX:d_r34_bu3_r10]" ;            // [278]
+        const d_d34_bu3_r10 = "[FIX:d_r34_bu3_r10]" ;            // [278]
+                                                                 // [278]
+    //:-------:#_DU3_AND_BU3_ARE_DIFFERENT_THINGS_#:[278]://     // [278]
     //:#_ILLEGAL_FOURSET_VARIABLES_#:[270]:--------------://     // [270]
                                                                  // [270]
         const  u25c = "[FIX:u_5x5:::(5x5_BitmapIn_U32)]";        // [270]
@@ -7220,11 +7226,11 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
                         U32 u_34x =( dil.x / u_d34 );
                         U32 u_34y =( dil.y / u_d34 );
 
-                        U32 u_10x = d_d34_du3_r10[
+                        U32 u_10x = d_r34_bu3_r10[
 
                            (u_34x * u_3)+(MACRO_DU3)
                         ];;
-                        U32 u_10y = d_d34_du3_r10[
+                        U32 u_10y = d_r34_bu3_r10[
 
                            (u_34y * u_3)+(MACRO_DU3)
                         ];;
@@ -28054,6 +28060,13 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                does add RISK because of items #1 and #2.      |  // [278]
                                                               |  // [278]
     :---------------------------------------------------------+  // [278]
+    #_DU3_AND_BU3_ARE_DIFFERENT_THINGS_# :--------------------+  // [278]
+                                                              |  // [278]
+        DU3 : Number of discrete units in our 4th             |  // [278]
+            : tile size. ( our 8x sized tile )                |  // [278]
+                                                              |  // [278]
+        BU3 : Bulge Mode Enumeration. [ 0 | 1 | 2 ]           |  // [278]
+    +---------------------------------------------------------+  // [278]
                                                             
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
