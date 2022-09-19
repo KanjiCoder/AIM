@@ -6840,7 +6840,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
     //: FRAG_SHADER_STR[ d_artgirl_ssf_006 ] ://                 // [081]
     //: FRAG_SHADER_ENU[ c_artgirl_ren_006 ] ://                 // [081] 
                                                                  // [---]
-    ${d_artgirl_crazybi} //:@Crazy_Bitch_Macros@:::::::::://     // [283]
+///  @{d_artgirl_crazybi} //:@Crazy_Bitch_Macros@:::::::::://     // [283]
     ${d_artgirl_use}     //:Conditional_Compilation :::::://     // [263]
     ${d_artgirl_smacros} //:@smacros@:ShaderMacros  :::::://     // [251](250)
     ${d_artgirl_shadlut} //:Shader Lookup Tables    :::::://     // [253]
