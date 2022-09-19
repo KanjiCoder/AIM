@@ -5686,10 +5686,7 @@ const d_artgirl_imf =(` //////////////////////////////////////// // [260]
     //:-----------------:_TOUCHING_TEST_FUNCTIONS__:[265]://     // [265]
     //:_TOUCHING_MONKEY_WRENCH_MACROS_:[265]:------------://     // [265]
                                                         ////     // [265]
-        #define IMF_EMP_LEF "[FIX:IMF_VAC_LEF]"         ////     // [265]
-        #define IMF_EMP_RIG "[FIX:IMF_VAC_RIG]"         ////     // [265]
-        #define IMF_EMP_TOP "[FIX:IMF_VAC_TOP]"         ////     // [265]
-        #define IMF_EMP_BOT "[FIX:IMF_VAC_BOT]"         ////     // [265]
+        //:#_SOME_MOVED_TO_CRAZY_BITCHES_HOUSE_#://     ////     // [283]
                                                         ////     // [265]
         #define IMF_TOU_UPP "[FIX:IMF_TOU_TOP]"         ////     // [265]
         #define IMF_TOU_DOW "[FIX:IMF_TOU_BOT]"         ////     // [265]
@@ -29048,8 +29045,16 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                                  // [283]
     @am4@ : Autotile_[ Mask/Method ]_4Bits                       // [283][MOV][282]
           : Because, using 4 bits. "Auto Tile Method 4 Bits"     // [283][MOV][282]
-
-
+                                                                 // [283]
+    #_SOME_MOVED_TO_CRAZY_BITCHES_HOUSE_# :-------------------+  // [283]
+                                                              |  // [283]
+        To avoid macro re-definition error                    |  // [283]
+                                                              |  // [283]
+            MOVED_TO_CRAZYBITCHESHOUSE[ IMF _ EMP _ LEF ]     |  // [283]
+            MOVED_TO_CRAZYBITCHESHOUSE[ IMF _ EMP _ RIG ]     |  // [283]
+            MOVED_TO_CRAZYBITCHESHOUSE[ IMF _ EMP _ TOP ]     |  // [283]
+            MOVED_TO_CRAZYBITCHESHOUSE[ IMF _ EMP _ BOT ]     |  // [283]
+    :---------------------------------------------------------+  // [283]
                                             
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
@@ -29098,6 +29103,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     ::::    : REFACTOR [ c_notouch_y ]==>[ c_to4_del_y ]    :::  // [283][--------]
     ::::                                                    :::  // [283][--------]
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [283][--------]
+
+
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
