@@ -4870,7 +4870,7 @@ if( yesnode ){ //:-------------------------------------------://
 
     const __super_secret_shader_waterfall_agenda__ ="[HACK]"     // [282][--------]
                                                                  // [282][---][---]   
-    ,   c_artgirl_ren_000 = "[DONT_USE:000]" ;                   // [282][068][---]
+    ,   c_artgirl_ren_000 = "[DONT_USE:000]"                     // [282][068][---]
     ,   c_artgirl_ren_bad = ( 0 )  //:Select:ren_def     ://     // [282][068][---]
                                                                  // [282][---][---]
     ,   c_artgirl_ren_001 = ( 1 )  //:FLAT_CYAN_COLOR    ://     // [282][081][068]
