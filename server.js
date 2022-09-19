@@ -335,20 +335,20 @@
     ,   c_am4_3my   = ( 0x1 )  //:BIN[       0 0 0 1   ]://      // [283][REF][263]
     ////                                                ////     // [283][REF][263]
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [283][---][263]
-                                                                 // [263]
-    ASS( (0x1) ===((c_notouch_x >> 0)&(0x1)) , "[NT0]"     );    // [263]
-    ASS( (0x1) ===((c_notouch_x >> 1)&(0x1)) , "[NT1]"     );    // [263]
-    ASS( (0x1) ===((c_notouch_y >> 2)&(0x1)) , "[NT2]"     );    // [263]
-    ASS( (0x1) ===((c_notouch_y >> 3)&(0x1)) , "[NT3]"     );    // [263]
-                                                                 // [263]
+                                                                 // [-------------]
+    ASS( (0x1) ===((c_to4_del_x >> 0)&(0x1)) , "[@NTB_0@]" );    // [283][REF][263]
+    ASS( (0x1) ===((c_to4_del_x >> 1)&(0x1)) , "[@NTB_1@]" );    // [283][REF][263]
+    ASS( (0x1) ===((c_to4_del_y >> 2)&(0x1)) , "[@NTB_2@]" );    // [283][REF][263]
+    ASS( (0x1) ===((c_to4_del_y >> 3)&(0x1)) , "[@NTB_3@]" );    // [283][REF][263]
+                                                                 // [-------------]
     ASS( (0x1) ===( c_am4_0lx   >> 3       ) , "[HOR_LAT]" );    // [283][REF][263]
     ASS( (0x1) ===( c_am4_1ly   >> 2       ) , "[VER_LAT]" );    // [283][REF][263]
     ASS( (0x1) ===( c_am4_2mx   >> 1       ) , "[HOR_MIR]" );    // [283][REF][263]
     ASS( (0x1) ===( c_am4_3my   >> 0       ) , "[VER_MIR]" );    // [283][REF][263]
     ASS( (0xC) ===( c_am4_0lx | c_am4_1ly  ) , "[LATCHES]" );    // [283][REF][263]
     ASS( (0x3) ===( c_am4_2mx | c_am4_3my  ) , "[MIRRORS]" );    // [283][REF][263]
-                                                                 // [---]
-    const c_fps =(  30  );  /** Simulation FrameRate **/         // [088][085]
+                                                                 // [-------------]
+    const c_fps =(  30  );  /** Simulation FrameRate **/         // [088][085][---]
                                                                  // [---]                      
     const c_dud = "[YOU_MEAN:c_dum:NO:DiscreteUnits:DUM]" ;      // [088]
                                                                  // [---]
@@ -5129,7 +5129,6 @@ const d_artgirl_crazybi =(` //:TAG[ crazy_bitch | crazy ]://     // [283]
     #define c_to4_x_1  "[OH_NO_YOU_DIDNT_BITCH:::c_to4_rig]"     // [283]
     #define c_to4_y_0  "[OH_NO_YOU_DIDNT_BITCH:::c_to4_top]"     // [283]
     #define c_to4_y_1  "[OH_NO_YOU_DIDNT_BITCH:::c_to4_bot]"     // [283]
-
                                                                  // [283]
     //:#_AM4_BLOCKED____NOT____TO4_BLOCKED_#://                  // [283]
     //:#_TO4_DELBITS____NOT____AM4_DELBITS_#://                  // [283]
@@ -5188,16 +5187,7 @@ const d_artgirl_crazybi =(` //:TAG[ crazy_bitch | crazy ]://     // [283]
         #define d_tou_f4y "[D_TOU_F_WITH_FOUR::::d_to4_f4y]"     // [283]
                                                                  // [283]
     //:================:#_DONT_TOUCH_ME_LIKE_THAT_#:[283]://     // [283]
-
-
-
-
-                                                                  
-
-
-
-
-
+                                                                 // [283]
 `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; // [283]
 //:====================:__ARTGIRL__:CRAZY_BITCH_MACROS::[283]:// // [283]
 //:====================:__ARTGIRL__:PSYCHO_BITCH_MACROS:[283]:// // [283]
@@ -5264,12 +5254,12 @@ const d_artgirl_smacros =(` //////////////////////////////////// // [251]
     #define STF texelFetch //: EX: STF( d_pix2048,iv2,0 )://     // [259]
     #define UNI uniform    //:SEE[ d_artgirl_uniform ]   ://     // [251]
     #define SAM usampler2D //: Uint32 Texture Sampler    ://     // [251]
-                                                                 // [---]
-    #define DIB (U32(0x03))             //: Dibit_Dibble ://     // [263]
-    #define NIB (U32(0x0F))             //: Nyble_Nibble ://     // [263]
-    #define SEX (U32(0x3F))             //: Sex______Tet ://     // [263]
-    #define BYE (U32(0xFF))             //: BYE_BYTE!!!! ://     // [283]
-                                                                 // [263]
+                                                                 // [-------------]
+    #define DIB (U32(0x03))             //: Dibit_Dibble ://     // [---][263][---]
+    #define NIB (U32(0x0F))             //: Nyble_Nibble ://     // [---][263][---]
+    #define SEX (U32(0x3F))             //: Sex______Tet ://     // [---][263][---]
+    #define BYE (U32(0xFF))             //: BYE_BYTE!!!! ://     // [283][---][---]
+                                                                 // [---][---][---]
     //:@__auto_tile_constants__@:[263]:----------------------:// // [-------------]
                                               //:B[ X X Y Y ]:// // [283][REF][263]
     #define c_to4_del_x U32( ${c_to4_del_x} ) //:B[ 0 0 1 1 ]:// // [283][REF][263]
@@ -15756,62 +15746,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
             : http://learnwebgl.brown37.net                      // [118][067]
             :       /the_big_picture/3d_rendering.html           // [118][067]
                                                                  // [---]
-    TODO003 : "AM4" Auto_Tile_Mask needs to be 4 bits.  :::::::  // [283][REF][270]
-                                                        :::::::  // [270]
-               SYM[  L_X  L_Y  M_X  M_Y ]               :::::::  // [270]
-               BIN[  _1_  _1_  _1_  _1_ ]               :::::::  // [270]
-                                                        :::::::  // [270]
-               @L_X@ : Latch  X                         :::::::  // [270]
-               @L_Y@ : Latch  Y                         :::::::  // [270]
-               @M_X@ : Mirror X                         :::::::  // [270]
-               @M_Y@ : Mirror Y                         :::::::  // [270]
-                                         ::::::::::::::::::::::  // [282]
-               #_ITS_FUCKING_HERE_2022_# ::::::::::::::::::::::  // [282]
-
+    TODO003 : SEE[ DONE003 ]                                     // [283][REF][270]
     TODO004 :[ _WARPED_FOURSET_EDGES_ ] < < < < < < < < < < < <  // [271]
-
-    TODO005 : REFACTOR[ USE_ATM ]===>[ USE_AM4 ] (DONE)          // [283][282]
-            : REFACTOR[     ATM ]===>[     AM4 ] (DONE)          // [283]
-            : REFACTOR[   A_T_M ]===>[   A_M_4 ] (DONE)          // [283]
-            : REFACTOR[   u_v64 ]===>[   u_vff ] (DONE)          // [283]
-            : REFACTOR[   u_atm ]===>[   u_am4 ] (DONE)          // [283]
-            : REFACTOR[   u_tou ]===>[   u_to4 ]                 // [283]
-                                                                 // [283]
-            : REFACTOR[ d_tou_f4x ]=>[ d_to4_f4x ](DONE)         // [283]
-            : REFACTOR[ d_tou_f4y ]=>[ d_to4_f4y ](DONE)         // [283]
-                                                                 // [283]
-            : REFACTOR[ c_tou_lef ]===>[ c_to4_lef ](DONE)       // [283]
-            : REFACTOR[ c_tou_rig ]===>[ c_to4_rig ](DONE)       // [283]
-            : REFACTOR[ c_tou_top ]===>[ c_to4_top ](DONE)       // [283]
-            : REFACTOR[ c_tou_bot ]===>[ c_to4_bot ](DONE)       // [283]
-                                                                 // [283]
-            : REFACTOR [ c_bit_hor ]===>[ c_am4_0lx ](DONE)      // [283]
-            : REFACTOR [ c_bit_ver ]===>[ c_am4_1ly ](DONE)      // [283]
-            :     MAKE .................[ c_am4_2mx ](DONE)      // [283]
-            :     MAKE .................[ c_am4_3my ](DONE)      // [283]
-
-            : REFACTOR [ c_notouch_x ]==>[ c_to4_del_x ]         // [283]  < < < < < < NOTICE_ME_SENPAI
-            : REFACTOR [ c_notouch_y ]==>[ c_to4_del_y ]         // [283]  < < < < < < NOTICE_ME_SENPAI
-
-
-
-
- 
- 
- 
- 
-            slkfjslfjlsjf < < < < < < < IAM INCREDIBLY TIRED. ... NOTICE_ME_SENPAI
-
-
-
-
-
-
-
-
-            : Because, using 4 bits. "Auto Tile Method 4 Bits"   // [282]
-            : @am4@ : Autotile_[ Mask/Method ]_4Bits             // [282]
-
+    TODO005 : SEE[ DONE005 ]                                     // [283][282]
                                                                  // [270]
 *** *************************************************** TODO **/ // [270]
 //:=======================================:TODO_SECTION:[270]:// // [270]
@@ -18033,6 +17970,18 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : [ c_g64 , c_b64 , c_f64 , c_d64 ]        ::::::::::  // [282][281]
           : @VIDNAME@[ "Simpler Auto Tile Shader - Part 1" ]     // [282][281]
           : @VID_URL@[ XXXX_SET_HERE_WHEN_UPLOADED_XXXXXXX ]     // [282][281]
+
+    [282] : Refactoring/Organizing Our Thoughts.                 // [283][282]
+          :   :                                                  // [283][282]
+          : 1 : Fragment Shader Rendering Modes Enums Cleanup.   // [283][282]
+          : 2 : Shader Seven(7) Now Uses Mode[ fsm _ per ].      // [283][282]
+          : 3 : Updated Our Super Secret Shader Agenda           // [283][282]
+          : 4 : "CTRL+F" section now deprecated. Use TagSec.     // [283][282]
+          :   :                                                  // [283][282]
+          : NEXT_1X : TODO005                                    // [283][282]
+          : NEXT_2X : Draw Optimized Empty Tile Space Grid       // [283][282]
+          : NEXT_3X : Active Tile Highlight. USE_ATH             // [283][282]
+          : NEXT_4X : Brush Value Symbol.    USE_BVS             // [283][282]
                                                                      
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -28865,7 +28814,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         |           | 3    |     |                     |      |  // [282]
         | LA3 : 000 | 4    |     |      LA3 : 000      |      |  // [282]
         |           | 5    |     |                     |      |  // [282]
-        | V16 : 000 | 6   011    |      V16 : 000      |      |  // [283][282]
+        | V16 : 000 | 6   011    |      V16 : 000      |      |  // [283][BUG][282]
         |           | 7    |     |                     |      |  // [282]
         | TLX : 000 | 8    |     |      TLX : 000      |      |  // [282]
         |           | 9    |     |                     |      |  // [282]
@@ -29091,24 +29040,65 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                                  // [283]
     @L_L_M_M@ : Latch_Latch_Mirror_Mirror                        // [283]
               : (Latch_X , Latch_Y , Mirror_X , Mirror_Y )       // [283]
+                                                                 // [283]
+    @NTB_0@ : NoTouchBit_0                                       // [283]
+    @NTB_1@ : NoTouchBit_1                                       // [283]
+    @NTB_2@ : NoTouchBit_2                                       // [283]
+    @NTB_3@ : NoTouchBit_3                                       // [283]
+                                                                 // [283]
+    @am4@ : Autotile_[ Mask/Method ]_4Bits                       // [283][MOV][282]
+          : Because, using 4 bits. "Auto Tile Method 4 Bits"     // [283][MOV][282]
+
+
                                             
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
-/** ******************************************************** ***         
-                
-    [282] : Refactoring/Organizing Our Thoughts.                 // [282]
-          :   :                                                  // [282]
-          : 1 : Fragment Shader Rendering Modes Enums Cleanup.   // [282]
-          : 2 : Shader Seven(7) Now Uses Mode[ fsm _ per ].      // [282]
-          : 3 : Updated Our Super Secret Shader Agenda           // [282]
-          : 4 : "CTRL+F" section now deprecated. Use TagSec.     // [282]
-          :   :                                                  // [282]
-          : NEXT_1X : TODO005                                    // [282]
-          : NEXT_2X : Draw Optimized Empty Tile Space Grid       // [282]
-          : NEXT_3X : Active Tile Highlight. USE_ATH             // [282]
-          : NEXT_4X : Brush Value Symbol.    USE_BVS             // [282]
-          
+/** ******************************************************** ***     
+
+    [283]::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [283][--------]
+    ::::                                                :::::::  // [283][--------]
+    ::::    A HORRIBLE HORRIBLE CASCADE OF REFACTORING. :::::::  // [283][--------]
+    ::::    DATE[ 2022_09_19 , 537PM ]                  :::::::  // [283][--------]
+    ::::    -KanjiCoder                                 :::::::  // [283][--------]
+    ::::                                                :::::::  // [283][--------]
+    DONE003 : "AM4" Auto_Tile_Mask needs to be 4 bits.  :::::::  // [283][REF][270]
+    ::::                                                :::::::  // [283][MOV][270]
+    ::::       SYM[  L_X  L_Y  M_X  M_Y ]               :::::::  // [283][MOV][270]
+    ::::       BIN[  _1_  _1_  _1_  _1_ ]               :::::::  // [283][MOV][270]
+    ::::                                                :::::::  // [283][MOV][270]
+    ::::       @L_X@ : Latch  X                         :::::::  // [283][MOV][270]
+    ::::       @L_Y@ : Latch  Y                         :::::::  // [283][MOV][270]
+    ::::       @M_X@ : Mirror X                         :::::::  // [283][MOV][270]
+    ::::       @M_Y@ : Mirror Y                         :::::::  // [283][MOV][270]
+    ::::                                 ::::::::::::::::::::::  // [283][MOV][282]
+    ::::       #_ITS_FUCKING_HERE_2022_# ::::::::::::::::::::::  // [283][MOV][282]
+    ::::                                                    :::  // [-------------]
+    DONE005 : REFACTOR[ USE_ATM ]===>[ USE_AM4 ] (DONE)     :::  // [283][MOV][282]
+    ::::    : REFACTOR[     ATM ]===>[     AM4 ] (DONE)     :::  // [283][--------]
+    ::::    : REFACTOR[   A_T_M ]===>[   A_M_4 ] (DONE)     :::  // [283][--------]
+    ::::    : REFACTOR[   u_v64 ]===>[   u_vff ] (DONE)     :::  // [283][--------]
+    ::::    : REFACTOR[   u_atm ]===>[   u_am4 ] (DONE)     :::  // [283][--------]
+    ::::    : REFACTOR[   u_tou ]===>[   u_to4 ]            :::  // [283][--------]
+    ::::                                                    :::  // [283][--------]
+    ::::    : REFACTOR[ d_tou_f4x ]=>[ d_to4_f4x ](DONE)    :::  // [283][--------]
+    ::::    : REFACTOR[ d_tou_f4y ]=>[ d_to4_f4y ](DONE)    :::  // [283][--------]
+    ::::                                                    :::  // [283][--------]
+    ::::    : REFACTOR[ c_tou_lef ]===>[ c_to4_lef ](DONE)  :::  // [283][--------]
+    ::::    : REFACTOR[ c_tou_rig ]===>[ c_to4_rig ](DONE)  :::  // [283][--------]
+    ::::    : REFACTOR[ c_tou_top ]===>[ c_to4_top ](DONE)  :::  // [283][--------]
+    ::::    : REFACTOR[ c_tou_bot ]===>[ c_to4_bot ](DONE)  :::  // [283][--------]
+    ::::                                                    :::  // [283][--------]
+    ::::    : REFACTOR [ c_bit_hor ]===>[ c_am4_0lx ](DONE) :::  // [283][--------]
+    ::::    : REFACTOR [ c_bit_ver ]===>[ c_am4_1ly ](DONE) :::  // [283][--------]
+    ::::    :     MAKE .................[ c_am4_2mx ](DONE) :::  // [283][--------]
+    ::::    :     MAKE .................[ c_am4_3my ](DONE) :::  // [283][--------]
+    ::::                                                    :::  // [283][--------]
+    ::::    : REFACTOR [ c_notouch_x ]==>[ c_to4_del_x ]    :::  // [283][--------]
+    ::::    : REFACTOR [ c_notouch_y ]==>[ c_to4_del_y ]    :::  // [283][--------]
+    ::::                                                    :::  // [283][--------]
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [283][--------]
+
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
 
