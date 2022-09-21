@@ -7709,7 +7709,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                                                                  // [284]
             UV2 ufc =UV2( IMF_UFC_X , IMF_UFC_Y ); //[ufc]//     // [284]
             FV2 lpc =FV2( IMF_LPC_X , IMF_LPC_Y ); //[lpc]//     // [284]
-                dug =UV2( IMF_DUG_X , IMG_DUG_Y ); //[dug]//     // [284]
+                dug =UV2( IMF_DUG_X , IMF_DUG_Y ); //[dug]//     // [284]
             if(   IMF_UFC_OOB_X_0                                // [284]
             ||    IMF_UFC_OOB_X_1                                // [284]
             ||    IMF_UFC_OOB_Y_0                                // [284]
@@ -29533,6 +29533,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         bit31 is a lookup table : ( nbi:31 )===>( abi:00 )    |  // [284]
                                                               |  // [284]
     +---------------------------------------------------------+  // [284]
+                                                                 // [284]
+    @IMG_@ : Likely a typo of[ IMF_*** ]something.               // [284]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
