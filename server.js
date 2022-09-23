@@ -423,7 +423,7 @@
         const c_mmi_artdeca =( c_mmb   );                        // [289]
         const c_mmx_artdeca =( c_mmb_x );                        // [289]
         const c_mmy_artdeca =( c_mmb_y );                        // [289]
-        ASS(  c_mmx_artdeca *( c_mmy_artdeca * 4 )===c_mmb       // [289]
+        ASS(  c_mmx_artdeca +( c_mmy_artdeca * 4 )===c_mmb       // [289]
            , "[MMI_MMX_MMY:ARTDECA]" );;;;;;;;;;;;;;;;;;;;       // [289]
                                                                  // [289]
     //:-------:#_MASTER_MEMORY_INDEXES_BY_SUB_SYS_#:[289]://     // [289]
