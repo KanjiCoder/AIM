@@ -31974,13 +31974,31 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [290]
             AKA: Re-Entrant Initialization.                   |  // [290]
     +---------------------------------------------------------+  // [290]
+    @SATS_SUB_SERIES@ : Simpler_Auto_Tile_Shader_Sub_Series      // [290]
+                      : The current video sub series we are      // [290]
+                      : on , which starte at video #2_8_1        // [290]
+                      : and goes for however long it takes.      // [290]
                               
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [290] : Stubbed In Multi-Step-Initializer( MSI )vars.        // [290]
+    [290] : Stubbed In Multi-Step-Initializer( MSI )vars. :::::  // [290]
+                                                             ::  // [290]
+        AGENDA_2022_09_23 :--------------------------------: ::  // [290]
+        :                                                  : ::  // [290]
+        :   1. Stub in MSI Function Code                   : ::  // [290]
+        :   2. ARTGOLA - Non fractal graphics render.      : ::  // [290]
+        :   3. Get Shader #7 displaying ARTGOLA graphics   : ::  // [290]
+        :   4. ARTGOLA - Fractal graphics render           : ::  // [290]
+        :   5. ARTDECA - Non fractal graphics render.      : ::  // [290]
+        :   6. Get Shader #7 displaying ARTDECA graphics   : ::  // [290]
+        :   7. ARE[ USE_ATH ]AND[ USE_BVS ]Done ?          : ::  // [290]
+        :      If so, @SATS_SUB_SERIES@ is done.           : ::  // [290]
+        :--------------------------------------------------: ::  // [290]
+                                                             ::  // [290]
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [290]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
