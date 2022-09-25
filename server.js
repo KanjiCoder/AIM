@@ -8477,7 +8477,7 @@ if( /** __GOLA512__ **/ notnode ){ //:::::::::::::::::::::::::// // [292]
     let B =( 0x111111FF ); //:@_GREYSCALE_@://                   // [293]
                                                                  // [293]
     {                                                            // [293]
-        let _ =( 0x00000000 ); //:@_TRANS_BLACK_@://             // [293]
+        let _ =(  0  ); //:@_ZERO_TCENUM_@://                    // [293]
                                                                  // [293]
         var d_gola512_udesign_artdeca =new Uint8Array([          // [293]
                                                                  // [293]
@@ -32215,6 +32215,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 
     @_GREYSCALE_@   : Should be 100% grey pixel colors.          // [293]
     @_TRANS_BLACK_@ : Transparent Black Pixel.                   // [293]
+    @_ZERO_TCENUM_@ : Zero Transparent Color Enumeration         // [293]
                               
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
