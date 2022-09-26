@@ -33370,30 +33370,117 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @QUALLOW@ : Quality Low                                      // [301]
     @QUALMAX@ : Quality Max                                      // [301]
     @QUALMIN@ : DONT_USE_USE[ QUALLOW ]( "L" vs "M" )            // [301]
-    
-    @_OK_START_GUILTY_@ : Assume everything is NOT_OK.
-
-    #_2_9_4_MMX_MMY_CHECK_#
-    #_YES_NEEDED_BY_ARTGOLA_
-    #_MAKE_LESS_CONFUSING_
-    #_INCREMENT_COUNTER_                  < < < < < < < < < < < < < < NOTICE_ME_SENPAI
-    @_ERROR_CHECK_INPUTS_                 < < < < < < < < < < < < < < NOTICE_ME_SENPAI
-    @_VARIABLE_DECLARATION_               < < < < < < < < < < < < < < NOTICE_ME_SENPAI
-    #_SELECT_DATA_TO_RENDER_              < < < < < < < < < < < < < < NOTICE_ME_SENPAI
-    #_NON_FRACTAL_RENDER_TILES_           < < < < < < < < < < < < < < NOTICE_ME_SENPAI
-    @_ERROR_CHECK_OUTPUTS_                < < < < < < < < < < < < < < NOTICE_ME_SENPAI
-    #_QUALGEN_RENDER_SELECTION_           < < < < < < < < < < < < < < NOTICE_ME_SENPAI
-
-
-
-
-
+                                                                 // [301]
+    @_OK_START_GUILTY_@ : Assume everything is NOT_OK.           // [301]
+                                                                 // [301]
+    #_2_9_4_MMX_MMY_CHECK_# :---------------------------------+  // [301]
+                                                              |  // [301]
+        Section retro-actively created for video #2_9_4.      |  // [301]
+        Took the 2 lines of code and created a section        |  // [301]
+        for it where we are doing more intense error          |  // [301]
+        checks because[ i_mmi ]got passed in with             |  // [301]
+        a negative index. Now Fixed, but leaving              |  // [301]
+        the extra error check code here.                      |  // [301]
+    +---------------------------------------------------------+  // [301]
+    #_YES_NEEDED_BY_ARTGOLA_# :-------------------------------+  // [301]
+                                                              |  // [301]
+        @mmi_artgola_000_011@ : GEOM[ 00 - 11 ][_____________]|  // [301]
+        @mmi_artgola_012_023@ : GEOM[ 12 - 15 ]BOMB[ 00 - 07 ]|  // [301]
+        @mmi_artgola_024_035@ : FADA[ 00 - 03 ]BOMB[ 08 - 15 ]|  // [301]
+        @mmi_artgola_036_047@ : FADA[ 04 - 15 ][_____________]|  // [301]
+                                                              |  // [301]
+        We have 3 tile types, GEOM,BOMB,FADA , but they       |  // [301]
+        span 4 master memory cells when using shader #7.      |  // [301]
+        ARTGOLA is creating the rasterized artwork for        |  // [301]
+        shader #7 and putting it into 4 master memory slots.  |  // [301]
+    +---------------------------------------------------------+  // [301]
+    #_MAKE_LESS_CONFUSING_# :---------------------------------+  // [301]
+                                                              |  // [301]
+        There is no intentional hard-link between these       |  // [301]
+        master memory cell enumerations. We shouldn't be      |  // [301]
+        using both sets of enums at the same time for         |  // [301]
+        whatever configuruation we are currently in,          |  // [301]
+        but they may be identical or different from each      |  // [301]
+        other.                                                |  // [301]
+                                                              |  // [301]
+        Different is not an error.                            |  // [301]
+        Same is not an error.                                 |  // [301]
+                                                              |  // [301]
+        They are not required to match.                       |  // [301]
+        They are not required to be different.                |  // [301]
+    +---------------------------------------------------------+  // [301]
+    #_INCREMENT_COUNTER_# :-----------------------------------+  // [301]
+                                                              |  // [301]
+        Increment system_internal_step( sis )counter.         |  // [301]
+        We also have a system-specific (namespaced) counter   |  // [301]
+        as a redundancy. Because I am paranoid.               |  // [301]
+    +---------------------------------------------------------+  // [301]
+    @_ERROR_CHECK_INPUTS_@ :----------------------------------+  // [301]
+                                                              |  // [301]
+        Generic comment. This code section is checking the    |  // [301]
+        inputs at the very beginning of function body to      |  // [301]
+        make sure it is about to execute with valid data.     |  // [301]
+    +---------------------------------------------------------+  // [301]
+    @_VARIABLE_DECLARATION_@ :--------------------------------+  // [301]
+                                                              |  // [301]
+        Generic comment. This code section is for C89 style   |  // [301]
+        variable declaration. Declaring most, if not all      |  // [301]
+        variables at the head of the function.                |  // [301]
+    +---------------------------------------------------------+  // [301]
+    #_SELECT_DATA_TO_RENDER_# :-------------------------------+  // [301]
+                                                              |  // [301]
+        Selecting which chunk of 12 greyscale tile designs    |  // [301]
+        we are going to render and place into a master        |  // [301]
+        memory cell.                                          |  // [301]
+    +---------------------------------------------------------+  // [301]
+    #_NON_FRACTAL_RENDER_TILES_# :----------------------------+  // [301]
+                                                              |  // [301]
+        You are inside of the QUALLOW( quality low )function. |  // [301]
+        This section is where we make the function call to    |  // [301]
+        rasterize NON-FRACTAL tile designs.                   |  // [301]
+                                                              |  // [301]
+        These tile designs are the exact same                 |  // [301]
+        [ GOLASET-512X512-MipMap / GOLA512 ]                  |  // [301]
+        structure as our final graphics.                      |  // [301]
+                                                              |  // [301]
+        The only difference between shader #7's fractal       |  // [301]
+        graphics and non-fractal graphics is that the         |  // [301]
+        non-fractal graphics look like shit. The data         |  // [301]
+        access patterns for the image data remains            |  // [301]
+        the same.                                             |  // [301]
+                                                              |  // [301]
+        Placeholder graphics is like... If a 7 year old       |  // [301]
+        put a really crappy roblox .FBX file into the         |  // [301]
+        DOOM ETERNAL engine. The [ .FBX ]format is still      |  // [301]
+        correct, but the content sucks.                       |  // [301]
+    +---------------------------------------------------------+  // [301]
+    @_ERROR_CHECK_OUTPUTS_@ :---------------------------------+  // [301]
+                                                              |  // [301]
+        Generic Comment. Making sure that the state of        |  // [301]
+        program is correct before leaving the function.       |  // [301]
+    +---------------------------------------------------------+  // [301]
+    #_QUALGEN_RENDER_SELECTION_# :----------------------------+  // [301]
+                                                              |  // [301]
+        We are in some startup code.                          |  // [301]
+        If[ c_qualgen === "[QUALLOW]" ]THEN[ PLACEHOLDERS ]   |  // [301]
+        If[ c_qualgen === "[QUALMAX]" ]THEN[ FRACTAL_IMGS ]   |  // [301]
+                                                              |  // [301]
+    +---------------------------------------------------------+  // [301]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
+    [301] : Mutli-Step-Initialization for                ::::::  // [301]
+          : ARTGOLA placeholder graphics is finished.    ::::::  // [301]
+          : The lag at beginning of game is god aweful   ::::::  // [301]
+          : 3-to-5 FPS , but the general concept is      ::::::  // [301]
+          : working. We could refine this with a         ::::::  // [301]
+          : "ReEntrant" state object to make the code    ::::::  // [301]
+          : more granular in the future. Then smack on   ::::::  // [301]
+          : a low-bandwidth loading screen to seal the   ::::::  // [301]
+          : deal.                                        ::::::  // [301]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
