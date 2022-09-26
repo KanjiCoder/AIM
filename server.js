@@ -14160,7 +14160,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         //:#_INCREMENT_COUNTER_#:[302]:------------------://     // [302][CPR][301]
                                                                  // [302][COP][301]
         ;;;;;;; d_msi_dex_sis++ ;                                // [302][COP][301]
-        d_artdeca_msi_dex_sis++ ;                                // [302][CPR][301]
+        d_artdeca_msi_dex_sis++ ;   //:@INTERLACE_DETECT@://     // [302][CPR][301]
                                                                  // [302][COP][301]
         //:------------------:#_INCREMENT_COUNTER_#:[302]://     // [302][CPR][301]
         //:@_ERROR_CHECK_INPUTS_@:[302]:-----------------://     // [302][CPR][301]
@@ -33578,6 +33578,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @_A_F_A_D_@ : Already_Flagged_As_Done                        // [302]
     @OOB_DEX_SIS@ : OutOfBounds_inDEX_SystemInternalStep         // [302]
     @C_T_M_T@ : Called_Too_Many_Times                            // [302]
+    @INTERLACE_DETECT@ : Accidential Interlace Detection.        // [302]
+                       : Multi-step-initializers should          // [302]
+                       : init one-at-a-time                      // [302]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
