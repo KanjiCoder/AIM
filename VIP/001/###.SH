@@ -10,7 +10,7 @@ A_T_GIT="git@github.com:KanjiCoder" ;
 if [ -d .git ]; then
 
     git add .
-    git commit -m "($IID)[www.tinyurl.com/BOMB-PLAYLIST-003]"
+    git commit -m "($IID)[www.tinyurl.com/BOMB-PLAYLIST-004]"
 
     git remote remove GIT_SSH
     git remote add    GIT_SSH $A_T_GIT/AIM_$IID.git
