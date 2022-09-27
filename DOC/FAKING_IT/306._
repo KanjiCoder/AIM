@@ -1,0 +1,15 @@
+
+    306._ :
+
+    Figure out how to INJECT this lookup table
+    rather than have to make it by hand in shader 6
+
+
+    UV2 d_g25_rxy[ 25 ]=UV2[ 25 ](                           // [259]
+                                                             // [259]
+        ( _v_ ),( _v_ ),(rxy00),( _v_ ),( _v_ )              // [259]
+    ,   ( _v_ ),(rxy01),(rxy02),(rxy03),( _v_ )              // [259]
+    ,   (rxy04),(rxy05),(rxy06),(rxy07),(rxy08)              // [259]
+    ,   ( _v_ ),(rxy09),(rxy10),(rxy11),( _v_ )              // [259]
+    ,   ( _v_ ),( _v_ ),(rxy12),( _v_ ),( _v_ )              // [259]
+    );//:@NESC@://                                           // [259]
