@@ -1,4 +1,30 @@
     
+    g25 ==> vod lookup table ended up being
+    re-defined because I hackishly copied it from one
+    shader into another, removed because shader 5 is
+    going to use the re-usable lookup tables file now.
+
+    //:#_G25_VOD_LOOKUP_TABLE_#:[189]:-----------------------:// // [---]
+                                                                 // [189]
+        #define   _v_ U32( 1 ) ///////////////////////////////// // [189]
+        #define exist U32( 0 ) ///////////////////////////////// // [189]
+                                                                 // [189]
+        U32 d_g25_vod[ 25 ]=U32[ 25 ](                           // [189]
+                                                                 // [189]
+            //: Grid_ID ==> IsVoidRoom ://                       // [189](162)
+                                                                 // [189][---]
+            ( _v_ ),( _v_ ),(exist),( _v_ ),( _v_ )              // [189](162)
+        ,   ( _v_ ),(exist),(exist),(exist),( _v_ )              // [189](162)
+        ,   (exist),(exist),(exist),(exist),(exist)              // [189](162)
+        ,   ( _v_ ),(exist),(exist),(exist),( _v_ )              // [189](162)
+        ,   ( _v_ ),( _v_ ),(exist),( _v_ ),( _v_ )              // [189](162)
+                                                                 // [189]
+        );//:@NESC@://                                           // [189]
+                                                                 // [189]
+        #undef    _v_  ///////////////////////////////////////// // [189]
+        #undef  exist  ///////////////////////////////////////// // [189]
+    //:-----------------------:#_G25_VOD_LOOKUP_TABLE_#:[189]:// // [---]
+
     It is going to be easier to inject these lookup
     tables rather than have to re-create the 
     individual constants that are in those cells.
