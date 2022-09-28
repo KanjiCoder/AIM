@@ -1,4 +1,20 @@
     
+
+    te7 ==> lat is in re-usable lookup tables file,
+    also removed from shader #5 as well.
+
+    U32 d_te7_lat[ 7 ]=U32[ 7 ](                                 //      [175]
+                                                                 //      [175]
+        U32( ${c_lat_000} )                                      //      [175]
+    ,   U32( ${c_lat_001} )                                      //      [175]
+    ,   U32( ${c_lat_002} )                                      //      [175]
+    ,   U32( ${c_lat_003} )                                      //      [175]
+    ,   U32( ${c_lat_004} )                                      //      [175]
+    ,   U32( ${c_lat_005} )                                      //      [175]
+    ,   U32( ${c_lat_006} )                                      //      [175]
+                                                                 // [---][---]
+    );//@NESC@://                                                // [177][175]
+
     te7 ==> dun now exists in re-usable shader
     lookup table file, so removed this from shader #5 as well.
 
