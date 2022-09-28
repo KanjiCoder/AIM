@@ -1,5 +1,19 @@
     
 
+    te7 ==> dia , removed from shader #5 , also duplicate
+
+    U32 d_te7_dia[ 7 ]=U32[ 7 ](                                 // [177]
+                                                                 // [177]
+        U32( ${c_dia_000} )                                      // [177]
+    ,   U32( ${c_dia_001} )                                      // [177]
+    ,   U32( ${c_dia_002} )                                      // [177]
+    ,   U32( ${c_dia_003} )                                      // [177]
+    ,   U32( ${c_dia_004} )                                      // [177]
+    ,   U32( ${c_dia_005} )                                      // [177]
+    ,   U32( ${c_dia_006} )                                      // [177]
+                                                                 // [177]
+    );//@NESC@://                                                // [177]
+
     te7 ==> lat is in re-usable lookup tables file,
     also removed from shader #5 as well.
 
