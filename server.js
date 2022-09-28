@@ -6336,8 +6336,6 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                                                                  
     //: FRAG_SHADER_STR[ d_artgirl_ssf_005 ] ://                 // [081]
     //: FRAG_SHADER_ENU[ c_artgirl_ren_005 ] ://                 // [081]  
-
-    ${d_artgirl_shadlut}    ////////////////////////////////     // [306]
                                                                  
     //: TAG[fragment_shaders|fragment-shaders|fragshader]://     // [093]
     //: TAG[fragment shaders|frag shaders | frag_shaders]://     // [093]
@@ -6414,6 +6412,7 @@ const d_artgirl_ssf_005 =( //: ShaderSourceFrag #05@ssf@[069]://    [070][069]
                                                                  // [---]
     ${d_artgirl_use} //: Artgirl.Use_Feature_Macros :::::://     // [263]
     ${d_artgirl_imf} //: Artgirl.Inlined_Macro_Functions ://     // [260]
+    ${d_artgirl_shadlut}    ////////////////////////////////     // [306]
                                                                  // [---]
     //:#_DUN_NOW_TOP_LEVEL_#:[176]:--------------------------:// // [176]
                                                                  // [176]
