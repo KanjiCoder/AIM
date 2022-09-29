@@ -1124,6 +1124,7 @@
                 if( exp_dia != got_dia ){                        // [309]
                                                                  // [309]
                     LOG("[___:i21]:" ,     i21 );                // [309]
+                    LOG("[___:te7]:" ,     te7 );                // [309]
                     LOG("[exp_dia]:" , exp_dia );                // [309]
                     LOG("[got_dia]:" , got_dia );                // [309]
                     ERR("[DIA_Y2K:SUNWILLFADE]");                // [309]
