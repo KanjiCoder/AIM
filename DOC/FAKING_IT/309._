@@ -1,0 +1,26 @@
+                
+    Retro-actively for video #3_0_9
+
+                IV2 p2k_x_y
+                UV4 uv4_p2k ;
+
+                p2k_x_y =IV2( UV2(0,0)     
+                +      ( u_ho3 * u_512 )     
+                +      ( u_ro4 * u_128 )     
+                +   UV2( 
+                       ( IMF_LA3_LMX * u_lat) 
+                    ,  ( IMF_LA3_LMY * u_lat)
+                    )
+                +      ( u_dia         )     
+                +      ( u_lmc         )   //:LevelMapCoord://
+                );;;;;;;;;;;;;;;;;;;;;     
+
+
+                IMF_GET_UV4_P2K uv4_p2k = STF(d_p2k,p2k_x_y,0); 
+                
+                u_v16 =( u_0
+                |      ( uv4_pix.r << 24 )
+                |      ( uv4_pix.g << 16 )
+                |      ( uv4_pix.b <<  8 )
+                |      ( uv4_pix.a <<  0 )
+                );;
