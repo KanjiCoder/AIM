@@ -34814,6 +34814,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         P.S. Lookup tables are in "network-bit-order"         |  // [307]
                                                               |  // [307]
     +---------------------------------------------------------+  // [307]
+    @VIDEO_IDEA@ : Show people how to make an optimized          // [307]
+    @VIDIDEA@ :::: bitpacked lookup table in JavaScript.         // [307]
+    @IDEA@ ::::::: Code a tool to make the process faster.       // [307]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
