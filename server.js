@@ -21408,6 +21408,19 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [309] : Added @FLUFFY_LOOKUP_TABLES@ :  :::::::::::::::::::  // [310][309]
           : 1 : [ d _ ( te7 )===>( lat ) ]  :::::::::::::::::::  // [310][309]
           : 2 : [ d _ ( te7 )===>( dia ) ]  :::::::::::::::::::  // [310][309]
+
+    [310] : The fucking beats are sick. I am a millenial,    ::  // [311][310]
+          : I don't know zoomer slang. All my techno songs   ::  // [311][310]
+          : are 10 years old.                                ::  // [311][310]
+          : https://www.youtube.com/watch?v=shTUtO_MOIM      ::  // [311][310]
+          : @IDEA@ : Sick Beats section of this source code. ::  // [311][310]
+          :                                                  ::  // [311][310]
+          : What did we do here?                             ::  // [311][310]
+          :                                                  ::  // [311][310]
+          : Calculated discrete unit size of current         ::  // [311][310]
+          : tile in focus in our "i21 loop". In both         ::  // [311][310]
+          : non-optimized lookup table method and            ::  // [311][310]
+          : bit-shifted power of 2 multiplication method.    ::  // [311][310]
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -35281,18 +35294,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [310] : The fucking beats are sick. I am a millenial,    ::  // [310]
-          : I don't know zoomer slang. All my techno songs   ::  // [310]
-          : are 10 years old.                                ::  // [310]
-          : https://www.youtube.com/watch?v=shTUtO_MOIM      ::  // [310]
-          : @IDEA@ : Sick Beats section of this source code. ::  // [310]
-          :                                                  ::  // [310]
-          : What did we do here?                             ::  // [310]
-          :                                                  ::  // [310]
-          : Calculated discrete unit size of current         ::  // [310]
-          : tile in focus in our "i21 loop". In both         ::  // [310]
-          : non-optimized lookup table method and            ::  // [310]
-          : bit-shifted power of 2 multiplication method.    ::  // [310]
+    [311] : 1 : Figured out current local tile coordinate. ::::  // [311]
+          : 2 : Fetched Tile Value From Tilemap.           ::::  // [311]
+          : 3 : Put down red-grey if tile exists.          ::::  // [311]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
