@@ -35774,6 +35774,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     [314] : Randomizing TileLayer, Tilesize , and TileValue. ::  // [314]
           : So that we have more feedback when confirming    ::  // [314]
           : that renderer #7 is written correctly.           ::  // [314]
+          : NOTE : Committed code with only TileLayer        ::  // [314]
+          :      : randomization on. But confirmed the       ::  // [314]
+          :      : others do work properly.                  ::  // [314]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
