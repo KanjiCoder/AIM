@@ -8243,7 +8243,7 @@ const d_artgirl_ssf_006 =( //: ShaderSourceFrag #06@ssf@[069]://    [070][069]
 `));; //////////////////////////////////////////////////////////    [069]
 const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
 ////////////////////////////////////////////////////////////////    [069]
-(c_artgirl_wgl_tag+`                                             // [074]  
+(c_artgirl_wgl_tag+`                                             // [074]
                                                                  // [---]                                                  
     //: FRAG_SHADER_STR[ d_artgirl_ssf_007 ] ://                 // [081]
     //: FRAG_SHADER_ENU[ c_artgirl_ren_007 ] ://                 // [081]        
@@ -21574,6 +21574,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [311] : 1 : Figured out current local tile coordinate. ::::  // [312][311]
           : 2 : Fetched Tile Value From Tilemap.           ::::  // [312][311]
           : 3 : Put down red-grey if tile exists.          ::::  // [312][311]
+
+    [312] : Slight shader tweeks to shader #7 to get ready ::::  // [313][312]
+          : for rendering the specifics of the [ SFMT ].   ::::  // [313][312]
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -35569,8 +35572,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [312] : Slight shader tweeks to shader #7 to get ready ::::  // [312]
-          : for rendering the specifics of the [ SFMT ].   ::::  // [312]
+    [313] : Debug Color Block-In For Shader #7.  ::::::::::::::  // [313]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
