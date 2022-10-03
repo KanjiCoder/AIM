@@ -8559,6 +8559,18 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                 //  u16  == OUT_OF_FUCKING_BOUNDS_U16 //////     // [313]
                 f_out );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [313]
                                                                  // [313]
+                //:#_TINT_BY_LAYER_#:[313]:--------------://     // [313]
+                //: GEOM : Darker                                // [313]
+                //: BOMB : Pure Hue                              // [313]
+                //: FADA : Lighter                               // [313]
+                if( u_0 != u_v16 ){                              // [313]
+                    f_out =( u_0 == u_la3 ? f_out * 0.5 :        // [313]
+                             u_1 == u_la3 ? f_out * 1.0 :        // [313]
+                             u_2 == u_la3 ? f_out * 1.5 :        // [313]
+                             FV4(1 , 0.5 , 0 ,1.0 )              // [313]
+                    );;                                          // [313]
+                };;                                              // [313]
+                //:--------------:#_TINT_BY_LAYER_#:[313]://     // [313]
             }                                                    // [313]
             #undef  _0_             //:#############[313]://     // [313]
             #undef  _1_             //:#############[313]://     // [313]
@@ -35533,22 +35545,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
           : ( read : cause and effect chain ) for why the        // [313]
           : value is what it is doesn't matter that much.        // [313]
           : So, don't think too hard about it.                   // [313]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                                 // [313]
+    #_TINT_BY_LAYER_# :---------------------------------------+  // [313]
+                                                              |  // [313]
+        Darken or lighten tile colors based on which          |  // [313]
+        layer you are on. This is going to help confirm       |  // [313]
+        we are looking at what we think we are looking        |  // [313]
+        at as we develop shader #7.                           |  // [313]
+                                                              |  // [313]
+    +---------------------------------------------------------+  // [313]
 
 
 *** ******************************************************** **/         
