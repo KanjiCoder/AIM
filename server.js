@@ -21,7 +21,7 @@
                                                                  // [---][---]
     const c_qualgen =(["[QUALLOW]","[QUALMAX]"][ 0 ]);           // [301]
     const c_duideno =( 3 ); //:[ 3 | 7 ]://                      // [193][---]
-    var   d_gpudata_fum     =( 1 ); /** Force Update Mode**/     // [316][314][236]
+    var   d_gpudata_fum     =( 0 ); /** Force Update Mode**/     // [316][314][236]
                                     /** @GPU_ABUSE@ !!!! **/     // [314][---]
                                                                  // [236]
     //:RELATED_SECTION[ LOGGING_CONFIGURATION ]< < < < < ://     // [236]   
