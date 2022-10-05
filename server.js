@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 //:ATOMIC_IVY_MMO_SOURCE_CODE:[034]:=========================:// // [---][---]
 //: I filmed this tutorial series 3 times. Pick one!         :// // [102][---]
 //:                                                          :// // [102][---]
