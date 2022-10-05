@@ -8513,6 +8513,21 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
     //:#_SHADER_7_ONLY_LOOKUP_TABLES_#:[319]:----------------:// // [319]
                                                                  // [319]
         [[[d_to4_4x4]]]     //:( to4 )===>( 4x4 )://             // [319]
+                                                                 // [---]
+        //:#_HELPS_CREATE_FOUR_TONE_TILES_#:[320]:-------://     // [320]
+                                                                 // [320]
+            F32 d_v04_mul[ 4 ]=F32[ 4 ](                         // [320]
+                       //:BIN[   EDGES         LIGHT    ]://     // [320]
+                1.0    //:BIN[_____0______ ______0______]://     // [320]
+            ,   1.2    //:BIN[_____0______ ______1______]://     // [320]
+                                                                 // [320]
+            ,   0.1    //:BIN[_____1______ ______0______]://     // [320]
+            ,   0.2    //:BIN[_____1______ ______1______]://     // [320]
+                                                                 // [320]
+            );//:<---ONLY_ONE_SEMICOLON_ALLOWED_HERE://          // [320]
+                                                                 // [320]
+        //:-------:#_HELPS_CREATE_FOUR_TONE_TILES_#:[320]://     // [320]
+                                                                 // [---]
                                                                  // [319]
     //:----------------:#_SHADER_7_ONLY_LOOKUP_TABLES_#:[319]:// // [319]
                                                                  // [---]
@@ -8741,6 +8756,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                 //: mod( LMC,R) ==> (LMC-(R*(LMC/R))) :::://     // [311]
                                                                  // [311]
                     u_lmc =( dug / u_dun );//:#_OOL_LMC_#://     // [317][311]  
+                    u_dil =( dug -(u_dun*u_lmc) );               // [320]
                     u_lmc =( u_lmc-(u_lat*(u_lmc/u_lat)) );      // [311]
                                                                  // [---]
                 /// p2k_x_y ; //: SEE[ _OOL_P2K_X_Y_ ] ::://     // [317][311]
@@ -8904,6 +8920,12 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
         #undef  VER       //:- - - - - -------- - - - - -://     // [317]
         //:---------------------:#_TOUCHING_VALUE_#:[317]://     // [317]
         //:---------------------:#_USE__AM4__ONN__#:[317]://     // [317]
+        //:#_DISCRETE_INTERNAL_LOCAL_#:[320]:============://     // [320]
+                                                                 // [320]
+            //: #_DIL_IS_CALCULATED_IN_THE_LOOP_# ://            // [320]
+            //: SEARCH_FOR_VARIABLE[ u_dil ]ABOVE ://            // [320]
+                                                                 // [320]
+        //:============:#_DISCRETE_INTERNAL_LOCAL_#:[320]://     // [320]
         //:#_RENDER_SFMT:DEBU_#:[315]:===================://     // [315][312]
         #if( FRAGBUG_001 >= 1 ) //:#################[313]://     // [315][MOV][313]
                                                                  // [---]
@@ -8947,8 +8969,8 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                 ////                                             // [313]
                 //  u16  == OUT_OF_FUCKING_BOUNDS_U16 //////     // [313]
                 f_out );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [313]
-                                                                 // [313]
-                //:#_TINT_BY_LAYER_#:[313]:--------------://     // [313]
+                                                                 // [---]
+                //:#_TINT_BY_LAYER_#:[313]:--------------://     // [---]
                 #define rgb_0_2 FV4(FV3(0.2),1.0)   //:::://     // [314]
                 #define rgb_0_5 FV4(FV3(0.5),1.0)   //:::://     // [313]
                 #define rgb_0_7 FV4(FV3(0.7),1.0)   //:::://     // [314]
@@ -8971,7 +8993,31 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                 #undef  rgb_1_5  //:::::::::::::::::[313]://     // [313]
                 #undef  rgb_1_8  //:::::::::::::::::[314]://     // [314]
                 #undef  add_0_5  //:::::::::::::::::[314]://     // [314]
-                //:--------------:#_TINT_BY_LAYER_#:[313]://     // [313]
+                //:--------------:#_TINT_BY_LAYER_#:[313]://     // [---]
+                //:#_4X4_GRAPHICS_TINT_#:[320]:----------://     // [320]
+                #define ABI_EDG ( u_32 - u_01 - u_i4i )          // [320]
+                #define ABI_LIG ( u_16 - u_01 - u_i4i )          // [320]
+                if( u_0 != u_v16 )                               // [320]
+                {                                                // [320]
+                    U32 u_4x4 = d_to4_4x4[ u_to4 ];              // [320]
+                    U32 u_4th = u_dun / u_4 ;                    // [320]
+                    U32 u_i4x =( u_dil.x / u_4th );              // [320]
+                    U32 u_i4y =( u_dil.y / u_4th );              // [320]
+                    U32 u_i4i =( u_i4x + ( u_i4y * u_4 ) );      // [320]
+                                                                 // [320]
+                    U32 u_v04 =( u_0                             // [320]
+                    |(( u_4x4 >>( ABI_EDG -u_1 ) )&( u_2 ))      // [320]
+                    |(( u_4x4 >>( ABI_LIG -u_0 ) )&( u_1 ))      // [320]
+                    );;                                          // [320]
+                                                                 // [320]
+                    F32 f_mul =( d_v04_mul[ u_v04 ] );           // [320]
+                                                                 // [320]
+                    f_out =( f_out * f_mul );                    // [320]
+                }                                                // [320]
+                #undef  ABI_EDG  //:---------------------://     // [320]
+                #undef  ABI_LIG  //:---------------------://     // [320]
+                //:----------:#_4X4_GRAPHICS_TINT_#:[320]://     // [320]
+                                                                 // [---]
             }                                                    // [313]
             #undef  _0_             //:#############[313]://     // [313]
             #undef  _1_             //:#############[313]://     // [313]
@@ -36983,6 +37029,78 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         ( but highly optimized shader.                  )     |  // [319]
                                                               |  // [319]
     :---------------------------------------------------------+  // [319]
+
+    #_DISCRETE_INTERNAL_LOCAL_# :-----------------------------+
+                                                              |
+        A coordinate within the current tile we are           |
+        rendering. In terms of discrete ( game plank )        |
+        units. When I say "discrete units" I am refering      |
+        to the renderer's "Plank/Planck" units.               |
+                                                              |
+        We subdivided the render space into a finite set      |
+        of discrete units so all rendering can be done        |
+        using integer math.                                   |
+    :---------------------------------------------------------+
+    #_DIL_IS_CALCULATED_IN_THE_LOOP_# :-----------------------+
+                                                              |
+        :------------------------------------------:          |
+        : Calculated inside the loop. Since we     :          |
+        : calculate it there, we can also use      :          |
+        : it to apply a radius-mask to our         :          |
+        : different tile types so that BOMB_TILE(S):          |
+        : can be circular but still render the     :          |
+        : tiles BEHIND_THEM using our occlusion    :          |
+        : selection loop. (_DATASEL-OCCLUDE-LOOP_) :          |
+        :------------------------------------------:          |
+    :---------------------------------------------------------+
+    #_4X4_GRAPHICS_TINT_# :-----------------------------------+
+                                                              |
+        Create our simple auto tile graphic by tinting the    |
+        base color 1 of 4 shades depending on what two        |
+        bit v04 value we calculated.                          |
+                                                              |
+        @u_4x4@ : Two 4x4 bitmaps encoded in a uint32         |
+        @u_4th@ : One fourth of discrete units in the         |
+                : current tile size we are on.                |
+                                                              |
+        @u_i4x@ : Which 4x4 cell are we in on the X axis?     |
+        @u_i4y@ : Which 4x4 cell are we in on the Y axis?     |
+        @u_i4i@ : [ i4x , i4y ] converted to 1D coord.        |
+        @u_v04@ : 2 bit value pulled from[ u_4x4 ].           |
+        @f_mul@ : Floating point amount to multiply           |
+                : fragment color by to create the details     |
+                : on our auto-tile being rendered.            |
+                                                              |
+    :---------------------------------------------------------+
+    #_HELPS_CREATE_FOUR_TONE_TILES_# :------------------------+
+                                                              |
+        Lookup table helps us modify the "global color"       |
+        of the tile to create a 4-tone tile.                  |
+                                                              |
+        The tile is composes of sections with two             |
+        attributes ?                                          |
+                                                              |
+        1. Is it an edge or the body of the tile?             |
+        2. Is this part of tile being hit by light?           |
+                                                              |
+        @d_v04_mul@ : (v04)===>(mul)                          |
+                                                              |
+            Converts "v04" value to a multiplier value "mul". |
+                                                              |
+                                                              |
+        d _ v04_mul[ 0 ] === 1.0 : Un altered body color.     |
+        d _ v04_mul[ 1 ] === 1.2 : Body color hit by light.   |
+                                                              |
+        d _ v04_mul[ 2 ] === 0.1 : Edges darker than body.    |
+        d _ v04_mul[ 3 ] === 0.2 : Edge color hit by light.   |
+                                                              |
+                                                              |
+    :---------------------------------------------------------+
+
+    @ABI_EDG@ : Actual_Bit_Index : EDGe     graphic layer
+    @ABI_LIG@ : Actual_Bit_Index : LIGhting graphic layer
+
+
         
 
 *** ******************************************************** **/         
