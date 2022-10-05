@@ -9013,9 +9013,10 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                                                                  // [320]
                     F32 f_mul =( d_v04_mul[ u_v04 ] );           // [320]
                                                                  // [320]
-                    f_out.rgb =( f_out.rgb * f_mul  );           // [320]     
-
-                    f_out.rgb =( f_out.rgb * 0.1 );//:@SANITYCHECK@://
+                                                                 // [320]
+                    //: 100% Sure This Line Is Correct   ://     // [320]
+                    f_out.rgb =( f_out.rgb * f_mul  );           // [320]
+                                                                 // [320]
                 }                                                // [320]
                 #undef  ABI_EDG  //:---------------------://     // [320]
                 #undef  ABI_LIG  //:---------------------://     // [320]
