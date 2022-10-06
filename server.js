@@ -9007,7 +9007,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
 
                     U32 u_4x4 = d_to4_4x4[ u_to4 ];              // [320]
                         u_4x4 = d_to4_4x4[   0   ];
-    
+                        u_4x4 =( U32( 0xF99FFFCC )       );
 
                     U32 u_4th = u_dun / u_4 ;                    // [320]
                     U32 u_i4x =( u_dil.x / u_4th );              // [320]
