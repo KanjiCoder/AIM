@@ -8984,7 +8984,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                 #define add_0_5 FV4(FV3(0.5),0.0)   //:::://     // [314]
                 if( u_0 != u_v16 ){                              // [313]
                                                                  // [313]
-                    f_out =( u_0 == u_la3 ? f_out * rgb_0_7 :    // [314][313]
+                    f_out =( u_0 == u_la3 ? f_out * rgb_0_2 :    // [320][314][313]
                              u_1 == u_la3 ? f_out - ( 0.0 ) :    // [314][313]
                              u_2 == u_la3 ? f_out + add_0_5 :    // [314][313]
                              FV4(1 , 0.5 , 0 ,1.0 )              // [313]
@@ -9003,30 +9003,27 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                 #define ABI_LIG ( (u_16-u_01) - u_i4i )          // [320]
                 if( u_0 != u_v16 )                               // [320]
                 {                                                // [320]
-                    //: #_U_TO4_ALWAYS_ZERO_FOR_NOW_# ://
-
+                    //: #_U_TO4_ALWAYS_ZERO_FOR_NOW_#    ://     // [320]
+                    //: #_FIX_TO4_4X4_LOOKUP_TABLE_BUG_# ://     // [320]
                     U32 u_4x4 = d_to4_4x4[ u_to4 ];              // [320]
-                        u_4x4 = d_to4_4x4[   0   ];
-                        u_4x4 =( U32( 0xF99FFFCC )       );
-
+                        u_4x4 = d_to4_4x4[   0   ];              // [320]
+                        u_4x4 =( U32( 0xF99FFFCC ) );            // [320]
+                                                                 // [320]
                     U32 u_4th = u_dun / u_4 ;                    // [320]
                     U32 u_i4x =( u_dil.x / u_4th );              // [320]
                     U32 u_i4y =( u_dil.y / u_4th );              // [320]
                     U32 u_i4i =( u_i4x + ( u_i4y * u_4 ) );      // [320]
                                                                  // [320]
-    
-                    //: #_U_V04_IS_CORRECT_# :---------------://
-                    //: u_4x4 =( U32( 0xF99FFFCC )       );  ://
-                    //: u_4x4 =( U32( ${c_4x4_dtm_000} ) );  ://
-                    //:---------------: #_U_V04_IS_CORRECT_# ://
-
+                                                                 // [320]
+                    //: #_U_V04_IS_CORRECT_# :---------------:// // [320]
+                    //: u_4x4 =( U32( 0xF99FFFCC )       );  :// // [320]
+                    //: u_4x4 =( U32( ${c_4x4_dtm_000} ) );  :// // [320]
+                    //:---------------: #_U_V04_IS_CORRECT_# :// // [320]
+                                                                 // [320]
                     U32 u_v04 =( u_0                             // [320]
                     |(( u_4x4 >>( ABI_EDG -u_1 ) )&( u_2 ))      // [320]
                     |(( u_4x4 >>( ABI_LIG -u_0 ) )&( u_1 ))      // [320]
                     );;                                          // [320]
-
-
-
                                                                  // [320]
                     F32 f_mul =( d_v04_mul[ u_v04 ] );           // [320]
                                                                  // [320]
@@ -22132,6 +22129,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : another layer of detail to make the tiles    ::::::  // [319][318]
           : assymetrical so we can see the effects of    ::::::  // [319][318]
           : the mirroring bits in our "AM4" values.      ::::::  // [319][318]
+
+    [319] : 4x4 auto tile sub-tile designs are now ....  ::::::  // [320][319]
+          :   1 : Loaded Into An Array                   ::::::  // [320][319]
+          :   2 : Injected Into Shader #7                ::::::  // [320][319]
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -37051,98 +37052,112 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [319]
     :---------------------------------------------------------+  // [319]
 
-    #_DISCRETE_INTERNAL_LOCAL_# :-----------------------------+
-                                                              |
-        A coordinate within the current tile we are           |
-        rendering. In terms of discrete ( game plank )        |
-        units. When I say "discrete units" I am refering      |
-        to the renderer's "Plank/Planck" units.               |
-                                                              |
-        We subdivided the render space into a finite set      |
-        of discrete units so all rendering can be done        |
-        using integer math.                                   |
-    :---------------------------------------------------------+
-    #_DIL_IS_CALCULATED_IN_THE_LOOP_# :-----------------------+
-                                                              |
-        :------------------------------------------:          |
-        : Calculated inside the loop. Since we     :          |
-        : calculate it there, we can also use      :          |
-        : it to apply a radius-mask to our         :          |
-        : different tile types so that BOMB_TILE(S):          |
-        : can be circular but still render the     :          |
-        : tiles BEHIND_THEM using our occlusion    :          |
-        : selection loop. (_DATASEL-OCCLUDE-LOOP_) :          |
-        :------------------------------------------:          |
-    :---------------------------------------------------------+
-    #_4X4_GRAPHICS_TINT_# :-----------------------------------+
-                                                              |
-        Create our simple auto tile graphic by tinting the    |
-        base color 1 of 4 shades depending on what two        |
-        bit v04 value we calculated.                          |
-                                                              |
-        @u_4x4@ : Two 4x4 bitmaps encoded in a uint32         |
-        @u_4th@ : One fourth of discrete units in the         |
-                : current tile size we are on.                |
-                                                              |
-        @u_i4x@ : Which 4x4 cell are we in on the X axis?     |
-        @u_i4y@ : Which 4x4 cell are we in on the Y axis?     |
-        @u_i4i@ : [ i4x , i4y ] converted to 1D coord.        |
-        @u_v04@ : 2 bit value pulled from[ u_4x4 ].           |
-        @f_mul@ : Floating point amount to multiply           |
-                : fragment color by to create the details     |
-                : on our auto-tile being rendered.            |
-                                                              |
-    :---------------------------------------------------------+
-    #_HELPS_CREATE_FOUR_TONE_TILES_# :------------------------+
-                                                              |
-        Lookup table helps us modify the "global color"       |
-        of the tile to create a 4-tone tile.                  |
-                                                              |
-        The tile is composes of sections with two             |
-        attributes ?                                          |
-                                                              |
-        1. Is it an edge or the body of the tile?             |
-        2. Is this part of tile being hit by light?           |
-                                                              |
-        @d_v04_mul@ : (v04)===>(mul)                          |
-                                                              |
-            Converts "v04" value to a multiplier value "mul". |
-                                                              |
-                                                              |
-        d _ v04_mul[ 0 ] === 1.0 : Un altered body color.     |
-        d _ v04_mul[ 1 ] === 1.2 : Body color hit by light.   |
-                                                              |
-        d _ v04_mul[ 2 ] === 0.1 : Edges darker than body.    |
-        d _ v04_mul[ 3 ] === 0.2 : Edge color hit by light.   |
-                                                              |
-                                                              |
-    :---------------------------------------------------------+
-    #_U_TO4_ALWAYS_ZERO_FOR_NOW_# :---------------------------+
-                                                              |
-        We haven't configured the AM4 values in our           |
-        editor's brush yet. So the auto tiling bits           |
-        are all zero. Which means pre-configured to           |
-        _NOT_ auto tile with any direction.                   |
-                                                              |
-        Thus touching value will always be zero               |
-        at this moment in time for video #3_2_0 till          |
-        whenever we implement the editor change.              |
-    :---------------------------------------------------------+
-    #_U_V04_IS_CORRECT_# :------------------------------------+
-                                                              |
-        These commented out lines of code prove that          |
-        the crazy bit-shifting math is CORRECT and that       |
-        the bug in my code I am currently looking for         |
-        is futher up in the file.                             |
-                                                              |
-        DATE[ 2022_10_05 ]TIME[ 823 PM ]                      |
-    :---------------------------------------------------------+
-
-    @ABI_EDG@ : Actual_Bit_Index : EDGe     graphic layer
-    @ABI_LIG@ : Actual_Bit_Index : LIGhting graphic layer
-
-    @SANITYCHECK@ : Doing something to confirm line of
-                  : code is correct as written.
+    #_DISCRETE_INTERNAL_LOCAL_# :-----------------------------+  // [320]
+                                                              |  // [320]
+        A coordinate within the current tile we are           |  // [320]
+        rendering. In terms of discrete ( game plank )        |  // [320]
+        units. When I say "discrete units" I am refering      |  // [320]
+        to the renderer's "Plank/Planck" units.               |  // [320]
+                                                              |  // [320]
+        We subdivided the render space into a finite set      |  // [320]
+        of discrete units so all rendering can be done        |  // [320]
+        using integer math.                                   |  // [320]
+    :---------------------------------------------------------+  // [320]
+    #_DIL_IS_CALCULATED_IN_THE_LOOP_# :-----------------------+  // [320]
+                                                              |  // [320]
+        :------------------------------------------:          |  // [320]
+        : Calculated inside the loop. Since we     :          |  // [320]
+        : calculate it there, we can also use      :          |  // [320]
+        : it to apply a radius-mask to our         :          |  // [320]
+        : different tile types so that BOMB_TILE(S):          |  // [320]
+        : can be circular but still render the     :          |  // [320]
+        : tiles BEHIND_THEM using our occlusion    :          |  // [320]
+        : selection loop. (_DATASEL-OCCLUDE-LOOP_) :          |  // [320]
+        :------------------------------------------:          |  // [320]
+    :---------------------------------------------------------+  // [320]
+    #_4X4_GRAPHICS_TINT_# :-----------------------------------+  // [320]
+                                                              |  // [320]
+        Create our simple auto tile graphic by tinting the    |  // [320]
+        base color 1 of 4 shades depending on what two        |  // [320]
+        bit v04 value we calculated.                          |  // [320]
+                                                              |  // [320]
+        @u_4x4@ : Two 4x4 bitmaps encoded in a uint32         |  // [320]
+        @u_4th@ : One fourth of discrete units in the         |  // [320]
+                : current tile size we are on.                |  // [320]
+                                                              |  // [320]
+        @u_i4x@ : Which 4x4 cell are we in on the X axis?     |  // [320]
+        @u_i4y@ : Which 4x4 cell are we in on the Y axis?     |  // [320]
+        @u_i4i@ : [ i4x , i4y ] converted to 1D coord.        |  // [320]
+        @u_v04@ : 2 bit value pulled from[ u_4x4 ].           |  // [320]
+        @f_mul@ : Floating point amount to multiply           |  // [320]
+                : fragment color by to create the details     |  // [320]
+                : on our auto-tile being rendered.            |  // [320]
+                                                              |  // [320]
+    :---------------------------------------------------------+  // [320]
+    #_HELPS_CREATE_FOUR_TONE_TILES_# :------------------------+  // [320]
+                                                              |  // [320]
+        Lookup table helps us modify the "global color"       |  // [320]
+        of the tile to create a 4-tone tile.                  |  // [320]
+                                                              |  // [320]
+        The tile is composes of sections with two             |  // [320]
+        attributes ?                                          |  // [320]
+                                                              |  // [320]
+        1. Is it an edge or the body of the tile?             |  // [320]
+        2. Is this part of tile being hit by light?           |  // [320]
+                                                              |  // [320]
+        @d_v04_mul@ : (v04)===>(mul)                          |  // [320]
+                                                              |  // [320]
+            Converts "v04" value to a multiplier value "mul". |  // [320]
+                                                              |  // [320]
+                                                              |  // [320]
+        d _ v04_mul[ 0 ] === 1.0 : Un altered body color.     |  // [320]
+        d _ v04_mul[ 1 ] === 1.2 : Body color hit by light.   |  // [320]
+                                                              |  // [320]
+        d _ v04_mul[ 2 ] === 0.1 : Edges darker than body.    |  // [320]
+        d _ v04_mul[ 3 ] === 0.2 : Edge color hit by light.   |  // [320]
+                                                              |  // [320]
+                                                              |  // [320]
+    :---------------------------------------------------------+  // [320]
+    #_U_TO4_ALWAYS_ZERO_FOR_NOW_# :---------------------------+  // [320]
+                                                              |  // [320]
+        We haven't configured the AM4 values in our           |  // [320]
+        editor's brush yet. So the auto tiling bits           |  // [320]
+        are all zero. Which means pre-configured to           |  // [320]
+        _NOT_ auto tile with any direction.                   |  // [320]
+                                                              |  // [320]
+        Thus touching value will always be zero               |  // [320]
+        at this moment in time for video #3_2_0 till          |  // [320]
+        whenever we implement the editor change.              |  // [320]
+    :---------------------------------------------------------+  // [320]
+    #_U_V04_IS_CORRECT_# :------------------------------------+  // [320]
+                                                              |  // [320]
+        These commented out lines of code prove that          |  // [320]
+        the crazy bit-shifting math is CORRECT and that       |  // [320]
+        the bug in my code I am currently looking for         |  // [320]
+        is futher up in the file.                             |  // [320]
+                                                              |  // [320]
+        DATE[ 2022_10_05 ]TIME[ 823 PM ]                      |  // [320]
+    :---------------------------------------------------------+  // [320]
+    #_FIX_TO4_4X4_LOOKUP_TABLE_BUG_# :------------------------+  // [320]
+                                                              |  // [320]
+        Observations lead me to believe that the lookup       |  // [320]
+        table is either BROKEN or not wired up correctly.     |  // [320]
+                                                              |  // [320]
+        ...OR...                                              |  // [320]
+                                                              |  // [320]
+        Your code that turns lookup tables into GLSL          |  // [320]
+        code only supports 8 bit integers and 32 bit          |  // [320]
+        integers do something weird, like get                 |  // [320]
+        truncated.                                            |  // [320]
+                                                              |  // [320]
+        FIX_THIS_TABLE[ d_to4_4x4 ]                           |  // [320]
+    :---------------------------------------------------------+  // [320]
+                                                                 // [320]
+    @ABI_EDG@ : Actual_Bit_Index : EDGe     graphic layer        // [320]
+    @ABI_LIG@ : Actual_Bit_Index : LIGhting graphic layer        // [320]
+                                                                 // [320]
+    @SANITYCHECK@ : Doing something to confirm line of           // [320]
+                  : code is correct as written.                  // [320]
         
 
 *** ******************************************************** **/         
@@ -37150,9 +37165,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [319] : 4x4 auto tile sub-tile designs are now ....  ::::::  // [319]
-          :   1 : Loaded Into An Array                   ::::::  // [319]
-          :   2 : Injected Into Shader #7                ::::::  // [319]
+    [320] : Something is wrong with[ d _ to4 _ 4x4 ] ::::::::::  // [320]
+          : lookup table. I have absolutely zero     ::::::::::  // [320]
+          : fucking clue what that is.               ::::::::::  // [320]
+          :                                          ::::::::::  // [320]
+          : On the plus side , our bit-packed tile   ::::::::::  // [320]
+          : graphic values seem to be correct...     ::::::::::  // [320]
+          : It's just retrieving them from a lookup  ::::::::::  // [320]
+          : table fails. Even when we hard code the  ::::::::::  // [320]
+          : lookup index.                            ::::::::::  // [320]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
