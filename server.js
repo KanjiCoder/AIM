@@ -37688,6 +37688,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     [328] : Capper Graphics Are Now Rendering In Shader #7. :::  // [328]
           : NEXT : Auto Tiling Mirroring Flags Should       :::  // [328]
           :      : Affect The Result Of The Render.         :::  // [328]
+                                                            :::  // [328]
+          : NOTE : This note only exists because previous   :::  // [328]
+          :      : commit to master repo was tagged [327]   :::  // [328]
+          :      : when it should have been tagged  [328]   :::  // [328]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
