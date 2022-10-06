@@ -9006,10 +9006,10 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                     U32 u_i4y =( u_dil.y / u_4th );              // [320]
                     U32 u_i4i =( u_i4x + ( u_i4y * u_4 ) );      // [320]
                                                                  // [320]
-            ////    U32 u_v04 =( u_0                             // [320] < < < BUG : u_v04 is always zero , why ?
-            ////    |(( u_4x4 >>( ABI_EDG -u_1 ) )&( u_2 ))      // [320] < < < BUG : u_v04 is always zero , why ?
-            ////    |(( u_4x4 >>( ABI_EDG -u_0 ) )&( u_1 ))      // [320] < < < BUG : u_v04 is always zero , why ?
-            ////    );;                                          // [320] < < < BUG : u_v04 is always zero , why ?
+                    U32 u_v04 =( u_0                             // [320] < < < BUG : u_v04 is always zero , why ?
+                    |(( u_4x4 >>( ABI_EDG -u_1 ) )&( u_2 ))      // [320] < < < BUG : u_v04 is always zero , why ?
+                    |(( u_4x4 >>( ABI_EDG -u_0 ) )&( u_1 ))      // [320] < < < BUG : u_v04 is always zero , why ?
+                    );;                                          // [320] < < < BUG : u_v04 is always zero , why ?
 
 
 
