@@ -22320,6 +22320,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
 
     [326] : Created lookup table on CPU-side for our      :::::  // [327][326]
           : assymmetrical capping graphics for shader #7. :::::  // [327][326]
+
+    [327] : Injected ::::::::::::::::::::::::::::::::::::::::::  // [328][327]
+          : [ asymmetric_tile_design_lookup_table ] :::::::::::  // [328][327]
+          : into [ shader_seven (#7) ]              :::::::::::  // [328][327]
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -37658,7 +37662,6 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         I think it should go ABOVE                            |  // [328]
         the lighting calculations.                            |  // [328]
                                                               |  // [328]
-                                                              |  // [328]
         @u_8th@ : Tile Divided Into 8th Chunks                |  // [328]
         @u_i8x@ : @G_I_C@ - [0-to-(8-1)] - X_AXIS             |  // [328]
         @u_i8y@ : @G_I_C@ - [0-to-(8-1)] - Y_AXIS             |  // [328]
@@ -37682,9 +37685,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [327] : Injected ::::::::::::::::::::::::::::::::::::::::::  // [327]
-          : [ asymmetric_tile_design_lookup_table ] :::::::::::  // [327]
-          : into [ shader_seven (#7) ]              :::::::::::  // [327]
+    [328] : Capper Graphics Are Now Rendering In Shader #7. :::  // [328]
+          : NEXT : Auto Tiling Mirroring Flags Should       :::  // [328]
+          :      : Affect The Result Of The Render.         :::  // [328]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
