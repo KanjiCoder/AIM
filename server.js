@@ -9003,22 +9003,24 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                     //: #_U_TO4_ALWAYS_ZERO_FOR_NOW_# ://
 
                     U32 u_4x4 = d_to4_4x4[ u_to4 ];              // [320]
+                        u_4x4 = d_to4_4x4[   0   ];
+    
+
                     U32 u_4th = u_dun / u_4 ;                    // [320]
                     U32 u_i4x =( u_dil.x / u_4th );              // [320]
                     U32 u_i4y =( u_dil.y / u_4th );              // [320]
                     U32 u_i4i =( u_i4x + ( u_i4y * u_4 ) );      // [320]
                                                                  // [320]
     
-                    //: u_4x4 =( U32( 0xF99FFFCC ) );
-                    u_4x4 =( U32( ${c_4x4_dtm_000} ) );
+                    //: #_U_V04_IS_CORRECT_# :---------------://
+                    //: u_4x4 =( U32( 0xF99FFFCC )       );  ://
+                    //: u_4x4 =( U32( ${c_4x4_dtm_000} ) );  ://
+                    //:---------------: #_U_V04_IS_CORRECT_# ://
 
-
-
-
-                    U32 u_v04 =( u_0                             // [320] < < < BUG : u_v04 is always zero , why ?
-                    |(( u_4x4 >>( ABI_EDG -u_1 ) )&( u_2 ))      // [320] < < < BUG : u_v04 is always zero , why ?
-                    |(( u_4x4 >>( ABI_LIG -u_0 ) )&( u_1 ))      // [320] < < < BUG : u_v04 is always zero , why ?
-                    );;                                          // [320] < < < BUG : u_v04 is always zero , why ?
+                    U32 u_v04 =( u_0                             // [320]
+                    |(( u_4x4 >>( ABI_EDG -u_1 ) )&( u_2 ))      // [320]
+                    |(( u_4x4 >>( ABI_LIG -u_0 ) )&( u_1 ))      // [320]
+                    );;                                          // [320]
 
 
 
@@ -37122,6 +37124,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         Thus touching value will always be zero               |
         at this moment in time for video #3_2_0 till          |
         whenever we implement the editor change.              |
+    :---------------------------------------------------------+
+    #_U_V04_IS_CORRECT_# :------------------------------------+
+                                                              |
+        These commented out lines of code prove that          |
+        the crazy bit-shifting math is CORRECT and that       |
+        the bug in my code I am currently looking for         |
+        is futher up in the file.                             |
+                                                              |
+        DATE[ 2022_10_05 ]TIME[ 823 PM ]                      |
     :---------------------------------------------------------+
 
     @ABI_EDG@ : Actual_Bit_Index : EDGe     graphic layer
