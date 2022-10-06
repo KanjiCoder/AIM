@@ -8996,8 +8996,8 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                 #undef  add_0_5  //:::::::::::::::::[314]://     // [314]
                 //:--------------:#_TINT_BY_LAYER_#:[313]://     // [---]
                 //:#_4X4_GRAPHICS_TINT_#:[320]:----------://     // [320]
-                #define ABI_EDG ( u_32 - u_01 - u_i4i )          // [320]
-                #define ABI_LIG ( u_16 - u_01 - u_i4i )          // [320]
+                #define ABI_EDG ( (u_32-u_01) - u_i4i )          // [320]
+                #define ABI_LIG ( (u_16-u_01) - u_i4i )          // [320]
                 if( u_0 != u_v16 )                               // [320]
                 {                                                // [320]
                     U32 u_4x4 = d_to4_4x4[ u_to4 ];              // [320]
@@ -9008,7 +9008,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                                                                  // [320]
                     U32 u_v04 =( u_0                             // [320] < < < BUG : u_v04 is always zero , why ?
                     |(( u_4x4 >>( ABI_EDG -u_1 ) )&( u_2 ))      // [320] < < < BUG : u_v04 is always zero , why ?
-                    |(( u_4x4 >>( ABI_EDG -u_0 ) )&( u_1 ))      // [320] < < < BUG : u_v04 is always zero , why ?
+                    |(( u_4x4 >>( ABI_LIG -u_0 ) )&( u_1 ))      // [320] < < < BUG : u_v04 is always zero , why ?
                     );;                                          // [320] < < < BUG : u_v04 is always zero , why ?
 
 
