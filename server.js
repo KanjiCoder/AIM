@@ -12055,7 +12055,6 @@ if( /** __EDIGAME__ **/ notnode ){                               // [102]
     ,   edi_v16 :(      1)  //: TIL_VAL[ 0 -to- (16-1)  ]://     // [268][170]
     ,   edi_am4 :(   0xC )  //: BIN[  1    1    0    0  ]://     // [323]
                             //: BIN[ l_x__l_y__m_x__m_y ]://     // [323]
-
                                                                  // [---]
     ,   mou_p_x :(0-1)  //: Last_Mouse_Move Pix_Y @H13@  ://     // [144]
     ,   mou_p_y :(0-1)  //: Last_Mouse_Move Pix_X @H13@  ://     // [144]
@@ -22205,6 +22204,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [321] : Bug in lookup table has been fixed.        ::::::::  // [322][321]
           : As with most bugs , the problem was        ::::::::  // [322][321]
           : me being an idiot. -KanjiCoder , Year2022  ::::::::  // [322][321]
+
+    [322] : A little bit of cleanup , because I don't :::::::::  // [323][322]
+          : want to nickle-and-dime myself to death   :::::::::  // [323][322]
+          : in the shorter KanjiCoder channel videos. :::::::::  // [323][322]
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -37276,9 +37279,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [322] : A little bit of cleanup , because I don't :::::::::  // [322]
-          : want to nickle-and-dime myself to death   :::::::::  // [322]
-          : in the shorter KanjiCoder channel videos. :::::::::  // [322]
+    [323] : Editor supports setting tiles with       ::::::::::  // [323]
+          : different Auto_Tiling_Method(AM4) bits.  ::::::::::  // [323]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
