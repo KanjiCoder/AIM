@@ -37680,6 +37680,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [328]
     :---------------------------------------------------------+  // [328]
 
+    @VIDEO_IDEA@ : Let's RECORD every single time we set   ::::  // [328]
+    @VIDEOIDEA@  : a tile down into a buffer. Then we can  ::::  // [328]
+    @VIDIDEA@    : replay at a faster speed to create time ::::  // [328]
+    @VIDEO@      : lapse animations that we can post to    ::::  // [328]
+    @VID@        : imgur and pass off as procedural anim.  ::::  // [328]
+
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
