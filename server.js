@@ -1168,7 +1168,7 @@
                                                                  // [326]
         const d_to4_h02_8x4 = new Uint32Array([                  // [326]
                                    //: SEE[_8X4__SORTED_]://     // [326]
-            c_8x4_top , c_8x4_not  //: to4____val____000 ://     // [326]
+/**@NOCO@**/c_8x4_top , c_8x4_not  //: to4____val____000 ://     // [326]
         ,   c_8x4_top , c_8x4_not  //: to4____val____001 ://     // [326]
         ,   c_8x4_not , c_8x4_not  //: to4____val____002 ://     // [326]
         ,   c_8x4_not , c_8x4_not  //: to4____val____003 ://     // [326]
@@ -37574,6 +37574,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                                  // [326]
     @TH8_LEN@ : d_to4_h02_8x4                                    // [326]
     ::::::::::: __T___H___8__ <-- Where "TH8" came from.         // [326]
+                                                                 // [326]
+    @NOCO@ : NO_COmma . Just a comment here to make sure I       // [326]
+           : don't fuck this up. Because I have a habit          // [326]
+           : of fucking that up.                                 // [326]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
