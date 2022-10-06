@@ -6291,7 +6291,7 @@ const d_artgirl_smacros =(` //////////////////////////////////// // [251]
     #define u_5   U32(  5 ) //:  @D_I__S_I@  ://                 // [251]
     #define u_6   U32(  6 ) //:  @D_I__S_I@  ://                 // [251]
     #define u_7   U32(  7 ) //:  @D_I__S_I@  ://                 // [251]
-    #define u_8   U32(  8 ) //:  @D_I__S_I@  ://                 // f
+    #define u_8   U32(  8 ) //:  @D_I__S_I@  ://                 // [328]
                                                                  // [---]
     #define u_ff  U32( 0xFF)    //: For IMF Functions :::://     // [267]
     #define f_ff  F32(255.0)    //: For IMF Functions :::://     // [267]
