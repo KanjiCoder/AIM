@@ -9000,12 +9000,21 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                 #define ABI_LIG ( (u_16-u_01) - u_i4i )          // [320]
                 if( u_0 != u_v16 )                               // [320]
                 {                                                // [320]
+                    //: #_U_TO4_ALWAYS_ZERO_FOR_NOW_# ://
+
                     U32 u_4x4 = d_to4_4x4[ u_to4 ];              // [320]
                     U32 u_4th = u_dun / u_4 ;                    // [320]
                     U32 u_i4x =( u_dil.x / u_4th );              // [320]
                     U32 u_i4y =( u_dil.y / u_4th );              // [320]
                     U32 u_i4i =( u_i4x + ( u_i4y * u_4 ) );      // [320]
                                                                  // [320]
+    
+                    u_4x4 =( 0xF99FFFCC );
+                   //: u_4x4 = ${c_4x4_dtm_000} ;
+
+
+
+
                     U32 u_v04 =( u_0                             // [320] < < < BUG : u_v04 is always zero , why ?
                     |(( u_4x4 >>( ABI_EDG -u_1 ) )&( u_2 ))      // [320] < < < BUG : u_v04 is always zero , why ?
                     |(( u_4x4 >>( ABI_LIG -u_0 ) )&( u_1 ))      // [320] < < < BUG : u_v04 is always zero , why ?
@@ -37102,6 +37111,17 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         d _ v04_mul[ 3 ] === 0.2 : Edge color hit by light.   |
                                                               |
                                                               |
+    :---------------------------------------------------------+
+    #_U_TO4_ALWAYS_ZERO_FOR_NOW_# :---------------------------+
+                                                              |
+        We haven't configured the AM4 values in our           |
+        editor's brush yet. So the auto tiling bits           |
+        are all zero. Which means pre-configured to           |
+        _NOT_ auto tile with any direction.                   |
+                                                              |
+        Thus touching value will always be zero               |
+        at this moment in time for video #3_2_0 till          |
+        whenever we implement the editor change.              |
     :---------------------------------------------------------+
 
     @ABI_EDG@ : Actual_Bit_Index : EDGe     graphic layer
