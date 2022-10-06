@@ -1145,7 +1145,7 @@
                                                                  // [319]
         const d_to4_4x4 = new Uint32Array([ ////////////////     // [319]
         //::       _4x4_                    :::::::::::::://     // [319]
-        ,         c_4x4_dtm_000 //: __DTM__ : DontTouchMe://     // [321][BUG][319]
+        /*FIX005*/c_4x4_dtm_000 //: __DTM__ : DontTouchMe://     // [321][BUG][319]
         ,         c_4x4_v_t_001 //: __V_T__ : Verti___Top://     // [319]
         ,         c_4x4_v_b_002 //: __V_B__ : Verti___Bot://     // [319]
         ,         c_4x4_v_m_003 //: __V_M__ : Verti___Mid://     // [319]
@@ -37191,6 +37191,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         https://www.youtube.com/watch?v=nuw-cxKhW5A           |  // [321]
                                                               |  // [321]
     :---------------------------------------------------------+  // [321]
+    #FIX005# / @FIX005@ / @FIX_005@ / #FIX_005# :-------------+
+
+        Our jackass self commented out the first entry
+        because our "Lax-Comma" habits. Fixed. 
 
 
 
