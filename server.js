@@ -22155,6 +22155,16 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [319] : 4x4 auto tile sub-tile designs are now ....  ::::::  // [320][319]
           :   1 : Loaded Into An Array                   ::::::  // [320][319]
           :   2 : Injected Into Shader #7                ::::::  // [320][319]
+
+    [320] : Something is wrong with[ d _ to4 _ 4x4 ] ::::::::::  // [321][320]
+          : lookup table. I have absolutely zero     ::::::::::  // [321][320]
+          : fucking clue what that is.               ::::::::::  // [321][320]
+          :                                          ::::::::::  // [321][320]
+          : On the plus side , our bit-packed tile   ::::::::::  // [321][320]
+          : graphic values seem to be correct...     ::::::::::  // [321][320]
+          : It's just retrieving them from a lookup  ::::::::::  // [321][320]
+          : table fails. Even when we hard code the  ::::::::::  // [321][320]
+          : lookup index.                            ::::::::::  // [321][320]
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -37191,11 +37201,11 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         https://www.youtube.com/watch?v=nuw-cxKhW5A           |  // [321]
                                                               |  // [321]
     :---------------------------------------------------------+  // [321]
-    #FIX005# / @FIX005@ / @FIX_005@ / #FIX_005# :-------------+
-
-        Our jackass self commented out the first entry
-        because our "Lax-Comma" habits. Fixed. 
-
+    #FIX005# / @FIX005@ / @FIX_005@ / #FIX_005# :-------------+  // [321]
+                                                              |  // [321]
+        Our jackass self commented out the first entry        |  // [321]
+        because our "Lax-Comma" habits. Fixed.                |  // [321]
+    :---------------------------------------------------------+  // [321]
 
 
 *** ******************************************************** **/         
@@ -37203,15 +37213,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [320] : Something is wrong with[ d _ to4 _ 4x4 ] ::::::::::  // [320]
-          : lookup table. I have absolutely zero     ::::::::::  // [320]
-          : fucking clue what that is.               ::::::::::  // [320]
-          :                                          ::::::::::  // [320]
-          : On the plus side , our bit-packed tile   ::::::::::  // [320]
-          : graphic values seem to be correct...     ::::::::::  // [320]
-          : It's just retrieving them from a lookup  ::::::::::  // [320]
-          : table fails. Even when we hard code the  ::::::::::  // [320]
-          : lookup index.                            ::::::::::  // [320]
+    [321] : Bug in lookup table has been fixed.        ::::::::  // [321]
+          : As with most bugs , the problem was        ::::::::  // [321]
+          : me being an idiot. -KanjiCoder , Year2022  ::::::::  // [321]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
