@@ -22285,6 +22285,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : make renderer #7's tiles more asymmetric.     :::::  // [326][325]
           : ( So keys "____C____" and "____V____" will    :::::  // [326][325]
           : have a noticable effect when editing.         :::::  // [326][325]
+
+    [326] : Created lookup table on CPU-side for our      :::::  // [327][326]
+          : assymmetrical capping graphics for shader #7. :::::  // [327][326]
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -37585,13 +37588,39 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
            : don't fuck this up. Because I have a habit          // [326]
            : of fucking that up.                                 // [326]
 
+    #_DESIGN_QUESTION_# :-------------------------------------+  // [327]
+                                                              |  // [327]
+        How do we give the engine the capability of           |  // [327]
+        "representational artwork".                           |  // [327]
+                                                              |  // [327]
+        Yes, I like geometric mechanical shapes. But          |  // [327]
+        we need to be able to make things like :              |  // [327]
+                                                              |  // [327]
+        "Glass Door" , "Cabin" , "Computer Desk"              |  // [327]
+                                                              |  // [327]
+        "Power Transformer".                                  |  // [327]
+                                                              |  // [327]
+                                                              |  // [327]
+        We need enough expressiveness in the engine to        |  // [327]
+        make things look like real-life objects that          |  // [327]
+        people can connect with.                              |  // [327]
+                                                              |  // [327]
+        Fractal art looks cool. But it is very niche and      |  // [327]
+        it lacks "mental stickyness".                         |  // [327]
+                                                              |  // [327]
+        How do we make "Things look like things" in our engine?  // [327]
+                        THINGS_LOOK_LIKE_THINGS               |  // [327]
+                                                              |  // [327]
+        DATE[ 2022_10_06 ]KANJICODER                          |  // [327]
+    :---------------------------------------------------------+  // [327]
+
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [326] : Created lookup table on CPU-side for our      :::::  // [326]
-          : assymmetrical capping graphics for shader #7. :::::  // [326]
+    [327] : Injecting asymmetric tile design  :::::::::::::::::  // [327]
+          : lookup table into shader #7.      :::::::::::::::::  // [327]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
