@@ -39558,6 +39558,16 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         before we try the more challenging task of            |  // [335]
         re-writing the JavaScript in C99 ( GLSL is C99 ).     |  // [335]
     :---------------------------------------------------------+  // [335]
+    #_FUCKING_HELL_ROTATION_DIAGRAMS_WRONGISH_# :-------------+  // [335]
+                                                              |  // [335]
+        Just realized that diagrams are rotating clockwise,   |  // [335]
+        but our lookup tables are configured for              |  // [335]
+        COUNTER-clockwise rotation.                           |  // [335]
+                                                              |  // [335]
+        I don't want to re-create all of my test tables,      |  // [335]
+        so we will just swap "90" and "270" entries.          |  // [335]
+                                                              |  // [335]
+    :---------------------------------------------------------+  // [335]
     
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
