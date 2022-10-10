@@ -5090,6 +5090,8 @@ UPNG.encode.concatRGBA = function(bufs) {
                                                                  // [---]
         if( d_eci >= 1 ){                                        // [333]
             if( "string" != typeof i_txt_bin ){                  // [333]
+                console.log( "[i_txt_bin:NOTSTR]:"               // [333]
+                             , i_txt_bin );;;;;;;;               // [333]
                 ERR("[WHERE_THE_FUCK_IS_MY_STRING_2022]");       // [333]
             };;                                                  // [333]
         };;                                                      // [333]
