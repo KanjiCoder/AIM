@@ -22919,6 +22919,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [331] : Created Lookup Tables For Mirroring Touching  :::::  // [332][331]
           : values. NEXT: Test For lookup tables.         :::::  // [332][331]
           : NEXT_NEXT : Add tables to our GLSL shader.    :::::  // [332][331]
+
+    [332] : Test code for rotation of      ::::::::::::::::::::  // [333][332]
+          : touching values lookup tables. ::::::::::::::::::::  // [333][332]
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -39232,14 +39235,23 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @TEST_CODE_FOR_MY_TEST_CODE@ : Sometimes unit testing is     // [332]
                                  : harder than I want it to      // [332]
                                  : be.                           // [332]
+
+    @NOCOMMA@ : Denoting that there should be no                 // [333]
+              : "lax comma" on this line of code.                // [333]
+
+    @IDEA@       : Put Psychedellic animated boarders around     // [333]
+    @GOVIRAL@    : already viral memes before you post them      // [333]
+    @GO_VIRAL@   : onto imgur. In the fine print say,            // [333]
+       @VIRAL@   : "KanjiCoder can show you how to make this"    // [333]
+    @VIRALMEME@  : with tinyurl to a youtube video with your     // [333]
+    @VIRAL_MEME@ : code.                                         // [333]
     
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [332] : Test code for rotation of      ::::::::::::::::::::  // [332]
-          : touching values lookup tables. ::::::::::::::::::::  // [332]
+    [333] : Fixing bugs in our test code. :::::::::::::::::::::  // [333]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
