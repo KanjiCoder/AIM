@@ -5092,7 +5092,7 @@ UPNG.encode.concatRGBA = function(bufs) {
         o_num_bin=( parseInt( i_txt_bin , 2 ) );                 // [332]
                                                                  // [---]
         if( d_eco >= 1 ){                                        // [333]
-            if( Number.isNaN( o_num_bin ){                       // [333]
+            if( Number.isNaN( o_num_bin ) ){                     // [333]
                 let C_L =( console.log );                        // [333]
                     C_L( "[i_txt_bin]:" , i_txt_bin );           // [333]
                     C_L( "[o_num_bin]:" , o_num_bin );           // [333]
