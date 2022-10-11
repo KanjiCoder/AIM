@@ -5510,8 +5510,9 @@ UPNG.encode.concatRGBA = function(bufs) {
                     LOG(         "[dex....]" , dex     );        // [336][---]
                     LOG_BIN_HEX( "[to4_got]" , to4_got );        // [336][---]
                     LOG_BIN_HEX( "[to4_exp]" , to4_exp );        // [336][---]
-                                                                 // [---][---]
-                    ERR("[YOU_CANT_ROTATE_WORTH_SHIT_2022]");    // [336][335]
+                                                                 // [336][---]
+                    //: FUCKSEETAG[ _HOT_MATH_IS_WRONG_ ]://     // [336][---]
+                    MSG("[YOU_CANT_ROTATE_WORTH_SHIT_2022]");    // [336][335]
                 };;                                              // [---][335]
             };;};;                                               // [---][335]
         }                                                        // [---][335]
@@ -39280,7 +39281,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                            X_X Y_Y                        |   |  // [330]
             V_0_TO4 ==BIN[ 0_0 0_1 ]                      |   |  // [330]
             V_1_TO4 ==BIN[ 1_0 0_0 ]                      |   |  // [330]
-            V_2_TO4 ==BIN[ 0_0 1_0 ]                      |   |  // [330]
+            V_2_TO4 ==BIN[ 0_0 1_0 ] #_HOT_MATH_IS_WRONG_#|   |  // [336][330]
             V_3_TO4 ==BIN[ 0_1 0_0 ]                      |   |  // [330]
                                                           |   |  // [330]
                         +---+                  +---+      |   |  // [330]
@@ -39637,6 +39638,60 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [336]
     :---------------------------------------------------------+  // [336]
     @bit_smashing@ : [BitPacking / BitGluing] , using "|" .      // [336]
+    #_META_STRUCTURE_ROTATION_# :-----------------------------+  // [336]
+                                                              |  // [336]
+        If meta structure is rotating CLOCKWISE, then         |  // [336]
+        the touching values of the tiles must rotate          |  // [336]
+        COUNTER-CLOCK-WISE.                                   |  // [336]
+                                                              |  // [336]
+        Pretty sure this is true from observation.            |  // [336]
+        And hunches. But not 100% certain about this.         |  // [336]
+                                                              |  // [336]
+        ....                                                  |  // [336]
+                                                              |  // [336]
+        Further observation tells me that... Rotation         |  // [336]
+        formulas DO_NOT_TRANSLATE_HOW_I_THOUGHT!!!            |  // [336]
+                                                              |  // [336]
+        SEE[ _HOT_MATH_IS_WRONG_ ]                            |  // [336]
+                                                              |  // [336]
+                                                              |  // [336]
+    TAG[ META_STRUCTURES_ROTATE_LIKE_GEAR_WITH_TOUCHING_VALUES]  // [336]
+    :---------------------------------------------------------+  // [336]
+    #_HOT_MATH_IS_WRONG_# :-----------------------------------+  // [336]
+                                                              |  // [336]
+        +---+               +---+                             |  // [336]
+        |V_0|               |   |                             |  // [336]
+        +---+               +---+                             |  // [336]
+        |   | ===ROT_180==> |   |                             |  // [336]
+        +---+               +---+                             |  // [336]
+        |   |               |V_2|                             |  // [336]
+        +---+               +---+                             |  // [336]
+                                                              |  // [336]
+        Algebra_Says[ (x,y) ===> (-y,x) ]To_Rotate_180        |  // [336]
+                                                              |  // [336]
+                                          X_X Y_Y             |  // [336]
+        THIS_IS_CORRECT____V_0_TO4 ==BIN[ 0_0 0_1 ]           |  // [336]
+        THIS_IS_CORRECT____V_2_TO4 ==BIN[ 0_0 1_0 ]           |  // [336]
+        WRONG_ALGEBRA______V_2_TO4 ==BIN[ 1_0 0_0 ]           |  // [336]
+                                                              |  // [336]
+        Well fuck, all of our rotation tables are...          |  // [336]
+        wrong aren't they?                                    |  // [336]
+                                                              |  // [336]
+    :---------------------------------------------------------+  // [336]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
