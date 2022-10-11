@@ -5506,7 +5506,7 @@ UPNG.encode.concatRGBA = function(bufs) {
                     LOG_BIN_HEX( "[to4_exp]" , to4_exp );        // [336][---]
                                                                  // [336][---]
                     //: FUCKSEETAG[ _HOT_MATH_IS_WRONG_ ]://     // [336][---]
-                    MSG("[YOU_CANT_ROTATE_WORTH_SHIT_2022]");    // [336][335]
+                    ERR("[YOU_CANT_ROTATE_WORTH_SHIT_2022]");    // [337][336][335]
                 };;                                              // [---][335]
             };;};;                                               // [---][335]
         }                                                        // [---][335]
