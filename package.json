@@ -3,7 +3,10 @@
 
 { 
     "//" : "[ pg added in video [039] ]"
-,   "dependencies": { "pg" : "8.7.3" } 
+,   "dependencies": { "pg" : "8.7.3" }
+
+,   "//" : "[ deploy name other than server.js , video [346]]"
+,   "scripts"     : { "start" : "node ./ATOMIC_IVY_MMO.JS" }
 }
 
 
