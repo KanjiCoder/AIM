@@ -23602,6 +23602,19 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                 degrees CLOCKWISE that the touching values       // [343][342]
                 of tiles were rotated by.                        // [343][342]
 
+    [343] : SIMPLER AUTO TILE SHADER IS _almost_ DONE!!!!    ::  // [344][343]
+          : Okay... Well, we had other things we wanted      ::  // [344][343]
+          : to do... But this is a good stopping point...    ::  // [344][343]
+          : Well... A bit of cleanup in next video would     ::  // [344][343]
+          : be good... Like making certain DEBUG modes       ::  // [344][343]
+          : PERMANENT features.                              ::  // [344][343]
+          :                                                  ::  // [344][343]
+          : DONE : "R" key rotates auto tiles                ::  // [344][343]
+          :      : in 90 degree increments.                  ::  // [344][343]
+          : NEXT : Different degrees should                  ::  // [344][343]
+          :      : not latch with each other.                ::  // [344][343]
+          : NEXT : Turn debug modes into permanent features. ::  // [344][343]
+
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -40475,18 +40488,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [343] : SIMPLER AUTO TILE SHADER IS _almost_ DONE!!!!    ::  // [343]
-          : Okay... Well, we had other things we wanted      ::  // [343]
-          : to do... But this is a good stopping point...    ::  // [343]
-          : Well... A bit of cleanup in next video would     ::  // [343]
-          : be good... Like making certain DEBUG modes       ::  // [343]
-          : PERMANENT features.                              ::  // [343]
-          :                                                  ::  // [343]
-          : DONE : "R" key rotates auto tiles                ::  // [343]
-          :      : in 90 degree increments.                  ::  // [343]
-          : NEXT : Different degrees should                  ::  // [343]
-          :      : not latch with each other.                ::  // [343]
-          : NEXT : Turn debug modes into permanent features. ::  // [343]
+    [344] : Tiles with DIFFERING rotation codes (u_ro4 ) ::::::  // [344]
+          : will no longer latch to each other.          ::::::  // [344]
  
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
