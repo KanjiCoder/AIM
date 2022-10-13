@@ -9847,7 +9847,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                                                                  // [343]
                 u_dir.x =( u_dim.x );                            // [343]
                 u_dir.y =( u_dim.y );                            // [343]
-                                                                 // [343]
+                                                                 // [---]
             }else                                                // [342]
             if( u_1 == u_ro4 ){                                  // [342]
                                                                  // [342]
@@ -40467,7 +40467,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [343] : SIMPLER AUTO TILE SHADER IS FUCKING DONE!!!!     ::  // [343]
+    [343] : SIMPLER AUTO TILE SHADER IS _almost_ DONE!!!!    ::  // [343]
           : Okay... Well, we had other things we wanted      ::  // [343]
           : to do... But this is a good stopping point...    ::  // [343]
           : Well... A bit of cleanup in next video would     ::  // [343]
@@ -40476,6 +40476,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
           :                                                  ::  // [343]
           : DONE : "R" key rotates auto tiles                ::  // [343]
           :      : in 90 degree increments.                  ::  // [343]
+          : NEXT : Different degrees should                  ::  // [343]
+          :      : not latch with each other.                ::  // [343]
           : NEXT : Turn debug modes into permanent features. ::  // [343]
  
 *** ******************************************************** **/
