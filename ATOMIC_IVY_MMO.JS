@@ -40610,8 +40610,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [347] : Refresher On Deploying To Heroku Using Terminal. ::  // [347]
- 
+    [347] : Refresher On Deploying To Heroku Using Terminal.:::  // [347]
+
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
 
