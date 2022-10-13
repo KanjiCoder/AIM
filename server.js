@@ -10013,7 +10013,10 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
                         f_out.g +=( f_out.b + 0.25 );            // [328]
                         f_out.b +=( f_out.r + 0.25 );            // [328]
                                                                  // [---]
-                        f_out *=( cos(F32(d_tik)/64.0) );        // [345]
+                        f_out.g =max( 
+                            f_out.g
+                        ,   cos(F32(d_tik)/64.0) 
+                        );;      
                                                                  // [---]
                     };;                                          // [328]
                 }                                                // [328]
