@@ -40285,6 +40285,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     :---------------------------------------------------------+  // [341]
     @AM6_0x00@ : AM6 value is too low, lower than zero.          // [341]
     @AM6_0x3F@ : AM6 value is more than 6 bits.                  // [341]
+    #_NOEXTRA_INFO_BITS_# :-----------------------------------+  // [341]
+                                                              |  // [341]
+        This section of code is for tacking on extra          |  // [341]
+        layer-specific information bits. Right now we         |  // [341]
+        have no extra information bits for these sections.    |  // [341]
+    :---------------------------------------------------------+  // [341]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
