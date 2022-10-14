@@ -23646,6 +23646,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : Edited[ package.json ]So It Can Deploy New Name :::  // [347][346]
           : SEE[ _CONTENTS_OF_PACKAGE_DOT_JSON_2022_10_13_ ]:::  // [347][346]
 
+    [347] : Refresher On Deploying To Heroku Using Terminal.:::  // [348][347]
+
                                 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -40610,7 +40612,26 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [347] : Refresher On Deploying To Heroku Using Terminal.:::  // [347]
+    [348] : Deployed[ Atomic-Ivy-MMO ]to[ GCloud ]        :::::  // [348]
+          : But file system access , and thus serving     :::::  // [348]
+          : of files, seems broken. This could be         :::::  // [348]
+          : because .                                     :::::  // [348]
+          :                                               :::::  // [348]
+          : 1 : App is no longer self-aware of it's root  :::::  // [348]
+          :   : URL like it was when deployed on heroku.  :::::  // [348]
+          :   :                                           :::::  // [348]
+          : 2 : Files are now on a WINDOWS instead of     :::::  // [348]
+          :   : linux machine. And this changes how       :::::  // [348]
+          :   : we can write valid relative URLS.         :::::  // [348]
+          :   :                                           :::::  // [348]
+          : 3 : Folder where "ATOMIC_IVY_MMO.JS" was      :::::  // [348]
+          :   : copied to on google servers is __NOT__    :::::  // [348]
+          :   : the working directory of NODE.JS program. :::::  // [348]
+          :-----------------------------------------------:::::  // [348]
+          :   This video used this slide show :           :::::  // [348]
+          :                                               :::::  // [348]
+          :     https://imgur.com/a/oKMEW8S               :::::  // [348]
+          :-----------------------------------------------:::::  // [348]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
