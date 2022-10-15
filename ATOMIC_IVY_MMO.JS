@@ -40775,6 +40775,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
           :                                                  ::  // [350]
           : Getting READY to serve (self/this/AIM.JS)        ::  // [350]
           : NOTE: AIM.JS === ATOMIC_IVY_MMO.JS === server.js ::  // [350]
+          :                                                  ::  // [350]
+          : NOTE: Imgur.com post seen in this video :        ::  // [350]
+          :       [ https://imgur.com/gallery/ie9h1Cf ]      ::  // [350]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
