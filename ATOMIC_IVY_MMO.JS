@@ -20836,6 +20836,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
             }else{                                               // [---][140][---][025]
                 sob.m_giv.writeHead( 200 , d_js );               // [---][140][---][025]
                                                                  // [---][-------------]
+
                 //:get_app_domain:[059]:---------------------://
                 var n =( "\n" );                     //:[059]://
                                                      //:[059]://
@@ -20862,19 +20863,20 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
                 };;                                  //:[059]://
                 //:---------------------:get_app_domain:[059]://
 
-                //:#MYSBSYS#:[058]:--------------:// //:[058]://
-                                                     //:[058]://
-                i_cof = ""+i_cof+"";                 //:[058]://
-                i_cof = i_cof.replaceAll(            //:[058]://
-                                                     //:[058]://
-                    "[BLACK_MAGIC:d_urlsite]"        //:[059]://
-                ,                 d_urlsite          //:[059]://
-                );;                                  //:[058]://
-                i_cof = i_cof.replaceAll(            //:[059]://
-                    "[BLACK_MAGIC:d_urlsite_o_k]"    //:[059]://
-                ,                 d_urlsite_o_k      //:[059]://
-                );;                                  //:[059]://
-                //:--------------:#MYSBSYS#:[058]:// //:[058]://
+                //:#MYSBSYS#:[058]:--------------------------:// // [---][058] 
+                                                                 // [---][058] 
+                i_cof = ""+i_cof+"";                             // [---][058] 
+                i_cof = F_REPLACE_BOD_FIN_REP(                   // [355][058]
+                i_cof                                            // [355][---]
+                ,   "[BLACK_MAGIC:d_urlsite]"                    // [355][059]
+                ,                 d_urlsite                      // [---][059] 
+                );;                                              // [---][058] 
+                i_cof = F_REPLACE_BOD_FIN_REP(                   // [355][059]
+                i_cof                                            // [355][---]
+                ,   "[BLACK_MAGIC:d_urlsite_o_k]"                // [355][059]
+                ,                 d_urlsite_o_k                  // [---][059] 
+                );;                                              // [---][059] 
+                //:--------------------------:#MYSBSYS#:[058]:// // [---][058] 
             };;
             sob.m_giv.end( i_cof , "utf-8" );                    // [140][---][025]
 
