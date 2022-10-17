@@ -20765,7 +20765,7 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
                                                                  // [351][-------------]
             let o_k   =( 1 );  //:#_IAM_NOT_ALWAYS_OKAY_#://     // [354][351][--------]
 
-            let o_typ =( typeof i_cof );                         // [354][-------------]
+            let o_typ =F_TYPESTR( typeof i_cof );                // [354][-------------]
                                                                  // [354][-------------]
             if( "string" != o_typ ){  //////////////////////     // [354][-------------]
             ///               //:------------------------://     // [354][-------------]
@@ -41104,6 +41104,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         Object.create( null ); <-- Something like this.       |  // [354]
                                                               |  // [354]
     :---------------------------------------------------------+  // [354]
+                                                                 // [354]
+    @TYPSTR@ :: YOU_MEAN[ TYPESTR ]( Seven Letters , NOT_6 )     // [354]
+    @TYPESTR@ : TYPE_STRing , type of object as a string.        // [354]
                                                                   
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
