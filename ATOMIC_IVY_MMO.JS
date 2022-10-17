@@ -23884,6 +23884,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :      : 1. HEROKU deploys FASTER                 :::  // [353][352]
           :      : 2. HEROKU tools can be used it GIT BASH  :::  // [353][352]
 
+    [353] : I didn't want to use a "Catch" with my promise, :::  // [354][353]
+          : but I think it's the only way to get a          :::  // [354][353]
+          : response back from[ google_app_engine ]         :::  // [354][353]
+          : so we can get enough feeback to move forward.   :::  // [354][353]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -41105,10 +41110,14 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [353] : I didn't want to use a "Catch" with my promise, :::  // [353]
-          : but I think it's the only way to get a          :::  // [353]
-          : response back from[ google_app_engine ]         :::  // [353]
-          : so we can get enough feeback to move forward.   :::  // [353]
+    [354] : Created a "safe typeof" function that won't  ::::::  // [354]
+          : crash when we get "evil types" back from     ::::::  // [354]
+          : a function. Evil types being types that are  ::::::  // [354]
+          : so evil, you can't even ask them what        ::::::  // [354]
+          : type they are without crashing.              ::::::  // [354]
+          :                                              ::::::  // [354]
+          : ( typeof EVIL_TYPE ) ===> EXCEPTION()        ::::::  // [354]
+          : ( typeof EVILTYP   ) ===> EXCEPTION()        ::::::  // [354]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
