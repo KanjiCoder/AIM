@@ -41340,6 +41340,11 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
           : (Source code needs to be self-aware of server) ::::  // [357]
           : (url it is hosted on so that the client file ) ::::  // [357]
           : (is able to make requests back to the server.) ::::  // [357]
+          :                                                 :::  // [357]
+          : We are not finished, but created a wrapper      :::  // [357]
+          : function[ F _ ASERVER _ GET_WEBROOT ]that       :::  // [357]
+          : will make it easier to abstract between         :::  // [357]
+          : "GoogleAppEngine" and "HerokuServer" platforms. :::  // [357]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
