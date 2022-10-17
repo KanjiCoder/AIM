@@ -23978,6 +23978,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : ( typeof EVIL_TYPE ) ===> EXCEPTION()        ::::::  // [355][354]
           : ( typeof EVILTYP   ) ===> EXCEPTION()        ::::::  // [355][354]
 
+    [355] : String.replaceAll helper function , hopefully    ::  // [356][355]
+          : this will de-mystify whatever the fuck is        ::  // [356][355]
+          : going wrong with our "google_app_engine" deploy. ::  // [356][355]
+          :::::::::::::::::::::: (GOOGLE APP ENGINE)         ::  // [356][355]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -41247,23 +41252,16 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         it does. We are going to use a simple                 |  // [356]
         "string.split" and "string.join"                      |  // [356]
     :---------------------------------------------------------+  // [356]
-
-
-
-
-
-
-
-                                                                  
+                                  
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [355] : String.replaceAll helper function , hopefully    ::  // [355]
-          : this will de-mystify whatever the fuck is        ::  // [355]
-          : going wrong with our "google_app_engine" deploy. ::  // [355]
-          :::::::::::::::::::::: (GOOGLE APP ENGINE)         ::  // [355]
+    [356] :                                           :::::::::  // [356]
+          : 1 : Finished[ F _ REPLACE _ BOD_FIN_REP ] :::::::::  // [356]
+          : 2 : Refactored :                          :::::::::  // [356]
+          :   :[ EXECUTO _ F _ ASERVER_GETSELF_AIM  ] :::::::::  // [356]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
