@@ -41390,6 +41390,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
           : More robust[ server-environment ]detection. :::::::  // [358]
           : More robust[ server environment ]detection. :::::::  // [358]
           : More robust[ serverenvironment  ]detection. :::::::  // [358]
+          :                                                  ::  // [358]
+          : REFERENCE :                                      ::  // [358]
+          : https://stackoverflow.com/questions/10185353     ::  // [358]
+          : /what-are-the-other-heroku-environment-variables ::  // [358]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
