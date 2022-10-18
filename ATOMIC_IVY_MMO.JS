@@ -24115,6 +24115,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : https://stackoverflow.com/questions/10185353     ::  // [359][358]
           : /what-are-the-other-heroku-environment-variables ::  // [359][358]
 
+    [359] : Platform detection refactoring. :::::::::::::::::::  // [360][359]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -41452,7 +41454,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [359] : Platform detection refactoring. :::::::::::::::::::  // [359]
+    [360] : Stubbed in the "[Hotel World]" sub-system. ::::::::  // [360]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
