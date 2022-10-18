@@ -41455,6 +41455,13 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 /** ******************************************************** ***     
         
     [360] : Stubbed in the "[Hotel World]" sub-system. ::::::::  // [360]
+          ::::::::                                       ::::::  // [360]
+          : NOTE : I am currently researching how to get ::::::  // [360]
+          :      : procedural access to[ imgur.com ].    ::::::  // [360]
+          :      : My findings will be posted into this  ::::::  // [360]
+          :      : imgur gallery below :                 ::::::  // [360]
+          :      :                                       ::::::  // [360]
+          :::::::: [ https://imgur.com/a/X52liVX ]       ::::::  // [360]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
