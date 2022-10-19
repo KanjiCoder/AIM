@@ -14929,8 +14929,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             let a_0_x ; //: @a_0_x@ : LocalDestination X ://     // [362]
             let a_0_y ; //: @a_0_y@ : LocalDestination Y ://     // [362]
                                                                  // [362]
-            let a_1_x ; //: @a_1_x@ : Local_____SOURCE X ://     // [362]
-            let a_1_y ; //: @a_1_y@ : Local_____SOURCE Y ://     // [362]
+            let a_1_x ; //: @a_1_x@ : GLOBAL____SOURCE X ://     // [362]
+            let a_1_y ; //: @a_1_y@ : GLOBAL____SOURCE Y ://     // [362]
                                                                  // [362]
             for( a_0_y = 0 ; a_0_y <=(512-1) ; a_0_y ++ ){       // [362]
             for( a_0_x = 0 ; a_0_x <=(512-1) ; a_0_x ++ ){       // [362]
@@ -41719,6 +41719,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 /** ******************************************************** ***     
         
     [362] : Working on LOCAL file-save and LOCAL file-load. :::  // [362]
+          : Specificially : Isolating memory into 512x512  ::::  // [362]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
