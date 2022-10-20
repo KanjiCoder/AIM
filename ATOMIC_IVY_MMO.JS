@@ -15063,6 +15063,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
 
                 if( !( trashme_binarra ) ){                      // [369]
                     ERR("[#_UPNG_IS_NOT_ALRIGHT_2022_#]");       // [369]
+                }else{                                           // [369]
+                    LOG( "[trashme_binarra]"                     // [369]
+                    ,      trashme_binarra  );;                  // [369]
                 };;                                              // [369]
 
 
