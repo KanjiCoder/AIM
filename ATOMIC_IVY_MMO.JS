@@ -24658,6 +24658,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : 2 : [ F _ KONAMIC _ LOADCEN_RAM ]( KONAMI+"_E_" )::  // [369][368]
           : NEXT : FINISH_BODY[ F _ FILEMOB _ LOCLOAD ] :::::::  // [369][368]
 
+    [369] : 1 : Fixed some bugs in our code. ::::::::::::::::::  // [370][369]
+          : 2 : Created helper function to tell us if       :::  // [370][369]
+          :   : an input is a[ Uint8Array ]or not because   :::  // [370][369]
+          :   : [ Array.isArray ]has dishonored our family. :::  // [370][369]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -42595,18 +42600,12 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     :---------------------------------------------------------+  // [370]
 
 
-
-
-
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [369] : 1 : Fixed some bugs in our code. ::::::::::::::::::  // [369]
-          : 2 : Created helper function to tell us if       :::  // [369]
-          :   : an input is a[ Uint8Array ]or not because   :::  // [369]
-          :   : [ Array.isArray ]has dishonored our family. :::  // [369]
+    [370] : Core .PNG Decoder Wrapper Finished. :::::::::::::::  // [370]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
