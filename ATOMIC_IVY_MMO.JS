@@ -4600,7 +4600,7 @@ UPNG.encode.concatRGBA = function(bufs) {
             var o_k=( 1 );                                       // [369]
             let arr=( i_arr_u08 );                               // [369]
                                                                  // [369]
-            if( !!arr                  ){ o_k = 0 ; }else        // [369]
+            if( !(arr /**FALSY?**/   ) ){ o_k = 0 ; }else        // [369]
             if( !(arr.byteLength >= 0) ){ o_k = 0 ; }else{       // [369]
                                                                  // [369]
                 let iof=( i_arr_u08 instanceof Uint8Array );     // [369]
