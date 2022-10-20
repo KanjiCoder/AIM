@@ -15070,7 +15070,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
 
 
                      numbyte_binarra =(                          // [---][364]
-                     trashme_binarra.byteLength );;              // [369][364]
+                     trashme_binarra.byteLength );;              // [369][BUG][364]
                 for( bytedex_binarra = 0                         // [---][364]
                 ;    bytedex_binarra <=(numbyte_binarra-1)       // [---][364]
                 ;    bytedex_binarra ++                          // [---][364]
@@ -42489,15 +42489,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                               |  // [369]
     :---------------------------------------------------------+  // [369]
 
-         
- 
-
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [369] : I don't know what goes here yet.
+    [369] : 1 : Fixed some bugs in our code. ::::::::::::::::::  // [369]
+          : 2 : Created helper function to tell us if       :::  // [369]
+          :   : an input is a[ Uint8Array ]or not because   :::  // [369]
+          :   : [ Array.isArray ]has dishonored our family. :::  // [369]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
