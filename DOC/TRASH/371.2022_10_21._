@@ -1,0 +1,58 @@
+        
+    We do not need something like this... Well, something
+    like this, but this is overly complex.
+
+        const   F_FILEMOB_COMHASH = function
+        PRIVATE_F_FILEMOB_COMHASH(
+            i_str_cmd  //: "[LOCSAVE]" || "[LOCLOAD]" :::://
+        ,   i_num_h3x  //:  [ 0 || 1 || 2 ] :::::::::::::://
+        ,   i_num_h3y  //:  [ 0 || 1 || 2 ] :::::::::::::://
+        ){
+            if( d_eci >= 1 ){
+                if( "[LOCSAVE]" != i_str_cmd
+                &&  "[LOCLOAD]" != i_str_cmd 
+                ){
+                    ERR("[INVALID_COMHASH_VERB_2022]");
+                };;
+                if( i_num_h3x >= 0 && i_num_h3x <=(3-1) 
+                &&  i_num_h3y >= 0 && i_num_h3y <=(3-1)
+                ){
+                    /**OKAY**/
+                }else{
+                    ERR("[H3X_OR_H3Y:OOB]");
+                };
+            };;
+            let o_comhash =( "[UNSET_COMMAND_HASH]" );
+
+            let str_h3x = "[H3X_UNSET]" ;
+            let str_h3y = "[H3Y_UNSET]" ;
+
+            if( 0 === i_h3x ){ str_h3x = "[H3X_000]" ; };
+            if( 1 === i_h3x ){ str_h3x = "[H3X_001]" ; };
+            if( 2 === i_h3x ){ str_h3x = "[H3X_002]" ; };
+
+            if( 0 === i_h3y ){ str_h3y = "[H3Y_000]" ; };
+            if( 1 === i_h3y ){ str_h3y = "[H3Y_001]" ; };
+            if( 2 === i_h3y ){ str_h3y = "[H3Y_002]" ; };
+
+            o_comhash=( ""
+            +   i_str_cmd
+            +   i_str_h3x
+            +   i_str_h3y
+            );;
+
+            return( o_comhash );
+        };;
+
+
+        //:#_MAKE_COMMAND_STRING_#:[371]:----------------://     // [371]
+                                                                 // [371]
+            let exp_mp1_cmd =( F_FILEMOB_COMHASH(
+                "[LOCSAVE]"
+            ,    i_h3x
+            ,    i_h3y
+            ));;
+                     
+            if( exp_mp1_cmd != d_mp1_512_cmd
+                                            
+        //:----------------:#_MAKE_COMMAND_STRING_#:[371]://     // [371]
