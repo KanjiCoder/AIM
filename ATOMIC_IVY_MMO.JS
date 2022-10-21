@@ -243,16 +243,16 @@
     //:TAG[ top-level-consts | top_level_consts | t_l_c ]://     // [288]
     //:TAG[ TOP_LEVEL_CONSTANTS | TOP_LEVEL_CONSTS      ]://     // [313]
                                                                  // [---]
-    //:#_DATA_KIND_HASHES_#:[372]:-----------------------://
-        
-        const c_dathash_und_err = "[FIX:ERR_UND]" ;
-        const c_dathash_uoe     = "[FIX:ERR_UND]" ;
-        const c_dathash_eou     = "[FIX:ERR_UND]" ;
-
-        const c_dathash_err_und = "[DATHASH_ERR_UND]" ;
-        const c_dathash_png_512 = "[DATHASH_PNG_512]" ;
-
-    //:-----------------------:#_DATA_KIND_HASHES_#:[372]://
+    //:#_DATA_KIND_HASHES_#:[372]:-----------------------://     // [372]
+                                                                 // [372]
+        const c_dathash_und_err = "[FIX:ERR_UND]" ;              // [372]
+        const c_dathash_uoe     = "[FIX:ERR_UND]" ;              // [372]
+        const c_dathash_eou     = "[FIX:ERR_UND]" ;              // [372]
+                                                                 // [372]
+        const c_dathash_err_und = "[DATHASH_ERR_UND]" ;          // [372]
+        const c_dathash_png_512 = "[DATHASH_PNG_512]" ;          // [372]
+                                                                 // [372]
+    //:-----------------------:#_DATA_KIND_HASHES_#:[372]://     // [372]
     //:#_MIRROR_TOUCHING_BY_USING_XOR_#:[330]:-----------://     // [330]
                                                                  // [330]
         //:----------------------------------------------://     // [330]
