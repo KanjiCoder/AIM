@@ -43400,7 +43400,31 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @c_dathash_err_und@ : Unusable Memory, for reasons.          // [375]
     @c_dathash_png_512@ : A 512_x_512 .PNG binary     is_here.   // [375]
     @c_dathash_pix_512@ : A 512_x_512 RGBA8 Raw Array is_here.   // [375]
+                                                                 // [375]
+    #_TODO_DECODE_AFTER_ENCODE_DEBUG_# :----------------------+  // [375]
+                                                              |  // [375]
+        Add some code that IMMEDIATELY DECODES the .PNG       |  // [375]
+        file we created using UPNG, to see if the mistakes    |  // [375]
+        is KANJICODER's MISTAKE , or UPNG's MISTAKE.          |  // [375]
+                                                              |  // [375]
+        And by "UPNG'S MISTAKE" I mean ,                      |  // [375]
+        "KanjiCoder fucked up UPNG's source code when"        |  // [375]
+        "reformatting the library to their liking.   "        |  // [375]
+                                                              |  // [375]
+    :---------------------------------------------------------+  // [375]
+    #_ENCODE_DEBUG_FEATURE_# :--------------------------------+
 
+        When a given debug flag is set, we will IMMEDIATELY
+        DECODE the .PNG file we created to make sure that
+        the UPNG library source is not broken.
+
+    :---------------------------------------------------------+
+    #_DECODE_DEBUG_FEATURE_# :--------------------------------+
+
+        NO_SUCH_COMPLIMENT to[ _ENCODE_DEBUG_FEATURE_ ].
+        Reasoning being that the origin of all .PNG
+        files is UPNG's encode function.
+    :---------------------------------------------------------+
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
@@ -43410,6 +43434,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     [375] : Looking for bug... I think it might be that :::::::
           : we corrupted the .PNG library we are using  :::::::
           : when we tried to add cosmetic refactoring.  :::::::
+          : NEXT[ #_ENCODE_DEBUG_FEATURE_# ]:::::::::::::::::::
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
