@@ -43412,29 +43412,29 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         "reformatting the library to their liking.   "        |  // [375]
                                                               |  // [375]
     :---------------------------------------------------------+  // [375]
-    #_ENCODE_DEBUG_FEATURE_# :--------------------------------+
-
-        When a given debug flag is set, we will IMMEDIATELY
-        DECODE the .PNG file we created to make sure that
-        the UPNG library source is not broken.
-
-    :---------------------------------------------------------+
-    #_DECODE_DEBUG_FEATURE_# :--------------------------------+
-
-        NO_SUCH_COMPLIMENT to[ _ENCODE_DEBUG_FEATURE_ ].
-        Reasoning being that the origin of all .PNG
-        files is UPNG's encode function.
-    :---------------------------------------------------------+
+    #_ENCODE_DEBUG_FEATURE_# :--------------------------------+  // [375]
+                                                              |  // [375]
+        When a given debug flag is set, we will IMMEDIATELY   |  // [375]
+        DECODE the .PNG file we created to make sure that     |  // [375]
+        the UPNG library source is not broken.                |  // [375]
+                                                              |  // [375]
+    :---------------------------------------------------------+  // [375]
+    #_DECODE_DEBUG_FEATURE_# :--------------------------------+  // [375]
+                                                              |  // [375]
+        NO_SUCH_COMPLIMENT to[ _ENCODE_DEBUG_FEATURE_ ].      |  // [375]
+        Reasoning being that the origin of all .PNG           |  // [375]
+        files is UPNG's encode function.                      |  // [375]
+    :---------------------------------------------------------+  // [375]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [375] : Looking for bug... I think it might be that :::::::
-          : we corrupted the .PNG library we are using  :::::::
-          : when we tried to add cosmetic refactoring.  :::::::
-          : NEXT[ #_ENCODE_DEBUG_FEATURE_# ]:::::::::::::::::::
+    [375] : Looking for bug... I think it might be that :::::::  // [375]
+          : we corrupted the .PNG library we are using  :::::::  // [375]
+          : when we tried to add cosmetic refactoring.  :::::::  // [375]
+          : NEXT[ #_ENCODE_DEBUG_FEATURE_# ]:::::::::::::::::::  // [375]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
