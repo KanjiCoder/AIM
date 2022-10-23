@@ -2560,71 +2560,51 @@
 //:   -KanjiCoder , 2022_08_28                               :// // [000_3RD][206][---]
 //:                                                          :// // [000_3RD][206][---]
 //: - - - - - - - - - - - - - ---- - - - - - - - - - - - - - :// // [000_3RD][206][---]
-                                                                 // [000_3RD][206][FMT]
-    //:U_Z_I_P:==========================================://     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-    var UZIP = {};                                               // [000_3RD][206][FMT]
-    if( typeof module === "object" ){                            // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        module.exports = UZIP;                                   // [000_3RD][206][FMT]
-    };;                                                          // [000_3RD][206][FMT]
-    //:==========================================:U_Z_I_P://     // [000_3RD][206][FMT]
-    //:U_Z_I_P:==========================================://     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-    UZIP["parse"] = function(buf, onlyNames)  // ArrayBuffer     // [000_3RD][206][FMT]
-    {                                                            // [000_3RD][206][FMT]
-        var var_hak = "[VAR_HAK]"           ////////////////     // [000_3RD][206][FMT]
-        ,       rUs = UZIP.bin.readUshort   ////////////////     // [000_3RD][206][FMT]
-        ,       rUi = UZIP.bin.readUint     ////////////////     // [000_3RD][206][FMT]
-        ,       o   = 0                     ////////////////     // [000_3RD][206][FMT]
-        ,       out = {}                    ////////////////     // [000_3RD][206][FMT]
-        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        var data = new Uint8Array(buf);                          // [000_3RD][206][FMT]
-        var eocd = data.length-4;                                // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        while(rUi(data, eocd)!=0x06054b50) eocd--;               // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        var o = eocd;                                            // [000_3RD][206][FMT]
-        o+=4;	// sign  = 0x06054b50                            // [000_3RD][206][FMT]
-        o+=4;   // disks = 0;                                    // [000_3RD][206][FMT]
-        var cnu = rUs(data, o);  o+=2;                           // [000_3RD][206][FMT]
-        var cnt = rUs(data, o);  o+=2;                           // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        var csize = rUi(data, o);  o+=4;                         // [000_3RD][206][FMT]
-        var coffs = rUi(data, o);  o+=4;                         // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        o = coffs;                                               // [000_3RD][206][FMT]
-        for(var i=0; i<cnu; i++)                                 // [000_3RD][206][FMT]
-        {                                                        // [000_3RD][206][FMT]
-            var sign = rUi(data, o);  o+=4;                      // [000_3RD][206][FMT]
-            o += 4;  // versions;                                // [000_3RD][206][FMT]
-            o += 4;  // flag + compr                             // [000_3RD][206][FMT]
-            o += 4;  // time                                     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            var crc32 = rUi(data, o);  o+=4;                     // [000_3RD][206][FMT]
-            var csize = rUi(data, o);  o+=4;                     // [000_3RD][206][FMT]
-            var usize = rUi(data, o);  o+=4;                     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            var var_hak = "[VAR_HAK]"    ///////////////////     // [000_3RD][206][FMT]
-            ,        nl = rUs(data, o+0) ///////////////////     // [000_3RD][206][FMT]
-            ,        el = rUs(data, o+2) ///////////////////     // [000_3RD][206][FMT]
-            ,        cl = rUs(data, o+4) ///////////////////     // [000_3RD][206][FMT]
-            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            o += 6;  // name, extra, comment                     // [000_3RD][206][FMT]
-            o += 8;  // disk, attribs                            // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            var roff = rUi(data, o);  o+=4;                      // [000_3RD][206][FMT]
-            o += nl + el + cl;                                   // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            UZIP._readLocal(                                     // [000_3RD][206][FMT]
-                data, roff, out, csize, usize, onlyNames );;     // [000_3RD][206][FMT]
-        };;                                                      // [000_3RD][206][FMT]
-        //console.log(out);                                      // [000_3RD][206][FMT]
-        return out;                                              // [000_3RD][206][FMT]
-    };;                                                          // [000_3RD][206][FMT]
-    //:==========================================:U_Z_I_P://     // [000_3RD][206][FMT]
+
+var UZIP = {};
+if(typeof module == "object") module.exports = UZIP;
+
+
+UZIP["parse"] = function(buf, onlyNames)	// ArrayBuffer
+{
+	var rUs = UZIP.bin.readUshort, rUi = UZIP.bin.readUint, o = 0, out = {};
+	var data = new Uint8Array(buf);
+	var eocd = data.length-4;
+	
+	while(rUi(data, eocd)!=0x06054b50) eocd--;
+	
+	var o = eocd;
+	o+=4;	// sign  = 0x06054b50
+	o+=4;  // disks = 0;
+	var cnu = rUs(data, o);  o+=2;
+	var cnt = rUs(data, o);  o+=2;
+			
+	var csize = rUi(data, o);  o+=4;
+	var coffs = rUi(data, o);  o+=4;
+	
+	o = coffs;
+	for(var i=0; i<cnu; i++)
+	{
+		var sign = rUi(data, o);  o+=4;
+		o += 4;  // versions;
+		o += 4;  // flag + compr
+		o += 4;  // time
+		
+		var crc32 = rUi(data, o);  o+=4;
+		var csize = rUi(data, o);  o+=4;
+		var usize = rUi(data, o);  o+=4;
+		
+		var nl = rUs(data, o), el = rUs(data, o+2), cl = rUs(data, o+4);  o += 6;  // name, extra, comment
+		o += 8;  // disk, attribs
+		
+		var roff = rUi(data, o);  o+=4;
+		o += nl + el + cl;
+		
+		UZIP._readLocal(data, roff, out, csize, usize, onlyNames);
+	}
+	//console.log(out);
+	return out;
+}
 
 UZIP._readLocal = function(data, o, out, csize, usize, onlyNames)
 {
@@ -4447,129 +4427,61 @@ UPNG.encode.concatRGBA = function(bufs) {
 	return nimg.buffer;
 }
 
-    UPNG.encode.dither = function(sb, w, h, plte, tb, oind) {    // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        function addErr( er, tg, ti, f ){   ////////////////     // [000_3RD][206][FMT]
-                                            ////////////////     // [000_3RD][206][FMT]
-            tg[ ti+0 ] += ( er[0]*f )>>4 ;;;////////////////     // [000_3RD][206][FMT]
-            tg[ ti+1 ] += ( er[1]*f )>>4 ;;;////////////////     // [000_3RD][206][FMT]
-            tg[ ti+2 ] += ( er[2]*f )>>4 ;;;////////////////     // [000_3RD][206][FMT]
-            tg[ ti+3 ] += ( er[3]*f )>>4 ;;;////////////////     // [000_3RD][206][FMT]
-        };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        function N( x ){ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-            return(                              ///////////     // [000_3RD][206][FMT]
-                Math.max(0, Math.min(255, x))    ///////////     // [000_3RD][206][FMT]
-            );;                                  ///////////     // [000_3RD][206][FMT]
-        };; ////////////////////////////////////////////////     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        function D( a , b ){ ///////////////////////////////     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            var dr=a[0]-b[0] ///////////////////////////////     // [000_3RD][206][FMT]
-            ,   dg=a[1]-b[1] ///////////////////////////////     // [000_3RD][206][FMT]
-            ,   db=a[2]-b[2] ///////////////////////////////     // [000_3RD][206][FMT]
-            ,   da=a[3]-b[3] ///////////////////////////////     // [000_3RD][206][FMT]
-            ;;;;;;;;;;;;;;;; ///////////////////////////////     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            return(  ///////////////////////////////////////     // [000_3RD][206][FMT]
-                dr*dr + ////////////////////////////////////     // [000_3RD][206][FMT]
-                dg*dg + ////////////////////////////////////     // [000_3RD][206][FMT]
-                db*db + ////////////////////////////////////     // [000_3RD][206][FMT]
-                da*da   ////////////////////////////////////     // [000_3RD][206][FMT]
-            );; ////////////////////////////////////////////     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        };; ////////////////////////////////////////////////     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        var pc=plte.length, nplt = [], rads=[];                  // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        for(var i = 0 ; i < pc ; i++ ){ ////////////////////     // [000_3RD][206][FMT]
-            var c = plte[i];            ////////////////////     // [000_3RD][206][FMT]
-            nplt.push([                 ////////////////////     // [000_3RD][206][FMT]
-                                        ////////////////////     // [000_3RD][206][FMT]
-                ( (c>>> 0) & 255 )      ////////////////////     // [000_3RD][206][FMT]
-            ,   ( (c>>> 8) & 255 )      ////////////////////     // [000_3RD][206][FMT]
-            ,   ( (c>>>16) & 255 )      ////////////////////     // [000_3RD][206][FMT]
-            ,   ( (c>>>24) & 255 )      ////////////////////     // [000_3RD][206][FMT]
-            ]);;                        ////////////////////     // [000_3RD][206][FMT]
-        };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        for(var i = 0 ; i < pc ; i++ ){         ;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                ////////////     // [000_3RD][206][FMT]
-            var ne=0xffffffff, ni=0;            ////////////     // [000_3RD][206][FMT]
-            for(var j=0; j<pc; j++) {           ;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                ////////////     // [000_3RD][206][FMT]
-                var ce = D( nplt[i],nplt[j] );  ////////////     // [000_3RD][206][FMT]
-                                                ////////////     // [000_3RD][206][FMT]
-                if( j != i && ce < ne ){        ;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                ////////////     // [000_3RD][206][FMT]
-                    ne = ce ;; /////////////////////////////     // [000_3RD][206][FMT]
-                    ni =  j ;; /////////////////////////////     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-                };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            var hd = Math.sqrt(ne)/2;; /////////////////////     // [000_3RD][206][FMT]
-            rads[i] = ~~(hd*hd);;;;;;; /////////////////////     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        var tb32 = new Uint32Array( tb.buffer );;;;;;;;;;;;;     // [000_3RD][206][FMT]
-        var err  = new Int16Array(  w*h*4     );;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        for(var y=0; y<h; y++){ //:LOOP[ y ]::::::::::::::::::// // [000_3RD][206][FMT]
-        for(var x=0; x<w; x++){ //:LOOP[ x ]::::::::::::::::::// // [000_3RD][206][FMT]
-            ////                                                 // [000_3RD][206][FMT]
-            var i = (y*w+x)*4;                                   // [000_3RD][206][FMT]
-            ////                                                 // [000_3RD][206][FMT]
-            var cc =([ /////////////////////////////////////     // [000_3RD][206][FMT]
-            ////                           /////////////////     // [000_3RD][206][FMT]
-                N( sb[ i+0 ] + err[ i+0 ]) /////////////////     // [000_3RD][206][FMT]
-            ,   N( sb[ i+1 ] + err[ i+1 ]) /////////////////     // [000_3RD][206][FMT]
-            ,   N( sb[ i+2 ] + err[ i+2 ]) /////////////////     // [000_3RD][206][FMT]
-            ,   N( sb[ i+3 ] + err[ i+3 ]) /////////////////     // [000_3RD][206][FMT]
-            ]);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-            ////                                                 // [000_3RD][206][FMT]
-            var ni = 0 , nd = 0xffffff ;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-            ////                                                 // [000_3RD][206][FMT]
-            for( var j = 0 ; j < pc ; j++ ){ ///////////////     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-                var cd = D( cc , nplt[j] );;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-                if( cd < nd ){ /////////////////////////////     // [000_3RD][206][FMT]
-                    nd = cd ; //////////////////////////////     // [000_3RD][206][FMT]
-                    ni =  j ; //////////////////////////////     // [000_3RD][206][FMT]
-                };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-            ////                                                 // [000_3RD][206][FMT]
-            //- ni = oind[i>>2]; -//                             // [000_3RD][206][FMT]
-            var nc = nplt[ni];                                   // [000_3RD][206][FMT]
-            var er =([ /////////////////////////////////////     // [000_3RD][206][FMT]
-               (cc[ 0 ] - nc[ 0 ]) /////////////////////////     // [000_3RD][206][FMT]
-            ,  (cc[ 1 ] - nc[ 1 ]) /////////////////////////     // [000_3RD][206][FMT]
-            ,  (cc[ 2 ] - nc[ 2 ]) /////////////////////////     // [000_3RD][206][FMT]
-            ,  (cc[ 3 ] - nc[ 3 ]) /////////////////////////     // [000_3RD][206][FMT]
-            ]);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-            ////                                                 // [000_3RD][206][FMT]
-            //- addErr(er, err, i+4, 16); -//                    // [000_3RD][206][FMT]
-            ////                                                 // [000_3RD][206][FMT]
-            if( x != w-1 ){                                      // [000_3RD][206][FMT]
-                            addErr(er, err, i+4    , 7);;;;;     // [000_3RD][206][FMT]
-            };;                                                  // [000_3RD][206][FMT]
-            if( y != h-1 ){ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            if( x !=  0  ){ addErr(er, err, i+4*w-4, 3); };;     // [000_3RD][206][FMT]
-                            addErr(er, err, i+4*w  , 5);;;;;     // [000_3RD][206][FMT]
-            if( x != w-1 ){ addErr(er, err, i+4*w+4, 1); };;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-            oind[i>>2] = ni;  tb32[i>>2] = plte[ni];             // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][FMT]
-        };;};; //:NEXT[ x , y ]:::::::::::::::::::::::::::::::// // [000_3RD][206][FMT]
-    };; //:ENDFUNC[ UPNG.encode.dither ]::::::::::::::::::::::// // [000_3RD][206][FMT]
-                                                                 // [000_3RD][206][---]
+UPNG.encode.dither = function(sb, w, h, plte, tb, oind) {
+	
+	function addErr(er, tg, ti, f) {
+		tg[ti]+=(er[0]*f)>>4;  tg[ti+1]+=(er[1]*f)>>4;  tg[ti+2]+=(er[2]*f)>>4;  tg[ti+3]+=(er[3]*f)>>4;  
+	}
+	function N(x) {  return Math.max(0, Math.min(255, x));  }
+	function D(a,b) {  var dr=a[0]-b[0], dg=a[1]-b[1], db=a[2]-b[2], da=a[3]-b[3];  return (dr*dr + dg*dg + db*db + da*da);  }
+	
+	
+	var pc=plte.length, nplt = [], rads=[];
+	for(var i=0; i<pc; i++) {
+		var c = plte[i];
+		nplt.push([((c>>>0)&255), ((c>>>8)&255), ((c>>>16)&255), ((c>>>24)&255)]);
+	}
+	for(var i=0; i<pc; i++) {
+		var ne=0xffffffff, ni=0;
+		for(var j=0; j<pc; j++) {  var ce=D(nplt[i],nplt[j]);  if(j!=i && ce<ne) {  ne=ce;  ni=j;  }  }
+		var hd = Math.sqrt(ne)/2;
+		rads[i] = ~~(hd*hd);
+	}
+		
+	var tb32 = new Uint32Array(tb.buffer);
+	var err = new Int16Array(w*h*4);
+	
+	for(var y=0; y<h; y++) {
+		for(var x=0; x<w; x++) {
+			var i = (y*w+x)*4;
+			
+			var cc = [N(sb[i]+err[i]), N(sb[i+1]+err[i+1]), N(sb[i+2]+err[i+2]), N(sb[i+3]+err[i+3])];
+			
+			var ni=0, nd = 0xffffff;
+			for(var j=0; j<pc; j++) {
+				var cd = D(cc,nplt[j]);
+				if(cd<nd) {  nd=cd;  ni=j;  }
+			}  
+			
+			//ni = oind[i>>2];
+			var nc = nplt[ni];
+			var er = [cc[0]-nc[0], cc[1]-nc[1], cc[2]-nc[2], cc[3]-nc[3]];
+			
+			//addErr(er, err, i+4, 16);
+			
+			//*
+			if(x!=w-1) addErr(er, err, i+4    , 7);
+			if(y!=h-1) {
+				if(x!=  0) addErr(er, err, i+4*w-4, 3);
+				           addErr(er, err, i+4*w  , 5);
+				if(x!=w-1) addErr(er, err, i+4*w+4, 1);  //*/
+			}
+		
+			oind[i>>2] = ni;  tb32[i>>2] = plte[ni];
+		}
+	}
+}
+
 //: - - - - - - - - - - - - - ---- - - - - - - - - - - - - - :// // [000_3RD][206][---]
 //:                                                          :// // [000_3RD][206][---]
 //:    WEB_URL : github.com/photopea/UPNG.js                 :// // [000_3RD][206][---]
