@@ -1,0 +1,14 @@
+var d_filemob_elmhack_inn =( "[nil][elmhack_inn]" );         // [381][-------------]
+
+
+SAVEBOX_DSK :
+
+            let f_w_e =( "[FILENAME.TXT" ); //: @f_w_e@ ://
+
+            if( YES_NIL( d_filemob_elmhack_inn ) ){
+                         d_filemob_elmhack_inn=(
+                            document.createElement(
+                                "input"
+                            ));;
+            };;
+                     
