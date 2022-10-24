@@ -13307,8 +13307,8 @@ if( /** __KONAMIC__ **/ notnode ){ //:::::BEG[ KONAMIC_DATA ]:// // [180]
                                                                  // [---][---][---]
     ,   c_konamic_savecen_ram //: ( "D" / 3 )  @_D_KEY_@ ://     // [368][366][180]
     ,   c_konamic_loadcen_ram //: ( "E" / 4 )  @_E_KEY_@ ://     // [368][366][180]
-    ,   c_konamic_savecen_dsk //: ( "F" / 5 )  @_F_KEY_@ ://     // [368][366][180] 
-    ,   c_konamic_loadcen_dsk //: ( "G" / 6 )  @_G_KEY_@ ://     // [368][366][180] 
+    ,   c_konamic_savecen_dsk //: ( "F" / 5 )  @_F_KEY_@ ://     // [368][366][180]
+    ,   c_konamic_loadcen_dsk //: ( "G" / 6 )  @_G_KEY_@ ://     // [368][366][180]
                                                                  // [---][---][---]
     ,   c_konamic_nothing     //: ( "H" / 7 ) ://                // [---][180][---]
     ,   c_konamic_nothing     //: ( "I" / 8 ) ://                // [---][180][---]
@@ -15446,6 +15446,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         const   F_FILEMOB_OPEN    = "[FIX:.....SEE_BELOW]" ;     // [379]
         const   F_FILEMOB_SAVE    = "[TRY....SAVEBOX_DSK]" ;     // [379]
         const   F_FILEMOB_LOAD    = "[TRY....LOADBOX_DSK]" ;     // [379]
+        const   F_FILEMOB_SAVE_FILE_DIALOG = "[INCORRECT]" ;     // [379]
+        const   F_FILEMOB_LOAD_FILE_DIALOG = "[INCORRECT]" ;     // [379]
                                                                  // [379]
         const   F_FILEMOB_SAVEBOX_DSK = function                 // [379]
         PRIVATE_F_FILEMOB_SAVEBOX_DSK(                           // [379]
@@ -43598,13 +43600,24 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         END_QUOTE :                                           |  // [379]
                                                               |  // [379]
     :---------------------------------------------------------+  // [379]
+    #_WGL_NULL_# :--------------------------------------------+  // [379]
+                                                              |  // [379]
+        TODO : We need to add an alert to this, and maybe     |  // [379]
+             : some trouble shooting steps... Or a            |  // [379]
+             : automatic re-try to recreate the webgl         |  // [379]
+             : context.                                       |  // [379]
+                                                              |  // [379]
+        ERROR_MESSAGE :                                       |  // [379]
+                                                              |  // [379]
+            Uncaught TypeError: d_gpudata_wgl is null         |  // [379]
+    :---------------------------------------------------------+  // [379]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [379] : Getting Save Window Open.
+    [379] : Stubbed in save+load file dialog for disk. ::::::::  // [379]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
