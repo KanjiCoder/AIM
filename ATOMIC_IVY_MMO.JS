@@ -19760,7 +19760,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         ){                                                       // [367]
             LOG( "[DOING:F_KONAMIC_SAVECEN_DSK]" );              // [379][367]
 
-            window.showOpenFilePicker();//:@_FSAA_ENTRY_@://
+            window.showOpenFilePicker();//:@_FSAA_ENTRY_@://     // [379][---]
 
         };;                                                      // [367]
         const   F_KONAMIC_LOADCEN_DSK = function                 // [367]
@@ -43531,6 +43531,24 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         END_QUOTE                                             |  // [379]
     :---------------------------------------------------------+  // [379]
     :---------------------------------------------------------+  // [379]
+    #_USER_GESTURE_# :----------------------------------------+  // [379]
+    @_USER_GESTURE_@ :----------------------------------------+  // [379]
+                                                              |  // [379]
+        BEG_QUOTE                                             |  // [379]
+                                                              |  // [379]
+            Like many other powerful APIs, calling            |  // [379]
+            showOpenFilePicker()                              |  // [379]
+            must be done in a secure context,                 |  // [379]
+            and must be called from within a user gesture.    |  // [379]
+                                                              |  // [379]
+        END_QUOTE                                             |  // [379]
+                                                              |  // [379]
+        https://web.dev/file-system-access/                   |  // [379]
+                                                              |  // [379]
+    :---------------------------------------------------------+  // [379]
+    :---------------------------------------------------------+  // [379]
+
+
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
