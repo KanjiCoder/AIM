@@ -25105,6 +25105,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [381] : Sir, you can't do that here. ::::::::::::::::::::::  // [382][381]
           : Actually, you can if you hurry the fuck up. :::::::  // [382][381]
 
+    [382] : The "Load From Disk" __MIGHT__ be done.  ::::::::::  // [383][382]
+          : We don't know for sure yet.              ::::::::::  // [383][382]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -44146,8 +44149,8 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [382] : The "Load From Disk" __MIGHT__ be done.  ::::::::::  // [382]
-          : We don't know for sure yet.              ::::::::::  // [382]
+    [383] : Convert JavaScript's "File" type to a :::::::::::::  // [383]
+          : Uint8Array that we can do stuff with. :::::::::::::  // [383]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
