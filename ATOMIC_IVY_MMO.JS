@@ -44077,7 +44077,21 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         it's own system namespace.                            |  // [382]
                                                               |  // [382]
     :---------------------------------------------------------+  // [382]
-
+    #_IDEA_RANDOM_FUN_STUFF_# :-------------------------------+  // [382]
+                                                              |  // [382]
+        @IDEA@ : Before switching to a new large              |  // [382]
+               : sub-system undertaking, we add               |  // [382]
+               : "quick fun features" to get the              |  // [382]
+               : MAIN_VIDEO NUMBER to line up with            |  // [382]
+               : the SUB_SERIES NUMBER on the last digit.     |  // [382]
+                                                              |  // [382]
+               For example :                                  |  // [382]
+                                                              |  // [382]
+                    We are on VIDEO #3_8_2 ( MAIN_VIDEO )     |  // [382]
+                    We are on VIDEO #0_2_2 ( SUB_SERIES )     |  // [382]
+                                                              |  // [382]
+        Maybe add that mirror brush idea really quick?        |  // [382]
+    :---------------------------------------------------------+  // [382]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
