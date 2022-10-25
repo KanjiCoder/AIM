@@ -15507,7 +15507,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 spinlock =( 0 );                                 // [383]
             };;                                                  // [383]
                                                                  // [383]
-            while( spinlok ){  };                                // [383]
+            while( spinlok ){  };  //:@THIS_WILL_FREEZE@://      // [383]
                                                                  // [383]
             o_binarra=( new Uint8Array( arr_buf ) );             // [383]
             return( o_binarra );                                 // [383]
@@ -44147,6 +44147,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                                  // [382]
     @mpi@ : Maximum_Pixel_Index                                  // [382]
 
+    @THIS_WILL_FREEZE@ :--------------------------------------+  // [383]
+    #THIS_WILL_FREEZE# :--------------------------------------+  // [383]
+                                                              |  // [383]
+        This line of code will cause your program             |  // [383]
+        to freeze. So... You shouldn't do it.                 |  // [383]
+                                                              |  // [383]
+    :---------------------------------------------------------+  // [383]
+    :---------------------------------------------------------+  // [383]
+
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
@@ -44154,6 +44163,9 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         
     [383] : Convert JavaScript's "File" type to a :::::::::::::  // [383]
           : Uint8Array that we can do stuff with. :::::::::::::  // [383]
+          : ( We Tried The Above And Failed ^^^^ ) ::::::::::::  // [383]
+          : FUCKING HELL WE NEED A RUDIMENTARY EVENT QUEUE  :::  // [383]
+          : OWNED BY FILEMOB SUB SYSTEM.                    :::  // [383]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
