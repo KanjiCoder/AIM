@@ -15556,7 +15556,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  //      [382]
                     let i_binarra =(                             // [383][382]
                     F_FILEMOB_JAVFILE_BINARRA(                   // [383][382]
-                              pngbarr                    );;     // [383][382]
+                              pngbarr                   ));;     // [383][382]
                     let i_binanub =(i_binarra.byteLength );;     // [383][382]
 
                     let o_pixarra =( d_mp0_512           );;     // [382]
