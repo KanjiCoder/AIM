@@ -15497,29 +15497,32 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         ){                                                       // [379]
                                                                  // [379]
 
-            YEL( "[DOING_IT!!:F_FILEMOB_LOADBOX_DSK]" );         // [381][380][379]
+            YEL( "[LOADBOX_DSK:IS_FUCKING_IMPOSSIBLE]" );        // [381][380][379]
+                                                                 // [381][--------]
+            //:#_KEEP_FOR_REFERENCE_#:[381]:-------------://     // [381][--------]
+            var elm_dom =( d_filemob_elmhack_loadbox_dsk );      // [381][--------]
+            var elm_nil =( NIL( elm_dom )                );      // [381][--------]
+            var pngbarr =( "[nil][.PNG_Binary_Data]"     );      // [381][--------]
+                                                                 // [381][--------]
+            if( elm_nil >= 1 ){                                  // [381][--------]
+                                                                 // [381][--------]
+                elm_dom = document.createElement("input");       // [381][--------]
+                elm_dom.type = "file" ;                          // [381][--------]
+                                                                 // [381][--------]
+                function F_INLINED_001( i_evt ){                 // [381][--------]
+                                                                 // [381][--------]
+                    pngbarr = i_evt.target.files[ 0 ];           // [381][--------]
+                                                                 // [381][--------]
+                    YEL( "[?FILE_CHOOSEN?]" );                   // [381][--------]
+                };;                                              // [381][--------]
+                elm_dom.onchange =( F_INLINED_001 );             // [381][--------]
+                                                                 // [381][--------]
+                d_filemob_elmhack_loadbox_dsk =( elm_dom );      // [381][--------]
+            };;                                                  // [381][--------]
+                                                                 // [381][--------]
+            elm_dom.click();                                     // [381][--------]
+            //:-------------:#_KEEP_FOR_REFERENCE_#:[381]://     // [381][--------]
 
-            var elm_dom =( d_filemob_elmhack_loadbox_dsk );         
-            var elm_nil =( NIL( elm_dom )                );     
-            var pngbarr =( "[nil][.PNG_Binary_Data]"     );        
-            
-            if( elm_nil >= 1 ){
-
-                elm_dom = document.createElement("input");
-                elm_dom.type = "file" ;
-
-                function F_INLINED_001( i_evt ){
-
-                    pngbarr = i_evt.target.files[ 0 ]; 
-
-                    YEL( "[?FILE_CHOOSEN?]" );
-                };;
-                elm_dom.onchange =( F_INLINED_001 );
-  
-                d_filemob_elmhack_loadbox_dsk =( elm_dom );
-            };;
-
-            elm_dom.click();
         };;                                                      // [379]
     //:--------------------------:#_FILE_DIALOG_BOXES_#:[379]:// // [379]
                                                                  // [---]
@@ -43902,6 +43905,18 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     @F_INLINED@ ::::: Namespace to use for any inlined       ::  // [381]
                 ::::: function. So, any function declared    ::  // [381]
                 ::::: within another function.               ::  // [381]
+                                                                 // [381]
+    #_KEEP_FOR_REFERENCE_# :----------------------------------+  // [381]
+                                                              |  // [381]
+        Keeping this code for reference. But we               |  // [381]
+        are not going to be able to do this because           |  // [381]
+        of security problems. This is why I fucking           |  // [381]
+        hate JavaScript for serious applications.             |  // [381]
+                                                              |  // [381]
+        Loading+Saving is basic functionality in C99,         |  // [381]
+        but in a browser-based game it is a monumental        |  // [381]
+        undertaking.                                          |  // [381]
+    :---------------------------------------------------------+  // [381]
 
 
 *** ******************************************************** **/         
@@ -43909,7 +43924,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-
+    [381] : Sir, you can't do that here. ::::::::::::::::::::::  // [381]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
