@@ -25224,6 +25224,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : FUCKING HELL WE NEED A RUDIMENTARY EVENT QUEUE  :::  // [384][383]
           : OWNED BY FILEMOB SUB SYSTEM.                    :::  // [384][383]
 
+    [384] : Simple Task Queue That Can Only Hold ONE TASK :::::  // [385][384]
+          : Added To FILEMOB so that we can re-linearize  :::::  // [385][384]
+          : the async file loading operations that don't  :::::  // [385][384]
+          : need to be async.                             :::::  // [385][384]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -44372,10 +44377,11 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [384] : Simple Task Queue That Can Only Hold ONE TASK :::::  // [384]
-          : Added To FILEMOB so that we can re-linearize  :::::  // [384]
-          : the async file loading operations that don't  :::::  // [384]
-          : need to be async.                             :::::  // [384]
+    [385] : In the midst of a refactor. If you know what   ::::  // [385]
+          : is good for you, you wont press                ::::  // [385]
+          : [ up up down down left right left right 'G' ]  ::::  // [385]
+          : ( This is not a joke, we are in the middle  )  ::::  // [385]
+          : ( of a messy pain in the ass refactor.      )  ::::  // [385]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
