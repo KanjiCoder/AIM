@@ -10399,6 +10399,7 @@ if( /** __FILEMOB__ **/ notnode ){  //::::::::::::::::::::::::// // [---][361][-
         ,   c_filemob_tasknos_loadbox_dsk                        // [384]
         ]));;                                                    // [384]
                                                                  // [384]
+        //:#_ERROR_CHECK_TASKNOS_TABLE_#:[384]:----------://     // [384]
         {                                                        // [384]
             let  n_o_s = d_filemob_tasknos ;                     // [384]
                                                                  // [384]
@@ -10415,6 +10416,7 @@ if( /** __FILEMOB__ **/ notnode ){  //::::::::::::::::::::::::// // [---][361][-
                     === c_filemob_tasknos_loadbox_dsk            // [384]
                     , "[NUMBER_OF_STEPS:::loadbox_dsk]" );;      // [384]
         }                                                        // [384]
+        //:----------:#_ERROR_CHECK_TASKNOS_TABLE_#:[384]://     // [384]
                                                                  // [384]
     //:----------------:#_HACKISH_ONE_TASK_SYSTEM_#:[384]://     // [384]
                                                                  // [---]
@@ -44270,7 +44272,14 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         has a task queued up, it will ignore you.             |  // [384]
                                                               |  // [384]
     :---------------------------------------------------------+  // [384]
-
+    #_ERROR_CHECK_TASKNOS_TABLE_# :---------------------------+  // [384]
+                                                              |  // [384]
+        Make sure that the lookup table defining the          |  // [384]
+        number of steps for certain tasks matches             |  // [384]
+        the constants defining the number of                  |  // [384]
+        steps in certain tasks.                               |  // [384]
+                                                              |  // [384]
+    :---------------------------------------------------------+  // [384]
 
 
 
