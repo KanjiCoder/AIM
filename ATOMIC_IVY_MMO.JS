@@ -15679,7 +15679,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             //:#_FILE_TO_BYTE_ARRAY_SPINLOCK_#:[387]:--------:// // [387]
             if( 4 === i_taskios ){                               // [387]
                                                                  // [387]
-                if( !( w.spinlok >= 1 ) ){                       // [387]
+                if( !( w.spinlok <= 0 ) ){                       // [387]
                                                                  // [387]
                     o_taskiod-- ; //: @RESPIN_LOCK@ ://          // [387]
                 };;                                              // [387]
@@ -25300,6 +25300,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : [ up up down down left right left right 'G' ]  ::::  // [386][385]
           : ( This is not a joke, we are in the middle  )  ::::  // [386][385]
           : ( of a messy pain in the ass refactor.      )  ::::  // [386][385]
+
+    [386] : More refactoring. Created a task specific   :::::::  // [387][386]
+          : struct for the current[ FILEMOB ]task we    :::::::  // [387][386]
+          : are working on.                             :::::::  // [387][386]
+          : MUSIC_TAG[ unitcode:machine - Drift Away ]  :::::::  // [387][386]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -44668,10 +44673,18 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [386] : More refactoring. Created a task specific   :::::::  // [386]
-          : struct for the current[ FILEMOB ]task we    :::::::  // [386]
-          : are working on.                             :::::::  // [386]
-          : MUSIC_TAG[ unitcode:machine - Drift Away ]  :::::::  // [386]
+    [387] : I fucking hate this. It's not that this         :::  // [387]
+          : refactor is hard. It's that doing the           :::  // [387]
+          : refactor in discrete steps that can be          :::  // [387]
+          : easy to follow from video to video              :::  // [387]
+          : is fucking hard.                                :::  // [387]
+          :                                                 :::  // [387]
+          : It's hard to keep an intelligible "paper trail" :::  // [387]
+          : when you are shifting stuff all over the place. :::  // [387]
+          :                                                 :::  // [387]
+          : I really fucking hate this.                     :::  // [387]
+          :                                                 :::  // [387]
+          : -KanjiCoder                                     :::  // [387]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
