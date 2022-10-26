@@ -44280,8 +44280,22 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         steps in certain tasks.                               |  // [384]
                                                               |  // [384]
     :---------------------------------------------------------+  // [384]
-
-
+    #I_HAVE_BAD_NEWS_ABOUT_YOUR_PARENTS# :--------------------+  // [384]
+                                                              |  // [384]
+        You might not know this. But Batman's parents         |  // [384]
+        died when they were shot in an Alley Way.             |  // [384]
+                                                              |  // [384]
+        In Batman's origin story, Joe Chill is the mugger     |  // [384]
+        who murders young Bruce Wayne's parents,              |  // [384]
+        Dr. Thomas Wayne and Martha Wayne.                    |  // [384]
+        The murder traumatizes Bruce,                         |  // [384]
+        inspiring his vow to avenge their deaths              |  // [384]
+        by fighting crime in Gotham City                      |  // [384]
+        as the vigilante Batman.                              |  // [384]
+                                                              |  // [384]
+        https://en.wikipedia.org/wiki/Joe_Chill               |  // [384]
+                                                              |  // [384]
+    :---------------------------------------------------------+  // [384]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
