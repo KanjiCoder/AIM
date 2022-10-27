@@ -15616,7 +15616,13 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     //: SEE[ _MOVED_CODE_BBB_ ]::::::::::://     // [387]
                                                                  // [---][385][MOV][---][---]
                 };;                                              // [---][385][MOV][381][---]
+                function  F_INLINED_002( i_evt ){
+        
+                    ERR( "[HOW_DARE_YOU_GHOST_ME]" );
+                    d_filemob_taskill =( 1 );
+                };;
                 elm_dom.onchange =( F_INLINED_001 );             // [---][385][MOV][381][---]
+                elm_dom.oncancel =( F_INLINED_002 );
                                                                  // [---][385][MOV][381][---]
                 d_filemob_elmhack_loadbox_dsk =( elm_dom );      // [---][385][MOV][381][---]
                                                                  // [---][385][--------][---]
