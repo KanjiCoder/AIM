@@ -15616,13 +15616,20 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     //: SEE[ _MOVED_CODE_BBB_ ]::::::::::://     // [387]
                                                                  // [---][385][MOV][---][---]
                 };;                                              // [---][385][MOV][381][---]
-                function  F_INLINED_002( i_evt ){
-        
-                    MSG( "[HOW_DARE_YOU_GHOST_ME]" );
-                    d_filemob_taskill =( 1 );
-                };;
+
+                //- ---------------------------------------- -// // [391]
+                //+ #_YOU_WISH_IT_WERE_THAT_FUCKING_EASY_#   +// // [391]
+                //- ---------------------------------------- -// // [391]
+                //- elm_dom.oncancel =( F_INLINED_002 );     -// // [391]
+                //- function  F_INLINED_002( i_evt ){        -// // [391]
+                //-                                          -// // [391]
+                //-     MSG( "[HOW_DARE_YOU_GHOST_ME]" );    -// // [391]
+                //-     d_filemob_taskill =( 1 );            -// // [391]
+                //- };;                                      -// // [391]
+                //- ---------------------------------------- -// // [391]
+
                 elm_dom.onchange =( F_INLINED_001 );             // [---][385][MOV][381][---]
-                elm_dom.oncancel =( F_INLINED_002 );
+                
                                                                  // [---][385][MOV][381][---]
                 d_filemob_elmhack_loadbox_dsk =( elm_dom );      // [---][385][MOV][381][---]
                                                                  // [---][385][--------][---]
@@ -15789,12 +15796,35 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [385][--------][---][---]
         };; //:FUNCBOD_END[ LOADBOX_DSK_TASKIOS ]:::::::::::::// // [385][--------][---][---]
 
+        const   F_FILEMOB_TASKILL_TRY = function                 // [391]
+        PRIVATE_F_FILEMOB_TASKILL_TRY(                           // [391]
+                                                                 // [391]
+            /** VOID **/                                         // [391]
+        ){  //:BEG_BOD[ TASKILL_TRY ]:::::::::::::::::::::::::// // [391]
+                                                                 // [391]
+            if( d_filemob_taskhas >= 1 ){                        // [391]
+                                                                 // [391]
+                let taskenu =( d_filemob_taskenu        );       // [391]
+                let cankill =( d_filemob_cankill[ enu ] );       // [391]
+                                                                 // [391]
+                if( cankill >= 1 ){                              // [391]
+                                                                 // [391]
+                    d_filemob_taskill =( 0 );                    // [391]
+                    d_filemob_taskhas =( 0 );                    // [391]
+                    d_filemob_taskenu =( 0 );                    // [391]
+                    F_FILEMOB_TASKDAT_RES_ALL( );                // [391]
+                };;                                              // [391]
+            };;                                                  // [391]
+        };; //:END_BOD[ TASKILL_TRY ]:::::::::::::::::::::::::// // [391]
+
         const   F_FILEMOB_LOADBOX_DSK = function //:@_G_KEY_@:// // [379]
         PRIVATE_F_FILEMOB_LOADBOX_DSK(                           // [379]
                                                                  // [379]
             /** VOID_FOR_NOW **/                                 // [379]
         ){                                                       // [379]
             MSG( "[#_DONT_FUCKING_YELL_AT_ME_2022_#]" );         // [381][380][379]
+                                                                 // [---]    
+            F_FILEMOB_TASKILL_TRY();   //:#_WHYKILL_LOADBOX_#:// // [391]
                                                                  // [---]
             if( d_filemob_taskhas >= 1 ){                        // [385]
                                                                  // [385]
@@ -44990,6 +45020,26 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
     :---------------------------------------------------------+  // [391]
                                                                  // [391]
     @d_filemob_taskill@ : Kill current re-entrant task ?         // [391]
+                                                                 // [391]
+    #_YOU_WISH_IT_WERE_THAT_FUCKING_EASY_# :------------------+  // [391]
+                                                              |  // [391]
+        There is no "oncancel" event we can use.              |  // [391]
+        And detecting a "cancel" event through hacks          |  // [391]
+        is a lot of javascript specific code I'd rather       |  // [391]
+        __NOT__ right. So... We need a table that we          |  // [391]
+        can use to flag certain tasks as                      |  // [391]
+        "interruptable".                                      |  // [391]
+    :---------------------------------------------------------+  // [391]
+    #_WHYKILL_LOADBOX_# :-------------------------------------+  // [391]
+                                                              |  // [391]
+        There is NO POSSIBLE FUCKING WAY to detect the        |  // [391]
+        cancel buutton with the file picker dialog we         |  // [391]
+        have instantiated. So we need to allow the            |  // [391]
+        "loadbox_dsk" function to be "killable" and           |  // [391]
+        if we try to disbatch it again, it kills              |  // [391]
+        the previously disbatched file picker process.        |  // [391]
+                                                              |  // [391]
+    :---------------------------------------------------------+  // [391]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
@@ -44997,6 +45047,7 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 /** ******************************************************** ***     
         
     [391] : [ taskill ]aborts bautched re-entrant tasks. ::::::  // [391]
+          : NEXT : Create[ d_filemob_cankill ]Array. ::::::::::  // [391]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
