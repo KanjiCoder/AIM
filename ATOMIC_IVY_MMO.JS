@@ -15618,7 +15618,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 };;                                              // [---][385][MOV][381][---]
                 function  F_INLINED_002( i_evt ){
         
-                    ERR( "[HOW_DARE_YOU_GHOST_ME]" );
+                    MSG( "[HOW_DARE_YOU_GHOST_ME]" );
                     d_filemob_taskill =( 1 );
                 };;
                 elm_dom.onchange =( F_INLINED_001 );             // [---][385][MOV][381][---]
