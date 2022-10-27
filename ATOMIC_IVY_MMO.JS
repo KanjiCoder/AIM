@@ -44961,6 +44961,15 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
         Could get some interesting effects with the           |  // [390]
         cat pictures you are loading into the game.           |  // [390]
     :---------------------------------------------------------+  // [390]
+
+    #_WHEN_USER_HITS_CANCEL_OR_ESCAPE_# :---------------------+  // [###]
+                                                              |  // [###]
+        BUGFIX_TODO : We need to reset re-entrant data        |  // [###]
+                    : when user cancels operation.            |  // [###]
+                    : Otherwise the hotkey for loading        |  // [###]
+                    : a levelpack becomes permanently         |  // [###]
+                    : broken.                                 |  // [###]
+    :---------------------------------------------------------+  // [###]
             
 
 *** ******************************************************** **/         
