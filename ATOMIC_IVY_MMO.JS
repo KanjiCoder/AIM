@@ -45621,6 +45621,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 /** ******************************************************** ***     
         
     [396] : GET A FUCKING DIALOG OPEN YOU SON OF A BITCH!!! :::  // [396]
+          : We can now save a file called "512.PNG" to the  :::  // [396]
+          : hard disk. But it's just a text file containing :::  // [396]
+          : the source code of our web page.                :::  // [396]
+          : BUT IT'S A STEP IN THE CORRECT DIRECTION!       :::  // [396]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
