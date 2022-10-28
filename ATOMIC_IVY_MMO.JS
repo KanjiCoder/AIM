@@ -45796,7 +45796,10 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [398] : Encoding .PNG file from 512x512 RGBA image.
+    [398] : Encoding .PNG file from 512x512 RGBA image. :::::::  // [398]
+          : Also, saving the .PNG file to disk by       :::::::  // [398]
+          : creating a downloadable blob and creating   :::::::  // [398]
+          : a hyperlink url to that blob data.          :::::::  // [398]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
