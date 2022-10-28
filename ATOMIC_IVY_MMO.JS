@@ -15608,47 +15608,56 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                             //// // [393]
         ){  //:BOD_BEG[ F_FILEMOB_SAVEBOX_DSK_TASKIOS ]:::::::// // [393]
           
-            let o_iod =( i_taskios );   //:OUTput_IndexOfDone:// // [394]
-
-            //:#_SETUP_SAVEBOX_DOM_HACK_#:[394]:-------------:// 
-            if( 0 === i_taskios ){
-
-
-            }else
-            //:-------------:#_SETUP_SAVEBOX_DOM_HACK_#:[394]://
-            //:#_OPEN_SAVE_DIALOG_BOX_#:[394]:---------------://
-            if( 1 === i_taskios ){
-
-
-            }else
-            //:---------------:#_OPEN_SAVE_DIALOG_BOX_#:[394]://
-            //:#_SELECT_FOLDER_SPINLOCK_#:[394]:-------------://
-            if( 2 === i_taskios ){
-
-
-            }else
-            //:-------------:#_SELECT_FOLDER_SPINLOCK_#:[394]://
-            //:#_INITIATE_SAVE_DOWNLOAD_#:[394]:-------------://
-            if( 3 === i_taskios ){
-
-            }else
-            //:-------------:#_INITIATE_SAVE_DOWNLOAD_#:[394]://
-            //:#_FREE_SPOT_#:[394]:--------------------------://
-            if( 4 === i_taskios ){
-
-                MSG( "[#_MOCKING_UP_END_OF_SAVE_TASK_#]" );
-
-            }else
-            //:--------------------------:#_FREE_SPOT_#:[394]://
-            //:#_THE_END_OF_DAYS_#:[394]:--------------------://
-            {///////////////////////////////////////////////////
-
-                ERR("[#_SAVEBOX_DSK_INVALID_TASKIOS_#]");
-
-            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-            //:--------------------:#_THE_END_OF_DAYS_#:[394]://
-
-            return( o_iod );
+            //:#_VARDEC_2022_10_28_#:[394]:------------------:// // [394]
+                                                                 // [394]
+                                                                 // [394]
+                let o_iod =( i_taskios );  //:IndexOfDone://     // [394]
+                                                                 // [394]
+            //:------------------:#_VARDEC_2022_10_28_#:[394]:// // [394]
+            //:#_SETUP_SAVEBOX_DOM_HACK_#:[394]:-------------:// // [394]
+            if( 0 === i_taskios ){                               // [394]
+                                                                 // [394]
+                //:_________TO_FUCKING_DO________________://     // [394]
+                                                                 // [394]
+            }else                                                // [394]
+            //:-------------:#_SETUP_SAVEBOX_DOM_HACK_#:[394]:// // [394]
+            //:#_OPEN_SAVE_DIALOG_BOX_#:[394]:---------------:// // [394]
+            if( 1 === i_taskios ){                               // [394]
+                                                                 // [394]
+                //:_________TO_FUCKING_DO________________://     // [394]
+                                                                 // [394]
+            }else                                                // [394]
+            //:---------------:#_OPEN_SAVE_DIALOG_BOX_#:[394]:// // [394]
+            //:#_SELECT_FOLDER_SPINLOCK_#:[394]:-------------:// // [394]
+            if( 2 === i_taskios ){                               // [394]
+                                                                 // [394]
+                //:_________TO_FUCKING_DO________________://     // [394]
+                                                                 // [394]
+            }else                                                // [394]
+            //:-------------:#_SELECT_FOLDER_SPINLOCK_#:[394]:// // [394]
+            //:#_INITIATE_SAVE_DOWNLOAD_#:[394]:-------------:// // [394]
+            if( 3 === i_taskios ){                               // [394]
+                                                                 // [394]
+                //:_________TO_FUCKING_DO________________://     // [394]
+                                                                 // [394]
+            }else                                                // [394]
+            //:-------------:#_INITIATE_SAVE_DOWNLOAD_#:[394]:// // [394]
+            //:#_FREE_SPOT_#:[394]:--------------------------:// // [394]
+            if( 4 === i_taskios ){                               // [394]
+                                                                 // [394]
+                YEL( "[#_MOCKING_UP_END_OF_SAVE_TASK_#]" );      // [394]
+                                                                 // [394]
+            }else                                                // [394]
+            //:--------------------------:#_FREE_SPOT_#:[394]:// // [394]
+            //:#_THE_END_OF_DAYS_#:[394]:--------------------:// // [394]
+            {/////////////////////////////////////////////////// // [394]
+                                                                 // [394]
+                ERR("[#_SAVEBOX_DSK_INVALID_TASKIOS_#]");        // [394]
+                                                                 // [394]
+            };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; // [394]
+            //:--------------------:#_THE_END_OF_DAYS_#:[394]:// // [394]
+                                                                 // [394]
+            return( o_iod );                                     // [394]
 
         };; //:BOD_BEG[ F_FILEMOB_SAVEBOX_DSK_TASKIOS ]:::::::// // [393]
 
@@ -15992,11 +16001,11 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 if( enu === c_filemob_taskenu_loadbox_dsk ){     // [---][389] 
                     F_N   =(F_FILEMOB_LOADBOX_DSK_TASKIOS );     // [---][389] 
                 }else   ////////////////////////////////////     // [394][389]
-
+                                                                 // [---][---]
                 if( enu === c_filemob_taskenu_savebox_dsk ){     // [394][---]
                     F_N   =(F_FILEMOB_SAVEBOX_DSK_TASKIOS );     // [394][---]
                 }else   ////////////////////////////////////     // [394][---]
-                        
+                                                                 // [---][---]
                 {       ////////////////////////////////////     // [394][389]
                     LOG( "[what_the_enu:enu]" , enu     );;;     // [---][389] 
                     ERR("[#_AINTNO_TASKIEVER_HEARDOF_#]");;;     // [---][389] 
@@ -45222,6 +45231,14 @@ g25_set ||10 |11 |12 |13 |14 ||  "grid cell indexes" and       :   [163][087]
                                                                  // [394]
     @o_iod@ : OUTPUT - Index_Of_Done                             // [394]
                                                                  // [394]
+    #_VARDEC_2022_10_28_# :-----------------------------------+  // [394]
+                                                              |  // [394]
+        "Save File Dialog Box" function's top level           |  // [394]
+        variable declaration section. Tagged with the         |  // [394]
+        current date to make the section name forever         |  // [394]
+        unique until the end of time.                         |  // [394]
+                                                              |  // [394]
+    :---------------------------------------------------------+  // [394]
     #_SETUP_SAVEBOX_DOM_HACK_# :------------------------------+  // [394]
                                                                  // [394]
         If the invisible anchor element needed to spawn          // [394]
