@@ -1,0 +1,11 @@
+
+    We should make a nice condensed out of bound
+    function since bounds checking is something
+    I do quite often.
+
+        if( d_eci >= 1 ){
+        let OOBMMMV = OOB_MSG_MIN_MAX_VAL ;
+            OOBMMMV( "[OOB_I_PAT]" , 0 ,  0  , i_pat );    
+            OOBMMMV( "[OOB_I_H3X]" , 0 ,(3-1), i_h3x );    
+            OOBMMMV( "[OOB_I_H3Y]" , 0 ,(3-1), i_h3y );   
+        };;
