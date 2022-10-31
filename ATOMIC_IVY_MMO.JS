@@ -11,7 +11,7 @@
 //:CONFIGURATION:[109]:======================================:// // [---][---]
                                                                  // [---][---]
     const _think_you_are_so_fucking_smart_ =( 0 );   //:KEEP0:// // [403][---]
-    var   d_bug_konamic_pad=(["[TOG]","[TEX]"][1]);  //:KOPAD:// // [404][---]   
+    var   d_bug_konamic_pad=(["[TOG]","[TEX]"][1]);  //:KOPAD:// // [404][---]
                                                                  // [--------]
     const c_sum =(["[SUM_TUT]","[SUM_REL]"][ 0 ]); //:#_SUM_#:// // [218][---]
                                                                  // [--------]
@@ -20973,7 +20973,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     }                                            // [404]
                     //:--------------:#_PUSH_OR_FLOOD_#:[404]:// // [404]
                     //:--------------:#_FLOOD_OR_PUSH_#:[404]:// // [404]
-
+                                                                 // [---]
                     //:#_INTERDU_#:[403]:--------------------:// // [403]
                     if( _think_you_are_so_fucking_smart_ ){      // [403]
                                                                  // [403]
@@ -46289,13 +46289,15 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         on the numberpad. AKA, the "10key thingy".            |  // [404]
                                                               |  // [404]
     :---------------------------------------------------------+  // [404]
+                                                                 // [404]
+    d_konamic_bug_pad : WRONG_USE[ d _ bug _ konamic_pad ]       // [404]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [404] : Switch use "Binary Fill Toggle" or         ::::::::  // [404]
+    [404] : Alternate_Between "Binary Fill Toggle" AND ::::::::  // [404]
           : "Hard Texture Push Debug" functions        ::::::::  // [404]
           : depending on value of "d-bug-konamic_pad". ::::::::  // [404]
 
