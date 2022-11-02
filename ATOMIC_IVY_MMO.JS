@@ -15455,6 +15455,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                         d_pix2048[ c_i+1 ]=( t_g );;;;;;;;;;     // [414]
                         d_pix2048[ c_i+2 ]=( t_b );;;;;;;;;;     // [414]
                         d_pix2048[ c_i+3 ]=( t_a );;;;;;;;;;     // [414]
+                                                                 // [414]
+                        //:#_DO_NOT_FLAG_PIX2048_DIRTY_# ://     // [414]
                     };;                                          // [414]
                     //:---------:#_SET_TIL_AT_XYC_#:[414]://     // [414]
                 };;                                              // [---]
@@ -26476,6 +26478,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : the sub texture push. Tile generator          :::::  // [413][412]
           : function that renders the ring has            :::::  // [413][412]
           : just been finished.                           :::::  // [413][412]
+
+    [413] : Fixed bugs I created in previous video. :::::::::::  // [414][413]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -47471,13 +47475,30 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         coordinate.                                           |  // [414]
                                                               |  // [414]
     :---------------------------------------------------------+  // [414]
+    #_DO_NOT_FLAG_PIX2048_DIRTY_# :---------------------------+  // [414]
+                                                              |  // [414]
+        Do __NOT__ flag [ d _ pix2048 ] as dirty here.        |  // [414]
+        The whole point of[ HARDTEX ]system is to debug       |  // [414]
+        the sub-texture-pushes that are incorrectly           |  // [414]
+        written.                                              |  // [414]
+                                                              |  // [414]
+        Setting dirty flag with result in calling our         |  // [414]
+        normal sub-texture push code, which is wrong.         |  // [414]
+                                                              |  // [414]
+        ( Eventually it will be fixed, but at the time )      |  // [414]
+        ( of writing this it is not.                   )      |  // [414]
+        ( DATE[ 2022_11_02 ] _________________________ )      |  // [414]
+                                                              |  // [414]
+    :---------------------------------------------------------+  // [414]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [413] : Fixed bugs I created in previous video. :::::::::::  // [413]
+    [414] : Final pixel setting code, and now I think  ::::::::  // [414]
+          : our first pattern generation function for  ::::::::  // [414]
+          : [ HARDTEX ]system is finished.             ::::::::  // [414]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
