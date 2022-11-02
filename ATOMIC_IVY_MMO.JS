@@ -15317,7 +15317,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 o_til =( 0x00000000 );                           // [412]
             };;                                                  // [412]
                                                                  // [412]
-            return( o_til /** 32Bit_Binary_Tile_Value **/        // [412]
+            return( o_til /** 32Bit_Binary_Tile_Value **/ );     // [412]
                                                                  // [412]
         //:---------------------------:#_GEN_CON_RING_#:[412]:// // [412]
 
