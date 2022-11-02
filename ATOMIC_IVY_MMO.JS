@@ -21230,6 +21230,21 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [406]
             };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [406]
             //:----------------:#_OH_NO_YOU_DIDNT_#:[406]://     // [406]
+            //:#_NPK_LOGGING_#:[416]:--------------------://     // [416]
+                                                                 // [416]
+                if( enu===npk_b_l ){ MSG( "[NPK_B_L]" ); };      // [416]
+                if( enu===npk_b_c ){ MSG( "[NPK_B_C]" ); };      // [416]
+                if( enu===npk_b_r ){ MSG( "[NPK_B_R]" ); };      // [416]
+                                                                 // [416]
+                if( enu===npk_m_l ){ MSG( "[NPK_M_L]" ); };      // [416]
+                if( enu===npk_m_c ){ MSG( "[NPK_M_C]" ); };      // [416]
+                if( enu===npk_m_r ){ MSG( "[NPK_M_R]" ); };      // [416]
+                                                                 // [416]
+                if( enu===npk_t_l ){ MSG( "[NPK_T_L]" ); };      // [416]
+                if( enu===npk_t_c ){ MSG( "[NPK_T_C]" ); };      // [416]
+                if( enu===npk_t_r ){ MSG( "[NPK_T_R]" ); };      // [416]
+                                                                 // [416]
+            //:--------------------:#_NPK_LOGGING_#:[416]://     // [416]
                                                                  // [---]
         };; //:BOD_END[ PAD_TEX ]:::::::::::::::::::::::::::::// // [404]
                                                                  // [404]
@@ -26512,6 +26527,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [414] : Final pixel setting code, and now I think  ::::::::  // [415][414]
           : our first pattern generation function for  ::::::::  // [415][414]
           : [ HARDTEX ]system is finished.             ::::::::  // [415][414]
+
+    [415] : 100% Sure the sub-texture-push code is broken.  :::  // [416][415]
+          : Maybe the "offset" needs to be in pixels rather :::  // [416][415]
+          : than bytes? Or we should just remove the offset :::  // [416][415]
+          : parameter all together. :::::::::::::::::::::::::::  // [416][415]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -47529,16 +47549,22 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         see if the results on screen are what you expect      |  // [415]
         or if the results have been mangled.                  |  // [415]
     :---------------------------------------------------------+  // [415]
+    
+    #_NPK_LOGGING_# :-----------------------------------------+  // [416]
+                                                              |  // [416]
+        I noticed the num-pad-key bindings seem wrong.        |  // [416]
+        Adding logging code to inspect where I went           |  // [416]
+        wrong here.                                           |  // [416]
+    :---------------------------------------------------------+  // [416]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [415] : 100% Sure the sub-texture-push code is broken.  :::  // [415]
-          : Maybe the "offset" needs to be in pixels rather :::  // [415]
-          : than bytes? Or we should just remove the offset :::  // [415]
-          : parameter all together. :::::::::::::::::::::::::::  // [415]
+    [416] : Misc fixes, but main bug in texture upload   ::::::  // [416]
+          : has not yet been found. Suprisingly I can't  ::::::  // [416]
+          : find any documentation on it aside from MDN. ::::::  // [416]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
