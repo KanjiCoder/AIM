@@ -47664,8 +47664,11 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [419] : Konami Zero Bug Fix is done. If all went well. ::::  // [419]
-          : I am writing this delta note ahead of time.    ::::  // [419]
+    [419] : Konami Zero Bug Fix Is Done              ::::::::::  // [419]
+          : SEE[ KONAMIC_ZEROFIX ]                   ::::::::::  // [419]
+          :                                          ::::::::::  // [419]
+          : NEXT : Fix accidential zoom-in after the ::::::::::  // [419]
+          :      : [ Konami_Arrows+NUMPAD ]Combo.    ::::::::::  // [419]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
