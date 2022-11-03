@@ -9954,7 +9954,7 @@ const d_artgirl_ssf_007 =( //: ShaderSourceFrag #07@ssf@[069]://    [070][069]
             //:=======:#_EXTRACT_TILE_VALUE_3_0_9_#:[308]://     // [---][308]  
             //:#_BREAK_ON_VISIBLE_#:[311]:---------------://     // [311]
                                                                  // [311]
-                if( u_0 != u_bintile ){                          // [311]
+                if( u_0 != (u_bintile & U32(0xF0000000)) ){      // [418][FIX][311]
                                                                  // [311]
                     f_out =( FV4_GREYMAT );                      // [311]
                                                                  // [---]
@@ -26548,6 +26548,18 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [416] : Misc fixes, but main bug in texture upload   ::::::  // [417][416]
           : has not yet been found. Suprisingly I can't  ::::::  // [417][416]
           : find any documentation on it aside from MDN. ::::::  // [417][416]
+
+    [417] : Sub Texture Update Is Fixed!            :::::::::::  // [418][417]
+          : Solution : You need to call side-effect :::::::::::  // [418][417]
+          : function before calling the main        :::::::::::  // [418][417]
+          : sub_texture_update function.            :::::::::::  // [418][417]
+          :                                         :::::::::::  // [418][417]
+          : NEXT : 1. Fix the eraser problem with   :::::::::::  // [418][417]
+          :       "Multiple Kinds Of Zero Tiles"    :::::::::::  // [418][417]
+          : NEXT : 2. Fix konami code bug that will :::::::::::  // [418][417]
+          :        overwrite all your data.         :::::::::::  // [418][417]
+          : NEXT : 3. Fix the un-intentional zoom when   ::::::  // [418][417]
+          :      : doing KONAMI_ARROWS+NUMPAD shortcuts. ::::::  // [418][417]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -47590,23 +47602,29 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
                                                               |  // [417]
         That "pixelStorei" is probably the missing key.       |  // [417]
     :---------------------------------------------------------+  // [417]
+    
+    @[FIX]@ : Not quite a bug, but was a problem in the code.    // [418]
+            : For example, in video #4_1_8 we had to fix         // [418]
+            : a problem where shader #7 has                      // [418]
+            : "Multiple Kinds Of Zero Tiles" not all             // [418]
+            : of them rendering transparent.                     // [418]
+                                                                 // [418]
+    @[BUG]@ : Denotes a line of code where we found and          // [418]
+            : fixed a bug in the code.                           // [418]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [417] : Sub Texture Update Is Fixed!            :::::::::::  // [417]
-          : Solution : You need to call side-effect :::::::::::  // [417]
-          : function before calling the main        :::::::::::  // [417]
-          : sub_texture_update function.            :::::::::::  // [417]
-          :                                         :::::::::::  // [417]
-          : NEXT : 1. Fix the eraser problem with   :::::::::::  // [417]
-          :       "Multiple Kinds Of Zero Tiles"    :::::::::::  // [417]
-          : NEXT : 2. Fix konami code bug that will :::::::::::  // [417]
-          :        overwrite all your data.         :::::::::::  // [417]
-          : NEXT : 3. Fix the un-intentional zoom when   ::::::  // [417]
-          :      : doing KONAMI_ARROWS+NUMPAD shortcuts. ::::::  // [417]
+    [418] : Fixing shader bug where if we :            ::::::::  // [418]
+          :     1 . Mirror                             ::::::::  // [418]
+          :     2 . Rotate                             ::::::::  // [418]
+          :     3 . Manipulate Auto Latching           ::::::::  // [418]
+          : A ZERO TILE ...                            ::::::::  // [418]
+          :     We end up with a "non-zero-zero-tile"  ::::::::  // [418]
+          :     that should render as transparent.     ::::::::  // [418]
+          
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
