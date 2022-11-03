@@ -47603,8 +47603,10 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
           :                                         :::::::::::  // [417]
           : NEXT : 1. Fix the eraser problem with   :::::::::::  // [417]
           :       "Multiple Kinds Of Zero Tiles"    :::::::::::  // [417]
-          : NEXT : 2.Fix konami code bug that will  :::::::::::  // [417]
+          : NEXT : 2. Fix konami code bug that will :::::::::::  // [417]
           :        overwrite all your data.         :::::::::::  // [417]
+          : NEXT : 3. Fix the un-intentional zoom when   ::::::  // [417]
+          :      : doing KONAMI_ARROWS+NUMPAD shortcuts. ::::::  // [417]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
