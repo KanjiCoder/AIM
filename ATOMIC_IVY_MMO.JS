@@ -26604,6 +26604,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           :     We end up with a "non-zero-zero-tile"  ::::::::  // [419][418]
           :     that should render as transparent.     ::::::::  // [419][418]
 
+    [419] : Konami Zero Bug Fix Is Done              ::::::::::  // [420][419]
+          : SEE[ KONAMIC_ZEROFIX ]                   ::::::::::  // [420][419]
+          :                                          ::::::::::  // [420][419]
+          : NEXT : Fix accidential zoom-in after the ::::::::::  // [420][419]
+          :      : [ Konami_Arrows+NUMPAD ]Combo.    ::::::::::  // [420][419]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -47683,11 +47689,14 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
         
-    [419] : Konami Zero Bug Fix Is Done              ::::::::::  // [419]
-          : SEE[ KONAMIC_ZEROFIX ]                   ::::::::::  // [419]
-          :                                          ::::::::::  // [419]
-          : NEXT : Fix accidential zoom-in after the ::::::::::  // [419]
-          :      : [ Konami_Arrows+NUMPAD ]Combo.    ::::::::::  // [419]
+    [420] : KonamiKey+NUMPAD no longer zooms in.        :::::::  // [420]
+          : If you invoke a konami combo shortcut with  :::::::  // [420]
+          : the keyboard, the default behavior for that :::::::  // [420]
+          : key should be [ ignored / overridden ].     :::::::  // [420]
+          :                                             :::::::  // [420]
+          : Previously, the default key binding AND     :::::::  // [420]
+          : the KonamiCodeShortcut were executing       :::::::  // [420]
+          : when you did KonamiKey+(A_Z||NUM).          :::::::  // [420]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
