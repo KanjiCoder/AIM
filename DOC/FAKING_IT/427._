@@ -1,0 +1,10 @@
+m_i =( d_len_gtc - 1 );                           
+                for( dex = 0 ; dex <= d_len_gtc ; dex ++ ){
+
+                    F_TILEBOI_EDI_PUT_U32(                            
+                                                                      
+                        te7,la3 //:<--[ TSIZE , LAY[0|1|2]  ]://      
+                    ,   gtx,gty //:<--[ Global Tile X & Y   ]://      
+                    ,   u32     //:<--[ Bit_Packed_Tile_Data]://      
+                    );;  
+                };;
