@@ -47931,7 +47931,19 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         mirroring enumerations and performs them.             |  // [424]
                                                               |  // [424]
     :---------------------------------------------------------+  // [424]
-        
+    #_KEY_ECHO_IDEA_# :---------------------------------------+  // [424]
+                                                              |  // [424]
+        @IDEA@ @HUD_IDEA@ @IDEA_HUD@                          |  // [424]
+                                                              |  // [424]
+        Make a H.U.D. (HUD) that displays which keys          |  // [424]
+        you are pressing so that someone following along      |  // [424]
+        when I am drawing stuff can see what inputs I         |  // [424]
+        was using. Yes, I can call out the keys as well,      |  // [424]
+        but this would be very helpful for if I forget        |  // [424]
+        to call them out. Also would help other people        |  // [424]
+        make good quality [ENGINE/EDITOR] tutorials.          |  // [424]
+                                                              |  // [424]
+    :---------------------------------------------------------+  // [424]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
