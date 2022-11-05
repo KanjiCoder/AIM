@@ -21109,13 +21109,13 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [---]
                 //:#_NONEED_2022_#:[431]:----------------://     // [431]
                 if( d_bug >= 1 ){                                // [431]
-                    //: These bits are... Related, but  :://     // [431]
-                    //: these are not the bits you      :://     // [431]
-                    //: are looking for.                :://     // [431]
+                    //: #_NOT_BITS_YOU_ARE_LOOKING_FOR_# ://     // [431]
                     let tmx =( c_am4_tog_m_x );                  // [431]
                     let tmy =( c_am4_tog_m_y );                  // [431]
-                    ASS( c_am4_0lx === tmx , "[TMX_2022]" );     // [431]
-                    ASS( c_am4_1ly === tmy , "[TMY_2022]" );     // [431]
+                    ASS( c_am4_0lx !== tmx , "[0LX_2022]" );     // [431]
+                    ASS( c_am4_1ly !== tmy , "[1LY_2022]" );     // [431]
+                    ASS( c_am4_2mx === tmx , "[2MX_2022]" );     // [431]
+                    ASS( c_am4_3my === tmy , "[3MY_2022]" );     // [431]
                 };;                                              // [431]
                 //:----------------:#_NONEED_2022_#:[431]://     // [431]
                 //:#_DECLARE_FUCKING_VARS_#:[431]:-------://     // [431]
@@ -49269,6 +49269,11 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
                                                               |  // [431]
         BINGTEN_LAYERS[ mg0 , bg1 , fg2 ]                     |  // [431]
     :---------------------------------------------------------+  // [431]
+    #_NOT_BITS_YOU_ARE_LOOKING_FOR_# :------------------------+
+
+        Not the bits you are looking for.
+        Also, the "tog" is for toggling on/off a given
+        bit within the AM4 bit field. It is not
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
