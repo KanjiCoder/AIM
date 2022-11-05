@@ -21102,7 +21102,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             ,   i_mbx //: Mirror_Bit - X ::::::::::::::::://     // [428]
             ,   i_mby //: Mirror_Bit - Y ::::::::::::::::://     // [428]
             ){                                                   // [428]
-                //: BODY_COMMING_SOON! ( VIDEO #4_3_1 ) < < < < < < < < < < < < < NOTICE_ME_SENPAI [430][428]
+                //: BODY_COMMING_SOON! ( VIDEO #4_3_1 ) < < < < < < < < < < < < < NOTICE_ME_SENPAI [430][---] ://
+                return( i_u32 /**TODO:LOGIC_HERE**/ );      //: < < < < < < < < < NOTICE_ME_SENPAI [---][428] ://
             };;                                                  // [428]
         //:===============:#_BINTILE_AUTO_MIRROR_DOIT_#:[428]:// // [428]
         //:#_BINTILE_AUTO_MIRROR_NOOP_#:[428]:===============:// // [428]
