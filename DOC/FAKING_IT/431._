@@ -1,0 +1,68 @@
+                if( d_bug >= 1 ){
+                    let tmx =( c_am4_tog_m_x );
+                    let tmy =( c_am4_tog_m_y );
+                    ASS( c_am4_0lx === tmx , "[TMX_2022]" );    
+                    ASS( c_am4_1ly === tmy , "[TMY_2022]" );    
+                };;
+
+                let o_u32 =( 0 );
+
+                const msk_l_x = c_bingten_am6_msk_l_x ;
+                const msk_l_y = c_bingten_am6_msk_l_y ;
+
+                const shi_l_x = c_bingten_am6_shi_l_x ;
+                const shi_l_y = c_bingten_am6_shi_l_y ;
+
+                let mg0 =( i_u32 >>>c_bingeom_mg0_all_shi );    
+                    mg0 =(      mg0|c_bingeom_mg0_all_msk );  
+
+                let bg1 =( i_u32 >>>c_bingeom_bg1_all_shi );    
+                    bg1 =(      bg1|c_bingeom_bg1_all_msk );  
+
+                let fg2 =( i_u32 >>>c_bingeom_fg2_all_shi );    
+                    fg2 =(      fg2|c_bingeom_fg2_all_msk );   
+
+                let rem =( i_u32 >>> 0  );  //:REMAINDER:://
+                    rem =(      rem|0x3 );  //:REMAINDER:://    
+
+                //:#_FLIP_MIRROR_BITS_X_#:[431]:---------://
+
+                    if( 1 === i_mbx ){
+                        mg0 =( mg0 ^ msk_l_x );
+                        bg1 =( bg1 ^ msk_l_x );
+                        fg2 =( fg2 ^ msk_l_x );
+                    }else
+                    if( 0 === i_mbx ){
+                        mg0 = mg0 ;;;;;;;;;;;;;
+                        bg1 = bg1 ;;;;;;;;;;;;;
+                        fg2 = fg2 ;;;;;;;;;;;;;
+                    }else{
+                        ERR("[I_MBX_2022]");
+                    };;
+                //:---------:#_FLIP_MIRROR_BITS_X_#:[431]://
+                //:#_FLIP_MIRROR_BITS_Y_#:[431]:---------://
+
+                    if( 1 === i_mby ){
+                        mg0 =( mg0 ^ msk_l_y );
+                        bg1 =( bg1 ^ msk_l_y );
+                        fg2 =( fg2 ^ msk_l_y );
+                    }else
+                    if( 0 === i_mby ){
+                        mg0 = mg0 ;;;;;;;;;;;;;
+                        bg1 = bg1 ;;;;;;;;;;;;;
+                        fg2 = fg2 ;;;;;;;;;;;;;
+                    }else{
+                        ERR("[I_MBX_2022]");
+                    };;
+                //:---------:#_FLIP_MIRROR_BITS_Y_#:[431]://
+                //:#_MG0_BG1_FG2_SMASH_#:[431]:----------://
+
+                    o_u32 =(( rem
+                    | ( mg0 << c_bingeom_mg0_all_shi )
+                    | ( bg1 << c_bingeom_bg1_all_shi )
+                    | ( fg2 << c_bingeom_fg2_all_shi )
+                    )>>>0);
+
+                //:----------:#_MG0_BG1_FG2_SMASH_#:[431]://
+
+                return( o_u32 );
