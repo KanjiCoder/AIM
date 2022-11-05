@@ -1,0 +1,84 @@
+    
+
+    PUT INTO TOP LEVEL CONSTANTS SECTION :
+
+    const c_bintile_mg0_v16_msk=( "[FIX:c_bingeom_*]" );
+    const c_bintile_mg0_v16_shi=( "[FIX:c_bingeom_*]" );
+    const c_bintile_mg0_am6_msk=( "[FIX:c_bingeom_*]" );
+    const c_bintile_mg0_am6_shi=( "[FIX:c_bingeom_*]" );
+
+    const c_bintile_bg1_v16_msk=( "[FIX:c_bingeom_*]" );
+    const c_bintile_bg1_v16_shi=( "[FIX:c_bingeom_*]" );                  
+    const c_bintile_bg1_am6_msk=( "[FIX:c_bingeom_*]" );
+    const c_bintile_bg1_am6_shi=( "[FIX:c_bingeom_*]" );
+                                 
+    const c_bintile_fg2_v16_msk=( "[FIX:c_bingeom_*]" );
+    const c_bintile_fg2_v16_shi=( "[FIX:c_bingeom_*]" );                
+    const c_bintile_fg2_am6_msk=( "[FIX:c_bingeom_*]" );
+    const c_bintile_fg2_am6_shi=( "[FIX:c_bingeom_*]" );
+
+
+
+
+
+
+
+
+    //:#_BINARY_TILE_LAYOUT_#:[428]:---------------------://
+
+        //:#_BINGEOM_MG0_#:------------------------------://
+
+            const c_bintile_mg0_v16_msk =( xxxxxxxx );
+            const c_bintile_mg0_v16_shi =( xxxxxxxx );
+
+            const c_bintile_mg0_am6_msk =( xxxxxxxx );
+            const c_bintile_mg0_am6_shi =( xxxxxxxx );
+        
+        //:------------------------------:#_BINGEOM_MG0_#://
+        //:#_BINGEOM_BG1_#:------------------------------://
+
+            const c_bintile_bg1_v16_msk =( xxxxxxxx );
+            const c_bintile_bg1_v16_shi =( xxxxxxxx );
+
+            const c_bintile_bg1_am6_msk =( xxxxxxxx );
+            const c_bintile_bg1_am6_shi =( xxxxxxxx );
+
+        //:------------------------------:#_BINGEOM_BG1_#://
+        //:#_BINGEOM_FG2_#:------------------------------://
+
+            const c_bintile_fg2_v16_msk =( xxxxxxxx );
+            const c_bintile_fg2_v16_shi =( xxxxxxxx );
+
+            const c_bintile_fg2_am6_msk =( xxxxxxxx );
+            const c_bintile_fg2_am6_shi =( xxxxxxxx );
+
+        //:------------------------------:#_BINGEOM_FG2_#://
+
+    //:---------------------:#_BINARY_TILE_LAYOUT_#:[428]://
+
+
+    #_BINARY_TILE_LAYOUT_# :----------------------------------+
+                                                              |
+        What do the individual bits of our uint32 mean        |
+        when we are on the geometry layer?                    |
+                                                              |
+        #_BINGEOM_MG0_# : Binary Layout of the geometry       |
+                        : tile bits describing the            |
+                        : MIGROUND (sub-layer-0) of           |
+                        : the geometry layer binary tile.     |
+                                                              |
+        #_BINGEOM_BG1_# : Binary Layout of the geometry       |
+                        : tile bits describing the            |
+                        : BACKGROUND (sub-layer-1) of         |
+                        : the geometry layer binary tile.     |
+                                                              |
+        #_BINGEOM_FG2_# : Binary Layout of the geometry       |
+                        : tile bits describing the            |
+                        : FOREGROUND (sub-layer-2) of         |
+                        : the geometry layer binary tile.     |
+                                                              |
+        @_BINTILE_MG0_@ : YOU_MEAN[ BINGEOM_MG0 ]             |
+        @_BINTILE_BG1_@ : YOU_MEAN[ BINGEOM_BG1 ]             |
+        @_BINTILE_FG2_@ : YOU_MEAN[ BINGEOM_FG2 ]             |
+                                                              |
+    :---------------------------------------------------------+
