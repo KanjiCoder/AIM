@@ -49004,6 +49004,30 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
     @geombin@ : YOU_MEAN[ bingeom ]                              // [429]
     @bombbin@ : YOU_MEAN[ binbomb ]                              // [429]
     @fadabin@ : YOU_MEAN[ binfada ]                              // [429]
+                                                                 // [429]
+    #_FIXTURE_RENDERER_IDEA_# :-------------------------------+  // [429]
+                                                              |  // [429]
+        @IDEA@ @FIXTURE_IDEA@ @IDEA_FIXTURE@                  |  // [429]
+                                                              |  // [429]
+        IMGUR_URL[ https://imgur.com/4NROaTh   ]              |  // [429]
+        IMGUR_URL[ https://imgur.com/a/Vl4TeHG ]              |  // [429]
+                                                              |  // [429]
+        Could we make a special levelmap that stores          |  // [429]
+        "fixture assets". These assets are drawn              |  // [429]
+        scaled down, so we can have a "props layer" of        |  // [429]
+        sort where there are fine-grain details that          |  // [429]
+        are SMALLER than the player-sized-tiles.              |  // [429]
+                                                              |  // [429]
+        ( The 64x64 grid of smallest tiles is the )           |  // [429]
+        ( player sized tiles.                     )           |  // [429]
+    :---------------------------------------------------------+  // [429]
+                                                                 // [429]
+    @mg0@ : MidGround - SubLayerIndex === 0  ::::::::::::::::::  // [429]
+    @bg1@ : BakGround - SubLayerIndex === 1  ::::::::::::::::::  // [429]
+    @fg2@ : ForGround - SubLayerIndex === 2  ::::::::::::::::::  // [429]
+
+
+
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
