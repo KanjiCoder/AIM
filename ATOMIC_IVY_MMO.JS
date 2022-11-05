@@ -21128,14 +21128,14 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 const shi_l_y = c_bingten_am6_shi_l_y ;          // [431]
                                                                  // [431]
                 let mg0 ; //: Midground[ BINGTEN ]SubLay:://     // [431]
-                let fg1 ; //: BakGround[ BINGTEN ]SubLay:://     // [431]
-                let bg2 ; //: ForGround[ BINGTEN ]SubLay:://     // [431]
+                let bg1 ; //: BakGround[ BINGTEN ]SubLay:://     // [431]
+                let fg2 ; //: ForGround[ BINGTEN ]SubLay:://     // [431]
                                                                  // [431]
                 //:-------:#_DECLARE_FUCKING_VARS_#:[431]://     // [431]
                 //:#_EXTRACT_BINGTEN_LAYERS_#:[431]:-----://     // [431]
                                                                  // [431]
                     mg0 =(    mg0 & c_bingeom_mg0_all_msk );     // [431]
-                    mg0 =( i_u32 >>>c_bingeom_mg0_all_shi );     // [431]
+                    mg0 =(  i_u32>>>c_bingeom_mg0_all_shi );     // [431]
                                                                  // [431]
                     bg1 =(    bg1 & c_bingeom_bg1_all_msk );     // [431]
                     bg1 =(  i_u32>>>c_bingeom_bg1_all_shi );     // [431]
@@ -49269,11 +49269,12 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
                                                               |  // [431]
         BINGTEN_LAYERS[ mg0 , bg1 , fg2 ]                     |  // [431]
     :---------------------------------------------------------+  // [431]
-    #_NOT_BITS_YOU_ARE_LOOKING_FOR_# :------------------------+
-
-        Not the bits you are looking for.
-        Also, the "tog" is for toggling on/off a given
-        bit within the AM4 bit field. It is not
+    #_NOT_BITS_YOU_ARE_LOOKING_FOR_# :------------------------+  // [431]
+                                                              |  // [431]
+        Not the bits you are looking for.                     |  // [431]
+        But since I already wrote them here, might as         |  // [431]
+        well just keep the error checks here.                 |  // [431]
+    :---------------------------------------------------------+  // [431]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
