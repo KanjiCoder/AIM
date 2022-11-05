@@ -248,8 +248,6 @@
     //:TAG[ top-level-consts | top_level_consts | t_l_c ]://     // [288]
     //:TAG[ TOP_LEVEL_CONSTANTS | TOP_LEVEL_CONSTS      ]://     // [313]
                                                                  // [---]
-
-
     //:#_BINGTEN_#:[430]:--------------------------------://     // [430]
     /** ************************************************ ***     // [430]
         |<-------------------- BINGTEN --------------->|         // [430]
@@ -395,95 +393,94 @@
         //:-----------------------:#_MEMBITS_TEST_#:[429]://     // [429]
                                                                  // [429]
     //:---------------------:#_BINARY_TILE_LAYOUT_#:[429]://     // [429]
-    //:-----------:#_BINTILE_SPECIFICALLY_BINGEOM_#:[429]://     // [429]
-    //:#_BINGEOM_IN_PLACE_:[430]:------------------------://
-    //:                                                  ://    
-    //:     Different geometry layer binary tile         ://    
-    //:     bit-masks IN_PLACE. So that we can toggle    ://    
-    //:     on/off in place without shifting out of      ://    
-    //:     the UINT32 [ mg0,bg1,fg2 ]are packed into.   ://    
-    //:                                                  ://    
-    //:- - - - - - - - - - - - -- - - - - - - - - - - - -://
-
-            //:#_MG0_WITHIN_BINTILE_BITS_#:[431]:--------://
-    
-                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://
-                //: [ v16  l_x l_y m_x m_y __ro4__ ] ::::://
-
-                const c_bingeon_mg0_bit_v16 =( 0xF0000000 );
-                const c_bingeom_mg0_bit_l_x =( 0x08000000 );                   
-                const c_bingeom_mg0_bit_l_y =( 0x04000000 );              
-                const c_bingeom_mg0_bit_m_x =( 0x02000000 );             
-                const c_bingeom_mg0_bit_m_y =( 0x01000000 );             
-                const c_bingeom_mg0_bit_ro4 =( 0x00C00000 );
-
-            //:--------:#_MG0_WITHIN_BINTILE_BITS_#:[431]://
-            //:#_BG1_WITHIN_BINTILE_BITS_#:[431]:--------://
-    
-                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://
-                //: [      l_x l_y m_x m_y __ro4__ ] ::::://
-
-                const c_bingeon_bg1_bit_v16 =( 0x003C0000 );
-                const c_bingeom_bg1_bit_l_x =( 0x00020000 );              
-                const c_bingeom_bg1_bit_l_y =( 0x00010000 );               
-                const c_bingeom_bg1_bit_m_x =( 0x00008000 );               
-                const c_bingeom_bg1_bit_m_y =( 0x00004000 );              
-                const c_bingeom_bg1_bit_ro4 =( 0x00003000 );
-
-            //:--------:#_BG1_WITHIN_BINTILE_BITS_#:[431]://
-            //:#_FG2_WITHIN_BINTILE_BITS_#:[431]:--------://
-    
-                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://
-                //: [      l_x l_y m_x m_y __ro4__ ] ::::://
-
-                const c_bingeon_fg2_bit_v16 =( 0x00000F00 );
-                const c_bingeom_fg2_bit_l_x =( 0x00000080 );                 
-                const c_bingeom_fg2_bit_l_y =( 0x00000040 );                
-                const c_bingeom_fg2_bit_m_x =( 0x00000020 );                
-                const c_bingeom_fg2_bit_m_y =( 0x00000010 );                  
-                const c_bingeom_fg2_bit_ro4 =( 0x0000000C );
-
-            //:--------:#_FG2_WITHIN_BINTILE_BITS_#:[431]://
-            //:#_IN_PLACE_SMASH_#:[431]:-----------------://
-
-                ASS(
-                   ((0x0
-                    | c_bingeon_mg0_bit_v16
-                    | c_bingeom_mg0_bit_l_x
-                    | c_bingeom_mg0_bit_l_y
-                    | c_bingeom_mg0_bit_m_x
-                    | c_bingeom_mg0_bit_m_y
-                    | c_bingeom_mg0_bit_ro4
-                    )>>>0)
-                ===   c_bingeom_mg0_all_msk
-                );;
-                ASS(
-                   ((0x0
-                    | c_bingeon_bg1_bit_v16
-                    | c_bingeom_bg1_bit_l_x
-                    | c_bingeom_bg1_bit_l_y
-                    | c_bingeom_bg1_bit_m_x
-                    | c_bingeom_bg1_bit_m_y
-                    | c_bingeom_bg1_bit_ro4
-                    )>>>0)
-                ===   c_bingeom_bg1_all_msk
-                );;
-                ASS(
-                   ((0x0
-                    | c_bingeon_fg2_bit_v16
-                    | c_bingeom_fg2_bit_l_x
-                    | c_bingeom_fg2_bit_l_y
-                    | c_bingeom_fg2_bit_m_x
-                    | c_bingeom_fg2_bit_m_y
-                    | c_bingeom_fg2_bit_ro4
-                    )>>>0)
-                ===   c_bingeom_fg2_all_msk
-                );;
-            //:-----------------:#_IN_PLACE_SMASH_#:[431]://
-
-
-    //:------------------------:#_BINGEOM_IN_PLACE_:[430]://
-    //:#_LEVEL_OVERLAY_TYPES_#:[409]:--------------------://     // [409]
+    //:-----------:#_BINTILE_SPECIFICALLY_BINGEOM_#:[429]://     // [---]
+    //:#_BINGEOM_IN_PLACE_:[430]:------------------------://     // [431]
+    //:                                                  ://     // [431]
+    //:     Different geometry layer binary tile         ://     // [431]
+    //:     bit-masks IN_PLACE. So that we can toggle    ://     // [431]
+    //:     on/off in place without shifting out of      ://     // [431]
+    //:     the UINT32 [ mg0,bg1,fg2 ]are packed into.   ://     // [431]
+    //:                                                  ://     // [431]
+    //:- - - - - - - - - - - - -- - - - - - - - - - - - -://     // [431]
+                                                                 // [431]
+            //:#_MG0_WITHIN_BINTILE_BITS_#:[431]:--------://     // [431]
+                                                                 // [431]
+                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://     // [431]
+                //: [ v16  l_x l_y m_x m_y __ro4__ ] ::::://     // [431]
+                                                                 // [431]
+                const c_bingeon_mg0_bit_v16 =( 0xF0000000 );     // [431]
+                const c_bingeom_mg0_bit_l_x =( 0x08000000 );     // [431]
+                const c_bingeom_mg0_bit_l_y =( 0x04000000 );     // [431]
+                const c_bingeom_mg0_bit_m_x =( 0x02000000 );     // [431]
+                const c_bingeom_mg0_bit_m_y =( 0x01000000 );     // [431]
+                const c_bingeom_mg0_bit_ro4 =( 0x00C00000 );     // [431]
+                                                                 // [431]
+            //:--------:#_MG0_WITHIN_BINTILE_BITS_#:[431]://     // [431]
+            //:#_BG1_WITHIN_BINTILE_BITS_#:[431]:--------://     // [431]
+                                                                 // [431]
+                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://     // [431]
+                //: [      l_x l_y m_x m_y __ro4__ ] ::::://     // [431]
+                                                                 // [431]
+                const c_bingeon_bg1_bit_v16 =( 0x003C0000 );     // [431]
+                const c_bingeom_bg1_bit_l_x =( 0x00020000 );     // [431]
+                const c_bingeom_bg1_bit_l_y =( 0x00010000 );     // [431]
+                const c_bingeom_bg1_bit_m_x =( 0x00008000 );     // [431]
+                const c_bingeom_bg1_bit_m_y =( 0x00004000 );     // [431]
+                const c_bingeom_bg1_bit_ro4 =( 0x00003000 );     // [431]
+                                                                 // [431]
+            //:--------:#_BG1_WITHIN_BINTILE_BITS_#:[431]://     // [431]
+            //:#_FG2_WITHIN_BINTILE_BITS_#:[431]:--------://     // [431]
+                                                                 // [431]
+                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://     // [431]
+                //: [      l_x l_y m_x m_y __ro4__ ] ::::://     // [431]
+                                                                 // [431]
+                const c_bingeon_fg2_bit_v16 =( 0x00000F00 );     // [431]
+                const c_bingeom_fg2_bit_l_x =( 0x00000080 );     // [431]
+                const c_bingeom_fg2_bit_l_y =( 0x00000040 );     // [431]
+                const c_bingeom_fg2_bit_m_x =( 0x00000020 );     // [431]
+                const c_bingeom_fg2_bit_m_y =( 0x00000010 );     // [431]
+                const c_bingeom_fg2_bit_ro4 =( 0x0000000C );     // [431]
+                                                                 // [431]
+            //:--------:#_FG2_WITHIN_BINTILE_BITS_#:[431]://     // [431]
+            //:#_IN_PLACE_SMASH_#:[431]:-----------------://     // [431]
+                                                                 // [431]
+                ASS(                                             // [431]
+                   ((0x0                                         // [431]
+                    | c_bingeon_mg0_bit_v16                      // [431]
+                    | c_bingeom_mg0_bit_l_x                      // [431]
+                    | c_bingeom_mg0_bit_l_y                      // [431]
+                    | c_bingeom_mg0_bit_m_x                      // [431]
+                    | c_bingeom_mg0_bit_m_y                      // [431]
+                    | c_bingeom_mg0_bit_ro4                      // [431]
+                    )>>>0)                                       // [431]
+                ===   c_bingeom_mg0_all_msk                      // [431]
+                );;                                              // [431]
+                ASS(                                             // [431]
+                   ((0x0                                         // [431]
+                    | c_bingeon_bg1_bit_v16                      // [431]
+                    | c_bingeom_bg1_bit_l_x                      // [431]
+                    | c_bingeom_bg1_bit_l_y                      // [431]
+                    | c_bingeom_bg1_bit_m_x                      // [431]
+                    | c_bingeom_bg1_bit_m_y                      // [431]
+                    | c_bingeom_bg1_bit_ro4                      // [431]
+                    )>>>0)                                       // [431]
+                ===   c_bingeom_bg1_all_msk                      // [431]
+                );;                                              // [431]
+                ASS(                                             // [431]
+                   ((0x0                                         // [431]
+                    | c_bingeon_fg2_bit_v16                      // [431]
+                    | c_bingeom_fg2_bit_l_x                      // [431]
+                    | c_bingeom_fg2_bit_l_y                      // [431]
+                    | c_bingeom_fg2_bit_m_x                      // [431]
+                    | c_bingeom_fg2_bit_m_y                      // [431]
+                    | c_bingeom_fg2_bit_ro4                      // [431]
+                    )>>>0)                                       // [431]
+                ===   c_bingeom_fg2_all_msk                      // [431]
+                );;                                              // [431]
+            //:-----------------:#_IN_PLACE_SMASH_#:[431]://     // [431]
+                                                                 // [431]
+    //:------------------------:#_BINGEOM_IN_PLACE_:[430]://     // [431]
+    //:#_LEVEL_OVERLAY_TYPES_#:[409]:--------------------://     // [---]
                                                                  // [409]
         //:------------------------------------------://         // [409]
         //: As of writing this : 2022_11_01 , I am   ://         // [409]
@@ -49382,6 +49379,42 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
                                                               |  // [431]
         YES: m_x & m_y                                        |  // [431]
         NO!: l_x & l_y                                        |  // [431]
+    :---------------------------------------------------------+  // [431]
+    #_BINGEOM_IN_PLACE_# :------------------------------------+  // [431]
+                                                              |  // [431]
+        My first draft for[ F _ MIRMAID _ AM6_U32_MBX_MBY ]   |  // [431]
+        was a piece of shit and overly complex.               |  // [431]
+                                                              |  // [431]
+        All we need is bit-masks that are IN_PLACE            |  // [431]
+        so that we can toggle bits of the 3 sub-layers        |  // [431]
+        on/off without having to :                            |  // [431]
+                                                              |  // [431]
+            1. Shift bits out of the U32 u_bintile.           |  // [431]
+            2. Shift bits backk into U32 u_bintile.           |  // [431]
+                                                              |  // [431]
+    :---------------------------------------------------------+  // [431]
+    #_MG0_WITHIN_BINTILE_BITS_# :-----------------------------+  // [431]
+                                                              |  // [431]
+        MG0 sub-layer bits , as located with larger           |  // [431]
+        Uint32 binary-tile (bintile) value.                   |  // [431]
+                                                              |  // [431]
+    :---------------------------------------------------------+  // [431]
+    #_BG1_WITHIN_BINTILE_BITS_# :-----------------------------+  // [431]
+                                                              |  // [431]
+        BG1 sub-layer bits , as located with larger           |  // [431]
+        Uint32 binary-tile (bintile) value.                   |  // [431]
+                                                              |  // [431]
+    :---------------------------------------------------------+  // [431]
+    #_FG2_WITHIN_BINTILE_BITS_# :-----------------------------+  // [431]
+                                                              |  // [431]
+        FG2 sub-layer bits , as located with larger           |  // [431]
+        Uint32 binary-tile (bintile) value.                   |  // [431]
+                                                              |  // [431]
+    :---------------------------------------------------------+  // [431]
+    #_IN_PLACE_SMASH_# :--------------------------------------+  // [431]
+                                                              |  // [431]
+        If we smash all of the sub-masks together,            |  // [431]
+        they should create the larger mask value.             |  // [431]
     :---------------------------------------------------------+  // [431]
 
 
