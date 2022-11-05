@@ -248,6 +248,8 @@
     //:TAG[ top-level-consts | top_level_consts | t_l_c ]://     // [288]
     //:TAG[ TOP_LEVEL_CONSTANTS | TOP_LEVEL_CONSTS      ]://     // [313]
                                                                  // [---]
+
+
     //:#_BINGTEN_#:[430]:--------------------------------://     // [430]
     /** ************************************************ ***     // [430]
         |<-------------------- BINGTEN --------------->|         // [430]
@@ -394,6 +396,93 @@
                                                                  // [429]
     //:---------------------:#_BINARY_TILE_LAYOUT_#:[429]://     // [429]
     //:-----------:#_BINTILE_SPECIFICALLY_BINGEOM_#:[429]://     // [429]
+    //:#_BINGEOM_IN_PLACE_:[430]:------------------------://
+    //:                                                  ://    
+    //:     Different geometry layer binary tile         ://    
+    //:     bit-masks IN_PLACE. So that we can toggle    ://    
+    //:     on/off in place without shifting out of      ://    
+    //:     the UINT32 [ mg0,bg1,fg2 ]are packed into.   ://    
+    //:                                                  ://    
+    //:- - - - - - - - - - - - -- - - - - - - - - - - - -://
+
+            //:#_MG0_WITHIN_BINTILE_BITS_#:[431]:--------://
+    
+                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://
+                //: [ v16  l_x l_y m_x m_y __ro4__ ] ::::://
+
+                const c_bingeon_mg0_bit_v16 =( 0xF0000000 );
+                const c_bingeom_mg0_bit_l_x =( 0x08000000 );                   
+                const c_bingeom_mg0_bit_l_y =( 0x04000000 );              
+                const c_bingeom_mg0_bit_m_x =( 0x02000000 );             
+                const c_bingeom_mg0_bit_m_y =( 0x01000000 );             
+                const c_bingeom_mg0_bit_ro4 =( 0x00C00000 );
+
+            //:--------:#_MG0_WITHIN_BINTILE_BITS_#:[431]://
+            //:#_BG1_WITHIN_BINTILE_BITS_#:[431]:--------://
+    
+                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://
+                //: [      l_x l_y m_x m_y __ro4__ ] ::::://
+
+                const c_bingeon_bg1_bit_v16 =( 0x003C0000 );
+                const c_bingeom_bg1_bit_l_x =( 0x00020000 );              
+                const c_bingeom_bg1_bit_l_y =( 0x00010000 );               
+                const c_bingeom_bg1_bit_m_x =( 0x00008000 );               
+                const c_bingeom_bg1_bit_m_y =( 0x00004000 );              
+                const c_bingeom_bg1_bit_ro4 =( 0x00003000 );
+
+            //:--------:#_BG1_WITHIN_BINTILE_BITS_#:[431]://
+            //:#_FG2_WITHIN_BINTILE_BITS_#:[431]:--------://
+    
+                //: [ 1111 _1_ _1_ _1_ _1_ _1_ _1_ ] ::::://
+                //: [      l_x l_y m_x m_y __ro4__ ] ::::://
+
+                const c_bingeon_fg2_bit_v16 =( 0x00000F00 );
+                const c_bingeom_fg2_bit_l_x =( 0x00000080 );                 
+                const c_bingeom_fg2_bit_l_y =( 0x00000040 );                
+                const c_bingeom_fg2_bit_m_x =( 0x00000020 );                
+                const c_bingeom_fg2_bit_m_y =( 0x00000010 );                  
+                const c_bingeom_fg2_bit_ro4 =( 0x0000000C );
+
+            //:--------:#_FG2_WITHIN_BINTILE_BITS_#:[431]://
+            //:#_IN_PLACE_SMASH_#:[431]:-----------------://
+
+                ASS(
+                   ((0x0
+                    | c_bingeon_mg0_bit_v16
+                    | c_bingeom_mg0_bit_l_x
+                    | c_bingeom_mg0_bit_l_y
+                    | c_bingeom_mg0_bit_m_x
+                    | c_bingeom_mg0_bit_m_y
+                    | c_bingeom_mg0_bit_ro4
+                    )>>>0)
+                ===   c_bingeom_mg0_all_msk
+                );;
+                ASS(
+                   ((0x0
+                    | c_bingeon_bg1_bit_v16
+                    | c_bingeom_bg1_bit_l_x
+                    | c_bingeom_bg1_bit_l_y
+                    | c_bingeom_bg1_bit_m_x
+                    | c_bingeom_bg1_bit_m_y
+                    | c_bingeom_bg1_bit_ro4
+                    )>>>0)
+                ===   c_bingeom_bg1_all_msk
+                );;
+                ASS(
+                   ((0x0
+                    | c_bingeon_fg2_bit_v16
+                    | c_bingeom_fg2_bit_l_x
+                    | c_bingeom_fg2_bit_l_y
+                    | c_bingeom_fg2_bit_m_x
+                    | c_bingeom_fg2_bit_m_y
+                    | c_bingeom_fg2_bit_ro4
+                    )>>>0)
+                ===   c_bingeom_fg2_all_msk
+                );;
+            //:-----------------:#_IN_PLACE_SMASH_#:[431]://
+
+
+    //:------------------------:#_BINGEOM_IN_PLACE_:[430]://
     //:#_LEVEL_OVERLAY_TYPES_#:[409]:--------------------://     // [409]
                                                                  // [409]
         //:------------------------------------------://         // [409]
@@ -21107,64 +21196,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             ,   i_mby //: Mirror_Bit - Y ::::::::::::::::://     // [428]
             ){                                                   // [428]
                                                                  // [---]
-                //:#_NONEED_2022_#:[431]:----------------://     // [431]
-                if( d_bug >= 1 ){                                // [431]
-                    //: #_NOT_BITS_YOU_ARE_LOOKING_FOR_# ://     // [431]
-                    let tmx =( c_am4_tog_m_x );                  // [431]
-                    let tmy =( c_am4_tog_m_y );                  // [431]
-                    ASS( c_am4_0lx !== tmx , "[0LX_2022]" );     // [431]
-                    ASS( c_am4_1ly !== tmy , "[1LY_2022]" );     // [431]
-                    ASS( c_am4_2mx === tmx , "[2MX_2022]" );     // [431]
-                    ASS( c_am4_3my === tmy , "[3MY_2022]" );     // [431]
-                };;                                              // [431]
-                //:----------------:#_NONEED_2022_#:[431]://     // [431]
-                //:#_MIRROR_VARS_NOT_LATCH_#:[431]:------://     // [431]
-                                                                 // [431]
-                    let o_u32 =( i_u32 );  /** CARRYOVER **/     // [431]
-                                                                 // [431]
-                    //: @msk_m_x@ : MASK - Mirror X Bit :://     // [431]
-                    //: @msk_m_y@ : MASK - Mirror Y Bit :://     // [431]
-                    //: @shi_m_x@ : SHIF - Mirror X Bit :://     // [431]
-                    //: @shi_m_y@ : SHIF - Mirror Y Bit :://     // [431]
-                                                                 // [431]
-                    const msk_m_x = c_bingten_am6_msk_m_x ;      // [431]
-                    const msk_m_y = c_bingten_am6_msk_m_y ;      // [431]
-                                                                 // [431]
-                    const shi_m_x = c_bingten_am6_shi_m_x ;      // [431]
-                    const shi_m_y = c_bingten_am6_shi_m_y ;      // [431]
-                                                                 // [431]
-                //:------:#_MIRROR_VARS_NOT_LATCH_#:[431]://     // [431]
-                                                                 // [431]
-                //:SEE[ _ITS_FUCKING_RAW_NG_ ]:::::::::::://     // [431]
-                                                                 // [431]
-                //:#_FLIP_MIRROR_BITS_X_#:[431]:---------://     // [431]
-                                                                 // [431]
-                    if( 1 === i_mbx ){                           // [431]
-                        o_u32 =( o_u32 ^ msk_m_x );              // [431]
-                        o_u32 =( o_u32 ^ msk_m_x );              // [431]
-                        o_u32 =( o_u32 ^ msk_m_x );              // [431]
-                    }else                                        // [431]
-                    if( 0 === i_mbx ){                           // [431]
-                        /** DO_NOTHING_BITCH **/                 // [431]
-                    }else{                                       // [431]
-                        ERR("[I_MBX_2022]");                     // [431]
-                    };;                                          // [431]
-                //:---------:#_FLIP_MIRROR_BITS_X_#:[431]://     // [431]
-                //:#_FLIP_MIRROR_BITS_Y_#:[431]:---------://     // [431]
-                                                                 // [431]
-                    if( 1 === i_mby ){                           // [431]
-                        o_u32 =( o_u32 ^ msk_m_y );              // [431]
-                        o_u32 =( o_u32 ^ msk_m_y );              // [431]
-                        o_u32 =( o_u32 ^ msk_m_y );              // [431]
-                    }else                                        // [431]
-                    if( 0 === i_mby ){                           // [431]
-                        /** DO_NOTHING_BITCH **/                 // [431]
-                    }else{                                       // [431]
-                        ERR("[I_MBY_2022]");                     // [431]
-                    };;                                          // [431]
-                //:---------:#_FLIP_MIRROR_BITS_Y_#:[431]://     // [431]
-                                                                 // [431]
-                return( o_u32 );                                 // [431]
+                //: BODY_COMMING_SOON! ( VIDEO #4_3_1 ) < < < < < < < < < < < < < NOTICE_ME_SENPAI [430][---] ://
+                //: REAL_SOON_I_SWEAR! ( VIDEO #4_3_2 ) < < < < < < < < < < < < < NOTICE_ME_SENPAI [431][---] ://
+                return( i_u32 /**TODO:LOGIC_HERE**/ );      //: < < < < < < < < < NOTICE_ME_SENPAI [---][428] ://
                                                                  // [---]
             };;                                                  // [428]
         //:===============:#_BINTILE_AUTO_MIRROR_DOIT_#:[428]:// // [428]
@@ -49357,6 +49391,7 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 /** ******************************************************** ***     
 
     [431] : Lets see... If this works... ::::::::::::::::::::::  // [431]
+          : 2022_11_05 : 10_53_AM :::::::::::::::::::::::::::::  // [431]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
