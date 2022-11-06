@@ -13724,7 +13724,7 @@ if( /** __EDIGAME__ **/ notnode ){                               // [102]
                                                                  // [---][---]
     ,   edi_mod_mir_onn : ( 1 )  //: Mirror Mode ON? ::::://     // [---][422]
     ,   edi_mod_mir_am6 : ( 1 )  //: Mirror_AutoMethodBit://     // [428]
-    ,   edi_mod_mir_xyd : ( 7 )  //: #_MIR_XYD_SETTINGS_#://     // [435][427][425]
+    ,   edi_mod_mir_xyd : ( 6 )  //: #_MIR_XYD_SETTINGS_#://     // [435][427][425]  < < < < < NOTICE_ME_SENPAI !!!!!!!
                                                                  // [---][422]
         //:--------------------:#_MIRRORING_BRUSH_#:[422]://     // [---][422]
         //:#_RANDOMIZING_BRUSH_#:[314]:------------------://     // [314]
