@@ -27410,6 +27410,12 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : SCREENSHOTNOTE[ https://imgur.com/CQhOsva   ]::::::  // [432][431]
           : DIRECT_LINK_SS[ https://i.imgur.com/CQhOsva.png ]::  // [432][431]
 
+    [432] : Basic Bilateral Mirroring Code Sort Of Works ::::::  // [433][432]
+          : for mirroring the internals of auto tiles.   ::::::  // [433][432]
+          : We need to make the non-dense cases in our   ::::::  // [433][432]
+          : code more strict to fix some of the          ::::::  // [433][432]
+          : mirrorings and make them correct.            ::::::  // [433][432]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -49513,11 +49519,10 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [432] : Basic Bilateral Mirroring Code Sort Of Works ::::::  // [432]
-          : for mirroring the internals of auto tiles.   ::::::  // [432]
-          : We need to make the non-dense cases in our   ::::::  // [432]
-          : code more strict to fix some of the          ::::::  // [432]
-          : mirrorings and make them correct.            ::::::  // [432]
+    [433] : NON-dense bilateral mirroring of auto-tile    :::::  // [433]
+          : internals and plot points has been finished.  :::::  // [433]
+          : HOWEVER, we still need to add the "DENSE"     :::::  // [433]
+          : code within the symmetric-bilateral function. :::::  // [433]
 
 
 *** ******************************************************** **/
