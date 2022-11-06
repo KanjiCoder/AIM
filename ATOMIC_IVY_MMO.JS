@@ -49694,15 +49694,17 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [435] : 1 : Added bit shifts for getting different       ::  // [435]
-          :   : BINGTEN bits directly out of a[ u_bintile ]. ::  // [435]
+    [435] :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [435]
           :   :                                              ::  // [435]
-          : 2 : Stubbed in auto tile internal am6            ::  // [435]
+          : 1 : Stubbed in auto tile internal am6            ::  // [435]
           :   : rotation functions.                          ::  // [435]
           :   :                                              ::  // [435]
-          : 3 : Added "Kitty Corner Dense" bilateral         ::  // [435]
+          : 2 : Added "Kitty Corner Dense" bilateral         ::  // [435]
           :   : mirroring code.                              ::  // [435]
-
+          :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [435]
+          :NEX: Added bit shifts for getting different       ::  // [435]
+          :   : BINGTEN bits directly out of a[ u_bintile ]. ::  // [435]
+          :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [435]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
