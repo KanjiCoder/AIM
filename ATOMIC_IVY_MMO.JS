@@ -21219,7 +21219,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     //-  shi_m_x = c_bingten_am6_shi_m_x -//     // [432]
                     //-  shi_m_y = c_bingten_am6_shi_m_y -//     // [432]
                                                                  // [432]
-                    const 
+                    const             __bingeom_____bit_m__=0    // [432]
                     ,   mg0_msk_m_x = c_bingeom_mg0_bit_m_x      // [432]
                     ,   bg1_msk_m_x = c_bingeom_bg1_bit_m_x      // [432]
                     ,   fg2_msk_m_x = c_bingeom_fg2_bit_m_x      // [432]
