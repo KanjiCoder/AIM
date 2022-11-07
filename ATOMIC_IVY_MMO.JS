@@ -21681,9 +21681,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 let tdx ; //: @tdx@ : TransformedDense_X ://     // [440]
                 let tdy ; //: @tdy@ : TransformedDense_Y ://     // [440]
                 let tdu ; //: @tdu@ : TransformedDense_U ://     // [440]
-
-                let o_k_lpp ; //:Okay? Load Plot Point?  ://
-                    o_k_lpp =( 0 );
+                                                                 // [440]
+                let o_k_lpp ; //:Okay? Load Plot Point?  ://     // [440]
+                    o_k_lpp =( 0 );                              // [440]
                                                                  // [440]
                 //:#_NTD_ALL_#:[440]:--------------------://     // [440]
                 if( ( 1 === _x_ )&&( 1 === xyd_x )               // [440]
@@ -27794,6 +27794,11 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : 10-bit sublayers.                       :::::::::::  // [438][437]
 
     [438] : Finished Bilateral X-Axis DENSE mirroring code. :::  // [439][438]
+
+    [439] : Finished mirroring code for the        ::::::::::::  // [440][439]
+          : Bilateral_Y_Dense section of mirroring ::::::::::::  // [440][439]
+          : brush transformation function.         ::::::::::::  // [440][439]
+          : [ F _ MIRMAID _ EDI_PUT_U32_SYMBILA ]  ::::::::::::  // [440][439]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -50148,11 +50153,16 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
-
-    [439] : Finished mirroring code for the        ::::::::::::  // [439]
-          : Bilateral_Y_Dense section of mirroring ::::::::::::  // [439]
-          : brush transformation function.         ::::::::::::  // [439]
-          : [ F _ MIRMAID _ EDI_PUT_U32_SYMBILA ]  ::::::::::::  // [439]
+                                                           
+    [440] : All of the mirroring positions for     ::::::::::::  // [440]
+          : X+Y Mirroring in Bilateral DENSE mode  ::::::::::::  // [440]
+          : are finished.                                 :::::  // [440]
+          : THOUGHT: Backup with in-memory save before    :::::  // [440]
+          :        : deleting data.                       :::::  // [440]
+          :        : GALLERY[ https://imgur.com/a/Vl4TeHG     ]  // [440]
+          :        :   IMAGE[ https://i.imgur.com/399Ozpg.png ]  // [440]
+          : NEXT   : Cycle Through Mirroring Modes With "<>"     // [440]
+          : NEXT   : Radial Mirroring Code Eventually. ::::::::  // [440]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
