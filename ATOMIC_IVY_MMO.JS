@@ -50163,6 +50163,8 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
           :        :   IMAGE[ https://i.imgur.com/399Ozpg.png ]  // [440]
           : NEXT   : Cycle Through Mirroring Modes With "<>"     // [440]
           : NEXT   : Radial Mirroring Code Eventually. ::::::::  // [440]
+          :                                                      // [440]
+          : BROKEN : KONAMI_CODES_FAIL_WITH_CAPSLOCK_TURNED_ON!  // [440]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
