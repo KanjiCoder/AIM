@@ -27706,6 +27706,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : Sublayer's within geom-tile's u_bintile :::::::::::  // [438][437]
           : 10-bit sublayers.                       :::::::::::  // [438][437]
 
+    [438] : Finished Bilateral X-Axis DENSE mirroring code. :::  // [439][438]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -50000,7 +50002,10 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [438] : Finished Bilateral X-Axis DENSE mirroring code. :::  // [438]
+    [439] : Finished mirroring code for the        ::::::::::::  // [439]
+          : Bilateral_Y_Dense section of mirroring ::::::::::::  // [439]
+          : brush transformation function.         ::::::::::::  // [439]
+          : [ F _ MIRMAID _ EDI_PUT_U32_SYMBILA ]  ::::::::::::  // [439]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
