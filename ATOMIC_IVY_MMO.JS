@@ -28072,6 +28072,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : finished with mirroring modes for.      :::::::::::  // [444][443]
           : THAT WAS A VERY BAD SENTENCE!!!!!!!     :::::::::::  // [444][443]
 
+    [444] : Dense mode for single-axis selection works, :::::::  // [445][444]
+          : but, it looks like shit.                    :::::::  // [445][444]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -50764,8 +50767,13 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
                                                            
-    [444] : Dense mode for single-axis selection works, :::::::  // [444]
-          : but, it looks like shit.                    :::::::  // [444]
+    [445] : Dividing[ jmp ]value by 2 instead of 4        :::::  // [445]
+          : actually looks best, because that 22.5        :::::  // [445]
+          : degree lines are not rendered how I though,   :::::  // [445]
+          : they still do not auto tile, and between      :::::  // [445]
+          : perfect 45 lines that are not auto-tiling     :::::  // [445]
+          : and 22.5 degree lines that are not            :::::  // [445]
+          : auto-tiling, the 45 degree lines look better. :::::  // [445]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
