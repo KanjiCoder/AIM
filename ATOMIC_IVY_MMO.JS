@@ -21749,16 +21749,16 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 }else                                            // [442]
                 if( ( 1 === xyd_x )&&( 0 === xyd_y ) ){          // [442]
                 //:#_SINGLE_AXIS_X_DENSE_#:[442]:--------://     // [442]
-                //:#_BOXXY_PLOT_:#[443]:------------------://    // [443]
+                //:#_BOXXY_PLOT_:#[443]:-----------------://     // [443]
                 if( (1 === _x_) ){  ////////////////////////     // [442]
                                                                  // [---]
                     let dir_y =( 0 );   //: Direction-Y :://     // [443]
                                                                  // [443]
                     //:#_GET_DIRECTION_#:[443]:----------://     // [443]
-                    if( i_gty <= mid_jot ){                      // [443]
+                    if( i_gty <= mid_jot ){   //:@ABOVAX@://     // [443]
                         dir_y  =(0-1); //:@DIR_TOP@://           // [443]
                     }else                                        // [443]
-                    if( i_gty >= mid_zen ){                      // [443]
+                    if( i_gty >= mid_zen ){   //:@BELVAX@://     // [443]
                         dir_y  =(0+1); //:@DIR_BOT@://           // [443]
                     }else{                                       // [443]
                         ERR("[JOT_ZEN:#_DIST_FROM_HOR_#]");      // [443]
@@ -21800,10 +21800,10 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     let dir_x =( 0 );   //: Direction-X :://     // [443]
                                                                  // [443]
                     //:#_GET_DIRECTION_#:[443]:----------://     // [443]
-                    if( i_gtx <= mid_jot ){                      // [443]
+                    if( i_gtx <= mid_jot ){   //:@LEFOYA@://     // [443]
                         dir_x=(0-1); //:@DIR_LEF@://             // [443]
                     }else                                        // [443]
-                    if( i_gtx >= mid_zen ){                      // [443]
+                    if( i_gtx >= mid_zen ){   //:@RIGOYA@://     // [443]
                         dir_x=(0+1); //:@DIR_RIG@://             // [443]
                     }else{                                       // [443]
                         ERR("[JOT_ZEN:#_DIST_FROM_VER_#]");      // [443]
@@ -50678,6 +50678,11 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
     @DIR_UPP@ : YOU_MEAN[ DIR_TOP ]              ::::::::::::::  // [443]
     @DIR_DOW@ : YOU_MEAN[ DIR_BOT ]              ::::::::::::::  // [443]
 
+    @ABOVAX@  : ABOve - Axis - X
+    @BELVAX@  : BELow - Axis - X
+    @LEFOYA@  : LEFt  - Of - Y - Axis
+    @RIGOYA@  : RIGht - Of - Y - Axis
+    
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
