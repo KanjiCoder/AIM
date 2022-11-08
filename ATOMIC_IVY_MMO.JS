@@ -21806,8 +21806,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                         pp2_y =(   i_gty + (jmp*dir_y) );        // [444]
                         //:====(___i_gtc_+_(jmp*dir_c)_)=://     // [444]
                                                               
-                        pp1_u =( MIR_AM6( i_u32 ,0,1 );          // [445]
-                        pp2_u =( MIR_AM6( i_u32 ,1,1 );          // [445]
+                        pp1_u =( MIR_AM6( i_u32 ,0,1 ) );;;;     // [445]
+                        pp2_u =( MIR_AM6( i_u32 ,1,1 ) );;;;     // [445]
 
                         //:SingleAxisDense__LoadPlotPoint://     // [444]
                         o_k_sadense_lpp=( 1 );                   // [444]
@@ -21871,8 +21871,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                         //:====(___i_gtc_+_(jmp*dir_c)_)=://     // [444]
                         //:#_OCD_____________2022_11_08_#://     // [444]
 
-                        pp1_u =( MIR_AM6( i_u32 ,1,0 );          // [445]
-                        pp2_u =( MIR_AM6( i_u32 ,1,1 );          // [445]
+                        pp1_u =( MIR_AM6( i_u32 ,1,0 ) );;;;     // [445]
+                        pp2_u =( MIR_AM6( i_u32 ,1,1 ) );;;;     // [445]
 
                         //:SingleAxisDense__LoadPlotPoint://     // [444]
                         o_k_sadense_lpp=( 1 );                   // [444]
