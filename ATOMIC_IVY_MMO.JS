@@ -5304,9 +5304,9 @@ UPNG.encode.dither = function(sb, w, h, plte, tb, oind) {
         };;                                                      // [096]
         return;/**VOID**/                                        // [096]
     };;                                                          // [096]
-                                                                 
-    const F_NEX = "[USE:F_CYC:(For Cycling)]" ;                  // [103]
-    const F_BAK = "[USE:F_CYC:(For Cycling)]" ;                  // [103]
+                                                                 // [---]
+    ////  F_NEX = "[USE:F_CYC:(For Cycling)]" ;                  // [441][103]
+    ////  F_BAK = "[USE:F_CYC:(For Cycling)]" ;                  // [441][103]
                                                                  // [103]
     const F_CYC = function PRIVATE_F_CYC(                        // [103]
                                                                  // [103]
