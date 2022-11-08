@@ -21805,10 +21805,10 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                         pp2_x =( m_i_gtx - (    i_gtx) );        // [444]
                         pp2_y =(   i_gty + (jmp*dir_y) );        // [444]
                         //:====(___i_gtc_+_(jmp*dir_c)_)=://     // [444]
-                                                              
+                                                                 // [---]
                         pp1_u =( MIR_AM6( i_u32 ,0,1 ) );;;;     // [445]
                         pp2_u =( MIR_AM6( i_u32 ,1,1 ) );;;;     // [445]
-
+                                                                 // [---]
                         //:SingleAxisDense__LoadPlotPoint://     // [444]
                         o_k_sadense_lpp=( 1 );                   // [444]
                                                                  // [---]
@@ -21870,10 +21870,10 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                         pp2_y =( m_i_gty - (    i_gty) );        // [444]
                         //:====(___i_gtc_+_(jmp*dir_c)_)=://     // [444]
                         //:#_OCD_____________2022_11_08_#://     // [444]
-
+                                                                 // [---]
                         pp1_u =( MIR_AM6( i_u32 ,1,0 ) );;;;     // [445]
                         pp2_u =( MIR_AM6( i_u32 ,1,1 ) );;;;     // [445]
-
+                                                                 // [---]
                         //:SingleAxisDense__LoadPlotPoint://     // [444]
                         o_k_sadense_lpp=( 1 );                   // [444]
                                                                  // [---]
@@ -50783,6 +50783,9 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
           : perfect 45 lines that are not auto-tiling     :::::  // [445]
           : and 22.5 degree lines that are not            :::::  // [445]
           : auto-tiling, the 45 degree lines look better. :::::  // [445]
+          :                                               :::::  // [445]
+          : Also, correct internal tile value is used on  :::::  // [445]
+          : the projected uint32 binary tile values.      :::::  // [445]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
