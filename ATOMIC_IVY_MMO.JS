@@ -1348,9 +1348,9 @@
     //:#_ARR_GTX_#:[426]:------------------------------------:// // [---][426]
     //:#_ARR_GTY_#:[426]:------------------------------------:// // [---][426]
                                                                  // [---][426]
-        var   d_arr_gtx =(new Uint32Array(   8   ) );;;;;;;;     // [433][---][426]
-        var   d_arr_gty =(new Uint32Array(   8   ) );;;;;;;;     // [433][---][426]
-        var   d_arr_u32 =(new Uint32Array(   8   ) );;;;;;;;     // [433][428][---]
+        var   d_arr_gtx =(new Uint32Array(   16   ) );;;;;;;     // [447][433][---][426]
+        var   d_arr_gty =(new Uint32Array(   16   ) );;;;;;;     // [447][433][---][426]
+        var   d_arr_u32 =(new Uint32Array(   16   ) );;;;;;;     // [447][433][428][---]
                                                                  // [---][426]
         const d_len_gtx =( "[WRONG_USE:d_len_gtc]" );;;;;;;;     // [---][426]
         const d_len_gty =( "[WRONG_USE:d_len_gtc]" );;;;;;;;     // [---][426]
@@ -22118,24 +22118,30 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 //:#_COPYPASTE_ROTATION_CODE_#:[447]:----://     // [447]
                 for( let rot = 0 ; rot <=(4-1); rot++ ){         // [447]
                                                                  // [447]
-                    lin=( d_len_gtc );                           // [447]
-                          d_len_gtc+=4 ;                         // [447]
-                                                                 // [447]
-                    d_arr_gtx[ lin+0 ]=( gtx-1 );                   
-                    d_arr_gty[ lin+0 ]=( gty-1 );                   
-                    d_arr_u32[ lin+0 ]=( u32   );   
+                    //:#_FOURPRONG_BRUSH_#:[447]:--------://
+                    //:#_4PRONG_BRUSH_#:[447]:-----------://
+                        lin=( d_len_gtc );                            
+                              d_len_gtc+=4 ;                          
+                                                                      
+                        d_arr_gtx[ lin+0 ]=( gtx-1 );                   
+                        d_arr_gty[ lin+0 ]=( gty-1 );                   
+                        d_arr_u32[ lin+0 ]=( u32   );   
 
-                    d_arr_gtx[ lin+1 ]=( gtx+1 );                   
-                    d_arr_gty[ lin+1 ]=( gty-1 );                   
-                    d_arr_u32[ lin+1 ]=( u32   );  
+                        d_arr_gtx[ lin+1 ]=( gtx+1 );                   
+                        d_arr_gty[ lin+1 ]=( gty-1 );                   
+                        d_arr_u32[ lin+1 ]=( u32   );  
 
-                    d_arr_gtx[ lin+2 ]=( gtx-1 );                   
-                    d_arr_gty[ lin+2 ]=( gty+1 );                   
-                    d_arr_u32[ lin+2 ]=( u32   );  
+                        d_arr_gtx[ lin+2 ]=( gtx-1 );                   
+                        d_arr_gty[ lin+2 ]=( gty+1 );                   
+                        d_arr_u32[ lin+2 ]=( u32   );  
 
-                    d_arr_gtx[ lin+3 ]=( gtx+1 );                   
-                    d_arr_gty[ lin+3 ]=( gty+1 );                   
-                    d_arr_u32[ lin+3 ]=( u32   );    
+                        d_arr_gtx[ lin+3 ]=( gtx+1 );                   
+                        d_arr_gty[ lin+3 ]=( gty+1 );                   
+                        d_arr_u32[ lin+3 ]=( u32   );    
+
+                    //:-----------:#_4PRONG_BRUSH_#:[447]://
+                    //:--------:#_FOURPRONG_BRUSH_#:[447]://
+
               
                                                                  // [447]
                     //: ANTIC : (x,y)===>(-y,x) :::::://         // [447]
@@ -51157,6 +51163,15 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
                                                                  // [447]
     @ZEN_MID@ : ZENITH MIDLINE ( larger  midline marker )        // [447]
     @JOT_MID@ : JOT    MIDLINE ( smaller midline marker )        // [447]
+                                                                 // [447]
+    #_FOURPRONG_BRUSH_#:[447]:--------------------------------+  // [447]
+    #_4PRONG_BRUSH_#:[447]:-----------------------------------+  // [447]
+                                                              |  // [447]
+        I think for dense mirroring mode for radial,          |  // [447]
+        a brush that is 4 points, spaced with a 1-tile        |  // [447]
+        gap between them will look best.                      |  // [447]
+    :---------------------------------------------------------+  // [447]
+    :---------------------------------------------------------+  // [447]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
