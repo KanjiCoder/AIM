@@ -22132,28 +22132,48 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 let old_gtx =( i_gtx );                          // [447]
                 let old_gty =( i_gty );                          // [447]
                                                                  // [447]
+                //:#_CALC_OFFSETA_#:[447]:---------------://
+                    if( 0 === quaddex ){
+                    
+                        offseta=(  jot - i_gtx   );
+                    }else
+                    if( 1 === quaddex ){
+
+                        offseta=(  jot - i_gty   );
+                    }else
+                    if( 2 === quaddex ){
+
+                        offseta=(  i_gtx - zen   );
+                    }else
+                    if( 3 === quaddex ){
+
+                        offseta=(  i_gty - zen   );
+                    }else{
+                        ERR("[BAD_QUADDEX_2022]");
+                    };;
+
+                    if( offseta <= 0 ){
+                        ERR( "[NEG_OFFSETTA_2022]");
+                    };;
+                //:---------------:#_CALC_OFFSETA_#:[447]://
                 //:#_CHOOSE_QUADDEX_OFFSETA_#:[447]:-----://     // [447]
                     if( 0 === quaddex ){                         // [447]
                                                                  // [447]
-                        offseta=(  jot - i_gtx   );
                         gtx =( old_gtx + offseta );              // [447]
                         gty =( old_gty + (  0  ) );              // [447]
                     }else                                        // [447]
                     if( 1 === quaddex ){                         // [447]
                                                                  // [447]
-                        offseta=(  jot - i_gty   );
                         gtx =( old_gtx + (  0  ) );              // [447]
                         gty =( old_gty + offseta );              // [447]
                     }else                                        // [447]
                     if( 2 === quaddex ){                         // [447]
                                                                  // [447]
-                        offseta=(  i_gtx - zen   );
                         gtx =( old_gtx - offseta );              // [447]
                         gty =( old_gty - (  0  ) );              // [447]
                     }else                                        // [447]
                     if( 3 === quaddex ){                         // [447]
                                                                  // [447]
-                        offseta=(  i_gty - zen   );
                         gtx =( old_gtx - (  0  ) );              // [447]
                         gty =( old_gty - offseta );              // [447]
                     };;                                          // [447]
