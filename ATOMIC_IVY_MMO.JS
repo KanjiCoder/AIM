@@ -22115,90 +22115,28 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             };;                                                  // [446]
             if( ( 1 === _d_ )&&( xyd_d >= 1 ) ){                 // [446]
 
-                let jot =( (glo_lat/2) + 0 ); //:@JOT_MID@://
-                let zen =( (glo_lat/2) - 1 ); //:@ZEN_MID@://
-
-
-                let iss_rig =( i_gtx >=( zen ) )?1:0;        // [447]
-                let bot_haf =( i_gty >=( zen ) )?1:0;        // [447]
-                                                                 // [447]
-
-
-
-                let offseta ;
-                                                                 // [447]
-                let quaddex =(( 0x0                              // [447]
-                |   ( bot_haf << 1 )                             // [447]
-                |   ( iss_rig << 0 )                             // [447]
-                )>>>0);;                                         // [447]
-                                                                 // [447]
-                let old_gtx =( i_gtx );                          // [447]
-                let old_gty =( i_gty );                          // [447]
-                                                                 // [447]
-                //:#_CALC_OFFSETA_#:[447]:---------------://
-                    if( 0 === quaddex ){
-                    
-                        offseta=(  jot - i_gtx   );//:@_XMF_@://
-                    }else
-                    if( 1 === quaddex ){
-
-                        offseta=(  jot - i_gty   );//:@_YMF_@://
-                    }else
-                    if( 2 === quaddex ){
-
-                        offseta=(  i_gty - zen );//:@_YMB_@://
-                    }else
-                    if( 3 === quaddex ){ //:@_XMB_@://
-
-                        offseta=(  i_gtx - zen   );
-                    }else{
-                        ERR("[BAD_QUADDEX_2022]");
-                    };;
-
-                    if( offseta < 0 ){
-                        ERR( "[NEG_OFFSETTA_2022]");
-                    };;
-
-                    offseta =( (offseta*2)+1 );
-
-                //:---------------:#_CALC_OFFSETA_#:[447]://
-
-                offseta =( 2 );
-
-                //:#_CHOOSE_QUADDEX_OFFSETA_#:[447]:-----://     // [447]
-                    if( 0 === quaddex ){                         // [447]
-                                                                 // [447]
-                        gtx =( old_gtx + offseta );              // [447]
-                        gty =( old_gty + (  0  ) );              // [447]
-                    }else                                        // [447]
-                    if( 1 === quaddex ){                         // [447]
-                                                                 // [447]
-                        gtx =( old_gtx + (  0  ) );              // [447]
-                        gty =( old_gty + offseta );              // [447]
-                    }else                                        // [447]
-                    if( 2 === quaddex ){                         // [447]
-                                                                 // [447]
-                        gtx =( old_gtx - offseta );              // [447]
-                        gty =( old_gty - (  0  ) );              // [447]
-                    }else                                        // [447]
-                    if( 3 === quaddex ){                         // [447]
-                                                                 // [447]
-                        gtx =( old_gtx - (  0  ) );              // [447]
-                        gty =( old_gty - offseta );              // [447]
-                    };;                                          // [447]
-                //:-----:#_CHOOSE_QUADDEX_OFFSETA_#:[447]://     // [447]
-
-                offseta =( loc_lat );
-
                 //:#_COPYPASTE_ROTATION_CODE_#:[447]:----://     // [447]
                 for( let rot = 0 ; rot <=(4-1); rot++ ){         // [447]
                                                                  // [447]
                     lin=( d_len_gtc );                           // [447]
-                          d_len_gtc++;                           // [447]
+                          d_len_gtc+=4 ;                         // [447]
                                                                  // [447]
-                    d_arr_gtx[ lin ]=( gtx );                    // [447]
-                    d_arr_gty[ lin ]=( gty );                    // [447]
-                    d_arr_u32[ lin ]=( u32 );                    // [447]
+                    d_arr_gtx[ lin+0 ]=( gtx-1 );                   
+                    d_arr_gty[ lin+0 ]=( gty-1 );                   
+                    d_arr_u32[ lin+0 ]=( u32   );   
+
+                    d_arr_gtx[ lin+1 ]=( gtx+1 );                   
+                    d_arr_gty[ lin+1 ]=( gty-1 );                   
+                    d_arr_u32[ lin+1 ]=( u32   );  
+
+                    d_arr_gtx[ lin+2 ]=( gtx-1 );                   
+                    d_arr_gty[ lin+2 ]=( gty+1 );                   
+                    d_arr_u32[ lin+2 ]=( u32   );  
+
+                    d_arr_gtx[ lin+3 ]=( gtx+1 );                   
+                    d_arr_gty[ lin+3 ]=( gty+1 );                   
+                    d_arr_u32[ lin+3 ]=( u32   );    
+              
                                                                  // [447]
                     //: ANTIC : (x,y)===>(-y,x) :::::://         // [447]
                     //: CLOCK : (x,y)===>(y,-x) :::::://         // [447]
