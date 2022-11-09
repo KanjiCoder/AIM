@@ -22146,11 +22146,11 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     }else
                     if( 2 === quaddex ){
 
-                        offseta=(  i_gtx - zen );//:@_YMB_@://
+                        offseta=(  i_gty - zen );//:@_YMB_@://
                     }else
                     if( 3 === quaddex ){ //:@_XMB_@://
 
-                        offseta=(  i_gty - zen   );
+                        offseta=(  i_gtx - zen   );
                     }else{
                         ERR("[BAD_QUADDEX_2022]");
                     };;
