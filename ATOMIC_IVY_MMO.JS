@@ -22162,6 +22162,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     offseta =( (offseta*2)+1 );
 
                 //:---------------:#_CALC_OFFSETA_#:[447]://
+
+                offseta =( 2 );
+
                 //:#_CHOOSE_QUADDEX_OFFSETA_#:[447]:-----://     // [447]
                     if( 0 === quaddex ){                         // [447]
                                                                  // [447]
@@ -22184,6 +22187,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                         gty =( old_gty - offseta );              // [447]
                     };;                                          // [447]
                 //:-----:#_CHOOSE_QUADDEX_OFFSETA_#:[447]://     // [447]
+
+                offseta =( loc_lat );
+
                 //:#_COPYPASTE_ROTATION_CODE_#:[447]:----://     // [447]
                 for( let rot = 0 ; rot <=(4-1); rot++ ){         // [447]
                                                                  // [447]
