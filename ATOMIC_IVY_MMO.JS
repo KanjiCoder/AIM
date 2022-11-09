@@ -22114,35 +22114,34 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 };;                                              // [446]
             };;                                                  // [446]
             if( ( 1 === _d_ )&&( xyd_d >= 1 ) ){                 // [446]
-
+                                                                 // [---]
+                //:#_16_POINT_ROTATION_BRUSH_#:[447]:----://     // [447]
                 //:#_COPYPASTE_ROTATION_CODE_#:[447]:----://     // [447]
                 for( let rot = 0 ; rot <=(4-1); rot++ ){         // [447]
                                                                  // [447]
-                    //:#_FOURPRONG_BRUSH_#:[447]:--------://
-                    //:#_4PRONG_BRUSH_#:[447]:-----------://
-                        lin=( d_len_gtc );                            
-                              d_len_gtc+=4 ;                          
-                                                                      
-                        d_arr_gtx[ lin+0 ]=( gtx-1 );                   
-                        d_arr_gty[ lin+0 ]=( gty-1 );                   
-                        d_arr_u32[ lin+0 ]=( u32   );   
-
-                        d_arr_gtx[ lin+1 ]=( gtx+1 );                   
-                        d_arr_gty[ lin+1 ]=( gty-1 );                   
-                        d_arr_u32[ lin+1 ]=( u32   );  
-
-                        d_arr_gtx[ lin+2 ]=( gtx-1 );                   
-                        d_arr_gty[ lin+2 ]=( gty+1 );                   
-                        d_arr_u32[ lin+2 ]=( u32   );  
-
-                        d_arr_gtx[ lin+3 ]=( gtx+1 );                   
-                        d_arr_gty[ lin+3 ]=( gty+1 );                   
-                        d_arr_u32[ lin+3 ]=( u32   );    
-
-                    //:-----------:#_4PRONG_BRUSH_#:[447]://
-                    //:--------:#_FOURPRONG_BRUSH_#:[447]://
-
-              
+                    //:#_FOURPRONG_BRUSH_#:[447]:--------://     // [447]
+                    //:#_4PRONG_BRUSH_#:[447]:-----------://     // [447]
+                        lin=( d_len_gtc );                       // [447]
+                              d_len_gtc+=4 ;                     // [447]
+                                                                 // [447]
+                        d_arr_gtx[ lin+0 ]=( gtx-1 );            // [447]
+                        d_arr_gty[ lin+0 ]=( gty-1 );            // [447]
+                        d_arr_u32[ lin+0 ]=( u32   );            // [447]
+                                                                 // [447]
+                        d_arr_gtx[ lin+1 ]=( gtx+1 );            // [447]
+                        d_arr_gty[ lin+1 ]=( gty-1 );            // [447]
+                        d_arr_u32[ lin+1 ]=( u32   );            // [447]
+                                                                 // [447]
+                        d_arr_gtx[ lin+2 ]=( gtx-1 );            // [447]
+                        d_arr_gty[ lin+2 ]=( gty+1 );            // [447]
+                        d_arr_u32[ lin+2 ]=( u32   );            // [447]
+                                                                 // [447]
+                        d_arr_gtx[ lin+3 ]=( gtx+1 );            // [447]
+                        d_arr_gty[ lin+3 ]=( gty+1 );            // [447]
+                        d_arr_u32[ lin+3 ]=( u32   );            // [447]
+                                                                 // [447]
+                    //:-----------:#_4PRONG_BRUSH_#:[447]://     // [447]
+                    //:--------:#_FOURPRONG_BRUSH_#:[447]://     // [447]
                                                                  // [447]
                     //: ANTIC : (x,y)===>(-y,x) :::::://         // [447]
                     //: CLOCK : (x,y)===>(y,-x) :::::://         // [447]
@@ -22155,7 +22154,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     /**$_LAST_GTX_GTY_DISCARDED_$**/             // [447]
                 };;                                              // [447]
                 //:----:#_COPYPASTE_ROTATION_CODE_#:[447]://     // [447]
-
+                //:----:#_16_POINT_ROTATION_BRUSH_#:[447]://     // [447]
+                                                                 // [---]
             };;                                                  // [446]
         };;                                                      // [446]
         //:------------------:#_LOOP_FOR_ME_BITCH_#:[446]://     // [446]
@@ -51127,6 +51127,14 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 
     #_CHOOSE_QUADDEX_OFFSETA_# :------------------------------+  // [447]
                                                               |  // [447]
+        NOTE :-----------------------------------------:      |  // [447]
+             :                                         :      |  // [447]
+             :  After trying this idea, I trashed it.  :      |  // [447]
+             :  I didn't like the results.             :      |  // [447]
+             :  Code for this diagram is in:           :      |  // [447]
+             :  <AIM>\DOC\TRASH\447.2022_10_09._       :      |  // [447]
+             :-----------------------------------------:      |  // [447]
+                                                              |  // [447]
         Depending on which quadrant we are in GLOBALLY,       |  // [447]
         we will offset to a different quandrant               |  // [447]
         LOCALLY to the current level pack we are in.          |  // [447]
@@ -51150,13 +51158,13 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
             |    @_YMB_@    | |    @_XMB_@    |               |  // [447]
             |               | |               |               |  // [447]
             +===---===---===+ +===---===---===+               |  // [447]
-
-
-            @_XMF_@ : X - Midline - FRONT ( bigger  than X )
-            @_YMF_@ : Y - Midline - FRONT ( bigger  than Y )
-            @_XMB_@ : X - Midline - BACK  ( smaller than X )
-            @_YMB_@ : Y - Midline - BACK  ( smaller than Y );
-
+                                                              |  // [447]
+                                                              |  // [447]
+            @_XMF_@ : X - Midline - FRONT ( bigger  than X )  |  // [447]
+            @_YMF_@ : Y - Midline - FRONT ( bigger  than Y )  |  // [447]
+            @_XMB_@ : X - Midline - BACK  ( smaller than X )  |  // [447]
+            @_YMB_@ : Y - Midline - BACK  ( smaller than Y )  |  // [447]
+                                                              |  // [447]
     :---------------------------------------------------------+  // [447]
     #_COPYPASTE_ROTATION_CODE_# :-----------------------------+  // [447]
                                                               |  // [447]
@@ -51189,6 +51197,12 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         a brush that is 4 points, spaced with a 1-tile        |  // [447]
         gap between them will look best.                      |  // [447]
     :---------------------------------------------------------+  // [447]
+    :---------------------------------------------------------+  // [447]
+    #_16_POINT_ROTATION_BRUSH_# :-----------------------------+  // [447]
+                                                              |  // [447]
+        This section of code is no longer a "copy+paste"      |  // [447]
+        of the other section. It has some heavy               |  // [447]
+        modification that plots 16 points in total.           |  // [447]
     :---------------------------------------------------------+  // [447]
 
 *** ******************************************************** **/         
