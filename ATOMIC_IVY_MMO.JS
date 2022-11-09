@@ -22056,9 +22056,82 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
     ){  //:BOD_BEG[ F_EDI_PUT_U32_SYMRADI ]:::::::::[425]://     // [425]
                                                                  // [425]
         //:SEE_TAG[ #_DIAGRAM_XYD_SYMRADI_# ]::::::::::::://     // [425]
-                                                                 // [425]
-        YEL( "[TODO:F_MIRMAID_EDI_PUT_U32_SYMRADI]" );           // [425]
-                                                                 // [425]
+
+        //:#_DENSEBIT_GTC_BINTILE_#:[446]:---------------://    
+
+            let xyd_d =(( i_xyd >>> 0 )&(0x1));
+            let   gtx =(  i_gtx );
+            let   gty =(  i_gty );
+            let   u32 =(  i_u32 );
+
+        //:---------------:#_DENSEBIT_GTC_BINTILE_#:[446]://
+        //:#_MAX_GTC_AND_LIN_#:[446]:--------------------://
+
+            const loc_lat =( d_te7_lat[ i_te7 ] );              
+            const glo_lat =( ((3*5*loc_lat)+0)  );              
+                                                                
+            const m_i_gtx =( glo_lat - 1 );                     
+            const m_i_gty =( glo_lat - 1 );                     
+            let       lin =( 0 /** Loading_INdex **/ );   
+            
+        //:--------------------:#_MAX_GTC_AND_LIN_#:[446]://
+        //:#_RESET_TRIPLEPARA_#:[446]:-------------------://
+
+            d_len_gtc=(0); lin=(0-1);
+
+        //:-------------------:#_RESET_TRIPLEPARA_#:[446]://
+        //:#_TILE_INTERNAL_ROTATION_FUNC_#:[446]:--------://
+
+            const ROT_C_W =( F_MIRMAID_AM6_U32_ROT_C_W );
+
+        //:--------:#_TILE_INTERNAL_ROTATION_FUNC_#:[446]://
+        //:#_LOOP_FOR_ME_BITCH_#:[446]:------------------://                                            
+        for( let _d_ = 0 ; _d_ <= ( 1 ) ; _d_ ++ ){
+
+            if( ( 0 === _d_ )&&( 1 === 1 ) ){ 
+
+                for( let rot = 0 ; rot <=(4-1); rot++ ){
+
+                    lin=( d_len_gtc );
+                          d_len_gtc++;
+
+                    d_arr_gtx[ lin ]=( gtx );
+                    d_arr_gty[ lin ]=( gty );
+                    d_arr_u32[ lin ]=( u32 );
+                    
+                    //: ANTIC : (x,y)===>(-y,x) :::::://
+                    //: CLOCK : (x,y)===>(y,-x) :::::://
+                    gtx =( m_i_gty - gty );
+                    gty =(         0+gtx );
+                    u32 =ROT_C_W(    u32 );
+
+                    /**$_LAST_GTX_GTY_DISCARDED_$**/
+                };;
+            };;
+            if( ( 1 === _d_ )&&( xyd_d >= 1 ) ){
+
+                //: TODO: Dense Mode Rotation Code ://
+            };;
+        };;
+        //:------------------:#_LOOP_FOR_ME_BITCH_#:[446]://
+        //:#_UNLOAD_RADMIR_TILE_BUFFER_#:[446]:----------://     
+        let  dex =(             0 );                     
+        let  m_i =( d_len_gtc - 1 );                     
+        for( dex = 0 ; dex <= m_i ; dex ++ ){            
+                                                         
+            gtx=( d_arr_gtx[ dex ] );                    
+            gty=( d_arr_gty[ dex ] );                    
+            u32=( d_arr_u32[ dex ] );                    
+                                                         
+            F_TILEBOI_EDI_PUT_U32(                       
+                                                         
+                te7,la3 //:<--[_TE7_AND_LA3_]://         
+            ,   gtx,gty //:<--[_GTX_AND_GTY_]://         
+            ,   u32     //:<--[_U32_BINTILE_]://         
+            );;                                          
+        };;                                              
+        //:----------:#_UNLOAD_RADMIR_TILE_BUFFER_#:[446]://     
+
     };; //:BOD_END[ F_EDI_PUT_U32_SYMRADI ]:::::::::[425]://     // [425]
 
     const   F_MIRMAID_EDI_PUT_U32 = function  //::::::::::::::// // [423]
@@ -24636,6 +24709,17 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
 *** CTRL_F_HELP ******************************************** *** // [088]
 TAG[ tag_section | tag-section | tag_section ]BEG -------------- // [088]
 TAG[ tag section | tagsection | tagsec | tag-sec | tag_sec ]---- // [109]
+
+    TAG[ symbilat | sym_bilat | sym-bilat | ________________ ]   // [446]
+    TAG[ symbilatia | sym-bilatia | sym_bilatia | __________ ]   // [446]
+    TAG[ bilasym | bila_sym | bila-sym | bilat-sym | _______ ]   // [446]
+    TAG[ bilatsym | bilateral-sysystematic-problematic | ___ ]   // [446]
+    SEE[ F _ MIRMAID _ EDI _ PUT _ U32 _ SYMBILA ][ ________ ]   // [446]
+                                                                 // [446]
+    TAG[ symbadi | sym_radi | sym-radi | symradial  | ______ ]   // [446]
+    TAG[ sym_radial | sym-radial | symmetric-radial | ______ ]   // [446]
+    TAG[ symradia | sym-radia | sym_radia | ________________ ]   // [446]
+    SEE[ F _ MIRMAID _ EDI _ PUT _ U32 _ SYMRADI ][ ________ ]   // [446]
 
     TAG[ partial-texture-update | partial_texture_update     ]   // [415]
     TAG[ partialtextureupdate | partial_texture_push | ptp   ]   // [415]
@@ -50770,6 +50854,55 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         the two layers together in [photoshop||paint.net].    |  // [444]
                                                               |  // [444]
     :---------------------------------------------------------+  // [444]
+
+    #_DENSEBIT_GTC_BINTILE_# :--------------------------------+  // [445]
+                                                              |  // [445]
+        Dense Bit Of[ xyd ]mirror flag bits ,                 |  // [445]
+        global_tile_coordinate(GTC) and our                   |  // [445]
+        binary-tile ( bintile / u32 ) input.                  |  // [445]
+    :---------------------------------------------------------+  // [445]
+    #_MAX_GTC_AND_LIN_# :-------------------------------------+  // [445]
+                                                              |  // [445]
+        MAXimum GTC and Loading INdex                         |  // [445]
+        GTC === [ GTX , GTY ], C == Coordinate (coord==X|Y)   |  // [445]
+                                                              |  // [445]
+        Loading index used to populate our                    |  // [445]
+        triple-parallel array.                                |  // [445]
+    :---------------------------------------------------------+  // [445]
+    $_LAST_GTX_GTY_DISCARDED_$ :------------------------------+  // [445]
+                                                              |  // [445]
+        Getting setup to enter and exit a loop is very        |  // [445]
+        difficult for some reason. Always has been.           |  // [445]
+        The last [x,y,u] coordinate here is discarded         |  // [445]
+        because it is not needed.                             |  // [445]
+                                                              |  // [445]
+        COORDINATE[ gtx , gty , u32 ]                         |  // [445]
+        GTX : Global Tile X                                   |  // [445]
+        GTY : Global Tile Y                                   |  // [445]
+        U32 : Uint32 Binary Tile Value                        |  // [445]
+    :---------------------------------------------------------+  // [445]
+    #_RESET_TRIPLEPARA_# :------------------------------------+  // [445]
+                                                              |  // [445]
+        Reset triple parallel array.                          |  // [445]
+        ( arr_gtx && arr_gty && arr_u32 )                     |  // [445]
+    :---------------------------------------------------------+  // [445]
+    #_TILE_INTERNAL_ROTATION_FUNC_# :-------------------------+  // [445]
+                                                              |  // [445]
+        This function looks kind of ugly when called          |  // [445]
+        directly, so making a shorthand reference to          |  // [445]
+        clean up the visuals of it's call site.               |  // [445]
+    :---------------------------------------------------------+  // [445]
+    #_LOOP_FOR_ME_BITCH_# :-----------------------------------+  // [445]
+                                                              |  // [445]
+        Two outer loop iterations in radial mirroring.        |  // [445]
+        One for the normal radial mirroring code,             |  // [445]
+        the other for the dense mirroring code.               |  // [445]
+    :---------------------------------------------------------+  // [445]
+    #_UNLOAD_RADMIR_TILE_BUFFER_# :---------------------------+  // [445]
+                                                              |  // [445]
+        Unload Radial Mirror Tile Buffer.                     |  // [445]
+        Copy_paste of[ _UNLOAD_TILE_BUFFER_ ].                |  // [445]
+    :---------------------------------------------------------+  // [445]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
