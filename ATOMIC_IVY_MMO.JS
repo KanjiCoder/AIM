@@ -22120,7 +22120,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
 
 
                 let iss_rig =( i_gtx >=( zen ) )?1:0;        // [447]
-                let iss_top =( i_gty >=( zen ) )?1:0;        // [447]
+                let iss_top =( i_gty <=( jot ) )?1:0;        // [447]
                                                                  // [447]
 
 
