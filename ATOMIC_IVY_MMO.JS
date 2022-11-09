@@ -51211,6 +51211,10 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 /** ******************************************************** ***     
                                                            
     [447] : Dense Mirroring Mode Is Finished. :::::::::::::::::  // [447]
+          : NEXT : Mirror only within the level that we     :::  // [447]
+          :      : clicked inside of. I think this will     :::  // [447]
+          :      : help design decorative boarders in which :::  // [447]
+          :      : we can place old[ Atomic Alice ]levels.  :::  // [447]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
