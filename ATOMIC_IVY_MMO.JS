@@ -22118,7 +22118,11 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 let lef_rig =( i_gtx < (glo_lat/2) )?1:0;        // [447]
                 let top_bot =( i_gty < (glo_lat/2) )?1:0;        // [447]
                                                                  // [447]
-                let offseta =( loc_lat/1 );                      // [447]
+
+                let zen =( (glo_lat/2) - 1 ); //:@ZEN_MID@://
+                let jot =( (glo_lat/2) + 0 ); //:@JOT_MID@://
+
+                let offseta ;
                                                                  // [447]
                 let quaddex =(( 0x0                              // [447]
                 |   ( top_bot << 1 )                             // [447]
@@ -22131,21 +22135,25 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 //:#_CHOOSE_QUADDEX_OFFSETA_#:[447]:-----://     // [447]
                     if( 0 === quaddex ){                         // [447]
                                                                  // [447]
+                        offseta=(  jot - i_gtx   );
                         gtx =( old_gtx + offseta );              // [447]
                         gty =( old_gty + (  0  ) );              // [447]
                     }else                                        // [447]
                     if( 1 === quaddex ){                         // [447]
                                                                  // [447]
+                        offseta=(  jot - i_gty   );
                         gtx =( old_gtx + (  0  ) );              // [447]
                         gty =( old_gty + offseta );              // [447]
                     }else                                        // [447]
                     if( 2 === quaddex ){                         // [447]
                                                                  // [447]
+                        offseta=(  i_gtx - zen   );
                         gtx =( old_gtx - offseta );              // [447]
                         gty =( old_gty - (  0  ) );              // [447]
                     }else                                        // [447]
                     if( 3 === quaddex ){                         // [447]
                                                                  // [447]
+                        offseta=(  i_gty - zen   );
                         gtx =( old_gtx - (  0  ) );              // [447]
                         gty =( old_gty - offseta );              // [447]
                     };;                                          // [447]
@@ -51169,7 +51177,9 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         I was doing a good thing here by cleaning             |  // [447]
         up repetitive chunks of code.                         |  // [447]
     :---------------------------------------------------------+  // [447]
-
+                                                                 // [447]
+    @ZEN_MID@ : ZENITH MIDLINE ( larger  midline marker )        // [447]
+    @JOT_MID@ : JOT    MIDLINE ( smaller midline marker )        // [447]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
