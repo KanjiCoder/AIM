@@ -22125,9 +22125,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                          
             F_TILEBOI_EDI_PUT_U32(                       
                                                          
-                te7,la3 //:<--[_TE7_AND_LA3_]://         
-            ,   gtx,gty //:<--[_GTX_AND_GTY_]://         
-            ,   u32     //:<--[_U32_BINTILE_]://         
+                i_te7,i_la3 //:<--[_TE7_AND_LA3_]://         
+            ,     gtx,  gty //:<--[_GTX_AND_GTY_]://         
+            ,           u32 //:<--[_U32_BINTILE_]://         
             );;                                          
         };;                                              
         //:----------:#_UNLOAD_RADMIR_TILE_BUFFER_#:[446]://     
