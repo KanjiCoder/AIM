@@ -22115,8 +22115,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             };;                                                  // [446]
             if( ( 1 === _d_ )&&( xyd_d >= 1 ) ){                 // [446]
 
-                let lef_rig =( i_gtx < (glo_lat/2) )?1:0;        // [447]
-                let top_bot =( i_gty < (glo_lat/2) )?1:0;        // [447]
+                let lef_rig =( i_gtx < (glo_lat/2) )?0:1;        // [447]
+                let top_bot =( i_gty < (glo_lat/2) )?0:1;        // [447]
                                                                  // [447]
 
                 let zen =( (glo_lat/2) - 1 ); //:@ZEN_MID@://
