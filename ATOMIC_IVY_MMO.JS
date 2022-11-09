@@ -22120,7 +22120,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
 
 
                 let iss_rig =( i_gtx >=( zen ) )?1:0;        // [447]
-                let iss_top =( i_gty <=( jot ) )?1:0;        // [447]
+                let bot_haf =( i_gty >=( zen ) )?1:0;        // [447]
                                                                  // [447]
 
 
@@ -22128,7 +22128,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 let offseta ;
                                                                  // [447]
                 let quaddex =(( 0x0                              // [447]
-                |   ( iss_top << 1 )                             // [447]
+                |   ( bot_haf << 1 )                             // [447]
                 |   ( iss_rig << 0 )                             // [447]
                 )>>>0);;                                         // [447]
                                                                  // [447]
