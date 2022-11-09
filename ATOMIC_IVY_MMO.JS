@@ -22060,9 +22060,12 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         //:#_DENSEBIT_GTC_BINTILE_#:[446]:---------------://    
 
             let xyd_d =(( i_xyd >>> 0 )&(0x1));
-            let   gtx =(  i_gtx );
+            let   gtx =(  i_gtx ); 
             let   gty =(  i_gty );
             let   u32 =(  i_u32 );
+
+            let   new_gtx=( gtx );  //: @TEMP_VARS@ :::::://
+            let   new_gty=( gty );  //: @TEMP_VARS@ :::::://
 
         //:---------------:#_DENSEBIT_GTC_BINTILE_#:[446]://
         //:#_MAX_GTC_AND_LIN_#:[446]:--------------------://
@@ -22101,10 +22104,12 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     
                     //: ANTIC : (x,y)===>(-y,x) :::::://
                     //: CLOCK : (x,y)===>(y,-x) :::::://
-                    gtx =( m_i_gty - gty );
-                    gty =(         0+gtx );
-                    u32 =ROT_C_W(    u32 );
-
+                    new_gtx =( m_i_gty - gty );
+                    new_gty =(         0+gtx );
+                        gtx =( new_gtx       );
+                        gty =( new_gty       );
+                        u32 =ROT_C_W(    u32 );
+        
                     /**$_LAST_GTX_GTY_DISCARDED_$**/
                 };;
             };;
@@ -50903,6 +50908,9 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         Unload Radial Mirror Tile Buffer.                     |  // [445]
         Copy_paste of[ _UNLOAD_TILE_BUFFER_ ].                |  // [445]
     :---------------------------------------------------------+  // [445]
+    @TEMP_VARS@ : Temporary variables used to prevent            // [446]
+                : weird stuff from  happening when doing         // [446]
+                : calculations.                                  // [446]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
