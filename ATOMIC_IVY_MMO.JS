@@ -22155,7 +22155,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                         ERR("[BAD_QUADDEX_2022]");
                     };;
 
-                    if( offseta <= 0 ){
+                    if( offseta < 0 ){
                         ERR( "[NEG_OFFSETTA_2022]");
                     };;
                 //:---------------:#_CALC_OFFSETA_#:[447]://
