@@ -22119,8 +22119,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 let zen =( (glo_lat/2) - 1 ); //:@ZEN_MID@://
 
 
-                let lef_rig =( i_gtx <=( jot ) )?0:1;        // [447]
-                let top_bot =( i_gty <=( jot ) )?0:1;        // [447]
+                let lef_rig =( i_gtx <=( jot ) )?1:0;        // [447]
+                let top_bot =( i_gty <=( jot ) )?1:0;        // [447]
                                                                  // [447]
 
 
