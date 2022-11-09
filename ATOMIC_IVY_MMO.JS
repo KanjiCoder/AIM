@@ -22057,85 +22057,86 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [425]
         //:SEE_TAG[ #_DIAGRAM_XYD_SYMRADI_# ]::::::::::::://     // [425]
 
-        //:#_DENSEBIT_GTC_BINTILE_#:[446]:---------------://    
+        //:#_DENSEBIT_GTC_BINTILE_#:[446]:---------------://     // [446]
+                                                                 // [446]
+            let xyd_d =(( i_xyd >>> 0 )&(0x1));                  // [446]
+            let   gtx =(  i_gtx );                               // [446]
+            let   gty =(  i_gty );                               // [446]
+            let   u32 =(  i_u32 );                               // [446]
+                                                                 // [446]
+            let   new_gtx=( gtx );  //: @TEMP_VARS@ :::::://     // [446]
+            let   new_gty=( gty );  //: @TEMP_VARS@ :::::://     // [446]
+                                                                 // [446]
+        //:---------------:#_DENSEBIT_GTC_BINTILE_#:[446]://     // [446]
+        //:#_MAX_GTC_AND_LIN_#:[446]:--------------------://     // [446]
+                                                                 // [446]
+            const loc_lat =( d_te7_lat[ i_te7 ] );               // [446]
+            const glo_lat =( ((3*5*loc_lat)+0)  );               // [446]
+                                                                 // [446]
+            const m_i_gtx =( glo_lat - 1 );                      // [446]
+            const m_i_gty =( glo_lat - 1 );                      // [446]
+            let       lin =( 0 /** Loading_INdex **/ );          // [446]
+                                                                 // [446]
+        //:--------------------:#_MAX_GTC_AND_LIN_#:[446]://     // [446]
+        //:#_RESET_TRIPLEPARA_#:[446]:-------------------://     // [446]
+                                                                 // [446]
+            d_len_gtc=(0); lin=(0-1);                            // [446]
+                                                                 // [446]
+        //:-------------------:#_RESET_TRIPLEPARA_#:[446]://     // [446]
+        //:#_TILE_INTERNAL_ROTATION_FUNC_#:[446]:--------://     // [446]
+                                                                 // [446]
+            const ROT_C_W =( F_MIRMAID_AM6_U32_ROT_C_W );        // [446]
+                                                                 // [446]
+        //:--------:#_TILE_INTERNAL_ROTATION_FUNC_#:[446]://     // [446]
+        //:#_LOOP_FOR_ME_BITCH_#:[446]:------------------://     // [446]
+        for( let _d_ = 0 ; _d_ <= ( 1 ) ; _d_ ++ ){              // [446]
+                                                                 // [446]
+            if( ( 0 === _d_ )&&( 1 === 1 ) ){                    // [446]
+                                                                 // [446]
+                for( let rot = 0 ; rot <=(4-1); rot++ ){         // [446]
+                                                                 // [446]
+                    lin=( d_len_gtc );                           // [446]
+                          d_len_gtc++;                           // [446]
+                                                                 // [446]
+                    d_arr_gtx[ lin ]=( gtx );                    // [446]
+                    d_arr_gty[ lin ]=( gty );                    // [446]
+                    d_arr_u32[ lin ]=( u32 );                    // [446]
+                                                                 // [446]
+                    //: ANTIC : (x,y)===>(-y,x) :::::://         // [446]
+                    //: CLOCK : (x,y)===>(y,-x) :::::://         // [446]
+                    new_gtx =( (  0  ) + gty );                  // [446]
+                    new_gty =( m_i_gtx - gtx );                  // [446]
+                        gtx =( new_gtx       );                  // [446]
+                        gty =( new_gty       );                  // [446]
+                        u32 =ROT_C_W(    u32 );                  // [446]
+                                                                 // [446]
+                    /**$_LAST_GTX_GTY_DISCARDED_$**/             // [446]
+                };;                                              // [446]
+            };;                                                  // [446]
+            if( ( 1 === _d_ )&&( xyd_d >= 1 ) ){                 // [446]
 
-            let xyd_d =(( i_xyd >>> 0 )&(0x1));
-            let   gtx =(  i_gtx ); 
-            let   gty =(  i_gty );
-            let   u32 =(  i_u32 );
+                //: TODO: Dense Mode Rotation Code :// < < < < < < < NOTICE_ME_SENPAI
 
-            let   new_gtx=( gtx );  //: @TEMP_VARS@ :::::://
-            let   new_gty=( gty );  //: @TEMP_VARS@ :::::://
-
-        //:---------------:#_DENSEBIT_GTC_BINTILE_#:[446]://
-        //:#_MAX_GTC_AND_LIN_#:[446]:--------------------://
-
-            const loc_lat =( d_te7_lat[ i_te7 ] );              
-            const glo_lat =( ((3*5*loc_lat)+0)  );              
-                                                                
-            const m_i_gtx =( glo_lat - 1 );                     
-            const m_i_gty =( glo_lat - 1 );                     
-            let       lin =( 0 /** Loading_INdex **/ );   
-            
-        //:--------------------:#_MAX_GTC_AND_LIN_#:[446]://
-        //:#_RESET_TRIPLEPARA_#:[446]:-------------------://
-
-            d_len_gtc=(0); lin=(0-1);
-
-        //:-------------------:#_RESET_TRIPLEPARA_#:[446]://
-        //:#_TILE_INTERNAL_ROTATION_FUNC_#:[446]:--------://
-
-            const ROT_C_W =( F_MIRMAID_AM6_U32_ROT_C_W );
-
-        //:--------:#_TILE_INTERNAL_ROTATION_FUNC_#:[446]://
-        //:#_LOOP_FOR_ME_BITCH_#:[446]:------------------://                                            
-        for( let _d_ = 0 ; _d_ <= ( 1 ) ; _d_ ++ ){
-
-            if( ( 0 === _d_ )&&( 1 === 1 ) ){ 
-
-                for( let rot = 0 ; rot <=(4-1); rot++ ){
-
-                    lin=( d_len_gtc );
-                          d_len_gtc++;
-
-                    d_arr_gtx[ lin ]=( gtx );
-                    d_arr_gty[ lin ]=( gty );
-                    d_arr_u32[ lin ]=( u32 );
-                    
-                    //: ANTIC : (x,y)===>(-y,x) :::::://
-                    //: CLOCK : (x,y)===>(y,-x) :::::://
-                    new_gtx =( m_i_gty - gty );
-                    new_gty =(         0+gtx );
-                        gtx =( new_gtx       );
-                        gty =( new_gty       );
-                        u32 =ROT_C_W(    u32 );
-        
-                    /**$_LAST_GTX_GTY_DISCARDED_$**/
-                };;
-            };;
-            if( ( 1 === _d_ )&&( xyd_d >= 1 ) ){
-
-                //: TODO: Dense Mode Rotation Code ://
-            };;
-        };;
-        //:------------------:#_LOOP_FOR_ME_BITCH_#:[446]://
-        //:#_UNLOAD_RADMIR_TILE_BUFFER_#:[446]:----------://     
-        let  dex =(             0 );                     
-        let  m_i =( d_len_gtc - 1 );                     
-        for( dex = 0 ; dex <= m_i ; dex ++ ){            
-                                                         
-            gtx=( d_arr_gtx[ dex ] );                    
-            gty=( d_arr_gty[ dex ] );                    
-            u32=( d_arr_u32[ dex ] );                    
-                                                         
-            F_TILEBOI_EDI_PUT_U32(                       
-                                                         
-                i_te7,i_la3 //:<--[_TE7_AND_LA3_]://         
-            ,     gtx,  gty //:<--[_GTX_AND_GTY_]://         
-            ,           u32 //:<--[_U32_BINTILE_]://         
-            );;                                          
-        };;                                              
-        //:----------:#_UNLOAD_RADMIR_TILE_BUFFER_#:[446]://     
+            };;                                                  // [446]
+        };;                                                      // [446]
+        //:------------------:#_LOOP_FOR_ME_BITCH_#:[446]://     // [446]
+        //:#_UNLOAD_RADMIR_TILE_BUFFER_#:[446]:----------://     // [446]
+        let  dex =(             0 );                             // [446]
+        let  m_i =( d_len_gtc - 1 );                             // [446]
+        for( dex = 0 ; dex <= m_i ; dex ++ ){                    // [446]
+                                                                 // [446]
+            gtx=( d_arr_gtx[ dex ] );                            // [446]
+            gty=( d_arr_gty[ dex ] );                            // [446]
+            u32=( d_arr_u32[ dex ] );                            // [446]
+                                                                 // [446]
+            F_TILEBOI_EDI_PUT_U32(                               // [446]
+                                                                 // [446]
+                i_te7,i_la3 //:<--[_TE7_AND_LA3_]://             // [446]
+            ,     gtx,  gty //:<--[_GTX_AND_GTY_]://             // [446]
+            ,           u32 //:<--[_U32_BINTILE_]://             // [446]
+            );;                                                  // [446]
+        };;                                                      // [446]
+        //:----------:#_UNLOAD_RADMIR_TILE_BUFFER_#:[446]://     // [446]
 
     };; //:BOD_END[ F_EDI_PUT_U32_SYMRADI ]:::::::::[425]://     // [425]
 
