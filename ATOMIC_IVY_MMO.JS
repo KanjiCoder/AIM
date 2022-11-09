@@ -22158,6 +22158,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     if( offseta < 0 ){
                         ERR( "[NEG_OFFSETTA_2022]");
                     };;
+
+                    offseta =( (offseta*2)+1 );
+
                 //:---------------:#_CALC_OFFSETA_#:[447]://
                 //:#_CHOOSE_QUADDEX_OFFSETA_#:[447]:-----://     // [447]
                     if( 0 === quaddex ){                         // [447]
