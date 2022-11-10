@@ -21693,6 +21693,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                               obj_gtc  ,  obj_ltc );;            // [450]
                                                                  // [450]
             //:-----------:#_GET_LOCAL_COORD_RADI_#:[450]://     // [450]
+            //:#_RAD_COMMON_#:[454]:---------------------://
 
                 let ROT_C_W = ( F_MIRMAID_AM6_U32_ROT_C_W );
     
@@ -21703,7 +21704,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 d_arr_ltx[ 0 ]=( obj_ltc.m_ltx );
                 d_arr_lty[ 0 ]=( obj_ltc.m_lty );
                 d_arr_u32[ 0 ]=( i_u32 );
-
+            //:---------------------:#_RAD_COMMON_#:[454]://
+            //:#_LOAD_TILE_BUFFERS_:#[454]:--------------://
             if( 0 === xyd_d || (1==1/**TEMP**/) ){
                 
                 d_len_ltc=(4);
@@ -21727,7 +21729,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             }else{
                 ERR("[WTF:2022_11_10]");
             };;
-            
+            //:--------------:#_LOAD_TILE_BUFFERS_:#[454]://
     
                 m_i=( d_len_ltc - 1 );   //:@_R_P_V_@://
             let l_i ; //: @l_i@ : Local_Index :::::::://
@@ -28663,6 +28665,13 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : NEXT: Unit_Tests :                   ::::::::::::::  // [453][452]
           :     : UnitTest #1 : (gtc)===>(ltc);  ::::::::::::::  // [453][452]
           :     : UnitTest #2 : (ltc)===>(gtc);  ::::::::::::::  // [453][452]
+
+                                                                
+    [453] : Unit test code for (global)<===>(local)    ::::::::  // [454][453]
+          : tile coordinates. We need this for sanity  ::::::::  // [454][453]
+          : of mind before we continue with our        ::::::::  // [454][453]
+          : localized tile brush code.                 ::::::::  // [454][453]
+
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -51866,16 +51875,30 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
     :---------------------------------------------------------+  // [454]
     @_R_P_V_@ : Re-Purposed-Variable                             // [454]
     @RPV@ ::::: Re-Purposed-Variable                             // [454]
+    #_RAD_COMMON_# :------------------------------------------+  // [454]
+                                                              |  // [454]
+        Common shared code between "dense mode"               |  // [454]
+        and "light mode" within our radial                    |  // [454]
+        isolated mirroring function.                          |  // [454]
+    :---------------------------------------------------------+  // [454]
+    #_LOAD_TILE_BUFFERS_# :-----------------------------------+  // [454]
+                                                              |  // [454]
+        Load the local coordinate tile buffers.               |  // [454]
+        Doesn't matter which branch gets picked,              |  // [454]
+        both will work by filling out the same                |  // [454]
+        tile buffer. Though the number of entries             |  // [454]
+        we will out will be __MORE__ if we are in             |  // [454]
+        "DENSE" mode.                                         |  // [454]
+    :---------------------------------------------------------+  // [454]
 
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
-                                                                
-    [453] : Unit test code for (global)<===>(local)    ::::::::  // [453]
-          : tile coordinates. We need this for sanity  ::::::::  // [453]
-          : of mind before we continue with our        ::::::::  // [453]
-          : localized tile brush code.                 ::::::::  // [453]
+
+    [454] : Basic Isolated Radial Code Function is working. :::  // [454]
+          : Full logic of isolated-radial code is not       :::  // [454]
+          : yet finished.                                   :::  // [454]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
