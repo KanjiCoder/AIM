@@ -21694,9 +21694,20 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [450]
             //:-----------:#_GET_LOCAL_COORD_RADI_#:[450]://     // [450]
 
+
+                d_arr_ltx[ 1 ]=( m_i - d_arr_lty[ 0 ] );
+                d_arr_ltx[ 1 ]=(       d_arr_ltx[ 0 ] );
+
+                d_arr_ltx[ 2 ]=( m_i - d_arr_lty[ 0 ] );
+                d_arr_ltx[ 2 ]=(       d_arr_ltx[ 0 ] );
+
+                d_arr_ltx[ 3 ]=( m_i - d_arr_lty[ 0 ] );
+                d_arr_ltx[ 3 ]=(       d_arr_ltx[ 0 ] );
+
             
             let m_i=( d_len_ltc - 1 ); //:@_R_P_V_@://
-            for( l_i = 0 ; l_i <=( m_i ) ; l_i ++ ){
+            let l_i ; //: @l_i@ : Local_Index :::::://
+            for(l_i = 0 ; l_i <=( m_i ) ; l_i ++ ){
 
               F_TILEBOI_INN_OBJ_LTC_OUT_OBJ_GTC(   
                             obj_ltc  ,  obj_gtc );;
