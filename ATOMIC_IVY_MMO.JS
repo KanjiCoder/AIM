@@ -21694,15 +21694,26 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [450]
             //:-----------:#_GET_LOCAL_COORD_RADI_#:[450]://     // [450]
 
+            let ROT_C_W = ( F_MIRMAID_AM6_U32_ROT_C_W 
+    
+            let lat =( d_te7_lat[ i_te7 ] );
+            let m_i =(       lat-1        );
+
+                d_arr_ltx[ 0 ]=( obj_ltc.m_ltx );
+                d_arr_lty[ 0 ]=( obj_ltc.m_lty );
+                d_arr_u32[ 0 ]=( i_u32 );
 
                 d_arr_ltx[ 1 ]=( m_i - d_arr_lty[ 0 ] );
                 d_arr_ltx[ 1 ]=(       d_arr_ltx[ 0 ] );
+                d_arr_u32[ 1 ]=ROT_C_W(d_arr_u32[ 0 ] );
 
-                d_arr_ltx[ 2 ]=( m_i - d_arr_lty[ 0 ] );
-                d_arr_ltx[ 2 ]=(       d_arr_ltx[ 0 ] );
+                d_arr_ltx[ 2 ]=( m_i - d_arr_lty[ 1 ] );
+                d_arr_ltx[ 2 ]=(       d_arr_ltx[ 1 ] );
+                d_arr_u32[ 2 ]=ROT_C_W(d_arr_u32[ 1 ] );
 
-                d_arr_ltx[ 3 ]=( m_i - d_arr_lty[ 0 ] );
-                d_arr_ltx[ 3 ]=(       d_arr_ltx[ 0 ] );
+                d_arr_ltx[ 3 ]=( m_i - d_arr_lty[ 2 ] );
+                d_arr_ltx[ 3 ]=(       d_arr_ltx[ 2 ] );
+                d_arr_u32[ 4 ]=ROT_C_W(d_arr_u32[ 2 ] );
 
             
             let m_i=( d_len_ltc - 1 ); //:@_R_P_V_@://
@@ -25112,6 +25123,9 @@ require( "http" ).createServer( function( i_ask , i_giv ){       // [139][017]
 *** CTRL_F_HELP ******************************************** *** // [088]
 TAG[ tag_section | tag-section | tag_section ]BEG -------------- // [088]
 TAG[ tag section | tagsection | tagsec | tag-sec | tag_sec ]---- // [109]
+
+    TAG[ F_MIRMAID_ROT_C_W ][ ____________ ][ ______________ ]   // [454]
+    SEE[ F _ MIRMAID _ AM6 _ U32 _ ROT_C_W ][ ______________ ]   // [454]
 
     TAG[ mod_mod_mir_onn | modmodmironn | mod-mod-mir-onn    ]   // [446]
     TRY[ edi _ mod _ mir _ onn ][ __________________________ ]   // [446]
