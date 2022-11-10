@@ -1,0 +1,22 @@
+
+
+            let latspan =( d_te7_lat[ i_te7 ] );
+            let hotspan =( latspan * 5        );
+            let h3x =F_M_F( i_gtx / hotspan   );
+            let h3y =F_M_F( i_gty / hotspan   );
+
+
+    CALL FROM "SYMRADI_ISO" function :
+
+            //:#_LOCALIZE_GTX_GTY_#:[449]:---------------://     // [450]
+                                                                 // [450]
+                let obj_gtc =( d_mirmaid_gtc );                  // [450]
+                let obj_ltc =( d_mirmaid_ltc );                  // [450]
+                                                                 // [450]
+                    obj_gtc.m_gtx =( i_gtx );                    // [450]
+                    obj_gtc.m_gty =( i_gty );                    // [450]
+                                                                 // [450]
+                F_TILEBOI_INN_OBJ_GTC_OUT_OBJ_LTC(               // [450]
+                              obj_gtc  ,  obj_ltc );;            // [450]
+                                                                 // [450]
+            //:---------------:#_LOCALIZE_GTX_GTY_#:[449]://     // [450]
