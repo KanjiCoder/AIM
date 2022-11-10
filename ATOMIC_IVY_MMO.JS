@@ -21709,15 +21709,15 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 d_len_ltc=(4);
 
                 d_arr_ltx[ 1 ]=( m_i - d_arr_lty[ 0 ] );
-                d_arr_ltx[ 1 ]=(       d_arr_ltx[ 0 ] );
+                d_arr_lty[ 1 ]=(       d_arr_ltx[ 0 ] );
                 d_arr_u32[ 1 ]=ROT_C_W(d_arr_u32[ 0 ] );
 
                 d_arr_ltx[ 2 ]=( m_i - d_arr_lty[ 1 ] );
-                d_arr_ltx[ 2 ]=(       d_arr_ltx[ 1 ] );
+                d_arr_lty[ 2 ]=(       d_arr_ltx[ 1 ] );
                 d_arr_u32[ 2 ]=ROT_C_W(d_arr_u32[ 1 ] );
 
                 d_arr_ltx[ 3 ]=( m_i - d_arr_lty[ 2 ] );
-                d_arr_ltx[ 3 ]=(       d_arr_ltx[ 2 ] );
+                d_arr_lty[ 3 ]=(       d_arr_ltx[ 2 ] );
                 d_arr_u32[ 3 ]=ROT_C_W(d_arr_u32[ 2 ] );
 
             }else
