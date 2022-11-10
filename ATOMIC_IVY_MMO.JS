@@ -21696,8 +21696,9 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
 
                 let ROT_C_W = ( F_MIRMAID_AM6_U32_ROT_C_W );
     
-                let lat =( d_te7_lat[ i_te7 ] );
-                let m_i =(       lat-1        );
+                let lat  =( d_te7_lat[ i_te7 ]   );
+                let m_i  =(       lat-1          );
+                let xyd_d=((i_xyd >>> 0 )&( 0x1 ));
 
                 d_arr_ltx[ 0 ]=( obj_ltc.m_ltx );
                 d_arr_lty[ 0 ]=( obj_ltc.m_lty );
