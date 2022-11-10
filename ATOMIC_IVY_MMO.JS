@@ -21692,70 +21692,72 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 F_TILEBOI_INN_OBJ_GTC_OUT_OBJ_LTC(               // [450]
                               obj_gtc  ,  obj_ltc );;            // [450]
                                                                  // [450]
-            //:-----------:#_GET_LOCAL_COORD_RADI_#:[450]://     // [450]
-            //:#_RAD_COMMON_#:[454]:---------------------://
-
-                let ROT_C_W = ( F_MIRMAID_AM6_U32_ROT_C_W );
-    
-                let lat  =( d_te7_lat[ i_te7 ]   );
-                let m_i  =(       lat-1          );
-                let xyd_d=((i_xyd >>> 0 )&( 0x1 ));
-
-                d_arr_ltx[ 0 ]=( obj_ltc.m_ltx );
-                d_arr_lty[ 0 ]=( obj_ltc.m_lty );
-                d_arr_u32[ 0 ]=( i_u32 );
-            //:---------------------:#_RAD_COMMON_#:[454]://
-            //:#_LOAD_TILE_BUFFERS_:#[454]:--------------://
-            if( 0 === xyd_d || (1==1/**TEMP**/) ){
-                
-                d_len_ltc=(4);
-
-                d_arr_ltx[ 1 ]=( m_i - d_arr_lty[ 0 ] );
-                d_arr_lty[ 1 ]=(       d_arr_ltx[ 0 ] );
-                d_arr_u32[ 1 ]=ROT_C_W(d_arr_u32[ 0 ] );
-
-                d_arr_ltx[ 2 ]=( m_i - d_arr_lty[ 1 ] );
-                d_arr_lty[ 2 ]=(       d_arr_ltx[ 1 ] );
-                d_arr_u32[ 2 ]=ROT_C_W(d_arr_u32[ 1 ] );
-
-                d_arr_ltx[ 3 ]=( m_i - d_arr_lty[ 2 ] );
-                d_arr_lty[ 3 ]=(       d_arr_ltx[ 2 ] );
-                d_arr_u32[ 3 ]=ROT_C_W(d_arr_u32[ 2 ] );
-
-            }else
-            if( 1 === xyd_d ){
-
-                /** [TODO:DENSE_ISOLATED_RADIAL] **/
-            }else{
-                ERR("[WTF:2022_11_10]");
-            };;
-            //:--------------:#_LOAD_TILE_BUFFERS_:#[454]://
-    
-                m_i=( d_len_ltc - 1 );   //:@_R_P_V_@://
-            let l_i ; //: @l_i@ : Local_Index :::::::://
-            let gtx ; //: @gtx@ : Global_Tile_X :::::://
-            let gty ; //: @gty@ : GLobal_Tile_Y :::::://
-            let u32_bintile ; //: BINARY_TILE_VALUE :://
-            for(l_i = 0 ; l_i <=( m_i ) ; l_i ++ ){
-
-                obj_ltc.m_ltx=( d_arr_ltx[ l_i ] );
-                obj_ltc.m_lty=( d_arr_lty[ l_i ] );
-                u32_bintile  =( d_arr_u32[ l_i ] );
-
-                F_TILEBOI_INN_OBJ_LTC_OUT_OBJ_GTC(   
-                              obj_ltc  ,  obj_gtc );;
-
-                gtx=( obj_gtc.m_gtx );
-                gty=( obj_gtc.m_gty );
-                
-                F_TILEBOI_EDI_PUT_U32(                      
-                                                             
-                    i_te7 , i_la3
-                ,     gtx ,   gty
-                ,     u32_bintile 
-                );;                                         
-            };; 
-                                                                 // [448]
+            //:-----------:#_GET_LOCAL_COORD_RADI_#:[450]://     // [---]
+            //:#_RAD_COMMON_#:[454]:---------------------://     // [454]
+                                                                 // [454]
+                let ROT_C_W = ( F_MIRMAID_AM6_U32_ROT_C_W );     // [454]
+                                                                 // [454]
+                let lat  =( d_te7_lat[ i_te7 ]   );              // [454]
+                let m_i  =(       lat-1          );              // [454]
+                let xyd_d=((i_xyd >>> 0 )&( 0x1 ));              // [454]
+                                                                 // [454]
+                d_arr_ltx[ 0 ]=( obj_ltc.m_ltx );                // [454]
+                d_arr_lty[ 0 ]=( obj_ltc.m_lty );                // [454]
+                d_arr_u32[ 0 ]=( i_u32 );                        // [454]
+            //:---------------------:#_RAD_COMMON_#:[454]://     // [454]
+            //:#_LOAD_TILE_BUFFERS_:#[454]:--------------://     // [454]
+            if( 0 === xyd_d || (1==1/**TEMP**/) ){               // [454]
+                                                                 // [454]
+                d_len_ltc=(4);                                   // [454]
+                                                                 // [454]
+                d_arr_ltx[ 1 ]=( m_i - d_arr_lty[ 0 ] );         // [454]
+                d_arr_lty[ 1 ]=(       d_arr_ltx[ 0 ] );         // [454]
+                d_arr_u32[ 1 ]=ROT_C_W(d_arr_u32[ 0 ] );         // [454]
+                                                                 // [454]
+                d_arr_ltx[ 2 ]=( m_i - d_arr_lty[ 1 ] );         // [454]
+                d_arr_lty[ 2 ]=(       d_arr_ltx[ 1 ] );         // [454]
+                d_arr_u32[ 2 ]=ROT_C_W(d_arr_u32[ 1 ] );         // [454]
+                                                                 // [454]
+                d_arr_ltx[ 3 ]=( m_i - d_arr_lty[ 2 ] );         // [454]
+                d_arr_lty[ 3 ]=(       d_arr_ltx[ 2 ] );         // [454]
+                d_arr_u32[ 3 ]=ROT_C_W(d_arr_u32[ 2 ] );         // [454]
+                                                                 // [454]
+            }else                                                // [454]
+            if( 1 === xyd_d ){                                   // [454]
+                                                                 // [454]
+                /** [TODO:DENSE_ISOLATED_RADIAL] **/             // [454]
+            }else{                                               // [454]
+                ERR("[WTF:2022_11_10]");                         // [454]
+            };;                                                  // [454]
+            //:--------------:#_LOAD_TILE_BUFFERS_:#[454]://     // [454]
+            //:#_UNLOAD_TILE_BUFFERS_:[454]:-------------://     // [454]
+                                                                 // [454]
+                    m_i=( d_len_ltc - 1 );   //:@_R_P_V_@://     // [454]
+                let l_i ; //: @l_i@ : Local_Index :::::::://     // [454]
+                let gtx ; //: @gtx@ : Global_Tile_X :::::://     // [454]
+                let gty ; //: @gty@ : GLobal_Tile_Y :::::://     // [454]
+                let u32_bintile ; //: BINARY_TILE_VALUE :://     // [454]
+                for(l_i = 0 ; l_i <=( m_i ) ; l_i ++ ){          // [454]
+                                                                 // [454]
+                    obj_ltc.m_ltx=( d_arr_ltx[ l_i ] );          // [454]
+                    obj_ltc.m_lty=( d_arr_lty[ l_i ] );          // [454]
+                    u32_bintile  =( d_arr_u32[ l_i ] );          // [454]
+                                                                 // [454]
+                    F_TILEBOI_INN_OBJ_LTC_OUT_OBJ_GTC(           // [454]
+                                  obj_ltc  ,  obj_gtc );;        // [454]
+                                                                 // [454]
+                    gtx=( obj_gtc.m_gtx );                       // [454]
+                    gty=( obj_gtc.m_gty );                       // [454]
+                                                                 // [454]
+                    F_TILEBOI_EDI_PUT_U32(                       // [454]
+                                                                 // [454]
+                        i_te7 , i_la3                            // [454]
+                    ,     gtx ,   gty                            // [454]
+                    ,     u32_bintile                            // [454]
+                    );;                                          // [454]
+                };;                                              // [454]
+            //:-------------:#_UNLOAD_TILE_BUFFERS_:[454]://     // [454]
+                                                                 // [---]
         };; //:BOD_END[ SYMBILA_ISO ]:::::::::::::::::::[448]:// // [448]
         //////////////////////////////////////////////////////// // [448]
                                                                  // [448]
@@ -51889,6 +51891,11 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         tile buffer. Though the number of entries             |  // [454]
         we will out will be __MORE__ if we are in             |  // [454]
         "DENSE" mode.                                         |  // [454]
+    :---------------------------------------------------------+  // [454]
+    #_UNLOAD_TILE_BUFFERS_# :---------------------------------+  // [454]
+                                                              |  // [454]
+        Unload and plot the tiles that were previously        |  // [454]
+        loaded into the tile buffer.                          |  // [454]
     :---------------------------------------------------------+  // [454]
 
 *** ******************************************************** **/         
