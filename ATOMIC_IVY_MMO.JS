@@ -21694,14 +21694,18 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [450]
             //:-----------:#_GET_LOCAL_COORD_RADI_#:[450]://     // [450]
 
-            let ROT_C_W = ( F_MIRMAID_AM6_U32_ROT_C_W 
+                let ROT_C_W = ( F_MIRMAID_AM6_U32_ROT_C_W );
     
-            let lat =( d_te7_lat[ i_te7 ] );
-            let m_i =(       lat-1        );
+                let lat =( d_te7_lat[ i_te7 ] );
+                let m_i =(       lat-1        );
 
                 d_arr_ltx[ 0 ]=( obj_ltc.m_ltx );
                 d_arr_lty[ 0 ]=( obj_ltc.m_lty );
                 d_arr_u32[ 0 ]=( i_u32 );
+
+            if( 0 === xyd_d || (1==1/**TEMP**/) ){
+                
+                d_len_ltc=(4);
 
                 d_arr_ltx[ 1 ]=( m_i - d_arr_lty[ 0 ] );
                 d_arr_ltx[ 1 ]=(       d_arr_ltx[ 0 ] );
@@ -21713,19 +21717,41 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
 
                 d_arr_ltx[ 3 ]=( m_i - d_arr_lty[ 2 ] );
                 d_arr_ltx[ 3 ]=(       d_arr_ltx[ 2 ] );
-                d_arr_u32[ 4 ]=ROT_C_W(d_arr_u32[ 2 ] );
+                d_arr_u32[ 3 ]=ROT_C_W(d_arr_u32[ 2 ] );
 
+            }else
+            if( 1 === xyd_d ){
+
+                /** [TODO:DENSE_ISOLATED_RADIAL] **/
+            }else{
+                ERR("[WTF:2022_11_10]");
+            };;
             
-            let m_i=( d_len_ltc - 1 ); //:@_R_P_V_@://
-            let l_i ; //: @l_i@ : Local_Index :::::://
+    
+            let m_i=( d_len_ltc - 1 );   //:@_R_P_V_@://
+            let l_i ; //: @l_i@ : Local_Index :::::::://
+            let gtx ; //: @gtx@ : Global_Tile_X :::::://
+            let gty ; //: @gty@ : GLobal_Tile_Y :::::://
+            let u32_bintile ; //: BINARY_TILE_VALUE :://
             for(l_i = 0 ; l_i <=( m_i ) ; l_i ++ ){
 
-              F_TILEBOI_INN_OBJ_LTC_OUT_OBJ_GTC(   
-                            obj_ltc  ,  obj_gtc );;
+                obj_ltc.m_ltx=( d_arr_ltx[ l_i ] );
+                obj_ltc.m_lty=( d_arr_lty[ l_i ] );
+                u32_bintile  =( d_arr_u32[ l_i ] );
 
+                F_TILEBOI_INN_OBJ_LTC_OUT_OBJ_GTC(   
+                              obj_ltc  ,  obj_gtc );;
+
+                gtx=( obj_gtc.m_gtx );
+                gty=( obj_gtc.m_gty );
+                
+                F_TILEBOI_EDI_PUT_U32(                      
+                                                             
+                    i_te7 , i_la3
+                ,     gtx ,   gty
+                ,     u32_bintile 
+                );;                                         
             };; 
-
-            LOG( "[TO_FUCKING_DO:SYMRADI_ISO]" );                // [454][448]
                                                                  // [448]
         };; //:BOD_END[ SYMBILA_ISO ]:::::::::::::::::::[448]:// // [448]
         //////////////////////////////////////////////////////// // [448]
