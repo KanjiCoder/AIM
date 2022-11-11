@@ -28924,6 +28924,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [457] : Isolated radial brush can now perform  ::::::::::::  // [458][457]
           : "Light" and "Dense" radial mirroring.  ::::::::::::  // [458][457]
 
+    [458] : Basic X/Y Isolated Mirroring code. ::::::::::::::::  // [459][458]
+          : NON-DENSE mode only.               ::::::::::::::::  // [459][458]
+
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
 *** *************************************** MISC_DELTA_NOTES **/
@@ -52460,8 +52463,6 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         [V]                     [ ]                     [V]   |  // [459]
                                 [ ]                           |  // [459]
         ( )[ ][ ][ ]( )[ ][ ][ ]( )[ ][ ][ ]( )[ ][ ][ ]( )   |  // [459]
-                                                              |  // [459]
-                                                              |  // [459]
                                 [ ]                           |  // [459]
         [V]                     [ ]                     [V]   |  // [459]
         [ ]                     [ ]                     [ ]   |  // [459]
@@ -52504,8 +52505,10 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [458] : Basic X/Y Isolated Mirroring code. ::::::::::::::::  // [458]
-          : NON-DENSE mode only.               ::::::::::::::::  // [458]
+    [459] : When mirror brush is in isolated mode and the :::::  // [459]
+          : dense bit is set, the brush will have prongs  :::::  // [459]
+          : added to it that face the horizontal and      :::::  // [459]
+          : vertical midlines.                            :::::  // [459]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
