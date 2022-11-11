@@ -21804,8 +21804,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 let lin_jot;  //:@lin_jot@:LIN.MID_JOTLOW://
                 let lin_zen;  //:@lin_zen@:LIN.MID_ZENITH://
 
-                lin_jot=(F_M_F( m_i / 2 )-1);
-                lin_zen=(F_M_F( m_i / 2 )+0);
+                lin_jot=(F_M_F( lat / 2 )-1);
+                lin_zen=(F_M_F( lat / 2 )+0);
                 
                 lin_m_i=(lin);
                 let  _l_=( 0 ); //:LIGHT_PLOT_POINTS://
