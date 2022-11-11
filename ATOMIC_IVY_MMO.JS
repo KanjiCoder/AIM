@@ -21816,14 +21816,14 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     lin_u32=(d_arr_u32[_l_]);
     
                     //:#_XDM_VECTORS_#:[459]:------------://
-                    if( lin_ltx < (lin_jot-1) ){
+                    if( lin_ltx < (lin_jot-2) ){
         
                         d_len_ltc++;;;lin++;;;;;;;;;;;;;;
                             d_arr_ltx[lin]=( lin_ltx+2 );
                             d_arr_lty[lin]=( lin_lty+0 );
                             d_arr_u32[lin]=( lin_u32   );
                     }else
-                    if( lin_ltx > (lin_zen+1) ){
+                    if( lin_ltx > (lin_zen+2) ){
 
                         d_len_ltc++;;;lin++;;;;;;;;;;;;;;
                             d_arr_ltx[lin]=( lin_ltx-2 );
@@ -21834,14 +21834,14 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     };;
                     //:------------:#_XDM_VECTORS_#:[459]://
                     //:#_YDM_VECTORS_#:[459]:------------://
-                    if( lin_lty < (lin_jot-1) ){
+                    if( lin_lty < (lin_jot-2) ){
         
                         d_len_ltc++;;;lin++;;;;;;;;;;;;;;
                             d_arr_ltx[lin]=( lin_ltx+0 );
                             d_arr_lty[lin]=( lin_lty+2 );
                             d_arr_u32[lin]=( lin_u32   );
                     }else
-                    if( lin_lty > (lin_zen+1) ){
+                    if( lin_lty > (lin_zen+2) ){
 
                         d_len_ltc++;;;lin++;;;;;;;;;;;;;;
                             d_arr_ltx[lin]=( lin_ltx-0 );
