@@ -21460,6 +21460,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                                                                  // [455]
                 i_u32                                            // [455]
             ,   i_dir                                            // [455]
+                                                                 // [455]
             ){  //:BOD_BEG[ AM6_U32_ROT_DIR ]:::::::::::::::::// // [455]
                                                                  // [455]
                 if( d_eci >=1 ){                                 // [455]
@@ -28724,6 +28725,10 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : tile coordinates. We need this for sanity  ::::::::  // [454][453]
           : of mind before we continue with our        ::::::::  // [454][453]
           : localized tile brush code.                 ::::::::  // [454][453]
+
+    [454] : Basic Isolated Radial Code Function is working. :::  // [455][454]
+          : Full logic of isolated-radial code is not       :::  // [455][454]
+          : yet finished.                                   :::  // [455][454]
 
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
@@ -51981,9 +51986,19 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [454] : Basic Isolated Radial Code Function is working. :::  // [454]
-          : Full logic of isolated-radial code is not       :::  // [454]
-          : yet finished.                                   :::  // [454]
+    [455] :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [455]
+          1. Stubbed in shell/container function for       ::::  // [455]
+             generic u32 binary tile rotation helper       ::::  // [455]
+             function. [ F_MIRMAID _ AM6 _ U32 _ ROT_DIR ] ::::  // [455]
+                                                           ::::  // [455]
+          2. Finished Counter Clockwise Tile Rotation Func.::::  // [455]
+             [ F_MIRMAID _ AM6 _ U32 _ ROT_CCW ]           ::::  // [455]
+                                                           ::::  // [455]
+          NEXT : Cut the body out of:                      ::::  // [455]
+               : [ F_MIRMAID _ AM6 _ U32 _ ROT_C_W ]       ::::  // [455]
+               : and paste it into our[ ROT_DIR ]          ::::  // [455]
+               : helper function.                          ::::  // [455]
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [455]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
