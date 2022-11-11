@@ -28747,6 +28747,20 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
           : Full logic of isolated-radial code is not       :::  // [455][454]
           : yet finished.                                   :::  // [455][454]
 
+    [455] :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [456][455]
+          1. Stubbed in shell/container function for       ::::  // [456][455]
+             generic u32 binary tile rotation helper       ::::  // [456][455]
+             function. [ F_MIRMAID _ AM6 _ U32 _ ROT_DIR ] ::::  // [456][455]
+                                                           ::::  // [456][455]
+          2. Finished Counter Clockwise Tile Rotation Func.::::  // [456][455]
+             [ F_MIRMAID _ AM6 _ U32 _ ROT_CCW ]           ::::  // [456][455]
+                                                           ::::  // [456][455]
+          NEXT : Cut the body out of:                      ::::  // [456][455]
+               : [ F_MIRMAID _ AM6 _ U32 _ ROT_C_W ]       ::::  // [456][455]
+               : and paste it into our[ ROT_DIR ]          ::::  // [456][455]
+               : helper function.                          ::::  // [456][455]
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [456][455]
+
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -52093,19 +52107,9 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [455] :::::::::::::::::::::::::::::::::::::::::::::::::::::  // [455]
-          1. Stubbed in shell/container function for       ::::  // [455]
-             generic u32 binary tile rotation helper       ::::  // [455]
-             function. [ F_MIRMAID _ AM6 _ U32 _ ROT_DIR ] ::::  // [455]
-                                                           ::::  // [455]
-          2. Finished Counter Clockwise Tile Rotation Func.::::  // [455]
-             [ F_MIRMAID _ AM6 _ U32 _ ROT_CCW ]           ::::  // [455]
-                                                           ::::  // [455]
-          NEXT : Cut the body out of:                      ::::  // [455]
-               : [ F_MIRMAID _ AM6 _ U32 _ ROT_C_W ]       ::::  // [455]
-               : and paste it into our[ ROT_DIR ]          ::::  // [455]
-               : helper function.                          ::::  // [455]
-    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [455]
+    [456] : Rotation Counter-Clock-Wise(CCW) ::::::::::::::::::  // [456]
+          : is finished. AKA: ANTI-CLOCKWISE ::::::::::::::::::  // [456]
+          : ( The helper function is done )  ::::::::::::::::::  // [456]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
