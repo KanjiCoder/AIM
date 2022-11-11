@@ -21819,14 +21819,14 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                     if( lin_ltx < (lin_jot-1) ){
         
                         d_len_ltc++;;;lin++;;;;;;;;;;;;;;
-                            d_arr_ltx[lin]=( lin_ltx+1 );
+                            d_arr_ltx[lin]=( lin_ltx+2 );
                             d_arr_lty[lin]=( lin_lty+0 );
                             d_arr_u32[lin]=( lin_u32   );
                     }else
                     if( lin_ltx > (lin_zen+1) ){
 
                         d_len_ltc++;;;lin++;;;;;;;;;;;;;;
-                            d_arr_ltx[lin]=( lin_ltx-1 );
+                            d_arr_ltx[lin]=( lin_ltx-2 );
                             d_arr_lty[lin]=( lin_lty-0 );
                             d_arr_u32[lin]=( lin_u32   );
                     }else{
@@ -21838,14 +21838,14 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         
                         d_len_ltc++;;;lin++;;;;;;;;;;;;;;
                             d_arr_ltx[lin]=( lin_ltx+0 );
-                            d_arr_lty[lin]=( lin_lty+1 );
+                            d_arr_lty[lin]=( lin_lty+2 );
                             d_arr_u32[lin]=( lin_u32   );
                     }else
                     if( lin_lty > (lin_zen+1) ){
 
                         d_len_ltc++;;;lin++;;;;;;;;;;;;;;
                             d_arr_ltx[lin]=( lin_ltx-0 );
-                            d_arr_lty[lin]=( lin_lty-1 );
+                            d_arr_lty[lin]=( lin_lty-2 );
                             d_arr_u32[lin]=( lin_u32   );
                     }else{
                         /** On Midline, Skip **/
