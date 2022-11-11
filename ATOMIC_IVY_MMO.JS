@@ -28773,6 +28773,9 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
                : helper function.                          ::::  // [456][455]
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  // [456][455]
 
+    [456] : Rotation Counter-Clock-Wise(CCW) ::::::::::::::::::  // [457][456]
+          : is finished. AKA: ANTI-CLOCKWISE ::::::::::::::::::  // [457][456]
+          : ( The helper function is done )  ::::::::::::::::::  // [457][456]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -52167,9 +52170,8 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [456] : Rotation Counter-Clock-Wise(CCW) ::::::::::::::::::  // [456]
-          : is finished. AKA: ANTI-CLOCKWISE ::::::::::::::::::  // [456]
-          : ( The helper function is done )  ::::::::::::::::::  // [456]
+    [457] : Isolated radial brush can now perform  ::::::::::::  // [457]
+          : "Light" and "Dense" radial mirroring.  ::::::::::::  // [457]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
