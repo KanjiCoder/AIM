@@ -13852,7 +13852,7 @@ if( /** __EDIGAME__ **/ notnode ){                               // [102]
                                                                  // [---][---]
     ,   edi_mod_mir_onn : ( 1 )  //: Mirror Mode ON? ::::://     // [---][422]
     ,   edi_mod_mir_am6 : ( 1 )  //: Mirror_AutoMethodBit://     // [---][428] 
-    ,   edi_mod_mir_xyd : ( 1 )  //: #_MIR_XYD_SETTINGS_#://     // [447][446][442][435][427][425]
+    ,   edi_mod_mir_xyd : ( 7 )  //: #_MIR_XYD_SETTINGS_#://     // [459][447][446][442][435][427][425]
     ,   edi_mod_mir_iso : ( 1 )  //: #_MIR_ISOLATION_#   ://     // [448][---]
                                                                  // [---][422]
         //:--------------------:#_MIRRORING_BRUSH_#:[422]://     // [---][422]
@@ -21793,69 +21793,68 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
                 d_arr_lty[lin]=( m_i - d_arr_lty[0]     );       // [458]
                 d_arr_u32[lin]=( MIR(  d_arr_u32[0],0,1));       // [458]
             };;                                                  // [458]
-            //:----------------:#_NON_DENSE_AXISY_#:[458]://     // [458]
-            //:#_DENSE_MODE_VECTORS_#:[459]:-------------://
-            if( 1 === xyd_d ){
-
-                let lin_m_i;  //:@lin_m_i@:LIN.Max__Index://
-                let lin_ltx;  //:@lin_ltx@:LIN.LocalTileX://
-                let lin_lty;  //:@lin_lty@:LIN.LocalTileY://
-                let lin_u32;  //:@lin_u32@:LIN.U32BinTile://
-                let lin_jot;  //:@lin_jot@:LIN.MID_JOTLOW://
-                let lin_zen;  //:@lin_zen@:LIN.MID_ZENITH://
-
-                lin_jot=(F_M_F( lat / 2 )-1);
-                lin_zen=(F_M_F( lat / 2 )+0);
-                
-                lin_m_i=(lin);
-                let  _l_=( 0 ); //:LIGHT_PLOT_POINTS://
-                for( _l_ = 0 ; _l_ <= lin_m_i ; _l_ ++ ){
-
-                    lin_ltx=(d_arr_ltx[_l_]);
-                    lin_lty=(d_arr_lty[_l_]);
-                    lin_u32=(d_arr_u32[_l_]);
-    
-                    //:#_XDM_VECTORS_#:[459]:------------://
-                    if( lin_ltx < (lin_jot-2) ){
-        
-                        d_len_ltc++;;;lin++;;;;;;;;;;;;;;
-                            d_arr_ltx[lin]=( lin_ltx+2 );
-                            d_arr_lty[lin]=( lin_lty+0 );
-                            d_arr_u32[lin]=( lin_u32   );
-                    }else
-                    if( lin_ltx > (lin_zen+2) ){
-
-                        d_len_ltc++;;;lin++;;;;;;;;;;;;;;
-                            d_arr_ltx[lin]=( lin_ltx-2 );
-                            d_arr_lty[lin]=( lin_lty-0 );
-                            d_arr_u32[lin]=( lin_u32   );
-                    }else{
-                        /** On Midline, Skip **/
-                    };;
-                    //:------------:#_XDM_VECTORS_#:[459]://
-                    //:#_YDM_VECTORS_#:[459]:------------://
-                    if( lin_lty < (lin_jot-2) ){
-        
-                        d_len_ltc++;;;lin++;;;;;;;;;;;;;;
-                            d_arr_ltx[lin]=( lin_ltx+0 );
-                            d_arr_lty[lin]=( lin_lty+2 );
-                            d_arr_u32[lin]=( lin_u32   );
-                    }else
-                    if( lin_lty > (lin_zen+2) ){
-
-                        d_len_ltc++;;;lin++;;;;;;;;;;;;;;
-                            d_arr_ltx[lin]=( lin_ltx-0 );
-                            d_arr_lty[lin]=( lin_lty-2 );
-                            d_arr_u32[lin]=( lin_u32   );
-                    }else{
-                        /** On Midline, Skip **/
-                    };;
-                    //:------------:#_YDM_VECTORS_#:[459]://
-    
-                };;
-            };;
-            //:-------------:#_DENSE_MODE_VECTORS_#:[459]://
-            //:#_UNLOAD_BILMIR_BUFF_#:[458]:-------------://     // [458]
+            //:----------------:#_NON_DENSE_AXISY_#:[458]://     // [---]
+            //:#_DENSE_MODE_VECTORS_#:[459]:-------------://     // [459]
+            if( 1 === xyd_d ){                                   // [459]
+                                                                 // [459]
+                let lin_m_i;  //:@lin_m_i@:LIN.Max__Index://     // [459]
+                let lin_ltx;  //:@lin_ltx@:LIN.LocalTileX://     // [459]
+                let lin_lty;  //:@lin_lty@:LIN.LocalTileY://     // [459]
+                let lin_u32;  //:@lin_u32@:LIN.U32BinTile://     // [459]
+                let lin_jot;  //:@lin_jot@:LIN.MID_JOTLOW://     // [459]
+                let lin_zen;  //:@lin_zen@:LIN.MID_ZENITH://     // [459]
+                                                                 // [459]
+                lin_jot=(F_M_F( lat / 2 )-1);                    // [459]
+                lin_zen=(F_M_F( lat / 2 )+0);                    // [459]
+                                                                 // [459]
+                lin_m_i=(lin);                                   // [459]
+                let  _l_=( 0 ); //:LIGHT_PLOT_POINTS://          // [459]
+                for( _l_ = 0 ; _l_ <= lin_m_i ; _l_ ++ ){        // [459]
+                                                                 // [459]
+                    lin_ltx=(d_arr_ltx[_l_]);                    // [459]
+                    lin_lty=(d_arr_lty[_l_]);                    // [459]
+                    lin_u32=(d_arr_u32[_l_]);                    // [459]
+                                                                 // [459]
+                    //:#_XDM_VECTORS_#:[459]:------------://     // [459]
+                    if( lin_ltx < (lin_jot-2) ){                 // [459]
+                                                                 // [459]
+                        d_len_ltc++;;;lin++;;;;;;;;;;;;;;        // [459]
+                            d_arr_ltx[lin]=( lin_ltx+2 );        // [459]
+                            d_arr_lty[lin]=( lin_lty+0 );        // [459]
+                            d_arr_u32[lin]=( lin_u32   );        // [459]
+                    }else                                        // [459]
+                    if( lin_ltx > (lin_zen+2) ){                 // [459]
+                                                                 // [459]
+                        d_len_ltc++;;;lin++;;;;;;;;;;;;;;        // [459]
+                            d_arr_ltx[lin]=( lin_ltx-2 );        // [459]
+                            d_arr_lty[lin]=( lin_lty-0 );        // [459]
+                            d_arr_u32[lin]=( lin_u32   );        // [459]
+                    }else{                                       // [459]
+                        /** On Midline, Skip **/                 // [459]
+                    };;                                          // [459]
+                    //:------------:#_XDM_VECTORS_#:[459]://     // [459]
+                    //:#_YDM_VECTORS_#:[459]:------------://     // [459]
+                    if( lin_lty < (lin_jot-2) ){                 // [459]
+                                                                 // [459]
+                        d_len_ltc++;;;lin++;;;;;;;;;;;;;;        // [459]
+                            d_arr_ltx[lin]=( lin_ltx+0 );        // [459]
+                            d_arr_lty[lin]=( lin_lty+2 );        // [459]
+                            d_arr_u32[lin]=( lin_u32   );        // [459]
+                    }else                                        // [459]
+                    if( lin_lty > (lin_zen+2) ){                 // [459]
+                                                                 // [459]
+                        d_len_ltc++;;;lin++;;;;;;;;;;;;;;        // [459]
+                            d_arr_ltx[lin]=( lin_ltx-0 );        // [459]
+                            d_arr_lty[lin]=( lin_lty-2 );        // [459]
+                            d_arr_u32[lin]=( lin_u32   );        // [459]
+                    }else{                                       // [459]
+                        /** On Midline, Skip **/                 // [459]
+                    };;                                          // [459]
+                    //:------------:#_YDM_VECTORS_#:[459]://     // [459]
+                };;                                              // [459]
+            };;                                                  // [459]
+            //:-------------:#_DENSE_MODE_VECTORS_#:[459]://     // [459]
+            //:#_UNLOAD_BILMIR_BUFF_#:[458]:-------------://     // [---]
                                                                  // [458]
                 let gtx ; //: @gtx@ : Global_Tile_X ://          // [458]
                 let gty ; //: @gty@ : Global_Tile_Y ://          // [458]
