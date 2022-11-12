@@ -1,0 +1,57 @@
+                //:#_MIR_GET_#:[462]:--------------------://
+                {
+                    const mg0_dir ="[USE:dir_mg0]";
+                    const bg1_dir ="[USE:dir_bg1]";
+                    const fg2_dir ="[USE:dir_fg2]";
+
+                    const mg_m = c_bingeom_mg0_bit_ro4
+                    const bg_m = c_bingeom_bg1_bit_ro4
+                    const fg_m = c_bingeom_fg2_bit_ro4
+
+                    let mir_mg0=( o_u & mg_m )>>>( mg_s );
+                    let mir_bg1=( o_u & bg_m )>>>( bg_s );
+                    let mir_fg2=( o_u & fg_m )>>>( fg_s );
+
+                    //:#_INVERT_ROT_MG0_#:---------------://
+                    if( 1 ===((mir_mg0 >>> 0)&(0x1))){
+
+                        dir_mg0 =( 0 - dir_mg0 );
+                    };;
+                    if( 1 ===((mir_mg0 >>> 1)&(0x1))){
+
+                        dir_mg0 =( 0 - dir_mg0 );
+                    };;
+                    //:---------------:#_INVERT_ROT_MG0_#://    
+                    //:#_INVERT_ROT_BG1_#:---------------://
+                    if( 1 ===((mir_bg1 >>> 0)&(0x1))){
+
+                        dir_bg1 =( 0 - dir_bg1 );
+                    };;
+                    if( 1 ===((mir_bg1 >>> 1)&(0x1))){
+
+                        dir_bg1 =( 0 - dir_bg1 );
+                    };;
+                    //:---------------:#_INVERT_ROT_BG1_#://    
+                    //:#_INVERT_ROT_FG2_#:---------------://
+                    if( 1 ===((mir_fg2 >>> 0)&(0x1))){
+
+                        dir_fg2 =( 0 - dir_fg2 );
+                    };;
+                    if( 1 ===((mir_fg2 >>> 1)&(0x1))){
+
+                        dir_fg2 =( 0 - dir_fg2 );
+                    };;
+                    //:---------------:#_INVERT_ROT_FG2_#://    
+
+
+                }
+                //:--------------------:#_MIR_GET_#:[462]://
+
+
+    #_MIR_GET_# :---------------------------------------------+
+                                                              |
+        State of the mirroring codes affects rotation.        |
+        If we are flipped only on the X or only on the        |
+        Y, we need to rotate in the OPPOSITE direction        |
+        to visually rotate in the desired direction.          |
+    :---------------------------------------------------------+
