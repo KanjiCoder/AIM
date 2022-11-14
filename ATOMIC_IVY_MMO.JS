@@ -24140,6 +24140,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         i_evt_key                                                // [104]
     ){                                                           // [104]
         //:#_DOWN_HANDLER_WHEN_BEHAVING_AS_AN_EDITOR_#://        // [104]
+
+        i_evt_key.preventDefault(); //:#_SO_7893972_#://         // [468]
                                                                  
         var asc_key = F_KEYMAST_EVT_ASC( i_evt_key );            // [104] 
         let a_k     =( asc_key /** Key Down **/ );               // [104] 
