@@ -24141,7 +24141,7 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
     ){                                                           // [104]
         //:#_DOWN_HANDLER_WHEN_BEHAVING_AS_AN_EDITOR_#://        // [104]
 
-        i_evt_key.preventDefault(); //:#_SO_7893972_#://         // [468]
+        //:#_NOTHERE_#[ i_evt_key.preventDefault(); ]:://        // [468]
                                                                  
         var asc_key = F_KEYMAST_EVT_ASC( i_evt_key );            // [104] 
         let a_k     =( asc_key /** Key Down **/ );               // [104] 
@@ -53881,6 +53881,13 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
                                                               |  // [468]
         https://stackoverflow.com/questions/7893972           |  // [468]
                                                               |  // [468]
+    :---------------------------------------------------------+  // [468]
+    #_NOTHERE_# :---------------------------------------------+  // [468]
+                                                              |  // [468]
+        Using "PreventDefault" ( prevent default )here        |  // [468]
+        will cause the game to not startup correctly.         |  // [468]
+        Also, it blocks "F12" for debugger which is           |  // [468]
+        not ideal.                                            |  // [468]
     :---------------------------------------------------------+  // [468]
 
 *** ******************************************************** **/         
