@@ -53896,6 +53896,15 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
 /** ******************************************************** ***     
 
     [468] : Toggle isolated mirroring mode on/off. ::::::::::::  // [468]
+          :                                              ::::::  // [468]
+          : NOTE : We should start making a list of      ::::::  // [468]
+          :      : popular twitch streamers who play     ::::::  // [468]
+          :      : indie games.                          ::::::  // [468]
+          :      : EX[ https://www.twitch.tv/sodapoppin ]::::::  // [468]
+          : www.twitch.tv/directory/game/Enter%20the%20Gungeon   // [468]
+          : @WTF@:"Swap chain surface creation failed"   ::::::  // [468]
+          :      : Why is webgl so crappy? I swear I am  ::::::  // [468]
+          :      : not getting that fancy.               ::::::  // [468]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
