@@ -15195,6 +15195,13 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
             elmodom.href=(  save2048_pngdurl  );                 // [466]
             elmodom.click() ; //:#_CLKSPAWN_#://                 // [466]
                                                                  // [---]
+        //:#_WHEN_REVOKE_2022_#:-------------------------://     // [467]
+                                                                 // [467]
+            window.URL.revokeObjectURL( save2048_pngdurl );      // [467]
+                                                                 // [467]
+        //:-------------------------:#_WHEN_REVOKE_2022_#://     // [467]
+                                                                 // [---]
+                                                                 // [---]
     };; //:BOD_END[ RUN ]:::::::::::::::::::::::::::::::[465]:// // [465]
                                                                  // [465]
     const   F_PIXDUMP_TIK = function //:::::::::::::::::[465]:// // [465]
@@ -29311,6 +29318,8 @@ TAG[ tag_section | tag-section | tag_section ]END -------------- // [088]
     [465] : Added konami key binding to allow for saving ::::::  // [466][465]
           : pix2048 to user hard disk via pixdump.run()  ::::::  // [466][465]
           : function.                                    ::::::  // [466][465]
+
+    [466] : Save File Dialog Open For Pix2048 Saving. :::::::::  // [467][466]
 
 *** *************************************** CHANGE_LOG [CLB] ***    [088]
 *** *************************************** CHANGE_HISTORY _ ***    [088]
@@ -53804,12 +53813,34 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
         Or maybe it is technically a "download file dialog"?  |  // [466]
     :---------------------------------------------------------+  // [466]
 
+    #_WHEN_REVOKE_2022_# :------------------------------------+  // [467]
+                                                              |  // [467]
+        @WHY_I_HATE_JAVASCRIPT@                               |  // [467]
+        @HATE_JAVASCRIPT@                                     |  // [467]
+                                                              |  // [467]
+        Sometimes, javascript does really stupid              |  // [467]
+        fucking stuff.                                        |  // [467]
+                                                              |  // [467]
+        Apparently in 2022, year of our lord, there           |  // [467]
+        is no simple non-hackish way to set a callback        |  // [467]
+        for when a URL is done downloading.                   |  // [467]
+                                                              |  // [467]
+        I also cannot find much documentation of              |  // [467]
+        "revoke object url" ( revokeObjectURL ).              |  // [467]
+                                                              |  // [467]
+        Like... If I can't get a callback working for         |  // [467]
+        download, how the fuck am I supposed to be            |  // [467]
+        able to call "revokeObjectURL" when I am done         |  // [467]
+        with the URL?                                         |  // [467]
+    :---------------------------------------------------------+  // [467]
+        
+
 *** ******************************************************** **/         
 //:==========================:HASHTAG_OR_ATTED_COMMENTS:[085]://         
 //:THIS_COMMITS_DELTA_NOTE:[085]:============================://         
 /** ******************************************************** ***     
 
-    [466] : Save File Dialog Open For Pix2048 Saving. :::::::::  // [466]
+    [467] : Revoke the object url created in previous video. ::  // [467]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
