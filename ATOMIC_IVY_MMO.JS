@@ -5337,7 +5337,7 @@ UPNG.encode.dither = function(sb, w, h, plte, tb, oind) {
         ,   i_cur  //: Value To Skip ::::::::::::::::://         // [470]
                                                                  // [470]
         ){  //:BOD_BEG[ RI_SV_MMC ]::::::::::::::::::://         // [470]
-            if( d_bug >= 1 ){                                    // [470]
+            if( d_eci >= 1 ){                                    // [470]
                 ASS( i_min <= i_max ,"[MAX_MIN_2022]");          // [470]
                 ASS( i_min >= 0     ,"[MIN_GT0_2022]");          // [470]
                 ASS( i_max >= 0     ,"[MAX_GT0_2022]");          // [470]
@@ -54080,6 +54080,8 @@ ROW_BOT | B____L | B____M | B____R |                          |  // [403]
           : GETTING TO THEM ANY TIME SOON BECAUSE         :::::  // [470]
           : NEXT VIDEO IS PART OF A "MAIN QUEST SERIES":  :::::  // [470]
           : NEXT: Video #4_7_1 : FILE896 System Stubbing. :::::  // [470]
+          : MADE_A_THING[ https://imgur.com/a/b9QdjJS ]::::::::  // [470]
+          : MADE_A_THING[ https://imgur.com/a/HxirPaB ]::::::::  // [470]
 
 *** ******************************************************** **/
 //:============================:THIS_COMMITS_DELTA_NOTE:[085]://
