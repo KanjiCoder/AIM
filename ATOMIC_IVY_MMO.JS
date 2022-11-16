@@ -16453,30 +16453,11 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;     // [---][471] 
                                                                  // [---][471] 
 
-    const   F_FILE896_HI9_L16_LOADME = function
-    PRIVATE_F_FILE896_HI9_L16_LOADME(
 
-        i_hi9
-    ,   i_l16
-    ){
-        ERR("[TODO:F_FILE896_HI9_L16_LOADME]");
-    };;
-    const   F_FILE896_HI9_PF8_LOADME = function
-    PRIVATE_F_FILE896_HI9_PF8_LOADME(
 
-        i_hi9
-    ,   i_pf8
-    ){
-        ERR("[TODO:F_FILE896_HI9_PF8_LOADME]");
-    };;
-    const   F_FILE896_HI9_T25_LOADME = function
-    PRIVATE_F_FILE896_HI9_T25_LOADME(
+    //: COMMING_IN_VIDEO_4_7_4_MAYBE ####################://     // [473]
 
-        i_hi9
-    ,   i_t25
-    ){
-        ERR("[TODO:F_FILE896_HI9_T25_LOADME]");
-    };;
+
 
     const   F_FILE896_RGBA896_PIX2048_H3X_H3Y = function         // [473][471] 
     PRIVATE_F_FILE896_RGBA896_PIX2048_H3X_H3Y(                   // [473][471] 
@@ -16490,48 +16471,8 @@ if( /** __CLIGAME__ **/ notnode ){                               // [102][085]
         ASS( i_rgba896 === d_rgba896 ,"[2022_11_15:254PM]");     // [---][471]
         ASS( i_pix2048 === d_pix2048 ,"[2022_11_15:255PM]");     // [---][471]
 
-        const c7i = "[USE:c49]" ;
-       
-        let  c49 ; //: @c49@ : Generic Chunk Index ://
-        for( c49 = 0 ; c49 <=(49-1) ; c49++ ){
+        //: ALSO_MAYBE_COMMING_IN_VIDEO_4_7_4_MAYBE #####://     // [473]
 
-            //: @c49type@ : USE[ c7t ]:::::::::::::::::::://
-
-            //: WE NEED VIDEO 473 TO BE LOOKUP TABLES ONLY
-            //: before we move onto the code. Because
-            //: I already see way too much code 
-            //: proliferation going on here.
-
-            c7t = d_c49_c7t[ c49 ];     < < < < < < < < < < < < < < MAKE_THE_LOOKUP_TABLES FIRST
-            c7x = d_c49_c7x[ c49 ];     < < < < < < < < < < < < < < MAKE_THE_LOOKUP_TABLES FIRST
-            c7y = d_c49_c7y[ c49 ];     < < < < < < < < < < < < < < MAKE_THE_LOOKUP_TABLES FIRST
-            
-
-            if( c_c7t_l16 === c7t ){ < < < < < < < < < < < < < < < MAKE_THE: C7T TYPES FIRST
-
-                l16 = d_c49_l16[ c49 ];
-
-                F_FILE896_HI9_L16_LOADME(
-                          hi9,l16       );;
-            }else
-            if( c_c7t_pf8 === c7t ){ < < < < < < < < < < < < < < < MAKE_THE: C7T TYPES FIRST
-
-                pf8 = d_c49_pf8[ c49 ];
-
-                F_FILE896_HI9_PF8_LOADME(
-                          hi9,pf8        );;
-            }else
-            if( c_c7t_t25 === c7t ){ < < < < < < < < < < < < < < < MAKE_THE: C7T TYPES FIRST
-
-                t25 = d_c49_t25[ c49 ];
-
-                F_FILE896_HI9_T25_LOADME(
-                          hi9,t25        );;
-            }else{
-                ERR("[INVALID_CHUNK_TYPE_2022]");
-            };;
-
-        };;
     };;                                                          // [---][471]
                                                                  // [---][471]
     const   F_FILE896_PIX2048_RGBA896_H3X_H3Y = function         // [473][471] 
