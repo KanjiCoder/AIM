@@ -1,0 +1,10 @@
+
+
+
+        let  c7x ; //: @c7x@ : X-Axis Component of[ c49 ]://    
+        let  c7y ; //: @c7y@ : Y-Axis Component of[ c49 ]://
+
+            c7x     = d_c49_c7x[     c49 ];    
+            c7y     = d_c49_c7y[     c49 ];    
+
+
