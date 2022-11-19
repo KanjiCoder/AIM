@@ -1,0 +1,35 @@
+           
+    Code goes into function[ F_FILE896_HI9_L16_EITHER ]
+
+            let h3x ;//: @h3x@ : [Hotel/LevelPack][0|1|2]://        
+            let h3y ;//: @h3y@ : [Hotel/LevelPack][0|1|2]://  
+      
+            h3x =(     ( i_hi9 % 3 ) );
+            h3y =(F_M_F( i_hi9 / 3 ) );
+
+            if( d_bug >= 1 ){
+
+                ASS( h3x >= 0 && h3y <=(3-1) ,
+                   "[h3x____0____h3y____3_1:L16_EITHER]" );;    
+                ASS( h3y >= 0 && h3y <=(3-1) ,
+                   "[h3y____0____h3y____3_1:L16_EITHER]" );;
+            };;
+
+            let c49 = d_l16_c49[ i_l16 ];
+
+            //:#_CELL_LOCATION_ON_RGBA896_#:-------------://
+            //:#_7X7_OVER_896X896_SAVFILE_#:-------------://
+
+                let c7x = d_c49_c7x[ c49 ];
+                let c7y = d_c49_c7y[ c49 ];
+
+            //:-------------:#_7X7_OVER_896X896_SAVFILE_#://
+            //:-------------:#_CELL_LOCATION_ON_RGBA896_#://    
+            //:#_CELL_LOCATION_ON_PIX2048_#:-------------://
+            //:#_4X4_OVER_512X512_MEMCELL_#:-------------://
+
+                let c4x = d_c49_c4x[ c49 ];
+                let c4y = d_c49_c4y[ c49 ];
+
+            //:#_4X4_OVER_512X512_MEMCELL_
+            //:-------------:#_CELL_LOCATION_ON_PIX2048_#://
