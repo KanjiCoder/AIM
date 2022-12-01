@@ -1,0 +1,111 @@
+            
+    BODY OF : F_FILE896_SLOWCOP_GPU_DSK
+
+            //:#_CREATE_32BIT_PIXEL_#:[496]:-------------://
+                                                     
+                let ggg=(( 0x00  //: @ggg@ : GPU's pixel ://
+                |   ( gpu[ i_g_c + 0 ] << 24 )
+                |   ( gpu[ i_g_c + 1 ] << 16 )
+                |   ( gpu[ i_g_c + 2 ] <<  8 )
+                |   ( gpu[ i_g_c + 3 ] <<  0 )
+                )>>>0);;
+                let ddd=(( 0x00  //: @ddd@ : DSK's pixel ://
+                |   ( dsk[ i_d_c + 0 ] << 24 )
+                |   ( dsk[ i_d_c + 1 ] << 16 )
+                |   ( dsk[ i_d_c + 2 ] <<  8 )
+                |   ( dsk[ i_d_c + 3 ] <<  0 )
+                )>>>0);;
+
+                let b32=( 0x00 );  /**Bits, 32, for later**/
+
+            //:-------------:#_CREATE_32BIT_PIXEL_#:[496]://
+            //:#_COMPLIMENTING_MASKS_#:[496]:------------://
+
+                let gpu_kee =( F_FILE896_GPU_KEEMASK( 
+                               i_gpu_nb0 , i_gpu_nb1 ));
+
+                let dsk_del =( F_FILE896_DSK_DELMASK(  
+                               i_dsk_nb0 , i_dsk_nb1 ));
+
+                //: ................. 3 ....5........... ://
+                //: g_nbo : [_][_][_][#][#][#][_][_][_]  ://
+                //: d_nbo : [_][_][_][_][_][_][#][#][#]  ://
+                //:........................... 6 ....8.. ://
+                //:                                      ://
+                //: g_nbo : [0][0][0][1][1][1][0][0][0]  ://
+                //: d_nbo : [1][1][1][1][1][1][0][0][0]  ://
+
+            //:------------:#_COMPLIMENTING_MASKS_#:[496]://
+            //:#_CREATE_COMPOSITE_PIXEL_#:[496]:---------://
+
+                //:TAG[ $_COMPOSITE_PIXEL_$ ]::::::::::::://
+
+                let shi =( i_dsk_nb1 - i_gpu_nb1 ); 
+                if( d_bug >=1 ){
+                let shi_chk =( i_dsk_nb0 - i_gpu_nb0 );
+                ASS(shi_chk === shi , "[SHI:GPU_DSK]");;
+                };;
+                if( shi >= 0 ){
+
+                    ggg =( ( ggg & gpu_kee )>>>( 0+shi ) );;
+                    ddd =( ( ddd & dsk_del )>>>(   0   ) );;
+                }else{
+                    ggg =( ( ggg & gpu_kee ) <<( 0-shi ) );;
+                    ddd =( ( ddd & dsk_del )>>>(   0   ) );;
+                };;
+                b32 =(( ddd | ggg )>>>0);;
+
+            //:---------:#_CREATE_COMPOSITE_PIXEL_#:[496]://
+            //:#_LOAD_COMPOSITE_PIXEL_#:[496]:-----------://
+
+                dsk[ i_d_c + 0 ]=(( b32 >>> 24 )&(0x00));
+                dsk[ i_d_c + 1 ]=(( b32 >>> 16 )&(0x00));
+                dsk[ i_d_c + 2 ]=(( b32 >>>  8 )&(0x00));
+                dsk[ i_d_c + 3 ]=(( b32 >>>  0 )&(0x00));
+
+            //:-----------:#_LOAD_COMPOSITE_PIXEL_#:[496]://
+
+
+
+
+    #_CREATE_32BIT_PIXEL_# :----------------------------------+
+                                                              |
+        Create 32bit pixel from our 4-byte pixel.             |
+        OpenGL likes pixels to be stored in RGBA byte         |
+        format, but it will be easier to work with if         |
+        all 4-bytes are smashed into a single UINT32          |
+        for our bit manipulations.                            |
+                                                              |
+    :---------------------------------------------------------+
+    #_COMPLIMENTING_MASKS_# :---------------------------------+
+                                                              |
+        These masks tell us what bits we want to keep         |
+        when we use a bitwise "and" with them.                |
+                                                              |
+        The "KEEP_MASK" keeps bit bits specified by           |
+        the [nb0 - nb1] bit selection.                        |
+                                                              |
+        The "DELETE_MASK" keeps the bits ___NOT__specified___ |
+        by  [nb0 - nb1] bit selection.                        |
+                                                              |
+    :---------------------------------------------------------+
+    $_COMPOSITE_PIXEL_$ :-------------------------------------+
+                                                              |
+        Composite pixel is created when we combine the        |
+        two original pixels. Splicing them together.          |
+        Keeping some bits from one, some bits from the        |
+        other.                                                |
+                                                              |
+    :---------------------------------------------------------+
+    #_CREATE_COMPOSITE_PIXEL_# :------------------------------+
+                                                              |
+        Smash bits together from both pixels to create        |
+        our composite binary (32bit) pixel.                   |
+                                                              |
+    :---------------------------------------------------------+
+    #_LOAD_COMPOSITE_PIXEL_# :--------------------------------+
+                                                              |
+        Unpack bytes of our binary (32bit) pixel into         |
+        the RGBA bytes of our in-memory bitmap.               |
+                                                              |
+    :---------------------------------------------------------+
