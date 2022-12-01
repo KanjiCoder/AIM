@@ -1,7 +1,7 @@
             
     BODY OF : F_FILE896_SLOWCOP_GPU_DSK
 
-            //:#_CREATE_32BIT_PIXEL_#:[496]:-------------://
+            //:#_CREATE_32BIT_PIXEL_#:[499]:-------------://
                                                      
                 let ggg=(( 0x00  //: @ggg@ : GPU's pixel ://
                 |   ( gpu[ i_g_c + 0 ] << 24 )
@@ -18,8 +18,8 @@
 
                 let b32=( 0x00 );  /**Bits, 32, for later**/
 
-            //:-------------:#_CREATE_32BIT_PIXEL_#:[496]://
-            //:#_COMPLIMENTING_MASKS_#:[496]:------------://
+            //:-------------:#_CREATE_32BIT_PIXEL_#:[499]://
+            //:#_COMPLIMENTING_MASKS_#:[499]:------------://
 
                 let gpu_kee =( F_FILE896_GPU_KEEMASK( 
                                i_gpu_nb0 , i_gpu_nb1 ));
@@ -35,8 +35,8 @@
                 //: g_nbo : [0][0][0][1][1][1][0][0][0]  ://
                 //: d_nbo : [1][1][1][1][1][1][0][0][0]  ://
 
-            //:------------:#_COMPLIMENTING_MASKS_#:[496]://
-            //:#_CREATE_COMPOSITE_PIXEL_#:[496]:---------://
+            //:------------:#_COMPLIMENTING_MASKS_#:[499]://
+            //:#_CREATE_COMPOSITE_PIXEL_#:[499]:---------://
 
                 //:TAG[ $_COMPOSITE_PIXEL_$ ]::::::::::::://
 
@@ -55,15 +55,15 @@
                 };;
                 b32 =(( ddd | ggg )>>>0);;
 
-            //:---------:#_CREATE_COMPOSITE_PIXEL_#:[496]://
-            //:#_LOAD_COMPOSITE_PIXEL_#:[496]:-----------://
+            //:---------:#_CREATE_COMPOSITE_PIXEL_#:[499]://
+            //:#_LOAD_COMPOSITE_PIXEL_#:[499]:-----------://
 
                 dsk[ i_d_c + 0 ]=(( b32 >>> 24 )&(0x00));
                 dsk[ i_d_c + 1 ]=(( b32 >>> 16 )&(0x00));
                 dsk[ i_d_c + 2 ]=(( b32 >>>  8 )&(0x00));
                 dsk[ i_d_c + 3 ]=(( b32 >>>  0 )&(0x00));
 
-            //:-----------:#_LOAD_COMPOSITE_PIXEL_#:[496]://
+            //:-----------:#_LOAD_COMPOSITE_PIXEL_#:[499]://
 
 
 
