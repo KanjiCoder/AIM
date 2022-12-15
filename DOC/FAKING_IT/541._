@@ -65,13 +65,10 @@
                         //:---:#_DEBUGOLITION_MAN_#:[541]://
                         //:#_FILL_ME_UP_#:[541]:---------://
 
-                            
-
                             dsk_pix[ gpc + 0 ]=( rfc_red );
                             dsk_pix[ gpc + 1 ]=( rfc_gre );
                             dsk_pix[ gpc + 2 ]=( rfc_blu );
                             dsk_pix[ gpc + 3 ]=( rfc_alp );
-
 
                         //:---------:#_FILL_ME_UP_#:[541]://
 
