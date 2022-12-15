@@ -1,0 +1,166 @@
+            //:#_USE_FINAL_FILL_COLOR_HERE_#:[541]:------://
+            if( 0
+            ||  0 === hit   //: Hit Exactly ZERO TILES ::://
+            ||  1 === hit   //: Hit One Layer's Tiles  ::://
+            ||  2 === hit   //: Hit Two Layer's Tiles  ::://
+            ||  3 === hit   //: Hit (3) Layer's Tiles  ::://
+            ){
+                //:#_OUT_WITH_THE_OLD_BOSS_#:[541]:------://
+                //:#_INN_WITH_THE_NEW_BOSS_#:[541]:------://
+
+                    let  dsk_pix ; //: Disk_Pixels_Array ://
+
+                    let  lpx ; //: @lpx@ : Local_Pixel_X ://
+                    let  lpy ; //: @lpx@ : Local_Pixel_Y ://
+                    
+                    let  gpx ; //: @gpx@ :@GLOBA_PIXEL_X@://
+                    let  gpy ; //: @gpy@ :@GLOBA_PIXEL_Y@://
+                    let  gpi ; //: @gpi@ :@GLOBA_PIXEL_I@://
+                    let  gpc ; //: @gpc@ :@GLOBA_PIXEL_C@://
+                    
+                    let  t_x_2 ; //: @t_x_2@ : t_x * 2   ://
+                    let  t_y_2 ; //: @t_y_2@ : t_y * 2   ://
+                    
+                    let  dco_x ; //: Disk_Clust_Origin_X ://
+                    let  dco_y ; //: Disk_Clust_Origin_Y ://
+
+                //:------:#_OUT_WITH_THE_OLD_BOSS_#:[541]://
+                //:------:#_INN_WITH_THE_NEW_BOSS_#:[541]://
+                //:#_2X2_CLUSTORG_#:[541]:---------------://
+
+                    dsk_pix =( d_rgba896 );
+
+                    t_x_2 =( t_x * 2 );
+                    t_y_2 =( t_y * 2 );
+
+                    dco_x =( dsk_x_0 + t_x_2 );
+                    dco_y =( dsk_y_0 + t_y_2 );
+
+                    if( d_bug >= 1 ){
+
+                        R_C( 0 , t_x_2 , (128-1-1) );
+                        R_C( 0 , t_y_2 , (128-1-1) );
+                    };;
+                    
+                //:---------------:#_2X2_CLUSTORG_#:[541]://
+                //:#_LOOP_LPX_#:[541]:-------------------://
+                //:#_LOOP_LPY_#:[541]:-------------------://
+                    for( lpy =(0) ; lpy <=(1) ; lpy ++ ){
+                    for( lpx =(0) ; lpx <=(1) ; lpx ++ ){
+
+                        //:#_GET_GPC_#:[541]:------------://
+
+                            gpx =( dco_x + lpx         );
+                            gpy =( dco_y + lpy         );
+                            gpi =( gpx + ( gpy * 896 ) );
+                            gpc =( gpi * 4             );
+
+                        //:------------:#_GET_GPC_#:[541]://
+                        //:#_DEBUGOLITION_MAN_#:[541]:---://
+                        if( d_bug >=1 ){
+
+                            R_C( dsk_x_0 , gpx , dsk_x_1 );
+                            R_C( dsk_y_0 , gpy , dsk_y_1 );
+                        };;
+                        //:---:#_DEBUGOLITION_MAN_#:[541]://
+                        //:#_FILL_ME_UP_#:[541]:---------://
+
+                            
+
+                            dsk_pix[ gpc + 0 ]=( rfc_red );
+                            dsk_pix[ gpc + 1 ]=( rfc_gre );
+                            dsk_pix[ gpc + 2 ]=( rfc_blu );
+                            dsk_pix[ gpc + 3 ]=( rfc_alp );
+
+
+                        //:---------:#_FILL_ME_UP_#:[541]://
+
+                    };;};;
+                //:-------------------:#_LOOP_LPX_#:[541]://
+                //:-------------------:#_LOOP_LPY_#:[541]://
+            }else{
+                ERR("[Always_Fill_Even_If:EMP_AIR_SPC]");
+            };;
+            //:------:#_USE_FINAL_FILL_COLOR_HERE_#:[541]://
+
+
+
+
+    #_USE_FINAL_FILL_COLOR_HERE_# :---------------------------+  // [541]
+                                                              |  // [541]
+        There is a 2X2 cluster of pixels that represent       |  // [541]
+        ONE pebble-sized tile on our thumbnail.               |  // [541]
+        Color that 2X2 cluster here.                          |  // [541]
+                                                              |  // [541]
+    :---------------------------------------------------------+  // [541]
+    @EMP_AIR_SPC@ : Empty_Air_Space , the pebble-size         |  // [541]
+                  : ray tile at[ rpx,rpy ]did not collide     |  // [541]
+                  : with any tiles, so we consider this       |  // [541]
+                  : area of the tilemap "empty air space"     |  // [541]
+                                                              |  // [541]
+    :---------------------------------------------------------+  // [541]
+    #_OUT_WITH_THE_OLD_BOSS_# :-------------------------------+  // [541]
+    #_INN_WITH_THE_NEW_BOSS_# :-------------------------------+  // [541]
+                                                              |  // [541]
+        It's a variable declaration section?                  |  // [541]
+        Can't you fucking tell?                               |  // [541]
+                                                              |  // [541]
+    :---------------------------------------------------------+  // [541]
+    #_2X2_CLUSTORG_# :----------------------------------------+  // [541]
+                                                              |  // [541]
+        Calculate origin of 2x2 cluster of pixels             |  // [541]
+        that we are about to rasterize before we              |  // [541]
+        enter out 2x2 [lpx,lpy] loop.                         |  // [541]
+                                                              |  // [541]
+                                                              |  // [541]
+        @_2X2_CLUSTORG_@ : 2 by 2 cluster origin.             |  // [541]
+                         : cluster as in a cluster            |  // [541]
+                         : of pixels.                         |  // [541]
+                                                              |  // [541]
+    :---------------------------------------------------------+  // [541]
+    #_LOOP_LPX_# :--------------------------------------------+  // [541]
+    #_LOOP_LPY_# :--------------------------------------------+  // [541]
+                                                              |  // [541]
+        A doubly nest loop that goes over the 2_X_2           |  // [541]
+        grid of [ lpx , lpy ] coordinates is here.            |  // [541]
+                ( [lpx,lpy] )                                 |  // [541]
+                                                              |  // [541]
+        We go no deeper than this. This is the moment         |  // [541]
+        that we finally set a rasterized pixel onto           |  // [541]
+        our mother fucking save file data canvas.             |  // [541]
+        ( save file data canvas ===[ d _ rgba896 ] )          |  // [541]
+                                                              |  // [541]
+                                                              |  // [541]
+        #_GET_GPC_# :--------------------------------------+  |  // [541]
+                                                           |  |  // [541]
+            @_GET_GPC_@ : Get GlobalPixelComponent         |  |  // [541]
+                                                           |  |  // [541]
+            We need the address of the first byte          |  |  // [541]
+            of the pixel we are interested in.             |  |  // [541]
+                                                           |  |  // [541]
+            STEP 1 : Calculate XY global position of       |  |  // [541]
+                     the pixel.                            |  |  // [541]
+                                                           |  |  // [541]
+            STEP 2 : Convert XY global 2D position         |  |  // [541]
+                   : to a global 1D position.              |  |  // [541]
+                                                           |  |  // [541]
+            STEP 3 : Multiply by 4 to convert from         |  |  // [541]
+                   : a "pixel index" to a                  |  |  // [541]
+                   : "component index".                    |  |  // [541]
+                                                           |  |  // [541]
+        :--------------------------------------------------+  |  // [541]
+        #_DEBUGOLITION_MAN_# :-----------------------------+  |  // [541]
+                                                           |  |  // [541]
+            I am making a pun of "Demolition Man".         |  |  // [541]
+            But seriously. Do some debug stuff here.       |  |  // [541]
+                                                           |  |  // [541]
+            en.wikipedia.org/wiki/Demolition_Man_(film)    |  |  // [541]
+        :--------------------------------------------------+  |  // [541]
+        #_FILL_ME_UP_# :-----------------------------------+  |  // [541]
+                                                           |  |  // [541]
+            Add the RGBA color to the pixel on             |  |  // [541]
+            our disk memory. AKA[ d _ rgba 896 ]           |  |  // [541]
+                                                           |  |  // [541]
+        :--------------------------------------------------+  |  // [541]
+                                                              |  // [541]
+    :---------------------------------------------------------+  // [541]
