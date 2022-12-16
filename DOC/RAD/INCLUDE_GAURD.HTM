@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta charset="UTF-8"><title> 
+
+        INLINE_SCRIPT_RIG_2022
+
+</title></head><body><script> //////////////////////////////////
+
+
+    if( window.x ){ console.log("WTF"); };
+
+    var x = 1; //: ONLY WORKS WITH "VAR" not "LET".
+
+    if( window.x ){ console.log("YES"); };
+
+
+
+    console.log(x);
+    // expected output: 1
+
+
+////////////////////////////////////////////////////////////////
+</script></body></html> <!-- /////////////////////////////// -->
