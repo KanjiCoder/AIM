@@ -1,0 +1,135 @@
+        //:#_PUT_001_OF_009_#:[580]:---------------------://
+
+        let rec_dpx =( 0 /** Re-Calc Data Pixel X **/ );;;;;
+        let rec_dpy =( 0 /** Re-Calc Data Pixel X **/ );;;;;
+
+        //:---------------------:#_PUT_001_OF_009_#:[580]://
+        //:#_PUT_002_OF_009_#:[580]:---------------------://
+
+            if( i_h3x != d_conways_put_h3x ){
+                         d_conways_put_h3x=( i_h3x );
+                rec_dpx =( 1 );
+            
+            };;
+            if( i_h3y != d_conways_put_h3y ){
+                         d_conways_put_h3y=( i_h3y );
+                rec_dpy =( 1 );
+            };;
+
+        //:---------------------:#_PUT_002_OF_009_#:[580]://
+        //:#_PUT_003_OF_009_#:[580]:---------------------://
+
+            if( i_r13 != d_conways_put_r13 ){
+                         d_conways_put_r13=(    i_r13 );
+                         
+                d_conways_put_r4x =( d_r13_r4x[ i_r13 ] );
+                d_conways_put_r4y =( d_r13_r4y[ i_r13 ] );
+
+                rec_dpx =( 1 );
+                rec_dpy =( 1 );
+            };;
+        //:---------------------:#_PUT_003_OF_009_#:[580]://
+        //:#_PUT_004_OF_009_#:[580]:---------------------://
+
+            if( i_te7 != d_conways_put_te7 ){
+                         d_conways_put_te7 =(   i_te7 );
+
+                d_conways_put_lat =( d_te7_lat[ i_te7 ] );
+                d_conways_put_dia =( d_te7_dia[ i_te7 ] );
+
+                rec_dpx =( 1 );
+                rec_dpy =( 1 );
+            };;
+        //:---------------------:#_PUT_004_OF_009_#:[580]://
+        //:#_PUT_005_OF_009_#:[580]:---------------------://
+
+        if( i_la3 != d_conways_put_la3 ){
+                     d_conways_put_la3 =(   i_la3   );
+
+            d_conways_put_lmx =( d_la3_lmx[ i_la3 ] );
+            d_conways_put_lmy =( d_la3_lmx[ i_la3 ] );
+    
+            rec_dpx =( 1 );
+            rec_dpy =( 1 );
+        };;
+
+        //:---------------------:#_PUT_005_OF_009_#:[580]://
+        //:#_PUT_006_OF_009_#:[580]:---------------------://
+
+            if( i_rlx != d_conways_put_rlx ){
+                         d_conways_put_rlx =(   i_rlx   );
+
+                rec_dpx=( 1 );
+            };;
+            if( i_rly != d_conways_put_rly ){
+                         d_conways_put_rly =(   i_rly   );
+
+                rec_dpy=( 1 );
+            };;
+
+        //:---------------------:#_PUT_006_OF_009_#:[580]://
+        //:#_PUT_007_OF_009_#:[580]:---------------------://
+        if( rec_dpx >= 1 ){
+
+            d_conways_put_dpx=( 0
+            +   (d_conways_put_h3x*512)
+            +   (d_conways_put_r4x*128)
+            +   (d_conways_put_dia    )
+            +   (d_conways_put_lat*d_conways_put_lmx)
+            +   (d_conways_put_rlx    )
+            );;
+        };;
+        if( rec_dpy >= 1 ){
+
+            d_conways_put_dpy=( 0
+            +   (d_conways_put_h3y*512)
+            +   (d_conways_put_r4y*128)
+            +   (d_conways_put_dia    )
+            +   (d_conways_put_lat*d_conways_put_lmy)
+            +   (d_conways_put_rly    )
+            );;
+        };;
+        //:---------------------:#_PUT_007_OF_009_#:[580]://
+        //:#_PUT_008_OF_009_#:[580]:---------------------://
+        if( rec_dpx || rec_dpy ){
+
+            d_conways_put_dpi =(
+                (d_conways_put_dpx + 0x00 )
+            +   (d_conways_put_dpy * 2048 )
+            );;
+            d_conways_put_dpc=(
+            d_conways_put_dpi * 4 );;
+        };;
+        //:---------------------:#_PUT_008_OF_009_#:[580]://
+        //:#_PUT_009_OF_009_#:[580]:---------------------://
+
+        let pix =( d_pix2048        );
+        let dpc =( d_conways_put_dpc );
+            pix[ dpc+0 ]=((( i_u32 >>> 24 )&(0xFF))>>>0 );;;
+            pix[ dpc+1 ]=((( i_u32 >>> 16 )&(0xFF))>>>0 );;;
+            pix[ dpc+2 ]=((( i_u32 >>>  8 )&(0xFF))>>>0 );;;
+            pix[ dpc+3 ]=((( i_u32 >>>  0 )&(0xFF))>>>0 );;;
+
+        //:---------------------:#_PUT_009_OF_009_#:[580]://
+
+
+    #_PUT_001_OF_009_# : Step 1 of 9 of optimized_conways_put
+    #_PUT_002_OF_009_# : Step 2 of 9 of optimized_conways_put
+    #_PUT_003_OF_009_# : Step 3 of 9 of optimized_conways_put
+    #_PUT_004_OF_009_# : Step 4 of 9 of optimized_conways_put
+    #_PUT_005_OF_009_# : Step 5 of 9 of optimized_conways_put
+    #_PUT_006_OF_009_# : Step 6 of 9 of optimized_conways_put
+    #_PUT_007_OF_009_# : Step 7 of 9 of optimized_conways_put
+    #_PUT_008_OF_009_# : Step 8 of 9 of optimized_conways_put
+    #_PUT_009_OF_009_# : Step 9 of 9 of optimized_conways_put
+
+
+    #_GET_001_OF_009_# : Step 1 of 9 of optimized_conways_get
+    #_GET_002_OF_009_# : Step 2 of 9 of optimized_conways_get
+    #_GET_003_OF_009_# : Step 3 of 9 of optimized_conways_get
+    #_GET_004_OF_009_# : Step 4 of 9 of optimized_conways_get
+    #_GET_005_OF_009_# : Step 5 of 9 of optimized_conways_get
+    #_GET_006_OF_009_# : Step 6 of 9 of optimized_conways_get
+    #_GET_007_OF_009_# : Step 7 of 9 of optimized_conways_get
+    #_GET_008_OF_009_# : Step 8 of 9 of optimized_conways_get
+    #_GET_009_OF_009_# : Step 9 of 9 of optimized_conways_get
