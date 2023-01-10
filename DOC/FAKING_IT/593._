@@ -1,0 +1,71 @@
+
+
+GLOBAL_CALCULATIONS :
+
+                    const F =( F_M_F );  //:FuncMathFloor://
+
+                    ERR("[@_UNTESTED_BRANCH_@:2023_01_10]");    
+
+                    twc_lat =( d_te7_lat[ te7 ] );;;;;;;;;;;  
+                    twc_lmx =( d_la3_lmx[ la3 ] );;;;;;;;;;;
+                    twc_lmy =( d_la3_lmy[ la3 ] );;;;;;;;;;;
+
+                        h3x =F( gtx / ( lat*5 ) );;;;;;;;;;;
+                        h3y =F( gty / ( lat*5 ) );;;;;;;;;;;
+
+                    twc_r5x =F(( gtx % (lat*5) )/(lat*1));;;
+                    twc_r5y =F(( gty % (lat*5) )/(lat*1));;;
+    
+                    twc_g25 =( twc_r5x +( twc_r5y * 5 ) );;;
+                        r13 =( d_g25_r13[ twc_g25 ]     );;;    
+
+                    twc_r4x =( d_r13_r4x[ r13 ] );;;;;;;;;;;
+                    twc_r4y =( d_r13_r4y[ r13 ] );;;;;;;;;;;
+
+                    if( d_bug >= 1 ){
+                        let c_x ; //: Check_X :::::::::::://   
+                        let c_y ; //: Check_Y :::::::::::://
+                        c_x =F( (gtx-(h3x*lat*5))/(lat*1) );
+                        c_y =F( (gty-(h3y*lat*5))/(lat*1) );
+                        ASS( c_x == twc_r5x , "[err_r5x]" );             
+                        ASS( c_y == twc_r5y , "[err_r5y]" );    
+                    };;
+
+                    twc_dpx =( 0
+                    +   (     h3x*    512 )
+                    +   ( twc_r4x*    128 )
+                    +   ( twc_dia         )
+                    +   ( twc_lat*twc_lmx )
+                    +   (             rlx )
+                    );;
+                    twc_dpy =( 0
+                    +   (     h3y*    512 )
+                    +   ( twc_r4y*    128 )
+                    +   ( twc_dia         )
+                    +   ( twc_lat*twc_lmy )
+                    +   (             rly )
+                    );;
+
+LOCAL_CALCULATIONS :
+
+                    twc_lat =( d_te7_lat[ te7 ] );;;  
+                    twc_lmx =( d_la3_lmx[ la3 ] );;;
+                    twc_lmy =( d_la3_lmy[ la3 ] );;;
+
+                    twc_r4x =( d_r13_r4x[ r13 ] );;;
+                    twc_r4y =( d_r13_r4y[ r13 ] );;;
+    
+                    twc_dpx =( 0 ///////////////////
+                    +   (     h3x*512     )     ////
+                    +   ( twc_r4x*128     )     ////
+                    +   ( twc_dia         )     ////
+                    +   ( twc_lat*twc_lmx )     ////
+                    +   (             rlx )     ////
+                    );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                    twc_dpy =( 0 ///////////////////
+                    +   (     h3y*512     )     ////
+                    +   ( twc_r4y*128     )     ////
+                    +   ( twc_dia         )     ////
+                    +   ( twc_lat*twc_lmy )     ////
+                    +   (             rly )     ////
+                    );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
