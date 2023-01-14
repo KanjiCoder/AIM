@@ -1,0 +1,166 @@
+
+
+
+    //:#_LOW_JOIN_HELPER_ARRAY_#:[610]:----------------------:// // [610]
+                                                                 // [610]
+        var d_lowjoin_arr =( new Uint32Array([                   // [610]
+                                                                 // [610]
+            0   //: RED   BYTE $_DHTB_HENCE_U32_NOT_U08_$://     // [610]
+        ,   0   //: GREEN BYTE $_DHTB_HENCE_U32_NOT_U08_$://     // [610]
+        ,   0   //: BLUE  BYTE $_DHTB_HENCE_U32_NOT_U08_$://     // [610]
+        ]));;                                                    // [610]
+    //:----------------------:#_LOW_JOIN_HELPER_ARRAY_#:[610]:// // [610]
+
+
+
+    const   F_FILE196_MAX_003 = function
+    PRIVATE_F_FILE196_MAX_003(
+
+        i_r08  //: @i_r08@ : Value #1 , probably red byte://    
+    ,   i_g08  //: @i_g08@ : Value #1 , probably red byte://    
+    ,   i_b08  //: @i_b08@ : Value #1 , probably red byte:// 
+    ){
+        if( d_eci >= 1 ){
+            ASS( i_r08 >= 0 , "[NO_NEGATIVES:i_r08]" );
+            ASS( i_g08 >= 0 , "[NO_NEGATIVES:i_g08]" );
+            ASS( i_b08 >= 0 , "[NO_NEGATIVES:i_b08]" );
+        };;
+
+        let o_max =( 0-(i_r08|i_g08|i_b08) );
+
+        if( o_max < i_r08 ){ o_max = i_r08 ; };
+        if( o_max < i_g08 ){ o_max = i_g08 ; };
+        if( o_max < i_b08 ){ o_max = i_b08 ; };
+
+        return( o_max );
+    };;
+    const   F_FILE196_LOWJOIN = function //:::::::::[610]://
+    PRIVATE_F_FILE196_LOWJOIN(           //:::::::::[610]://
+
+        i_r08  //: @i_r08@ : Value #1 , probably red byte://    
+    ,   i_g08  //: @i_g08@ : Value #1 , probably red byte://    
+    ,   i_b08  //: @i_b08@ : Value #1 , probably red byte:// 
+    ){
+        //:[ATF]:----------------------------------------://
+        //:                                              ://    
+        //:   "LOWJOIN" is just "MIN" function but...    ://    
+        //:   I visualized it in a way that made me      ://    
+        //:   think of it as something different...      ://    
+        //:                                              ://    
+        //:     +----------------------------------+     ://    
+        //:     |     +--+       LOWEST_TWO        |     ://    
+        //:     |     |  |                         |     ://    
+        //:     |     |  |       +--+              |     ://    
+        //:     |     |  |       |  |              |     ://    
+        //:     |- - -|  |- - - -|  | - +--+ - - - |     ://    
+        //:     |     |  |       |##|   |##|       |     ://    
+        //:     |     |  |       |##|   |##|       |     ://    
+        //:     |-----+--+-------+--+---+--+-------+     ://    
+        //:                                              ://    
+        //: The "Low Join" is the boolean intersection   ://    
+        //: between the two lowest amounts.              ://    
+        //:                                              ://    
+        //: Which... Is a really just a weird ass        ://    
+        //: way to say "The min of 3 values".            ://    
+        //:                                              ://    
+        //: "That's just the MIN function with"          ://    
+        //: "extra steps" - Rick Sanchez                 ://   
+        //:----------------------------------------:[ATF]://
+        
+        d_lowjoin_arr[ 0 ]=( i_r08 );
+        d_lowjoin_arr[ 1 ]=( i_g08 );
+        d_lowjoin_arr[ 2 ]=( i_b08 );
+
+        let did ; //: Did Swap? ://
+        let dex ;
+        let _0_ ;
+        let _1_ ;
+        while( 1 == 1 ){ /**BUBBLESORT**/ 
+
+            did=( 0 );
+            for( dex = 0 ; dex <=(3-1-1) ; dex++ ){
+
+                _0_=(   d_lowjoin_arr[dex+0]  );
+                _1_=(   d_lowjoin_arr[dex+1]  );
+                if( _0_ > _1_ ){
+                        d_lowjoin_arr[dex+0]=(_1_);
+                        d_lowjoin_arr[dex+1]=(_0_);
+                        did=( 1 /**DIDSWAP?**/ );
+                };;
+            };;
+            if( did <= 0 ){ break; };
+        };;
+
+        return( d_lowjoin_arr[ 0 ] );
+    };;
+
+
+        //:#_CALC_LUM_510_#:[610]:-----------------------://
+
+            const MAX_003 =( F_FILE196_MAX_003 );
+            const LOWJOIN =( F_FILE196_LOWJOIN );
+
+            let lum_510 =( 0 );
+            let lum_255 =MAX_003(r08,g08,b08);  //:Anchor://
+            let lum_add =LOWJOIN(r08,g08,b08);  //:More  ://
+        
+                lum_510 =( lum_256 + lum_add);
+
+        //:-----------------------:#_CALC_LUM_510_#:[610]://
+
+
+
+
+
+        #_CALC_LUM_510_# :------------------------------------+  // [610]
+                                                              |  // [610]
+        AKA[ _CALC_LUM_512_ ]                                 |  // [610]
+                                                              |  // [610]
+        The highest of all 3 color channels determines        |  // [610]
+        what I call the "anchor lumonosity.                   |  // [610]
+                                                              |  // [610]
+        It goes from 0 to 255. ( lum_255 )                    |  // [610]
+                                                              |  // [610]
+        To get any brighter, we need another                  |  // [610]
+        color channel.                                        |  // [610]
+                                                              |  // [610]
+        The DARKEST of the 3 color channels determines        |  // [610]
+        what I call the "extra add lumonosity".               |  // [610]
+                                                              |  // [610]
+        We add this amount to the anchor lumonosity           |  // [610]
+        to get the final "lum_512" value.                     |  // [610]
+                                                              |  // [610]
+        It is actuall between [ 0 to 510 ]inclusive           |  // [610]
+        because: 255 + 255 === 510 .                          |  // [610]
+                                                              |  // [610]
+        Maybe we should call it "lum_510" instead ?           |  // [610]
+                                                              |  // [610]
+    :----------------------------------------: #_CALC_LUM_510_#  // [610]
+    #_LOW_JOIN_HELPER_ARRAY_# :-------------------------------+  // [610]
+                                                              |  // [610]
+        Low-Join Helper Array.                                |  // [610]
+        "LOWJOIN" === Convoluted "Min Function".              |  // [610]
+        We can think of "min" as the boolean intersection     |  // [610]
+        of the two lowest values of R,G,B triplet.            |  // [610]
+                                                              |  // [610]
+        Which is how I think of it when trying to             |  // [610]
+        decypher lumonosity from RGB slider in MS-PAINT.      |  // [610]
+                                                              |  // [610]
+        I AM A FUCKING HACK!                                  |  // [610]
+                                                              |  // [610]
+        $_DHTB_HENCE_U32_NOT_U08_$ :----------------------+   |  // [610]
+                                                          |   |  // [610]
+            DHTB : Doesn't Have To Be                     |   |  // [610]
+                                                          |   |  // [610]
+            It doesn't have to be a byte inputted to      |   |  // [610]
+            this function, that is just the common        |   |  // [610]
+            use case I programmed it for.                 |   |  // [610]
+                                                          |   |  // [610]
+            So we are going to use a UINT32 instead       |   |  // [610]
+            of a UINT8 in case we end up using            |   |  // [610]
+            this function with values larger than         |   |  // [610]
+            255 in the future.                            |   |  // [610]
+                                                          |   |  // [610]
+        :-------------------------------------------------+   |  // [610]
+                                                              |  // [610]
+    :-------------------------------: #_LOW_JOIN_HELPER_ARRAY_#  // [610]
