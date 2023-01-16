@@ -1,0 +1,87 @@
+        
+
+    const   F_PUREHUE_R_G_B_LOWTWIN(
+
+        i_redd256 
+    ,   i_gree256
+    ,   i_blue256
+    
+    ){            
+                        
+        //:[ATF]:----------------------------------------://
+        //:
+        //:     The two lowest components
+
+        //:#_ECI_R_G_B_LOWTWIN_#:[615]:------------------://
+        if( d_eci >= 1 ){
+            ASS( i_redd256 <=(256-1) , "[LOWTWIN:P_RED]" );
+            ASS( i_gree256 <=(256-1) , "[LOWTWIN:P_GRE]" );
+            ASS( i_blue256 <=(256-1) , "[LOWTWIN:P_BLU]" );
+
+            ASS( i_redd256 >=( 0 -1) , "[LOWTWIN:N_RED]" );
+            ASS( i_gree256 >=( 0 -1) , "[LOWTWIN:N_GRE]" );
+            ASS( i_blue256 >=( 0 -1) , "[LOWTWIN:N_BLU]" );
+        };;
+        //:------------------:#_ECI_R_G_B_LOWTWIN_#:[615]://
+
+
+        This is going to require a bubble sort of
+        objects that tell us where our anchor points
+        are I think.
+
+        Or a non-object way where we do a tree/hash
+        sort of thing.
+        
+
+        return( o_lowtwin ); //:SEE[twoabin]://
+
+    };;
+
+
+
+
+    const   F_PUREHUE_R_G_B_LOWTWIN_LEAN255(
+
+        i_redd256 
+    ,   i_gree256
+    ,   i_blue256
+    
+    ){
+
+        //:[ATF]:----------------------------------------://
+        //:                                              ://
+        //:     Figure out which way the[ PUREHUE ]      ://
+        //:     is leaning from its PRIMARY COLOR        ://
+        //:     [ base / anchor ]value (R||G||G).        ://
+        //:                                              ://
+        //:     This amount may be negative.             ://
+        //:     This amount is __NOT__ a percentage.     ://
+        //:                                              ://
+        //:     As a color becomes DESATURATED....       ://
+        //:     As a color becomes DARK...........       ://
+        //:     As a color becomes LIGHT..........       ://
+        //:                                              ://
+        //:     The color converges on [ R || G || B ].  ://
+        //:                                              ://
+        //:     That is why there exist only 3           ://
+        //:     earthtone colors :                       ://
+        //:                                              ://
+        //:     1. WARM    ( Red   earthtone )           ://
+        //:     2. COOL    ( Blue  earthtone )           ://
+        //:     3. NEUTRAL ( Green earthtone )           ://
+        //:----------------------------------------:[ATF]://
+
+        //:  [__R__] ---> [__G__] ---> [__B__] ::::::::::://
+
+        if( i_redd256
+
+
+    };;
+
+
+
+let lean255 =( F_PUREHUE_R_G_B_LOWTWIN_LEAN255( 
+
+                                 r,g,b,lowtwin
+        );;
+                                                                 // [615]

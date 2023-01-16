@@ -1,0 +1,48 @@
+    
+    const   F_PUREHUE_RGB_TWOABIN = "[FIX:R_G_B_TWOABIN]" ;;
+
+    const   F_PUREHUE_R_G_B_TWOABIN(
+
+        i_redd256 
+    ,   i_gree256
+    ,   i_blue256
+    
+    ){
+
+        //:#_ECI_R_G_B_MINABIN_#:[615]:------------------://
+        if( d_eci >= 1 ){
+            ASS( i_redd256 <=(256-1) , "[MINABIN:P_RED]" );
+            ASS( i_gree256 <=(256-1) , "[MINABIN:P_GRE]" );
+            ASS( i_blue256 <=(256-1) , "[MINABIN:P_BLU]" );
+
+            ASS( i_redd256 >=( 0 -1) , "[MINABIN:N_RED]" );
+            ASS( i_gree256 >=( 0 -1) , "[MINABIN:N_GRE]" );
+            ASS( i_blue256 >=( 0 -1) , "[MINABIN:N_BLU]" );
+        };;
+        //:------------------:#_ECI_R_G_B_MINABIN_#:[615]://
+
+        Get the two middle colors as binary.
+        I don't think we need this.
+
+    ///////    let   minchan =( 777 );
+    ///////    let o_twoabin =( 0x0 );
+    ///////
+    ///////    if( i_redd256 < minchan ){ 
+    ///////
+    ///////          minchan =( i_redd256 ); //:MIN[ RED ]::::::://
+    ///////        o_twoabin =( 0x0000004 ); //:BIN[ 100 ]::::::://
+    ///////    }else
+    ///////    if( i_gree256 < minchan ){
+    ///////
+    ///////          minchan =( i_gree256 ); //:MIN[ GRE ]::::::://
+    ///////        o_twoabin =( 0x0000002 ); //:BIN[ 010 ]::::::://
+    ///////    }else
+    ///////    if( i_blue256 < minchan ){
+    ///////
+    ///////          minchan =( i_blue256 ); //:MIN[ BLU ]::::::://
+    ///////        o_twoabin =( 0x0000001 ); //:BIN[ 001 ]::::::://
+    ///////    };;
+
+        return( o_twoabin ); //:SEE[twoabin]://
+
+    };;
