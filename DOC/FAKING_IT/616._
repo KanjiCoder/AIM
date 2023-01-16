@@ -1,5 +1,7 @@
         
 
+        let lowtwin =( F_PUREHUE_R_G_B_LOWTWIN( r,b,g ) );       // [615]
+
     const   F_PUREHUE_R_G_B_LOWTWIN(
 
         i_redd256 
