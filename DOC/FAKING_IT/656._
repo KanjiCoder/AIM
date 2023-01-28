@@ -1,0 +1,20 @@
+    
+    ABOMB08 Data :
+
+
+        let cc =( 1 /** Center Tile , If Onn **/ );
+        let xx =( 1 /** Any Other On Tile    **/ );
+        let __ =( 0 /** Any Off Tile         **/ );
+
+        var d_abomb08_u81_src_geo =( new Uint8Array([
+
+            xx,xx,xx,xx,xx,xx,xx,xx,xx
+        ,   xx,xx,xx,xx,xx,xx,xx,xx,xx
+        ,   xx,xx,xx,xx,xx,xx,xx,xx,xx
+        ,   xx,xx,xx,xx,xx,xx,xx,xx,xx
+        ,   xx,xx,xx,xx,cc,xx,xx,xx,xx
+        ,   xx,xx,xx,xx,xx,xx,xx,xx,xx
+        ,   xx,xx,xx,xx,xx,xx,xx,xx,xx
+        ,   xx,xx,xx,xx,xx,xx,xx,xx,xx
+        ,   xx,xx,xx,xx,xx,xx,xx,xx,xx
+        ]));;
