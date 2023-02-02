@@ -1,0 +1,47 @@
+     
+    Faking_it / 680 delta.
+
+  vu_lat=( d_te7_lat[ vu_te7 ] );;;;;;;;;;;;;;;;;;
+        ru_lat=(UV2(vu_lat,vu_lat));;;;;;;;;;;;;;;;;;;;;                                   
+        ru_dun =(  c_du0 * (u_1 << vu_te7)          );;;
+        ru_gtc =(    dug  / ru_dun                  );;;
+        ru_dil =(    dug  -(ru_dun*(ru_gtc       )) );;;
+        ru_grc =(          (       (ru_gtc/ru_lat)) );;;
+        ru_lmc =( ru_gtc  -(ru_lat*(    ru_grc   )) );;;
+        tu_lmc =( ru_lmc );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+        
+        tu_gmc =(      UV2(0,0) ////////////////////////  
+        +       ( tu_lmo      ) //: LEVEL_MAP_ORIGIN ://  
+        +       ( tu_lmc      ) //: LOCAL_COORD      ://  
+        );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        
+        p2k_x_y =( IV2( tu_gmc ) );;;;;;;;;;;;;;;;;;;;;; 
+                                                                
+        //: uv4_p2k = STF(d_p2k,p2k_x_y,0); :::::::::://          
+        IMF_GET_UV4_P2K  //:<--@TEXELFETCH@ :::::::::://          
+                
+        if( u_0 != ( uv4_p2k.r & U32( 0xF0000000 ) ) ){
+        
+            vu_bingeom =( u_0                                 
+            |      ( uv4_p2k.r << 24 )                       
+            |      ( uv4_p2k.g << 16 )                       
+            |      ( uv4_p2k.b <<  8 )                       
+            |      ( uv4_p2k.a <<  0 )                       
+            );;  
+        
+            //: OFFSET TO FADA LAYER ://
+            p2k_x_y.y +=( I32( vu_lat ) ); 
+        
+            //: uv4_p2k = STF(d_p2k,p2k_x_y,0); ://          
+            IMF_GET_UV4_P2K  //:<--@TEXELFETCH@ ://   
+        
+            if( u_0 != ( uv4_p2k.r & U32( 0xF0000000 ) ) ){
+        
+                vu_geokill=( u_1 );
+            }else{
+                vu_geokill=( u_0 );
+            };;
+                                            
+        };;
