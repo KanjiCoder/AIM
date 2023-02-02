@@ -5,3 +5,9 @@
         vu_binfada =( U32( 0x00000000 ) );                       // [682]
                                                                  // [682]
     //:-----------------------------:#_ZERO_INITS_#:[682]://     // [682]
+
+
+    One reason the geometry pass is broken :
+
+     ru_du9     =( ru_dun  /   u_9 ); //:<--- Graph Paper   ://
+     ru_du9geom =( ru_dun  /   u_9 ); //:<--- Geometry Tile ://
