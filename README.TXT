@@ -19,8 +19,9 @@
     These are my notes for publishing videos to youtube.
 
 
-    AIM_711 : BFJ_050 : ARTGIRL - Bomb Tile Gradient
-    AIM_710 : BFJ_049 : ARTGIRL - Geom Tile Gradient
+    AIM_711 : BFJ_051 : ARTGIRL - Bomb Tile Gradient
+    AIM_710 : BFJ_050 : ARTGIRL - Geom Tile Gradient
+
     AIM_709 : KIMPORT _G_ : ___________
     AIM_708 : KIMPORT _G_ : ___________
     AIM_707 : KIMPORT _F_ : ___________
@@ -29,6 +30,7 @@
     AIM_704 : KIMPORT _C_ : ___________
     AIM_703 : KIMPORT _B_ : ___________
     AIM_702 : KIMPORT _A_ : SYSTEM STUB
+
     AIM_701 : PREVIEW PLACEHOLDER
     AIM_700 : NEXT PLAYLIST
     AIM_699 : BFJ_049 : ARTGIRL - Using FX4_HEX LUT In Shader
