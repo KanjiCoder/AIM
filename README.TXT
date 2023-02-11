@@ -26,9 +26,9 @@
     AIM_708 : RGBA192 && PIMPSOB PART # _G_ : ___________
     AIM_707 : RGBA192 && PIMPSOB PART # _F_ : ___________
     AIM_706 : RGBA192 && PIMPSOB PART # _E_ : ___________
-    AIM_705 : RGBA192 && PIMPSOB PART # _D_ : ___________
-    AIM_704 : RGBA192 && PIMPSOB PART # _C_ : ___________
-    AIM_703 : RGBA192 && PIMPSOB PART # _B_ : ___________
+    AIM_705 : RGBA192 && PIMPSOB PART # _D_ : Salty Loop
+    AIM_704 : RGBA192 && PIMPSOB PART # _C_ : Konamic Key
+    AIM_703 : RGBA192 && PIMPSOB PART # _B_ : Lookup Tables
     AIM_702 : RGBA192 && PIMPSOB PART # _A_ : SYSTEM STUB
 
     AIM_701 : PREVIEW PLACEHOLDER
