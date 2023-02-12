@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
 
+    AIM_713 : BFJ_053 : ARTGIRL - Some Tiles May Vanish
     AIM_712 : BFJ_052 : ARTGIRL - RULGEOM V.I.A. Inject
     AIM_711 : BFJ_051 : ARTGIRL - Bomb Tile Gradient
     AIM_710 : BFJ_050 : ARTGIRL - Geom Graphic Inset
