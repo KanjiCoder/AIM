@@ -19,8 +19,8 @@
     These are my notes for publishing videos to youtube.
 
 
-    AIM_712 : BFJ_052 : ARTGIRL - Bomb Tile Gradient
-    AIM_711 : BFJ_051 : ARTGIRL - Geom Tile Gradient
+    AIM_712 : BFJ_052 : ARTGIRL - RULGEOM V.I.A. Inject
+    AIM_711 : BFJ_051 : ARTGIRL - Bomb Tile Gradient
     AIM_710 : BFJ_050 : ARTGIRL - Geom Graphic Inset
 
     AIM_709 : RGBA192 && PIMPSOB PART # _H_ : File Picker
