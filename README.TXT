@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_719 : BFJ_059 : ARTGIRL : Sparks Can't Hurt Me
     AIM_718 : BFJ_058 : ARTGIRL+RULGEOM : v16_sb2 L.U.T.
     AIM_717 : BFJ_057 : ARTGIRL - db2_zak Lookup Table
     AIM_716 : BFJ_056 : ABOMB08 - Fada Damage Level Icons
