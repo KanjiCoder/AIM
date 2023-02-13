@@ -18,7 +18,8 @@
     
     These are my notes for publishing videos to youtube.
 
-
+    
+    AIM_717 : BFJ_057 : ARTGIRL - db2_zak Lookup Table
     AIM_716 : BFJ_056 : ABOMB08 - Fada Damage Level Icons
     AIM_715 : BFJ_055 : ABOMB08 - States Of Matter On Fire
     AIM_714 : BFJ_054 : ARTGIRL - Geom Colors By State
