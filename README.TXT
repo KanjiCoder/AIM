@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
 
+    AIM_716 : BFJ_056 : ABOMB08 - Fada Damage Level Icons
     AIM_715 : BFJ_055 : ABOMB08 - States Of Matter On Fire
     AIM_714 : BFJ_054 : ARTGIRL - Geom Colors By State
     AIM_713 : BFJ_053 : ARTGIRL - Some Tiles May Vanish
