@@ -19,6 +19,10 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_721 : KMC_001 : KEYBIND : Keyboard Mapping Crisis (KMC)
+
+    SOB Glass Pane Time ? When ?
+
     AIM_720 : BFJ_060 : ARTGIRL : Bitch On Fire
     AIM_719 : BFJ_059 : ARTGIRL : Sparks Can't Hurt Me
     AIM_718 : BFJ_058 : ARTGIRL+RULGEOM : v16_sb2 L.U.T.
