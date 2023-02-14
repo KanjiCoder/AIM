@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_722 : KMC_002 : KEYBIND : Garret Bobby Furgeson Keys
     AIM_721 : KMC_001 : KEYBIND : Keyboard Mapping Crisis (KMC)
 
     SOB Glass Pane Time ? When ?
