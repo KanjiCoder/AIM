@@ -19,6 +19,17 @@
     These are my notes for publishing videos to youtube.
 
     
+
+    AIM_732 : KMC_012 : Robbery Based Inheritance
+    AIM_731 : KMC_011 : Keyboard Mapping Crisis #11
+    AIM_730 : KMC_010 : Keyboard Mapping Crisis #10
+    AIM_729 : KMC_009 : Keyboard Mapping Crisis #9
+    AIM_728 : KMC_008 : Keyboard Mapping Crisis #8
+    AIM_727 : KMC_007 : Keyboard Mapping Crisis #7
+    AIM_726 : KMC_006 : Keyboard Mapping Crisis #6
+    AIM_725 : KMC_005 : Keyboard Mapping Crisis #5
+    AIM_724 : KMC_004 : Keyboard Mapping Crisis #4
+
     AIM_723 : KMC_003 : KEYBIND : No Overlap Modes (NO4)
     AIM_722 : KMC_002 : KEYBIND : Garret Bobby Furgeson Keys
     AIM_721 : KMC_001 : KEYBIND : Keyboard Mapping Crisis (KMC)
