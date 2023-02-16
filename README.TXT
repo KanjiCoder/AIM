@@ -19,7 +19,9 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_736 : Stained On Bombs (SOB) - Part _A_
 
+    AIM_735 : KMC_015 : Crisis Averted , Final Refactor
     AIM_734 : KMC_014 : Where Is The Money Lebowski
     AIM_733 : KMC_013 : Back To Steal The Dog
     AIM_732 : KMC_012 : Robbery Based Inheritance
