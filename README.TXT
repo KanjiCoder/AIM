@@ -19,7 +19,7 @@
     These are my notes for publishing videos to youtube.
 
     
-    AIM_739 : SOB _D_ : ___________I_DONT_KNOW_YET_
+    AIM_739 : SOB _D_ : Intentionally Crashing, Out Of Order
     AIM_738 : SOB _C_ : Casting Scrolling Window To Byte Value
     AIM_737 : SOB _B_ : Loading N10 value into SAW4BIL array
     AIM_736 : SOB _A_ : Stained On Bombs (SOB) - Part _A_
