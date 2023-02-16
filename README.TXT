@@ -19,7 +19,10 @@
     These are my notes for publishing videos to youtube.
 
     
-    AIM_736 : Stained On Bombs (SOB) - Part _A_
+    AIM_739 : SOB _D_ : ___________I_DONT_KNOW_YET_
+    AIM_738 : SOB _C_ : Casting Scrolling Window To Byte Value
+    AIM_737 : SOB _B_ : Loading N10 value into SAW4BIL array
+    AIM_736 : SOB _A_ : Stained On Bombs (SOB) - Part _A_
 
     AIM_735 : KMC_015 : Crisis Averted , Final Refactor
     AIM_734 : KMC_014 : Where Is The Money Lebowski
