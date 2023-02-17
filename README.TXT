@@ -19,6 +19,8 @@
     These are my notes for publishing videos to youtube.
 
         
+    AIM_743 : SOB _H_ : TILEFED Glass Panel Bitpacking
+    AIM_742 : SOB _G_ : TILEFED Controller Switchboard
     AIM_741 : SOB _F_ : Stubbing In[ TILESOB ]SubSystem
     AIM_740 : SOB _E_ : Back in line , Back in order 
     AIM_739 : SOB _D_ : Intentionally Crashing, Out Of Order
