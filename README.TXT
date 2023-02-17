@@ -18,7 +18,8 @@
     
     These are my notes for publishing videos to youtube.
 
-    
+        
+    AIM_740 : SOB _E_ : Back in line , Back in order 
     AIM_739 : SOB _D_ : Intentionally Crashing, Out Of Order
     AIM_738 : SOB _C_ : Casting Scrolling Window To Byte Value
     AIM_737 : SOB _B_ : Loading N10 value into SAW4BIL array
