@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
         
+    AIM_744 : SOB _I_ : Glass Panel Bitpack Bug Fixes
     AIM_743 : SOB _H_ : TILEFED Glass Panel Bitpacking
     AIM_742 : SOB _G_ : TILEFED Controller Switchboard
     AIM_741 : SOB _F_ : Stubbing In[ TILESOB ]SubSystem
