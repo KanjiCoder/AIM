@@ -18,6 +18,7 @@
     
     These are my notes for publishing videos to youtube.
 
+    AIM_750 : SOB _O_ : Fixing Fractal Brush Corruption Again
     AIM_749 : SOB _N_ : Wack A Mole Bugs
     AIM_748 : SOB _M_ : Finishing Glass Panel Putter Function
     AIM_747 : SOB _L_ : Dum Dum Kruger Sanity Check Test
