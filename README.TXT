@@ -19,6 +19,9 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_759 : BFJ_069 : Lighten Up Background Grid
+    AIM_758 : BFJ_068 : Refactor Graph Paper Render
+    AIM_757 : BFJ_067 : Purple Panel Transparency
     AIM_756 : BFJ_066 : Purple Panel Internal Details
     AIM_755 : BFJ_065 : We've got purple placeholder panels!
     AIM_754 : BFJ_064 : Swizzle My Nizzle
