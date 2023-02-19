@@ -18,8 +18,9 @@
     
     These are my notes for publishing videos to youtube.
 
-
-
+    
+    AIM_755 : BFJ_065 : We've got purple placeholder panels!
+    AIM_754 : BFJ_064 : Swizzle My Nizzle
     AIM_753 : BFJ_063 : Glass Panel Rendering Code Start
     AIM_752 : BFJ_062 : Compressing Glass Panel Graphics
     AIM_751 : BFJ_061 : Supporting Glass Panels In BFJ Shader
