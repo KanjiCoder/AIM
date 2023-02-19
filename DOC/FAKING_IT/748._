@@ -1,0 +1,28 @@
+            const wam_pix =( d_pix2048 );
+
+            let wam_dpi =( wam_dpx +( wam_dpy * 2048 ) );;;;
+            let wam_dpc =( wam_dpi *(         4      ) );;;;
+            const   dpc =( wam_dpc );;;;;;;;;;;;;;;;;;;;;;;;
+        
+            const   inn_u32 =(( i_u32 )>>>0 );;;;;;;;;;;;;;;
+            let     got_u32 =(((0x00 ///////////////////////
+            |   ((( wam_pix[ dpc+0 ] )&(0xFF))>>>24)
+            |   ((( wam_pix[ dpc+1 ] )&(0xFF))>>>16)
+            |   ((( wam_pix[ dpc+2 ] )&(0xFF))>>> 8)
+            |   ((( wam_pix[ dpc+3 ] )&(0xFF))>>> 0)
+            ))>>>0);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+            //:------------------------------------------://
+            //:TAG_DIA[ $_WRITE_AREA_MASK_DIAGRAM_$ ]::::://
+            //:------------------------------------------://
+            const           kam =((~i_wam   )>>>0 );;;;;;;;;
+            const           wam =(( i_wam   )>>>0 );;;;;;;;;
+            let oldbits =(( kam & got_u32   )>>>0 );;;;;;;;;
+            let newbits =(( wam & inn_u32   )>>>0 );;;;;;;;;
+            let put_u32 =(( oldbits|newbits )>>>0 );;;;;;;;;
+
+            const                b32 =( put_u32 );;;;;;;;;;;
+            wam_pix[ dpc+0 ]=((( b32 << 24 )&(0xFF))>>>0);;;
+            wam_pix[ dpc+1 ]=((( b32 << 16 )&(0xFF))>>>0);;;
+            wam_pix[ dpc+2 ]=((( b32 <<  8 )&(0xFF))>>>0);;;
+            wam_pix[ dpc+3 ]=((( b32 <<  0 )&(0xFF))>>>0);;;

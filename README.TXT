@@ -18,7 +18,8 @@
     
     These are my notes for publishing videos to youtube.
 
-        
+    AIM_748 : SOB _M_ : Finishing Glass Panel Putter Function
+    AIM_747 : SOB _L_ : Dum Dum Kruger Sanity Check Test
     AIM_746 : SOB _K_ : FRACABU Non-Zero i_wam branch
     AIM_745 : SOB _J_ : SOB WAM & KAM Masks
     AIM_744 : SOB _I_ : Glass Panel Bitpack Bug Fixes
