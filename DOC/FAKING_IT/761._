@@ -1,0 +1,63 @@
+            //:#_GLASS_PANEL_WARP_#:[761]:===================://    
+            #if(   USE_GPW <= 0 ) //::::::::::::::::::::[761]://
+
+                /** DO NOTHING YET **/
+                
+            #elif( USE_GPW >= 1 ) //::::::::::::::::::::[761]://
+
+                UV2 u_dilwarp ; //: ru_dil space warped      ://  
+            {
+                U32 u_du2 ; //: ru_dun divided in half.      ://
+                IV2 i_haf ; //: @i_haf@ : Which Half Of Tile?://   
+                IV2 i_np1 ; //: Negative_Or_Positive ONE(1)? ://
+                I32 i_d2m ; //: dil % du2 (DU2_Mod_2)        ://
+                I32 i_smm ; //: @smm@ : $_Stomp__Me_Mommy_$  ://
+                IV2 i_ctw ; //: @ctw@ : Cling_To_Wall(which?)://
+
+                u_du2=(  ( ru_dun/ u_2   )); //: HALF__CHUNK:://
+                i_haf=IV2( ru_dil / u_du2 ); //: ZERO_OR_ONE:://    
+                                                                    
+                i_np1=(( i_haf * 2 )-1); //:( -1 or +1 ):::::://    
+                                                                    
+                i_d2m=I32( //: DCOMPUTE[ ru_dil % u_du2 ]::::://    
+                                                                        
+                        ru_dil - (u_du2 * (ru_dil / u_du2))                 
+                    );;                                                   
+                                                                    
+                i_smm=( i_d2m / (I32(u_1<<vu_te7)) );           
+                                                                    
+                i_ctw=( i_haf * I32(ru_dun-u_1) );                      
+                                                                    
+                u_dilwarp=UV2( // // // // //:---------------://       
+                    i_ctw +(            //: Edge_To_Cling_To ://       
+                        (i_1-i_np1)     //: Direction_To_Run ://       
+                        *i_smm          //: Amount_To_Run_In ://       
+                    ) // // // // // // //:------------------://       
+                );;                                                   
+            }
+            #endif //:::::::::::::::::::::::::::::::::::[761]://
+            //:===================:#_GLASS_PANEL_WARP_#:[761]://  
+
+
+    #_GLASS_PANEL_WARP_# :------------------------------------+  // [761]
+                                                              |  // [761]
+        Should we use the "GLASS_PANEL_WARP" ?                |  // [761]
+                                                              |  // [761]
+        The warp is used to make sure that no matter          |  // [761]
+        what[ power_of_2 ]tile we are on, the frames          |  // [761]
+        of those tiles will all be the[ same_thickness ].     |  // [761]
+                             SEE[ SAME_FRAME_THICKNESS ]      |  // [761]
+                                                              |  // [761]
+        #_WARPDRIVE_SCOTTY_# :----------------------------+   |  // [761]
+                                                          |   |  // [761]
+            The original[ u_bm9 ]cell index calculation.  |   |  // [761]
+                                                          |   |  // [761]
+            WARP_DRIVE_ON : divide_space[ u_dilwarp ]     |   |  // [761]
+            WARP_DRIVE_OFF: divide_space[ u_dil     ]     |   |  // [761]
+                                                          |   |  // [761]
+        :----------------------------: #_WARPDRIVE_SCOTTY_#   |  // [761]
+                                                              |  // [761]
+    :------------------------------------: #_GLASS_PANEL_WARP_#  // [761]
+                                                                 // [761]
+    @divide_space@ : Partition up space ( discrete_units )       // [761]
+                   : into different[ cells / sectors ].          // [761]
