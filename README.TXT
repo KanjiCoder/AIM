@@ -18,7 +18,11 @@
     
     These are my notes for publishing videos to youtube.
 
-      
+
+
+    AIM_764 : BFJ_074 : Uniform Thickness Windows Done
+    AIM_763 : BFJ_073 : Dil Warp 9 And Rounding
+    AIM_762 : BFJ_072 : Fixing Things That Annoy Me
     AIM_761 : BFJ_071 : ARTTOOL Sub System Stubbing
     AIM_760 : BFJ_070 : Getting Ready For Warp Drive
     AIM_759 : BFJ_069 : Lighten Up Background Grid

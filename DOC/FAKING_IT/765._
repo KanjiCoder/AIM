@@ -1,0 +1,12 @@
+        //:TAG[ startup_modes | startup-modes | sm-mode ]://     // [764][---]
+        //:TAG[ startup modes | startupmodes | sm-modes ]://     // [764][---]
+        //:TAG[ sm_modes | sm modes | start modes |s.u.m]://     // [764][---]
+        //:TAG[ start-modes | start_modes | startmodes  ]://     // [764][---]
+
+
+    765 is more tags and misc cleanup.
+
+    _STARTUP_MODE_MODIFICATIONS_
+
+    suppress CTRL & "+/-" zooming bullshit.
+    "preventDefault"
