@@ -30,7 +30,7 @@
                                                                     
                 u_dilwarp=UV2( // // // // //:---------------://       
                     i_ctw +(            //: Edge_To_Cling_To ://       
-                        (i_1-i_np1)     //: Direction_To_Run ://       
+                        (i_0-i_np1)     //: Direction_To_Run ://       
                         *i_smm          //: Amount_To_Run_In ://       
                     ) // // // // // // //:------------------://       
                 );;                                                   
