@@ -1,0 +1,146 @@
+   
+
+FUCKING HELL MAN!!!! What the fuck am I doing wrong?
+This should be dead simple math...
+
+We are going to create a new subsystem called
+
+    ARTTOOL , that is used for shader functions...
+
+    Inside ARTTOOL we will put a coordinate 
+    remapping / redistribution function...
+
+    So hopefully, we can get this feature working.
+
+
+//:#_GLASS_PANEL_WARP_#:[761]:===============://    
+                #if(   USE_GPW <= 0 ) //::::::::::::::::[761]://
+
+                    /** DO NOTHING YET **/
+                    
+                #elif( USE_GPW >= 1 ) //::::::::::::::::[761]://
+
+                    UV2 u_dilwarp ; //: ru_dil space warped  ://  
+                {
+                    I32 i_pow ; 
+                    I32 i_ith ; //: a [1/ith] chunk of dun.
+
+                    U32 u_du2 ; //: ru_dun divided in half.      ://
+                    IV2 i_haf ; //: @i_haf@ : Which Half Of Tile?://   
+                    IV2 i_np1 ; //: Negative_Or_Positive ONE(1)? ://
+                    I32 i_d2m ; //: dil % du2 (DU2_Mod_2)        ://
+                    I32 i_smm ; //: @smm@ : $_Stomp__Me_Mommy_$  ://
+                    IV2 i_ctw ; //: @ctw@ : Cling_To_Wall(which?)://
+
+                    i_pow =(     (I32(u_1<<vu_te7))    );  
+                    i_ith =I32(  ( ru_dun/ U32(i_pow) )); 
+
+                    u_du2=(  ( ru_dun/ u_2   )); //: HALF__CHUNK:://
+
+                    
+
+                    i_haf=IV2( 
+
+                        ru_dil.x / u_du2
+                    ,   ru_dil.y / u_du2
+                    );;
+                                                                        
+                    i_np1=(( i_haf * 2 )-1); //:( -1 or +1 ):::::://    
+                                                                        
+                    i_d2m=I32( //: DCOMPUTE[ ru_dil % u_du2 ]::::://    
+                                                                            
+                            ru_dil - (u_du2 * (ru_dil / u_du2))                 
+                        );;                                                   
+                                                                        
+                   // i_smm=( i_d2m / (2*i_pow) );       
+                    i_smm =( i_d2m ); //:No Squash://
+                                                                        
+                    i_ctw=( i_haf * I32(ru_dun-u_1) );     
+
+                    #if( BUG_GPW >= 1 ) //:::::::::::::::://
+
+                        if( ru_dil.x >= ru_dun ){
+                            err_bfj=( u_1 );
+                        };;
+                        if( ru_dil.y >= ru_dun ){
+                            err_bfj=( u_1 );
+                        };;
+
+                        if( i_haf.x != 0 && i_haf.x != 1 ){
+                            err_bfj=( u_1 );
+                        };;  
+                        if( i_haf.y != 0 && i_haf.y != 1 ){
+                            err_bfj=( u_1 );
+                        };; 
+                        
+                        //:#_XHALF_#:::::::::::::::::::::://
+                        if( i_haf.x == 0 ){
+                            if( i_ctw.x != 0 ){ 
+                                err_bfj=(u_1); 
+                            };;
+                        };;
+                        if( i_haf.x == 1 ){
+                            if( i_ctw.x !=I32( ru_dun-u_1 ) ){
+                                err_bfj=(u_1);
+                            };;
+                        };;
+                        //::::::::::::::::::::::#_XHALF_#://
+                        //:#_YHALF_#:::::::::::::::::::::://
+                        if( i_haf.y == 0 ){
+                            if( i_ctw.y != 0 ){ 
+                                err_bfj=(u_1); 
+                            };;
+                        };;
+                        if( i_haf.y == 1 ){
+                            if( i_ctw.y !=I32( ru_dun-u_1 ) ){
+                                err_bfj=(u_1);
+                            };;
+                        };;
+                        //::::::::::::::::::::::#_YHALF_#://
+
+                        //:NEGPOS_CHECK://
+                        if( i_np1.x != -1 && i_np1.x != 1 ){
+                            err_bfj=(u_1);
+                        };;
+                        if( i_np1.y != -1 && i_np1.y != 1 ){
+                            err_bfj=(u_1);
+                        };;
+ 
+                    #endif //::::::::::::::::::::::::::::://
+                                                                        
+                    u_dilwarp=UV2( // // // // //:---------------://       
+                        i_ctw +(            //: Edge_To_Cling_To ://       
+                            (i_0-i_np1)     //: Direction_To_Run ://       
+                            *i_smm          //: Amount_To_Run_In ://       
+                        ) // // // // // // //:------------------://       
+                    );;  
+                    #if( BUG_GPW >= 1 ) //:::::::::::::::://
+
+                        if( u_dilwarp.x != ru_dil.x ){
+                            err_bfj=( u_1 );
+                        };;
+                        if( u_dilwarp.y != ru_dil.y ){
+                            err_bfj=( u_1 );
+                        };;
+
+                    #endif
+                    #if( BUG_GPW >= 1 ) //:::::::::::::::://
+
+                        if( u_dilwarp.x >= ru_dun 
+                        ||  u_dilwarp.y >= ru_dun
+                        ){
+
+                            err_bfj=( u_1 );
+                        };;
+                        if( ru_dil.x == ru_dil.y ){
+
+                            if( u_dilwarp.x != u_dilwarp.y ){
+                                err_bfj=( u_1 );
+                            };;
+                        };;
+
+                    #endif //::::::::::::::::::::::::::::://
+
+                }
+                #endif //:::::::::::::::::::::::::::::::::::[761]://
+                //:===================:#_GLASS_PANEL_WARP_#:[761]://  

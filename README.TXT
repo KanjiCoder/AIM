@@ -18,7 +18,9 @@
     
     These are my notes for publishing videos to youtube.
 
-    
+      
+    AIM_761 : BFJ_071 : ARTTOOL Sub System Stubbing
+    AIM_760 : BFJ_070 : Getting Ready For Warp Drive
     AIM_759 : BFJ_069 : Lighten Up Background Grid
     AIM_758 : BFJ_068 : Refactor Graph Paper Render
     AIM_757 : BFJ_067 : Purple Panel Transparency
