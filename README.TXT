@@ -18,7 +18,9 @@
     
     These are my notes for publishing videos to youtube.
 
-
+    
+    AIM_768 : BFJ_078 : Level Of Detail , Glass Panel Edges
+    AIM_767 : BFJ_077 : Atmospheric Depth On Bomb Tiles
     AIM_766 : BFJ_076 : Atmospheric Depth On Geom Tiles
     AIM_765 : BFJ_075 : Prevent Default BS
     AIM_764 : BFJ_074 : Uniform Thickness Windows Done
