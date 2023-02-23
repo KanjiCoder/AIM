@@ -19,6 +19,8 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_770 : BFJ_080 : KLAYOUT & PIGTILE System Stubs
+    AIM_769 : BFJ_079 : Level Of Detail , Background Grid
     AIM_768 : BFJ_078 : Level Of Detail , Glass Panel Edges
     AIM_767 : BFJ_077 : Atmospheric Depth On Bomb Tiles
     AIM_766 : BFJ_076 : Atmospheric Depth On Geom Tiles
