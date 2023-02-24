@@ -19,6 +19,10 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_774 : BFJ_084 : Serial Number Graphic Stamper Stub
+    AIM_773 : BFJ_083 : Runline Sequence Detection
+    AIM_772 : BFJ_082 : p48_g12 , p48_gcx , p48_gcy
+    AIM_771 : BFJ_081 : g12_g12 , g12_g16 , g12_gcx , g12_gcy
     AIM_770 : BFJ_080 : KLAYOUT & PIGTILE System Stubs
     AIM_769 : BFJ_079 : Level Of Detail , Background Grid
     AIM_768 : BFJ_078 : Level Of Detail , Glass Panel Edges
