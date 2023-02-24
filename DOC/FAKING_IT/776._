@@ -1,0 +1,8 @@
+
+    We need a "stamp what matters" lookup table.
+
+    SOmething like:
+
+    d_tilepig_sm3_mx0_mx1_my0_my1
+
+    (sm3)===>(mx0,mx1,my0,my1)  (local coords)

@@ -1,0 +1,6 @@
+            twodigi =(( 0x00
+            |   ( digi001 << 8 )  //:BLUE__BYTE:1ST_DIGIT://
+            |   ( digi002 << 0 )  //:ALPHA_BYTE:2ND_DIGIT://
+            )>>>0);
+
+            let twodigi =((0x00)>>>0); //:Digit BOTHPACK ://
