@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_775 : BFJ_085 : GEN_KD7_P48_KX0_KX1_KY0_KY1_CI4 Body
     AIM_774 : BFJ_084 : Serial Number Graphic Stamper Stub
     AIM_773 : BFJ_083 : Runline Sequence Detection
     AIM_772 : BFJ_082 : p48_g12 , p48_gcx , p48_gcy
