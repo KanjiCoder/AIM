@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
    
+    AIM_785 : BFJ_095 : MIPTILE Lookup Tables And Sanity Check
     AIM_784 : BFJ_094 : MIPTILE Tile Mip Map Maker
     AIM_783 : BFJ_093 : Mip Level ZERO PIGTILE Graphics Done
     AIM_782 : BFJ_092 : Gradient Tile Loop && glypmag
