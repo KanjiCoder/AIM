@@ -18,7 +18,9 @@
     
     These are my notes for publishing videos to youtube.
 
-    
+
+    AIM_779 : BFJ_089 : Square Gradient Helper Function Math
+    AIM_778 : BFJ_088 : Stamping Grey Placeholder Tile 
     AIM_777 : BFJ_087 : Using[ sm3_mxy ]To Stamp Serial Numbers
     AIM_776 : BFJ_086 : sm3_mx0_mx1_my0_my1 lookup table
     AIM_775 : BFJ_085 : GEN_KD7_P48_KX0_KX1_KY0_KY1_CI4 Body
