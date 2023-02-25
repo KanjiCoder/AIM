@@ -18,7 +18,12 @@
     
     These are my notes for publishing videos to youtube.
 
-
+   
+    AIM_784 : BFJ_094 : MIPTILE Tile Mip Map Maker
+    AIM_783 : BFJ_093 : Mip Level ZERO PIGTILE Graphics Done
+    AIM_782 : BFJ_092 : Gradient Tile Loop && glypmag
+    AIM_781 : BFJ_091 : tilemag && [ktw,kth] calcs
+    AIM_780 : BFJ_090 : KONAMIC PIGTILE Konami Key Wireup
     AIM_779 : BFJ_089 : Square Gradient Helper Function Math
     AIM_778 : BFJ_088 : Stamping Grey Placeholder Tile 
     AIM_777 : BFJ_087 : Using[ sm3_mxy ]To Stamp Serial Numbers
