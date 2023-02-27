@@ -28,14 +28,14 @@
                                                                  // [791]
             };;};; //:NEXT[ vsx,vsy ]::::::::::::::::::::://     // [791]
                                                                  // [791]
-            //:#_100_SUPER_SAMPLE_SLOW_RUN_#:[791]:------://
-
-                    a_r =( a_r / swa );
-                    a_g =( a_g / swa );
-                    a_b =( a_b / swa );
-                    a_a =( a_a / swa );
-
-            //:------:#_100_SUPER_SAMPLE_SLOW_RUN_#:[791]://
+            //:#_100_SUPER_SAMPLE_SLOW_RUN_#:[791]:------://     // [791]
+                                                                 // [791]
+                    a_r =( a_r / swa );                          // [791]
+                    a_g =( a_g / swa );                          // [791]
+                    a_b =( a_b / swa );                          // [791]
+                    a_a =( a_a / swa );                          // [791]
+                                                                 // [791]
+            //:------:#_100_SUPER_SAMPLE_SLOW_RUN_#:[791]://     // [791]
             //:#_CAP_AND_CREATE_BYTE_VALUE_#:[791]:------://     // [791]
                                                                  // [791]
                 //:#_FLOOR_BEFORE_CAST_#:[791]:----------://     // [791]
