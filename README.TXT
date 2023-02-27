@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
    
+    AIM_788 : BFJ_098 : Get Tile Mags , Select And Downscale
     AIM_787 : BFJ_097 : Calculate MipMap Blitting Selections
     AIM_786 : BFJ_096 : Lateral Multiplier Lookup Tables
     AIM_785 : BFJ_095 : MIPTILE Lookup Tables And Sanity Check
