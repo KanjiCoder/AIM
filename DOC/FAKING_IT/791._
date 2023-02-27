@@ -30,6 +30,10 @@
                                                                  // [791]
             //:#_100_SUPER_SAMPLE_SLOW_RUN_#:[791]:------://
 
+                    a_r =( a_r / swa );
+                    a_g =( a_g / swa );
+                    a_b =( a_b / swa );
+                    a_a =( a_a / swa );
 
             //:------:#_100_SUPER_SAMPLE_SLOW_RUN_#:[791]://
             //:#_CAP_AND_CREATE_BYTE_VALUE_#:[791]:------://     // [791]
