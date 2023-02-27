@@ -18,6 +18,9 @@
     
     These are my notes for publishing videos to youtube.
 
+    AIM_794 : BFJ_104 : EDIC002 Control Remodelling #1
+    AIM_793 : BFJ_103 : EDIC002 Control Remodelling #1
+    AIM_792 : BFJ_102 : Calling F_MIPTILE_TILEMAG_KD7
     AIM_791 : BFJ_101 : Bilinear Downscale Loop For Mip-Maps
     AIM_790 : BFJ_100 : Bilinear Downscale Vars For Mip-Maps
     AIM_789 : BFJ_099 : Even Divisibility Check
