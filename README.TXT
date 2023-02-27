@@ -18,7 +18,8 @@
     
     These are my notes for publishing videos to youtube.
 
-   
+    AIM_790 : BFJ_100 : Bilinear Downscale For Mip-Maps
+    AIM_789 : BFJ_099 : Even Divisibility Check
     AIM_788 : BFJ_098 : Get Tile Mags , Select And Downscale
     AIM_787 : BFJ_097 : Calculate MipMap Blitting Selections
     AIM_786 : BFJ_096 : Lateral Multiplier Lookup Tables
