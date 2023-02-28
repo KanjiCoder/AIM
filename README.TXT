@@ -34,8 +34,10 @@
     AIM_800 : NEXT PLAYLIST VIDEO
     AIM_799 : BFJ_109 : the last bfj video of playlist 8
 
-    AIM_794 : BFJ_104 : EDIC002 Control Remodelling #1
-    AIM_793 : BFJ_103 : EDIC002 Control Remodelling #1
+    AIM_796 : BFJ_106 : TADLADY binary tile payload math 
+    AIM_795 : BFJ_105 : TATLADY data pixel location math 
+    AIM_794 : BFJ_104 : New Systems[ TATLADY,TATSOBO,TATFEMI ]
+    AIM_793 : BFJ_103 : EDIC002 Control Remodelling 
     AIM_792 : BFJ_102 : Calling F_MIPTILE_TILEMAG_KD7
     AIM_791 : BFJ_101 : Bilinear Downscale Loop For Mip-Maps
     AIM_790 : BFJ_100 : Bilinear Downscale Vars For Mip-Maps
