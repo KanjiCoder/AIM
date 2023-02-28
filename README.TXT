@@ -32,11 +32,12 @@
 
     AIM_801 : What's to come summary video for playlist 9
     AIM_800 : NEXT PLAYLIST VIDEO
-    AIM_799 : BFJ_109 : the last bfj video of playlist 8
-
-    AIM_796 : BFJ_106 : TADLADY binary tile payload math 
-    AIM_795 : BFJ_105 : TATLADY data pixel location math 
-    AIM_794 : BFJ_104 : New Systems[ TATLADY,TATSOBO,TATFEMI ]
+    AIM_799 : BFJ_109 : TODO : Delete TILESOB keep TATSOBO
+    AIM_798 : BFJ_108 : Calc New U32 , Put Into LadyPix
+    AIM_797 : BFJ_107 : Where Is Our Data Pixel ?
+    AIM_796 : BFJ_106 : TATLADY data pixel location math 
+    AIM_795 : BFJ_105 : New Systems[ TATLADY,TATSOBO,TATFEMI ]
+    AIM_794 : BFJ_104 : FEMI336 Support In EDIC002
     AIM_793 : BFJ_103 : EDIC002 Control Remodelling 
     AIM_792 : BFJ_102 : Calling F_MIPTILE_TILEMAG_KD7
     AIM_791 : BFJ_101 : Bilinear Downscale Loop For Mip-Maps
