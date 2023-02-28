@@ -18,6 +18,22 @@
     
     These are my notes for publishing videos to youtube.
 
+
+    AIM_810 : BFJ_110 : _______________________
+
+    AIM_809 : Flood Fill Brush Part _H_
+    AIM_808 : Flood Fill Brush Part _G_
+    AIM_807 : Flood Fill Brush Part _F_
+    AIM_806 : Flood Fill Brush Part _E_
+    AIM_805 : Flood Fill Brush Part _D_
+    AIM_804 : Flood Fill Brush Part _C_
+    AIM_803 : Flood Fill Brush Part _B_
+    AIM_802 : Flood Fill Brush Part _A_
+
+    AIM_801 : What's to come summary video for playlist 9
+    AIM_800 : NEXT PLAYLIST VIDEO
+    AIM_799 : BFJ_109 : the last bfj video of playlist 8
+
     AIM_794 : BFJ_104 : EDIC002 Control Remodelling #1
     AIM_793 : BFJ_103 : EDIC002 Control Remodelling #1
     AIM_792 : BFJ_102 : Calling F_MIPTILE_TILEMAG_KD7
@@ -239,17 +255,19 @@
     AIM_584 : TILEWAY[ 014 ] && CONWAYS[ _S_ ]           
     AIM_583 : TILEWAY[ 013 ] && CONWAYS[ _R_ ]           
     AIM_582 : TILEWAY[ 012 ] && CONWAYS[ _Q_ ]           
-    AIM_581 : TILEWAY[ 011 ] && CONWAYS[ _P_ ]           
-    AIM_580 : TILEWAY[ 010 ] && CONWAYS[ _O_ ]    
-    AIM_579 : TILEWAY[ 009 ] && CONWAYS[ _N_ ]             
-    AIM_578 : TILEWAY[ 008 ] && CONWAYS[ _M_ ]             
-    AIM_577 : TILEWAY[ 007 ] && CONWAYS[ _L_ ]             
-    AIM_576 : TILEWAY[ 006 ] && CONWAYS[ _K_ ]             
-    AIM_575 : TILEWAY[ 005 ] && CONWAYS[ _J_ ]             
-    AIM_574 : TILEWAY[ 004 ] && CONWAYS[ _I_ ]             
-    AIM_573 : TILEWAY[ 003 ] && CONWAYS[ _H_ ]             
-    AIM_572 : TILEWAY[ 002 ] && CONWAYS[ _G_ ]             
-    AIM_571 : TILEWAY[ 001 ] && CONWAYS[ _F_ ]             
+    AIM_581 : TILEWAY[ 011 ] && CONWAYS[ _P_ ] 
+          
+    AIM_580 : TILEWAY[ 010 ] && CONWAYS[ _O_ ]            NOV_03  Nov 03, 2023
+    AIM_579 : TILEWAY[ 009 ] && CONWAYS[ _N_ ]            NOV_02  Nov 02, 2023
+    AIM_578 : TILEWAY[ 008 ] && CONWAYS[ _M_ ]            NOV_01  Nov 01, 2023
+    AIM_577 : TILEWAY[ 007 ] && CONWAYS[ _L_ ]            OCT_31  Oct 31, 2023
+    AIM_576 : TILEWAY[ 006 ] && CONWAYS[ _K_ ]            OCT_30  Oct 30, 2023
+    AIM_575 : TILEWAY[ 005 ] && CONWAYS[ _J_ ]            OCT_29  Oct 29, 2023
+    AIM_574 : TILEWAY[ 004 ] && CONWAYS[ _I_ ]            OCT_28  Oct 28, 2023
+    AIM_573 : TILEWAY[ 003 ] && CONWAYS[ _H_ ]            OCT_27  Oct 27, 2023
+    AIM_572 : TILEWAY[ 002 ] && CONWAYS[ _G_ ]            OCT_26  Oct 26, 2023
+    AIM_571 : TILEWAY[ 001 ] && CONWAYS[ _F_ ]            OCT_25  Oct 25, 2023
+          
     AIM_570 : CONWAYS GOL #5  ( GOL : G.ame O.f L.ife )   OCT_24  Oct 24, 2023
     AIM_569 : CONWAYS GOL #4  ( GOL : G.ame O.f L.ife )   OCT_23  Oct 23, 2023
     AIM_568 : CONWAYS GOL #3  ( GOL : G.ame O.f L.ife )   OCT_22  Oct 22, 2023
