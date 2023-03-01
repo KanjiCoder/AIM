@@ -248,18 +248,19 @@
     AIM_594 : TILEWAY[ 024 ] && CONWAYS[ 2_C ]     
     AIM_593 : TILEWAY[ 023 ] && CONWAYS[ 2_B ]     
     AIM_592 : TILEWAY[ 022 ] && CONWAYS[ 2_A ]      
-    AIM_591 : TILEWAY[ 021 ] && CONWAYS[ _Z_ ]           
-    AIM_590 : TILEWAY[ 020 ] && CONWAYS[ _Y_ ]           
-    AIM_589 : TILEWAY[ 019 ] && CONWAYS[ _X_ ]           
-    AIM_588 : TILEWAY[ 018 ] && CONWAYS[ _W_ ]           
-    AIM_587 : TILEWAY[ 017 ] && CONWAYS[ _V_ ]           
-    AIM_586 : TILEWAY[ 016 ] && CONWAYS[ _U_ ]           
-    AIM_585 : TILEWAY[ 015 ] && CONWAYS[ _T_ ]           
-    AIM_584 : TILEWAY[ 014 ] && CONWAYS[ _S_ ]           
-    AIM_583 : TILEWAY[ 013 ] && CONWAYS[ _R_ ]           
-    AIM_582 : TILEWAY[ 012 ] && CONWAYS[ _Q_ ]           
-    AIM_581 : TILEWAY[ 011 ] && CONWAYS[ _P_ ] 
-          
+    AIM_591 : TILEWAY[ 021 ] && CONWAYS[ _Z_ ]
+           
+    AIM_590 : TILEWAY[ 020 ] && CONWAYS[ _Y_ ]            NOV_13  Nov 13, 2023
+    AIM_589 : TILEWAY[ 019 ] && CONWAYS[ _X_ ]            NOV_12  Nov 12, 2023
+    AIM_588 : TILEWAY[ 018 ] && CONWAYS[ _W_ ]            NOV_11  Nov 11, 2023
+    AIM_587 : TILEWAY[ 017 ] && CONWAYS[ _V_ ]            NOV_10  Nov 10, 2023
+    AIM_586 : TILEWAY[ 016 ] && CONWAYS[ _U_ ]            NOV_09  Nov 09, 2023
+    AIM_585 : TILEWAY[ 015 ] && CONWAYS[ _T_ ]            NOV_08  Nov 08, 2023
+    AIM_584 : TILEWAY[ 014 ] && CONWAYS[ _S_ ]            NOV_07  Nov 07, 2023
+    AIM_583 : TILEWAY[ 013 ] && CONWAYS[ _R_ ]            NOV_06  Nov 06, 2023
+    AIM_582 : TILEWAY[ 012 ] && CONWAYS[ _Q_ ]            NOV_05  Nov 05, 2023
+    AIM_581 : TILEWAY[ 011 ] && CONWAYS[ _P_ ]            NOV_04  Nov 04, 2023
+
     AIM_580 : TILEWAY[ 010 ] && CONWAYS[ _O_ ]            NOV_03  Nov 03, 2023
     AIM_579 : TILEWAY[ 009 ] && CONWAYS[ _N_ ]            NOV_02  Nov 02, 2023
     AIM_578 : TILEWAY[ 008 ] && CONWAYS[ _M_ ]            NOV_01  Nov 01, 2023
