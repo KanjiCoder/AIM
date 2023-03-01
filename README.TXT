@@ -19,16 +19,18 @@
     These are my notes for publishing videos to youtube.
 
 
+    stub in window fill function.
+
     AIM_810 : BFJ_110 : _______________________
 
-    AIM_809 : Flood Fill Brush Part _H_
-    AIM_808 : Flood Fill Brush Part _G_
-    AIM_807 : Flood Fill Brush Part _F_
-    AIM_806 : Flood Fill Brush Part _E_
-    AIM_805 : Flood Fill Brush Part _D_
-    AIM_804 : Flood Fill Brush Part _C_
-    AIM_803 : Flood Fill Brush Part _B_
-    AIM_802 : Flood Fill Brush Part _A_
+    AIM_809 : FRABUCK : Flood Fill Brush Part _H_
+    AIM_808 : FRABUCK : Flood Fill Brush Part _G_
+    AIM_807 : FRABUCK : Flood Fill Brush Part _F_
+    AIM_806 : FRABUCK : Flood Fill Brush Part _E_
+    AIM_805 : FRABUCK : Flood Fill Brush Part _D_
+    AIM_804 : FRABUCK : Flood Fill Brush Part _C_
+    AIM_803 : FRABUCK : Flood Fill Brush Part _B_
+    AIM_802 : FRABUCK : Flood Fill Brush Part _A_
 
     AIM_801 : What's to come summary video for playlist 9
     AIM_800 : NEXT PLAYLIST VIDEO
