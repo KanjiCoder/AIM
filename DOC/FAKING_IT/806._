@@ -2,66 +2,66 @@
 
 
 
-        //:#_BUFFER_SWAP_VARS_#:[805]:===================://     // [805]
-                                                                 // [805]
-            let b0i ; //: Buffer_Zero_Index ( SRC_BUF )::://     // [805]
-            let b1i ; //: Buffer_One__Index ( DST_BUF )::://     // [805]
-                                                                 // [805]
-            let b0i_len ;                                        // [805]
-            let b1i_len ;                                        // [805]
-                                                                 // [805]
-            let b0i_dex ; //: index to fetch from buffer ://     // [805]
-            let b1i_dex ; //: index to fetch from buffer ://     // [805]
-                                                                 // [805]
-            let m_i ;;;;; //: max index accessor ::::::::://     // [805]
-                                                                 // [805]
-            //:#_INITIAL_DOUBLE_BUFFER_STATE_#:==========://     // [805]
-                                                                 // [805]
-                b0i    =( 0 );                                   // [805]
-                b1i    =( 1 );                                   // [805]
-                                                                 // [805]
-                b0i_dex=(0-1);                                   // [805]
-                b1i_dex=(0-1);                                   // [805]
-                                                                 // [805]
-                b0i_len=( 0 );                                   // [805]
-                b1i_len=( 0 );                                   // [805]
-                                                                 // [805]
-            //:==========:#_INITIAL_DOUBLE_BUFFER_STATE_#://     // [805]
-                                                                 // [805]
-        //:===================:#_BUFFER_SWAP_VARS_#:[805]://     // [805]
-        //:#_WELCOME_TO_HOTEL_CALIFORNIA_#:[805]:--------://
-        //:#_YOU_CAN_NEVER_LEAVE_#:[805]:----------------://
-
-            let lat =(     ( d_te7_lat[ i_buk_te7 ] ) );
-            let h3x =(F_M_F( i_buk_gtx / ( lat*5 )  ) );
-            let h3y =(F_M_F( i_buk_gty / ( lat*5 )  ) );
-
-            
-            buckput.m_buk_buf=(   bi2_buf[ b0i ]   );;;;
-            buckput.m_buk_len=(            b0i_len );;;;
-            buckput.m_buk_te7=( i_buk_te7 );;;;;;;;;;;;;
-            buckput.m_buk_la3=( i_buk_la3 );;;;;;;;;;;;;
-            buckput.m_buk_gtx=( i_buk_gtx );;;;;;;;;;;;;
-            buckput.m_buk_gty=( i_buk_gty );;;;;;;;;;;;;
-            buckput.m_buk_u32=( i_buk_u32 );;;;;;;;;;;;;
-            buckput.m_buk_wam=( i_buk_wam );;;;;;;;;;;;;
-            F_FRABUCK_BUCKPUT(    buckput );;;;;;;;;;;;;
-            b0i_len++;
-
-        //:----------------:#_YOU_CAN_NEVER_LEAVE_#:[805]://
-        //:--------:#_WELCOME_TO_HOTEL_CALIFORNIA_#:[805]://
-        //:#_FLOOD_ALGO_LOOP_#:[805]:====================://
-        while( 1 === 1 ){ //:::::::[ ALL_STARS_ARE_DEAD ]://
-
-            m_i=( b0i_len-1 ) ;
-            for( b0i_dex = 0 ; b0i_dex<=m_i ; b0i_dex++ ){
-
-                b0i_dex++;
-
-                buckget.m_buk_buf=( bi2_buf[ b0i ]   );
-                buckget.m_buk_dex=(          b0i_dex );
-                F_FRABUCK_BUCKGET( buckget );
-            };;
-
-        };; //:::::::::::::::::::::[ ALL_STARS_ARE_DEAD ]://
-        //:====================:#_FLOOD_ALGO_LOOP_#:[805]://
+        //:#_BUFFER_SWAP_VARS_#:[806]:===================://     // [806]
+                                                                 // [806]
+            let b0i ; //: Buffer_Zero_Index ( SRC_BUF )::://     // [806]
+            let b1i ; //: Buffer_One__Index ( DST_BUF )::://     // [806]
+                                                                 // [806]
+            let b0i_len ;                                        // [806]
+            let b1i_len ;                                        // [806]
+                                                                 // [806]
+            let b0i_dex ; //: index to fetch from buffer ://     // [806]
+            let b1i_dex ; //: index to fetch from buffer ://     // [806]
+                                                                 // [806]
+            let m_i ;;;;; //: max index accessor ::::::::://     // [806]
+                                                                 // [806]
+            //:#_INITIAL_DOUBLE_BUFFER_STATE_#:==========://     // [806]
+                                                                 // [806]
+                b0i    =( 0 );                                   // [806]
+                b1i    =( 1 );                                   // [806]
+                                                                 // [806]
+                b0i_dex=(0-1);                                   // [806]
+                b1i_dex=(0-1);                                   // [806]
+                                                                 // [806]
+                b0i_len=( 0 );                                   // [806]
+                b1i_len=( 0 );                                   // [806]
+                                                                 // [806]
+            //:==========:#_INITIAL_DOUBLE_BUFFER_STATE_#://     // [806]
+                                                                 // [806]
+        //:===================:#_BUFFER_SWAP_VARS_#:[806]://     // [806]
+        //:#_WELCOME_TO_HOTEL_CALIFORNIA_#:[806]:--------://     // [806]
+        //:#_YOU_CAN_NEVER_LEAVE_#:[806]:----------------://     // [806]
+                                                                 // [806]
+            let lat =(     ( d_te7_lat[ i_buk_te7 ] ) );         // [806]
+            let h3x =(F_M_F( i_buk_gtx / ( lat*5 )  ) );         // [806]
+            let h3y =(F_M_F( i_buk_gty / ( lat*5 )  ) );         // [806]
+                                                                 // [806]
+                                                                 // [806]
+            buckput.m_buk_buf=(   bi2_buf[ b0i ]   );;;;         // [806]
+            buckput.m_buk_len=(            b0i_len );;;;         // [806]
+            buckput.m_buk_te7=( i_buk_te7 );;;;;;;;;;;;;         // [806]
+            buckput.m_buk_la3=( i_buk_la3 );;;;;;;;;;;;;         // [806]
+            buckput.m_buk_gtx=( i_buk_gtx );;;;;;;;;;;;;         // [806]
+            buckput.m_buk_gty=( i_buk_gty );;;;;;;;;;;;;         // [806]
+            buckput.m_buk_u32=( i_buk_u32 );;;;;;;;;;;;;         // [806]
+            buckput.m_buk_wam=( i_buk_wam );;;;;;;;;;;;;         // [806]
+            F_FRABUCK_BUCKPUT(    buckput );;;;;;;;;;;;;         // [806]
+            b0i_len++;                                           // [806]
+                                                                 // [806]
+        //:----------------:#_YOU_CAN_NEVER_LEAVE_#:[806]://     // [806]
+        //:--------:#_WELCOME_TO_HOTEL_CALIFORNIA_#:[806]://     // [806]
+        //:#_FLOOD_ALGO_LOOP_#:[806]:====================://     // [806]
+        while( 1 === 1 ){ //:::::::[ ALL_STARS_ARE_DEAD ]://     // [806]
+                                                                 // [806]
+            m_i=( b0i_len-1 ) ;                                  // [806]
+            for( b0i_dex = 0 ; b0i_dex<=m_i ; b0i_dex++ ){       // [806]
+                                                                 // [806]
+                b0i_dex++;                                       // [806]
+                                                                 // [806]
+                buckget.m_buk_buf=( bi2_buf[ b0i ]   );          // [806]
+                buckget.m_buk_dex=(          b0i_dex );          // [806]
+                F_FRABUCK_BUCKGET( buckget );                    // [806]
+            };;                                                  // [806]
+                                                                 // [806]
+        };; //:::::::::::::::::::::[ ALL_STARS_ARE_DEAD ]://     // [806]
+        //:====================:#_FLOOD_ALGO_LOOP_#:[806]://     // [806]
