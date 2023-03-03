@@ -221,37 +221,61 @@
     AIM_623 : EASYHOT J22 : PUREHUE P12
     AIM_622 : EASYHOT J21 : PUREHUE P11
     AIM_621 : EASYHOT J20 : PUREHUE P10
-    AIM_620 : EASYHOT J19 : PUREHUE P09
-    AIM_619 : EASYHOT J18 : PUREHUE P08
-    AIM_618 : EASYHOT J17 : PUREHUE P07
-    AIM_617 : EASYHOT J16 : PUREHUE P06
-    AIM_616 : EASYHOT J15 : PUREHUE P05
-    AIM_615 : EASYHOT J14 : PUREHUE P04
-    AIM_614 : EASYHOT J13 : PUREHUE P03
-    AIM_613 : EASYHOT J12 : PUREHUE P02
-    AIM_612 : EASYHOT J11 : PUREHUE P01
-    AIM_611 : EASYHOT / FILE196 / RGBA196 - J10
-    AIM_610 : EASYHOT / FILE196 / RGBA196 - J09
-    AIM_609 : EASYHOT / FILE196 / RGBA196 - J08
-    AIM_608 : EASYHOT / FILE196 / RGBA196 - J07
-    AIM_607 : EASYHOT / FILE196 / RGBA196 - J06
-    AIM_606 : EASYHOT / FILE196 / RGBA196 - J05
-    AIM_605 : EASYHOT / FILE196 / RGBA196 - J04
-    AIM_604 : EASYHOT / FILE196 / RGBA196 - J03
-    AIM_603 : EASYHOT / FILE196 / RGBA196 - J02
-    AIM_602 : EASYHOT / FILE196 / RGBA196 - J01
-    AIM_601 : PLACE_HOLDER
-    AIM_600 : NEXT_PLAYLIST
-    AIM_599 : TILEWAY[ 029 ] && CONWAYS[ 2_H ]
-    AIM_598 : TILEWAY[ 028 ] && CONWAYS[ 2_G ]          
-    AIM_597 : TILEWAY[ 027 ] && CONWAYS[ 2_F ]     
-    AIM_596 : TILEWAY[ 026 ] && CONWAYS[ 2_E ]     
-    AIM_595 : TILEWAY[ 025 ] && CONWAYS[ 2_D ]     
-    AIM_594 : TILEWAY[ 024 ] && CONWAYS[ 2_C ]     
-    AIM_593 : TILEWAY[ 023 ] && CONWAYS[ 2_B ]     
-    AIM_592 : TILEWAY[ 022 ] && CONWAYS[ 2_A ]      
-    AIM_591 : TILEWAY[ 021 ] && CONWAYS[ _Z_ ]
-           
+
+
+
+
+
+
+
+
+
+
+    20 uploads in a day?
+    NINJACODER_____DONE
+    KANJICODER_____DONE
+    WEEBCODER______DONE ... so... 25 uploads in a day
+
+    ////////////////////////////////////////////////////////////
+
+    AIM_620 : EASYHOT J19 : PUREHUE P09 __________  Dec 13, 2023
+    AIM_619 : EASYHOT J18 : PUREHUE P08 __________  Dec 12, 2023
+    AIM_618 : EASYHOT J17 : PUREHUE P07 __________  Dec 11, 2023
+    AIM_617 : EASYHOT J16 : PUREHUE P06 __________  Dec 10, 2023
+    AIM_616 : EASYHOT J15 : PUREHUE P05 __________  Dec 09, 2023
+
+    ////////////////////////////////////////////////////////////
+
+    AIM_615 : EASYHOT J14 : PUREHUE P04         __  Dec 08, 2023
+    AIM_614 : EASYHOT J13 : PUREHUE P03         __  Dec 07, 2023
+    AIM_613 : EASYHOT J12 : PUREHUE P02         __  Dec 06, 2023
+    AIM_612 : EASYHOT J11 : PUREHUE P01         __  Dec 05, 2023
+    AIM_611 : EASYHOT / FILE196 / RGBA196 - J10 __  Dec 04, 2023
+
+
+    AIM_610 : EASYHOT / FILE196 / RGBA196 - J09  ________ DEC_03  Dec 03, 2023
+    AIM_609 : EASYHOT / FILE196 / RGBA196 - J08  ________ DEC_02  Dec 02, 2023
+    AIM_608 : EASYHOT / FILE196 / RGBA196 - J07  ________ DEC_01  Dec 01, 2023
+    AIM_607 : EASYHOT / FILE196 / RGBA196 - J06  ________ NOV_30  Nov 30, 2023
+    AIM_606 : EASYHOT / FILE196 / RGBA196 - J05  ________ NOV_29  Nov 29, 2023
+ 
+    AIM_605 : EASYHOT / FILE196 / RGBA196 - J04  ________ NOV_28  Nov 28, 2023
+    AIM_604 : EASYHOT / FILE196 / RGBA196 - J03  ________ NOV_27  Nov 27, 2023
+    AIM_603 : EASYHOT / FILE196 / RGBA196 - J02  ________ NOV_26  Nov 26, 2023
+    AIM_602 : EASYHOT / FILE196 / RGBA196 - J01  ________ NOV_25  Nov 25, 2023
+    AIM_601 : PLACE_HOLDER                       ________ NOV_24  Nov 24, 2023
+
+    AIM_600 : NEXT_PLAYLIST                               NOV_23  Nov 23, 2023
+    AIM_599 : TILEWAY[ 029 ] && CONWAYS[ 2_H ]            NOV_22  Nov 22, 2023
+    AIM_598 : TILEWAY[ 028 ] && CONWAYS[ 2_G ]            NOV_21  Nov 21, 2023
+    AIM_597 : TILEWAY[ 027 ] && CONWAYS[ 2_F ]            NOV_20  Nov 20, 2023
+    AIM_596 : TILEWAY[ 026 ] && CONWAYS[ 2_E ]            NOV_19  Nov 19, 2023
+    AIM_595 : TILEWAY[ 025 ] && CONWAYS[ 2_D ]            NOV_18  Nov 18, 2023
+    AIM_594 : TILEWAY[ 024 ] && CONWAYS[ 2_C ]            NOV_17  Nov 17, 2023
+    AIM_593 : TILEWAY[ 023 ] && CONWAYS[ 2_B ]            NOV_16  Nov 16, 2023
+    AIM_592 : TILEWAY[ 022 ] && CONWAYS[ 2_A ]            NOV_15  Nov 15, 2023
+    AIM_591 : TILEWAY[ 021 ] && CONWAYS[ _Z_ ]            NOV_14  Nov 14, 2023
+
     AIM_590 : TILEWAY[ 020 ] && CONWAYS[ _Y_ ]            NOV_13  Nov 13, 2023
     AIM_589 : TILEWAY[ 019 ] && CONWAYS[ _X_ ]            NOV_12  Nov 12, 2023
     AIM_588 : TILEWAY[ 018 ] && CONWAYS[ _W_ ]            NOV_11  Nov 11, 2023
