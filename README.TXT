@@ -21,6 +21,8 @@
 
     stub in window fill function.
 
+    F_TILEFED_EDI_U32_EDIC002
+
     AIM_810 : BFJ_110 : _______________________
 
     AIM_809 : FRABUCK : Flood Fill Brush Part _H_
