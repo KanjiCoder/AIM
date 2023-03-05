@@ -19,10 +19,22 @@
     These are my notes for publishing videos to youtube.
 
 
-    stub in window fill function.
 
-    F_TILEFED_EDI_U32_EDIC002
 
+
+    AIM_823 : BFJ_123 : The Final Femi336 Sample Coord
+    AIM_822 : BFJ_122 : Femi336 Half Baked Texel Fetch
+    AIM_821 : BFJ_121 : _______________________
+    AIM_820 : BFJ_120 : _______________________
+    AIM_819 : BFJ_119 : _______________________
+    AIM_818 : BFJ_118 : _______________________
+    AIM_817 : BFJ_117 : _______________________
+    AIM_816 : BFJ_116 : _______________________
+    AIM_815 : BFJ_115 : _______________________
+    AIM_814 : BFJ_114 : _______________________
+    AIM_813 : BFJ_113 : _______________________
+    AIM_812 : BFJ_112 : _______________________
+    AIM_811 : BFJ_111 : _______________________
     AIM_810 : BFJ_110 : _______________________
 
     AIM_809 : FRABUCK : Flood Fill Brush Part _H_
