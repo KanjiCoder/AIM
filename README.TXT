@@ -19,7 +19,9 @@
     These are my notes for publishing videos to youtube.
 
 
-    AIM_827 : BFJ_127 : Maybe fading the femi336 tiles?
+    AIM_829 : BFJ_129 : Random 2D Sample Coord Function
+    AIM_828 : BFJ_128 : Stateless Sudo Random Integers
+    AIM_827 : BFJ_127 : Fading the femi336 tiles 
     AIM_826 : BFJ_126 : Void Echo Fix - Glass
     AIM_825 : BFJ_125 : Void Echo Fix - Main Geometric Elements
 
