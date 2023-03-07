@@ -19,7 +19,9 @@
     These are my notes for publishing videos to youtube.
 
 
-    AIM_825 : BFJ_125 : Fixing The Echo In The Void P1
+    AIM_827 : BFJ_127 : Maybe fading the femi336 tiles?
+    AIM_826 : BFJ_126 : Void Echo Fix - Glass
+    AIM_825 : BFJ_125 : Void Echo Fix - Main Geometric Elements
 
     AIM_824 : BFJ_124 : Composite Femi336 Onto Ean's Grid
     AIM_823 : BFJ_123 : The Final Femi336 Sample Coord
