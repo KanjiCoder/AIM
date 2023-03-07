@@ -19,7 +19,7 @@
     These are my notes for publishing videos to youtube.
 
 
-
+    AIM_825 : BFJ_125 : Fixing The Echo In The Void P1
 
     AIM_824 : BFJ_124 : Composite Femi336 Onto Ean's Grid
     AIM_823 : BFJ_123 : The Final Femi336 Sample Coord
@@ -155,63 +155,69 @@
     AIM_702 : RGBA192 && PIMPSOB PART # _A_ : SYSTEM STUB
 
     AIM_701 : PREVIEW PLACEHOLDER
-    AIM_700 : NEXT PLAYLIST
-    AIM_699 : BFJ_049 : ARTGIRL - Using FX4_HEX LUT In Shader
-    AIM_698 : BFJ_048 : ARTGIRL - FX4_HEX LUT Injection
-    AIM_697 : BFJ_047 : HEXABAF - FX4 Colors
-    AIM_696 : BFJ_046 : ARTGIRL - Fada Explosion Color
-    AIM_695 : BFJ_045 : ARTGIRL - Bomb Color Rendering
-    AIM_694 : BFJ_044 : ARTGIRL - Bomb Color Selection
-    AIM_693 : BFJ_043 : ARTGIRL - Damaged Tiles Show Up
-    AIM_692 : BFJ_042 : ARTGIRL - Explosion Tile Animation
-    AIM_691 : BFJ_041 : ARTGIRL - Constant Side Inset
-    AIM_690 : BFJ_040 : RULBOMB - Bomb Tile Rules
-    AIM_689 : BFJ_039 : ARTGIRL - Bomb Occlusion BugFix
-    AIM_688 : BFJ_038 : ARTGIRL - Bombs Are Now Inset
-    AIM_687 : BFJ_037 : ARTGIRL - Red FADA Tiles Blink
-    AIM_686 : BFJ_036 : ARTGIRL - The roof is on fire
-    AIM_685 : BFJ_035 : ARTGIRL - Explosives For Children
-    AIM_684 : BFJ_034 : ARTGIRL - Bomb & Fada 9X9 Bit
-    AIM_683 : BFJ_033 : ARTGIRL - Crush Bugs No Mercy
-    AIM_682 : BFJ_032 : ARTGIRL - Render Geometry Tile
-    AIM_681 : BFJ_031 : ARTGIRL - Is Tile Destroyed ?
-    AIM_680 : BFJ_030 : ARTGIRL - Get Geom Texel Coord
-    AIM_679 : BFJ_029 : ARTGIRL - Tri-Cluster Origin
-    AIM_678 : BFJ_028 : RULGEOM - Geometry Strength
-    AIM_677 : BFJ_027 : ARTGIRL - Injecting Alto Tiles
-    AIM_676 : BFJ_026 : ABOMB08 - Alto Compressed Graphics
-    AIM_675 : BFJ_025 : ABOMB08 - Alto Tiles
-    AIM_674 : BFJ_024 : ARTGIRL - TileSpace Vs VoidSpace
-    AIM_673 : BFJ_023 : ARTGIRL - 9_X_9 bitmap animation
-    AIM_672 : BFJ_022 : ARTGIRL - 9_X_9 bitmap vars
-    AIM_671 : BFJ_021 : ARTGIRL - Where Is My Hotel Room?
-    AIM_670 : BFJ_020 : ARTGIRL - Get 1X Tile Render Data
-    AIM_669 : BFJ_019 : ARTGIRL - au_ , ru_ , tu_ Units
-    AIM_668 : BFJ_018 : ARTGIRL - FragShader Main()
-    AIM_667 : BFJ_017 : ABOMB08 - Abomb08 Init
-    AIM_666 : BFJ_016 : ABOMB+ARTGIRL - u81eans
-    AIM_665 : BFJ_015 : ABOMB08 - Eans Graphics
-    AIM_664 : BFJ_014 : ARTGIRL - LUT Injection
-    AIM_663 : BFJ_013 : ARTGIRL - System Review
-    AIM_662 : BFJ_012 : ABOMB08 - LUT Bit Packing
-    AIM_661 : BFJ_011 : ABOMB08 - Re-Usable Corn
-    AIM_660 : BFJ_010 : ABOMB08 - Look Up Tables
-    AIM_659 : BFJ_009 : ABOMB08 - Lazer Ordering
-    AIM_658 : BFJ_008 : ABOMB08 - Fada Graphics
-    AIM_657 : BFJ_007 : ABOMB08 - Geom Graphics
-    AIM_656 : BFJ_006 : ABOMB08 - Bomb Graphics
-    AIM_655 : BFJ_005 : HEXABAF ( HEX : Bombs + Flames )
-    AIM_654 : BFJ_004 : Ignore Insert Key Press
-    AIM_653 : BFJ_003 : AIM.HTM (Hackish Local Host)
-    AIM_652 : BFJ_002 : ABOMB08 (Bomb System Graphics)
-    AIM_651 : BFJ_001 : BOMMOTH & BOMSIMP & BOMHARD
+
+    NINJACODER_ WE_WERE_ABLE_TO_UPLOAD_50_VIDEOS < < < < < < < < < < < < < < < <
+    KANJICODER_ WE_WERE_ABLE_TO_UPLOAD_50_VIDEOS < < < < < < < < < < < < < < < <
+    WEEBCODER_  WE_WERE_ABLE_TO_UPLOAD_50_VIDEOS < < < < < < < < < < < < < < < <
+
+    AIM_700 : NEXT PLAYLIST                                     Mar 02, 2024
+    AIM_699 : BFJ_049 : ARTGIRL - Using FX4_HEX LUT In Shader   Mar 01, 2024
+    AIM_698 : BFJ_048 : ARTGIRL - FX4_HEX LUT Injection         Feb 29, 2024
+    AIM_697 : BFJ_047 : HEXABAF - FX4 Colors                    Feb 28, 2024
+    AIM_696 : BFJ_046 : ARTGIRL - Fada Explosion Color          Feb 27, 2024
+
+    AIM_695 : BFJ_045 : ARTGIRL - Bomb Color Rendering      Feb 26, 2024
+    AIM_694 : BFJ_044 : ARTGIRL - Bomb Color Selection      Feb 25, 2024
+    AIM_693 : BFJ_043 : ARTGIRL - Damaged Tiles Show Up     Feb 24, 2024
+    AIM_692 : BFJ_042 : ARTGIRL - Explosion Tile Animation  Feb 23, 2024
+    AIM_691 : BFJ_041 : ARTGIRL - Constant Side Inset       Feb 22, 2024
+    AIM_690 : BFJ_040 : RULBOMB - Bomb Tile Rules           Feb 21, 2024
+    AIM_689 : BFJ_039 : ARTGIRL - Bomb Occlusion BugFix     Feb 20, 2024
+    AIM_688 : BFJ_038 : ARTGIRL - Bombs Are Now Inset       Feb 19, 2024
+    AIM_687 : BFJ_037 : ARTGIRL - Red FADA Tiles Blink      Feb 18, 2024
+    AIM_686 : BFJ_036 : ARTGIRL - The roof is on fire       Feb 17, 2024
+    AIM_685 : BFJ_035 : ARTGIRL - Explosives For Children   Feb 16, 2024
+    AIM_684 : BFJ_034 : ARTGIRL - Bomb & Fada 9X9 Bit       Feb 15, 2024
+    AIM_683 : BFJ_033 : ARTGIRL - Crush Bugs No Mercy       Feb 14, 2024
+    AIM_682 : BFJ_032 : ARTGIRL - Render Geometry Tile      Feb 13, 2024
+    AIM_681 : BFJ_031 : ARTGIRL - Is Tile Destroyed ?       Feb 12, 2024
+
+    AIM_680 : BFJ_030 : ARTGIRL - Get Geom Texel Coord      Feb 11, 2024
+    AIM_679 : BFJ_029 : ARTGIRL - Tri-Cluster Origin        Feb 10, 2024
+    AIM_678 : BFJ_028 : RULGEOM - Geometry Strength         Feb 09, 2024
+    AIM_677 : BFJ_027 : ARTGIRL - Injecting Alto Tiles      Feb 08, 2024
+    AIM_676 : BFJ_026 : ABOMB08 - Alto Compressed Graphics  Feb 07, 2024
+    AIM_675 : BFJ_025 : ABOMB08 - Alto Tiles                Feb 06, 2024
+    AIM_674 : BFJ_024 : ARTGIRL - TileSpace Vs VoidSpace    Feb 05, 2024
+    AIM_673 : BFJ_023 : ARTGIRL - 9_X_9 bitmap animation    Feb 04, 2024
+    AIM_672 : BFJ_022 : ARTGIRL - 9_X_9 bitmap vars         Feb 03, 2024
+    AIM_671 : BFJ_021 : ARTGIRL - Where Is My Hotel Room?   Feb 02, 2024
+    AIM_670 : BFJ_020 : ARTGIRL - Get 1X Tile Render Data   Feb 01, 2024
+    AIM_669 : BFJ_019 : ARTGIRL - au_ , ru_ , tu_ Units     Jan 31, 2024
+    AIM_668 : BFJ_018 : ARTGIRL - FragShader Main()         Jan 30, 2024
+    AIM_667 : BFJ_017 : ABOMB08 - Abomb08 Init              Jan 29, 2024
+    AIM_666 : BFJ_016 : ABOMB+ARTGIRL - u81eans             Jan 28, 2024
+
+    AIM_665 : BFJ_015 : ABOMB08 - Eans Graphics             Jan 27, 2024
+    AIM_664 : BFJ_014 : ARTGIRL - LUT Injection             Jan 26, 2024
+    AIM_663 : BFJ_013 : ARTGIRL - System Review             Jan 25, 2024
+    AIM_662 : BFJ_012 : ABOMB08 - LUT Bit Packing           Jan 24, 2024
+    AIM_661 : BFJ_011 : ABOMB08 - Re-Usable Corn            Jan 23, 2024
+    AIM_660 : BFJ_010 : ABOMB08 - Look Up Tables            Jan 22, 2024
+    AIM_659 : BFJ_009 : ABOMB08 - Lazer Ordering            Jan 21, 2024
+    AIM_658 : BFJ_008 : ABOMB08 - Fada Graphics             Jan 20, 2024
+    AIM_657 : BFJ_007 : ABOMB08 - Geom Graphics             Jan 19, 2024
+    AIM_656 : BFJ_006 : ABOMB08 - Bomb Graphics             Jan 18, 2024
+    AIM_655 : BFJ_005 : HEXABAF ( HEX : Bombs + Flames )    Jan 17, 2024
+    AIM_654 : BFJ_004 : Ignore Insert Key Press             Jan 16, 2024
+    AIM_653 : BFJ_003 : AIM.HTM (Hackish Local Host)        Jan 15, 2024
+    AIM_652 : BFJ_002 : ABOMB08 (Bomb System Graphics)      Jan 14, 2024
+    AIM_651 : BFJ_001 : BOMMOTH & BOMSIMP & BOMHARD         Jan 13, 2024
+
+    BEGIN_UPLOADS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     was able to upload 30 videos per channel.
     next time try 45 vidoes per channel.
-
-    NINJACODER____DONE
-    KANJICODER____DONE
-    WEEBCODER_ ................ DOING
 
     AIM_650 : EASYHOT J49 : PUREHUE P39 ___________ Jan 12, 2024
     AIM_649 : EASYHOT J48 : PUREHUE P38 ___________ Jan 11, 2024
