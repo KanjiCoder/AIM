@@ -18,6 +18,7 @@
     
     These are my notes for publishing videos to youtube.
 
+    AIM_832 : BFJ_132 : Parallax Bug Fixed, PUN is PUG Now
     AIM_831 : BFJ_131 : Temporal Anti-Aliasing On Grid
     AIM_830 : BFJ_130 : Random Sample Cood Function Part 2
     AIM_829 : BFJ_129 : Random 2D Sample Coord Function
