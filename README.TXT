@@ -18,7 +18,8 @@
     
     These are my notes for publishing videos to youtube.
 
-
+    AIM_831 : BFJ_131 : Temporal Anti-Aliasing On Grid
+    AIM_830 : BFJ_130 : Random Sample Cood Function Part 2
     AIM_829 : BFJ_129 : Random 2D Sample Coord Function
     AIM_828 : BFJ_128 : Stateless Sudo Random Integers
     AIM_827 : BFJ_127 : Fading the femi336 tiles 
@@ -142,27 +143,29 @@
     AIM_718 : BFJ_058 : ARTGIRL+RULGEOM : v16_sb2 L.U.T.
     AIM_717 : BFJ_057 : ARTGIRL - db2_zak Lookup Table
     AIM_716 : BFJ_056 : ABOMB08 - Fada Damage Level Icons
-    AIM_715 : BFJ_055 : ABOMB08 - States Of Matter On Fire
-    AIM_714 : BFJ_054 : ARTGIRL - Geom Colors By State
-    AIM_713 : BFJ_053 : ARTGIRL - Some Tiles May Vanish
-    AIM_712 : BFJ_052 : ARTGIRL - RULGEOM V.I.A. Inject
-    AIM_711 : BFJ_051 : ARTGIRL - Bomb Tile Gradient
-    AIM_710 : BFJ_050 : ARTGIRL - Geom Graphic Inset
 
-    AIM_709 : RGBA192 && PIMPSOB PART # _H_ : File Picker
-    AIM_708 : RGBA192 && PIMPSOB PART # _G_ : Swizzling SOB
-    AIM_707 : RGBA192 && PIMPSOB PART # _F_ : gr9 to r4[x,y]
-    AIM_706 : RGBA192 && PIMPSOB PART # _E_ : Wrong Table 
-    AIM_705 : RGBA192 && PIMPSOB PART # _D_ : Salty Loop
-    AIM_704 : RGBA192 && PIMPSOB PART # _C_ : Konamic Key
-    AIM_703 : RGBA192 && PIMPSOB PART # _B_ : Lookup Tables
-    AIM_702 : RGBA192 && PIMPSOB PART # _A_ : SYSTEM STUB
+    WEEBCODER__  
+    NINJACODER_  
+    KANJICODER_ 
 
-    AIM_701 : PREVIEW PLACEHOLDER
+    BEGIN_UPLOADS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      
 
-    NINJACODER_ WE_WERE_ABLE_TO_UPLOAD_50_VIDEOS < < < < < < < < < < < < < < < <
-    KANJICODER_ WE_WERE_ABLE_TO_UPLOAD_50_VIDEOS < < < < < < < < < < < < < < < <
-    WEEBCODER_  WE_WERE_ABLE_TO_UPLOAD_50_VIDEOS < < < < < < < < < < < < < < < <
+    AIM_715 : BFJ_055 : ABOMB08 - States Of Matter On Fire      Mar 17, 2024
+    AIM_714 : BFJ_054 : ARTGIRL - Geom Colors By State          Mar 16, 2024
+    AIM_713 : BFJ_053 : ARTGIRL - Some Tiles May Vanish         Mar 15, 2024
+    AIM_712 : BFJ_052 : ARTGIRL - RULGEOM V.I.A. Inject         Mar 14, 2024
+    AIM_711 : BFJ_051 : ARTGIRL - Bomb Tile Gradient            Mar 13, 2024
+    AIM_710 : BFJ_050 : ARTGIRL - Geom Graphic Inset            Mar 12, 2024
+    AIM_709 : RGBA192 && PIMPSOB PART # _H_ : File Picker       Mar 11, 2024
+    AIM_708 : RGBA192 && PIMPSOB PART # _G_ : Swizzling SOB     Mar 10, 2024
+    AIM_707 : RGBA192 && PIMPSOB PART # _F_ : gr9 to r4[x,y]    Mar 09, 2024
+    AIM_706 : RGBA192 && PIMPSOB PART # _E_ : Wrong Table       Mar 08, 2024
+    AIM_705 : RGBA192 && PIMPSOB PART # _D_ : Salty Loop        Mar 07, 2024
+    AIM_704 : RGBA192 && PIMPSOB PART # _C_ : Konamic Key       Mar 06, 2024
+    AIM_703 : RGBA192 && PIMPSOB PART # _B_ : Lookup Tables     Mar 05, 2024
+    AIM_702 : RGBA192 && PIMPSOB PART # _A_ : SYSTEM STUB       Mar 04, 2024
+    AIM_701 : PREVIEW PLACEHOLDER                               Mar 03, 2024
 
     AIM_700 : NEXT PLAYLIST                                     Mar 02, 2024
     AIM_699 : BFJ_049 : ARTGIRL - Using FX4_HEX LUT In Shader   Mar 01, 2024
@@ -217,8 +220,6 @@
     AIM_653 : BFJ_003 : AIM.HTM (Hackish Local Host)        Jan 15, 2024
     AIM_652 : BFJ_002 : ABOMB08 (Bomb System Graphics)      Jan 14, 2024
     AIM_651 : BFJ_001 : BOMMOTH & BOMSIMP & BOMHARD         Jan 13, 2024
-
-    BEGIN_UPLOADS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     was able to upload 30 videos per channel.
     next time try 45 vidoes per channel.
