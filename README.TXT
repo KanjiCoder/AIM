@@ -18,6 +18,9 @@
     
     These are my notes for publishing videos to youtube.
 
+    
+    AIM_834 : BFJ_134 : Stubbed In : WEBPURL & BATKLAY
+    AIM_833 : BFJ_133 : ___________________________________
     AIM_832 : BFJ_132 : Parallax Bug Fixed, PUN is PUG Now
     AIM_831 : BFJ_131 : Temporal Anti-Aliasing On Grid
     AIM_830 : BFJ_130 : Random Sample Cood Function Part 2
