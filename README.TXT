@@ -19,6 +19,8 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_838 : BFJ_138 : BUGCHAN lookup tables.
+    AIM_837 : BFJ_137 : Color Channel Splitting Algorithm
     AIM_836 : BFJ_136 : Stubbed In : BUGCHAN
     AIM_835 : BFJ_135 : FIOPUNK Can Load 2048_X_2048 Now
     AIM_834 : BFJ_134 : Stubbed In : WEBPURL & BATKLAY
