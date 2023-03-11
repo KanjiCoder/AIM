@@ -19,6 +19,9 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_841 : BFJ_141 : BOMSEEK & BOMBASE
+    AIM_840 : BFJ_140 : ? ? ? ? ? ? ? ? ? ? ?
+    AIM_839 : BFJ_139 : ? ? ? ? ? ? ? ? ? ? ?
     AIM_838 : BFJ_138 : BUGCHAN lookup tables.
     AIM_837 : BFJ_137 : Color Channel Splitting Algorithm
     AIM_836 : BFJ_136 : Stubbed In : BUGCHAN
