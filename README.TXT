@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
     
+    AIM_842 : BFJ_142 : Simulation Mode Enumerations
     AIM_841 : BFJ_141 : BOMSEEK & BOMBASE
     AIM_840 : BFJ_140 : ? ? ? ? ? ? ? ? ? ? ?
     AIM_839 : BFJ_139 : ? ? ? ? ? ? ? ? ? ? ?
