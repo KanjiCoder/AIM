@@ -18,7 +18,9 @@
     
     These are my notes for publishing videos to youtube.
 
-    
+
+    AIM_844 : BFJ_144 : New Systems : FADSEEK & FADBASE
+    AIM_843 : BFJ_143 : Basic Data Visitation Loop Logic
     AIM_842 : BFJ_142 : Simulation Mode Enumerations
     AIM_841 : BFJ_141 : BOMSEEK & BOMBASE
     AIM_840 : BFJ_140 : ? ? ? ? ? ? ? ? ? ? ?
