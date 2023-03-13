@@ -1,0 +1,43 @@
+    const   F_KEYALTS_EVT_ASC = "[FIX:KEYALTS_EVT_KEY]" ;  
+
+    const   F_KEYALTS_EVT_KEY_A27 = function
+    PRIVATE_F_KEYALTS_EVT_KEY_A27(
+
+        i_evt_key 
+
+    ){
+        var o_a27 =( 0-666 /**NEGATIVE_IS_FALSE**/ );
+
+        var key_str =("" );
+        var key_asc ;
+        var key_has =( 0 );
+
+        if( i_evt_key.key ){
+
+            key_str=(                                       
+                String.prototype.toUpperCase.call(                 
+                (                                                  
+                    i_evt_key.key                                  
+                                                                   
+                )));;
+                            
+            if( 1 !== key_str.length ){
+        
+                key_has =( 0 );
+                key_asc =( "");
+            }else{
+
+                key_asc =( key_str.charCodeAt( 0 ) );
+                if( key_asc >= 65 && key_asc <= 90 ){
+
+                    key_has=( 1 );
+                };;
+            };;
+                                                               
+        if( key_has ){ o_a27 =( key_asc - 65 );;;; };
+        if(!key_has ){ o_a27 =( 0-1 /**FALSE**/ ); };
+
+        return( o_a27 );
+    };;
+
+    Create Flag[ d _ bommoth_onn ]  
