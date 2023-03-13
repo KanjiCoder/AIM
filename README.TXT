@@ -19,6 +19,7 @@
     These are my notes for publishing videos to youtube.
 
 
+    AIM_849 : BFJ_149 : F_KEYALTS_EVT_KEY supports a-z
     AIM_848 : BFJ_148 : KEYALT Function Code
     AIM_847 : BFJ_147 : New System : KEYALT
     AIM_846 : BFJ_146 : ? ? ? ? ? ? ? ? ? ? ?
