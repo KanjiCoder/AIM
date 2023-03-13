@@ -19,6 +19,10 @@
     These are my notes for publishing videos to youtube.
 
 
+    AIM_848 : BFJ_148 : KEYALT Function Code
+    AIM_847 : BFJ_147 : New System : KEYALT
+    AIM_846 : BFJ_146 : ? ? ? ? ? ? ? ? ? ? ?
+    AIM_845 : BFJ_145 : ? ? ? ? ? ? ? ? ? ? ?
     AIM_844 : BFJ_144 : New Systems : FADSEEK & FADBASE
     AIM_843 : BFJ_143 : Basic Data Visitation Loop Logic
     AIM_842 : BFJ_142 : Simulation Mode Enumerations
