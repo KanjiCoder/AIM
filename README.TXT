@@ -19,6 +19,8 @@
     These are my notes for publishing videos to youtube.
 
 
+    AIM_851 : BFJ_151 : Finally Adding[ d_bommoth_onn ].
+    AIM_850 : BFJ_150 : Keyboard Emulator Fixes
     AIM_849 : BFJ_149 : F_KEYALTS_EVT_KEY supports a-z
     AIM_848 : BFJ_148 : KEYALT Function Code
     AIM_847 : BFJ_147 : New System : KEYALT
