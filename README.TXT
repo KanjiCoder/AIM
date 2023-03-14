@@ -19,6 +19,8 @@
     These are my notes for publishing videos to youtube.
 
 
+    AIM_853 : BFJ_153 : Mouse Master Click Drag Any Refactor
+    AIM_852 : BFJ_152 : Game Mode Vs Edit Mode Mouse Refactor
     AIM_851 : BFJ_151 : Finally Adding[ d_bommoth_onn ].
     AIM_850 : BFJ_150 : Keyboard Emulator Fixes
     AIM_849 : BFJ_149 : F_KEYALTS_EVT_KEY supports a-z
