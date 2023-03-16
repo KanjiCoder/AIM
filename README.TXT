@@ -19,6 +19,10 @@
     These are my notes for publishing videos to youtube.
 
 
+
+    
+    AIM_860 : BFJ_160 : BOMTHOT system added
+    AIM_859 : BFJ_159 : ? ?? ? ?? ? ?? ? ?? ?
     AIM_858 : BFJ_158 : Stateless tile pos code stub
 
     AIM_857 : BFJ_157 : ? ?? ? ?? ? ?? ? ?? ?
