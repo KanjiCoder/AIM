@@ -18,9 +18,10 @@
     
     These are my notes for publishing videos to youtube.
 
-
-
     
+    
+    AIM_862 : BFJ_162 : BOMTHOT Only Put FADA In Center Hotel
+    AIM_861 : BFJ_161 : BOMTHOT Fada Tile Putter Stub
     AIM_860 : BFJ_160 : BOMTHOT system added
     AIM_859 : BFJ_159 : ? ?? ? ?? ? ?? ? ?? ?
     AIM_858 : BFJ_158 : Stateless tile pos code stub
