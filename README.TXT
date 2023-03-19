@@ -91,97 +91,99 @@
     AIM_802 : FRABUCK : Flood Fill Brush Part _A_
 
     AIM_801 : What's to come summary video for playlist 9
-    AIM_800 : NEXT PLAYLIST VIDEO
-    AIM_799 : BFJ_109 : TODO : Delete TILESOB keep TATSOBO
-    AIM_798 : BFJ_108 : Calc New U32 , Put Into LadyPix
-    AIM_797 : BFJ_107 : Where Is Our Data Pixel ?
-    AIM_796 : BFJ_106 : TATLADY data pixel location math 
-    AIM_795 : BFJ_105 : New Systems[ TATLADY,TATSOBO,TATFEMI ]
-    AIM_794 : BFJ_104 : FEMI336 Support In EDIC002
-    AIM_793 : BFJ_103 : EDIC002 Control Remodelling 
-    AIM_792 : BFJ_102 : Calling F_MIPTILE_TILEMAG_KD7
-    AIM_791 : BFJ_101 : Bilinear Downscale Loop For Mip-Maps
-    AIM_790 : BFJ_100 : Bilinear Downscale Vars For Mip-Maps
-    AIM_789 : BFJ_099 : Even Divisibility Check
-    AIM_788 : BFJ_098 : Get Tile Mags , Select And Downscale
-    AIM_787 : BFJ_097 : Calculate MipMap Blitting Selections
-    AIM_786 : BFJ_096 : Lateral Multiplier Lookup Tables
-    AIM_785 : BFJ_095 : MIPTILE Lookup Tables And Sanity Check
-    AIM_784 : BFJ_094 : MIPTILE Tile Mip Map Maker
-    AIM_783 : BFJ_093 : Mip Level ZERO PIGTILE Graphics Done
-    AIM_782 : BFJ_092 : Gradient Tile Loop && glypmag
-    AIM_781 : BFJ_091 : tilemag && [ktw,kth] calcs
-    AIM_780 : BFJ_090 : KONAMIC PIGTILE Konami Key Wireup
-    AIM_779 : BFJ_089 : Square Gradient Helper Function Math
-    AIM_778 : BFJ_088 : Stamping Grey Placeholder Tile 
-    AIM_777 : BFJ_087 : Using[ sm3_mxy ]To Stamp Serial Numbers
-    AIM_776 : BFJ_086 : sm3_mx0_mx1_my0_my1 lookup table
-    AIM_775 : BFJ_085 : GEN_KD7_P48_KX0_KX1_KY0_KY1_CI4 Body
-    AIM_774 : BFJ_084 : Serial Number Graphic Stamper Stub
-    AIM_773 : BFJ_083 : Runline Sequence Detection
-    AIM_772 : BFJ_082 : p48_g12 , p48_gcx , p48_gcy
-    AIM_771 : BFJ_081 : g12_g12 , g12_g16 , g12_gcx , g12_gcy
-    AIM_770 : BFJ_080 : KLAYOUT & PIGTILE System Stubs
-    AIM_769 : BFJ_079 : Level Of Detail , Background Grid
-    AIM_768 : BFJ_078 : Level Of Detail , Glass Panel Edges
-    AIM_767 : BFJ_077 : Atmospheric Depth On Bomb Tiles
-    AIM_766 : BFJ_076 : Atmospheric Depth On Geom Tiles
-    AIM_765 : BFJ_075 : Prevent Default BS
-    AIM_764 : BFJ_074 : Uniform Thickness Windows Done
-    AIM_763 : BFJ_073 : Dil Warp 9 And Rounding
-    AIM_762 : BFJ_072 : Fixing Things That Annoy Me
-    AIM_761 : BFJ_071 : ARTTOOL Sub System Stubbing
-    AIM_760 : BFJ_070 : Getting Ready For Warp Drive
-    AIM_759 : BFJ_069 : Lighten Up Background Grid
-    AIM_758 : BFJ_068 : Refactor Graph Paper Render
-    AIM_757 : BFJ_067 : Purple Panel Transparency
-    AIM_756 : BFJ_066 : Purple Panel Internal Details
-    AIM_755 : BFJ_065 : We've got purple placeholder panels!
-    AIM_754 : BFJ_064 : Swizzle My Nizzle
-    AIM_753 : BFJ_063 : Glass Panel Rendering Code Start
-    AIM_752 : BFJ_062 : Compressing Glass Panel Graphics
-    AIM_751 : BFJ_061 : Supporting Glass Panels In BFJ Shader
 
-    AIM_750 : SOB _O_ : Fixing Fractal Brush Corruption Again
-    AIM_749 : SOB _N_ : Wack A Mole Bugs
-    AIM_748 : SOB _M_ : Finishing Glass Panel Putter Function
-    AIM_747 : SOB _L_ : Dum Dum Kruger Sanity Check Test
-    AIM_746 : SOB _K_ : FRACABU Non-Zero i_wam branch
-    AIM_745 : SOB _J_ : SOB WAM & KAM Masks
-    AIM_744 : SOB _I_ : Glass Panel Bitpack Bug Fixes
-    AIM_743 : SOB _H_ : TILEFED Glass Panel Bitpacking
-    AIM_742 : SOB _G_ : TILEFED Controller Switchboard
-    AIM_741 : SOB _F_ : Stubbing In[ TILESOB ]SubSystem
-    AIM_740 : SOB _E_ : Back in line , Back in order 
-    AIM_739 : SOB _D_ : Intentionally Crashing, Out Of Order
-    AIM_738 : SOB _C_ : Casting Scrolling Window To Byte Value
-    AIM_737 : SOB _B_ : Loading N10 value into SAW4BIL array
-    AIM_736 : SOB _A_ : Stained On Bombs (SOB) - Part _A_
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-    AIM_735 : KMC_015 : Crisis Averted , Final Refactor
-    AIM_734 : KMC_014 : Where Is The Money Lebowski
-    AIM_733 : KMC_013 : Back To Steal The Dog
-    AIM_732 : KMC_012 : Robbery Based Inheritance
-    AIM_731 : KMC_011 : Keyboard Mapping Crisis #11
-    AIM_730 : KMC_010 : Keyboard Mapping Crisis #10
-    AIM_729 : KMC_009 : Keyboard Mapping Crisis #9
-    AIM_728 : KMC_008 : Keyboard Mapping Crisis #8
-    AIM_727 : KMC_007 : Keyboard Mapping Crisis #7
-    AIM_726 : KMC_006 : Keyboard Mapping Crisis #6
-    AIM_725 : KMC_005 : Keyboard Mapping Crisis #5
-    AIM_724 : KMC_004 : Keyboard Mapping Crisis #4
-
-    AIM_723 : KMC_003 : KEYBIND : No Overlap Modes (NO4)
-    AIM_722 : KMC_002 : KEYBIND : Garret Bobby Furgeson Keys
-    AIM_721 : KMC_001 : KEYBIND : Keyboard Mapping Crisis (KMC)
-
-    SOB Glass Pane Time ? When ?
-
-    AIM_720 : BFJ_060 : ARTGIRL : Bitch On Fire
-    AIM_719 : BFJ_059 : ARTGIRL : Sparks Can't Hurt Me
-    AIM_718 : BFJ_058 : ARTGIRL+RULGEOM : v16_sb2 L.U.T.
-    AIM_717 : BFJ_057 : ARTGIRL - db2_zak Lookup Table
-    AIM_716 : BFJ_056 : ABOMB08 - Fada Damage Level Icons
+    AIM_800 : NEXT PLAYLIST VIDEO                               Jun 10, 2024  
+    AIM_799 : BFJ_109 : TODO : Delete TILESOB keep TATSOBO      Jun 09, 2024  
+    AIM_798 : BFJ_108 : Calc New U32 , Put Into LadyPix         Jun 08, 2024  
+    AIM_797 : BFJ_107 : Where Is Our Data Pixel ?               Jun 07, 2024  
+    AIM_796 : BFJ_106 : TATLADY data pixel location math        Jun 06, 2024  
+    AIM_795 : BFJ_105 : New Systems[ TATLADY,TATSOBO,TATFEMI ]  Jun 05, 2024  
+    AIM_794 : BFJ_104 : FEMI336 Support In EDIC002              Jun 04, 2024  
+    AIM_793 : BFJ_103 : EDIC002 Control Remodelling             Jun 03, 2024  
+    AIM_792 : BFJ_102 : Calling F_MIPTILE_TILEMAG_KD7           Jun 02, 2024  
+    AIM_791 : BFJ_101 : Bilinear Downscale Loop For Mip-Maps    Jun 01, 2024  
+                                                                              
+    AIM_790 : BFJ_100 : Bilinear Downscale Vars For Mip-Maps    May 31, 2024 UPLOADED
+    AIM_789 : BFJ_099 : Even Divisibility Check                 May 30, 2024 UPLOADED
+    AIM_788 : BFJ_098 : Get Tile Mags , Select And Downscale    May 29, 2024 UPLOADED
+    AIM_787 : BFJ_097 : Calculate MipMap Blitting Selections    May 28, 2024 UPLOADED
+    AIM_786 : BFJ_096 : Lateral Multiplier Lookup Tables        May 27, 2024 UPLOADED
+    AIM_785 : BFJ_095 : MIPTILE Lookup Tables And Sanity Check  May 26, 2024 UPLOADED
+    AIM_784 : BFJ_094 : MIPTILE Tile Mip Map Maker              May 25, 2024 UPLOADED
+    AIM_783 : BFJ_093 : Mip Level ZERO PIGTILE Graphics Done    May 24, 2024 UPLOADED
+    AIM_782 : BFJ_092 : Gradient Tile Loop && glypmag           May 23, 2024 UPLOADED
+    AIM_781 : BFJ_091 : tilemag && [ktw,kth] calcs              May 22, 2024 UPLOADED
+    AIM_780 : BFJ_090 : KONAMIC PIGTILE Konami Key Wireup       May 21, 2024 UPLOADED
+    AIM_779 : BFJ_089 : Square Gradient Helper Function Math    May 20, 2024 UPLOADED
+    AIM_778 : BFJ_088 : Stamping Grey Placeholder Tile          May 19, 2024 UPLOADED
+    AIM_777 : BFJ_087 : Using[ sm3_mxy ]To Stamp Serial Numbers May 18, 2024 UPLOADED
+    AIM_776 : BFJ_086 : sm3_mx0_mx1_my0_my1 lookup table        May 17, 2024 UPLOADED
+                                                                             
+    AIM_775 : BFJ_085 : GEN_KD7_P48_KX0_KX1_KY0_KY1_CI4 Body    May 16, 2024 UPLOADED
+    AIM_774 : BFJ_084 : Serial Number Graphic Stamper Stub      May 15, 2024 UPLOADED
+    AIM_773 : BFJ_083 : Runline Sequence Detection              May 14, 2024 UPLOADED
+    AIM_772 : BFJ_082 : p48_g12 , p48_gcx , p48_gcy             May 13, 2024 UPLOADED
+    AIM_771 : BFJ_081 : g12_g12 , g12_g16 , g12_gcx , g12_gcy   May 12, 2024 UPLOADED
+    AIM_770 : BFJ_080 : KLAYOUT & PIGTILE System Stubs          May 11, 2024 UPLOADED
+    AIM_769 : BFJ_079 : Level Of Detail , Background Grid       May 10, 2024 UPLOADED
+    AIM_768 : BFJ_078 : Level Of Detail , Glass Panel Edges     May 09, 2024 UPLOADED
+    AIM_767 : BFJ_077 : Atmospheric Depth On Bomb Tiles         May 08, 2024 UPLOADED
+    AIM_766 : BFJ_076 : Atmospheric Depth On Geom Tiles         May 07, 2024 UPLOADED
+    AIM_765 : BFJ_075 : Prevent Default BS                      May 06, 2024 UPLOADED
+    AIM_764 : BFJ_074 : Uniform Thickness Windows Done          May 05, 2024 UPLOADED
+    AIM_763 : BFJ_073 : Dil Warp 9 And Rounding                 May 04, 2024 UPLOADED
+    AIM_762 : BFJ_072 : Fixing Things That Annoy Me             May 03, 2024 UPLOADED
+    AIM_761 : BFJ_071 : ARTTOOL Sub System Stubbing             May 02, 2024 UPLOADED
+                                                                             
+    AIM_760 : BFJ_070 : Getting Ready For Warp Drive            May 01, 2024 UPLOADED
+    AIM_759 : BFJ_069 : Lighten Up Background Grid              Apr 30, 2024 UPLOADED
+    AIM_758 : BFJ_068 : Refactor Graph Paper Render             Apr 29, 2024 UPLOADED
+    AIM_757 : BFJ_067 : Purple Panel Transparency               Apr 28, 2024 UPLOADED
+    AIM_756 : BFJ_066 : Purple Panel Internal Details           Apr 27, 2024 UPLOADED
+    AIM_755 : BFJ_065 : We've got purple placeholder panels!    Apr 26, 2024 UPLOADED
+    AIM_754 : BFJ_064 : Swizzle My Nizzle                       Apr 25, 2024 UPLOADED
+    AIM_753 : BFJ_063 : Glass Panel Rendering Code Start        Apr 24, 2024 UPLOADED
+    AIM_752 : BFJ_062 : Compressing Glass Panel Graphics        Apr 23, 2024 UPLOADED
+    AIM_751 : BFJ_061 : Supporting Glass Panels In BFJ Shader   Apr 22, 2024 UPLOADED
+    AIM_750 : SOB _O_ : Fixing Fractal Brush Corruption Again   Apr 21, 2024 UPLOADED
+    AIM_749 : SOB _N_ : Wack A Mole Bugs                        Apr 20, 2024 UPLOADED
+    AIM_748 : SOB _M_ : Finishing Glass Panel Putter Function   Apr 19, 2024 UPLOADED
+    AIM_747 : SOB _L_ : Dum Dum Kruger Sanity Check Test        Apr 18, 2024 UPLOADED
+    AIM_746 : SOB _K_ : FRACABU Non-Zero i_wam branch           Apr 17, 2024 UPLOADED
+                                                                             
+    AIM_745 : SOB _J_ : SOB WAM & KAM Masks                     Apr 16, 2024 UPLOADED
+    AIM_744 : SOB _I_ : Glass Panel Bitpack Bug Fixes           Apr 15, 2024 UPLOADED
+    AIM_743 : SOB _H_ : TILEFED Glass Panel Bitpacking          Apr 14, 2024 UPLOADED
+    AIM_742 : SOB _G_ : TILEFED Controller Switchboard          Apr 13, 2024 UPLOADED
+    AIM_741 : SOB _F_ : Stubbing In[ TILESOB ]SubSystem         Apr 12, 2024 UPLOADED
+    AIM_740 : SOB _E_ : Back in line , Back in order            Apr 11, 2024 UPLOADED
+    AIM_739 : SOB _D_ : Intentionally Crashing, Out Of Order    Apr 10, 2024 UPLOADED
+    AIM_738 : SOB _C_ : Casting Scrolling Window To Byte Value  Apr 09, 2024 UPLOADED
+    AIM_737 : SOB _B_ : Loading N10 value into SAW4BIL array    Apr 08, 2024 UPLOADED
+    AIM_736 : SOB _A_ : Stained On Bombs (SOB) - Part _A_       Apr 07, 2024 UPLOADED
+    AIM_735 : KMC_015 : Crisis Averted , Final Refactor         Apr 06, 2024 UPLOADED
+    AIM_734 : KMC_014 : Where Is The Money Lebowski             Apr 05, 2024 UPLOADED
+    AIM_733 : KMC_013 : Back To Steal The Dog                   Apr 04, 2024 UPLOADED
+    AIM_732 : KMC_012 : Robbery Based Inheritance               Apr 03, 2024 UPLOADED
+    AIM_731 : KMC_011 : Keyboard Mapping Crisis #11             Apr 02, 2024 UPLOADED
+                                                                             
+    AIM_730 : KMC_010 : Keyboard Mapping Crisis #10             Apr 01, 2024 UPLOADED
+    AIM_729 : KMC_009 : Keyboard Mapping Crisis #9              Mar 31, 2024 UPLOADED
+    AIM_728 : KMC_008 : Keyboard Mapping Crisis #8              Mar 30, 2024 UPLOADED
+    AIM_727 : KMC_007 : Keyboard Mapping Crisis #7              Mar 29, 2024 UPLOADED
+    AIM_726 : KMC_006 : Keyboard Mapping Crisis #6              Mar 28, 2024 UPLOADED
+    AIM_725 : KMC_005 : Keyboard Mapping Crisis #5              Mar 27, 2024 UPLOADED
+    AIM_724 : KMC_004 : Keyboard Mapping Crisis #4              Mar 26, 2024 UPLOADED
+    AIM_723 : KMC_003 : KEYBIND : No Overlap Modes (NO4)        Mar 25, 2024 UPLOADED
+    AIM_722 : KMC_002 : KEYBIND : Garret Bobby Furgeson Keys    Mar 24, 2024 UPLOADED
+    AIM_721 : KMC_001 : KEYBIND : Keyboard Mapping Crisis (KMC) Mar 23, 2024 UPLOADED
+    AIM_720 : BFJ_060 : ARTGIRL : Bitch On Fire                 Mar 22, 2024 UPLOADED
+    AIM_719 : BFJ_059 : ARTGIRL : Sparks Can't Hurt Me          Mar 21, 2024 UPLOADED
+    AIM_718 : BFJ_058 : ARTGIRL+RULGEOM : v16_sb2 L.U.T.        Mar 20, 2024 UPLOADED
+    AIM_717 : BFJ_057 : ARTGIRL - db2_zak Lookup Table          Mar 19, 2024 UPLOADED
+    AIM_716 : BFJ_056 : ABOMB08 - Fada Damage Level Icons       Mar 18, 2024 UPLOADED
 
     WEEBCODER__  
     NINJACODER_  
