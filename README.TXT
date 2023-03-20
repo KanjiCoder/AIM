@@ -18,6 +18,7 @@
     
     These are my notes for publishing videos to youtube.
 
+    AIM_876 : BFJ_876 : Flame Shape , Damage , Effects
     AIM_875 : BFJ_875 : SIMFIRE signature and body work
     AIM_874 : BFJ_874 : Bomb Explosion Settings - Lazer Boxes
     AIM_873 : BFJ_873 : Bomb Explosion Settings - Box Bombs
