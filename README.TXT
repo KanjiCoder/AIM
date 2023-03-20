@@ -19,8 +19,9 @@
     These are my notes for publishing videos to youtube.
 
 
-
-    AIM_872 : BFJ_872 : Finished Bomb Magnitude Tables
+    AIM_874 : BFJ_874 : Bomb Explosion Settings - Lazer Boxes
+    AIM_873 : BFJ_873 : Bomb Explosion Settings - Box Bombs
+    AIM_872 : BFJ_872 : Bomb Explosion Settings - Spark Pins
     AIM_871 : BFJ_871 : Half Baked Bomb Magnitude Tables
     AIM_870 : BFJ_870 : Game Mode GPU Texture Sync
     AIM_869 : BFJ_169 : __________________________
