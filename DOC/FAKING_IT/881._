@@ -1,0 +1,83 @@
+      
+    Same calculations as X, but Y axis
+
+        //:#_GET_DUY_#:[880]:----------------------------:// 
+        //:                                              ://
+        //: @o_duy@ : OUTPUT - Discrete_Units_Y(REN_DUM) ://
+        //: @r_p_i@ : Render_Pipeline_Index              ://
+        //: @f_s_m@ : Fragment_Shader_mapping_Mode       ://
+        //:                                              ://
+        //: @v0h@   : VP0_HIG , dest     viewport width  ://
+        //: @v1h@   : VP1_HIG , src/data viewport width  ://
+        //:                                              ://
+        //: @v0p@   : VP0_POS , position on screen   VP  ://
+        //: @v1p@   : VP1_POS , position on src/data VP  ://
+        //:                                              ://
+        //: @fpy@   : Float_Percentage_Y                 ://
+        //:                                              ://
+        //: @sth@   : Sample_Tile_HEIGHT ,in PlankUnits  ://
+        //: @hth@   : Half___Tile_HEIGHT ,in PlankUnits  ://
+        //: @sty@   : Sample_Tile_____Y , $_PIX_IS_TIL_$ ://
+        //:                                              ://
+        //:- - - - - - - - - - - -- - - - - - - - - - - -://
+
+            const F =( F_M_F /** FLOOR **/ );
+
+            var o_duy =( c_dum /**OUTOFBOUNDSBYONE**/ );
+            var r_p_i =( d_artgirl.ren_pin            );
+            var f_s_m =( d_artgirl.arr_fsm[ r_p_i ]   );
+
+            const b_0 =( 0       /** $_IBOU_MIN_$ **/ );
+            const b_1 =( c_dum-1 /** $_IBOU_MAX_$ **/ );
+
+            const v0h = ( d_vp0[ y_1 ]-d_vp0[ y_0 ]+1 ); 
+            const v1h = ( d_vp1[ y_1 ]-d_vp1[ y_0 ]+1 ); 
+
+            let   v0p ; /** Calculated_In_PercentMap **/
+            let   fpy ; /** Calculated_In_PercentMap **/        
+            let   v1p ; /** Calculated_In_PercentMap **/    
+
+            let   sth ; /** Discrete_SampleTile_Mode **/
+            let   hth ; /** Discrete_SampleTile_Mode **/
+            let   sty ; /** Discrete_SampleTile_Mode **/
+
+            if( i_mpy < d_vp0[ y_0 ] 
+            ||  i_mpy <      (  0  )
+            ){
+                o_duy =( b_0 );;;;;;
+            }else
+            if( i_mpy > d_vp0[ y_1 ]
+            ||  i_mpy >=d_can.height
+            ){
+                o_duy =( b_1 );;;;;;;
+            }else
+            if( f_s_m === c_artgirl_fsm_per ){
+                                                    
+                v0p =( i_mpy -d_vp0[ y_0 ] );//:LOCALIZE:://
+                fpy =( v0p / ( v0h - 1 )   );//:DO_IT :::://  
+                v1p =( ( v1h - 1 ) * fpy   );//:UN_DO :::://  
+              o_duy =( d_vp1[ y_0 ]+ v1p   );//:GLOBALIZE:// 
+
+            }else
+            if( f_s_m === c_artgirl_fsm_000 ){
+    
+                sth =( F( v1h / v0h )+ 0   );
+                hth =( F( sth / (2) )- 1   );
+                sty =( i_mpy - d_vp0[ y_0 ]);
+              o_duy =( d_vp1[ y_0 ]+hth )////
+                    +(          sty*sth );;;;
+            }else
+            if( f_s_m === c_artgirl_fsm_001 ){
+
+                ERR( "[REFUSE_TO_SUPPORT]" );
+            }else
+            if( f_s_m === c_artgirl_fsm_nil ){
+                                                    
+                /** $_M_I_O_S_I_W__W_C_T_G_$ **/
+                o_duy =( Math.random() * c_dum );
+
+            }else{
+                ERR( "[INVALID_FSM]" );
+            };;
+
+        //:----------------------------:#_GET_DUY_#:[880]:// 
