@@ -18,17 +18,20 @@
     
     These are my notes for publishing videos to youtube.
 
-
-    AIM_879 : BFJ_879 : CLIMATH Sub System Stub In
-    AIM_878 : BFJ_878 : FAM Click Handler Body
-    AIM_877 : BFJ_877 : fam_la3 added to game state object
-    AIM_876 : BFJ_876 : Flame Shape , Damage , Effects
-    AIM_875 : BFJ_875 : SIMFIRE signature and body work
-    AIM_874 : BFJ_874 : Bomb Explosion Settings - Lazer Boxes
-    AIM_873 : BFJ_873 : Bomb Explosion Settings - Box Bombs
-    AIM_872 : BFJ_872 : Bomb Explosion Settings - Spark Pins
-    AIM_871 : BFJ_871 : Half Baked Bomb Magnitude Tables
-    AIM_870 : BFJ_870 : Game Mode GPU Texture Sync
+    AIM_883 : BFJ_183 : _________________________________
+    AIM_882 : BFJ_182 : Click Position To World Position
+    AIM_881 : BFJ_181 : Y-Axis Math : Pixel To Plank Unit
+    AIM_880 : BFJ_180 : X-Axis Math : Pixel To Plank Unit
+    AIM_879 : BFJ_179 : CLIMATH Sub System Stub In
+    AIM_878 : BFJ_178 : FAM Click Handler Body
+    AIM_877 : BFJ_177 : fam_la3 added to game state object
+    AIM_876 : BFJ_176 : Flame Shape , Damage , Effects
+    AIM_875 : BFJ_175 : SIMFIRE signature and body work
+    AIM_874 : BFJ_174 : Bomb Explosion Settings - Lazer Boxes
+    AIM_873 : BFJ_173 : Bomb Explosion Settings - Box Bombs
+    AIM_872 : BFJ_172 : Bomb Explosion Settings - Spark Pins
+    AIM_871 : BFJ_171 : Half Baked Bomb Magnitude Tables
+    AIM_870 : BFJ_170 : Game Mode GPU Texture Sync
     AIM_869 : BFJ_169 : __________________________
     AIM_868 : BFJ_168 : __________________________
     AIM_867 : BFJ_167 : Steal Johan's Electric Keyboard 
