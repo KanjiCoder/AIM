@@ -18,6 +18,9 @@
     
     These are my notes for publishing videos to youtube.
 
+
+    
+    AIM_877 : BFJ_877 : fam_la3 added to game state object
     AIM_876 : BFJ_876 : Flame Shape , Damage , Effects
     AIM_875 : BFJ_875 : SIMFIRE signature and body work
     AIM_874 : BFJ_874 : Bomb Explosion Settings - Lazer Boxes
