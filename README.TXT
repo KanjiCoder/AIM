@@ -18,7 +18,11 @@
     
     These are my notes for publishing videos to youtube.
 
-    AIM_885 : BFJ_185 : BOMBTHOT Binary Bomb Payload
+    TODO : LINKED_ZIPPER
+
+    
+    AIM_886 : BFJ_186 : BOMTHOT bomcent flag + return dpi
+    AIM_885 : BFJ_185 : BOMTHOT Binary Bomb Payload
     AIM_884 : BFJ_184 : Procedural Diamond Inheritance 
     AIM_883 : BFJ_183 : _________________________________
     AIM_882 : BFJ_182 : Click Position To World Position
