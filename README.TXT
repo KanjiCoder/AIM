@@ -18,6 +18,8 @@
     
     These are my notes for publishing videos to youtube.
 
+    AIM_885 : BFJ_185 : BOMBTHOT Binary Bomb Payload
+    AIM_884 : BFJ_184 : Procedural Diamond Inheritance 
     AIM_883 : BFJ_183 : _________________________________
     AIM_882 : BFJ_182 : Click Position To World Position
     AIM_881 : BFJ_181 : Y-Axis Math : Pixel To Plank Unit
