@@ -21,10 +21,8 @@
     TODO : LINKED_ZIPPER
 
 
-    AIM_892 : BFJ_192 : 
-
-    AIM_891 : BFJ_191 : Bomb State Rendering Code ? < < <<<<<<<<<<<<<
-
+    AIM_892 : BFJ_192 : Sucessive "B" Presses In Edit Mode
+    AIM_891 : BFJ_191 : Bomb State Rendering Code 
     AIM_890 : BFJ_190 : BOMTHOT Bomb Setter Final Bug Fixes
     AIM_889 : BFJ_189 : Returning[ o_dpxy128 ]
     AIM_888 : BFJ_188 : BOMTHOT [dpx,dpy] calculations
