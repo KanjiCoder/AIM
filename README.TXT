@@ -20,7 +20,7 @@
 
     TODO : LINKED_ZIPPER
 
-    
+    AIM_888 : BFJ_188 : BOMTHOT [dpx,dpy] calculations
     AIM_887 : BFJ_187 : BOMTHOT Dont Set Bombs In Void Rooms
     AIM_886 : BFJ_186 : BOMTHOT bomcent flag + return dpi
     AIM_885 : BFJ_185 : BOMTHOT Binary Bomb Payload
