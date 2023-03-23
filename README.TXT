@@ -21,6 +21,7 @@
     TODO : LINKED_ZIPPER
 
     
+    AIM_887 : BFJ_187 : BOMTHOT Dont Set Bombs In Void Rooms
     AIM_886 : BFJ_186 : BOMTHOT bomcent flag + return dpi
     AIM_885 : BFJ_185 : BOMTHOT Binary Bomb Payload
     AIM_884 : BFJ_184 : Procedural Diamond Inheritance 
