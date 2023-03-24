@@ -20,7 +20,11 @@
 
     TODO : LINKED_ZIPPER
 
-
+    AIM_897 : BFJ_197 : Assymetric Chain Reactions
+    AIM_896 : BFJ_196 : Very Buggy Chain Reactions
+    AIM_895 : BFJ_195 : __________________________________
+    AIM_894 : BFJ_194 : __________________________________
+    AIM_893 : BFJ_193 : __________________________________
     AIM_892 : BFJ_192 : Sucessive "B" Presses In Edit Mode
     AIM_891 : BFJ_191 : Bomb State Rendering Code 
     AIM_890 : BFJ_190 : BOMTHOT Bomb Setter Final Bug Fixes
