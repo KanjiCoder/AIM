@@ -22,9 +22,18 @@
 
     AIM_910 : BFJ_200 : BOMB_COOLDOWN_PERIOD
 
+    AIM_909 : FRABUCK : Flood Fill Brush Part _P_
+    AIM_908 : FRABUCK : Flood Fill Brush Part _O_
+    AIM_907 : FRABUCK : Flood Fill Brush Part _N_
+    AIM_906 : FRABUCK : Flood Fill Brush Part _M_
+    AIM_905 : FRABUCK : Flood Fill Brush Part _L_
+    AIM_904 : FRABUCK : Flood Fill Brush Part _K_
+    AIM_903 : FRABUCK : Flood Fill Brush Part _J_
+    AIM_902 : FRABUCK : Flood Fill Brush Part _I_
 
+    AIM_901 : PLACE_HOLDER ( For What's To Come Summary )
+    AIM_900 : NEXT_PLAYLIST ( KANJI_010|NINJA_010|WEEBU_010 )
     AIM_899 : BFJ_199 : BITGEOM , BITBOMB , BITFADA
-
     AIM_898 : BFJ_198 : Consistent Chain Reactions
     AIM_897 : BFJ_197 : Assymetric Chain Reactions
     AIM_896 : BFJ_196 : Very Buggy Chain Reactions
