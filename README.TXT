@@ -15,6 +15,11 @@
 
 //:=====================================:_MASTER_VIDEO_REPOS_://
 //:_MASTER_VIDEO_INDEX_:=====================================://
+
+    I think a quick intro on my stream about :
+    "I am making a game engine ! "
+    "Welcome to the behind the scenes where I film videos"
+    "for youtube! "
     
     These are my notes for publishing videos to youtube.
 
