@@ -20,6 +20,12 @@
 
     TODO : LINKED_ZIPPER
 
+    AIM_910 : BFJ_200 : BOMB_COOLDOWN_PERIOD
+
+
+    AIM_899 : BFJ_199 : BITGEOM , BITBOMB , BITFADA
+
+    AIM_898 : BFJ_198 : Consistent Chain Reactions
     AIM_897 : BFJ_197 : Assymetric Chain Reactions
     AIM_896 : BFJ_196 : Very Buggy Chain Reactions
     AIM_895 : BFJ_195 : __________________________________
