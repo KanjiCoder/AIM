@@ -1,0 +1,13 @@
+
+ +------------------------------------------------------------+
+ | ATOMIC_IVY_MMO(AIM) LICENSE === DWT_FYW                    |
+ +------------------------------------------------------------+
+ | Timmy : Hey Mr. Jones, can I mow your lawn for 20 dollars ?|
+ | Jones : Sure! Let's meetup with our lawyers at six !       |
+ |                                                            |
+ | @DWT_FYW@ : Do_Whatever_The____Fuck_You_Want ( License )   |
+ |                                                            |
+ |     1. YOU can do whatever YOU want with this code.        |
+ |     2. _I_ can do whatever _I_ want with this code.        |
+ +------------------------------------------------------------+
+
