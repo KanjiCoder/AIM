@@ -25,7 +25,9 @@
 
     TODO : LINKED_ZIPPER
 
-    AIM_914 : BFJ_204 : Refractory Period Rendering Code
+    AIM_916 : BFJ_206 : Re-Triggerable / Re-Trippable Sparkers
+    AIM_915 : BFJ_205 : Refractory Period Rendering Code #2
+    AIM_914 : BFJ_204 : Refractory Period Rendering Code #1
     AIM_913 : BFJ_203 : Letter Box Area Click Error Fix 
     AIM_912 : BFJ_202 : Editor Controller Swap Cam Bug Fix
     AIM_911 : BFJ_201 : Alter Bomb State After It Explodes
