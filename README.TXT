@@ -25,6 +25,7 @@
 
     TODO : LINKED_ZIPPER
 
+    AIM_917 : BFJ_207 : Configure a NON-ZERO cooldown time
     AIM_916 : BFJ_206 : Re-Triggerable / Re-Trippable Sparkers
     AIM_915 : BFJ_205 : Refractory Period Rendering Code #2
     AIM_914 : BFJ_204 : Refractory Period Rendering Code #1
