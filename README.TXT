@@ -25,6 +25,10 @@
 
     TODO : LINKED_ZIPPER
 
+    AIM_914 : BFJ_204 : Refractory Period Rendering Code
+    AIM_913 : BFJ_203 : Letter Box Area Click Error Fix 
+    AIM_912 : BFJ_202 : Editor Controller Swap Cam Bug Fix
+    AIM_911 : BFJ_201 : Alter Bomb State After It Explodes
     AIM_910 : BFJ_200 : BOMB_COOLDOWN_PERIOD
 
     AIM_909 : FRABUCK : Flood Fill Brush Part _P_
