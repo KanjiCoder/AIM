@@ -25,6 +25,10 @@
 
     TODO : LINKED_ZIPPER
 
+    AIM_921 : BFJ_211 : Maybe we tweak lazer settings ? ?? ?
+    AIM_920 : BFJ_210 : Varying Fada SubType Behaviors
+    AIM_919 : BFJ_209 : ___________________
+    AIM_918 : BFJ_208 : ___________________
     AIM_917 : BFJ_207 : Configure a NON-ZERO cooldown time
     AIM_916 : BFJ_206 : Re-Triggerable / Re-Trippable Sparkers
     AIM_915 : BFJ_205 : Refractory Period Rendering Code #2
