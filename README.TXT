@@ -25,6 +25,9 @@
 
     TODO : LINKED_ZIPPER
 
+    AIM_929 : BFJ_219 : EFC_AIB work - RING EXPLOSION
+    AIM_928 : BFJ_218 : EFC_SPK work.
+    AIM_927 : BFJ_217 : T_LXY & T_AXY Top Level Structs
     AIM_926 : BFJ_216 : Hunker Switchboard / Routing
     AIM_925 : BFJ_215 : HUK and HUKAREA top level types.
     AIM_924 : BFJ_214 : Stubbing in the HUNK Systems
