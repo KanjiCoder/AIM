@@ -158,6 +158,8 @@ HACKISHLY_RE_BASED_TO_VIDEO : #9_3_5
     //:                   10  12  14  16  :::::::::::::::://
     ]));; //::::::::::::::::::::::::::::::[ 16_X_16_INN ]://
 
+            //+ $_HIT_ONCE_WE_PRESSED_CTRL_AND__G__KEY_$ +//     // [933][---]
+
 
 
     [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
@@ -183,3 +185,20 @@ HACKISHLY_RE_BASED_TO_VIDEO : #9_3_5
     [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
     [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
     [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+
+    $_HIT_ONCE_WE_PRESSED_CTRL_AND__G__KEY_$ :----------------+  // [934]
+                                                              |  // [934]
+        The error has been removed because we reached         |  // [934]
+        this branch of code in production. The code           |  // [934]
+        was executing immediately after the pressing          |  // [934]
+        of[ CTRL+G ]to enter[ game_mode ].                    |  // [934]
+                                                              |  // [934]
+        That was the expected behavior.                       |  // [934]
+        We now have confirmation that:                        |  // [934]
+                                                              |  // [934]
+        [ F_DACAFAD _ CACACHE_BINFADA ]                       |  // [934]
+                                                              |  // [934]
+        Is being ran during[ game_mode ].                     |  // [934]
+                                                              |  // [934]
+    :----------------: $_HIT_ONCE_WE_PRESSED_CTRL_AND__G__KEY_$  // [934]
