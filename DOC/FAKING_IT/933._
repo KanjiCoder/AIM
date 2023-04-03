@@ -1,0 +1,34 @@
+
+    //: Monkey wrench macros :
+    INSERT INTO : _MIS_SPELLED_DB2_FX4_
+
+        const c_fx4_ion = "[$_NAMED_BY_BOMB_NOT_ENERGY_$]" ; <-- ION for ions of a SPARK
+        const c_fx4_pho = "[$_NAMED_BY_BOMB_NOT_ENERGY_$]" ;   <-- PHO for photons of LAZER
+        const c_fx4_fir = "[$_NAMED_BY_BOMB_NOT_ENERGY_$]" ;   <-- FIR for fire
+        const c_fx4_pla = "[$_NAMED_BY_BOMB_NOT_ENERGY_$]" ;   <-- PLA for plasma
+
+
+        ASSERT ABOVE[ _OFFICIAL_FX4_FADA_ ]
+
+                 //:#_SANCHECK_FX4_FADA_#:[933]:----------://
+                if( 1 !== c_fx4_pin ){ ERR( "[S_C_PIN]"); };
+                if( 2 !== c_fx4_laz ){ ERR( "[S_C_LAZ]"); };
+                if( 3 !== c_fx4_jax ){ ERR( "[S_C_JAX]"); };
+                if( 4 !== c_fx4_box ){ ERR( "[S_C_BOX]"); };
+                //:----------:#_SANCHECK_FX4_FADA_#:[933]://
+
+
+    $_NAMED_BY_BOMB_NOT_ENERGY_$ :-------------------------+
+                                                           |
+        The "fx4" constants for special effects are        |
+        named after the type of bomb that emits them       |
+        and __NOT__ after the type of energy of the        |
+        blast emitted by the bomb.                         |
+                                                           |
+        YES[ spk for sparkpin ]__NOT__[ ion for electricity ]
+        YES[ laz for lazerbox ]__NOT__[ pho for photon      ]
+        YES[ jax for jax_bomb ]__NOT__[ fir for fire        ]
+        YES[ box for box_bomb ]__NOT__[ pla for plazma      ]
+                                               (plasma)    |
+                                                           |
+    :-------------------------: $_NAMED_BY_BOMB_NOT_ENERGY_$
