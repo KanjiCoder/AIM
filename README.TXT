@@ -27,6 +27,7 @@
 
     Do we have ring blasts yet ?
 
+    AIM_937 : BFJ_227 : BOMAREA : Unit Test Simulation Work
     AIM_936 : BFJ_226 : SYSTEMS : V16GEOM , V16BOMB , V16FADA
     AIM_935 : BFJ_225 : BOMBAREA Unit Test Arrays ( UTA )
     AIM_934 : BFJ_224 : New Sub System : BOMBAREA
