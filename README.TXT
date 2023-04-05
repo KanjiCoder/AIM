@@ -27,7 +27,8 @@
 
     Do we have ring blasts yet ?
 
-    AIM_940 : BFJ_230 ; BOMAREA : Seeding The Simulation
+    AIM_941 : BFJ_231 : BOMAREA : Simulation Blast Helpers
+    AIM_940 : BFJ_230 : BOMAREA : Seeding The Simulation
     AIM_939 : BFJ_229 : BOMAREA : Unit Test Simulation Work
     AIM_938 : BFJ_228 : BOMAREA_INI && BOMAREA_UTM Stubs
     AIM_937 : BFJ_227 : Bomb Category Consts and Lookup Tables
