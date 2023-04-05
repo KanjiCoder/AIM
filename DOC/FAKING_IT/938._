@@ -1,0 +1,43 @@
+  
+    938 :
+
+    SEARCH FOR [!!!]
+
+    /*
+
+    const   F_BOMAREA_INI = function    //::::::::::::::[938]:// // [938]
+    PRIVATE_F_BOMAREA_INI(              //::::::::::::::[938]:// // [938]
+                                            //::::::::::[938]:// // [938]
+        /** $_VOID_FORMAL_PARAMETERS_$ **/  //::::::::::[938]:// // [938]
+        /** $_VOID_ACTUAL_ARGUMENTS_$  **/  //::::::::::[938]:// // [938]
+                                            //::::::::::[938]:// // [938]
+    ){  //:BEG_BOD[ BOMB_AREA_INIT ]::::::::::::::::::::[938]:// // [938]
+                                                                 // [938]
+        /** No Data To Initialize On Startup **/                 // [938]
+                                                                 // [938]
+    };; //:END_BOD[ BOMB_AREA_INIT ]::::::::::::::::::::[938]:// // [938]
+                                                                 // [938]
+    const   F_BOMAREA_UTM = function    //::::::::::::::[938]:// // [938]
+    PRIVATE_F_BOMAREA_UTM(              //::::::::::::::[938]:// // [938]
+                                            //::::::::::[938]:// // [938]
+        /** $_VOID_FORMAL_PARAMETERS_$ **/  //::::::::::[938]:// // [938]
+        /** $_VOID_ACTUAL_ARGUMENTS_$  **/  //::::::::::[938]:// // [938]
+                                            //::::::::::[938]:// // [938]
+    ){  //:BEG_BOD[ BOMB_AREA_UNIT_TEST_MAIN ]::::::::::[938]:// // [938]
+                                                                 // [938]
+        LOG( "[ WELCOME_TO_THE_RAWER_XD_TIDE_POD_AGES ]" );;     // [938]
+                                                                 // [938]
+    };; //:END_BOD[ BOMB_AREA_UNIT_TEST_MAIN ]::::::::::[938]:// // [938]
+
+
+
+
+
+    [ INIT_CLIENT_FRONTEND ] : INIT_CLIENT_FRONTEND
+
+    F_ABOMB08_INI(); //: Init Compressed BFJ_GRAPHICS :::://     // [667]
+                                                                 // [---]
+    F_BOMAREA_INI(); //: BOMAREA_BELOW[ F_ABOMB08_INI ]  ://     // [938]
+    F_BOMAREA_UTM(); //: BOMAREA_ABOVE[ F_GPUDATA_INI ]  ://     // [938]
+                                                                 // [---]
+    F_GPUDATA_INI();//:BARE BONES WEBGL INIT :-----------://     // [229]
