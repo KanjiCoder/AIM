@@ -27,7 +27,11 @@
 
     Do we have ring blasts yet ?
 
-    AIM_943 : BFJ_233 : BOMAREA : Ring Blast Algorithm
+    AIM_945 : BFJ_235 : BOMAREA : Ring Blast Algorithm
+
+    AIM_944 : BFJ_234 : BOMAREA : Blast Bound Table Checks
+
+    AIM_943 : BFJ_233 : BOMAREA : Blast Bounds Lookup Tables
     AIM_942 : BFJ_232 : BOMAREA : All UTM Stubs Stubbed In
     AIM_941 : BFJ_231 : BOMAREA : Simulation Blast Helpers
     AIM_940 : BFJ_230 : BOMAREA : Seeding The Simulation

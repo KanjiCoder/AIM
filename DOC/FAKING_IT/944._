@@ -1,0 +1,37 @@
+
+
+FOR : F_BOMAREA_UTM_AREALUT
+
+        const exp_wid =( "[USE:cal_wid]" );
+        const exp_hig =( "[USE:cal_hig]" );
+
+        let     v16 ;
+        let got_wid ;
+        let got_hig ;
+        let cal_wid ;
+        let cal_hig ;
+
+        let bomcat4 ; //:Longer  word for "bc4"    ::://
+        let     bc4 ; //:Shorter word for "bomcat4"::://
+
+        for(v16 = 0 ; v16 <=(16-1) ; v16++){
+
+            let b16 =( v16 /** $_V16_CAN_BE_B16_$ **/ );
+
+            got_wid =( d_bomarea_v16_wid[ v16 ] );
+            got_hig =( d_bomarea_v16_hig[ v16 ] );
+
+                       bc4 =( d_b16_bc4[  b16 ] );
+            bomcat4 =( bc4 );
+
+            arm_x_0 =( d_v16_ax0
+            
+            if( 0+c_bc1_laz+0 === bomcat4 ){
+
+                
+            }else{
+
+
+            };;
+
+        };;
