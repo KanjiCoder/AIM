@@ -27,8 +27,10 @@
 
     Do we have ring blasts yet ?
 
-    AIM_946 : BFJ_236 : BOMAREA : Ring Blast Algorithm
-
+    AIM_949 : BFJ_239 : BOMAREA : Ring Blast Algorithm
+    AIM_948 : BFJ_238 : BOMAREA : Lazer Box Sub Types 
+    AIM_947 : BFJ_237 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_946 : BFJ_236 : Atomic Ivy MMO ( Source Code Docs )
     AIM_945 : BFJ_235 : Blastin Struct
     AIM_944 : BFJ_234 : BOMAREA : Blast Bound Table Checks
     AIM_943 : BFJ_233 : BOMAREA : Blast Bounds Lookup Tables
@@ -51,12 +53,12 @@
     AIM_926 : BFJ_216 : Hunker Switchboard / Routing
     AIM_925 : BFJ_215 : HUK and HUKAREA top level types.
     AIM_924 : BFJ_214 : Stubbing in the HUNK Systems
-    AIM_923 : BFJ_213 : _______________________________
-    AIM_922 : BFJ_212 : ______________________________
+    AIM_923 : BFJ_213 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_922 : BFJ_212 : Atomic Ivy MMO ( Source Code Docs )
     AIM_921 : BFJ_211 : Maybe we tweak lazer settings ? ?? ?
     AIM_920 : BFJ_210 : Varying Fada SubType Behaviors
-    AIM_919 : BFJ_209 : ___________________
-    AIM_918 : BFJ_208 : ___________________
+    AIM_919 : BFJ_209 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_918 : BFJ_208 : Atomic Ivy MMO ( Source Code Docs )
     AIM_917 : BFJ_207 : Configure a NON-ZERO cooldown time
     AIM_916 : BFJ_206 : Re-Triggerable / Re-Trippable Sparkers
     AIM_915 : BFJ_205 : Refractory Period Rendering Code #2
@@ -81,9 +83,9 @@
     AIM_898 : BFJ_198 : Consistent Chain Reactions
     AIM_897 : BFJ_197 : Assymetric Chain Reactions
     AIM_896 : BFJ_196 : Very Buggy Chain Reactions
-    AIM_895 : BFJ_195 : __________________________________
-    AIM_894 : BFJ_194 : __________________________________
-    AIM_893 : BFJ_193 : __________________________________
+    AIM_895 : BFJ_195 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_894 : BFJ_194 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_893 : BFJ_193 : Atomic Ivy MMO ( Source Code Docs )
     AIM_892 : BFJ_192 : Sucessive "B" Presses In Edit Mode
     AIM_891 : BFJ_191 : Bomb State Rendering Code 
     AIM_890 : BFJ_190 : BOMTHOT Bomb Setter Final Bug Fixes
@@ -93,7 +95,7 @@
     AIM_886 : BFJ_186 : BOMTHOT bomcent flag + return dpi
     AIM_885 : BFJ_185 : BOMTHOT Binary Bomb Payload
     AIM_884 : BFJ_184 : Procedural Diamond Inheritance 
-    AIM_883 : BFJ_183 : _________________________________
+    AIM_883 : BFJ_183 : Atomic Ivy MMO ( Source Code Docs )
     AIM_882 : BFJ_182 : Click Position To World Position
     AIM_881 : BFJ_181 : Y-Axis Math : Pixel To Plank Unit
     AIM_880 : BFJ_180 : X-Axis Math : Pixel To Plank Unit
@@ -107,24 +109,24 @@
     AIM_872 : BFJ_172 : Bomb Explosion Settings - Spark Pins
     AIM_871 : BFJ_171 : Half Baked Bomb Magnitude Tables
     AIM_870 : BFJ_170 : Game Mode GPU Texture Sync
-    AIM_869 : BFJ_169 : __________________________
-    AIM_868 : BFJ_168 : __________________________
+    AIM_869 : BFJ_169 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_868 : BFJ_168 : Atomic Ivy MMO ( Source Code Docs )
     AIM_867 : BFJ_167 : Steal Johan's Electric Keyboard 
 
     AIM_866 : BFJ_166 : Set That SL*TTY Pixel Down
-    AIM_865 : BFJ_165 : ? ?? ? ?? ? ?? ? ?? ?
-    AIM_864 : BFJ_164 : ? ?? ? ?? ? ?? ? ?? ?
-    AIM_863 : BFJ_163 : ? ?? ? ?? ? ?? ? ?? ?
+    AIM_865 : BFJ_165 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_864 : BFJ_164 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_863 : BFJ_163 : Atomic Ivy MMO ( Source Code Docs )
     AIM_862 : BFJ_162 : BOMTHOT Only Put FADA In Center Hotel
     AIM_861 : BFJ_161 : BOMTHOT Fada Tile Putter Stub
     AIM_860 : BFJ_160 : BOMTHOT system added
-    AIM_859 : BFJ_159 : ? ?? ? ?? ? ?? ? ?? ?
+    AIM_859 : BFJ_159 : Atomic Ivy MMO ( Source Code Docs )
     AIM_858 : BFJ_158 : Stateless tile pos code stub
 
-    AIM_857 : BFJ_157 : ? ?? ? ?? ? ?? ? ?? ?
-    AIM_856 : BFJ_156 : ? ?? ? ?? ? ?? ? ?? ?
-    AIM_855 : BFJ_155 : ? ?? ? ?? ? ?? ? ?? ?
-    AIM_854 : BFJ_154 : ? ?? ? ?? ? ?? ? ?? ?
+    AIM_857 : BFJ_157 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_856 : BFJ_156 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_855 : BFJ_155 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_854 : BFJ_154 : Atomic Ivy MMO ( Source Code Docs )
     AIM_853 : BFJ_153 : Mouse Master Click Drag Any Refactor
     AIM_852 : BFJ_152 : Game Mode Vs Edit Mode Mouse Refactor
     AIM_851 : BFJ_151 : Finally Adding[ d_bommoth_onn ].
@@ -132,14 +134,14 @@
     AIM_849 : BFJ_149 : F_KEYALTS_EVT_KEY supports a-z
     AIM_848 : BFJ_148 : KEYALT Function Code
     AIM_847 : BFJ_147 : New System : KEYALT
-    AIM_846 : BFJ_146 : ? ? ? ? ? ? ? ? ? ? ?
-    AIM_845 : BFJ_145 : ? ? ? ? ? ? ? ? ? ? ?
+    AIM_846 : BFJ_146 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_845 : BFJ_145 : Atomic Ivy MMO ( Source Code Docs )
     AIM_844 : BFJ_144 : New Systems : FADSEEK & FADBASE
     AIM_843 : BFJ_143 : Basic Data Visitation Loop Logic
     AIM_842 : BFJ_142 : Simulation Mode Enumerations
     AIM_841 : BFJ_141 : BOMSEEK & BOMBASE
-    AIM_840 : BFJ_140 : ? ? ? ? ? ? ? ? ? ? ?
-    AIM_839 : BFJ_139 : ? ? ? ? ? ? ? ? ? ? ?
+    AIM_840 : BFJ_140 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_839 : BFJ_139 : Atomic Ivy MMO ( Source Code Docs )
     AIM_838 : BFJ_138 : BUGCHAN lookup tables.
     AIM_837 : BFJ_137 : Color Channel Splitting Algorithm
     AIM_836 : BFJ_136 : Stubbed In : BUGCHAN
@@ -158,18 +160,18 @@
     AIM_824 : BFJ_124 : Composite Femi336 Onto Ean's Grid
     AIM_823 : BFJ_123 : The Final Femi336 Sample Coord
     AIM_822 : BFJ_122 : Femi336 Half Baked Texel Fetch
-    AIM_821 : BFJ_121 : _______________________
-    AIM_820 : BFJ_120 : _______________________
-    AIM_819 : BFJ_119 : _______________________
-    AIM_818 : BFJ_118 : _______________________
-    AIM_817 : BFJ_117 : _______________________
-    AIM_816 : BFJ_116 : _______________________
-    AIM_815 : BFJ_115 : _______________________
-    AIM_814 : BFJ_114 : _______________________
-    AIM_813 : BFJ_113 : _______________________
-    AIM_812 : BFJ_112 : _______________________
-    AIM_811 : BFJ_111 : _______________________
-    AIM_810 : BFJ_110 : _______________________
+    AIM_821 : BFJ_121 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_820 : BFJ_120 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_819 : BFJ_119 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_818 : BFJ_118 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_817 : BFJ_117 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_816 : BFJ_116 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_815 : BFJ_115 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_814 : BFJ_114 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_813 : BFJ_113 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_812 : BFJ_112 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_811 : BFJ_111 : Atomic Ivy MMO ( Source Code Docs )
+    AIM_810 : BFJ_110 : Atomic Ivy MMO ( Source Code Docs )
 
     AIM_809 : FRABUCK : Flood Fill Brush Part _H_
     AIM_808 : FRABUCK : Flood Fill Brush Part _G_
