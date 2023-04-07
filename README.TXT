@@ -27,9 +27,9 @@
 
     Do we have ring blasts yet ?
 
-    AIM_952 : BFJ_
+    AIM_953 : BFJ_243
     
-    AIM_952 : BFJ_242 : Atomic Ivy MMO Game Engine Docs 
+    AIM_952 : BFJ_242 : BOMAREA : Box Blast Simulation Code
     AIM_951 : BFJ_241 : Atomic Ivy MMO Game Engine Docs 
     AIM_950 : BFJ_240 : Atomic Ivy MMO Game Engine Docs
     AIM_949 : BFJ_239 : BOMAREA : Ring Blast Algorithm
