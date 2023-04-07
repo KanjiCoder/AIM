@@ -27,7 +27,8 @@
 
     Do we have ring blasts yet ?
 
-    AIM_955 : BFJ_245 : BOMAREA : Finishing Detonator Funcs ?
+    AIM_956 : BFJ_246 : BOMAREA : Simulation Test Finished
+    AIM_955 : BFJ_245 : BOMAREA : Finishing Detonator Funcs 
     AIM_954 : BFJ_244 : BOMAREA : BLASTIN Struct Loading
     AIM_953 : BFJ_243 : BOMAREA : Detonator Preludes
     AIM_952 : BFJ_242 : BOMAREA : Box Blast Simulation Code
