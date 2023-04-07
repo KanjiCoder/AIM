@@ -27,6 +27,8 @@
 
     Do we have ring blasts yet ?
 
+    AIM_955 : BFJ_245 : BOMAREA : Finishing Detonator Funcs ?
+    AIM_954 : BFJ_244 : BOMAREA : BLASTIN Struct Loading
     AIM_953 : BFJ_243 : BOMAREA : Detonator Preludes
     AIM_952 : BFJ_242 : BOMAREA : Box Blast Simulation Code
     AIM_951 : BFJ_241 : Atomic Ivy MMO Game Engine Docs 
