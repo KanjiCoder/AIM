@@ -27,6 +27,9 @@
 
     Do we have ring blasts yet ?
 
+    AIM_959 : BFJ_249 : IMPRINT : Logging Core Logic ? ? ? ? 
+    AIM_958 : BFJ_248 : IMPRINT : Line Buffer Static Data
+    AIM_957 : BFJ_247 : IMPRINT : Tile Map Console Logger
     AIM_956 : BFJ_246 : BOMAREA : Simulation Test Finished
     AIM_955 : BFJ_245 : BOMAREA : Finishing Detonator Funcs 
     AIM_954 : BFJ_244 : BOMAREA : BLASTIN Struct Loading
