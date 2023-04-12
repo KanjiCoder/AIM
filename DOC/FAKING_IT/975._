@@ -1,0 +1,42 @@
+
+
+FUCKING_REDACTED_FOR_VIDEO_974
+
+            ar9 =(       d_hunkrin_hv4_ar9[ hv4 ] );             // [974] 
+            h_v =( o_hunktet.m_hunkvec_arr[ hv4 ] );             // [974] 
+                                                                 // [974]
+            nex_r13 = d_r13_ar9_jumpnex_r13[ (r13*9)+ar9 ];      // [974]
+            nex_ar9 = d_r13_ar9_jumpnex_dpi[ (r13*9)+ar9 ];      // [974]
+                                                                 // [974]
+            h_v.m_vec_r13 =( nex_r13 );                          // [974]
+            h_v.m_vec_ar9 =( nex_ar9 );                          // [974]
+                                                                 // [974]
+            ERR( "[REMOVE_AFTER_LUTS_HAVE_UNIT_TESTS]" );        // [974]
+
+MONKEY_WRENCH_MACROS
+
+    //:#_WRONG_ARRAY_CONSTRUCTORS_#:[974]:---------------://     // [974]
+                                                                 // [974]
+        const F_NEW_ARR_U08 =( "[FIX:F_ARR_U08]" );              // [974]
+        const F_NEW_ARR_U32 =( "[FIX:F_ARR_U32]" );              // [974]
+        const F_NEW_ARR_I32 =( "[FIX:F_ARR_I32]" );              // [974]
+                                                                 // [974]
+    //:---------------:#_WRONG_ARRAY_CONSTRUCTORS_#:[974]://     // [974]
+
+
+F_HUNKRIN_R13_TE7_LXY_AXY_HUNKTET
+
+    BELOW_SECTION : _EXPLOSION_CORNER_VARS_
+
+            //:#_ROOM_JUMPING_VARS_#:[974]:--------------://     // [974]
+                                                                 // [974]
+                let hv4 ; //:@hv4@ : HunkVec[0-to-(4-1)] ://     // [974]
+                let ar9 ; //:@ar9@ : Adjacent_Room_dex ] ://     // [974]
+                let r13 ; //:@r13@ : Room_Index[0-(13-1)]://     // [974]
+                let dpi ; //:@dpi@ : Data_Pixel_Index    ://     // [974]
+                let h_v ; //:@h_v@ : HunkVec Instance    ://     // [974]
+                                                                 // [974]
+                let nex_r13 ; //: Next/Adjacent : r13    ://     // [974]
+                let nex_dpi ; //: Neg/Pos Offset: dpi    ://     // [974]
+                                                                 // [974]
+            //:--------------:#_ROOM_JUMPING_VARS_#:[974]://     // [974]
