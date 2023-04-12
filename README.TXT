@@ -27,6 +27,8 @@
 
     Do we have ring blasts yet ?
 
+    AIM_974 : BFJ_264 : Calculate[ vec_dpi ]AND[ vec_r13 ].
+    AIM_973 : BFJ_263 : AR9 And HV4 Enumerations
     AIM_972 : BFJ_262 : Batch Your Drawing Calls
     AIM_971 : BFJ_261 : Added Enumeration Section To Engine
     AIM_970 : BFJ_260 : Atomic Ivy Source Code Docs
