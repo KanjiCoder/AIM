@@ -27,6 +27,8 @@
 
     Do we have ring blasts yet ?
 
+    AIM_971 : BFJ_261 : Added Enumeration Section To Engine
+
     AIM_959 : BFJ_249 : IMPRINT : Logging Core Logic ? ? ? ? 
     AIM_958 : BFJ_248 : IMPRINT : Line Buffer Static Data
     AIM_957 : BFJ_247 : IMPRINT : Tile Map Console Logger
