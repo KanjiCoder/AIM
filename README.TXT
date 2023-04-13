@@ -27,6 +27,9 @@
 
     Do we have ring blasts yet ?
 
+    AIM_977 : BFJ_267 : (r13,ar9)===>( adj_dpi )populate
+    AIM_976 : BFJ_266 : (r13,ar9)===>( adjacent r13 ) test
+    AIM_975 : BFJ_265 : (r13,ar9)===>( adj_r13 || adj_dpi )
     AIM_974 : BFJ_264 : Calculate[ vec_dpi ]AND[ vec_r13 ].
     AIM_973 : BFJ_263 : AR9 And HV4 Enumerations
     AIM_972 : BFJ_262 : Batch Your Drawing Calls
