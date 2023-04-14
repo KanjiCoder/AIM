@@ -27,6 +27,10 @@
 
     Do we have ring blasts yet ?
 
+    AIM_981 : BFJ_271 : Misc Hunk Vector Member Refactor
+    AIM_980 : BFJ_270 : ar9_r13 and ar9_dpi tests done.
+    AIM_979 : BFJ_269 : Atomic Ivy MMO Source Documentation
+    AIM_978 : BFJ_268 : Atomic Ivy MMO Source Documentation 
     AIM_977 : BFJ_267 : (r13,ar9)===>( adj_dpi )populate
     AIM_976 : BFJ_266 : (r13,ar9)===>( adjacent r13 ) test
     AIM_975 : BFJ_265 : (r13,ar9)===>( adj_r13 || adj_dpi )
