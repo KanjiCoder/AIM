@@ -27,6 +27,10 @@
 
     Do we have ring blasts yet ?
 
+
+    AIM_929 : BFJ_273 : Wire Up   HUNKRIN unit test
+    AIM_928 : BFJ_272 : Beginning HUNKRIN unit test 
+
     AIM_981 : BFJ_271 : Misc Hunk Vector Member Refactor
     AIM_980 : BFJ_270 : ar9_r13 and ar9_dpi tests done.
     AIM_979 : BFJ_269 : Atomic Ivy MMO Source Documentation
