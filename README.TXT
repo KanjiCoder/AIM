@@ -31,221 +31,243 @@
     AIM_### : BFJ_### : UAK : Unittest_Answer_Key ( more )
 
 
-    AIM_995 : BFJ_285 : This unit test is a disaster
-    AIM_994 : BFJ_284 : Cross check shared corner DPI values
-    AIM_993 : BFJ_283 : Calculate shared corner DPI values
-    AIM_992 : BFJ_282 : More[ F_HUNKRIN_UTM ]Code
-    AIM_991 : BFJ_281 : ALLBASE & ALLSEEK UTM Bodies
-    AIM_990 : BFJ_280 : ALLBASE & ALLSEEK System Stubs
-    AIM_989 : BFJ_279 :
-    AIM_988 : BFJ_278 :
-    AIM_987 : BFJ_277 : NOT_A_MISTAKE_THESE_ARE_THE_SAME
-    AIM_986 : BFJ_276 : REORDER : BOM[SEEK|BASE],FAD[SEEK|BASE]
-    AIM_985 : BFJ_275 : Train De-Railed : GEOSEEK & GEOBASE
-    AIM_984 : BFJ_274 : UAK : Unittest_Answer_Key (stubbed)
-    AIM_983 : BFJ_273 : Wire Up   HUNKRIN unit test
-    AIM_982 : BFJ_272 : Beginning HUNKRIN unit test 
-    AIM_981 : BFJ_271 : Misc Hunk Vector Member Refactor
-    AIM_980 : BFJ_270 : ar9_r13 and ar9_dpi tests done.
-    AIM_979 : BFJ_269 : Atomic Ivy MMO Source Documentation
-    AIM_978 : BFJ_268 : Atomic Ivy MMO Source Documentation 
-    AIM_977 : BFJ_267 : (r13,ar9)===>( adj_dpi )populate
-    AIM_976 : BFJ_266 : (r13,ar9)===>( adjacent r13 ) test
-    AIM_975 : BFJ_265 : (r13,ar9)===>( adj_r13 || adj_dpi )
-    AIM_974 : BFJ_264 : Calculate[ vec_dpi ]AND[ vec_r13 ].
-    AIM_973 : BFJ_263 : AR9 And HV4 Enumerations
-    AIM_972 : BFJ_262 : Batch Your Drawing Calls
-    AIM_971 : BFJ_261 : Added Enumeration Section To Engine
-    AIM_970 : BFJ_260 : Atomic Ivy Source Code Docs
-    AIM_969 : BFJ_259 : Atomic Ivy Source Code Docs
-    AIM_968 : BFJ_258 : Atomic Ivy Source Code Docs
-    AIM_967 : BFJ_257 : Atomic Ivy Source Code Docs
-    AIM_966 : BFJ_256 : Atomic Ivy Source Code Docs
-    AIM_965 : BFJ_255 : Atomic Ivy Source Code Docs
-    AIM_964 : BFJ_254 : Atomic Ivy Source Code Docs
-    AIM_963 : BFJ_253 : Atomic Ivy Source Code Docs
-    AIM_962 : BFJ_252 : Atomic Ivy Source Code Docs
-    AIM_961 : BFJ_251 : Atomic Ivy Source Code Docs
-    AIM_960 : BFJ_250 : Atomic Ivy Source Code Docs
-    AIM_959 : BFJ_249 : IMPRINT : Logging Core Logic ? ? ? ? 
-    AIM_958 : BFJ_248 : IMPRINT : Line Buffer Static Data
-    AIM_957 : BFJ_247 : IMPRINT : Tile Map Console Logger
-    AIM_956 : BFJ_246 : BOMAREA : Simulation Test Finished
-    AIM_955 : BFJ_245 : BOMAREA : Finishing Detonator Funcs 
-    AIM_954 : BFJ_244 : BOMAREA : BLASTIN Struct Loading
-    AIM_953 : BFJ_243 : BOMAREA : Detonator Preludes
-    AIM_952 : BFJ_242 : BOMAREA : Box Blast Simulation Code
-    AIM_951 : BFJ_241 : Atomic Ivy MMO Game Engine Docs 
-    AIM_950 : BFJ_240 : Atomic Ivy MMO Game Engine Docs
-    AIM_949 : BFJ_239 : BOMAREA : Ring Blast Algorithm
-    AIM_948 : BFJ_238 : BOMAREA : Lazer Box Sub Types 
-    AIM_947 : BFJ_237 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_946 : BFJ_236 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_945 : BFJ_235 : Blastin Struct
-    AIM_944 : BFJ_234 : BOMAREA : Blast Bound Table Checks
-    AIM_943 : BFJ_233 : BOMAREA : Blast Bounds Lookup Tables
-    AIM_942 : BFJ_232 : BOMAREA : All UTM Stubs Stubbed In
-    AIM_941 : BFJ_231 : BOMAREA : Simulation Blast Helpers
-    AIM_940 : BFJ_230 : BOMAREA : Seeding The Simulation
-    AIM_939 : BFJ_229 : BOMAREA : Unit Test Simulation Work
-    AIM_938 : BFJ_228 : BOMAREA_INI && BOMAREA_UTM Stubs
-    AIM_937 : BFJ_227 : Bomb Category Consts and Lookup Tables
-    AIM_936 : BFJ_226 : SYSTEMS : V16GEOM , V16BOMB , V16FADA
-    AIM_935 : BFJ_225 : BOMBAREA Unit Test Arrays ( UTA )
-    AIM_934 : BFJ_224 : New Sub System : BOMBAREA
-    AIM_933 : BFJ_223 : Monkey Wrench Macros And Sanity Checks
-    AIM_932 : BFJ_222 : F_DACAFAD_CACACHE_BINFADA Implementation
-    AIM_931 : BFJ_221 : BOMTHOT Fada Tile Cache Update
-    AIM_930 : BFJ_220 : DACAFAD SubSystem Stubbed In
-    AIM_929 : BFJ_219 : EFC_AIB work - RING EXPLOSION
-    AIM_928 : BFJ_218 : EFC_SPK work.
-    AIM_927 : BFJ_217 : T_LXY & T_AXY Top Level Structs
-    AIM_926 : BFJ_216 : Hunker Switchboard / Routing
-    AIM_925 : BFJ_215 : HUK and HUKAREA top level types.
-    AIM_924 : BFJ_214 : Stubbing in the HUNK Systems
-    AIM_923 : BFJ_213 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_922 : BFJ_212 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_921 : BFJ_211 : Maybe we tweak lazer settings ? ?? ?
-    AIM_920 : BFJ_210 : Varying Fada SubType Behaviors
-    AIM_919 : BFJ_209 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_918 : BFJ_208 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_917 : BFJ_207 : Configure a NON-ZERO cooldown time
-    AIM_916 : BFJ_206 : Re-Triggerable / Re-Trippable Sparkers
-    AIM_915 : BFJ_205 : Refractory Period Rendering Code #2
-    AIM_914 : BFJ_204 : Refractory Period Rendering Code #1
-    AIM_913 : BFJ_203 : Letter Box Area Click Error Fix 
-    AIM_912 : BFJ_202 : Editor Controller Swap Cam Bug Fix
-    AIM_911 : BFJ_201 : Alter Bomb State After It Explodes
-    AIM_910 : BFJ_200 : BOMB_COOLDOWN_PERIOD
+    NINJACODER_ __BRAVE________________________________________  
+    KANJICODER_ __TORCH________________________________________
+    WEEBCODER__ __MIDORI_______________________________________
 
-    AIM_909 : FRABUCK : Flood Fill Brush Part _P_
-    AIM_908 : FRABUCK : Flood Fill Brush Part _O_
-    AIM_907 : FRABUCK : Flood Fill Brush Part _N_
-    AIM_906 : FRABUCK : Flood Fill Brush Part _M_
-    AIM_905 : FRABUCK : Flood Fill Brush Part _L_
-    AIM_904 : FRABUCK : Flood Fill Brush Part _K_
-    AIM_903 : FRABUCK : Flood Fill Brush Part _J_
-    AIM_902 : FRABUCK : Flood Fill Brush Part _I_
+    BEGIN_UPLOADS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    AIM_901 : PLACE_HOLDER ( For What's To Come Summary )
-    AIM_900 : NEXT_PLAYLIST ( KANJI_010|NINJA_010|WEEBU_010 )
-    AIM_899 : BFJ_199 : BITGEOM , BITBOMB , BITFADA
-    AIM_898 : BFJ_198 : Consistent Chain Reactions
-    AIM_897 : BFJ_197 : Assymetric Chain Reactions
-    AIM_896 : BFJ_196 : Very Buggy Chain Reactions
-    AIM_895 : BFJ_195 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_894 : BFJ_194 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_893 : BFJ_193 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_892 : BFJ_192 : Sucessive "B" Presses In Edit Mode
-    AIM_891 : BFJ_191 : Bomb State Rendering Code 
-    AIM_890 : BFJ_190 : BOMTHOT Bomb Setter Final Bug Fixes
-    AIM_889 : BFJ_189 : Returning[ o_dpxy128 ]
-    AIM_888 : BFJ_188 : BOMTHOT [dpx,dpy] calculations
-    AIM_887 : BFJ_187 : BOMTHOT Dont Set Bombs In Void Rooms
-    AIM_886 : BFJ_186 : BOMTHOT bomcent flag + return dpi
-    AIM_885 : BFJ_185 : BOMTHOT Binary Bomb Payload
-    AIM_884 : BFJ_184 : Procedural Diamond Inheritance 
-    AIM_883 : BFJ_183 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_882 : BFJ_182 : Click Position To World Position
-    AIM_881 : BFJ_181 : Y-Axis Math : Pixel To Plank Unit
-    AIM_880 : BFJ_180 : X-Axis Math : Pixel To Plank Unit
-    AIM_879 : BFJ_179 : CLIMATH Sub System Stub In
-    AIM_878 : BFJ_178 : FAM Click Handler Body
-    AIM_877 : BFJ_177 : fam_la3 added to game state object
-    AIM_876 : BFJ_176 : Flame Shape , Damage , Effects
-    AIM_875 : BFJ_175 : SIMFIRE signature and body work
-    AIM_874 : BFJ_174 : Bomb Explosion Settings - Lazer Boxes
-    AIM_873 : BFJ_173 : Bomb Explosion Settings - Box Bombs
-    AIM_872 : BFJ_172 : Bomb Explosion Settings - Spark Pins
-    AIM_871 : BFJ_171 : Half Baked Bomb Magnitude Tables
-    AIM_870 : BFJ_170 : Game Mode GPU Texture Sync
-    AIM_869 : BFJ_169 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_868 : BFJ_168 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_867 : BFJ_167 : Steal Johan's Electric Keyboard 
+   AIM_1000 : NEXT PLAYLIST                                     DEC 27, 2024  
+    AIM_999 : BFJ_289 : Atomic Ivy MMO Documentation            DEC 26, 2024
+    AIM_998 : BFJ_288 : Atomic Ivy MMO Documentation            DEC 25, 2024
+    AIM_997 : BFJ_287 : Atomic Ivy MMO Documentation            DEC 24, 2024
+    AIM_996 : BFJ_286 : Atomic Ivy MMO Documentation            DEC 23, 2024
+    AIM_995 : BFJ_285 : This unit test is a disaster            DEC 22, 2024
+    AIM_994 : BFJ_284 : Cross check shared corner DPI values    DEC 21, 2024
+    AIM_993 : BFJ_283 : Calculate shared corner DPI values      DEC 20, 2024
+    AIM_992 : BFJ_282 : More[ F_HUNKRIN_UTM ]Code               DEC 19, 2024
+    AIM_991 : BFJ_281 : ALLBASE & ALLSEEK UTM Bodies            DEC 18, 2024   
 
-    AIM_866 : BFJ_166 : Set That SL*TTY Pixel Down
-    AIM_865 : BFJ_165 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_864 : BFJ_164 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_863 : BFJ_163 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_862 : BFJ_162 : BOMTHOT Only Put FADA In Center Hotel
-    AIM_861 : BFJ_161 : BOMTHOT Fada Tile Putter Stub
-    AIM_860 : BFJ_160 : BOMTHOT system added
-    AIM_859 : BFJ_159 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_858 : BFJ_158 : Stateless tile pos code stub
+    AIM_990 : BFJ_280 : ALLBASE & ALLSEEK System Stubs          DEC 17, 2024
+    AIM_989 : BFJ_279 : Atomic Ivy MMO Source Documentation     DEC 16, 2024
+    AIM_988 : BFJ_278 : Atomic Ivy MMO Source Documentation     DEC 15, 2024
+    AIM_987 : BFJ_277 : NOT_A_MISTAKE_THESE_ARE_THE_SAME        DEC 14, 2024
+    AIM_986 : BFJ_276 : REORDER : BOM[SEEK|BASE],FAD[SEEK|BASE] DEC 13, 2024  
+    AIM_985 : BFJ_275 : Train De-Railed : GEOSEEK & GEOBASE     DEC 12, 2024
+    AIM_984 : BFJ_274 : UAK : Unittest_Answer_Key (stubbed)     DEC 11, 2024
+    AIM_983 : BFJ_273 : Wire Up   HUNKRIN unit test             DEC 10, 2024
+    AIM_982 : BFJ_272 : Beginning HUNKRIN unit test             DEC 09, 2024
+    AIM_981 : BFJ_271 : Misc Hunk Vector Member Refactor        DEC 08, 2024
+    AIM_980 : BFJ_270 : ar9_r13 and ar9_dpi tests done.         DEC 07, 2024
+    AIM_979 : BFJ_269 : Atomic Ivy MMO Source Documentation     DEC 06, 2024
+    AIM_978 : BFJ_268 : Atomic Ivy MMO Source Documentation     DEC 05, 2024
+    AIM_977 : BFJ_267 : (r13,ar9)→( adj_dpi )populate           DEC 04, 2024
+    AIM_976 : BFJ_266 : (r13,ar9)→( adjacent r13 ) test         DEC 03, 2024
+                                                                 
+    AIM_975 : BFJ_265 : (r13,ar9)→( adj_r13 || adj_dpi )        DEC 02, 2024 UPLOADED
+    AIM_974 : BFJ_264 : Calculate[ vec_dpi ]AND[ vec_r13 ].     DEC 01, 2024 UPLOADED
+    AIM_973 : BFJ_263 : AR9 And HV4 Enumerations                NOV 30, 2024 UPLOADED
+    AIM_972 : BFJ_262 : Batch Your Drawing Calls                NOV 29, 2024 UPLOADED
+    AIM_971 : BFJ_261 : Added Enumeration Section To Engine     NOV 28, 2024 UPLOADED
+    AIM_970 : BFJ_260 : Atomic Ivy Source Code Docs             NOV 27, 2024 UPLOADED
+    AIM_969 : BFJ_259 : Atomic Ivy Source Code Docs             NOV 26, 2024 UPLOADED
+    AIM_968 : BFJ_258 : Atomic Ivy Source Code Docs             NOV 25, 2024 UPLOADED
+    AIM_967 : BFJ_257 : Atomic Ivy Source Code Docs             NOV 24, 2024 UPLOADED
+    AIM_966 : BFJ_256 : Atomic Ivy Source Code Docs             NOV 23, 2024 UPLOADED
+    AIM_965 : BFJ_255 : Atomic Ivy Source Code Docs             NOV 22, 2024 UPLOADED
+    AIM_964 : BFJ_254 : Atomic Ivy Source Code Docs             NOV 21, 2024 UPLOADED
+    AIM_963 : BFJ_253 : Atomic Ivy Source Code Docs             NOV 20, 2024 UPLOADED
+    AIM_962 : BFJ_252 : Atomic Ivy Source Code Docs             NOV 19, 2024 UPLOADED
+    AIM_961 : BFJ_251 : Atomic Ivy Source Code Docs             NOV 18, 2024 UPLOADED
 
-    AIM_857 : BFJ_157 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_856 : BFJ_156 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_855 : BFJ_155 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_854 : BFJ_154 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_853 : BFJ_153 : Mouse Master Click Drag Any Refactor
-    AIM_852 : BFJ_152 : Game Mode Vs Edit Mode Mouse Refactor
-    AIM_851 : BFJ_151 : Finally Adding[ d_bommoth_onn ].
-    AIM_850 : BFJ_150 : Keyboard Emulator Fixes
-    AIM_849 : BFJ_149 : F_KEYALTS_EVT_KEY supports a-z
-    AIM_848 : BFJ_148 : KEYALT Function Code
-    AIM_847 : BFJ_147 : New System : KEYALT
-    AIM_846 : BFJ_146 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_845 : BFJ_145 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_844 : BFJ_144 : New Systems : FADSEEK & FADBASE
-    AIM_843 : BFJ_143 : Basic Data Visitation Loop Logic
-    AIM_842 : BFJ_142 : Simulation Mode Enumerations
-    AIM_841 : BFJ_141 : BOMSEEK & BOMBASE
-    AIM_840 : BFJ_140 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_839 : BFJ_139 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_838 : BFJ_138 : BUGCHAN lookup tables.
-    AIM_837 : BFJ_137 : Color Channel Splitting Algorithm
-    AIM_836 : BFJ_136 : Stubbed In : BUGCHAN
-    AIM_835 : BFJ_135 : FIOPUNK Can Load 2048_X_2048 Now
-    AIM_834 : BFJ_134 : Stubbed In : WEBPURL & BATKLAY
-    AIM_833 : BFJ_133 : femilod calcs for femi336 render
-    AIM_832 : BFJ_132 : Parallax Bug Fixed, PUN is PUG Now
-    AIM_831 : BFJ_131 : Temporal Anti-Aliasing On Grid
-    AIM_830 : BFJ_130 : Random Sample Cood Function Part 2
-    AIM_829 : BFJ_129 : Random 2D Sample Coord Function
-    AIM_828 : BFJ_128 : Stateless Sudo Random Integers
-    AIM_827 : BFJ_127 : Fading the femi336 tiles 
-    AIM_826 : BFJ_126 : Void Echo Fix - Glass
-    AIM_825 : BFJ_125 : Void Echo Fix - Main Geometric Elements
 
-    AIM_824 : BFJ_124 : Composite Femi336 Onto Ean's Grid
-    AIM_823 : BFJ_123 : The Final Femi336 Sample Coord
-    AIM_822 : BFJ_122 : Femi336 Half Baked Texel Fetch
-    AIM_821 : BFJ_121 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_820 : BFJ_120 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_819 : BFJ_119 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_818 : BFJ_118 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_817 : BFJ_117 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_816 : BFJ_116 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_815 : BFJ_115 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_814 : BFJ_114 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_813 : BFJ_113 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_812 : BFJ_112 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_811 : BFJ_111 : Atomic Ivy MMO ( Source Code Docs )
-    AIM_810 : BFJ_110 : Atomic Ivy MMO ( Source Code Docs )
 
-    AIM_809 : FRABUCK : Flood Fill Brush Part _H_
-    AIM_808 : FRABUCK : Flood Fill Brush Part _G_
-    AIM_807 : FRABUCK : Flood Fill Brush Part _F_
-    AIM_806 : FRABUCK : Flood Fill Brush Part _E_
-    AIM_805 : FRABUCK : Flood Fill Brush Part _D_
-    AIM_804 : FRABUCK : Flood Fill Brush Part _C_
-    AIM_803 : FRABUCK : Flood Fill Brush Part _B_
-    AIM_802 : FRABUCK : Flood Fill Brush Part _A_
+    AIM_960 : BFJ_250 : Atomic Ivy Source Code Docs             NOV 17, 2024 UPLOADED
+    AIM_959 : BFJ_249 : IMPRINT : Logging Core Logic ? ? ? ?    NOV 16, 2024 UPLOADED
+    AIM_958 : BFJ_248 : IMPRINT : Line Buffer Static Data       NOV 15, 2024 UPLOADED
+    AIM_957 : BFJ_247 : IMPRINT : Tile Map Console Logger       NOV 14, 2024 UPLOADED
+    AIM_956 : BFJ_246 : BOMAREA : Simulation Test Finished      NOV 13, 2024 UPLOADED
+    AIM_955 : BFJ_245 : BOMAREA : Finishing Detonator Funcs     NOV 12, 2024 UPLOADED
+    AIM_954 : BFJ_244 : BOMAREA : BLASTIN Struct Loading        NOV 11, 2024 UPLOADED
+    AIM_953 : BFJ_243 : BOMAREA : Detonator Preludes            NOV 10, 2024 UPLOADED
+    AIM_952 : BFJ_242 : BOMAREA : Box Blast Simulation Code     NOV 09, 2024 UPLOADED
+    AIM_951 : BFJ_241 : Atomic Ivy MMO Game Engine Docs         NOV 08, 2024 UPLOADED
+    AIM_950 : BFJ_240 : Atomic Ivy MMO Game Engine Docs         NOV 07, 2024 UPLOADED
+    AIM_949 : BFJ_239 : BOMAREA : Ring Blast Algorithm          NOV 06, 2024 UPLOADED
+    AIM_948 : BFJ_238 : BOMAREA : Lazer Box Sub Types           NOV 05, 2024 UPLOADED
+    AIM_947 : BFJ_237 : Atomic Ivy MMO ( Source Code Docs )     NOV 04, 2024 UPLOADED
+    AIM_946 : BFJ_236 : Atomic Ivy MMO ( Source Code Docs )     NOV 03, 2024 UPLOADED
 
-    AIM_801 : What's to come summary video for playlist 9
+    AIM_945 : BFJ_235 : Blastin Struct                          NOV 02, 2024 UPLOADED
+    AIM_944 : BFJ_234 : BOMAREA : Blast Bound Table Checks      NOV 01, 2024 UPLOADED
+    AIM_943 : BFJ_233 : BOMAREA : Blast Bounds Lookup Tables    OCT 31, 2024 UPLOADED
+    AIM_942 : BFJ_232 : BOMAREA : All UTM Stubs Stubbed In      OCT 30, 2024 UPLOADED
+    AIM_941 : BFJ_231 : BOMAREA : Simulation Blast Helpers      OCT 29, 2024 UPLOADED
+    AIM_940 : BFJ_230 : BOMAREA : Seeding The Simulation        OCT 28, 2024 UPLOADED
+    AIM_939 : BFJ_229 : BOMAREA : Unit Test Simulation Work     OCT 27, 2024 UPLOADED
+    AIM_938 : BFJ_228 : BOMAREA_INI && BOMAREA_UTM Stubs        OCT 26, 2024 UPLOADED
+    AIM_937 : BFJ_227 : Bomb Category Consts and Lookup Tables  OCT 25, 2024 UPLOADED
+    AIM_936 : BFJ_226 : SYSTEMS : V16GEOM , V16BOMB , V16FADA   OCT 24, 2024 UPLOADED
+    AIM_935 : BFJ_225 : BOMBAREA Unit Test Arrays ( UTA )       OCT 23, 2024 UPLOADED
+    AIM_934 : BFJ_224 : New Sub System : BOMBAREA               OCT 22, 2024 UPLOADED
+    AIM_933 : BFJ_223 : Monkey Wrench Macros And Sanity Checks  OCT 21, 2024 UPLOADED
+    AIM_932 : BFJ_222 : F_DACAFAD_CACACHE_BINFADA ImplementationOCT 20, 2024 UPLOADED
+    AIM_931 : BFJ_221 : BOMTHOT Fada Tile Cache Update          OCT 19, 2024 UPLOADED
+
+    AIM_930 : BFJ_220 : DACAFAD SubSystem Stubbed In            OCT 18, 2024 UPLOADED
+    AIM_929 : BFJ_219 : EFC_AIB work - RING EXPLOSION           OCT 17, 2024 UPLOADED
+    AIM_928 : BFJ_218 : EFC_SPK work.                           OCT 16, 2024 UPLOADED
+    AIM_927 : BFJ_217 : T_LXY & T_AXY Top Level Structs         OCT 15, 2024 UPLOADED
+    AIM_926 : BFJ_216 : Hunker Switchboard / Routing            OCT 14, 2024 UPLOADED
+    AIM_925 : BFJ_215 : HUK and HUKAREA top level types.        OCT 13, 2024 UPLOADED
+    AIM_924 : BFJ_214 : Stubbing in the HUNK Systems            OCT 12, 2024 UPLOADED
+    AIM_923 : BFJ_213 : Atomic Ivy MMO ( Source Code Docs )     OCT 11, 2024 UPLOADED
+    AIM_922 : BFJ_212 : Atomic Ivy MMO ( Source Code Docs )     OCT 10, 2024 UPLOADED
+    AIM_921 : BFJ_211 : Maybe we tweak lazer settings ? ?? ?    OCT 09, 2024 UPLOADED
+    AIM_920 : BFJ_210 : Varying Fada SubType Behaviors          OCT 08, 2024 UPLOADED
+    AIM_919 : BFJ_209 : Atomic Ivy MMO ( Source Code Docs )     OCT 07, 2024 UPLOADED
+    AIM_918 : BFJ_208 : Atomic Ivy MMO ( Source Code Docs )     OCT 06, 2024 UPLOADED
+    AIM_917 : BFJ_207 : Configure a NON-ZERO cooldown time      OCT 05, 2024 UPLOADED
+    AIM_916 : BFJ_206 : Re-Triggerable / Re-Trippable Sparkers  OCT 04, 2024 UPLOADED
+
+    AIM_915 : BFJ_205 : Refractory Period Rendering Code #2     OCT 03, 2024 UPLOADED
+    AIM_914 : BFJ_204 : Refractory Period Rendering Code #1     OCT 02, 2024 UPLOADED
+    AIM_913 : BFJ_203 : Letter Box Area Click Error Fix         OCT 01, 2024 UPLOADED
+    AIM_912 : BFJ_202 : Editor Controller Swap Cam Bug Fix      SEP 30, 2024 UPLOADED
+    AIM_911 : BFJ_201 : Alter Bomb State After It Explodes      SEP 29, 2024 UPLOADED
+    AIM_910 : BFJ_200 : BOMB_COOLDOWN_PERIOD                    SEP 28, 2024 UPLOADED
+    AIM_909 : FRABUCK : Flood Fill Brush Part _P_               SEP 27, 2024 UPLOADED
+    AIM_908 : FRABUCK : Flood Fill Brush Part _O_               SEP 26, 2024 UPLOADED
+    AIM_907 : FRABUCK : Flood Fill Brush Part _N_               SEP 25, 2024 UPLOADED
+    AIM_906 : FRABUCK : Flood Fill Brush Part _M_               SEP 24, 2024 UPLOADED
+    AIM_905 : FRABUCK : Flood Fill Brush Part _L_               SEP 23, 2024 UPLOADED
+    AIM_904 : FRABUCK : Flood Fill Brush Part _K_               SEP 22, 2024 UPLOADED
+    AIM_903 : FRABUCK : Flood Fill Brush Part _J_               SEP 21, 2024 UPLOADED
+    AIM_902 : FRABUCK : Flood Fill Brush Part _I_               SEP 20, 2024 UPLOADED
+    AIM_901 : PLACE_HOLDER ( For What's To Come Summary )       SEP 19, 2024 UPLOADED
+
+    AIM_900 : NEXT_PLAYLIST ( KANJI_010|NINJA_010|WEEBU_010 )   SEP 18, 2024
+    AIM_899 : BFJ_199 : BITGEOM , BITBOMB , BITFADA             SEP 17, 2024
+    AIM_898 : BFJ_198 : Consistent Chain Reactions              SEP 16, 2024
+    AIM_897 : BFJ_197 : Assymetric Chain Reactions              SEP 15, 2024
+    AIM_896 : BFJ_196 : Very Buggy Chain Reactions              SEP 14, 2024
+    AIM_895 : BFJ_195 : Atomic Ivy MMO ( Source Code Docs )     SEP 13, 2024
+    AIM_894 : BFJ_194 : Atomic Ivy MMO ( Source Code Docs )     SEP 12, 2024
+    AIM_893 : BFJ_193 : Atomic Ivy MMO ( Source Code Docs )     SEP 11, 2024
+    AIM_892 : BFJ_192 : Sucessive "B" Presses In Edit Mode      SEP 10, 2024
+    AIM_891 : BFJ_191 : Bomb State Rendering Code               SEP 09, 2024
+                                                                            
+    AIM_890 : BFJ_190 : BOMTHOT Bomb Setter Final Bug Fixes     SEP 08, 2024
+    AIM_889 : BFJ_189 : Returning[ o_dpxy128 ]                  SEP 07, 2024
+    AIM_888 : BFJ_188 : BOMTHOT [dpx,dpy] calculations          SEP 06, 2024
+    AIM_887 : BFJ_187 : BOMTHOT Dont Set Bombs In Void Rooms    SEP 05, 2024
+    AIM_886 : BFJ_186 : BOMTHOT bomcent flag + return dpi       SEP 04, 2024
+                                                                            
+    AIM_885 : BFJ_185 : BOMTHOT Binary Bomb Payload             SEP 03, 2024
+    AIM_884 : BFJ_184 : Procedural Diamond Inheritance          SEP 02, 2024
+    AIM_883 : BFJ_183 : Atomic Ivy MMO ( Source Code Docs )     SEP 01, 2024
+    AIM_882 : BFJ_182 : Click Position To World Position        Aug 31, 2024
+    AIM_881 : BFJ_181 : Y-Axis Math : Pixel To Plank Unit       Aug 30, 2024
+    AIM_880 : BFJ_180 : X-Axis Math : Pixel To Plank Unit       Aug 29, 2024
+    AIM_879 : BFJ_179 : CLIMATH Sub System Stub In              Aug 28, 2024
+    AIM_878 : BFJ_178 : FAM Click Handler Body                  Aug 27, 2024
+    AIM_877 : BFJ_177 : fam_la3 added to game state object      Aug 26, 2024
+    AIM_876 : BFJ_176 : Flame Shape , Damage , Effects          Aug 25, 2024
+
+
+
+    AIM_875 : BFJ_175 : SIMFIRE signature and body work         Aug 24, 2024 UPLOADED
+    AIM_874 : BFJ_174 : Bomb Explosion Settings - Lazer Boxes   Aug 23, 2024 UPLOADED
+    AIM_873 : BFJ_173 : Bomb Explosion Settings - Box Bombs     Aug 22, 2024 UPLOADED
+    AIM_872 : BFJ_172 : Bomb Explosion Settings - Spark Pins    Aug 21, 2024 UPLOADED
+    AIM_871 : BFJ_171 : Half Baked Bomb Magnitude Tables        Aug 20, 2024 UPLOADED
+    AIM_870 : BFJ_170 : Game Mode GPU Texture Sync              Aug 19, 2024 UPLOADED
+    AIM_869 : BFJ_169 : Atomic Ivy MMO ( Source Code Docs )     Aug 18, 2024 UPLOADED
+    AIM_868 : BFJ_168 : Atomic Ivy MMO ( Source Code Docs )     Aug 17, 2024 UPLOADED
+    AIM_867 : BFJ_167 : Steal Johan's Electric Keyboard         Aug 16, 2024 UPLOADED
+    AIM_866 : BFJ_166 : Set That SL*TTY Pixel Down              Aug 15, 2024 UPLOADED
+    AIM_865 : BFJ_165 : Atomic Ivy MMO ( Source Code Docs )     Aug 14, 2024 UPLOADED
+    AIM_864 : BFJ_164 : Atomic Ivy MMO ( Source Code Docs )     Aug 13, 2024 UPLOADED
+    AIM_863 : BFJ_163 : Atomic Ivy MMO ( Source Code Docs )     Aug 12, 2024 UPLOADED
+    AIM_862 : BFJ_162 : BOMTHOT Only Put FADA In Center Hotel   Aug 11, 2024 UPLOADED
+    AIM_861 : BFJ_161 : BOMTHOT Fada Tile Putter Stub           Aug 10, 2024 UPLOADED
+
+    AIM_860 : BFJ_160 : BOMTHOT system added                    Aug 09, 2024 UPLOADED
+    AIM_859 : BFJ_159 : Atomic Ivy MMO ( Source Code Docs )     Aug 08, 2024 UPLOADED
+    AIM_858 : BFJ_158 : Stateless tile pos code stub            Aug 07, 2024 UPLOADED
+    AIM_857 : BFJ_157 : Atomic Ivy MMO ( Source Code Docs )     Aug 06, 2024 UPLOADED
+    AIM_856 : BFJ_156 : Atomic Ivy MMO ( Source Code Docs )     Aug 05, 2024 UPLOADED
+    AIM_855 : BFJ_155 : Atomic Ivy MMO ( Source Code Docs )     Aug 04, 2024 UPLOADED
+    AIM_854 : BFJ_154 : Atomic Ivy MMO ( Source Code Docs )     Aug 03, 2024 UPLOADED
+    AIM_853 : BFJ_153 : Mouse Master Click Drag Any Refactor    Aug 02, 2024 UPLOADED
+    AIM_852 : BFJ_152 : Game Mode Vs Edit Mode Mouse Refactor   Aug 01, 2024 UPLOADED
+    AIM_851 : BFJ_151 : Finally Adding[ d_bommoth_onn ].        Jul 31, 2024 UPLOADED
+    AIM_850 : BFJ_150 : Keyboard Emulator Fixes                 Jul 30, 2024 UPLOADED
+    AIM_849 : BFJ_149 : F_KEYALTS_EVT_KEY supports a-z          Jul 29, 2024 UPLOADED
+    AIM_848 : BFJ_148 : KEYALT Function Code                    Jul 28, 2024 UPLOADED
+    AIM_847 : BFJ_147 : New System : KEYALT                     Jul 27, 2024 UPLOADED
+    AIM_846 : BFJ_146 : Atomic Ivy MMO ( Source Code Docs )     Jul 26, 2024 UPLOADED
+
+    AIM_845 : BFJ_145 : Atomic Ivy MMO ( Source Code Docs )     Jul 25, 2024 UPLOADED
+    AIM_844 : BFJ_144 : New Systems : FADSEEK & FADBASE         Jul 24, 2024 UPLOADED
+    AIM_843 : BFJ_143 : Basic Data Visitation Loop Logic        Jul 23, 2024 UPLOADED
+    AIM_842 : BFJ_142 : Simulation Mode Enumerations            Jul 22, 2024 UPLOADED
+    AIM_841 : BFJ_141 : BOMSEEK & BOMBASE                       Jul 21, 2024 UPLOADED
+    AIM_840 : BFJ_140 : Atomic Ivy MMO ( Source Code Docs )     Jul 20, 2024 UPLOADED
+    AIM_839 : BFJ_139 : Atomic Ivy MMO ( Source Code Docs )     Jul 19, 2024 UPLOADED
+    AIM_838 : BFJ_138 : BUGCHAN lookup tables.                  Jul 18, 2024 UPLOADED
+    AIM_837 : BFJ_137 : Color Channel Splitting Algorithm       Jul 17, 2024 UPLOADED
+    AIM_836 : BFJ_136 : Stubbed In : BUGCHAN                    Jul 16, 2024 UPLOADED
+    AIM_835 : BFJ_135 : FIOPUNK Can Load 2048_X_2048 Now        Jul 15, 2024 UPLOADED
+    AIM_834 : BFJ_134 : Stubbed In : WEBPURL & BATKLAY          Jul 14, 2024 UPLOADED
+    AIM_833 : BFJ_133 : femilod calcs for femi336 render        Jul 13, 2024 UPLOADED
+    AIM_832 : BFJ_132 : Parallax Bug Fixed, PUN is PUG Now      Jul 12, 2024 UPLOADED
+    AIM_831 : BFJ_131 : Temporal Anti-Aliasing On Grid          Jul 11, 2024 UPLOADED
+
+    AIM_830 : BFJ_130 : Random Sample Cood Function Part 2      Jul 10, 2024 UPLOADED
+    AIM_829 : BFJ_129 : Random 2D Sample Coord Function         Jul 09, 2024 UPLOADED
+    AIM_828 : BFJ_128 : Stateless Sudo Random Integers          Jul 08, 2024 UPLOADED
+    AIM_827 : BFJ_127 : Fading the femi336 tiles                Jul 07, 2024 UPLOADED
+    AIM_826 : BFJ_126 : Void Echo Fix - Glass                   Jul 06, 2024 UPLOADED
+    AIM_825 : BFJ_125 : Void Echo Fix - Main Geometric Elements Jul 05, 2024 UPLOADED
+    AIM_824 : BFJ_124 : Composite Femi336 Onto Ean's Grid       Jul 04, 2024 UPLOADED
+    AIM_823 : BFJ_123 : The Final Femi336 Sample Coord          Jul 03, 2024 UPLOADED
+    AIM_822 : BFJ_122 : Femi336 Half Baked Texel Fetch          Jul 02, 2024 UPLOADED
+    AIM_821 : BFJ_121 : Atomic Ivy MMO ( Source Code Docs )     Jul 01, 2024 UPLOADED
+    AIM_820 : BFJ_120 : Atomic Ivy MMO ( Source Code Docs )     Jun 30, 2024 UPLOADED
+    AIM_819 : BFJ_119 : Atomic Ivy MMO ( Source Code Docs )     Jun 29, 2024 UPLOADED
+    AIM_818 : BFJ_118 : Atomic Ivy MMO ( Source Code Docs )     Jun 28, 2024 UPLOADED
+    AIM_817 : BFJ_117 : Atomic Ivy MMO ( Source Code Docs )     Jun 27, 2024 UPLOADED
+    AIM_816 : BFJ_116 : Atomic Ivy MMO ( Source Code Docs )     Jun 26, 2024 UPLOADED
+
+    AIM_815 : BFJ_115 : Atomic Ivy MMO ( Source Code Docs )     Jun 25, 2024 UPLOADED
+    AIM_814 : BFJ_114 : Atomic Ivy MMO ( Source Code Docs )     Jun 24, 2024 UPLOADED
+    AIM_813 : BFJ_113 : Atomic Ivy MMO ( Source Code Docs )     Jun 23, 2024 UPLOADED
+    AIM_812 : BFJ_112 : Atomic Ivy MMO ( Source Code Docs )     Jun 22, 2024 UPLOADED
+    AIM_811 : BFJ_111 : Atomic Ivy MMO ( Source Code Docs )     Jun 21, 2024 UPLOADED
+    AIM_810 : BFJ_110 : Atomic Ivy MMO ( Source Code Docs )     Jun 20, 2024 UPLOADED
+    AIM_809 : FRABUCK : Flood Fill Brush Part _H_               Jun 19, 2024 UPLOADED
+    AIM_808 : FRABUCK : Flood Fill Brush Part _G_               Jun 18, 2024 UPLOADED
+    AIM_807 : FRABUCK : Flood Fill Brush Part _F_               Jun 17, 2024 UPLOADED
+    AIM_806 : FRABUCK : Flood Fill Brush Part _E_               Jun 16, 2024 UPLOADED
+    AIM_805 : FRABUCK : Flood Fill Brush Part _D_               Jun 15, 2024 UPLOADED
+    AIM_804 : FRABUCK : Flood Fill Brush Part _C_               Jun 14, 2024 UPLOADED
+    AIM_803 : FRABUCK : Flood Fill Brush Part _B_               Jun 13, 2024 UPLOADED
+    AIM_802 : FRABUCK : Flood Fill Brush Part _A_               Jun 12, 2024 UPLOADED
+    AIM_801 : What's to come summary video for playlist 9       Jun 11, 2024 UPLOADED
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-    AIM_800 : NEXT PLAYLIST VIDEO                               Jun 10, 2024  
-    AIM_799 : BFJ_109 : TODO : Delete TILESOB keep TATSOBO      Jun 09, 2024  
-    AIM_798 : BFJ_108 : Calc New U32 , Put Into LadyPix         Jun 08, 2024  
-    AIM_797 : BFJ_107 : Where Is Our Data Pixel ?               Jun 07, 2024  
-    AIM_796 : BFJ_106 : TATLADY data pixel location math        Jun 06, 2024  
-    AIM_795 : BFJ_105 : New Systems[ TATLADY,TATSOBO,TATFEMI ]  Jun 05, 2024  
-    AIM_794 : BFJ_104 : FEMI336 Support In EDIC002              Jun 04, 2024  
-    AIM_793 : BFJ_103 : EDIC002 Control Remodelling             Jun 03, 2024  
-    AIM_792 : BFJ_102 : Calling F_MIPTILE_TILEMAG_KD7           Jun 02, 2024  
-    AIM_791 : BFJ_101 : Bilinear Downscale Loop For Mip-Maps    Jun 01, 2024  
+    AIM_800 : NEXT PLAYLIST VIDEO                               Jun 10, 2024 UPLOADED
+    AIM_799 : BFJ_109 : TODO : Delete TILESOB keep TATSOBO      Jun 09, 2024 UPLOADED
+    AIM_798 : BFJ_108 : Calc New U32 , Put Into LadyPix         Jun 08, 2024 UPLOADED
+    AIM_797 : BFJ_107 : Where Is Our Data Pixel ?               Jun 07, 2024 UPLOADED
+    AIM_796 : BFJ_106 : TATLADY data pixel location math        Jun 06, 2024 UPLOADED
+    AIM_795 : BFJ_105 : New Systems[ TATLADY,TATSOBO,TATFEMI ]  Jun 05, 2024 UPLOADED
+    AIM_794 : BFJ_104 : FEMI336 Support In EDIC002              Jun 04, 2024 UPLOADED
+    AIM_793 : BFJ_103 : EDIC002 Control Remodelling             Jun 03, 2024 UPLOADED
+    AIM_792 : BFJ_102 : Calling F_MIPTILE_TILEMAG_KD7           Jun 02, 2024 UPLOADED
+    AIM_791 : BFJ_101 : Bilinear Downscale Loop For Mip-Maps    Jun 01, 2024 UPLOADED
                                                                               
     AIM_790 : BFJ_100 : Bilinear Downscale Vars For Mip-Maps    May 31, 2024 UPLOADED
     AIM_789 : BFJ_099 : Even Divisibility Check                 May 30, 2024 UPLOADED
@@ -326,14 +348,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     AIM_718 : BFJ_058 : ARTGIRL+RULGEOM : v16_sb2 L.U.T.        Mar 20, 2024 UPLOADED
     AIM_717 : BFJ_057 : ARTGIRL - db2_zak Lookup Table          Mar 19, 2024 UPLOADED
     AIM_716 : BFJ_056 : ABOMB08 - Fada Damage Level Icons       Mar 18, 2024 UPLOADED
-
-    WEEBCODER__  
-    NINJACODER_  
-    KANJICODER_ 
-
-    BEGIN_UPLOADS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       
-
     AIM_715 : BFJ_055 : ABOMB08 - States Of Matter On Fire      Mar 17, 2024
     AIM_714 : BFJ_054 : ARTGIRL - Geom Colors By State          Mar 16, 2024
     AIM_713 : BFJ_053 : ARTGIRL - Some Tiles May Vanish         Mar 15, 2024
@@ -1121,3 +1136,19 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         www.tinyurl.com/WEEBU-010
 
 //:========================================:_TRIPLE_PLAYLIST_://
+//:_HOW_MANY_MONTHS_:========================================://
+
+    JAN : 31
+    FEB : 28
+    MAR : 31
+    APR : 30
+    MAY : 31
+    JUN : 30
+    JUL : 31
+    AUG : 31
+    SEP : 30
+    OCT : 31
+    NOV : 30
+    DEC : 31
+
+//:========================================:_HOW_MANY_MONTHS_://
