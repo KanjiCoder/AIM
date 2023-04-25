@@ -2,6 +2,9 @@
     Fractal Bucket (FRABUCK) Scratch Pad :
 ================================================================
 
+    TODO: Error check inputs , trygrow object reference.
+    TODO: Trygrow members needs more members.
+
     #_TRACK_TILE_POSITION_# : Needs to use something that will
                             : seed the first generation.
 

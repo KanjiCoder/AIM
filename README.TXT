@@ -37,6 +37,12 @@
 
     BEGIN_UPLOADS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+   AIM_1008 : FRABUCK : Flood Fill Brush Part _W_
+   AIM_1007 : FRABUCK : Flood Fill Brush Part _V_
+   AIM_1006 : FRABUCK : Flood Fill Brush Part _U_
+   AIM_1005 : FRABUCK : Flood Fill Brush Part _T_
+   AIM_1004 : FRABUCK : Flood Fill Brush Part _S_
+   AIM_1003 : FRABUCK : Flood Fill Brush Part _R_
    AIM_1002 : FRABUCK : Flood Fill Brush Part _Q_
    AIM_1001 : PLACE_HOLDER
 
