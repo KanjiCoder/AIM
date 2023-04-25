@@ -1,0 +1,96 @@
+================================================================ 
+    Fractal Bucket (FRABUCK) Scratch Pad :
+================================================================
+
+    #_TRACK_TILE_POSITION_# : Needs to use something that will
+                            : seed the first generation.
+
+    0 === c_ee4_top
+    1 === c_ee4_rig
+    2 === c_ee4_bot
+    3 === c_ee4_lef
+
+    d_ee4_nox
+    d_ee4_noy
+
+    F_FRABUCK_BUCKPUT
+    F_FRABUCK_BUCKGET
+    F_FRABUCK_FIL
+    F_TATSOBO_BITPACK_U32
+    F_FRABUCK_TRYGROW
+
+    d_frabuck_bi2_rgba512  ( double buffer for fractal bucket )
+
+    d_frabuck_bi2_rgba512[ 0 ]=( d_mp0_512 )
+    d_frabuck_bi2_rgba512[ 1 ]=( d_mp1_512 )
+
+    [ d _ frabuck_trygrow ]
+    [                     ]
+    [  .m_________gro_h3x ]
+    [  .m_________gro_h3y ]
+    [                     ]
+    [  .m_________gro_te7 ]
+    [  .m_________gro_la3 ]
+    [  .m_________gro_gtx ]
+    [  .m_________gro_gty ]
+    [                     ]
+    [  .m_________gro_nox ]
+    [  .m_________gro_noy ]
+    [                     ]
+    [  .m_________gro_u32 ]
+    [  .m_________gro_wam ]
+    [                     ]
+    [  .m_____gro_bok_geo ]
+    [  .m_____gro_bok_bom ]
+    [  .m_____gro_bok_fad ]
+    
+    [ d _ frabuck_outgrow ]
+    [                     ]
+    [  .m_________gro_o_k ]
+    [  .m_________gro_num ]
+    [                     ]
+    [  .m_________gro_te7 ]
+    [  .m_________gro_la3 ]
+    [  .m_________gro_gtx ]
+    [  .m_________gro_gty ]
+
+
+    [ d _ frabuck_buf_put ]
+    [                     ]
+    [  .m_________buk_buf ]
+    [  .m_________buk_len ]
+    [                     ]
+    [  .m_________buk_te7 ]
+    [  .m_________buk_la3 ]
+    [  .m_________buk_gtx ]
+    [  .m_________buk_gty ]
+    ///////////////////////
+    [ d _ frabuck_buf_get ]
+    [  .m_________buk_buf ]
+    [  .m_________buk_dex ]
+    ///////////////////////
+    [ d _ frabuck_buf_got ]
+    [  .m_________buk_te7 ]
+    [  .m_________buk_la3 ]
+    [  .m_________buk_gtx ]
+    [  .m_________buk_gty ]
+
+    c_sob_vod
+    c_sob_see
+    c_sob_rok
+    c_sob_kil
+
+    c_maskgeo
+    c_maskbom
+    c_masksob
+    c_maskfad
+
+    b0i
+    b1i
+
+    b0i_len
+    b1i_len
+
+    b0i_dex
+    b1i_dex
+   
