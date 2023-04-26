@@ -37,6 +37,8 @@
 
     BEGIN_UPLOADS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+   AIM_1010 : BFJ_290 : I Forget Where We Left Off Dude
+   AIM_1009 : FRABUCK : Flood FIll Brush Part _X_
    AIM_1008 : FRABUCK : Flood Fill Brush Part _W_
    AIM_1007 : FRABUCK : Flood Fill Brush Part _V_
    AIM_1006 : FRABUCK : Flood Fill Brush Part _U_
