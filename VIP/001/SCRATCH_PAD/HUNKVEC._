@@ -1,0 +1,47 @@
+        
+
+    
+    t_hunkvec //////////
+                    ////
+        m_ar9_r13   ////
+        m_ar9_dpi   ////
+                    ////
+        m_hvf_e     ////
+                    ////
+        m_hvo_x     ////
+        m_hvo_y     ////
+                    ////
+        m_hvm_x     ////
+        m_hvm_y     ////
+                    ////
+        m_hvs_x     ////
+        m_hvs_y     ////
+                    ////
+    ////////////////////
+
+
+            h_v =( i_hunktet.m_hunkvec_arr[ hv4 ] );             // [972][--------]
+                                                                 // [972][--------]
+            ///( "[WHAT_ROOM_ARE_THE_VECTORS_IN]" );             // [1_016][972][--------]
+
+            /// dpihead =( h_v.m_ar9_dpi );
+                hvf     =( h_v.m_hvf_e   );
+
+            if( 0+e_hunkvec_hvf_bad+0 === hvf ){
+
+                ERR( "[$_EXPLICITLY_WRONG_HVF_$]" );
+            }else
+            if( 0+e_hunkvec_hvf_bod+0 === hvf ){
+
+                ERR( "[$_NEVER_DO_THIS_USE_ALL_$]" );
+            }else
+            if( 0+e_hunkvec_hvf_edg+0 === hvf ){
+
+
+            }else
+            if( 0+e_hunkvec_hvf_all+0 === hvf ){
+
+
+            }else{
+                ERR( "[UNKNOWN_BUT_BAD]" );
+            };;
