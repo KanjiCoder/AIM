@@ -1,0 +1,23 @@
+
+
+    TODO : WRITTEN_ON : 2023.04.27
+
+        1. ma3 : Material types of which there are 3
+    
+            0 : weak and flammables
+            1 : types that leave climable shrapnel
+            2 : Invincible moving and invincible static
+
+        2. ma5 : Material types of which there are 5
+
+            0 : weak    
+            1 : flammable
+            2 : leaves climbable shrapnel
+            3 : invincible falling
+            4 : invincible static
+
+        3. Optimized seeking through simulation's bombs
+           by using a linked-list-array-hybrid.
+
+
+            
