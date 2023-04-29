@@ -28,25 +28,41 @@
     Do we have ring blasts yet ?
 
 
-    AIM_### : BFJ_### : UAK : Unittest_Answer_Key ( more )
-
+ 
+    AIM_1028 : BFJ_308 : LAZERAY Constructor Function
+    AIM_1027 : BFJ_307 : LAZERAY,LAZERRA,LAZETET,LAZELAZ,LAZEJAX
+    AIM_1026 : BFJ_306 : Atomic Ivy Engine Documentation
+    AIM_1025 : BFJ_305 : Atomic Ivy Engine Documentation
+    AIM_1024 : BFJ_304 : Atomic Ivy Engine Documentation
+    AIM_1023 : BFJ_303 : Atomic Ivy Engine Documentation
+    AIM_1022 : BFJ_302 : Atomic Ivy Engine Documentation
+    AIM_1021 : BFJ_301 : Atomic Ivy Engine Documentation
+    AIM_1020 : BFJ_300 : Atomic Ivy Engine Documentation
+    AIM_1019 : BFJ_299 : Atomic Ivy Engine Documentation
+    AIM_1018 : BFJ_298 : Atomic Ivy Engine Documentation
+    AIM_1017 : BFJ_297 : Atomic Ivy Engine Documentation
+    AIM_1016 : BFJ_296 : Atomic Ivy Engine Documentation
+    AIM_1015 : BFJ_295 : Atomic Ivy Engine Documentation
+    AIM_1014 : BFJ_294 : Atomic Ivy Engine Documentation
+    AIM_1013 : BFJ_293 : Atomic Ivy Engine Documentation
+    AIM_1012 : BFJ_292 : Atomic Ivy Engine Documentation
+    AIM_1011 : BFJ_291 : Atomic Ivy Engine Documentation
+    AIM_1010 : BFJ_290 : I Forget Where We Left Off Dude
+    AIM_1009 : FRABUCK : Flood FIll Brush Part _X_
+    AIM_1008 : FRABUCK : Flood Fill Brush Part _W_
+    AIM_1007 : FRABUCK : Flood Fill Brush Part _V_
+    AIM_1006 : FRABUCK : Flood Fill Brush Part _U_
+    AIM_1005 : FRABUCK : Flood Fill Brush Part _T_
+    AIM_1004 : FRABUCK : Flood Fill Brush Part _S_
+    AIM_1003 : FRABUCK : Flood Fill Brush Part _R_
+    AIM_1002 : FRABUCK : Flood Fill Brush Part _Q_
+    AIM_1001 : PLACE_HOLDER
 
     NINJACODER_ __BRAVE________________________________________  
     KANJICODER_ __TORCH________________________________________
     WEEBCODER__ __MIDORI_______________________________________
 
     BEGIN_UPLOADS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-   AIM_1010 : BFJ_290 : I Forget Where We Left Off Dude
-   AIM_1009 : FRABUCK : Flood FIll Brush Part _X_
-   AIM_1008 : FRABUCK : Flood Fill Brush Part _W_
-   AIM_1007 : FRABUCK : Flood Fill Brush Part _V_
-   AIM_1006 : FRABUCK : Flood Fill Brush Part _U_
-   AIM_1005 : FRABUCK : Flood Fill Brush Part _T_
-   AIM_1004 : FRABUCK : Flood Fill Brush Part _S_
-   AIM_1003 : FRABUCK : Flood Fill Brush Part _R_
-   AIM_1002 : FRABUCK : Flood Fill Brush Part _Q_
-   AIM_1001 : PLACE_HOLDER
 
    AIM_1000 : NEXT PLAYLIST                                     DEC 27, 2024  
     AIM_999 : BFJ_289 : Atomic Ivy MMO Documentation            DEC 26, 2024
