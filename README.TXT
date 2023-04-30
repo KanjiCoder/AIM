@@ -28,7 +28,8 @@
     Do we have ring blasts yet ?
 
 
- 
+    AIM_1030 : BJF_310 : LAZETET Constructor Function
+    AIM_1029 : BFJ_309 : LAZERRA Constructor Function
     AIM_1028 : BFJ_308 : LAZERAY Constructor Function
     AIM_1027 : BFJ_307 : LAZERAY,LAZERRA,LAZETET,LAZELAZ,LAZEJAX
     AIM_1026 : BFJ_306 : Atomic Ivy Engine Documentation
