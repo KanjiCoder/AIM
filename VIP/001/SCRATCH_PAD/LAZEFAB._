@@ -1,0 +1,62 @@
+LAZELAZ:
+
+    m_laz_r13  
+    m_laz_te7  
+    m_laz_llx  
+    m_laz_lly  
+               
+    m_laz_ee4  
+                 
+LAZEJAX:
+
+    m_jax_r13
+    m_jax_te7
+    m_jax_llx
+    m_jax_lly
+             
+    m_jax_x_0
+    m_jax_x_1
+    m_jax_y_0
+    m_jax_y_1
+
+LAZEFAB :
+
+    d_lazefab_laz_top
+    d_lazefab_laz_rig
+    d_lazefab_laz_bot
+    d_lazefab_laz_lef
+    
+    d_lazefab_jax_pin
+    d_lazefab_jax_ver
+    d_lazefab_jax_hor
+    d_lazefab_jax_all
+    d_lazefab_jax_kil
+
+RULBOMB :
+
+    d_rulbomb_v16_x_0
+    d_rulbomb_v16_x_1
+    d_rulbomb_v16_y_0
+    d_rulbomb_v16_y_1
+
+
+V16BOMB :
+
+    c_v16bomb_sparjax
+    c_v16bomb_sparbox
+    c_v16bomb_sparing
+                     
+    c_v16bomb_lazerx1
+    c_v16bomb_lazery1
+    c_v16bomb_lazerx0
+    c_v16bomb_lazery0
+                     
+    c_v16bomb_jax2ver
+    c_v16bomb_jax2hor
+    c_v16bomb_jax4way
+    c_v16bomb_jaxikil
+                     
+    c_v16bomb_box2ver
+    c_v16bomb_box2hor
+    c_v16bomb_box4way
+    c_v16bomb_boxikil
