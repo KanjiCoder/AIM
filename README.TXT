@@ -27,6 +27,10 @@
 
     Do we have ring blasts yet ?
 
+    AIM_1034 : BFJ_314 : LAZEFAB Pre-Fab Initializer Body
+
+    AIM_1033 : BFJ_313 : LAZEFAB System ( LAZE pre-fabs )
+    AIM_1032 : BFJ_312 : LAZEJAX Constructor Function
     AIM_1031 : BFJ_311 : LAZELAZ Constructor Function
     AIM_1030 : BJF_310 : LAZETET Constructor Function
     AIM_1029 : BFJ_309 : LAZERRA Constructor Function
