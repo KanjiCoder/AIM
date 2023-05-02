@@ -1,0 +1,17 @@
+
+
+LAZEJAX :
+
+    t_lazejax :----+ 
+                   |
+        m_jax_r13  |
+        m_jax_te7  |
+                   |
+        m_jax_llx  | <--- Level_Local.X
+        m_jax_lly  | <--- Level_Local.Y
+                   |
+        m_jax_x_0  |
+        m_jax_x_1  |
+        m_jax_y_0  |
+        m_jax_y_1  |
+    +--------------+

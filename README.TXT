@@ -27,6 +27,10 @@
 
     Do we have ring blasts yet ?
 
+    AIM_1038 : BFJ_319 : Me From Myself. Because I am about
+    AIM_1037 : BFJ_318 : Me Insane. Someone Please Help Save
+    AIM_1036 : BFJ_316 : Taking Forever And It Is Driving
+    AIM_1035 : BFJ_315 : The Bombs For Josh Task Has Been
     AIM_1034 : BFJ_314 : LAZEFAB Pre-Fab Initializer Body
     AIM_1033 : BFJ_313 : LAZEFAB System ( LAZE pre-fabs )
     AIM_1032 : BFJ_312 : LAZEJAX Constructor Function
