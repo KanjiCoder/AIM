@@ -10,8 +10,43 @@ LAZEJAX :
         m_jax_llx  | <--- Level_Local.X
         m_jax_lly  | <--- Level_Local.Y
                    |
+        m_jax_dpi  |
+        m_jax_b16  |
+                   |
         m_jax_x_0  |
         m_jax_x_1  |
         m_jax_y_0  |
         m_jax_y_1  |
     +--------------+
+
+LAZETET :
+
+    t_lazetet :----+
+                   |
+        m_arm_x_0  |
+        m_arm_x_1  |
+        m_arm_y_0  |
+        m_arm_y_1  |
+                   |
+        m_has_hor  |
+        m_has_ver  |
+                   |
+        m_tet_llx  |
+        m_tet_lly  |
+    +--------------+
+
+    d_dacafad_bombv16_r08_g08_b08_a08
+
+
+LAZERRA :
+
+    t_lazerra :
+
+        m_tip_arr [ lazeray .... lazeray ]
+        m_tip_cap
+        m_tip_num
+        
+        m_tip_r08 < < < < REMOVE_THIS
+        m_tip_g08 < < < < REMOVE_THIS
+        m_tip_b08 < < < < REMOVE_THIS
+        m_tip_a08 < < < < REMOVE_THIS

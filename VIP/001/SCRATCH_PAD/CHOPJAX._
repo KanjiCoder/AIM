@@ -1,0 +1,30 @@
+
+
+
+    CHOPJAX
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+
+        let slp ; //: @slp@ : SLice_Pointer      ://
+        let sp0 ; //: @sp0@ : slp.INCLUSIVE_START://
+        let sp1 ; //: @sp1@ : slp.INCLUSIVE_END  ://
+
+        if( o_lazetet.m_has_hor >= 1 ){
+
+            sp0 =( llx-0x1);
+            sp1 =( llx-jx0);
+            o_lazetet.m_arm_x_0
+    
+        };;
+        if( o_lazetet.m_has_ver >= 1 ){
+
+
+
+        };;
+
+
+////////////////////////////////////////////////////////////////
