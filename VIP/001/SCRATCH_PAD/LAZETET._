@@ -28,10 +28,10 @@ LAZERRA :
     m_tip_cap
     m_tip_num
 
-    m_tip_r08
-    m_tip_g08
-    m_tip_b08
-    m_tip_a08
+    m_tip_r08 <--- We got rid of these
+    m_tip_g08 <--- We got rid of these
+    m_tip_b08 <--- We got rid of these
+    m_tip_a08 <--- We got rid of these
 
 ////////////////////////////////////////////////////////////////
 LAZERAY :
