@@ -14,6 +14,10 @@ LAZETET :
     m_tet_llx
     m_tet_lly
 
+    m_tet_dpi <-- data_pixel_index_of[ llx,lly ]
+    m_tet_te7 <-- tile_size_exponent_of_fada_tiles
+    m_tet_b16 <-- bomb_that_created_this_explosion
+
 ////////////////////////////////////////////////////////////////
 LAZERRA :
 
