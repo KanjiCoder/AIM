@@ -50,3 +50,12 @@ LAZERRA :
         m_tip_g08 < < < < REMOVE_THIS
         m_tip_b08 < < < < REMOVE_THIS
         m_tip_a08 < < < < REMOVE_THIS
+
+
+LAZERAY :
+
+    t_lazeray :
+
+        m_ray_dpi
+        m_ray_jmp
+        m_ray_osi
