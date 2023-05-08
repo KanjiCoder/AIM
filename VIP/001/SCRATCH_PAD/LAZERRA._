@@ -23,4 +23,8 @@
         m_ray_jmp
         m_ray_osi
 
+    NOT:M_RAY_TE7 <<< We don't need to know the tile size
+                      here because we know the starting 
+                      pixel and how far to jump.
+
 ////////////////////////////////////////////////////////////////
