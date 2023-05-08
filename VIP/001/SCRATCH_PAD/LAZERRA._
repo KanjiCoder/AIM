@@ -1,0 +1,26 @@
+////////////////////////////////////////////////////////////////
+
+    LAZERRA :
+
+        t_lazerra :
+    
+           m_tip_arr :
+
+                NEW_LAZERAY()
+                NEW_LAZERAY()
+                NEW_LAZERAY()
+                NEW_LAZERAY()
+                NEW_LAZERAY()
+
+            m_tip_cap
+            m_tip_num
+
+////////////////////////////////////////////////////////////////
+
+    LAZERAY :
+
+        m_ray_dpi
+        m_ray_jmp
+        m_ray_osi
+
+////////////////////////////////////////////////////////////////
