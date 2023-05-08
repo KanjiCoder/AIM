@@ -1,5 +1,10 @@
       
 
+            let roc =( 0-666 /** @roc@:Room_Offset_Cur **/);     // [1_067][--=--]
+            let ros =(   0   /** $_ROOM_OS_START_DEX_$ **/);     // [1_067][--=--]
+                                                                 // [1_067][--=--]
+            let ro_ =( null  /** @ro_@:Ray_Object      **/);     // [1_067][--=--]
+
             let has_fan_1st ; //:$_HAS_FANCY_FIRST_FLAG_$://     // [1_067][--=--]
 
 
