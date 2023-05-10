@@ -23,8 +23,20 @@
         m_ray_jmp
         m_ray_osi
 
+        m_geo_dpi <<< New : Geometry_Pixel_Index
+
+ 
+
+
     NOT:M_RAY_TE7 <<< We don't need to know the tile size
                       here because we know the starting 
                       pixel and how far to jump.
+
+                      UPDATE : While that is __TRUE__ we 
+                             : need to know[ te7 ]to
+                             : derive how to seek to
+                             : the geometry layer. Unless...
+                             : We add a variable just for
+                             : seeking to geometry layer?
 
 ////////////////////////////////////////////////////////////////
