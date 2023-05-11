@@ -2,6 +2,10 @@
 
     TODO : WRITTEN_ON : 2023.04.27
 
+        0. REFAC_ORDER:VOD_ALT_INV < REFACTOR AND RENAME
+                                     THE TABLE TAGED WITH
+                                     "VOD_ALT_INV"
+
         1. ma3 : Material types of which there are 3
     
             0 : weak and flammables
