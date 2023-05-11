@@ -25,3 +25,11 @@
            categories.
 
         5. RENAME/REFACTOR : F_EVT_N10 ==> F_EVT_N10_PADNUMS
+
+        6. What is this all about ?
+
+            c_keyfamd_cabybak  < < <  IMPLEMENTED ?
+            c_keyfamd_cabxbak  < < <  IMPLEMENTED ?
+                               < < <  IMPLEMENTED ?
+            c_keyfamd_cabynex  < < <  IMPLEMENTED ?
+            c_keyfamd_cabxnex  < < <  IMPLEMENTED ?
