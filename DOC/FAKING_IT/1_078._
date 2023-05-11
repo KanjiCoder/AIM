@@ -1,0 +1,67 @@
+
+
+[1_078]
+
+
+        rx0=( 0 ); rx1 =( lat-1 );
+        ry0=( 0 ); ry1 =( lat-1 );
+
+                                                                 // [1_078]
+        for(rsy=ry0 ; rsy <= ry1 ; rsy++){ //:::::[_RSX_RSY_]:// // [1_078]
+        for(rsx=rx0 ; rsx <= rx1 ; rsx++){ //:::::[_RSX_RSY_]:// // [1_078]
+
+            ERR( "[NEXT_VIDEO:1_079]" );; //: < < < < < < < < < < < < < NOTICE_ME_SENPAI [1_079]
+            
+        };;};; //:NEXT[ rsx,rxy ]:::::::::::::::::[_RSX_RSY_]:// // [1_079]
+
+
+
+
+
+
+            dpx=( lox+rsx ); //:AKA[ dpx=( lox+llx ):::::://
+            dpy=( loy+rsy ); //:AKA[ dpy=( loy+lly ):::::://
+
+            dpi=( dpx + ( dpy * 2048 ) );;;;;;;;;;;;;;;;;;;;
+            dpc=( dpi * 4 );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+            tilef16 =( mereset[ dpc+0 ] ); //:V16_ON_FADA://    
+            tilef16 =( tilef16 >>> 4    ); //:ZERO_TO_015://
+
+            if(0+tilef16+0 === 0x00 ){
+
+                /** ************************************ **/
+                /** Do nothing, zero fada v16 means      **/
+                /** no fada tile information is here.    **/
+                /** The 28 Timestamp bits __MIGHT__ be   **/
+                /** encoding some other type of data     **/
+                /** you shouldn't be touching.           **/
+                /** $_IDEA_FRAGILE_COLLECTABLE_100_PER_$ **/
+                /** ************************************ **/
+            }else
+            if(0+tilef16+0 >= 1 && tilef16 <= 15 ){
+
+            }else{
+                ERR( "[WTF_MY_MATE]" );
+            };;
+
+
+
+    $_IDEA_FRAGILE_COLLECTABLE_100_PER_$ :--------------------+  // [1_078]
+                                                              |  // [1_078]
+        @IDEA@ @100_PERCENT@ @100PERCENT@ @PERCENT@           |  // [1_078]
+               @100_PERCENT_RUN_IDEA@ @RUN_IDEA@              |  // [1_078]
+               @IDEA_RUN@ @FRAGILE@ @COLLECTABLES@            |  // [1_078]
+               @COLLECT@ @DROPS@ @PICKUPS@ @PICKUP@           |  // [1_078]
+                                                              |  // [1_078]
+        Because of the way this "fast reset" works,           |  // [1_078]
+        if we encode "Fragile Collectables" in the            |  // [1_078]
+        timestamp bits, a quick reset by clearing             |  // [1_078]
+        non-zero FADA_TILES will ___NOT___ bring              |  // [1_078]
+        back the FRAGILE_COLLECTABLES.                        |  // [1_078]
+                                                              |  // [1_078]
+        Lets keep it that way. It gives people an             |  // [1_078]
+        incentive to do a 100% flawless run, because          |  // [1_078]
+        it is the only way to get ALL THE STUFF.              |  // [1_078]
+                                                              |  // [1_078]
+    :--------------------: $_IDEA_FRAGILE_COLLECTABLE_100_PER_$  // [1_078]
