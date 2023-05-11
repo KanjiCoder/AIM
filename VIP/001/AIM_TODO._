@@ -10,6 +10,8 @@
            This will need some re-ordering too.
            d_rulgeom_v16_sb2 <-- needs looking at.
 
+            MATCAT__RELATED SECTION NOT REFACTORED YET.
+
 
         1. Optimized seeking through simulation's bombs
            by using a linked-list-array-hybrid.
@@ -29,5 +31,10 @@
             c_keyfamd_cabynex  < < <  IMPLEMENTED ?
             c_keyfamd_cabxnex  < < <  IMPLEMENTED ?
 
-
-
+        5. BLACK_ENERGY / DARK_ENERGY / VOID_ENERGY tiles.
+           When two different "flame types" mix , it
+           turns into "dark energy". Dark energy blasts
+           last longer than any other blast type. This 
+           is implemented to help fix the fact that only
+           one explosion type can exist at a time on the
+           tilemap.
