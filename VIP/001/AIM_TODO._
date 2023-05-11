@@ -2,6 +2,8 @@
 
     TODO : WRITTEN_ON : 2023.04.27
 
+        0. REFACTOR_NOTE_TCL <<<< Colors in wrong order now.
+
         0. REFAC_ORDER:VOD_ALT_INV < REFACTOR AND RENAME
                                      THE TABLE TAGED WITH
                                      "VOD_ALT_INV"
