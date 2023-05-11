@@ -6,34 +6,25 @@
                                      THE TABLE TAGED WITH
                                      "VOD_ALT_INV"
 
-        1. ma3 : Material types of which there are 3
-    
-            0 : weak and flammables
-            1 : types that leave climable shrapnel
-            2 : Invincible moving and invincible static
 
-        2. ma5 : Material types of which there are 5
 
-            0 : weak    
-            1 : flammable
-            2 : leaves climbable shrapnel
-            3 : invincible falling
-            4 : invincible static
-
-        3. Optimized seeking through simulation's bombs
+        1. Optimized seeking through simulation's bombs
            by using a linked-list-array-hybrid.
 
 
-        4. RE-Order The Material Types In Our BFJ shader
+        2. RE-Order The Material Types In Our BFJ shader
            so they are sorted correctly by[ ma3 ]and[ ma5 ]
            categories.
 
-        5. RENAME/REFACTOR : F_EVT_N10 ==> F_EVT_N10_PADNUMS
+        3. RENAME/REFACTOR : F_EVT_N10 ==> F_EVT_N10_PADNUMS
 
-        6. What is this all about ?
+        4. What is this all about ?
 
             c_keyfamd_cabybak  < < <  IMPLEMENTED ?
             c_keyfamd_cabxbak  < < <  IMPLEMENTED ?
                                < < <  IMPLEMENTED ?
             c_keyfamd_cabynex  < < <  IMPLEMENTED ?
             c_keyfamd_cabxnex  < < <  IMPLEMENTED ?
+
+
+
