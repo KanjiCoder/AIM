@@ -6,6 +6,9 @@
                                      THE TABLE TAGED WITH
                                      "VOD_ALT_INV"
 
+        1. SEE_TAG[ SB2_REFAC_ME ].
+           This will need some re-ordering too.
+           d_rulgeom_v16_sb2 <-- needs looking at.
 
 
         1. Optimized seeking through simulation's bombs
