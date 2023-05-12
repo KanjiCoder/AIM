@@ -27,8 +27,69 @@
 
     Do we have ring blasts yet ?
 
-    AIM_1038 : BFJ_319 : Me From Myself. Because I am about
-    AIM_1037 : BFJ_318 : Me Insane. Someone Please Help Save
+
+
+
+
+    AIM_1090 : BFJ_370
+    AIM_1089 : BFJ_369
+    AIM_1088 : BFJ_368
+    AIM_1087 : BFJ_367
+    AIM_1086 : BFJ_366 : Lazer Blast Drill Chipping
+    AIM_1085 : BFJ_365
+    AIM_1084 : BFJ_364
+    AIM_1083 : BFJ_363
+    AIM_1082 : BFJ_362
+    AIM_1081 : BFJ_361
+
+    AIM_1080 : BFJ_360
+    AIM_1079 : BFJ_359
+    AIM_1078 : BFJ_358
+    AIM_1077 : BFJ_357
+    AIM_1076 : BFJ_356
+    AIM_1075 : BFJ_355
+    AIM_1074 : BFJ_354
+    AIM_1073 : BFJ_353
+    AIM_1072 : BFJ_352
+    AIM_1071 : BFJ_351
+
+    AIM_1070 : BFJ_350
+    AIM_1069 : BFJ_349
+    AIM_1068 : BFJ_348
+    AIM_1067 : BFJ_347
+    AIM_1066 : BFJ_346
+    AIM_1065 : BFJ_345
+    AIM_1064 : BFJ_344
+    AIM_1063 : BFJ_343
+    AIM_1062 : BFJ_342
+    AIM_1061 : BFJ_341
+
+    AIM_1060 : BFJ_340
+    AIM_1059 : BFJ_339
+    AIM_1058 : BFJ_338
+    AIM_1057 : BFJ_337
+    AIM_1056 : BFJ_336
+    AIM_1055 : BFJ_335
+    AIM_1054 : BFJ_334
+    AIM_1053 : BFJ_333
+    AIM_1052 : BFJ_332
+    AIM_1051 : BFJ_331
+
+    AIM_1050 : BFJ_330
+    AIM_1049 : BFJ_329
+    AIM_1048 : BFJ_328
+    AIM_1047 : BFJ_327
+    AIM_1046 : BFJ_326
+    AIM_1045 : BFJ_325
+    AIM_1044 : BFJ_324
+    AIM_1043 : BFJ_323
+    AIM_1042 : BFJ_322
+    AIM_1041 : BFJ_321
+
+    AIM_1040 : BFJ_320
+    AIM_1039 : BFJ_319
+    AIM_1038 : BFJ_318 : Me From Myself. Because I am about
+    AIM_1037 : BFJ_317 : Me Insane. Someone Please Help Save
     AIM_1036 : BFJ_316 : Taking Forever And It Is Driving
     AIM_1035 : BFJ_315 : The Bombs For Josh Task Has Been
     AIM_1034 : BFJ_314 : LAZEFAB Pre-Fab Initializer Body
