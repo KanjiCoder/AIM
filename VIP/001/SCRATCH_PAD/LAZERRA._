@@ -24,7 +24,7 @@
         m_ray_osi
 
         m_geo_dpi <<< New : Geometry_Pixel_Index
-
+        m_bom_dpi <<< New : Bomb_____Pixel_Index
  
 
 
