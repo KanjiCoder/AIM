@@ -32,6 +32,12 @@
 
  //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1097 : BFJ_377 : Lazer Back Stop Spark Pins
+    AIM_1096 : BFJ_376 :
+    AIM_1095 : BFJ_375 :
+    AIM_1094 : BFJ_374 :
+    AIM_1093 : BFJ_373 :
+    AIM_1092 : BFJ_372 :
     AIM_1091 : BFJ_371 : Box Bombs Can Now Cross Boarders
     AIM_1090 : BFJ_370
     AIM_1089 : BFJ_369
