@@ -1,0 +1,99 @@
+        //:#_GET_GEOM_G16_V_#:[1_099]:-------------------://
+
+            let g16     =( (i_mem[ (i_gpi*0)+0 ])>>>4  );
+
+        //:-------------------:#_GET_GEOM_G16_V_#:[1_099]://
+        //:#_GET_FADA_PASSS_#:[1_099]:-------------------://
+
+            let fadpass_g16 =( d_fadajax_g16_pas[ g16 ] );
+
+            if( fadpass_g16 >= 1 ){
+
+                /** If the "In Tact" version of a     *****/
+                /** material allows jax bombs to go   *****/
+                /** though it, than the destroyed     *****/
+                /** version will too.                 *****/
+                /** Thus, we don't need to know if    *****/
+                /** the material is destroyed or not. *****/
+
+                o_boe.i_brk =( 0 );
+                o_boe.i_exi =( 0 );
+                return; //:@WARNING_EARLY_EXIT@ :::::::::://
+                        //:        @EARLY_EXIT@ :::::::::://
+            };;
+
+        //:-------------------:#_GET_FADA_PASSS_#:[1_099]://
+        //:#_GET_FADA_BLOCK_#:[1_099]:-------------------://
+
+
+          
+            let fadblok_g16 =( d_g16_fadblok[ g16+0x0] );
+            let fadblok_g32 =( 0 );
+
+        //:-------------------:#_GET_FADA_BLOCK_#:[1_099]://
+        //:#_HIT_INVINCIBLE_TO_JAX_BOMB_#:[1_099]:-------://
+        if( fad_blok >= 1 ){
+
+            /** **************************************** **/
+            /** Do nothing. Fada always passes           **/
+            /** through this type of tile.               **/
+            /** **************************************** **/
+
+            fadpass_g32=( d_g32_fadpass[ g16+ 16] );
+
+        };;
+        //:-------:#_HIT_INVINCIBLE_TO_JAX_BOMB_#:[1_099]://
+        //:#_FADA_CHECK_WHEN_#:[1_099]:------------------://
+        if( fadpass <= 0 ){
+
+            let fad_com =( i_fpi * 4 );  //: $_FAD_COM_$ ://
+            let red_all =( i_mem[ fad_com+0 ] );
+            let red_hig =( red_all >>> 4 )>>>0 ;
+            let red_low =( red_all & 0xF )>>>0 ;
+
+            let f16 =( red_hig );
+            let tik =( red_low
+                    +( i_mem[ fad_com+1 ] )>>>16
+                    +( i_mem[ fad_com+2 ] )>>> 8
+                    +( i_mem[ fad_com+3 ] )>>> 0
+            );;
+
+            if( tik >= d_tik ){ //::::::::::::::[FAD_HAS]://
+
+                
+
+            };;//:::::::::::::::::::::::::::::::[FAD_HAS]://
+           
+        };;
+        //:------------------:#_FADA_CHECK_WHEN_#:[1_099]://
+
+        //:#_NOTHING_WITH_BOMBS_#:[1_099]:---------------://
+
+            if( i_bpi ){ /** NOOP **/ };
+
+        //:---------------:#_NOTHING_WITH_BOMBS_#:[1_099]://
+
+
+
+
+    $_FADA_CHECK_WHEN_$ :-------------------------------------+
+
+        Check the fada tile first to see if we are 
+        overlapping any pre-existing explosions.
+
+        $_COM_GEO_$ : Component Index for GEOM tile pixel.
+        $_GEO_COM_$ : @com_geo@ : Component - Geom tile pix.
+                    : @geo_com@ : Component - Geom tile pix.
+                    
+
+        $_COM_BOM_$ : Component Index for BOMB tile pixel.
+        $_BOM_COM_$ : @com_bom@ : Component - Geom tile pix.
+                    : @bom_com@ : Component - Geom tile pix.
+
+        $_COM_FAD_$ : Component Index for FADA tile pixel.
+        $_FAD_COM_$ : @com_fad@ : Component - Geom tile pix.
+                    : @fad_com@ : Component - Geom tile pix.
+    
+
+
+    :-------------------------------------: $_FADA_CHECK_WHEN_$ 

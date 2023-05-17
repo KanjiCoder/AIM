@@ -32,6 +32,21 @@
 
  //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1110 : BFJ_380 : LAZETET_STOPPER helper function. 
+
+    AIM_1109 : FRABUCK : Flood Fill Brush Part A_F
+    AIM_1108 : FRABUCK : Flood Fill Brush Part A_E
+    AIM_1107 : FRABUCK : Flood Fill Brush Part A_D
+    AIM_1106 : FRABUCK : Flood Fill Brush Part A_C
+    AIM_1105 : FRABUCK : Flood Fill Brush Part A_B
+    AIM_1104 : FRABUCK : Flood Fill Brush Part A_A
+    AIM_1103 : FRABUCK : Flood Fill Brush Part _Z_
+    AIM_1102 : FRABUCK : Flood Fill Brush Part _Y_
+
+    AIM_1101 : PHOLDER : Place holder video.
+    AIM_1100 : NXT_LST : Next Playlist Video.
+    AIM_1099 : BFJ_379 : fadapin , fadalaz , fadajax , fadabox
+    AIM_1098 : BFJ_378 :
     AIM_1097 : BFJ_377 : Lazer Back Stop Spark Pins
     AIM_1096 : BFJ_376 :
     AIM_1095 : BFJ_375 :
