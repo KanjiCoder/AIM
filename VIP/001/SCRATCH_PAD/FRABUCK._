@@ -8,6 +8,11 @@
     #_TRACK_TILE_POSITION_# : Needs to use something that will
                             : seed the first generation.
 
+    Left Off At : _FIND_ADJACENT_TILES_ I think....
+
+
+    d_frabuck_bird064 = F_ARR_U08_ONLYLEN(64*64)
+
     0 === c_ee4_top
     1 === c_ee4_rig
     2 === c_ee4_bot
