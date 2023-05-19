@@ -34,14 +34,14 @@
 
     AIM_1110 : BFJ_380 : LAZETET_STOPPER helper function. 
 
-    AIM_1109 : FRABUCK : Flood Fill Brush Part A_F
-    AIM_1108 : FRABUCK : Flood Fill Brush Part A_E
-    AIM_1107 : FRABUCK : Flood Fill Brush Part A_D
-    AIM_1106 : FRABUCK : Flood Fill Brush Part A_C
-    AIM_1105 : FRABUCK : Flood Fill Brush Part A_B
-    AIM_1104 : FRABUCK : Flood Fill Brush Part A_A
-    AIM_1103 : FRABUCK : Flood Fill Brush Part _Z_
-    AIM_1102 : FRABUCK : Flood Fill Brush Part _Y_
+    AIM_1109 : FRABUCK : Fractal Flood Fill (FFF) Part A_F
+    AIM_1108 : FRABUCK : Fractal Flood Fill (FFF) Part A_E
+    AIM_1107 : FRABUCK : Fractal Flood Fill (FFF) Part A_D
+    AIM_1106 : FRABUCK : Fractal Flood Fill (FFF) Part A_C
+    AIM_1105 : FRABUCK : Fractal Flood Fill (FFF) Part A_B
+    AIM_1104 : FRABUCK : Fractal Flood Fill (FFF) Part A_A
+    AIM_1103 : FRABUCK : Fractal Flood Fill (FFF) Part _Z_
+    AIM_1102 : FRABUCK : Fractal Flood Fill (FFF) Part _Y_
 
     AIM_1101 : PHOLDER : Place holder video.
     AIM_1100 : NXT_LST : Next Playlist Video.
