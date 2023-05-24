@@ -32,24 +32,24 @@
 
     $_WE_DONT_GOT_THE_FUCKING_TIME___LEF_$
 
-            ray_.m_geo_dpi=(ray_.m_ray_dpi-(lat*2048));;         // [1_114][F_I_X][F_I_X__1_114]
-            ray_.m_bom_dpi=(ray_.m_geo_dpi+(lat     ));;         // [1_114][F_I_X][F_I_X__1_114]
+            ray_.m_geo_dpi=(ray_.m_ray_dpi-(lat*2048));;         // [1_115][F_I_X][F_I_X__1_115]
+            ray_.m_bom_dpi=(ray_.m_geo_dpi+(lat     ));;         // [1_115][F_I_X][F_I_X__1_115]
 
     $_WE_DONT_GOT_THE_FUCKING_TIME___RIG_$
 
-            ray_.m_geo_dpi=(ray_.m_ray_dpi-(lat*2048));;         // [1_114][F_I_X][F_I_X__1_114]
-            ray_.m_bom_dpi=(ray_.m_geo_dpi+(lat     ));;         // [1_114][F_I_X][F_I_X__1_114]
+            ray_.m_geo_dpi=(ray_.m_ray_dpi-(lat*2048));;         // [1_115][F_I_X][F_I_X__1_115]
+            ray_.m_bom_dpi=(ray_.m_geo_dpi+(lat     ));;         // [1_115][F_I_X][F_I_X__1_115]
 
 
     $_WE_DONT_GOT_THE_FUCKING_TIME___TOP_$
 
-            ray_.m_geo_dpi=(ray_.m_ray_dpi-(lat*2048));;         // [1_114][F_I_X][F_I_X__1_114]
-            ray_.m_bom_dpi=(ray_.m_geo_dpi+(lat     ));;         // [1_114][F_I_X][F_I_X__1_114]
+            ray_.m_geo_dpi=(ray_.m_ray_dpi-(lat*2048));;         // [1_115][F_I_X][F_I_X__1_115]
+            ray_.m_bom_dpi=(ray_.m_geo_dpi+(lat     ));;         // [1_115][F_I_X][F_I_X__1_115]
 
     $_WE_DONT_GOT_THE_FUCKING_TIME___BOT_$
 
-            ray_.m_geo_dpi=(ray_.m_ray_dpi-(lat*2048));;         // [1_114][F_I_X][F_I_X__1_114]
-            ray_.m_bom_dpi=(ray_.m_geo_dpi+(lat     ));;         // [1_114][F_I_X][F_I_X__1_114]
+            ray_.m_geo_dpi=(ray_.m_ray_dpi-(lat*2048));;         // [1_115][F_I_X][F_I_X__1_115]
+            ray_.m_bom_dpi=(ray_.m_geo_dpi+(lat     ));;         // [1_115][F_I_X][F_I_X__1_115]
 
 
 
