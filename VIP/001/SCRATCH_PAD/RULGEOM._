@@ -1,0 +1,23 @@
+    
+
+    c_rulgeom_v16_nothing = (0x0)         //: Nothing Tile   ://
+                                          //:                ://
+    c_rulgeom_v16_vacglow = (0x1)         //: Light Fixture  ://
+    c_rulgeom_v16_vacsoil = (0x2)         //: Soil Tile      ://
+    c_rulgeom_v16_vacpurp = (0x3)         //: Purple Type    ://
+                                          //:                ://
+    c_rulgeom_v16_ladglow = (0x4)         //: Light Fixture  ://
+    c_rulgeom_v16_ladsoil = (0x5)         //: Soil Tile      ://
+    c_rulgeom_v16_ladpurp = (0x6)         //: Purple Type    ://
+    c_rulgeom_v16_parpurp = (0x7)         //: Purple Type    ://
+                                          //:                ://
+    c_rulgeom_v16_comsoli = (0x8)         //: Combustable    ://
+    c_rulgeom_v16_comliqu = (0x9)         //: Combustable    ://
+    c_rulgeom_v16_comvapo = (0xA)         //: Combustable    ://
+                                          //:                ://
+    c_rulgeom_v16_falmarb = (0xB)         //: Fall Marble    ://
+    c_rulgeom_v16_falbeam = (0xC)         //: Fall Beam:HOR  ://
+    c_rulgeom_v16_faliron = (0xD)         //: Fall Iron:VER  ://
+                                          //:                ://
+    c_rulgeom_v16_godvent = (0xE)         //: God Vents      ://
+    c_rulgeom_v16_godiron = (0xF)         //: God Iron       ://
