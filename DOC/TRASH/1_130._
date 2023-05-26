@@ -1,0 +1,21 @@
+if( 0xFAEBABE ){ 
+
+                        const   bpc =( (4*dpi_bom)+1 );   
+                        if( mem[bpc] <= c_f30tick_002 ){
+                            mem[bpc]+=( c_f30tick_002 );
+                        };;
+
+                    }else
+                    if( 0xBAD === 0xBAD0002 ){
+
+                        let c_d_t ;//: CoolDownTik ://
+                        c_d_t  =( mem[ (4*dpi_bom)+1 ] );;;
+                        c_d_t +=( c_f30tick_002 );;;;;;;;;;
+                        if( c_d_t > 255 ){ c_d_t = 255 ; };
+                        mem[ (4*dpi_bom)+1 ]=( c_d_t );;;;;
+                    }else
+                    if( 0xBAD === 0xBAD0001 ){
+
+                        mem[ (4*dpi_bom)+1 ]=(                                                                                    
+                                d_rulbomb_v16_cdt[ b_t ] );  
+                    };;   
