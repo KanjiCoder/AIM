@@ -28,24 +28,42 @@
     Do we have ring blasts yet ?
 
 
-
+ 
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
-    AIM_1125 : BFJ_395 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1124 : BFJ_394 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1123 : BFJ_393 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1122 : BFJ_392 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1121 : BFJ_391 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1120 : BFJ_390 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1119 : BFJ_389 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1118 : BFJ_388 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1117 : BFJ_387 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1116 : BFJ_386 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1115 : BFJ_385 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1114 : BFJ_384 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1113 : BFJ_383 : Atomic Ivy MMO Dev Log Code Log
-    AIM_1112 : BFJ_382 : Atomic Ivy MMO Dev Log Code Log
+    AIM_1143 : BFJ_413 : --------------------------------
+    AIM_1142 : BFJ_412 : IDEA : HELL RAISER SPACE FOLDING
+    AIM_1141 : BFJ_411 : --------------------------------
+    AIM_1140 : BFJ_410 : Uh oh, hear comes an idea !
+    AIM_1139 : BFJ_409 : texture texel fetches ...
+    AIM_1138 : BFJ_408 : handle massive amounts of integer
+    AIM_1137 : BFJ_407 : My guess is that the laptop cannot
+    AIM_1136 : BFJ_406 : what is wrong with the laptop ?
+    AIM_1135 : BFJ_405 : machine. So the question is...
+    AIM_1134 : BFJ_404 : graphics card on my 2017 steam 
+    AIM_1133 : BFJ_403 : desktop computer. I have a GTX960
+    AIM_1132 : BFJ_402 : old 2017 steam machine compact
+    AIM_1131 : BFJ_401 : really bad. It doesn't lag on my
+    AIM_1130 : BFJ_400 : and discovered that it was lagging
+    AIM_1129 : BFJ_399 : night I tried out the BFJ shader
+    AIM_1128 : BFJ_398 : While I was in the bathroom last
+    AIM_1127 : BFJ_397 : working on.
+    AIM_1126 : BFJ_396 : for the "Open Source MMO" we are
+    AIM_1125 : BFJ_395 : is my "Game Designer" and "Artist"
+    AIM_1124 : BFJ_394 : because of the quotes, he really
+    AIM_1123 : BFJ_393 : I don't mean that sarcastically
+    AIM_1122 : BFJ_392 : "Game Designer" and "Artist" .
+    AIM_1121 : BFJ_391 : "Bombs For Josh" , Josh Is My
+    AIM_1120 : BFJ_390 : as "BFJ" which stands for 
+    AIM_1119 : BFJ_389 : I've been working on a task known
+    AIM_1118 : BFJ_388 : known as "bomberman" .
+    AIM_1117 : BFJ_387 : lot like the HudsonSoft classic
+    AIM_1116 : BFJ_386 : We are going to make a game a
+    AIM_1115 : BFJ_385 : this idea for this engine.
+    AIM_1114 : BFJ_384 : for over 10 years I have had
+    AIM_1113 : BFJ_383 : It's for a game idea I have had
+    AIM_1112 : BFJ_382 : I am making a game engine.
     AIM_1111 : BFJ_381 : Atomic Ivy MMO Dev Log Code Log
 
     AIM_1110 : BFJ_380 : LAZETET_STOPPER helper function. 
