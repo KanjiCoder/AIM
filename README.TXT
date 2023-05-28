@@ -32,6 +32,8 @@
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1144 : BFJ_414 : POI_001 : POInt sprite research #001
+
     AIM_1143 : BFJ_413 : --------------------------------
     AIM_1142 : BFJ_412 : IDEA : HELL RAISER SPACE FOLDING
     AIM_1141 : BFJ_411 : --------------------------------

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Point Sprite</title>
+  <style>
+    #canvas {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <script type="text/javascript">
+
+    //:::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+    //:                                                      ://
+    //:  Chat GPT Wrote This Code , it doesn't seem          ://
+    //:  to work, but it was worth a shot. I think           ://
+    //:  eventually I need to understand WebGL enough        ://
+    //:  to know what is going on here.                      ://
+    //:::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+
+    // Initialize WebGL
+    const canvas = document.getElementById('canvas');
+    const gl = canvas.getContext('webgl');
+
+    // Vertex shader source code
+    const vertexShaderSource = `
+      attribute vec2 a_position;
+      attribute vec2 a_texCoord;
+
+      uniform vec2 u_resolution;
+
+      varying vec2 v_texCoord;
+
+      void main() {
+        // Convert the position to clip space
+        vec2 clipSpace = (a_position / u_resolution) * 2.0 - 1.0;
+        gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
+
+        // Pass the texture coordinate to the fragment shader
+        v_texCoord = a_texCoord;
+      }
+    `;
+
+    // Fragment shader source code
+    const fragmentShaderSource = `
+      precision mediump float;
+
+      varying vec2 v_texCoord;
+
+      void main() {
+        // Use the texture coordinate as the color
+        gl_FragColor = vec4(v_texCoord, 0, 1);
+      }
+    `;
+
+    // Create the vertex shader
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vertexShader, vertexShaderSource);
+    gl.compileShader(vertexShader);
+
+    // Create the fragment shader
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fragmentShader, fragmentShaderSource);
+    gl.compileShader(fragmentShader);
+
+    // Create the shader program
+    const program = gl.createProgram();
+    gl.attachShader(program, vertexShader);
+    gl.attachShader(program, fragmentShader);
+    gl.linkProgram(program);
+    gl.useProgram(program);
+
+    // Get the attribute and uniform locations
+    const positionAttributeLocation = gl.getAttribLocation(program, 'a_position');
+    const texCoordAttributeLocation = gl.getAttribLocation(program, 'a_texCoord');
+    const resolutionUniformLocation = gl.getUniformLocation(program, 'u_resolution');
+
+    // Create the buffer for the quad vertices
+    const positionBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+    const positions = [
+      -0.025, -0.025,
+      -0.025,  0.025,
+       0.025, -0.025,
+       0.025,  0.025
+    ];
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+
+    // Create the buffer for the quad texture coordinates
+    const texCoordBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
+    const texCoords = [
+      0, 0,
+      0, 1,
+      1, 0,
+      1, 1
+    ];
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(texCoords), gl.STATIC_DRAW);
+
+    // Set up the vertex attribute pointers
+    gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+    gl.enableVertexAttribArray(positionAttributeLocation);
+    gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
+    gl.enableVertexAttribArray(texCoordAttributeLocation);
+    gl.vertexAttribPointer(texCoordAttributeLocation, 2, gl.FLOAT, false, 0, 0);
+
+    // Set the resolution uniform
+    gl.uniform2f(resolutionUniformLocation, canvas.width, canvas.height);
+
+    // Clear the canvas
+    gl.clearColor(0, 0, 0, 1);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+
+    // Draw the quad
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  </script>
+</body>
+</html>
