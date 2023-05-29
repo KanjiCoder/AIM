@@ -1,0 +1,165 @@
+<!DOCTYPE HTML><script> ////////////////////////////// [003_POI][002_POI][001_POI]
+                                                    // [003_POI][---=---][001_POI]
+    console.log( "[_EVERYTHING_IS_OKAY_BABY_]" );   // [003_POI][002_POI][---=---]
+                                                    // [---=---]
+    //:#__GLOBALS__#:[004_POI]:==============================://
+                                                        //:[---]://
+        let d_win ; //: @win@ : Global Window Object    //:[05P][004_POI]://
+        let d_doc ; //: @doc@ : Global Document  OBJ    //:[07P]://
+        let d_bod ; //: @bod@ : Global Document_Body    //:[07P]://
+        let d_can ; //: @can@ : Global Canvas Object    //:[07P]://
+        let d_wgl ; //: @wgl@ : Global WebGL  Context   //:[07P]://
+        let d_wvc ; //: @wvc@ : Webgl_Version.CONTEXT   //:[07P]://
+        let d_wvs ; //: @wvs@ : Webgl_Version.SHADER    //:[07P]://
+                                                        //:[---]://
+        let d_pmf ; //: @pmf@ : Precision_Medium_Float  //:[09P]://
+        let d_sv1 ; //: @sv1@ : $_SRC_VERT_1_TILES_$    //:[09P]://
+        let d_sf1 ; //: @sf1@ : $_SRC_FRAG_1_TILES_$    //:[09P]://
+        let d_sv2 ; //: @sv2@ : $_SRC_VERT_2_POINT_$    //:[09P]://
+        let d_sf2 ; //: @sf2@ : $_SRC_FRAG_2_POINT_$    //:[09P]://
+                                                        //:[---]://
+    //:==============================:#__GLOBALS__#:[004_POI]:// 
+    //:#__ERROR__#:[08P]:====================================://
+    let F_ERROR =(   i_msg )=>{                      //:[08P]://
+        d_win.alert( i_msg );                        //:[08P]://
+        throw(       i_msg );                        //:[08P]://
+    };;                                              //:[08P]://
+    //:====================================:#__ERROR__#:[08P]://
+    //:#__SETUP__#:[05P]:====================================://
+    let F_SETUP =( )=>{                             //::[05P]://
+                                                    //::[05P]://
+        d_win =( window               );;;;;;;;;;;; //::[05P]://
+        d_doc =( window.document      );;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_can =( d_doc.createElement( "canvas" ) ); //::[08P][MOV][07P]://
+        d_bod =( d_doc.createElement( "body"   ) ); //::[08P]://
+        d_doc.body =( d_bod );                      //::[08P]://
+        if( d_bod != window.document.body ){        //::[08P]://
+            F_ERROR( "[_BODY_ERROR_]" );            //::[08P]://
+        };;                                         //::[08P]://
+                                                    //::[---]://
+        d_can.width=(  512 );;;;;;;;;;;;;;;;;;;;;;; //::[07P]://
+        d_can.height=( 512 );;;;;;;;;;;;;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_bod.appendChild( d_can );;;;;;;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_wvc =( "webgl2"                  );;;;;;; //::[07P]://
+        d_wvs =( "#version 300 es"         );;;;;;; //::[07P]://
+        d_wgl =( d_can.getContext( d_wvc ) );;;;;;; //::[07P]://
+                                                    //::[---]://
+        d_pmf =( "precision mediump float" );;;;;;; //::[09P]://
+        d_sv1 =( "[_$_SV1_NOT_NEEDED_$_]"  );;;;;;; //::[09P]://
+        d_sf1 =(`                                   //::[09P]://
+                                                    //::[09P]://
+            ${ d_wvs }  //: version directive   :// //::[09P]://
+            ${ d_pmf };;//: precision qualifier :// //::[09P]://
+                                                    //::[09P]://
+            void main( ){   //::::::::[_f1main_]:// //::[09P]://
+                                                    //::[09P]://
+                gl_FragColor =( vec4(1,0,0,1) );    //::[09P]://
+                                                    //::[09P]://
+            }//:::::::::::::::::::::::[_f1main_]:// //::[09P]://
+        `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[09P]://
+                                                    //::[---]://
+    };;                                             //::[05P]://
+    //:====================================:#__SETUP__#:[05P]://
+    ////////////////////////////////////////////////////////////
+    //:#__LOOP_FOREVER__#:[06P]:=============================://
+    let F_LOOP_FOREVER =( )=>{                      //::[06P]://
+                                                    //::[06P]://
+        console.log( "[ K_A_N_J_I ][ C_O_D_E_R ]" );//::[06P]://
+                                                    //::[06P]://
+        d_win.requestAnimationFrame(F_LOOP_FOREVER);//::[06P]://
+    };;                                             //::[06P]://
+    //:=============================:#__LOOP_FOREVER__#:[06P]://
+    //:#__C99_MAIN__#:[06P]:=================================://
+    let F_C99_MAIN =( )=>{                          //::[06P]://
+                                                    //::[06P]://
+        F_SETUP( ); F_LOOP_FOREVER( );              //::[06P]://
+    };;                                             //::[06P]://
+    //:=================================:#__C99_MAIN__#:[06P]://
+    //:#__CALL_MAIN__#:[06P]:================================://
+                                                    //::[06P]://
+        F_C99_MAIN( );                              //::[06P]://
+                                                    //::[06P]://
+    //:================================:#__CALL_MAIN__#:[06P]://
+                                                    // [---=---]
+/**#__DOC_SEC__#:[004_POI]:************************ ** [004_POI]
+                                                       [004_POI]
+    #__DOC_SEC__# :::::: DOCumentation_SECtion         [004_POI]
+    #__GLOBALS__# :::::: All global (filescope) vars   [004_POI]
+    #__ERROR__# :::::::: Error Function Section            [08P]
+    #__SETUP__# :::::::: 1 Time Environment Setup Code     [05P]
+                                                           [---]
+    #__LOOP_FOREVER__# : Infinite [game/render] loop       [06P]
+    #__C99_MAIN__#:::::: C99 Style Main Entry Point        [06P]
+    #__CALL_MAIN__# :::: Simulate running executable       [06P]
+                                                           [---]
+    @F_@    : Prefix used for FUNCTIONS   , UPPERCASE      [05P]
+    @d_@    : Prefix used for global DATA , lowercase      [05P]
+    @d_win@ : global window   object  _______________      [05P]
+    @d_doc@ : global document object  _______________      [07P]
+    @d_bod@ : global body     object  _______________      [07P]
+    @d_can@ : global canvas object                         [07P]
+    @d_wgl@ : global WebGL  Context                        [07P]
+    @W_V@ ::: Webgl_Version                                [07P]
+    @d_wvc@ : W_V.Context ( WGL Context Version )          [07P]
+    @d_wvs@ : W_V.Shader  ( WGL Shader  Version Directive )[07P]
+                                                           [---]
+    @d_pmf@ :::: global_data(d_) : Precious_Mediump_Float  [09P]
+    @_v1main_@ : BOGUS : No vertex shader #1 code.         [09P]
+    @_f1main_@ : Frag(shader) #1 - Main , scope marker.    [09P]
+                                                           [09P]
+    @SRC_VERT@ : source(SRC) code for VERTEX   shader.     [09P]
+    @SRC_FRAG@ : source(SRC) code for FRAGMENT shader.     [09P]
+                                                           [09P]
+    $_SRC_VERT_1_TILES_$ :--------------------------------:[09P]
+    $_SRC_FRAG_1_TILES_$ :--------------------------------:[09P]
+                                                           [09P]
+        The shader source code strings for rendering the   [09P]
+        __TILE_MAP__ behind the point sprites. This shader [09P]
+        will just be a "placeholder" shader that fills     [09P]
+        the screen some simple easy pattern using the      [09P]
+        frag coords.                                       [09P]
+                                                           [09P]
+        $_SV1_NOT_NEEDED_$ :--------------------------:    [09P]
+                                                      |    [09P]
+            d_sv1=( "$_SV1_NOT_NEEDED_$" );           |    [09P]
+                                                      |    [09P]
+            To explicitly state that we DONT_NEED     |    [09P]
+            a vertex shader to create our simple      |    [09P]
+            tile map renderer, as we can partition    |    [09P]
+            the 2D screen space using nothing but     |    [09P]
+            "gl_FragCoord".                           |    [09P]
+                                                      |    [09P]
+        :--------------------------: $_SV1_NOT_NEEDED_$    [09P]
+                                                           [09P]
+        @d_sv1@ : global_DATA(d_) - Shader(src)Vertex   #1 [09P]
+        @d_sf1@ : global_DATA(d_) - Shader(src)Fragment #1 [09P]
+                                                           [09P]
+    :--------------------------------: $_SRC_FRAG_1_TILES_$[09P]
+    :--------------------------------: $_SRC_VERT_1_TILES_$[09P]
+    $_SRC_VERT_2_POINT_$ :--------------------------------:[09P]
+    $_SRC_FRAG_2_POINT_$ :--------------------------------:[09P]
+                                                           [09P]
+        The shader source code strings for rendering the   [09P]
+        __POINT_SPRITES__ in front of the tilemap fragments[09P]
+        rendered by the __PREVIOUS_SHADER__ . This is the  [09P]
+        shader we will be using for rendering NPC and      [09P]
+        __PLAYER__ characters . What we learn from this    [09P]
+        shader will be used to write the code for the      [09P]
+        [ ARTEMIS ]sub-system within[ ATOMIC_IVY_MMO.JS ]. [09P]
+                                                           [09P]
+        Atomic Ivy MMO Source : github.com/KANJICODER/AIM  [09P]
+        AIM == Atomic.Ivy.MMO.: FILE[ ATOMIC_IVY_MMO.JS ]  [09P]
+                                                           [09P]
+        @d_sv2@ : global_DATA(d_) - Shader(src)Vertex   #2 [09P]
+        @d_sf2@ : global_DATA(d_) - Shader(src)Fragment #2 [09P]
+                                                           [09P]
+    :--------------------------------: $_SRC_VERT_2_POINT_$[09P]
+    :--------------------------------: $_SRC_FRAG_2_POINT_$[09P]
+                                                           [---]
+*** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]    
+                                                    // [---=---]
+</script><!-- //////////////////////////////////////// [003_POI][002_POI][001_POI] -->
+
