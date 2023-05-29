@@ -33,7 +33,7 @@
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
 
-
+    AIM_1151 : BFJ_421 : POI_008 : POInt sprite research #008
     AIM_1150 : BFJ_420 : POI_007 : POInt sprite research #007
     AIM_1149 : BFJ_419 : POI_006 : POInt sprite research #006
     AIM_1148 : BFJ_418 : POI_005 : POInt sprite research #005

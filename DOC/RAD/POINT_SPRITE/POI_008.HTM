@@ -1,0 +1,128 @@
+<!DOCTYPE HTML><script> ////////////////////////////// [003_POI][002_POI][001_POI]
+                                                    // [003_POI][---=---][001_POI]
+    console.log( "[_EVERYTHING_IS_OKAY_BABY_]" );   // [003_POI][002_POI][---=---]
+                                                    // [---=---]
+    //:#__GLOBALS__#:[004_POI]:==============================://
+                                                                //:[----]://
+        let d_win ; //: @win@ : Global Window Object    //:[05P][004_POI]://
+        let d_doc ; //: @doc@ : Global Document  OBJ    //:[07P]://
+        let d_bod ; //: @bod@ : Global Document_Body    //:[07P]://
+        let d_can ; //: @can@ : Global Canvas Object    //:[07P]://
+        let d_wgl ; //: @wgl@ : Global WebGL  Context   //:[07P]://
+        let d_wvc ; //: @wvc@ : Webgl_Version.CONTEXT   //:[07P]://
+        let d_wvs ; //: @wvs@ : Webgl_Version.SHADER    //:[07P]://
+                                                                //:[----]://
+    //:==============================:#__GLOBALS__#:[004_POI]:// 
+    //:#__ERROR__#:[08P]:====================================://
+    let F_ERROR =(   i_msg )=>{                      //:[08P]://
+        d_win.alert( i_msg );                        //:[08P]://
+        throw(       i_msg );                        //:[08P]://
+    };;                                              //:[08P]://
+    //:====================================:#__ERROR__#:[08P]://
+    //:#__SETUP__#:[05P]:====================================://
+    let F_SETUP =( )=>{                             //::[05P]://
+                                                    //::[05P]://
+        d_win =( window               );;;;;;;;;;;; //::[05P]://
+        d_doc =( window.document      );;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_can =( d_doc.createElement( "canvas" ) ); //::[08P][MOV][07P]://
+        d_bod =( d_doc.createElement( "body"   ) ); //::[08P]://
+        d_doc.body =( d_bod );                      //::[08P]://
+        if( d_bod != window.document.body ){        //::[08P]://
+            F_ERROR( "[_BODY_ERROR_]" );            //::[08P]://
+        };;                                         //::[08P]://
+                                                    //::[---]://
+        d_can.width=(  512 );;;;;;;;;;;;;;;;;;;;;;; //::[07P]://
+        d_can.height=( 512 );;;;;;;;;;;;;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_bod.appendChild( d_can );;;;;;;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_wvc =( "webgl2"                  );;;;;;; //::[07P]://
+        d_wvs =( "#version 300 es"         );;;;;;; //::[07P]://
+        d_wgl =( d_can.getContext( d_wvc ) );;;;;;; //::[07P]://
+                                                    //::[---]://
+    };;                                             //::[05P]://
+    //:====================================:#__SETUP__#:[05P]://
+    ////////////////////////////////////////////////////////////
+    //:#__LOOP_FOREVER__#:[06P]:=============================://
+    let F_LOOP_FOREVER =( )=>{                      //::[06P]://
+                                                    //::[06P]://
+        console.log( "[ K_A_N_J_I ][ C_O_D_E_R ]" );//::[06P]://
+                                                    //::[06P]://
+        d_win.requestAnimationFrame(F_LOOP_FOREVER);//::[06P]://
+    };;                                             //::[06P]://
+    //:=============================:#__LOOP_FOREVER__#:[06P]://
+    //:#__C99_MAIN__#:[06P]:=================================://
+    let F_C99_MAIN =( )=>{                          //::[06P]://
+                                                    //::[06P]://
+        F_SETUP( ); F_LOOP_FOREVER( );              //::[06P]://
+    };;                                             //::[06P]://
+    //:=================================:#__C99_MAIN__#:[06P]://
+    //:#__CALL_MAIN__#:[06P]:================================://
+                                                    //::[06P]://
+        F_C99_MAIN( );                              //::[06P]://
+                                                    //::[06P]://
+    //:================================:#__CALL_MAIN__#:[06P]://
+                                                    // [---=---]
+/**#__DOC_SEC__#:[004_POI]:************************ ** [004_POI]
+                                                       [004_POI]
+    #__DOC_SEC__# :::::: DOCumentation_SECtion         [004_POI]
+    #__GLOBALS__# :::::: All global (filescope) vars   [004_POI]
+    #__ERROR__# :::::::: Error Function Section            [08P]
+    #__SETUP__# :::::::: 1 Time Environment Setup Code     [05P]
+                                                           [---]
+    #__LOOP_FOREVER__# : Infinite [game/render] loop       [06P]
+    #__C99_MAIN__#:::::: C99 Style Main Entry Point        [06P]
+    #__CALL_MAIN__# :::: Simulate running executable       [06P]
+                                                           [---]
+    @F_@    : Prefix used for FUNCTIONS   , UPPERCASE      [05P]
+    @d_@    : Prefix used for global DATA , lowercase      [05P]
+    @d_win@ : global window   object  _______________      [05P]
+    @d_doc@ : global document object  _______________      [07P]
+    @d_bod@ : global body     object  _______________      [07P]
+    @d_can@ : global canvas object                         [07P]
+    @d_wgl@ : global WebGL  Context                        [07P]
+    @W_V@ ::: Webgl_Version                                [07P]
+    @d_wvc@ : W_V.Context ( WGL Context Version )          [07P]
+    @d_wvs@ : W_V.Shader  ( WGL Shader  Version Directive )[07P]
+
+                                                       [004_POI]
+*** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]    
+                                                    // [---=---]
+</script><!-- //////////////////////////////////////// [003_POI][002_POI][001_POI] -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
