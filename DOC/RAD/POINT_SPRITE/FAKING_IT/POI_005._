@@ -1,0 +1,46 @@
+    
+
+
+                                                //: [004_POI]://
+    let d_win ; //: @win@ : Global Window Object    [004_POI]://
+                                                //: [004_POI]://
+
+    @d_win@ : DATA - WINdow , global window object     [004_POI]
+                                                       [004_POI]
+    @001_POI@ : POInt Sprite Research - Video #001     [004_POI]
+    @002_POI@ : POInt Sprite Research - Video #002     [004_POI]
+    @003_POI@ : POInt Sprite Research - Video #003     [004_POI]
+    @004_POI@ : POInt Sprite Research - Video #004     [004_POI]
+
+
+    //:#__SETUP__#:[004_POI]:================================://  
+    let F_SETUP =( )=>{                         //: [004_POI]://  
+                                                //: [004_POI]://  
+        win =( window );                        //: [004_POI]://  
+    };;                                         //: [004_POI]://  
+    //:================================:#__SETUP__#:[004_POI]://  
+    //:#__LOOP_FOREVER__#:[004_POI]:=========================://  
+    let F_LOOP_FOREVER =( )=>{                  //: [004_POI]://         
+                                                //: [004_POI]://         
+        console.log( "[ K_A_N_J_I ][ C_O_D_E_R ]" );    //: [004_POI] ://
+                                                        //: [004_POI] ://
+        win.requestAnimationFrame( F_LOOP_FOREVER );    //: [004_POI] ://
+    };;                                                 //: [004_POI] ://
+    //:=========================:#__LOOP_FOREVER__#:[004_POI]://  
+    //:#__C99_MAIN__#:[004_POI]:=============================://  
+    let F_C99_MAIN =( )=>{                      //: [004_POI]://
+                                                //: [004_POI]://
+        F_SETUP( ); F_LOOP_FOREVER( );          //: [004_POI]://
+    };;                                         //: [004_POI]://
+    //:=============================:#__C99_MAIN__#:[004_POI]://  
+    //:#__CALL_MAIN__#:[004_POI]:============================://  
+                                                //: [004_POI]://
+        F_C99_MAIN( );                          //: [004_POI]://
+                                                //: [004_POI]://
+    //:============================:#__CALL_MAIN__#:[004_POI]://   
+
+
+    #__SETUP__#   :::::: One time setup on startup     [004_POI]
+    #__LOOP_FOREVER__# : Infinite [game/render] loop   [004_POI]
+    #__C99_MAIN__#:::::: C99 Style Main Entry Point    [004_POI]
+    #__CALL_MAIN__# :::: Simulate running executable   [004_POI]
