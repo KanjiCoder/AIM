@@ -34,6 +34,9 @@
 
 
 
+    AIM_1149 : BFJ_419 : POI_006 : POInt sprite research #006
+    AIM_1148 : BFJ_418 : POI_005 : POInt sprite research #005
+    AIM_1147 : BFJ_417 : POI_004 : POInt sprite research #004
     AIM_1146 : BFJ_416 : POI_003 : POInt sprite research #003
     AIM_1145 : BFJ_415 : POI_002 : POInt sprite research #002
     AIM_1144 : BFJ_414 : POI_001 : POInt sprite research #001
