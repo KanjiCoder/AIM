@@ -1,5 +1,5 @@
 
-![Game Engine Logo](DOC/KANJI_CODER.PNG)
+![Game Engine Logo](DOC/ATOMIC_IVY.GIF)
 
 //:_MASTER_VIDEO_REPOS_:=====================================://
 
