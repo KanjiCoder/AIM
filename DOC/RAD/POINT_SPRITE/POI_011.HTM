@@ -23,8 +23,8 @@
                                                     //::[---]://
         let d_ov1 ; //: @ov1@ : Object_VERT(shader)#1   [10P]://
         let d_of1 ; //: @of1@ : Object_FRAG(shader)#1   [10P]://
-        let d_ov2 ; //: @ov2@ : Object_VERT(shader)#1   [10P]://
-        let d_of2 ; //: @of2@ : Object_FRAG(shader)#1   [10P]://
+        let d_ov2 ; //: @ov2@ : Object_VERT(shader)#2   [10P]://
+        let d_of2 ; //: @of2@ : Object_FRAG(shader)#2   [10P]://
                                                     //::[---]://
     //:==============================:#__GLOBALS__#:[004_POI]:// 
     //:#__ERROR__#:[08P]:====================================://
@@ -33,6 +33,23 @@
         throw(       i_msg );                        //:[08P]://
     };;                                              //:[08P]://
     //:====================================:#__ERROR__#:[08P]://
+    //:#__COMPILE_SHADER__#:[11P]:===========================://
+    let F_COMPILE_SHADER =( i_wso )=>{               //:[11P]://
+                                                     //:[11P]://
+        let sym =( d_wgl.COMPILE_STATUS );           //:[11P]://
+        let bol =( false );;;;;;;;;;;;;;;;           //:[11P]://
+        let str =( null  );;;;;;;;;;;;;;;;           //:[11P]://
+                                                     //:[11P]://
+               d_wgl.compileShader(     i_wso     );;//:[11P]://
+        bol =( d_wgl.getShaderParameter(i_wso,sym));;//:[11P]://
+                                                     //:[11P]://
+        if( ! bol ){                                 //:[11P]://
+            str =(d_wgl.getShaderInfoLog(   i_wso ));//:[11P]://
+            console.log( "[_FAIL_LOG_:STR]:" , str );//:[11P]://
+            F_ERROR(     "[_$_UR_SHADER_SUCKS_$_]" );//:[11P]://
+        };;                                          //:[11P]://
+    };;                                              //:[11P]://
+    //:===========================:#__COMPILE_SHADER__#:[11P]://
     //:#__SETUP__#:[05P]:====================================://
     let F_SETUP =( )=>{                             //::[05P]://
                                                     //::[05P]://
@@ -94,12 +111,12 @@
             d_wgl.shaderSource(  d_ov2 , d_sv2 );   //::[10P]://
             d_wgl.shaderSource(  d_of1 , d_sf1 );   //::[10P]://
             d_wgl.shaderSource(  d_of2 , d_sf2 );   //::[10P]://
-                                                    //::[10P]://
-            /////.compileShader( d_ov1         );   //::[10P]://
-            d_wgl.compileShader( d_ov2         );   //::[10P]://
-            d_wgl.compileShader( d_of1         );   //::[10P]://
-            d_wgl.compileShader( d_of2         );   //::[10P]://
-                                                    //::[10P]://
+                                                    //::[---]://
+            //COMPILE_SHADER( d_ov1 );///////////   //::[11P][10P]://
+            F_COMPILE_SHADER( d_ov2            );   //::[11P][10P]://
+            F_COMPILE_SHADER( d_of1            );   //::[11P][10P]://
+            F_COMPILE_SHADER( d_of2            );   //::[11P][10P]://
+                                                    //::[---]://
         //:----------:#__VER_THEN_FRA__#:[09P]://   //::[10P]://
                                                     //::[---]://
     };;                                             //::[05P]://
@@ -224,6 +241,49 @@
         "fragment stage" in shader pipeline.              |[10P]
                                                           |[10P]
     :----------------------------------: #__VER_THEN_FRA__#[10P]
+                                                           [---]
+    #__COMPILE_SHADER__# :--------------------------------:[11P]
+                                                          |[11P]
+        A wrapper function that compiles the shader       |[11P]
+        and then error checks it, we have this wrapper    |[11P]
+        function so as to not wreck the flow of the       |[11P]
+        code in the[ VER_THEN_FRA ]section after we       |[11P]
+        refactor it to use __OUR__ custom compile         |[11P]
+        shader wrapper function.                          |[11P]
+                                                          |[11P]
+        @sym@ : general use symbolic constant variable    |[11P]
+        @bol@ : general use           boolean variable    |[11P]
+        @str@ : general use           string  variable    |[11P]
+                                                          |[11P]
+        [ sym ] : In this function is COMPILE_STATUS sym  |[11P]
+        [ bol ] : In this function is COMPILE_STATUS bol  |[11P]
+        [ str ] : In this function is ShaderInfoLog  str  |[11P]
+                                                          |[11P]
+    :--------------------------------: #__COMPILE_SHADER__#[11P]
+    $_FAIL_LOG_$ :----------------------------------------:[11P]
+                                                          |[11P]
+        Denoting that I am logging out a "logging message"|[11P]
+        that will hopefully explain why whatever I am     |[11P]
+        doing in [ WebGl / OpenGL ] is failing right now. |[11P]
+                                                          |[11P]
+    :----------------------------------------: $_FAIL_LOG_$[11P]
+    $_UR_SHADER_SUCKS_$ :---------------------------------:[11P]
+                                                          |[11P]
+        Positive words of encouragement to help whoever   |[11P]
+        wrote this code get their /f/u/c/k/i/n/g/ act     |[11P]
+        together and write some decent god-fearing ,      |[11P]
+        church-going respectable code that adheres to     |[11P]
+        our traditions of human-readble pronouncable      |[11P]
+        names that sound like english.                    |[11P]
+                                                          |[11P]
+        All hail the church of LegoNamingCamelCaseJavaBullshit !
+                                                          |[11P]
+        It probably won't happen though. I hear the       |[11P]
+        author is completely off their rocker.            |[11P]
+        Abbreviates /s/h/i/t/ like it is assembly         |[11P]
+        code or something.                                |[11P]
+                                                          |[11P]
+    :---------------------------------: $_UR_SHADER_SUCKS_$[11P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]    
                                                     // [---=---]
