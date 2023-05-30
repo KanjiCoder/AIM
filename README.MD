@@ -1374,3 +1374,50 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 //:========================================:_HOW_MANY_MONTHS_://
 ```
+
+# Unique Documentation Approach
+
+AIM Game Engine offers a one-of-a-kind documentation approach that sets it apart from other game engines. The engine is meticulously documented using a combination of code deltas, video numbering, and multiple YouTube channels, providing comprehensive insights into its development process. Here's how it works:
+
+## Code Deltas and Video Numbering
+
+Every line of code added or altered during a given code delta is marked with a unique code delta number in the comments. The code deltas are designed to be small and can be reviewed in under 2 minutes and 33 seconds. This ensures that each code delta remains focused and digestible.
+
+The code delta markers for videos 1 through 999 follow the format of [001] to [999]. For videos in the 1,000s, the code delta markers are in the format of [1_000] to [9_999]. This numbering system allows for easy referencing and tracking of specific code changes.
+
+## Three YouTube Playlists
+
+To complement the code deltas, three separate YouTube playlists are created on three different channels to provide different perspectives and content coverage. Here's an overview of the playlists:
+
+1. **WeebCoder Playlist on WeebCoder Channel**: The WeebCoder playlist showcases what the engine currently looks like and provides insights into game design and development. These videos are unscripted and offer a raw glimpse into the engine's progress. While the visuals might not change significantly from video to video due to the small code deltas, there are hidden gems and entertaining moments worth exploring. Feel free to watch a few random videos from this playlist.
+
+   - WeebCoder Playlist: [youtube.com/@WeebCoder](https://www.youtube.com/@WeebCoder)
+
+2. **NinjaCoder Playlist on KanjiCoder_NinjaCoder Channel**: The NinjaCoder playlist offers in-depth code reviews of the latest code deltas. Each video is limited to a maximum of 15 minutes to ensure concise and articulate explanations. This playlist is ideal for beginner programmers or those looking for detailed insights into the engine's development process.
+
+   - NinjaCoder Playlist: [youtube.com/@KanjiCoder_NinjaCoder](https://www.youtube.com/@KanjiCoder_NinjaCoder)
+
+3. **KanjiCoder Playlist on KanjiCoder Channel**: The KanjiCoder playlist provides short documentation videos, often referred to as "code review speed runs." These videos offer quick overviews of the code deltas, with a focus on demonstrating specific features or functionality. The KanjiCoder channel also releases "YouTube Shorts" whenever visually interesting code deltas are discovered. These shorts have dual serial numbers, one being the official master code delta (e.g., "AIM_###") and the other indicating the video format (e.g., "VER_###" for vertical or "HOR_###" for horizontal). The goal is to create a library of short videos under 5 seconds, which can be later compiled into a "Normal Speed Engine Development Time Lapse" to showcase the engine's evolution.
+
+   - KanjiCoder Playlist: [youtube.com/@KanjiCoder](https://www.youtube.com/@KanjiCoder)
+
+## Twitch Tech Demos
+
+Additionally, periodic 1-hour tech demos are conducted on Twitch, where you have the opportunity to ask any questions you may have. These interactive sessions provide a deeper understanding of AIM Game Engine and allow you to engage directly with the developer.
+
+Stay tuned for updates on the Twitch schedule and join the live sessions to delve deeper into the engine's capabilities.
+
+## Explore the Unique Documentation
+
+To explore the unique documentation of AIM Game Engine, visit the following YouTube channels and playlists:
+
+- WeebCoder Playlist: [youtube.com/@WeebCoder](https://www.youtube.com/@WeebCoder)
+- NinjaCoder Playlist: [youtube
+
+.com/@KanjiCoder_NinjaCoder](https://www.youtube.com/@KanjiCoder_NinjaCoder)
+- KanjiCoder Playlist: [youtube.com/@KanjiCoder](https://www.youtube.com/@KanjiCoder)
+
+Feel free to immerse yourself in the code deltas, code reviews, and short documentation videos, and gain a deeper understanding of AIM Game Engine's development process.
+
+Happy exploring and happy coding!
+
