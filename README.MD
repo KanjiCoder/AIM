@@ -1,6 +1,57 @@
 
 ![Game Engine Logo](DOC/ATOMIC_IVY.GIF)
 
+# Getting Started with AIM Game Engine
+
+Welcome to AIM Game Engine, a powerful and versatile game engine designed to bring your game development dreams to life! With AIM, you can create stunning and immersive games with ease, whether you're a seasoned developer or just starting your journey into game development.
+
+## Exciting Features
+
+AIM Game Engine is packed with exciting features that will take your games to the next level:
+
+- **Easy Setup**: Getting started with AIM is a breeze. Simply clone the repository to your local machine and open "AIM.HTM" in Chrome—the recommended browser for this engine.
+
+- **Monolithic Single Payload**: AIM's unique architecture includes a monolithic single payload engine file, "ATOMIC_IVY_MMO.JS". This file contains all the server and client code, making it easy to deploy your game without any additional setup or dependencies.
+
+- **Versatile Level Editor**: AIM provides a powerful level editor that allows you to create and customize your game's environments effortlessly. Bring your imagination to life and craft stunning game worlds with ease.
+
+- **Seamless Level Loading**: Load your meticulously designed levels effortlessly with AIM's seamless level loading feature. Experience smooth transitions and create a dynamic gameplay experience for your players.
+
+- **Intuitive Level Playing**: AIM's level playing functionality ensures that your game is not only visually impressive but also provides a captivating gaming experience. Immerse your players in thrilling gameplay and keep them engaged for hours on end.
+
+## Usage Instructions
+
+Follow these simple steps to get started with AIM Game Engine:
+
+1. Clone the AIM repository to your local machine using the following command:
+   ```
+   git clone https://github.com/KanjiCoder/AIM.git
+   ```
+
+2. Open the root folder of the project and locate the file named "AIM.HTM".
+
+3. Launch Chrome—the recommended browser for AIM Game Engine—and open the "AIM.HTM" file directly.
+
+   **Note:** When using "AIM.HTM" on a local computer, there is no need to start a local Node.js server. The engine can be run locally without networking features, allowing you to utilize the basic level editor, level loading, and level playing functionalities.
+
+That's it! You are now ready to unleash your creativity and start building amazing games with AIM Game Engine. Explore the documentation and code samples to discover the full potential of this open-source engine.
+
+## License
+
+AIM Game Engine is released under the [DWT_FYW License](LICENSE.TXT). You are free to use this engine for your own games without any obligations. Here's what the license entails:
+
+- You can do whatever you want with this engine.
+- You are not required to pay me any money or royalties.
+- You agree not to sue me over this engine, and I agree not to sue you over this engine.
+
+For more information, please refer to the [LICENSE.TXT](LICENSE.TXT) file.
+
+Feel the excitement and dive into the world of game development with AIM Game Engine. Unleash your creativity, create captivating gaming experiences, and let your imagination run wild!
+
+Start building with AIM today. Happy game development!
+
+---
+
 ```
 //:_MASTER_VIDEO_REPOS_:=====================================://
 
