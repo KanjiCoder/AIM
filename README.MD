@@ -1412,9 +1412,7 @@ Stay tuned for updates on the Twitch schedule and join the live sessions to delv
 To explore the unique documentation of AIM Game Engine, visit the following YouTube channels and playlists:
 
 - WeebCoder Playlist: [youtube.com/@WeebCoder](https://www.youtube.com/@WeebCoder)
-- NinjaCoder Playlist: [youtube
-
-.com/@KanjiCoder_NinjaCoder](https://www.youtube.com/@KanjiCoder_NinjaCoder)
+- NinjaCoder Playlist: [youtube.com/@KanjiCoder_NinjaCoder](https://www.youtube.com/@KanjiCoder_NinjaCoder)
 - KanjiCoder Playlist: [youtube.com/@KanjiCoder](https://www.youtube.com/@KanjiCoder)
 
 Feel free to immerse yourself in the code deltas, code reviews, and short documentation videos, and gain a deeper understanding of AIM Game Engine's development process.
