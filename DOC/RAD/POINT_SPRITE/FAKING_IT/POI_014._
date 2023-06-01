@@ -1,0 +1,21 @@
+        //:#__VIEWPORT_SETUP__:[14P]:---------://
+
+            d_wgl.viewport( 0 
+                        ,   0
+                        ,   d_can.width
+                        ,   d_can.height
+            );;
+
+        //:---------:#__VIEWPORT_SETUP__:[14P]://
+
+    #__VIEWPORT_SETUP__# :--------------------------------:[14P]
+                                                          :[14P]
+        Make sure the webgl context size matches          :[14P]
+        the size of our canvas. Eventually we also        :[14P]
+        want to make sure the cavas size is always        :[14P]
+        the size of our browser's client area.            :[14P]
+                                                          :[14P]
+        But for now, lets just focus on getting the       :[14P]
+        intial 512__X__512 render working.                :[14P]
+                                                          :[14P]
+    :--------------------------------: #__VIEWPORT_SETUP__#[14P]
