@@ -87,6 +87,10 @@ Start building with AIM today. Happy game development!
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1159 : BFJ_429 : POI_016 : POInt sprite research #016
+    AIM_1158 : BFJ_428 : POI_015 : POInt sprite research #015
+    AIM_1157 : BFJ_427 : POI_014 : POInt sprite research #014
+    AIM_1156 : BFJ_426 : POI_013 : POInt sprite research #013
     AIM_1155 : BFJ_425 : POI_012 : POInt sprite research #012
     AIM_1154 : BFJ_424 : POI_011 : POInt sprite research #011
     AIM_1153 : BFJ_423 : POI_010 : POInt sprite research #010
