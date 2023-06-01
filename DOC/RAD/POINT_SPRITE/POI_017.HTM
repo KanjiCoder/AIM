@@ -144,17 +144,23 @@
         `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[09P]://
                                                     //::[---]://
         d_sv2 =(d_hed)+(`                           //::[12P][10P]://
+                                                    //::[---]://
+            //:$__NEXT_VIDEO_SPRITE_LOGIC__$://     //::[17P]://
+                                                    //::[---]://
             void main( ){   //::::::::[_v2main_]:// //::[12P]://
-                                                    //::[12P]://
-                /** $_DO_NOTHING_SHADER_4_NOW_$ **/ //::[12P]://
-                                                    //::[12P]://
+                                                    //::[---]://
+                //:$__NEXT_VIDEO_SPRITE_LOGIC__$:// //::[17P]://
+                                                    //::[---]://
             }//:::::::::::::::::::::::[_v2main_]:// //::[12P]://
         `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[10P]://
         d_sf2 =(d_hed)+(`                           //::[12P][10P]://
+                                                    //::[---]://
+            out vec4 sfc ;  //:$_SPRITE_FC_$://     //::[17P]://
+                                                    //::[---]://
             void main( ){   //::::::::[_f2main_]:// //::[12P]://
-                                                    //::[12P]://
-                /** $_DO_NOTHING_SHADER_4_NOW_$ **/ //::[12P]://
-                                                    //::[12P]://
+                                                    //::[---]://
+                sfc =vec4(0,1,0,1);//:GREEN://      //::[17P]://
+                                                    //::[---]://
             }//:::::::::::::::::::::::[_f2main_]:// //::[12P]://
         `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[10P]://
                                                     //::[10P]://
@@ -195,11 +201,18 @@
             d_wgl.linkProgram(  d_pid );;;;;;;;;    //::[15P]://
                                                     //::[13P]://
             d_arr_pid[ 0 ]=(  d_pid );              //::[13P]://
-                                                    //::[13P]://
+                                                    //::[---]://
+            d_pid=d_wgl.createProgram();            //::[17P]://
+            d_wgl.attachShader( d_pid , d_ov2 );    //::[17P]://
+            d_wgl.attachShader( d_pid , d_of2 );    //::[17P]://
+            d_wgl.linkProgram(  d_pid );;;;;;;;;    //::[17P]://
+                                                    //::[17P]://
+            d_arr_pid[ 1 ]=( d_pid );               //::[17P]://
+                                                    //::[---]://
         //:------:#__PROGRAM_CREATION__#:[13P]://   //::[13P]://
         //:#__PROGRAM_SELECT__#:[13P]:--------://   //::[13P]://
                                                     //::[13P]://
-            d_wgl.useProgram( d_arr_pid[ 0 ] );     //::[13P]://
+        //- d_wgl.useProgram(d_arr_pid[ 0 ]); -//   //::[17P][13P]://
                                                     //::[13P]://
         //:--------:#__PROGRAM_SELECT__#:[13P]://   //::[13P]://
                                                     //::[---]://
@@ -227,6 +240,7 @@
         //:#__CLEAR_SCREEN_AND_RENDER__#:[13P]:--------------://
                                                     //::[13P]://
             d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );  //::[13P]://
+            d_wgl.useProgram(d_arr_pid[ 0 ]);       //::[17P]://
             d_wgl.drawArrays(                       //::[13P]://
                 d_wgl.TRIANGLE_STRIP                //::[14P][13P]://
             ,   0         //:$_1ST_VERT_DEX_$://    //::[14P][13P]://
@@ -234,6 +248,12 @@
             );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;    //::[13P]://
                                                     //::[13P]://
         //:--------------:#__CLEAR_SCREEN_AND_RENDER__#:[13P]://
+        //:#__SPRITES_ON_TOP__#:[17P]:-----------------------://
+                                                     //:[17P]://
+            d_wgl.useProgram( d_arr_pid[ 1 ]     );; //:[17P]://
+            d_wgl.drawArrays( d_wgl.POINTS , 0,3 );; //:[17P]://
+                                                     //:[17P]://
+        //:-----------------------:#__SPRITES_ON_TOP__#:[17P]://
                                                     //::[---]://
         d_win.requestAnimationFrame(F_LOOP_FOREVER);//::[06P]://
     };;                                             //::[06P]://
@@ -674,6 +694,56 @@
         +---------+---------+---------+---------+---------+[16P]
                                                            [16P]
     :-------------------------------------------:$_BOARD_$:[16P]
+
+    [ FUTURE_ORPHAN ] :-----------------------------------:[17P]
+                                                          :[17P]
+     @FUTURE_ORPHAN_SECTION@ : Section will be orphaned ! :[17P]
+                                                          :[17P]
+            A comment section that will eventually __NOT__:[17P]
+            point to any code in top of file once we move :[17P]
+            onto deltas higher than the one the section   :[17P]
+            was originally written in.                    :[17P]
+                                                          :[17P]
+    :-----------------------------------:[ FUTURE_ORPHAN ]:[17P]
+    $__NEXT_VIDEO_SPRITE_LOGIC__$ :-----------------------:[17P]
+                                                          :[17P]
+        @FUTURE_ORPHAN_SECTION@                           :[17P]
+                                                          :[17P]
+        We already wrote too much code in delta #17(17P). :[17P]
+        We will insert code for sprite size and           :[17P]
+        position here in the next [video/delta].(#18(18P)):[17P]
+                                                          :[17P]
+    :-----------------------:$__NEXT_VIDEO_SPRITE_LOGIC__$:[17P]
+    $_SPRITE_FC_$ :---------------------------------------:[17P]
+                                                          :[17P]
+        The sprite fragment color , named "sfc" to        :[17P]
+        differentiate itself from the "f_c" in the        :[17P]
+        tilemap shader. Eventually we need to refactor    :[17P]
+        "f_c" to "tfc" because :                          :[17P]
+                                                          :[17P]
+        BAD_DESIGN :                                      :[17P]
+            f_c IMPLIES  TILEMAP's FRAG_COLOR             :[17P]
+            sfc EXPLICIT SPRITE's  FRAG_COLOR             :[17P]
+                                                          :[17P]
+        GOOD_DESIGN:                                      :[17P]
+            tfc EXPLICIT TILEMAP's FRAG_COLOR             :[17P]
+            sfc EXPLICIT SPRITE's  FRAG_COLOR             :[17P]
+                                                          :[17P]
+        @f_c@ : Fragment_Color , generic.                 :[17P]
+        @tfc@ : Tilemap_Fragment_Color                    :[17P]
+        @sfc@ : Sprite__Fragment_Color                    :[17P]
+                                                          :[17P]
+    :---------------------------------------:$_SPRITE_FC_$:[17P]
+    #__SPRITES_ON_TOP__# :--------------------------------:[17P]
+                                                          |[17P]
+        Render the sprites on top of the tilemap with     |[17P]
+        a 2nd draw call. To start off we will just        |[17P]
+        render the sprites as points, and eventually      |[17P]
+        we will re-factor to use a player sprite.         |[17P]
+                                                          |[17P]
+        But... One step at a time my friends.             |[17P]
+                                                          |[17P]
+    :--------------------------------:#__SPRITES_ON_TOP__#:[17P]
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]    

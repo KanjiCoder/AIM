@@ -1,0 +1,30 @@
+
+Will insert this code in the region marked :
+__NEXT_VIDEO_SPRITE_LOGIC__
+When we get to video #18.
+
+
+            #define F32 float                       //::[18P]://
+            #define SID ( gl_VertexID )             //::[18P]://
+                                                    //::[18P]://
+            precision highp usampler2D ;            //::[18P]://
+            uniform   usampler2D d_p2k ;            //::[18P]://
+
+
+
+
+
+                F32 snx ; //: @s_x@ : $_Sprite_NDC_X_$  [18P]://
+                F32 sny ; //: @sny@ : $_Sprite_NDC_Y_$  [18P]://
+                                                    //::[18P]://
+                snx=( (( F32(SID)+1.0 )/4.0)-0.5 ); //::[18P]://
+                sny=( 0.0 );;;;;;;;;;;;;;;;;;;;;;;; //::[18P]://
+                                                    //::[18P]://
+                gl_PointSize=( 32.0 );              //::[18P]://
+                gl_Position = vec4(                 //::[18P]://
+                                                    //::[18P]://
+                    snx                             //::[18P]://
+                ,   sny                             //::[18P]://
+                ,   0.0                             //::[18P]://
+                ,   1.0                             //::[18P]://
+                );                                  //::[18P]://
