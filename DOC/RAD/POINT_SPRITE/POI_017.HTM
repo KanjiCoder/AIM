@@ -1,0 +1,682 @@
+<!DOCTYPE HTML><script> ////////////////////////////// [003_POI][002_POI][001_POI]
+                                                    // [003_POI][---=---][001_POI]
+    console.log( "[_EVERYTHING_IS_OKAY_BABY_]" );   // [003_POI][002_POI][---=---]
+                                                    // [---=---]
+    //:#__GLOBALS__#:[004_POI]:==============================://
+                                                    //::[---]://
+        let d_win ; //: @win@ : Global Window Object    [05P][004_POI]://
+        let d_doc ; //: @doc@ : Global Document  OBJ    [07P]://
+        let d_bod ; //: @bod@ : Global Document_Body    [07P]://
+        let d_can ; //: @can@ : Global Canvas Object    [07P]://
+        let d_wgl ; //: @wgl@ : Global WebGL  Context   [07P]://
+        let d_wvc ; //: @wvc@ : Webgl_Version.CONTEXT   [07P]://
+        let d_wvs ; //: @wvs@ : Webgl_Version.SHADER    [07P]://
+                                                    //::[---]://
+        let d_pmf ; //: @pmf@ : Precision_Medium_Float  [09P]://
+        let d_sv1 ; //: @sv1@ : $_SRC_VERT_1_TILES_$    [09P]://
+        let d_sf1 ; //: @sf1@ : $_SRC_FRAG_1_TILES_$    [09P]://
+        let d_sv2 ; //: @sv2@ : $_SRC_VERT_2_POINT_$    [09P]://
+        let d_sf2 ; //: @sf2@ : $_SRC_FRAG_2_POINT_$    [09P]://
+                                                    //::[---]://
+        let d_ver ; //: @ver@ : $_SYMBOLIC_CONST_V_$    [10P]://
+        let d_fra ; //: @hor@ : $_SYMBOLIC_CONST_F_$    [10P]://
+                                                    //::[---]://
+        let d_ov1 ; //: @ov1@ : Object_VERT(shader)#1   [10P]://
+        let d_of1 ; //: @of1@ : Object_FRAG(shader)#1   [10P]://
+        let d_ov2 ; //: @ov2@ : Object_VERT(shader)#2   [10P]://
+        let d_of2 ; //: @of2@ : Object_FRAG(shader)#2   [10P]://
+                                                    //::[---]://    
+        let d_hed ; //: @hed@ : shader HEaDer       //::[12P]://
+                                                    //::[---]://
+        let d_pid ; //: @pid@ : Program ID( object )    [13P]://
+    let d_arr_pid ; //: @arr@ : ARRAY of ____ variable  [13P]://
+                                                    //::[---]://
+    //:==============================:#__GLOBALS__#:[004_POI]:// 
+    //:#__ERROR__#:[08P]:====================================://
+    let F_ERROR =(   i_msg )=>{                      //:[08P]://
+        d_win.alert( i_msg );                        //:[08P]://
+        throw(       i_msg );                        //:[08P]://
+    };;                                              //:[08P]://
+    //:====================================:#__ERROR__#:[08P]://
+    //:#__COMPILE_SHADER__#:[11P]:===========================://
+    let F_COMPILE_SHADER =( i_wso )=>{               //:[11P]://
+                                                     //:[11P]://
+        let sym =( d_wgl.COMPILE_STATUS );           //:[11P]://
+        let bol =( false );;;;;;;;;;;;;;;;           //:[11P]://
+        let str =( null  );;;;;;;;;;;;;;;;           //:[11P]://
+                                                     //:[11P]://
+               d_wgl.compileShader(     i_wso     );;//:[11P]://
+        bol =( d_wgl.getShaderParameter(i_wso,sym));;//:[11P]://
+                                                     //:[11P]://
+        if( ! bol ){                                 //:[11P]://
+            str =(d_wgl.getShaderInfoLog(   i_wso ));//:[11P]://
+            console.log( "[_FAIL_LOG_:STR]:" , str );//:[11P]://
+            F_ERROR(     "[_$_UR_SHADER_SUCKS_$_]" );//:[11P]://
+        };;                                          //:[11P]://
+    };;                                              //:[11P]://
+    //:===========================:#__COMPILE_SHADER__#:[11P]://
+    //:#__SETUP__#:[05P]:====================================://
+    let F_SETUP =( )=>{                             //::[05P]://
+                                                    //::[05P]://
+        d_win =( window               );;;;;;;;;;;; //::[05P]://
+        d_doc =( window.document      );;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_can =( d_doc.createElement( "canvas" ) ); //::[08P][MOV][07P]://
+        d_bod =( d_doc.createElement( "body"   ) ); //::[08P]://
+        d_doc.body =( d_bod );                      //::[08P]://
+        if( d_bod != window.document.body ){        //::[08P]://
+            F_ERROR( "[_BODY_ERROR_]" );            //::[08P]://
+        };;                                         //::[08P]://
+                                                    //::[---]://
+        d_can.width=(  512 );;;;;;;;;;;;;;;;;;;;;;; //::[07P]://
+        d_can.height=( 512 );;;;;;;;;;;;;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_bod.appendChild( d_can );;;;;;;;;;;;;;;;; //::[07P]://
+                                                    //::[07P]://
+        d_wvc =( "webgl2"                  );;;;;;; //::[07P]://
+        d_wvs =( "#version 300 es"         );;;;;;; //::[07P]://
+        d_wgl =( d_can.getContext( d_wvc ) );;;;;;; //::[07P]://
+        d_pmf =( "precision mediump float" );;;;;;; //::[09P]://
+                                                    //::[---]://
+        d_hed =( d_wvs  +  "\n"  +  d_pmf + ";" );; //::[12P]://
+                                                    //::[---]://
+        //:#__IAM_A_DIRTY_LIAR__#:[14P]:--------:// //::[14P]://
+        d_sv1 =(d_hed)+(`                           //::[14P][09P]://
+                                                    //::[---]://
+          #define I_D ( gl_VertexID )               //::[15P]://
+          #define F32 float                         //::[15P]://
+                                                    //::[15P]://
+            //:$_CAP_N_DIA_$:[15P]:-------------:// //::[15P]://
+                                                    //::[15P]://
+                const int v_x[4]=int[4]( 0,0,1,1 ); //::[15P]://
+                const int v_y[4]=int[4]( 0,1,0,1 ); //::[15P]://
+                                                    //::[15P]://
+            //:-------------:$_CAP_N_DIA_$:[15P]:// //::[15P]://
+                                                    //::[15P]://
+            void main( ){   //::::::::[_v1main_]:// //::[---][14P]://
+                                                    //::[15P]://
+                gl_Position = vec4(                 //::[15P]://
+                                                    //::[15P]://
+                    1.0 -( F32( v_x[ I_D ] ) * 2.0 )//::[15P]://
+                ,   1.0 -( F32( v_y[ I_D ] ) * 2.0 )//::[15P]://
+                ,   0.0                             //::[15P]://
+                ,   1.0                             //::[15P]://
+                );;                                 //::[15P]://
+                                                    //::[---]://
+            }/////////////////////////[_v1main_]:// //::[14P]://
+        `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[14P][09P]://
+        //:--------:#__IAM_A_DIRTY_LIAR__#:[14P]:// //::[14P]://
+                                                    //::[---]://
+        d_sf1 =(d_hed)+(`                           //::[12P][09P]://
+                                                    //::[---]://
+            out vec4 f_c ;//: $_GL_FRAG_COLOR_$ :// //::[12P]://
+                                                    //::[---]://
+            #define I32 int     //: $_OCD_I32_$ :// //::[16P]://
+            #define U32 uint    //: $_OCD_U32_$ :// //::[16P]://
+                                                    //::[16P]://
+            #define GREY_DARK  vec4(0.2,0.2,0.2,1)  //::[16P]://
+            #define GREY_LIGHT vec4(0.8,0.8,0.8,1)  //::[16P]://
+                                                    //::[16P]://
+            #define IFX ( int( gl_FragCoord.x ) )   //::[16P]://
+            #define IFY ( int( gl_FragCoord.y ) )   //::[16P]://
+                                                    //::[---]://
+            void main( ){   //::::::::[_f1main_]:// //::[09P]://
+                                                    //::[---]://
+                I32 t_x ; //: @t_x@ : Tile Cell X       [16P]://
+                I32 t_y ; //: @t_y@ : Tile Cell Y       [16P]://
+                                                    //::[16P]://
+                U32 e_x ; //: @e_x@ : Even Cell X ?     [16P]://
+                U32 e_y ; //: @e_y@ : Even Cell Y ?     [16P]://
+                                                    //::[16P]://
+                t_x =( IFX / 64 );                  //::[16P]://
+                t_y =( IFY / 64 );                  //::[16P]://
+                                                    //::[16P]://
+                e_x =( U32(t_x) & U32(1) );//:$_BOARD_$ [16P]://
+                e_y =( U32(t_y) & U32(1) );//:$_BOARD_$ [16P]://
+                                                    //::[16P]://
+                if( e_x == e_y ){                   //::[16P]://
+                    f_c =( GREY_DARK  );            //::[16P]://
+                }else{                              //::[16P]://
+                    f_c =( GREY_LIGHT );            //::[16P]://
+                };;                                 //::[16P]://
+                                                    //::[---]://
+            }//:::::::::::::::::::::::[_f1main_]:// //::[09P]://
+        `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[09P]://
+                                                    //::[---]://
+        d_sv2 =(d_hed)+(`                           //::[12P][10P]://
+            void main( ){   //::::::::[_v2main_]:// //::[12P]://
+                                                    //::[12P]://
+                /** $_DO_NOTHING_SHADER_4_NOW_$ **/ //::[12P]://
+                                                    //::[12P]://
+            }//:::::::::::::::::::::::[_v2main_]:// //::[12P]://
+        `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[10P]://
+        d_sf2 =(d_hed)+(`                           //::[12P][10P]://
+            void main( ){   //::::::::[_f2main_]:// //::[12P]://
+                                                    //::[12P]://
+                /** $_DO_NOTHING_SHADER_4_NOW_$ **/ //::[12P]://
+                                                    //::[12P]://
+            }//:::::::::::::::::::::::[_f2main_]:// //::[12P]://
+        `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[10P]://
+                                                    //::[10P]://
+        //:#__VER_THEN_FRA__#:[09P]:----------://   //::[10P]://
+                                                    //::[10P]://
+            d_ver =( d_wgl.VERTEX_SHADER   );;;;;   //::[10P]://
+            d_fra =( d_wgl.FRAGMENT_SHADER );;;;;   //::[10P]://
+                                                    //::[10P]://
+            d_ov1 = d_wgl.createShader(  d_ver );   //::[14P][10P]://
+            d_ov2 = d_wgl.createShader(  d_ver );   //::[10P]://
+            d_of1 = d_wgl.createShader(  d_fra );   //::[10P]://
+            d_of2 = d_wgl.createShader(  d_fra );   //::[10P]://
+                                                    //::[10P]://
+            d_wgl.shaderSource(  d_ov1 , d_sv1 );   //::[14P][10P]://
+            d_wgl.shaderSource(  d_ov2 , d_sv2 );   //::[10P]://
+            d_wgl.shaderSource(  d_of1 , d_sf1 );   //::[10P]://
+            d_wgl.shaderSource(  d_of2 , d_sf2 );   //::[10P]://
+                                                    //::[---]://
+            F_COMPILE_SHADER( d_ov1            );   //::[14P][11P][10P]://
+            F_COMPILE_SHADER( d_ov2            );   //::[11P][10P]://
+            F_COMPILE_SHADER( d_of1            );   //::[11P][10P]://
+            F_COMPILE_SHADER( d_of2            );   //::[11P][10P]://
+                                                    //::[---]://
+        //:----------:#__VER_THEN_FRA__#:[09P]://   //::[10P]://
+                                                    //::[---]://
+        //:#__ALLOC_PID_ARR__#:[13P]:---------://   //::[13P]://
+                                                    //::[13P]://
+            d_arr_pid =( new Array( 2 ) );          //::[13P]://
+                                                    //::[13P]://
+        //:---------:#__ALLOC_PID_ARR__#:[13P]://   //::[13P]://
+        //:#__PROGRAM_CREATION__#:[13P]:------://   //::[13P]://
+                                                    //::[13P]://
+            //:$_PROGRAM_ID_IS_OBJECT_IN_WGL_$://   //::[13P]://
+                                                    //::[13P]://
+            d_pid=d_wgl.createProgram();            //::[13P]://
+            d_wgl.attachShader( d_pid , d_ov1 );    //::[14P][13P]://
+            d_wgl.attachShader( d_pid , d_of1 );    //::[13P]://
+            d_wgl.linkProgram(  d_pid );;;;;;;;;    //::[15P]://
+                                                    //::[13P]://
+            d_arr_pid[ 0 ]=(  d_pid );              //::[13P]://
+                                                    //::[13P]://
+        //:------:#__PROGRAM_CREATION__#:[13P]://   //::[13P]://
+        //:#__PROGRAM_SELECT__#:[13P]:--------://   //::[13P]://
+                                                    //::[13P]://
+            d_wgl.useProgram( d_arr_pid[ 0 ] );     //::[13P]://
+                                                    //::[13P]://
+        //:--------:#__PROGRAM_SELECT__#:[13P]://   //::[13P]://
+                                                    //::[---]://
+    };;                                             //::[05P]://
+    //:====================================:#__SETUP__#:[05P]://
+    ////////////////////////////////////////////////////////////
+    //:#__LOOP_FOREVER__#:[06P]:=============================://
+    let F_LOOP_FOREVER =( )=>{                      //::[06P]://
+                                                    //::[06P]://
+        console.log( "[ K_A_N_J_I ][ C_O_D_E_R ]" );//::[06P]://
+                                                    //::[---]://
+                                                    //::[---]://
+        //:#__VIEWPORT_SETUP__:[14P]:------------------------://
+                                                    //::[14P]://
+            //:#__ALIGN_CONTEXT_TO_CANVAS__#:[14P]:----------://
+                                                    //::[14P]://
+                d_wgl.viewport( 0                   //::[14P]://
+                            ,   0                   //::[14P]://
+                            ,   d_can.width         //::[14P]://
+                            ,   d_can.height        //::[14P]://
+                );;                                 //::[14P]://
+            //:----------:#__ALIGN_CONTEXT_TO_CANVAS__#:[14P]://
+                                                    //::[14P]://
+        //:------------------------:#__VIEWPORT_SETUP__:[14P]://
+        //:#__CLEAR_SCREEN_AND_RENDER__#:[13P]:--------------://
+                                                    //::[13P]://
+            d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );  //::[13P]://
+            d_wgl.drawArrays(                       //::[13P]://
+                d_wgl.TRIANGLE_STRIP                //::[14P][13P]://
+            ,   0         //:$_1ST_VERT_DEX_$://    //::[14P][13P]://
+            ,   4         //:$_NUM_VERT_IDS_$://    //::[14P][13P]://
+            );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;    //::[13P]://
+                                                    //::[13P]://
+        //:--------------:#__CLEAR_SCREEN_AND_RENDER__#:[13P]://
+                                                    //::[---]://
+        d_win.requestAnimationFrame(F_LOOP_FOREVER);//::[06P]://
+    };;                                             //::[06P]://
+    //:=============================:#__LOOP_FOREVER__#:[06P]://
+    //:#__C99_MAIN__#:[06P]:=================================://
+    let F_C99_MAIN =( )=>{                          //::[06P]://
+                                                    //::[06P]://
+        F_SETUP( ); F_LOOP_FOREVER( );              //::[06P]://
+    };;                                             //::[06P]://
+    //:=================================:#__C99_MAIN__#:[06P]://
+    //:#__CALL_MAIN__#:[06P]:================================://
+                                                    //::[06P]://
+        F_C99_MAIN( );                              //::[06P]://
+                                                    //::[06P]://
+    //:================================:#__CALL_MAIN__#:[06P]://
+                                                    // [---=---]
+/**#__DOC_SEC__#:[004_POI]:************************ ** [004_POI]
+                                                       [004_POI]
+    #__DOC_SEC__# :::::: DOCumentation_SECtion         [004_POI]
+    #__GLOBALS__# :::::: All global (filescope) vars   [004_POI]
+    #__ERROR__# :::::::: Error Function Section            [08P]
+    #__SETUP__# :::::::: 1 Time Environment Setup Code     [05P]
+                                                           [---]
+    #__LOOP_FOREVER__# : Infinite [game/render] loop       [06P]
+    #__C99_MAIN__#:::::: C99 Style Main Entry Point        [06P]
+    #__CALL_MAIN__# :::: Simulate running executable       [06P]
+                                                           [---]
+    @F_@    : Prefix used for FUNCTIONS   , UPPERCASE      [05P]
+    @d_@    : Prefix used for global DATA , lowercase      [05P]
+    @d_win@ : global window   object  _______________      [05P]
+    @d_doc@ : global document object  _______________      [07P]
+    @d_bod@ : global body     object  _______________      [07P]
+    @d_can@ : global canvas object                         [07P]
+    @d_wgl@ : global WebGL  Context                        [07P]
+    @W_V@ ::: Webgl_Version                                [07P]
+    @d_wvc@ : W_V.Context ( WGL Context Version )          [07P]
+    @d_wvs@ : W_V.Shader  ( WGL Shader  Version Directive )[07P]
+                                                           [---]
+    @d_pmf@ :::: global_data(d_) : Precious_Mediump_Float  [09P]
+    @_v1main_@ : BOGUS : No vertex shader #1 code.         [09P]
+    @_f1main_@ : Frag(shader) #1 - Main , scope marker.    [09P]
+                                                           [09P]
+    @SRC_VERT@ : source(SRC) code for VERTEX   shader.     [09P]
+    @SRC_FRAG@ : source(SRC) code for FRAGMENT shader.     [09P]
+                                                           [09P]
+    $_SRC_VERT_1_TILES_$ :--------------------------------:[09P]
+    $_SRC_FRAG_1_TILES_$ :--------------------------------:[09P]
+                                                           [09P]
+        The shader source code strings for rendering the   [09P]
+        __TILE_MAP__ behind the point sprites. This shader [09P]
+        will just be a "placeholder" shader that fills     [09P]
+        the screen some simple easy pattern using the      [09P]
+        frag coords.                                       [09P]
+                                                           [09P]
+        $_SV1_NOT_NEEDED_$ :--------------------------:    [09P]
+                                                      |    [09P]
+            d_sv1=( "$_SV1_NOT_NEEDED_$" );           |    [09P]
+                                                      |    [09P]
+            To explicitly state that we DONT_NEED     |    [09P]
+            a vertex shader to create our simple      |    [09P]
+            tile map renderer, as we can partition    |    [09P]
+            the 2D screen space using nothing but     |    [09P]
+            "gl_FragCoord".                           |    [09P]
+                                                      |    [09P]
+        :--------------------------: $_SV1_NOT_NEEDED_$    [09P]
+                                                           [09P]
+        @d_sv1@ : global_DATA(d_) - Shader(src)Vertex   #1 [09P]
+        @d_sf1@ : global_DATA(d_) - Shader(src)Fragment #1 [09P]
+                                                           [09P]
+    :--------------------------------: $_SRC_FRAG_1_TILES_$[09P]
+    :--------------------------------: $_SRC_VERT_1_TILES_$[09P]
+    $_SRC_VERT_2_POINT_$ :--------------------------------:[09P]
+    $_SRC_FRAG_2_POINT_$ :--------------------------------:[09P]
+                                                           [09P]
+        The shader source code strings for rendering the   [09P]
+        __POINT_SPRITES__ in front of the tilemap fragments[09P]
+        rendered by the __PREVIOUS_SHADER__ . This is the  [09P]
+        shader we will be using for rendering NPC and      [09P]
+        __PLAYER__ characters . What we learn from this    [09P]
+        shader will be used to write the code for the      [09P]
+        [ ARTEMIS ]sub-system within[ ATOMIC_IVY_MMO.JS ]. [09P]
+                                                           [09P]
+        Atomic Ivy MMO Source : github.com/KANJICODER/AIM  [09P]
+        AIM == Atomic.Ivy.MMO.: FILE[ ATOMIC_IVY_MMO.JS ]  [09P]
+                                                           [09P]
+        @d_sv2@ : global_DATA(d_) - Shader(src)Vertex   #2 [09P]
+        @d_sf2@ : global_DATA(d_) - Shader(src)Fragment #2 [09P]
+                                                           [09P]
+    :--------------------------------: $_SRC_VERT_2_POINT_$[09P]
+    :--------------------------------: $_SRC_FRAG_2_POINT_$[09P]
+                                                           [---]
+    $_SYMBOLIC_CONST_V_$ :--------------------------------:[10P]
+    $_SYMBOLIC_CONST_F_$ :--------------------------------:[10P]
+                                                           [10P]
+        @_SYMBOLIC_CONST_V_@ : Symbolic constant (number)  [10P]
+                             : that means "Vertex Shader". [10P]
+                                                           [10P]
+        @_SYMBOLIC_CONST_F_@ : Symbolic constant (number)  [10P]
+                             : that means "Frag   Shader". [10P]
+                                                           [10P]
+    :--------------------------------:$_SYMBOLIC_CONST_F_$ [10P]
+    :--------------------------------:$_SYMBOLIC_CONST_V_$ [10P]
+    #__VER_THEN_FRA__# :----------------------------------:[10P]
+                                                          |[10P]
+        As we are grouping the different calls ,          |[10P]
+        sub-group the calls by "vertex shader"            |[10P]
+        stuff first , and "fragment shader stuff"         |[10P]
+        second.                                           |[10P]
+                                                          |[10P]
+        I don't like arbitrary choice , so it seems       |[10P]
+        to make sense to me to do the vertex things       |[10P]
+        first since "vertex stage" comes before           |[10P]
+        "fragment stage" in shader pipeline.              |[10P]
+                                                          |[10P]
+    :----------------------------------: #__VER_THEN_FRA__#[10P]
+                                                           [---]
+    #__COMPILE_SHADER__# :--------------------------------:[11P]
+                                                          |[11P]
+        A wrapper function that compiles the shader       |[11P]
+        and then error checks it, we have this wrapper    |[11P]
+        function so as to not wreck the flow of the       |[11P]
+        code in the[ VER_THEN_FRA ]section after we       |[11P]
+        refactor it to use __OUR__ custom compile         |[11P]
+        shader wrapper function.                          |[11P]
+                                                          |[11P]
+      @i_wso@ : INPUT(param) : Webgl_Shader_Object        |[11P]
+        @wso@ : Webgl_Shader_Object                       |[11P]
+        @sym@ : general use symbolic constant variable    |[11P]
+        @bol@ : general use           boolean variable    |[11P]
+        @str@ : general use           string  variable    |[11P]
+                                                          |[11P]
+        [ sym ] : In this function is COMPILE_STATUS sym  |[11P]
+        [ bol ] : In this function is COMPILE_STATUS bol  |[11P]
+        [ str ] : In this function is ShaderInfoLog  str  |[11P]
+                                                          |[11P]
+    :--------------------------------: #__COMPILE_SHADER__#[11P]
+    $_FAIL_LOG_$ :----------------------------------------:[11P]
+                                                          |[11P]
+        Denoting that I am logging out a "logging message"|[11P]
+        that will hopefully explain why whatever I am     |[11P]
+        doing in [ WebGl / OpenGL ] is failing right now. |[11P]
+                                                          |[11P]
+    :----------------------------------------: $_FAIL_LOG_$[11P]
+    $_UR_SHADER_SUCKS_$ :---------------------------------:[11P]
+                                                          |[11P]
+        Positive words of encouragement to help whoever   |[11P]
+        wrote this code get their /f/u/c/k/i/n/g/ act     |[11P]
+        together and write some decent god-fearing ,      |[11P]
+        church-going respectable code that adheres to     |[11P]
+        our traditions of human-readble pronouncable      |[11P]
+        names that sound like english.                    |[11P]
+                                                          |[11P]
+        All hail the church of LegoNamingCamelCaseJavaBullshit !
+                                                          |[11P]
+        It probably won't happen though. I hear the       |[11P]
+        author is completely off their rocker.            |[11P]
+        Abbreviates /s/h/i/t/ like it is assembly         |[11P]
+        code or something.                                |[11P]
+                                                          |[11P]
+    :---------------------------------: $_UR_SHADER_SUCKS_$[11P]
+
+    @d_hed@ : data_global(d_) shader common HEADER         [12P]
+                                                           [12P]
+    $_DO_NOTHING_SHADER_4_NOW_$ :-------------------------:[12P]
+                                                          |[12P]
+        Before we worry about shader pipeline #2 ,        |[12P]
+        we need to get the first rendering pass           |[12P]
+        working correctly.                                |[12P]
+                                                          |[12P]
+        The 1st rendering pass being our placeholder      |[12P]
+        tilemap renderer that the sprite renderer is      |[12P]
+        going to render on top of.                        |[12P]
+                                                          |[12P]
+        An empty "void main(){}" is all that is           |[12P]
+        required to pass shader compilation.              |[12P]
+                                                          |[12P]
+    :-------------------------: $_DO_NOTHING_SHADER_4_NOW_$[12P]
+    $_GL_FRAG_COLOR_$ :-----------------------------------:[12P]
+                                                          |[12P]
+        The built-in variable "gl_FragColor" is only      |[12P]
+        available in WebGL1. In WebGL2 and in modern      |[12P]
+        OpenGL ES versions , it has been deprecated in    |[12P]
+        favor of using the output location qualifiers     |[12P]
+        in the fragment shader.                           |[12P]
+                                                          |[12P]
+    :-----------------------------------: $_GL_FRAG_COLOR_$[12P]
+
+    $_PROGRAM_ID_IS_OBJECT_IN_WGL_$ :---------------------:[13P]
+    ?_FAKEID_? :------------------------------------------:[13P]
+    ?_PID_V_POB_? :---------------------------------------:[13P]
+                                                          |[13P]
+        "program id" is actually an OBJECT in WebGL .     |[13P]
+        When converting WebGL to OpenGL , "program id"    |[13P]
+        will be of the correct type. That is why I        |[13P]
+        wrote it this way.                                |[13P]
+                                                          |[13P]
+        @FAKEID@ : It's a "Fake ID" , it's actually a     |[13P]
+                 : "program object" , but if there were   |[13P]
+                 : OpenGL it would be an Uint32 ID.       |[13P]
+                                                          |[13P]
+        @PIV_V_POB@ : Program_ID -versus- Program_OBject  |[13P]
+                                                          |[13P]
+        @pid@ : ............. Program_ID                  |[13P]
+        @pob@ : ............. Program_OBJect              |[13P]
+        @d_pob: global_Data - Program_OBject              |[13P]
+        @d_pid: global_Data - Program_ID                  |[13P]
+                                                          |[13P]
+        < WEB  GL Conext > . createProgram ===> POB       |[13P]
+        < OPEN GL Conext > . createProgram ===> PID       |[13P]
+                                                          |[13P]
+        Because we are writing our code with the          |[13P]
+        intentions of converting it to C99 in the         |[13P]
+        future, we are going to call the variable         |[13P]
+        by it's C99 name , even though that might         |[13P]
+        be confusing because that is __NOT__ it's         |[13P]
+        real underlying type in JavaScript.               |[13P]
+                                                          |[13P]
+        @d_pid@ : Global Program ID , use same name in    |[13P]
+                : WEBGL & OPENGL , even though in WEBGL   |[13P]
+                : this is actually a "Program Object"     |[13P]
+                : rather than a UINT32 Handle.            |[13P]
+                                                          |[13P]
+    :---------------------------------------: ?_PID_V_POB_?[13P]
+    :------------------------------------------: ?_FAKEID_?[13P]
+    :---------------------: $_PROGRAM_ID_IS_OBJECT_IN_WGL_$[13P]
+    #__ALLOC_PID_ARR__# :---------------------------------:[13P]
+                                                          :[13P]
+        Allocated PID Array.                              :[13P]
+        Allocated Program ID Array.                       :[13P]
+                                                          :[13P]
+        NOTE : "PID" is actually an object in WEBGL ,     :[13P]
+             : "PID" is just a U32 handle in OPENGL .     :[13P]
+                                                          :[13P]
+    :---------------------------------: #__ALLOC_PID_ARR__#[13P]
+    #__PROGRAM_CREATION__# :------------------------------:[13P]
+                                                          |[13P]
+        Lets create and setup our program so that we      |[13P]
+        are ready to invoke our shader each screen        |[13P]
+        re-draw.                                          |[13P]
+                                                          |[13P]
+        Every time the screen is redrawn the callback     |[13P]
+        registered with "requestAnimationFrame" will      |[13P]
+        be fired, inside that callback we should be       |[13P]
+        calling "d_wgl.drawArrays()".                     |[13P]
+                                                          |[13P]
+        It's kind of weird to say "drawArrays()"          |[13P]
+        because that implies we have a vertex array       |[13P]
+        to draw, which is typical in __MOST__ render      |[13P]
+        pipelines. But we __DONT__ have any arrays        |[13P]
+        to draw....                                       |[13P]
+                                                          |[13P]
+        You can think of "drawArrays" as meaning :        |[13P]
+                                                          |[13P]
+            Draw the screen with a STRONG RECOMMENDATION  |[13P]
+            that you have an array of vertex information  |[13P]
+            to render.                                    |[13P]
+                                                          |[13P]
+        Currently the function drawing our screen is      |[13P]
+        the "LOOP_FOREVER" function.                      |[13P]
+                                                          |[13P]
+    :------------------------------: #__PROGRAM_CREATION__#[13P]
+    #__PROGRAM_SELECT__# :--------------------------------:[13P]
+                                                           [13P]
+        Select the program to use. For now we are going    [13P]
+        to use the "fake tilemap shader" , eventually      [13P]
+        we actually want to use BOTH PROGRAMS each         [13P]
+        screen redraw. Calling the tilemap shader          [13P]
+        pipeline first to render the tilemap, then         [13P]
+        the point sprite shader pipeline to render         [13P]
+        the sprites on top of the tilemap.                 [13P]
+                                                           [13P]
+    :--------------------------------: #__PROGRAM_SELECT__#[13P]
+
+    #__IAM_A_DIRTY_LIAR__# :------------------------------:[14P]
+                                                           [14P]
+        I am a dirty liar. Even though we don't need       [14P]
+        a vertex shader for the tilemap renderer...        [14P]
+        We still at least need an __EMPTY__ vertex         [14P]
+        shader to make a valid program object.             [14P]
+                                                           [14P]
+        In Other Words :                                   [14P]
+                                                           [14P]
+                : Valid webgl program object requires :::  [14P]
+                : at minimum a vertex and fragment    :::  [14P]
+                : shader, even if they contain        :::  [14P]
+                : just an empty "void main".          :::  [14P]
+                                                           [14P]
+        $_NO_VERT_LOGIC_IN_TILE_MAP_$ :------------:       [14P]
+                                                   |       [14P]
+            No vertex transformation logic in our  |       [14P]
+            tilemap shader, all we need is an      |       [14P]
+            empty void main. We still must have    |       [14P]
+            a[ void_main ]but is can be empty.     |       [14P]
+                                                   |       [14P]
+        :------------: $_NO_VERT_LOGIC_IN_TILE_MAP_$       [14P]
+                                                           [14P]
+                                                           [14P]
+    :------------------------------: #__IAM_A_DIRTY_LIAR__#[14P]
+    #__VIEWPORT_SETUP__# :--------------------------------:[14P]
+                                                          :[14P]
+        Make sure the webgl context size matches          :[14P]
+        the size of our canvas. Eventually we also        :[14P]
+        want to make sure the cavas size is always        :[14P]
+        the size of our browser's client area.            :[14P]
+                                                          :[14P]
+        But for now, lets just focus on getting the       :[14P]
+        intial 512__X__512 render working.                :[14P]
+                                                          :[14P]
+    :--------------------------------: #__VIEWPORT_SETUP__#[14P]
+    #__ALIGN_CONTEXT_TO_CANVAS__# :-----------------------:[14P]
+                                                           [14P]
+        "Align context to canvas" isn't the most accurate  [14P]
+        way to describe what we are doing. In more         [14P]
+        accurate terms we are :                            [14P]
+                                                           [14P]
+            Setting the viewport of the WebGL              [14P]
+            rendering context to match the                 [14P]
+            dimensions of the canvas.                      [14P]
+                                                           [14P]
+    :-----------------------:#__ALIGN_CONTEXT_TO_CANVAS__#:[14P]
+
+    $_CAP_N_DIA_$ :---------------------------------------:[15P]
+                                                           [15P]
+        @BIG_N@ : BIG "N" , literally drawing a big "N"    [15P]
+                : using 4 verts, which can create          [15P]
+                : 2 triangles to cover the entire          [15P]
+                : screen in homogeneous coordinates.       [15P]
+                                                           [15P]
+            +-------+      +-------+                       [15P]
+            |       |      |       |                       [15P]
+            | (0,1) |      | (1,1) |    (#,#)==(v_x,v_y)   [15P]
+            |       |      |       |                       [15P]
+            +---+---+      +---+---+                       [15P]
+                ^    \         ^                           [15P]
+                ^     \        ^                           [15P]
+                ^      \       ^                           [15P]
+                ^       \      ^                           [15P]
+                ^        \     ^                           [15P]
+                ^         \    ^                           [15P]
+            +---+---+      +---+---+                       [15P]
+            |       |      |       |                       [15P]
+            | (0,0) |      | (1,0) |                       [15P]
+            |       |      |       |                       [15P]
+            +-------+      +-------+                       [15P]
+                                                           [15P]
+            The "BIG_N" here is __NOT__ in homogeneous     [15P]
+            coordinates however, so we need to apply       [15P]
+            a formula so that :                            [15P]
+                                                           [15P]
+            ( 0 )====>( -1 )                               [15P]
+            ( 1 )====>( +1 )                               [15P]
+                                                           [15P]
+            +-----------------+-----------------+          [15P]
+            |                 |                 |          [15P]
+            |                                   |          [15P]
+            |                 |                 |          [15P]
+            + - - - - - - -( 0,0 )- - - - - - - +          [15P]
+            |                 |                 |          [15P]
+            |                                   |          [15P]
+            |                 |                 |          [15P]
+            +-----------------+-----------------+          [15P]
+                                                           [15P]
+        In WebGL , a RIGHT handed coordinate system is     [15P]
+        used. This is because /G/U/N/S/ are used with      [15P]
+        your RIGHT_HAND and WebGL is trying to shoot       [15P]
+        you in the face with bullets that have a           [15P]
+        positive forward velocity.                         [15P]
+                                                           [15P]
+        Hope this helps,                                   [15P]
+                                                           [15P]
+        - KanjiCoder                                       [15P]
+                                                           [15P]
+    :---------------------------------------:$_CAP_N_DIA_$:[15P]
+    $_1ST_VERT_DEX_$ :------------------------------------:[15P]
+                                                           [15P]
+        The index of the first vertex to start drawing.    [15P]
+        I would keep this at ZERO because looks like       [15P]
+        different versions of [WEBGL/OPENGL]don't agree    [15P]
+        on if this value is relative or absolute.          [15P]
+                                                           [15P]
+        But if we keep it at zero , all implementations    [15P]
+        of [OPENGL/WEBGL] will assume first value of       [15P]
+        [ gl_VertexID ]is ZERO(0).                         [15P]
+                                                           [15P]
+    :------------------------------------:$_1ST_VERT_DEX_$:[15P]
+    $_NUM_VERT_IDS_$ :------------------------------------:[15P]
+                                                           [15P]
+        Total number of verts to draw ,                    [15P]
+        starting at 1ST_VERT_DEX .                         [15P]
+                                                           [15P]
+    :------------------------------------:$_NUM_VERT_IDS_$:[15P]
+
+    $_OCD_I32_$ :-----------------------------------------:[16P]
+    $_OCD_U32_$ :-----------------------------------------:[16P]
+                                                           [16P]
+        @OCD_I32@ : ObsessiveCompulsiveDisorder -  Int32   [16P]
+        @OCD_U32@ : ObsessiveCompulsiveDisorder - Uint32   [16P]
+                                                           [16P]
+        I like when things line up, and this particular    [16P]
+        difference between signed and un-signed integers   [16P]
+        really bothers me because of how it causes         [16P]
+        my source code to slightly[stagger/mal-align].     [16P]
+                                                           [16P]
+    :-----------------------------------------:$_OCD_U32_$:[16P]
+    :-----------------------------------------:$_OCD_I32_$:[16P]
+    $_BOARD_$ :-------------------------------------------:[16P]
+                                                           [16P]
+        We are making a checkerboard. When the X and       [16P]
+        Y address of the[ cell/square ]are                 [16P]
+                                                           [16P]
+            [ BOTH EVEN ]OR[ BOTH ODD ]                    [16P]
+                                                           [16P]
+        We color the cell[ DARK_GREY ].                    [16P]
+                                                           [16P]
+        Let's make a quick truth table diagram where       [16P]
+        we label all of the cells where odd-even match.    [16P]
+                                                           [16P]
+        +---------+---------+---------+---------+---------+[16P]
+        |  EVE_X  |         |  EVE_X  |         |  EVE_X  |[16P]
+        |         |         |         |         |         |[16P]
+        |  EVE_Y  |         |  EVE_Y  |         |  EVE_Y  |[16P]
+        +---------+---------+---------+---------+---------+[16P]
+        |         |  ODD_X  |         |  ODD_X  |         |[16P]
+        |         |         |         |         |         |[16P]
+        |         |  ODD_Y  |         |  ODD_Y  |         |[16P]
+        +---------+---------+---------+---------+---------+[16P]
+        |  EVE_X  |         |  EVE_X  |         |  EVE_X  |[16P]
+        |         |         |         |         |         |[16P]
+        |  EVE_Y  |         |  EVE_Y  |         |  EVE_Y  |[16P]
+        +---------+---------+---------+---------+---------+[16P]
+        |         |  ODD_X  |         |  ODD_X  |         |[16P]
+        |         |         |         |         |         |[16P]
+        |         |  ODD_Y  |         |  ODD_Y  |         |[16P]
+        +---------+---------+---------+---------+---------+[16P]
+        |  EVE_X  |         |  EVE_X  |         |  EVE_X  |[16P]
+        |         |         |         |         |         |[16P]
+        |  EVE_Y  |         |  EVE_Y  |         |  EVE_Y  |[16P]
+        +---------+---------+---------+---------+---------+[16P]
+                                                           [16P]
+    :-------------------------------------------:$_BOARD_$:[16P]
+
+                                                           [---]
+*** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]    
+                                                    // [---=---]
+</script><!-- //////////////////////////////////////// [003_POI][002_POI][001_POI] -->
+
