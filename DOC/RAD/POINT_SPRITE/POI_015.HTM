@@ -82,10 +82,27 @@
                                                     //::[---]://
         //:#__IAM_A_DIRTY_LIAR__#:[14P]:--------:// //::[14P]://
         d_sv1 =(d_hed)+(`                           //::[14P][09P]://
-            void main( ){   //::::::::[_v1main_]:// //::[14P]://
-                                                    //::[14P]://
-                /**$_NO_VERT_LOGIC_IN_TILE_MAP_$**/ //::[14P]://
-                                                    //::[14P]://
+                                                    //::[---]://
+          #define I_D ( gl_VertexID )               //::[15P]://
+          #define F32 float                         //::[15P]://
+                                                    //::[15P]://
+            //:$_CAP_N_DIA_$:[15P]:-------------:// //::[15P]://
+                                                    //::[15P]://
+                const int v_x[4]=int[4]( 0,0,1,1 ); //::[15P]://
+                const int v_y[4]=int[4]( 0,1,0,1 ); //::[15P]://
+                                                    //::[15P]://
+            //:-------------:$_CAP_N_DIA_$:[15P]:// //::[15P]://
+                                                    //::[15P]://
+            void main( ){   //::::::::[_v1main_]:// //::[15P]://
+                                                    //::[15P]://
+                gl_Position = vec4(                 //::[15P]://
+                                                    //::[15P]://
+                    1.0 -( F32( v_x[ I_D ] ) * 2.0 )//::[15P]://
+                ,   1.0 -( F32( v_y[ I_D ] ) * 2.0 )//::[15P]://
+                ,   0.0                             //::[15P]://
+                ,   1.0                             //::[15P]://
+                );;                                 //::[15P]://
+                                                    //::[---]://
             }/////////////////////////[_v1main_]:// //::[14P]://
         `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[14P][09P]://
         //:--------:#__IAM_A_DIRTY_LIAR__#:[14P]:// //::[14P]://
@@ -150,6 +167,7 @@
             d_pid=d_wgl.createProgram();            //::[13P]://
             d_wgl.attachShader( d_pid , d_ov1 );    //::[14P][13P]://
             d_wgl.attachShader( d_pid , d_of1 );    //::[13P]://
+            d_wgl.linkProgram(  d_pid );;;;;;;;;    //::[15P]://
                                                     //::[13P]://
             d_arr_pid[ 0 ]=(  d_pid );              //::[13P]://
                                                     //::[13P]://
@@ -185,9 +203,9 @@
                                                     //::[13P]://
             d_wgl.clear( d_wgl.COLOR_BUFFER_BIT );  //::[13P]://
             d_wgl.drawArrays(                       //::[13P]://
-                d_wgl.TRIANGLES                     //::[13P]://
-            ,   0                                   //::[13P]://
-            ,   0                                   //::[13P]://
+                d_wgl.TRIANGLE_STRIP                //::[14P][13P]://
+            ,   0         //:$_1ST_VERT_DEX_$://    //::[14P][13P]://
+            ,   4         //:$_NUM_VERT_IDS_$://    //::[14P][13P]://
             );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;    //::[13P]://
                                                     //::[13P]://
         //:--------------:#__CLEAR_SCREEN_AND_RENDER__#:[13P]://
@@ -512,7 +530,76 @@
                                                            [14P]
     :-----------------------:#__ALIGN_CONTEXT_TO_CANVAS__#:[14P]
 
-
+    $_CAP_N_DIA_$ :---------------------------------------:[15P]
+                                                           [15P]
+        @BIG_N@ : BIG "N" , literally drawing a big "N"    [15P]
+                : using 4 verts, which can create          [15P]
+                : 2 triangles to cover the entire          [15P]
+                : screen in homogeneous coordinates.       [15P]
+                                                           [15P]
+            +-------+      +-------+                       [15P]
+            |       |      |       |                       [15P]
+            | (0,1) |      | (1,1) |    (#,#)==(v_x,v_y)   [15P]
+            |       |      |       |                       [15P]
+            +---+---+      +---+---+                       [15P]
+                ^    \         ^                           [15P]
+                ^     \        ^                           [15P]
+                ^      \       ^                           [15P]
+                ^       \      ^                           [15P]
+                ^        \     ^                           [15P]
+                ^         \    ^                           [15P]
+            +---+---+      +---+---+                       [15P]
+            |       |      |       |                       [15P]
+            | (0,0) |      | (1,0) |                       [15P]
+            |       |      |       |                       [15P]
+            +-------+      +-------+                       [15P]
+                                                           [15P]
+            The "BIG_N" here is __NOT__ in homogeneous     [15P]
+            coordinates however, so we need to apply       [15P]
+            a formula so that :                            [15P]
+                                                           [15P]
+            ( 0 )====>( -1 )                               [15P]
+            ( 1 )====>( +1 )                               [15P]
+                                                           [15P]
+            +-----------------+-----------------+          [15P]
+            |                 |                 |          [15P]
+            |                                   |          [15P]
+            |                 |                 |          [15P]
+            + - - - - - - -( 0,0 )- - - - - - - +          [15P]
+            |                 |                 |          [15P]
+            |                                   |          [15P]
+            |                 |                 |          [15P]
+            +-----------------+-----------------+          [15P]
+                                                           [15P]
+        In WebGL , a RIGHT handed coordinate system is     [15P]
+        used. This is because /G/U/N/S/ are used with      [15P]
+        your RIGHT_HAND and WebGL is trying to shoot       [15P]
+        you in the face with bullets that have a           [15P]
+        positive forward velocity.                         [15P]
+                                                           [15P]
+        Hope this helps,                                   [15P]
+                                                           [15P]
+        - KanjiCoder                                       [15P]
+                                                           [15P]
+    :---------------------------------------:$_CAP_N_DIA_$:[15P]
+    $_1ST_VERT_DEX_$ :------------------------------------:[15P]
+                                                           [15P]
+        The index of the first vertex to start drawing.    [15P]
+        I would keep this at ZERO because looks like       [15P]
+        different versions of [WEBGL/OPENGL]don't agree    [15P]
+        on if this value is relative or absolute.          [15P]
+                                                           [15P]
+        But if we keep it at zero , all implementations    [15P]
+        of [OPENGL/WEBGL] will assume first value of       [15P]
+        [ gl_VertexID ]is ZERO(0).                         [15P]
+                                                           [15P]
+    :------------------------------------:$_1ST_VERT_DEX_$:[15P]
+    $_NUM_VERT_IDS_$ :------------------------------------:[15P]
+                                                           [15P]
+        Total number of verts to draw ,                    [15P]
+        starting at 1ST_VERT_DEX .                         [15P]
+                                                           [15P]
+    :------------------------------------:$_NUM_VERT_IDS_$:[15P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]    
                                                     // [---=---]
