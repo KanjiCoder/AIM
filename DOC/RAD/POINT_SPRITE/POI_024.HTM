@@ -6,7 +6,9 @@
                                                     //::[23P]://
         let c_sbx =( 640 ); //: @sbx@ : Sprite_Block.X :[23P]://
         let c_sby =( 896 ); //: @sby@ : Sprite_Block.Y :[23P]://
-                                                    //::[23P]://
+                                                    //::[---]://
+        let c_tui_p2k =(0); //: $_TEX_UNI_IND_P2K_$   ::[24P]://
+                                                    //::[---]://
     //:=================:#__ATOMIC_IVY_MMO_CONSTANTS__#:[23P]://
     //:#__ATOMIC_IVY_MMO_GLOBALS__#:[20P]:===================://
                                                     //::[20P]://
@@ -274,6 +276,7 @@
             d_pid =( d_arr_pid[ 1 ] );;;;;;;;;;;;   //::[19P]://
             d_wgl.useProgram(d_pid  );;;;;;;;;;;;   //::[19P]://
             d_tik_loc=( GUL( d_pid , "d_tik" ));;   //::[19P]://
+            d_p2k_loc=( GUL( d_pid , "d_p2k" ));;   //::[24P]://
                                                     //::[19P]://
         //:-------:#__UNIFORM_ADDRESSES__#:[19P]:// //::[19P]://
         //:#__WIREUP_KEYBOARD__#:[20P]:---------:// //::[20P]://
@@ -310,7 +313,15 @@
                                                     //::[22P]://
             d_p2k_tex =( d_wgl.createTexture() );;  //::[22P]://
             //:        OPENGL[ glGenTextures() ]:// //::[22P]://
-                                                    //::[22P]://
+                                                    //::[---]://
+            //:#_ACTIVATE_B4_BIND_#:[24P]:------:// //::[24P]://
+                                                    //::[24P]://
+                d_wgl.activeTexture(                //::[24P]://
+                    d_wgl.TEXTURE0                  //::[24P]://
+                +   c_tui_p2k                       //::[24P]://
+                );;                                 //::[24P]://
+            //:------:#_ACTIVATE_B4_BIND_#:[24P]:// //::[24P]://
+                                                    //::[---]://
             d_wgl.bindTexture(                      //::[22P]://
                                                     //::[22P]://
                 d_wgl.TEXTURE_2D  //: $_T_O_T_$ :// //::[22P]://
@@ -338,6 +349,15 @@
             );; //:-----------------:[ T_I_2_D ]:// //::[22P]://
                                                     //::[22P]://
         //:-------:#__ALLOC_GPU_TEXTURE__#:[22P]:// //::[22P]://
+        //:#__WIRE_UP_SAMPLER__#:[24P]:---------:// //::[24P]://
+        {                                           //::[24P]://
+            let zero_offset=( 0 );                  //::[24P]://
+                                                    //::[24P]://
+            d_wgl.uniform1i(     d_p2k_loc          //::[24P]://
+            ,  zero_offset + c_tui_p2k     );;      //::[24P]://
+                                                    //::[24P]://
+        };;                                         //::[24P]://
+        //:---------:#__WIRE_UP_SAMPLER__#:[24P]:// //::[24P]://
                                                     //::[---]://
     };;                                             //::[05P]://
     //:====================================:#__SETUP__#:[05P]://
@@ -1116,6 +1136,76 @@
         TINYURL[ www.tinyurl.com/AIM-GIF ]TINY__URL       :[23P]
                                                           :[23P]
     :--------------------------:?_NICE_GIF_YOU_GOT_THERE_?:[23P]
+    
+    #_TEX_UNI_IND_P2K_# :---------------------------------:[24P]
+                                                          :[24P]
+        @TEX_UNI_IND_P2K@ : Texture Unit Index Of - d_p2k :[24P]
+                                                          :[24P]
+        We use this index to do TWO THINGS :              :[24P]
+                                                          :[24P]
+        1. Correctly setup our texture to correct T_S_I   :[24P]
+        2. Correctly setup our sampler to correct T_U_I   :[24P]
+                                                          :[24P]
+        @T_U_I@ : Texture_Unit_Index ( Local  Index )     :[24P]
+        @T_S_I@ : Texture_Slot_Index ( Global Index )     :[24P]
+                                                          :[24P]
+        Fairly certain the sampler needs to use the       :[24P]
+        [ local_index ]( T_U_I )while texture uploading   :[24P]
+        needs to use the[ global_index ] ( T_S_I ).       :[24P]
+                                                          :[24P]
+                                                          :[24P]
+    :---------------------------------:#_TEX_UNI_IND_P2K_#:[24P]
+    #_ACTIVATE_B4_BIND_# :--------------------------------:[24P]
+                                                          :[24P]
+        @ACTIVATE_B4_BIND@ : Activate Before Bind         :[24P]
+                                                          :[24P]
+        If we want our uploaded bitmap( d_pix2048 )       :[24P]
+        to have settings that agree with the uploaded     :[24P]
+        bitmap's sampler ( d_p2k ) , then we need         :[24P]
+        to make sure the below things are equal :         :[24P]
+                                                          :[24P]
+        1. d_pix2048's active texture unit upon           :[24P]
+           upload should be equal to integer value        :[24P]
+           uploaded to[ d_p2k ]texture sampler.           :[24P]
+                                                          :[24P]
+        2. d_2pk 's texture sampler should be loaded      :[24P]
+           with the same relative "texture_unit_index"    :[24P]
+           that was in focus when we upload[ d_pix2048 ]. :[24P]
+                                                          :[24P]
+        A texture sampler is just an integer uniform.     :[24P]
+        That is all it is. If you are used to             :[24P]
+        Object_Oriented_Programming( OOP ), that might    :[24P]
+        feel kind of weird.                               :[24P]
+                                                          :[24P]
+        But think about it... Our texture sampler only    :[24P]
+        has ONE_PIECE_OF_INFORMATION_IT_NEEDS_CONFIGURED  :[24P]
+        and that is the "texture_unit_to_sample_from"...  :[24P]
+                                                          :[24P]
+        So... why would you create an object that only    :[24P]
+        has one member variable, which is a number...     :[24P]
+        Rather than just... I don't know...               :[24P]
+                                                          :[24P]
+        USE_A_FUCKING_NUMBER ?                            :[24P]
+                                                          :[24P]
+        OpenGL / WebGL uses a number in this case.        :[24P]
+                                                          :[24P]
+        Be a gigachad. Be like WebGL and OpenGL.          :[24P]
+                                                          :[24P]
+    :--------------------------------:#_ACTIVATE_B4_BIND_#:[24P]
+    #__WIRE_UP_SAMPLER__# :-------------------------------:[24P]
+                                                          :[24P]
+        Set the integer value of "d_p2k" texture          :[24P]
+        sampler within our sprite renderer's vertex       :[24P]
+        shader by giving command :                        :[24P]
+                                                          :[24P]
+             d_wgl.uniform1i                              :[24P]
+                                                          :[24P]
+        Two pieces of information :                       :[24P]
+                                                          :[24P]
+            1. Address of "d_p2k" in shader (d_p2k_loc)   :[24P]
+            2. Value to store in "d_2pk" :  (d_tui_p2k)   :[24P]
+                                                          :[24P]
+    :-------------------------------:#__WIRE_UP_SAMPLER__#:[24P]
 
 
                                                            [---]
