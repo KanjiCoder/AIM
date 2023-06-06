@@ -2,6 +2,8 @@
         let c_sba_len =(13);//: $_EXPLAIN_SBA_LEN_$   ::[30P]://
         let c_sba_cap =(63);//: $_EXPLAIN_SBA_CAP_$   ::[30P]://
 
+            //: @E@     : E is for "ERROR"        ::::::[30P]://
+
         let d_sac =( new Uint32Array( c_sba_len ) );//::[30P]://
                     //: $_SPRITE_ATTRIB_COLUMN_$      ::[30P]://
 
