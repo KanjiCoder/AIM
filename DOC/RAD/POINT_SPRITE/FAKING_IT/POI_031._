@@ -1,0 +1,67 @@
+   
+        let c_sba_len =(13);//: $_EXPLAIN_SBA_LEN_$   ::[30P]://
+        let c_sba_cap =(63);//: $_EXPLAIN_SBA_CAP_$   ::[30P]://
+
+        let d_sac =( new Uint32Array( c_sba_len ) );//::[30P]://
+                    //: $_SPRITE_ATTRIB_COLUMN_$      ::[30P]://
+
+            let  E    =( F_ERROR   );;;;;;;;;;;;;;;;//::[30P]://
+
+                if( sai > c_sba_len ){E("[E01]");}; //::[30P]://
+                if( sai > c_sba_cap ){E("[E02]");}; //::[30P]://
+
+
+    $_EXPLAIN_SBA_LEN_$ :---------------------------------:[30P]
+                                                          |[30P]
+        @sba_len@ : SpriteBlockAttributes - LENGTH        |[30P]
+      @c_sba_len@ : SpriteBlockAttributes - LENGTH        |[30P]
+                                                          |[30P]
+        "sba_len" is the number of sprite attributes      |[30P]
+        that the engine[ CURRENTLY_USES ]for the engine.  |[30P]
+                                                          |[30P]
+        "sba_cap" is the number of sprite attributs       |[30P]
+        that the engine[ CAN_SUPPORT ]in total.           |[30P]
+                                                          |[30P]
+        LENGTH(len) and CAPACITY(cap) are not used in     |[30P]
+        the __TYPICAL__ fashion here. Because both        |[30P]
+        length and capacity are __CONSTANTS__ .           |[30P]
+                                                          |[30P]
+        +------------------------+                        |[30P]
+        | This is ___NOT___ like |                        |[30P]
+        | length and capacity    |                        |[30P]
+        | members of an array.   |                        |[30P]
+        +------------------------+                        |[30P]
+                                                          |[30P]
+    :---------------------------------:$_EXPLAIN_SBA_LEN_$:[30P]
+    $_EXPLAIN_SBA_CAP_$ :---------------------------------:[30P]
+                                                          :[30P]
+        @sba_cap@ : SpriteBlockAttributes - CAPACITY      :[30P]
+      @c_sba_cap@ : SpriteBlockAttributes - CAPACITY      :[30P]
+                                                          :[30P]
+        "sba_cap" the the maximum possible length in      :[30P]
+                  terms of attributes that sprites        :[30P]
+                  can ever have. We cannot exceed this    :[30P]
+                  value because there is no more memory   :[30P]
+                  within our memory layout.               :[30P]
+                                                          :[30P]
+                  Work within your limitation.s           :[30P]
+                                                          :[30P]
+        @_SOFT_LIM_@ : Soft Limit , length   exceeded.    :[30P]
+        @_HARD_LIM_@ : Hard Limit , capacity exceeded.    :[30P]
+                                                          :[30P]
+        @E01@ : Error #1 , soft limit hit. (_SOFT_LIM_)   :[30P]
+        @E02@ : Error #2 , hard limit hit. (_HARD_LIM_)   :[30P]
+                                                          :[30P]
+    :---------------------------------:$_EXPLAIN_SBA_CAP_$:[30P]
+
+
+    $_SPRITE_ATTRIB_COLUMN_$ :----------------------------:[30P]
+                                                          :[30P]
+        @d_sac@ : global_DATA - Sprite_Attribute_Column   :[30P]
+          @sac@ :               Sprite_Attribute_Column   :[30P]
+                                                          :[30P]
+        It is an array representing 1 column of           :[30P]
+        Uint32 pixels that need to be loaded              :[30P]
+        into our[ bitmap / texture ].                     :[30P]
+                                                          :[30P]
+    :----------------------------:$_SPRITE_ATTRIB_COLUMN_$:[30P]
