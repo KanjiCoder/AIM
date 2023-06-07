@@ -92,9 +92,9 @@ Start building with AIM today. Happy game development!
     AIM_1185 : BFJ_455 : ARTEMIS : ________________________
     AIM_1184 : BFJ_454 : ARTEMIS : ________________________
     AIM_1183 : BFJ_453 : ARTEMIS : ________________________
-    AIM_1182 : BFJ_452 : ARTEMIS : ________________________
-    AIM_1181 : BFJ_451 : ARTEMIS : ________________________
-    AIM_1180 : BFJ_450 : ARTEMIS : ________________________
+    AIM_1182 : BFJ_452 : ARTEMIS : Compiling Shader Objects
+    AIM_1181 : BFJ_451 : ARTEMIS : Creating  Shader Objects
+    AIM_1180 : BFJ_450 : ARTEMIS : Initial   Shader Source
     AIM_1179 : BFJ_449 : ARTEMIS : Unit Test Attrib Indexes
 
     AIM_1178 : BFJ_448 : POI_035 : POInt sprite research #035
