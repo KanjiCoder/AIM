@@ -87,6 +87,19 @@ Start building with AIM today. Happy game development!
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1179 : BFJ_449 : ARTEMIS : Unit Test Attrib Indexes
+
+    AIM_1178 : BFJ_448 : POI_035 : POInt sprite research #035
+    AIM_1177 : BFJ_447 : POI_034 : POInt sprite research #034
+    AIM_1176 : BFJ_446 : POI_033 : POInt sprite research #033
+    AIM_1175 : BFJ_445 : POI_032 : POInt sprite research #032
+    AIM_1174 : BFJ_444 : POI_031 : POInt sprite research #031
+    AIM_1173 : BFJ_443 : POI_030 : POInt sprite research #030
+    AIM_1172 : BFJ_442 : POI_029 : POInt sprite research #029
+    AIM_1171 : BFJ_441 : POI_028 : POInt sprite research #028
+    AIM_1170 : BFJ_440 : POI_027 : POInt sprite research #027
+    AIM_1169 : BFJ_439 : POI_026 : POInt sprite research #026
+
     AIM_1168 : BFJ_438 : POI_025 : POInt sprite research #025
     AIM_1167 : BFJ_437 : POI_024 : POInt sprite research #024
 
