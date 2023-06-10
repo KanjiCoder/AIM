@@ -128,6 +128,10 @@
         let d_orx     =( 0 );//: $_OFFSETRAWX_$ :// //::[29P]://
         let d_ory     =( 0 );//: $_OFFSETRAWY_$ :// //::[29P]://
                                                     //::[---]://
+        let d_poi_vpc =( "[_CPU_SIDE_IS_:d_vpc]" ); //::[41P]://
+        let d_poi_vp0 =( "[_CPU_SIDE_IS_:d_vp0]" ); //::[41P]://
+        let d_poi_vp1 =( "[_CPU_SIDE_IS_:d_vp1]" ); //::[41P]://
+                                                    //::[---]://
     //:==============================:#__GLOBALS__#:[004_POI]://
     //:#__ERROR__#:[08P]:====================================://
     let F_ERROR =(   i_msg )=>{                      //:[08P]://
@@ -491,13 +495,24 @@
             #define U_7F   U32(0x7F  )              //::[19P]://  
             #define F32 float                       //::[18P]://
             #define SID ( gl_VertexID )             //::[18P]://
+            #define UNI uniform                     //::[41P]://
                                                     //::[18P]://
             precision highp usampler2D ;            //::[18P]://
             uniform   usampler2D d_p2k ;            //::[18P]://
             uniform U32 d_tik          ;            //::[19P]://
             uniform U32 d_sss          ;            //::[36P]://
+            UNI UV4 d_poi_vpc ; //: ViewPort_C ::// //::[41P]://
+            UNI UV4 d_poi_vp0 ; //: ViewPort_0 ::// //::[41P]://
+            UNI UV4 d_poi_vp1 ; //: ViewPort_1 ::// //::[41P]://
                                                     //::[---]://
             void main( ){   //::::::::[_v2main_]:// //::[12P]://
+                                                    //::[---]://
+                //:#_GL_VIEWHACK_#:[41P]:--------------------://
+                    U32 viewhak =(  d_poi_vpc[0]    //::[41P]://
+                                  + d_poi_vp0[0]    //::[41P]://
+                                  + d_poi_vp1[0] ); //::[41P]://
+                    if( viewhak > U32(0) ){      }; //::[41P]://
+                //:--------------------:#_GL_VIEWHACK_#:[41P]://
                                                     //::[---]://
                 IV2 ixy ; //: @ixy@ : Signed_INT.XY     [25P]://        
                 UV4 tex ; //: @tex@ : U32 RGBA Texel    [25P]://
@@ -629,6 +644,9 @@
                                                     //::[---]://
             d_pid =( d_arr_pid[ 1 ] );;;;;;;;;;;;   //::[19P]://
             d_wgl.useProgram(d_pid  );;;;;;;;;;;;   //::[19P]://
+            d_poi_vpc=( GUL( d_pid , "d_poi_vpc" ));//::[41P]://
+            d_poi_vp0=( GUL( d_pid , "d_poi_vp0" ));//::[41P]://
+            d_poi_vp1=( GUL( d_pid , "d_poi_vp1" ));//::[41P]://
             d_tik_loc=( GUL( d_pid , "d_tik" ));;   //::[19P]://
             d_p2k_loc=( GUL( d_pid , "d_p2k" ));;   //::[24P]://
             d_sss_loc=( GUL( d_pid , "d_sss" ));;   //::[36P]://
@@ -788,6 +806,10 @@
             d_wgl.uniform4uiv(d_vp1_loc , d_vp1 );  //::[37P]://
                                                     //::[---]://
             d_wgl.useProgram( d_arr_pid[ 1 ]    );  //::[19P]://
+            d_wgl.uniform4uiv(d_poi_vpc , d_vpc );  //::[41P]://
+            d_wgl.uniform4uiv(d_poi_vp0 , d_vp0 );  //::[41P]://
+            d_wgl.uniform4uiv(d_poi_vp1 , d_vp1 );  //::[41P]://
+                                                    //::[---]://
                                           d_tik++;  //::[19P]://
             d_wgl.uniform1ui( d_tik_loc , d_tik );  //::[19P]://
                                                     //::[---]://
@@ -2240,6 +2262,24 @@
         code has ran.                                     |[40P]
                                                           |[40P]
     :--------------------------------:#__HAS_BEEN_SETUP__#:[40P]
+
+    #_GL_VIEWHACK_# :-------------------------------------:[41P]
+                                                          |[41P]
+        A hackish[ NO_OOP / NOOP ]used to make sure that  |[41P]
+        our[ camera_rectangles ]are not[ OPTIMIZED_OUT ]  |[41P]
+        of our[ GLSL ]shader by the[ GLSL_COMPILER ].     |[41P]
+                                                          |[41P]
+        [ GLSL_COMPILER ]LOVES_TO_FUCKING_DO_THAT .       |[41P]
+                                                          |[41P]
+        So if we want error checks that get thrown when   |[41P]
+        we cannot fetch a uniform to pass , we need to    |[41P]
+        guarantee these uniforms are in the shader with   |[41P]
+        this[ NOOP_HACK ].                                |[41P]
+                                                          |[41P]
+        @NOOP_HACK@ : NO_OPeration_HACK                   |[41P]
+                                                          |[41P]
+    :-------------------------------------:#_GL_VIEWHACK_#:[41P]
+
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]    
                                                     // [---=---]
