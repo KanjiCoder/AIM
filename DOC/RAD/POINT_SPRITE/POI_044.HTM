@@ -522,7 +522,6 @@
             #define y_0 ( uint( ${ y_0 } ) )        //::[43P]://
             #define y_1 ( uint( ${ y_1 } ) )        //::[43P]://
             #define u_1 ( uint(    0x1   ) )        //::[43P]://
-            #define u_2 ( uint(    0x2   ) )        //::[44P]://
                                                     //::[---]://
             precision highp usampler2D ;            //::[18P]://
             uniform   usampler2D d_p2k ;            //::[18P]://
@@ -572,9 +571,9 @@
                                                      //:[43P]://
                     //:#__VUF_SPRITE_SIZES__#:[44P]:---------://
                                                     //::[44P]://
-                    vss =UV2( DUC   / duf   );;;    //::[44P]://
-                    uss =max( vss.x , vss.y );;;    //::[44P]://
-                    fss =F32( uss   + u_2   );;;    //::[44P]://
+                    vss =UV2( DUC    /    duf   );; //::[44P]://
+                    uss =max( vss.x  ,    vss.y );; //::[44P]://
+                    fss =F32( u_1 + uss + u_1   );; //::[44P]://
                                                     //::[44P]://
                     //:---------:#__VUF_SPRITE_SIZES__#:[44P]://
                                                     //::[---]://
@@ -2432,6 +2431,26 @@
         same amount on the X and Y axis .                 |[44P]
                                                           |[44P]
     :------------------------:#_DISCRETE_UNITS_CHARACTER_#:[44P]
+    #__VUF_SPRITE_SIZES__# :------------------------------:[44P]
+                                                          |[44P]
+        @VUF@ : Vector_______Uint32_______Float32         |[44P]
+        @VUF@ : Vector__AND__Uint32__AND__Float32         |[44P]
+                                                          |[44P]
+        STEP 1 : divide DUC by[ duf ]vector .             |[44P]
+        STEP 2 : Point Size Is a 1D value , so to make    |[44P]
+               : sure our sprite has enough room to       |[44P]
+               : be fully rendered , we need to take      |[44P]
+               : the largest of the two values stored     |[44P]
+               : in our VECTOR_SPRITE_SIZE ( vss )        |[44P]
+        STEP 3 : GLSL expects us to use FLOAT32 for       |[44P]
+               : our point size, so we need to cast       |[44P]
+               : to float. While we are at it ,           |[44P]
+               : might as well add 1_PIXEL of padding     |[44P]
+               : to every side of sprite in case we       |[44P]
+               : need to do some[ ANTI_ALIASING ]         |[44P]
+               : trickery in the future .                 |[44P]
+                                                          |[44P]
+    :------------------------------:#__VUF_SPRITE_SIZES__#:[44P]
 
 
                                                            [---]
