@@ -340,13 +340,27 @@
         if( 1 === 1 ){  //:::::::::::::::::::[_CAN_MAG_][40P]://
                                                     //::[40P]://
             let d_e =( d_doc.documentElement );     //::[40P]://
-            let wid =( d_e.clientWidth       );     //::[40P]://
-            let hig =( d_e.clientHeight      );     //::[40P]://
+                wid =( d_e.clientWidth       );     //::[42P]   [BUG][40P]://
+                hig =( d_e.clientHeight      );     //::[42P]   [BUG][40P]://
                                                     //::[40P]://
             d_can.width =( wid );                   //::[40P]://
             d_can.height=( hig );                   //::[40P]://
                                                     //::[40P]://
         };;;//:::::::::::::::::::::::::::::::[_CAN_MAG_][40P]://
+        if( d_ini <= 0 ){ //:::::::::::::::::[_INI_CAM_][42P]://
+                                                    //::[42P]://
+            //:#__SNAP_TO_CENTER_____HOTEL_#:[42P]:----------://
+            //:#__SNAP_TO_CENTER_LEVELPACK_#:[42P]:----------://
+            let _1_=( d_vp1 );                      //::[42P]://
+                _1_[ x_0 ]=( c_duh +( 0x0000000 ) );//::[42P]://
+                _1_[ y_0 ]=( c_duh +( 0x0000000 ) );//::[42P]://
+                _1_[ x_1 ]=( c_duh +( c_duh - 1 ) );//::[42P]://
+                _1_[ y_0 ]=( c_duh +( c_duh - 1 ) );//::[42P]://
+                                                    //::[42P]://
+            //:----------:#__SNAP_TO_CENTER_LEVELPACK_#:[42P]://
+            //:----------:#__SNAP_TO_CENTER_____HOTEL_#:[42P]://
+                                                    //::[42P]://
+        }else   //:::::::::::::::::::::::::::[_INI_CAM_][42P]://
         if( d_ini >= 1 ){ //:::::::::::::::::[_VPC_VP0_][40P]://
                                                     //::[40P]://
             let _c_=( d_vpc );                      //::[40P]://
@@ -2280,6 +2294,58 @@
                                                           |[41P]
     :-------------------------------------:#_GL_VIEWHACK_#:[41P]
 
+    #__SNAP_TO_CENTER_____HOTEL_# :-----------------------:[42P]
+    #__SNAP_TO_CENTER_LEVELPACK_# :-----------------------:[42P]
+                                                          |[42P]
+        TAG[ SNAP_TO_CENTER_HOTEL ]                       |[42P]
+                                                          |[42P]
+        If it is the first-time setup code ,              |[42P]
+        then we need to initialize the starting           |[42P]
+        point of the camera in the "world space".         |[42P]
+                                                          |[42P]
+        What data is the camera looking at ?              |[42P]
+                                                          |[42P]
+        Our renderable space is a 3_X_3 grid of HOTELS.   |[42P]
+        So if the[ top_left_corner ]of viewport is        |[42P]
+        the magnitude of one hotel, and then we add       |[42P]
+        the magnitude of one hotel MINUS ONE to that      |[42P]
+        corner, we will get a bottom corner...            |[42P]
+                                                          |[42P]
+        The top_left + bottom_right corners will create   |[42P]
+        an inclusive selection rectangle that is          |[42P]
+        EXACTLY_SNAPPED to the HOTEL_IN_THE_DEAD_CENTER . |[42P]
+                                                          |[42P]
+        |<-------------------[ c_dum ]----------------->| |[42P]
+        |<-[ c_duh ]->|  |<-[ c_duh ]->|  |<-[ c_duh ]->| |[42P]
+        :             :  :             :  :             : |[42P]
+        [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ]  HOTEL  [ ]  [ ]  HOTEL  [ ]  [ ]  HOTEL  [ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][ ] |[42P]
+                                                          |[42P]
+        [ ][ ][ ][ ][ ]  [A][ ][ ][ ][ ]  [ ][ ][ ][ ][ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ]  HOTEL  [ ]  [ ]  HOTEL  [ ]  [ ]  HOTEL  [ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][B]  [ ][ ][ ][ ][ ] |[42P]
+                                                          |[42P]
+        [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ]  HOTEL  [ ]  [ ]  HOTEL  [ ]  [ ]  HOTEL  [ ] |[42P]
+        [ ]         [ ]  [ ]         [ ]  [ ]         [ ] |[42P]
+        [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][ ]  [ ][ ][ ][ ][ ] |[42P]
+                                                          |[42P]
+        [A] ==TO==> [B] is initial[ d_vp1 ]size.          |[42P]
+                                                          |[42P]
+        [A].XY =[   c_duh      ,   c_duh      ]           |[42P]
+        [B].XY =[ ( c_duh*2)-1 , ( c_duh*2)-1 ]           |[42P]
+                                                          |[42P]
+    :-----------------------:#__SNAP_TO_CENTER_LEVELPACK_#:[42P]
+    :-----------------------:#__SNAP_TO_CENTER_____HOTEL_#:[42P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]    
                                                     // [---=---]
