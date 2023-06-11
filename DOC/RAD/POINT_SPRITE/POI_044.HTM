@@ -62,6 +62,11 @@
             const c_du6 = 0x080000   ; //: te7==6 (64_X)[38P]://
                                        //:              [38P]://
         //:--------------------:#_TILE_DISCRETE_UNITS_#:[38P]://
+        //:#_DISCRETE_UNITS_CHARACTER_#:[44P]:---------------://
+                                                    //::[44P]://
+            const c_duc =( ( c_du0 | c_dut )>>>0 );;//::[44P]://
+                                                    //::[44P]://
+        //:---------------:#_DISCRETE_UNITS_CHARACTER_#:[44P]://
                                                     //::[---]://
     //:=================:#__ATOMIC_IVY_MMO_CONSTANTS__#:[23P]://
     //:#__ATOMIC_IVY_MMO_GLOBALS__#:[20P]:===================://
@@ -499,8 +504,9 @@
         d_sv2 =(d_hed)+(`                           //::[12P][10P]://
                                                     //::[---]://
             #define T_F texelFetch                  //::[32P]://
-            #define SBX int( ${ c_sbx } )           //::[32P]://
-            #define SBY int( ${ c_sby } )           //::[32P]://
+            #define SBX (  int( ${ c_sbx } ) )      //::[32P]://
+            #define SBY (  int( ${ c_sby } ) )      //::[32P]://
+            #define DUC ( uint( ${ c_duc } ) )      //::[44P]://
             #define IV2 ivec2                       //::[25P]://
             #define UV4 uvec4                       //::[25P]://
             #define F_7FFF  ( float(0x7FFF     ) )  //::[25P]://
@@ -510,12 +516,13 @@
             #define F32 float                       //::[18P]://
             #define SID ( gl_VertexID )             //::[18P]://
             #define UNI uniform                     //::[41P]://
-            #define UV2 uvec2                       //::[043]://
-            #define x_0 ( uint( ${ x_0 } ) )        //::[043]://
-            #define x_1 ( uint( ${ x_1 } ) )        //::[043]://
-            #define y_0 ( uint( ${ y_0 } ) )        //::[043]://
-            #define y_1 ( uint( ${ y_1 } ) )        //::[043]://
-            #define u_1 ( uint(    0x1   ) )        //::[043]://
+            #define UV2 uvec2                       //::[43P]://
+            #define x_0 ( uint( ${ x_0 } ) )        //::[43P]://
+            #define x_1 ( uint( ${ x_1 } ) )        //::[43P]://
+            #define y_0 ( uint( ${ y_0 } ) )        //::[43P]://
+            #define y_1 ( uint( ${ y_1 } ) )        //::[43P]://
+            #define u_1 ( uint(    0x1   ) )        //::[43P]://
+            #define u_2 ( uint(    0x2   ) )        //::[44P]://
                                                     //::[---]://
             precision highp usampler2D ;            //::[18P]://
             uniform   usampler2D d_p2k ;            //::[18P]://
@@ -546,6 +553,8 @@
                 UV2 mv1 ; //: Magnitude_of[__vp1__]     [43P]://
                 UV2 duf ; //: Discrete_Units_Per_Frag   [43P]://
                                                     //::[---]://
+                UV2 vss ; //: @vss@ : Vector_SpriteSize [44P]://
+                U32 uss ; //: @uss@ : Uint32_SpriteSize [44P]://
                 F32 fss =( F32(d_sss) );//:$_F32_SSS_$  [36P]://
                                                     //::[---]://
                 //:#__CALC_SPRITE_SCREEN_SIZE_#:[43P]:-------://
@@ -561,10 +570,16 @@
                 //: duf =($_DUN_SEL_$)/($_MON_PIX_$);   [43P]://
                     duf =(    mv1    )/(    mv0    );//:[43P]://
                                                      //:[43P]://
-                    /** MORE IN NEXT VIDEO !!!! **/  //:[43P]://
-                                                     //:[43P]://
-                #undef _0_                           //:[43P]://
-                #undef _1_                           //:[43P]://
+                    //:#__VUF_SPRITE_SIZES__#:[44P]:---------://
+                                                    //::[44P]://
+                    vss =UV2( DUC   / duf   );;;    //::[44P]://
+                    uss =max( vss.x , vss.y );;;    //::[44P]://
+                    fss =F32( uss   + u_2   );;;    //::[44P]://
+                                                    //::[44P]://
+                    //:---------:#__VUF_SPRITE_SIZES__#:[44P]://
+                                                    //::[---]://
+                #undef _0_                          //::[43P]://
+                #undef _1_                          //::[43P]://
                 //:---------------------:#__CALC_SSS__#:[43P]://
                 //:-------:#__CALC_SPRITE_SCREEN_SIZE_#:[43P]://
                                                     //::[---]://
@@ -2405,6 +2420,18 @@
     :--------------------------------------:#__CALC_SSS__#:[43P]
     :------------------------:#__CALC_SPRITE_SCREEN_SIZE_#:[43P]
 
+    #_DISCRETE_UNITS_CHARACTER_# :------------------------:[44P]
+                                                          |[44P]
+        The number of[ discrete_units ]in a               |[44P]
+        [ character_player / player_character ].          |[44P]
+                                                          |[44P]
+        ( discrete_units === digital_plank_units  )       |[44P]
+        ( discrete_units === digital_planck_units )       |[44P]
+                                                          |[44P]
+        This is a scalar value because it is the exact    |[44P]
+        same amount on the X and Y axis .                 |[44P]
+                                                          |[44P]
+    :------------------------:#_DISCRETE_UNITS_CHARACTER_#:[44P]
 
 
                                                            [---]
