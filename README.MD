@@ -87,6 +87,29 @@ Start building with AIM today. Happy game development!
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1209 : FRABUCK : Fractal Flood Fill (FFF) Part A_N
+    AIM_1208 : FRABUCK : Fractal Flood Fill (FFF) Part A_M
+    AIM_1207 : FRABUCK : Fractal Flood Fill (FFF) Part A_L
+    AIM_1206 : FRABUCK : Fractal Flood Fill (FFF) Part A_K
+    AIM_1205 : FRABUCK : Fractal Flood Fill (FFF) Part A_J
+    AIM_1204 : FRABUCK : Fractal Flood Fill (FFF) Part A_I
+    AIM_1203 : FRABUCK : Fractal Flood Fill (FFF) Part A_H
+    AIM_1202 : FRABUCK : Fractal Flood Fill (FFF) Part A_G
+
+    AIM_1201 : SUMMARY PLACEHOLDER VIDEO
+    AIM_1200 : NEXT PLAYLIST VIDEO
+
+    AIM_1199 : BFJ_469 : POI_049 : POInt sprite research #049
+    AIM_1198 : BFJ_468 : POI_048 : POInt sprite research #048
+    AIM_1197 : BFJ_467 : POI_047 : POInt sprite research #047
+    AIM_1196 : BFJ_466 : POI_046 : POInt sprite research #046
+    AIM_1195 : BFJ_465 : POI_045 : POInt sprite research #045
+    AIM_1194 : BFJ_464 : POI_044 : POInt sprite research #044
+    AIM_1193 : BFJ_463 : POI_043 : POInt sprite research #043
+    AIM_1192 : BFJ_462 : POI_042 : POInt sprite research #042
+    AIM_1191 : BFJ_461 : POI_041 : POInt sprite research #041
+    AIM_1190 : BFJ_460 : POI_040 : POInt sprite research #040
+
     AIM_1189 : BFJ_459 : POI_039 : POInt sprite research #039
     AIM_1188 : BFJ_458 : POI_038 : POInt sprite research #038
     AIM_1187 : BFJ_457 : POI_037 : POInt sprite research #037
