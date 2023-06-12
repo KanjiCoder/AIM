@@ -87,6 +87,8 @@ Start building with AIM today. Happy game development!
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1210 : BFJ_470 : POI_050 : F_SPAWNAG_GEN_HSP FINISH
+
     AIM_1209 : FRABUCK : Fractal Flood Fill (FFF) Part A_N
     AIM_1208 : FRABUCK : Fractal Flood Fill (FFF) Part A_M
     AIM_1207 : FRABUCK : Fractal Flood Fill (FFF) Part A_L

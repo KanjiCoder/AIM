@@ -480,6 +480,7 @@
                                                     //::[16P]://
             #define IFX ( int( gl_FragCoord.x ) )   //::[16P]://
             #define IFY ( int( gl_FragCoord.y ) )   //::[16P]://
+            #define GFC (      gl_FragCoord     )   //::[49P]://
                                                     //::[---]://
             uniform UV4 d_vpc ; //:$_TILEMAP_VPC_$      [37P]://
             uniform UV4 d_vp0 ; //:$_TILEMAP_VP0_$      [37P]://
@@ -497,6 +498,9 @@
                 UV2 mv1 ; //: Magnitude_of[__vp1__]     [46P]://
                 UV2 duf ; //: Discrete_Units_Per_Frag   [46P]://
                                                     //::[---]://
+                UV2 vfc ; //: Viewport(local)FragCoord  [49P]://
+                          //: $_DIAGRAM_VFC_$ ::::::::::[49P]://
+                                                    //::[---]://
                 //:#_GET_DUG_#:[47P]:------------------------://
                 #define _0 d_vp0  //:DESTIN_AKA_SCREEN::[47P]://
                 #define _1 d_vp1  //:SOURCE_TILE_DATA ::[47P]://
@@ -508,6 +512,10 @@
                                                     //::[47P]://
                 //::: $_DUF_E__MV1_D_MV0_$ :::::::::::::[48P]://
                         duf =( mv1 / mv0 );;;;;;    //::[48P]://
+                                                    //::[---]://
+                    vfc=( UV2(  //: $_DIA_VFC_$ :// //::[49P]://
+                     U32( GFC.x - 0.5 )-_0[x_0]     //::[49P]://
+                    ,U32( GFC.y - 0.5 )-_0[y_0] ));;//::[49P]://
                                                     //::[---]://
                     /** MORE_CODE_NEXT_VIDEO **/    //::[48P]   [47P]://
                                                     //::[---]://
@@ -2577,6 +2585,35 @@
             zoomed in there !!!!!!!!!!!!!!!!!!!!!!!!!!!!! |[48P]
                                                           |[48P]
     :--------------------------------:$_DUF_E__MV1_D_MV0_$:[48P]
+
+    $_DIAGRAM_VFC_$ :-------------------------------------:[49P]
+    $_DIA_VFC_$ :-----------------------------------------:[49P]
+                                                          |[49P]
+        @DIAGRAM_VFC@ : Diagram_Viewport_local_FragCoord  |[49P]
+                                                          |[49P]
+        [00][01][02][03][04][05][06][07][08][09][10][11]  |[49P]
+        [__]                                        [__]  |[49P]
+        [__]                                        [__]  |[49P]
+        [__]        [03][04][05][06] <--vp1 original[__]  |[49P]
+        [__]        [  ]        [  ]                [__]  |[49P]
+        [__]        [  ]        [  ]                [__]  |[49P]
+        [__]        [  ]        [  ]                [__]  |[49P]
+        [__]        [00][01][01][01] <-- @vfc@      [__]  |[49P]
+        [__]                                        [__]  |[49P]
+        [  ][  ][  ][  ][  ][  ][  ][  ][  ][  ][  ][  ]  |[49P]
+                                                          |[49P]
+        VP0's boundaries are defined in terms of the      |[49P]
+        actual[ screen / client area ]fragment coords.    |[49P]
+                                                          |[49P]
+        So to localize a coorindate on viewport[ vp0 ]    |[49P]
+        we need to subtract the[ top_left ]corner of      |[49P]
+        [ vp0 ]from the[ frag_coord ]we are looking at.   |[49P]
+                                                          |[49P]
+        Then we will have a[ frag_coord ]mapped into      |[49P]
+        the range of[ 0 -to- ( mv0 - 1 ) ]INCLUSIVE.      |[49P]
+                                                          |[49P]
+    :-----------------------------------------:$_DIA_VFC_$:[49P]
+    :-------------------------------------:$_DIAGRAM_VFC_$:[49P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
                                                     // [---=---]
