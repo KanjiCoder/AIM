@@ -1,0 +1,35 @@
+
+FFF._ : Fractal_Flood_Fill ( development notes )
+
+ F_FRAHELP_GTC_NNT_HUGEGTC <-- Gets HUGE tile... But what is
+                               that ? Largest tile ? Or 
+                               the largest possible adjacnet
+                               tile ? This needs a diagram.
+
+ F_FRAHELP_GTC_NNT_LOATILE <-- Gets list of adjacent tiles .
+
+
+//////////////////////////////////////////////////////////////// 
+
+    ABOUT : ( GTC , NNT )===>( HUGEGTC )  ( GTC_NNT_HUGEGTC )
+
+          : I believe it gets 1 LARGER NEIGHBOR TILE
+          : in relation to the current centeral tile.
+          : So not necessarily the LARGEST power of 2,
+          : but a tile size larger than whatever the
+          : center is. It is possible that there is
+          : NO_ADJACENT_LARGER_TILE_SIZE_OF_THIS_SIZE
+          : because the phases of the two different
+          : powers_of_2 tile grids may not be aligned here.
+
+//////////////////////////////////////////////////////////////// 
+                                            
+    d_frahelp_nnt : Neighbor_Neighbor_Tilesize
+                  : Tells me if I want to collect
+                  : adjacent tiles to LEFT-RIGHT-TOP-BOT
+                  : and of WHAT SIZE ( m_te7 )
+        m_nox
+        m_noy
+        m_tey
+
+////////////////////////////////////////////////////////////////
