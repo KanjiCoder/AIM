@@ -8,6 +8,13 @@ FFF._ : Fractal_Flood_Fill ( development notes )
 
  F_FRAHELP_GTC_NNT_LOATILE <-- Gets list of adjacent tiles .
 
+ F_FRAHELP_GLOTBOU_NOX_NOY_GLOTSEG <-- Bounding Box Edge Get
+
+ F_FRAHELP_GTC_LOWETE7_GLOTBOU <-- Chopping up GTC into 
+                                   bounding box of SMALLER
+                                   tiles that are also in
+                                   terms of [gtx,gty] but
+                                   smaller[ te7 ]value.
 
 //////////////////////////////////////////////////////////////// 
 
@@ -22,6 +29,17 @@ FFF._ : Fractal_Flood_Fill ( development notes )
           : because the phases of the two different
           : powers_of_2 tile grids may not be aligned here.
 
+
+    t_hugegtc ===[ IS_A ]===> t_gtc :-----:
+                              |    m_te7  : 
+                              |           : 
+                              |    m_gtx  : 
+                              |    m_gty  : 
+                              :-----------:
+
+
+
+
 //////////////////////////////////////////////////////////////// 
                                             
     d_frahelp_nnt : Neighbor_Neighbor_Tilesize
@@ -31,5 +49,27 @@ FFF._ : Fractal_Flood_Fill ( development notes )
         m_nox
         m_noy
         m_tey
+
+////////////////////////////////////////////////////////////////
+
+    t_glotseg
+
+        m_tey
+
+        m_sx0
+        m_sy0
+
+        m_sx1
+        m_sy1
+
+////////////////////////////////////////////////////////////////
+
+    t_glotbou
+
+        m_bx0
+        m_bx1
+
+        m_by0
+        m_by1
 
 ////////////////////////////////////////////////////////////////
