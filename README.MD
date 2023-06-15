@@ -87,6 +87,15 @@ Start building with AIM today. Happy game development!
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1309 : FRABUCK : Fractal Flood Fill (FFF) Part A_V
+    AIM_1308 : FRABUCK : Fractal Flood Fill (FFF) Part A_U
+    AIM_1307 : FRABUCK : Fractal Flood Fill (FFF) Part A_T
+    AIM_1306 : FRABUCK : Fractal Flood Fill (FFF) Part A_S
+    AIM_1305 : FRABUCK : Fractal Flood Fill (FFF) Part A_R
+    AIM_1304 : FRABUCK : Fractal Flood Fill (FFF) Part A_Q
+    AIM_1303 : FRABUCK : Fractal Flood Fill (FFF) Part A_P
+    AIM_1302 : FRABUCK : Fractal Flood Fill (FFF) Part A_O
+
     AIM_1210 : BFJ_470 : POI_050 : F_SPAWNAG_GEN_HSP FINISH
 
     AIM_1209 : FRABUCK : Fractal Flood Fill (FFF) Part A_N
