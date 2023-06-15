@@ -1,0 +1,33 @@
+        
+    I think I am getting ahead of myself. 
+    Save this code for the next video.
+
+    LOOP_AND_TEST_STUFF_HERE_NEXT_VIDEO
+
+        const gtc     =( d_frabuck_gtc       );
+        const nnt     =( d_frahelp_nnt       );
+        const loatile =( d_frahelp_loatile   );
+
+        for(t_i = 0 ; t_i <= testmax ; t_i++){
+
+            //:#_LOAD_INPUT_OBJECTS_#:[1_208]:-----------://
+
+                gtc.m_XXX =( xxxxxxxxx );
+                gtc.m_XXX =( xxxxxxxxx );
+                gtc.m_XXX =( xxxxxxxxx );
+
+                nnt.m_XXX =( xxxxxxxxx );
+                nnt.m_XXX =( xxxxxxxxx );
+                nnt.m_XXX =( xxxxxxxxx );
+
+            //:-----------:#_LOAD_INPUT_OBJECTS_#:[1_208]://
+            //:#_CALL_FUNC_OF_INTEREST_#:[1_208]:--------://
+
+                F_FRAHELP_GTC_NNT_LOATILE( 
+                          gtc,nnt,loatile );
+
+            //:--------:#_CALL_FUNC_OF_INTEREST_#:[1_208]://
+
+            /** TODO : CHECK ANSWERS HERE **/
+
+        };;
