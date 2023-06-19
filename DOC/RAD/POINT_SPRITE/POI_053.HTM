@@ -474,6 +474,7 @@
             #define U32 uint    //: $_OCD_U32_$ :// //::[16P]://
             #define UV4 uvec4   //: $_OCD_UV4_$ :// //::[37P]://
             #define UV2 uvec2   //: $_OCD_UV2_$ :// //::[46P]://
+            #define FV2  vec2   //: $_OCD_FV2_$ :// //::[53P]://
             #define FV4  vec4   //: $_OCD_FV4_$ :// //::[53P]://
                                                     //::[---]://
             #define x_0  ( uint( ${   x_0 } ) )     //::[46P]://
@@ -514,35 +515,35 @@
                 FV2 mv1 ; //: Magnitude_of[__vp1__]     [53P]   [46P]://
                 FV2 duf ; //: Discrete_Units_Per_Frag   [53P]   [46P]://
                                                     //::[---]://
-                UV2 vfc ; //: Viewport(local)FragCoord  [49P]://
+                FV2 vfc ; //: Viewport(local)FragCoord  [49P]://
                           //: $_DIAGRAM_VFC_$ ::::::::::[49P]://
                                                     //::[---]://
                 UV2 dug ; //: Discrete_Unit_Global      [50P]://
                                                     //::[---]://
                 //:#_GET_DUG_#:[47P]:------------------------://
-                #define _0 d_vp0  //:DESTIN_AKA_SCREEN::[47P]://
-                #define _1 d_vp1  //:SOURCE_TILE_DATA ::[47P]://
-                                                    //::[47P]://
-                    mv0 =FV2(_0[x_1]-_0[x_0]+u_1    //::[47P]://
-                        ,    _0[y_1]-_0[y_0]+u_1 );;//::[47P]://
-                    mv1 =FV2(_1[x_1]-_1[x_0]+u_1    //::[47P]://
-                        ,    _1[y_1]-_1[y_0]+u_1 );;//::[47P]://
-                                                    //::[47P]://
-                //::: $_DUF_E__MV1_D_MV0_$ :::::::::::::[48P]://
-                        duf =( mv1 / mv0 );;;;;;    //::[48P]://
-                                                    //::[---]://
-                    vfc=( UV2(  //: $_DIA_VFC_$ :// //::[49P]://
-                     U32( GFC.x - 0.5 )-_0[x_0]     //::[49P]://
-                    ,U32( GFC.y - 0.5 )-_0[y_0] ));;//::[49P]://
-                                                    //::[---]://
-                    dug=( UV2(  ////////////////    //::[50P]://
-                        d_vp1[x_0]+(vfc.x*duf.x)    //::[50P]://
-                    ,   d_vp1[y_0]+(vfc.y*duf.y)    //::[50P]://
-                    ));;;;;;;;;;;;;;;;;;;;;;;;;;    //::[50P]://
-                                                    //::[---]://
-                #undef  _1                          //::[47P]://
-                #undef  _0                          //::[47P]://
-                //:------------------------:#_GET_DUG_#:[47P]://
+                #define _0 d_vp0  //:DESTIN_AKA_SCREEN::[   ]   [47P]://
+                #define _1 d_vp1  //:SOURCE_TILE_DATA ::[   ]   [47P]://
+                                                    //::[   ]   [47P]://
+                    mv0 =FV2(_0[x_1]-_0[x_0]+u_1    //::[53P]   [47P]://
+                        ,    _0[y_1]-_0[y_0]+u_1 );;//::[   ]   [47P]://
+                    mv1 =FV2(_1[x_1]-_1[x_0]+u_1    //::[53P]   [47P]://
+                        ,    _1[y_1]-_1[y_0]+u_1 );;//::[   ]   [47P]://
+                                                    //::[   ]   [47P]://
+                //::: $_DUF_E__MV1_D_MV0_$ :::::::::::::[   ]   [48P]://
+                        duf =( mv1 / mv0 );;;;;;    //::[   ]   [48P]://
+                                                    //::[   ]   [---]://
+                    vfc=( FV2(  //: $_DIA_VFC_$ :// //::[   ]   [49P]://
+                     U32( GFC.x - 0.5 )-_0[x_0]     //::[   ]   [49P]://
+                    ,U32( GFC.y - 0.5 )-_0[y_0] ));;//::[   ]   [49P]://
+                                                    //::[   ]   [---]://
+                    dug=( UV2(  ////////////////    //::[   ]   [50P]://
+                     d_vp1[x_0]+U32(vfc.x*duf.x)    //::[53P]   [50P]://
+                    ,d_vp1[y_0]+U32(vfc.y*duf.y)    //::[53P]   [50P]://
+                    ));;;;;;;;;;;;;;;;;;;;;;;;;;    //::[   ]   [50P]://
+                                                    //::[   ]   [---]://
+                #undef  _1                          //::[   ]   [47P]://
+                #undef  _0                          //::[   ]   [47P]://
+                //:------------------------:#_GET_DUG_#:[   ]   [47P]://
                                                     //::[---]://
                 t_x =( dug.x / DUT );               //::[50P]   [16P]://
                 t_y =( dug.y / DUT );               //::[50P]   [16P]://
@@ -567,6 +568,20 @@
                     if(t_x >=u_000 && t_x <=u_960){ //::[52P]://
                        f_c =( vec4( 0,0,1, 1.0 ) ); //::[52P]://
                     };;                             //::[52P]://
+                                                    //::[---]://
+                    if( d_vp1[x_0] !=( DUH         )//::[53P]://
+                    ||  d_vp1[y_0] !=( DUH         )//::[53P]://
+                    ||  d_vp1[x_1] !=( DUH+DUH-u_1 )//::[53P]://
+                    ||  d_vp1[y_1] !=( DUH+DUH-u_1 )//::[53P]://
+                    ){                              //::[53P]://
+                        f_c.r +=(0.50);             //::[53P]://
+                    };;                             //::[53P]://
+                    if( mv0.x <=(1.00)              //::[53P]://
+                    ||  mv0.y <=(1.00)              //::[53P]://
+                    ){                              //::[53P]://
+                        f_c.b +=(0.50);//:$_BLUEBUG_$   [53P]://
+                    };;                             //::[53P]://
+                                                    //::[---]://
                 };;                                 //::[52P]://
                 //:----------------:#_LINE_DEBUG_HACK_#:[52P]://
                                                     //::[---]://
@@ -2680,6 +2695,35 @@
                   : nicely.                               |[53P]
                                                           |[53P]
     :-----------------------------------------:$_OCD_FV4_$:[53P]
+    $_OCD_FV2_$ :-----------------------------------------:[53P]
+                                                          |[53P]
+        @OCD_FV2@ : ObsessiveCompulsiveDisorder_FloatVec2 |[53P]
+                  : Oops. I meant to create this one, not |[53P]
+                  : the[ FV4 ], but we will probably want |[53P]
+                  : the[ FV4 ]in the future so I am       |[53P]
+                  : keeping it. Try and stop me !         |[53P]
+                                                          |[53P]
+    :-----------------------------------------:$_OCD_FV2_$:[53P]
+    $_BLUEBUG_$ :-----------------------------------------:[53P]
+                                                          |[53P]
+        Tinting the screen blue if our on-screen          |[53P]
+        viewport magnitude has a size that is less        |[53P]
+        than or equal to one.                             |[53P]
+                                                          |[53P]
+        I am seeing this tint right now in this           |[53P]
+        code delta[ POI_053.HTM ]... So I think           |[53P]
+        we are __NOT_UPLOADING__ "vp0" correctly.         |[53P]
+                                                          |[53P]
+        @vp0@ : On Screen / Destination Viewport          |[53P]
+              : This viewport is measured in pixels.      |[53P]
+              : ( pixels === gl_FragCoord(s) )            |[53P]
+                                                          |[53P]
+        @vp1@ : Off Screen Data Selection Viewport        |[53P]
+              : AKA : Source Viewport                     |[53P]
+              : This viewport is measured in PLANCK(S).   |[53P]
+              : PLANCK(S) === Discrete_Units              |[53P]
+                                                          |[53P]
+    :-----------------------------------------:$_BLUEBUG_$:[53P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
                                                     // [---=---]
