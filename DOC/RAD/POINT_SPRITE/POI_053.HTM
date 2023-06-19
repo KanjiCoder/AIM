@@ -474,6 +474,7 @@
             #define U32 uint    //: $_OCD_U32_$ :// //::[16P]://
             #define UV4 uvec4   //: $_OCD_UV4_$ :// //::[37P]://
             #define UV2 uvec2   //: $_OCD_UV2_$ :// //::[46P]://
+            #define FV4  vec4   //: $_OCD_FV4_$ :// //::[53P]://
                                                     //::[---]://
             #define x_0  ( uint( ${   x_0 } ) )     //::[46P]://
             #define x_1  ( uint( ${   x_1 } ) )     //::[46P]://
@@ -509,9 +510,9 @@
                 U32 o_x ; //: @o_x@ : ODD__Cell X ?     [45P]   [BUG][16P]://
                 U32 o_y ; //: @o_y@ : ODD__Cell Y ?     [45P]   [BUG][16P]://
                                                     //::[---]://
-                UV2 mv0 ; //: Magnitude_of[__vp0__]     [46P]://
-                UV2 mv1 ; //: Magnitude_of[__vp1__]     [46P]://
-                UV2 duf ; //: Discrete_Units_Per_Frag   [46P]://
+                FV2 mv0 ; //: Magnitude_of[__vp0__]     [53P]   [46P]://
+                FV2 mv1 ; //: Magnitude_of[__vp1__]     [53P]   [46P]://
+                FV2 duf ; //: Discrete_Units_Per_Frag   [53P]   [46P]://
                                                     //::[---]://
                 UV2 vfc ; //: Viewport(local)FragCoord  [49P]://
                           //: $_DIAGRAM_VFC_$ ::::::::::[49P]://
@@ -522,9 +523,9 @@
                 #define _0 d_vp0  //:DESTIN_AKA_SCREEN::[47P]://
                 #define _1 d_vp1  //:SOURCE_TILE_DATA ::[47P]://
                                                     //::[47P]://
-                    mv0 =UV2(_0[x_1]-_0[x_0]+u_1    //::[47P]://
+                    mv0 =FV2(_0[x_1]-_0[x_0]+u_1    //::[47P]://
                         ,    _0[y_1]-_0[y_0]+u_1 );;//::[47P]://
-                    mv1 =UV2(_1[x_1]-_1[x_0]+u_1    //::[47P]://
+                    mv1 =FV2(_1[x_1]-_1[x_0]+u_1    //::[47P]://
                         ,    _1[y_1]-_1[y_0]+u_1 );;//::[47P]://
                                                     //::[47P]://
                 //::: $_DUF_E__MV1_D_MV0_$ :::::::::::::[48P]://
@@ -2662,14 +2663,23 @@
     :---------------------------------------:[ _INI_WTF_ ]:[51P]
                                                            [---]
     #_LINE_DEBUG_HACK_# :---------------------------------:[52P]
-                                                          :[52P]
-        Draw a vertical and horizontal line out of tiles  :[52P]
-        by looking for a range of X & Y axis intercepts.  :[52P]
-                                                          :[52P]
-        So... I did it... And holy fuck it is...          :[52P]
-        WAY_FU_C_KING_OFF from what I expected.           :[52P]
-                                                          :[52P]
+                                                          |[52P]
+        Draw a vertical and horizontal line out of tiles  |[52P]
+        by looking for a range of X & Y axis intercepts.  |[52P]
+                                                          |[52P]
+        So... I did it... And holy fuck it is...          |[52P]
+        WAY_FU_C_KING_OFF from what I expected.           |[52P]
+                                                          |[52P]
     :---------------------------------:#_LINE_DEBUG_HACK_#:[52P]
+                                                           [---]
+    $_OCD_FV4_$ :-----------------------------------------:[53P]
+                                                          |[53P]
+        @OCD_FV4@ : ObsessiveCompulsiveDisorder_FloatVec4 |[53P]
+                  : I like all of my types to be exactly  |[53P]
+                  : 3-letters so that my code lines up    |[53P]
+                  : nicely.                               |[53P]
+                                                          |[53P]
+    :-----------------------------------------:$_OCD_FV4_$:[53P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
                                                     // [---=---]
