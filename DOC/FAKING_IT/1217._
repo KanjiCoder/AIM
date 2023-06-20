@@ -1,0 +1,24 @@
+                
+    //: $_DUGMAR_GOES_HERE_$ ://
+
+                //: 1234567  
+                //:@zerange@ : Zeroed_Out_Range :::::::::://
+                //:@zeromax@ : Zeroed_Out_Range_Max_Index://
+                UV2 zeromax =( uv2_mv1 - u_1 );;;;;;;;;;;;;;
+
+                UV2 dug_mar ;;//: $_DUG_MARionette_$ ::::://
+                //:@dug_mar@ : DiscUnitGlobal_MARionette ://
+                //:@mar_dug@ : OTHER_WAY_AROUND_BITCHES  ://
+
+                //:#_CALC_DUGMAR_#:[1_216]:--------------://
+
+                    dug_mar.x =( v_gtx * DUT )+( v_dix );
+                    dug_mar.y =( v_gty * DUT )+( v_diy );
+
+                //:--------------:#_CALC_DUGMAR_#:[1_216]://
+                //:#_VP1_0RANGE_POS_#:[1_216]:-----------://
+                    UV2 playzer =( UV2(
+                                    dug_mar.x - EDG_LEF
+                                  , dug_mar.y - EDG_RIG
+                                  );;
+                //:-----------:#_VP1_0RANGE_POS_#:[1_216]://
