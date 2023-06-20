@@ -140,6 +140,10 @@
         let d_cdx ; //: @cdx@ : Camera_Discrete_X       [57P]://
         let d_cdy ; //: @cdy@ : Camera_Discrete_Y       [57P]://
         let d_czp ; //: @czp@ : Camera_Zoom_Percent     [57P]://
+        let d_cm0 ; //: @cm0@ : Camera_Marion #0 (FROM) [57P]://
+        let d_cm1 ; //: @cm1@ : Camera_Marion #1 (_TO_) [57P]://
+        let d_cmp ; //: @cmp@ : Camera_Marion_Percent   [57P]://
+        let d_cma ; //: @cma@ : Camera_Marion_Animate?  [57P]://
                                                     //::[---]://
     //:==============================:#__GLOBALS__#:[004_POI]://
     //:#__ERROR__#:[08P]:====================================://
@@ -2866,6 +2870,28 @@
             __INSCRIBED__ within[ vp0 ].                  |[57P]
                                                           |[57P]
     :------------------------:?_HIGH_LEVEL_CAMERA_OBJECT_?:[57P]
+    ?_PLAYER_FOCUS_ANIMATION_? :--------------------------:[57P]
+                                                          |[57P]
+        @d_cm0@ / @cm0@ : Camera_Marionette_ZERO( 0 )     |[57P]
+        @d_cm1@ / @cm1@ : Camera_Marionette_ONE(  1 )     |[57P]
+        @d_cmp@ / @cmp@ : Camera_Marionette_PERCENTAGE    |[57P]
+        @d_cma@ / @cma@ : Camera_Marionette_ANIMATING?    |[57P]
+                                                          |[57P]
+        When switching the camera from following one      |[57P]
+        player to following another player, we want       |[57P]
+        to animate that transition. In order to animate   |[57P]
+        transition, we need to know :                     |[57P]
+                                                          |[57P]
+            1. Are we animating a camera transition ?     |[57P]
+               ( use : d_cma for this )                   |[57P]
+                                                          |[57P]
+            2. Which two players is camera going between ?|[57P]
+               ( use : d_cm0 and d_cm1 for this )         |[57P]
+                                                          |[57P]
+            3. How far along is our animation progress ?  |[57P]
+               ( use : d_cmp for this )                   |[57P]
+                                                          |[57P]
+    :--------------------------:?_PLAYER_FOCUS_ANIMATION_?:[57P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
                                                     // [---=---]
