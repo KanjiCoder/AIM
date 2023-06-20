@@ -137,6 +137,10 @@
         let d_poi_vp0 =( "[_CPU_SIDE_IS_:d_vp0]" ); //::[41P]://
         let d_poi_vp1 =( "[_CPU_SIDE_IS_:d_vp1]" ); //::[41P]://
                                                     //::[---]://
+        let d_cdx ; //: @cdx@ : Camera_Discrete_X       [57P]://
+        let d_cdy ; //: @cdy@ : Camera_Discrete_Y       [57P]://
+        let d_czp ; //: @czp@ : Camera_Zoom_Percent     [57P]://
+                                                    //::[---]://
     //:==============================:#__GLOBALS__#:[004_POI]://
     //:#__ERROR__#:[08P]:====================================://
     let F_ERROR =(   i_msg )=>{                      //:[08P]://
@@ -956,12 +960,32 @@
     };;                                             //::[05P]://
     //:====================================:#__SETUP__#:[05P]://
     ////////////////////////////////////////////////////////////
+    //:#__HIGH_LEVEL_FOLLOW_CAMERA_UPDATE__#:[57P]:----------://
+    let F_HIGH_LEVEL_FOLLOW_CAMERA_UPDATE =( )=>{   //::[57P]://
+                                                    //::[57P]://
+        /** More to come in another video **/       //::[57P]://
+                                                    //::[57P]://
+    };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//::[57P]://
+    //:----------:#__HIGH_LEVEL_FOLLOW_CAMERA_UPDATE__#:[57P]://
+    //:#__SNAP_LOW_LEV_CAM_TO_HIGH_LEV_CAM__#:[57P]:---------://
+    let F_SNAP_LOW_LEV_CAM_TO_HIGH_LEV_CAM =( )=>{  //::[57P]://
+                                                    //::[57P]://
+        /** More to come in another video **/       //::[57P]://
+                                                    //::[57P]://
+    };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//::[57P]://
+    //:---------:#__SNAP_LOW_LEV_CAM_TO_HIGH_LEV_CAM__#:[57P]://
+    ////////////////////////////////////////////////////////////
     //:#__LOOP_FOREVER__#:[06P]:=============================://
     let F_LOOP_FOREVER =( )=>{                      //::[06P]://
                                                     //::[06P]://
         console.log( "[ K_A_N_J_I ][ C_O_D_E_R ]" );//::[06P]://
                                                     //::[---]://
-                                                    //::[---]://
+        //:#__CAM_UPDATE__#:[57P]:---------------------------://
+                                                    //::[57P]://
+            F_HIGH_LEVEL_FOLLOW_CAMERA_UPDATE( );   //::[57P]://
+            F_SNAP_LOW_LEV_CAM_TO_HIGH_LEV_CAM( );  //::[57P]://
+                                                    //::[57P]://
+        //:---------------------------:#__CAM_UPDATE__#:[57P]://
         //:#__GAME_STATE_UPDATE__:[19P]:---------------------://
                                                     //::[---]://
             d_wgl.useProgram( d_arr_pid[ 0 ]    );  //::[37P]://
@@ -2766,6 +2790,82 @@
         Let the[ mother_fucker ]burn !!!!!!!!!!!!!!!!!!!  |[56P]
                                                           |[56P]
     :------------------------------:#_REMOVE_SCROLL_BARS_#:[56P]
+
+    #__HIGH_LEVEL_FOLLOW_CAMERA_UPDATE__# :---------------:[57P]
+                                                          |[57P]
+        Create a "high-level" (more abstract) camera      |[57P]
+        object that "follows the player". This high       |[57P]
+        level camera will have a centerpoint that is      |[57P]
+        snapped to the player, and then a zoom level      |[57P]
+        letting us know how zoomed in or out the          |[57P]
+        camera is.                                        |[57P]
+                                                          |[57P]
+        When we need to render, we need to convert        |[57P]
+        the higher level camera's [ zoom + center_origin ]|[57P]
+        into the[ low_level ]off_screen[ vp1 ]data        |[57P]
+        selection rectangle that tells us what tiles      |[57P]
+        to select and render onto the screen.             |[57P]
+                                                          |[57P]
+    :---------------:#__HIGH_LEVEL_FOLLOW_CAMERA_UPDATE__#:[57P]
+    #__SNAP_LOW_LEV_CAM_TO_HIGH_LEV_CAM__# :--------------:[57P]
+                                                          |[57P]
+        Snap the "low level camera" to the                |[57P]
+                 "high level camera".                     |[57P]
+                                                          |[57P]
+        Or in other words...                              |[57P]
+                                                          |[57P]
+        Derive the low level camera (vp1) selection       |[57P]
+        area from the setting stored inside the high      |[57P]
+        level camera.                                     |[57P]
+                                                          |[57P]
+    :--------------:#__SNAP_LOW_LEV_CAM_TO_HIGH_LEV_CAM__#:[57P]
+    #__CAM_UPDATE__# :------------------------------------:[57P]
+                                                          |[57P]
+        Camera update.                                    |[57P]
+        Call this code once per game frame to update      |[57P]
+        the camera settings on the[ CPU_SIDE ].           |[57P]
+                                                          |[57P]
+        The code inside this section is only responsible  |[57P]
+        for the[ CPU_SIDE ], it is not responsible for    |[57P]
+        pushing that data up to the GPU. If we realize    |[57P]
+        we need more[ GPU_SYNCING ]code, put that code    |[57P]
+        in it's own section[ UNDER ]this section of code. |[57P]
+                                                          |[57P]
+    :------------------------------------:#__CAM_UPDATE__#:[57P]
+    ?_HIGH_LEVEL_CAMERA_OBJECT_? :------------------------:[57P]
+                                                          |[57P]
+        @d_cdx@ / @cdx@ : Camera_Discrete_X               |[57P]
+        @d_cdy@ / @cdy@ : Camera_Discrete_Y               |[57P]
+        @d_czp@ / @czp@ : Camera_Zoom_Percent ( NEG_POS ) |[57P]
+                                                          |[57P]
+        The high level camera has a position measured     |[57P]
+        in[ discrete_units / digital_plank_units ]        |[57P]
+        and a[ zoom_percentage / zoom_factor ].           |[57P]
+                                                          |[57P]
+        Camera_Zoom_Percent(czp) is in the range from     |[57P]
+        [ -1.0  _to_  +1.0 ].                             |[57P]
+                                                          |[57P]
+            +1.0 : Fully Zoomed In  ( hotel fills screen )|[57P]
+            -1.0 : Fully Zoomed Out ( 1XTIL fills screen )|[57P]
+             0.0 : Neutral Zoom                           |[57P]
+                                                          |[57P]
+            |<-----------[ vp0 ]----------->|             |[57P]
+            :                               :             |[57P]
+            +-------------------------------+             |[57P]
+            |          +---------+          |             |[57P]
+            |          |         |          |             |[57P]
+            |          |__HOTEL__|          |             |[57P]
+            |          |         |          |             |[57P]
+            |          +---------+          |             |[57P]
+            +-------------------------------+             |[57P]
+                                                          |[57P]
+            A hotel is square, but the screen is          |[57P]
+            probably going to be a horizontal             |[57P]
+            or vertical rectangle, so when 100%           |[57P]
+            zoomed out the[ __HOTEL__ ]should be          |[57P]
+            __INSCRIBED__ within[ vp0 ].                  |[57P]
+                                                          |[57P]
+    :------------------------:?_HIGH_LEVEL_CAMERA_OBJECT_?:[57P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
                                                     // [---=---]
