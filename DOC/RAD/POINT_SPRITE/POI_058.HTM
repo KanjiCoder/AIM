@@ -93,7 +93,11 @@
     //:#__CONSTANTS__#:[26P]:================================://
                                                     //::        [26P]://
         let c_hack_cpu_texture =( 0 );              //::[37P]   [26P]://
-                                                    //::        [26P]://
+                                                    //::[---]://
+        let c_cmj ; //: @cmj@ : Camera_Magnitude.JOT    [58P]://
+        let c_cmz ; //: @cmz@ : Camera_Magnitude.ZENITH [58P]://
+        let c_cm0 ; //: @cm0@ : Camera_Magnitude.NEUTRAL[58P]://
+                                                    //::[---]://
     //:================================:#__CONSTANTS__#:[26P]://
     //:#__GLOBALS__#:[004_POI]:==============================://
                                                     //::[---]://
@@ -152,6 +156,29 @@
         throw(       i_msg );                        //:[08P]://
     };;                                              //:[08P]://
     //:====================================:#__ERROR__#:[08P]://
+    //:#__PUT_SPRITE_PROPERTY_VALUE__#:[58P]:================://
+    let F_PUT_SPRITE_PROPERTY_VALUE =(              //::[58P]://
+                                                    //::[58P]://
+        i_m64 //: @i_m64@ : INN - Marionette Index      [58P]://
+    ,   i_u32 //: @i_u32@ : INN - Uint32 Value          [58P]://
+                                                    //::[58P]://
+    )=>{                                            //::[58P]://
+                                                    //::[58P]://
+        /** Your Logic Is In Another Video **/      //::[58P]://
+                                                    //::[58P]://
+    };;                                             //::[58P]://
+    //:================:#__PUT_SPRITE_PROPERTY_VALUE__#:[58P]://
+    //:#__GET_SPRITE_PROPERTY_VALUE__#:[58P]:================://
+    let F_GET_SPRITE_PROPERTY_VALUE =(              //::[58P]://
+                                                    //::[58P]://
+        i_m64 //: @i_m64@ : INN - Marionette Index      [58P]://
+                                                    //::[58P]://
+    )=>{                                            //::[58P]://
+                                                    //::[58P]://
+        /** Your Logic Is In Another Video **/      //::[58P]://
+                                                    //::[58P]://
+    };;                                             //::[58P]://
+    //:================:#__GET_SPRITE_PROPERTY_VALUE__#:[58P]://
     //:#__PLAYER_CONTROL__#:[20P]:===========================://
     let F_PLAYER_CONTROL =( i_kev )=>{               //:[20P]://
                                                     //::[---]://
@@ -966,9 +993,11 @@
     ////////////////////////////////////////////////////////////
     //:#__HIGH_LEVEL_FOLLOW_CAMERA_UPDATE__#:[57P]:----------://
     let F_HIGH_LEVEL_FOLLOW_CAMERA_UPDATE =( )=>{   //::[57P]://
-                                                    //::[57P]://
-        /** More to come in another video **/       //::[57P]://
-                                                    //::[57P]://
+                                                    //::[---]://
+        const GET =( F_GET_SPRITE_PROPERTY_VALUE ); //::[58P]://
+                                                    //::[58P]://
+        /** MORE_IN_FUTURE_VIDEO_I_SWEAR **/        //::[58P]://
+                                                    //::[---]://
     };;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;//::[57P]://
     //:----------:#__HIGH_LEVEL_FOLLOW_CAMERA_UPDATE__#:[57P]://
     //:#__SNAP_LOW_LEV_CAM_TO_HIGH_LEV_CAM__#:[57P]:---------://
@@ -2892,6 +2921,48 @@
                ( use : d_cmp for this )                   |[57P]
                                                           |[57P]
     :--------------------------:?_PLAYER_FOCUS_ANIMATION_?:[57P]
+                                                           [---]
+    ?_CAMERA_MAGNITUDE_CONSTANTS_? :----------------------:[58P]
+                                                          |[58P]
+        @cmj@ / @c_cmj@ : Camera_Magnitude.JOT ( MIN_MAG )|[58P]
+        @cmz@ / @c_cmz@ : Camera_Magnitude.ZEN ( MAX_MAG )|[58P]
+        @cm0@ / @c_cm0@ : Camera_Magnitude._0_ ( ZER_MAG )|[58P]
+                                                          |[58P]
+        When interpolating the low level camera's size ,  |[58P]
+        we use these 3 magnitudes to determine how big    |[58P]
+        [ vp1 ]is in[ discrete_units / planck_units ].    |[58P]
+                                                          |[58P]
+    :----------------------:?_CAMERA_MAGNITUDE_CONSTANTS_?:[58P]
+    ?_WHY_PUTTER_AND_GETTER_? :---------------------------:[58P]
+    ?_WHY_GETTER_AND_PUTTER_? :---------------------------:[58P]
+                                                          |[58P]
+        Direct texture access makes for very bulky        |[58P]
+        [ boiler_plate_ish ]code... So let's make         |[58P]
+        some accessor functions for this data.            |[58P]
+                                                          |[58P]
+        These are[ REAL_ACCESSORS ] , not those           |[58P]
+        [ OOP_ACCESSORS ]that simply wrap and return      |[58P]
+        a[ private_variable ].                            |[58P]
+                                                          |[58P]
+    :---------------------------:?_WHY_GETTER_AND_PUTTER_?:[58P]
+    :---------------------------:?_WHY_PUTTER_AND_GETTER_?:[58P]
+    #__PUT_SPRITE_PROPERTY_VALUE__# :---------------------:[58P]
+                                                          |[58P]
+        Putter code for packing sprite properties into    |[58P]
+        the texture memory that is uploaded to GPU.       |[58P]
+                                                          |[58P]
+        SEE[ _WHY_PUTTER_AND_GETTER_ ]                    |[58P]
+                                                          |[58P]
+    :---------------------:#__PUT_SPRITE_PROPERTY_VALUE__#:[58P]
+    #__GET_SPRITE_PROPERTY_VALUE__# :---------------------:[58P]
+                                                          |[58P]
+        Getter code for UN-packing sprite property        |[58P]
+        values from the cpu-side texture memory that      |[58P]
+        is synced with the GPU. ( Gee_Pee_You )           |[58P]
+                                                          |[58P]
+        SEE[ _WHY_GETTER_AND_PUTTER_ ]                    |[58P]
+                                                          |[58P]
+    :---------------------:#__GET_SPRITE_PROPERTY_VALUE__#:[58P]
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
                                                     // [---=---]
