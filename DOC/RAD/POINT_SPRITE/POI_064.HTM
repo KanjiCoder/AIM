@@ -94,9 +94,9 @@
                                                     //::        [26P]://
         let c_hack_cpu_texture =( 0 );              //::[37P]   [26P]://
                                                     //::[---]://
-        let c_cmj ; //: @cmj@ : Camera_Magnitude.JOT    [58P]://
-        let c_cmz ; //: @cmz@ : Camera_Magnitude.ZENITH [58P]://
-        let c_cm0 ; //: @cm0@ : Camera_Magnitude.NEUTRAL[58P]://
+        let c_cmj =( c_dut *  1 );//: SEE[ $_C_M_JOT_$ ][64P]   [58P]://
+        let c_cmz =( c_dum *  1 );//: SEE[ $_C_M_ZEN_$ ][64P]   [58P]://
+        let c_cm0 =( c_dut * 22 );//: SEE[ $_C_M_NEU_$ ][64P]   [58P]://
                                                     //::[---]://
     //:================================:#__CONSTANTS__#:[26P]://
     //:#__GLOBALS__#:[004_POI]:==============================://
@@ -156,6 +156,14 @@
         throw(       i_msg );                        //:[08P]://
     };;                                              //:[08P]://
     //:====================================:#__ERROR__#:[08P]://
+    //:#__MAX__#:[64P]:======================================://
+    let F_MAX =( i_val_001 , i_val_002 )=>{          //:[64P]://
+                                                     //:[64P]://
+        let o_val =( i_val_001 > i_val_002 ?    //// //:[64P]://
+                     i_val_001 : i_val_002 );;;;;;;; //:[64P]://
+        return( o_val );;;;;;;;;;;;;;;;;;;;;;;;;;;;; //:[64P]://
+    };;                                              //:[64P]://
+    //:======================================:#__MAX__#:[64P]://
     //:#__PUT_SPRITE_PROPERTY_VALUE__#:[58P]:================://
     let F_PUT_SPRITE_PROPERTY_VALUE =(              //::[58P]://
                                                     //::[58P]://
@@ -3197,6 +3205,22 @@
             2. @cmt_x@ : Camera_Magnitude_Target.Y        |[63P]
                                                           |[63P]
     :------------------------------------:#_CAMERA_RATIO_#:[63P]
+
+    ?_CAMERA_MAGNITUDE_CONSTANTS_? :----------------------:[64P]
+                                                          |[64P]
+        These are the anchor points that define what :    |[64P]
+                                                          |[64P]
+            1. Zoomed In   100% means ( @c_cmj@ )         |[64P]
+            2. Zoomed Out  100% means ( @c_cmz@ )         |[64P]
+            3. Zoomed NONE (0%) means ( @c_cm0@ )         |[64P]
+                                                          |[64P]
+        $_C_M_JOT_$ : @cmj@ : Camera_Magnitude.JOT        |[64P]
+        $_C_M_ZEN_$ : @cmz@ : Camera_Magnitude.ZENITH     |[64P]
+        $_C_M_NEU_$ : @cm0@ : Camera_Magnitude.NEUTRAL    |[64P]
+                                                          |[64P]
+    :----------------------:?_CAMERA_MAGNITUDE_CONSTANTS_?:[64P]
+
+
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
