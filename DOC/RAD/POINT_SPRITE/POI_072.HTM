@@ -607,6 +607,10 @@
                                                     //::[---]://
             #define GREY_DARK  vec4(0.2,0.2,0.2,1)  //::[16P]://
             #define GREY_LIGHT vec4(0.8,0.8,0.8,1)  //::[16P]://
+            #define  RED_DARK  vec4(0.5,0.0,0.0,1)  //::[72P]://
+            #define  MAG_DARK  vec4(0.5,0.0,0.5,1)  //::[72P]://
+            #define  MAG_PAST  vec4(1.0,0.5,1.0,1)  //::[72P]://
+            #define  BLU_PAST  vec4(0.5,0.5,1.0,1)  //::[72P]://
                                                     //::[16P]://
             #define IFX ( int( gl_FragCoord.x ) )   //::[16P]://
             #define IFY ( int( gl_FragCoord.y ) )   //::[16P]://
@@ -746,7 +750,7 @@
                 &&  l4y >= 1 && l4y <= 2            //::[72P]://
                 ){                                  //::[72P]://
                                                     //::[72P]://
-                    f_c=( FV4( 0,1,0, 1.0 ) );      //::[72P]://
+                    f_c=( BLU_PAST );;;;;;;;;       //::[72P]://
                                                     //::[72P]://
                 };;                                 //::[72P]://
                 //:------------------:#_GET_GLYPH_BIT_:#[72P]://
