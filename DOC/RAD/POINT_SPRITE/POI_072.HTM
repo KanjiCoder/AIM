@@ -639,7 +639,10 @@
                                                     //::[---]://
                 U32 i_x ; //: @i_x@ : Internal__X   //::[071]://
                 U32 i_y ; //: @i_y@ : Internal__Y   //::[071]://
-                                                    //::[071]://
+                                                    //::[---]://
+                I32 lix ; //: @lix@ : LabelInternal.X   [072]://
+                I32 liy ; //: @liy@ : LabelInternal.Y   [072]://
+                                                    //::[---]://
                 I32 l4x ; //: @l4x@ : Local_4th_X   //::[071]://
                 I32 l4y ; //: @l4y@ : Local_4th_Y   //::[071]://
                                                     //::[---]://
@@ -690,10 +693,13 @@
                 #define _4_ ( I32( DT4 ) )          //::[71P]://
                 #define _8_ ( I32( DT8 ) )          //::[71P]://
                 #define _0_ ( I32(  0  ) )          //::[71P]://
-                                                    //::[71P]://
-                    l4x =(( I32(i_x)-_8_) / _4_ );  //::[71P]://
-                    l4y =(( I32(i_y)+_0_) / _4_ );  //::[71P]://
-                                                    //::[71P]://
+                                                    //::[---]://
+                    lix =( I32(i_x)+_8_ );          //::[72P]   [FIX]://
+                    liy =( I32(i_y)+_0_ );          //::[72P]   [---]://
+                                                    //::[72P]   [---]://
+                    l4x =(     lix /_4_ );          //::[72P]   [71P]://
+                    l4y =(     liy /_4_ );          //::[72P]   [71P]://
+                                                    //::[---]://
                 #undef  _4_                         //::[71P]://
                 #undef  _8_                         //::[71P]://
                 #undef  _0_                         //::[71P]://
@@ -735,6 +741,15 @@
                                                     //::[---]://
                 };;                                 //::[52P]://
                 //:----------------:#_LINE_DEBUG_HACK_#:[52P]://
+                //:#_GET_GLYPH_BIT_:#[72P]:------------------://
+                if( l4x >= 1 && l4x <= 3            //::[72P]://
+                &&  l4y >= 1 && l4y <= 2            //::[72P]://
+                ){                                  //::[72P]://
+                                                    //::[72P]://
+                    f_c=( FV4( 0,1,0, 1.0 ) );      //::[72P]://
+                                                    //::[72P]://
+                };;                                 //::[72P]://
+                //:------------------:#_GET_GLYPH_BIT_:#[72P]://
                                                     //::[---]://
             }//:::::::::::::::::::::::[_f1main_]:// //::[09P]://
         `);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; //::[09P]://
@@ -3644,6 +3659,30 @@
                 };};;                                     |[71P]
                                                           |[71P]
     :----------------------------------:#_LOCAL_HEXADECA_#:[71P]
+
+    #_GET_GLYPH_BIT_# :-----------------------------------:[72P]
+                                                          |[72P]
+        In this section of code, we get the glyph bit.    |[72P]
+        In order to do this we need to :                  |[72P]
+                                                          |[72P]
+        1. Find the[ gix,giy ]location inside the         |[72P]
+           glyph tile.                                    |[72P]
+                                                          |[72P]
+        2. Convert [gix,giy] to[ gii / g64 ]to know       |[72P]
+           the network bit index of our bit.              |[72P]
+                                                          |[72P]
+        3. Convert[ g64 ]to[ g32 ]and grab either the     |[72P]
+           first or 2nd U32 to get our glyph data.        |[72P]
+                                                          |[72P]
+        4. Get if the bit is on/off and set the           |[72P]
+           fragment color accordingly.                    |[72P]
+                                                          |[72P]
+        @gix@ : glyph_internal_x                          |[72P]
+        @giy@ : glyph_internal_y                          |[72P]
+        @g64@ : glyph_INTERNAALA_index( 0 to (64-1) )     |[72P]
+        @g32@ : glyph_INTERNAALA_index( 0 to (32-1) )     |[72P]
+                                                          |[72P]
+    :-----------------------------------:#_GET_GLYPH_BIT_#:[72P]
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
