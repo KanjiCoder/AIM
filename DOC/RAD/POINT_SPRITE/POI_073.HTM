@@ -635,6 +635,25 @@
             ,  U32( ${ c_l_9 } ) , U32( ${ c_r_9 } ) //:[70P]://
             );                                       //:[70P]://
             //:---------:#_FOR_RENDERING_TILE_GTX_GTY_#:[70P]://
+            //:#_DIGIT_PLACE_TO_MODULO_AMOUNT_#:-------:[73P]://
+                                                     //:[73P]://
+                I32 dig_mam[ 3 ]=I32[ 3 ](  //////// //:[73P]://
+                //:                              :// //:[73P]://
+                   10 //: RIG_DIGIT ,   1's place:// //:[73P]://
+                , 100 //: MID_DIGIT ,  10's place:// //:[73P]://
+                ,1000 //: LEF_DIGIT , 100's place:// //:[73P]://
+                );////////////////////////////////// //:[73P]://
+            //:-------:#_DIGIT_PLACE_TO_MODULO_AMOUNT_#:[73P]://
+            //:#_DIGIT_PLACE_TO_DIVIDE_AMOUNT_#:-------:[73P]://
+                                                     //:[73P]://
+                I32 dig_dam[ 3 ]=I32[ 3 ](  //////// //:[73P]://
+                //:                              :// //:[73P]://
+                    1 //: RIG_DIGIT ,   1's place:// //:[73P]://
+                ,  10 //: MID_DIGIT ,  10's place:// //:[73P]://
+                , 100 //: LEF_DIGIT , 100's place:// //:[73P]://
+                );////////////////////////////////// //:[73P]://
+                                                     //:[73P]://
+            //:-------:#_DIGIT_PLACE_TO_DIVIDE_AMOUNT_#:[73P]://
                                                     //::[---]://
             void main( ){   //::::::::[_f1main_]:// //::[09P]://
                                                     //::[---]://
@@ -749,9 +768,29 @@
                 if( l4x >= 1 && l4x <= 3            //::[72P]://
                 &&  l4y >= 1 && l4y <= 2            //::[72P]://
                 ){                                  //::[72P]://
-                                                    //::[72P]://
+                #define T_X (I32(t_x))              //::[73P]://
+                #define T_Y (I32(t_y))              //::[73P]://
+                                                    //::[---]://
+                    I32 tad ; //: Tile_ADdress ://  //::[73P]://
+                    if( 1 == l4y ){ tad = T_X ; };  //::[73P]://
+                    if( 2 == l4y ){ tad = T_Y ; };  //::[73P]://
+                                                    //::[73P]://
+                    I32 dig ; //: Which_Digit? ://  //::[73P]://
+                    if( l4x == 3 ){ dig = 0 ; };    //::[73P]://
+                    if( l4x == 2 ){ dig = 1 ; };    //::[73P]://
+                    if( l4x == 1 ){ dig = 2 ; };    //::[73P]://
+                                                    //::[73P]://
+                    I32 mam ; //: Modulo_Amount://  //::[73P]://
+                    I32 dam ; //: Divide_Amount://  //::[73P]://
+                        mam =( dig_mam[ dig ] );    //::[73P]://
+                        dam =( dig_dam[ dig ] );    //::[73P]://
+                                                    //::[73P]://
+                    /** More In Next Video **/      //::[73P]://
+                                                    //::[---]://
                     f_c=( BLU_PAST );;;;;;;;;       //::[72P]://
-                                                    //::[72P]://
+                                                    //::[---]://
+                #undef T_X                          //::[73P]://
+                #undef T_Y                          //::[73P]://
                 };;                                 //::[72P]://
                 //:------------------:#_GET_GLYPH_BIT_:#[72P]://
                                                     //::[---]://
@@ -3687,6 +3726,31 @@
         @g32@ : glyph_INTERNAALA_index( 0 to (32-1) )     |[72P]
                                                           |[72P]
     :-----------------------------------:#_GET_GLYPH_BIT_#:[72P]
+
+    #_DIGIT_PLACE_TO_MODULO_AMOUNT_# :--------------------:[73P]
+                                                          |[73P]
+        A lookup table to figure out how much to          |[73P]
+        modulo by to exact the digit of our number.       |[73P]
+                                                          |[73P]
+        FORMULA : FLOOR( ( tad % mam ) / dam )            |[73P]
+                                                          |[73P]
+        @tad@ : Tile Address To Extract Digit From        |[73P]
+        @mam@ : Modulo AMount                             |[73P]
+        @dam@ : Divide AMount                             |[73P]
+                                                          |[73P]
+    :--------------------:#_DIGIT_PLACE_TO_MODULO_AMOUNT_#:[73P]
+    #_DIGIT_PLACE_TO_DIVIDE_AMOUNT_# :--------------------:[73P]
+                                                          |[73P]
+        A lookup table to figure out how much to          |[73P]
+        divied by to exact the digit of our number.       |[73P]
+                                                          |[73P]
+        FORMULA : FLOOR( ( tad % mam ) / dam )            |[73P]
+                                                          |[73P]
+        @tad@ : Tile Address To Extract Digit From        |[73P]
+        @mam@ : Modulo AMount                             |[73P]
+        @dam@ : Divide AMount                             |[73P]
+                                                          |[73P]
+    :--------------------:#_DIGIT_PLACE_TO_DIVIDE_AMOUNT_#:[73P]
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
