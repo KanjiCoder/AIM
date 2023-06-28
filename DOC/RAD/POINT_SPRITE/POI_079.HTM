@@ -581,6 +581,7 @@
                                                     //::[---]://
             out vec4 f_c ;//: $_GL_FRAG_COLOR_$ :// //::[12P]://
                                                     //::[---]://
+            #define F32 float   //: $_OCD_F32_$ :// //::[79P]://
             #define I32 int     //: $_OCD_I32_$ :// //::[16P]://
             #define U32 uint    //: $_OCD_U32_$ :// //::[16P]://
             #define UV4 uvec4   //: $_OCD_UV4_$ :// //::[37P]://
@@ -614,8 +615,8 @@
             #define  MAG_PAST  vec4(1.0,0.5,1.0,1)  //::[72P]://
             #define  BLU_PAST  vec4(0.5,0.5,1.0,1)  //::[72P]://
                                                     //::[16P]://
-            #define IFX ( int( gl_FragCoord.x ) )   //::[16P]://
-            #define IFY ( int( gl_FragCoord.y ) )   //::[16P]://
+    //-     #define IFX ( int( gl_FragCoord.x ) )       [79P]   [DEL][16P]://
+    //-     #define IFY ( int( gl_FragCoord.y ) )       [79P]   [DEL][16P]://
             #define GFC (      gl_FragCoord     )   //::[49P]://
                                                     //::[---]://
             uniform UV4 d_vpc ; //:$_TILEMAP_VPC_$      [37P]://
@@ -713,6 +714,9 @@
                     vfc=( FV2(  //: $_DIA_VFC_$ :// //::[   ]   [49P]://
                      U32( GFC.x - 0.5 )-_0[x_0]     //::[   ]   [49P]://
                     ,U32( GFC.y - 0.5 )-_0[y_0] ));;//::[   ]   [49P]://
+                                                    //::[---][-][---]://
+                    vfc.y =( F32(_0[y_1]) - vfc.y );//::[79P][-][   ]://
+                                                    //::[---][-][---]://
                                                     //::[   ]   [---]://
                     dug=( UV2(  ////////////////    //::[   ]   [50P]://
                      d_vp1[x_0]+U32(vfc.x*duf.x)    //::[53P]   [50P]://
@@ -3899,7 +3903,13 @@
     :--------------------------------:#_GET_BINARY_PIXEL_#:[78P]
     :-------------------------------------:#_EXTRACT_BIT_#:[78P]
 
-
+    $_OCD_F32_$ :-----------------------------------------:[79P]
+                                                          |[79P]
+        Obsessive_Compulsive_Disorder____Float32          |[79P]
+                                                          |[79P]
+        I like my types to be exactly 3 letters.          |[79P]
+                                                          |[79P]
+    :-----------------------------------------:$_OCD_F32_$:[79P]
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
