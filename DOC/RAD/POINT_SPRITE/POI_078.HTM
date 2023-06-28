@@ -838,18 +838,18 @@
                     //:----------------:#_GET_ABI_BIT_#:[77P]://
                     //:#_EXTRACT_BIT_#:----------------:[78P]://
                     //:#_GET_BINARY_PIXEL_#:-----------:[78P]://
-
-                        bp2 =( ( b32 >> abi ) & u_1 );
-                        if( U32( 0 ) == bp2 ){
-
-                            f_c=( BLU_PAST );;;;;;;;
-
-                        }else
-                        if( U32( 1 ) == bp2 ){
-
-                            f_c=( MAG_DARK );;;;;;;;
-                        };;
-
+                                                     //:[78P]://
+                        bp2 =(( b32 >> abi )&u_1 );  //:[78P]://
+                        if( U32( 0 ) == bp2 ){       //:[78P]://
+                                                     //:[78P]://
+                            f_c=( BLU_PAST );;;;;;;; //:[78P]://
+                                                     //:[78P]://
+                        }else                        //:[78P]://
+                        if( U32( 1 ) == bp2 ){       //:[78P]://
+                                                     //:[78P]://
+                            f_c=( MAG_DARK );;;;;;;; //:[78P]://
+                        };;                          //:[78P]://
+                                                     //:[78P]://
                     //:-----------:#_GET_BINARY_PIXEL_#:[78P]://
                     //:----------------:#_EXTRACT_BIT_#:[78P]://
                 #undef T_X                          //::[73P]://
@@ -3886,6 +3886,20 @@
         @nbi@ : Network_Bit_Index                         |[77P]
                                                           |[77P]
     :-------------------------------------:#_GET_ABI_BIT_#:[77P]
+
+    #_EXTRACT_BIT_# :-------------------------------------:[78P]
+    #_GET_BINARY_PIXEL_# :--------------------------------:[78P]
+                                                          |[78P]
+        Because we are encoding a "bitmap" into a         |[78P]
+        uint32... The value can either be on or off...    |[78P]
+        So it is a LITERAL BITMAP , it's bits. The        |[78P]
+        "pixel" value can only be "0" or "1" ,            |[78P]
+        hence calling it a "binary pixel".                |[78P]
+                                                          |[78P]
+    :--------------------------------:#_GET_BINARY_PIXEL_#:[78P]
+    :-------------------------------------:#_EXTRACT_BIT_#:[78P]
+
+
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
