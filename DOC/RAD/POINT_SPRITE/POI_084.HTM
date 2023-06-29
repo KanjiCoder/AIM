@@ -726,23 +726,7 @@
                 //:------------------------:#_M64_HAK_#:[81P]://
                 //:#_GET_MARION_TILE_#:[82P]:----------------://
                                                     //::[---]://
-                    ixy.x =( SBX + SID );//:$_COL_SID_$ [84P]://
-                    ixy.y =( SBY + (0) );//:$_ROW_VAR_$ [84P]://
-                                                    //::[84P]://
-                    ixy.y =( I32(${ c_sai_gtx })  );//::[84P]://
-                    tex   =( T_F(d_til_p2k,ixy,0) );//::[84P]://
-                    gtx   =(   tex.r << 24          //::[84P]://
-                             | tex.g << 16          //::[84P]://
-                             | tex.b <<  8          //::[84P]://
-                             | tex.a <<  0          //::[84P]://
-                           );                       //::[84P]://
-                    ixy.y =( I32(${ c_sai_gty })  );//::[84P]://
-                    tex   =( T_F(d_til_p2k,ixy,0) );//::[84P]://
-                    gty   =(   tex.r << 24          //::[84P]://
-                             | tex.g << 16          //::[84P]://
-                             | tex.b <<  8          //::[84P]://
-                             | tex.a <<  0          //::[84P]://
-                           );                       //::[84P]://
+                    /** $_GAS_LIGHTING_YOU_$ **/    //::[84P]://
                                                     //::[---]://
                 //:----------------:#_GET_MARION_TILE_#:[82P]://
                 //:#_GET_DUG_#:[47P]:------------------------://
@@ -919,6 +903,12 @@
             #define T_F texelFetch                  //::[32P]://
             #define SBX (  int( ${ c_sbx } ) )      //::[32P]://
             #define SBY (  int( ${ c_sby } ) )      //::[32P]://
+                                                    //::[---]://
+            #define SAI_GTX ( int(${ c_sai_gtx }) ) //::[84P]://
+            #define SAI_GTY ( int(${ c_sai_gty }) ) //::[84P]://
+            #define SAI_DIX ( int(${ c_sai_dix }) ) //::[84P]://
+            #define SAI_DIY ( int(${ c_sai_diy }) ) //::[84P]://
+                                                    //::[---]://
             #define DUC ( uint( ${ c_duc } ) )      //::[44P]://
             #define DUT ( uint( ${ c_dut } ) )      //::[68P]://
             #define IV2 ivec2                       //::[25P]://
@@ -1008,7 +998,7 @@
                                                     //::[---]://
                 //:#_CALC_DUG_XY_#:[69P]:--------------------://
                                                     //::[---]://
-                    ixy.y =( I32(${ c_sai_gtx }));  //::[69P]   [32P]://
+                    ixy.y =( SBY + SAI_GTX    );    //::[84P]   [BUG][69P][32P]://
                     tex   =( T_F(d_p2k,ixy,0) );    //::[32P]   [25P]://
                     gtx   =(   tex.r << 24          //::[25P]://
                              | tex.g << 16          //::[25P]://
@@ -1016,7 +1006,7 @@
                              | tex.a <<  0          //::[25P]://
                            );                       //::[25P]://
                                                     //::[---]://
-                    ixy.y =( I32(${ c_sai_gty }));  //::[69P]   [34P]://
+                    ixy.y =( SBY + SAI_GTY    );    //::[84P]   [BUG][69P][34P]://
                     tex   =( T_F(d_p2k,ixy,0) );    //::[34P]://
                     gty   =(   tex.r << 24          //::[34P]://
                              | tex.g << 16          //::[34P]://
@@ -1024,7 +1014,7 @@
                              | tex.a <<  0          //::[34P]://
                            );                       //::[34P]://
                                                     //::[---]://
-                    ixy.y =( I32(${ c_sai_dix }));  //::[69P]://
+                    ixy.y =( SBY + SAI_DIX    );    //::[84P]   [BUG][69P][---]://
                     tex   =( T_F(d_p2k,ixy,0) );    //::[69P]://
                     dix   =(   tex.r << 24          //::[69P]://
                              | tex.g << 16          //::[69P]://
@@ -1032,7 +1022,7 @@
                              | tex.a <<  0          //::[69P]://
                            );                       //::[69P]://
                                                     //::[69P]://
-                    ixy.y =( I32(${ c_sai_diy }));  //::[69P]://
+                    ixy.y =( SBY + SAI_DIY    );    //::[84P]   [BUG][69P][---]://
                     tex   =( T_F(d_p2k,ixy,0) );    //::[69P]://
                     diy   =(   tex.r << 24          //::[69P]://
                              | tex.g << 16          //::[69P]://
@@ -4083,6 +4073,37 @@
         [ NEXT_VIDEO_AFTER_THIS_ONE ].                    |[83P]
                                                           |[83P]
     :------------------------:$_TOO_MUCH_CODE_NEXT_VIDEO_$:[83P]
+
+    $_COL_SID_$ :-----------------------------------------:[84P]
+                                                          |[84P]
+        The[ x_axis ]is the column storing information    |[84P]
+        for a given[ SID / SPRITE_ID / M64 ]              |[84P]
+                                                          |[84P]
+    :-----------------------------------------:$_COL_SID_$:[84P]
+    $_ROW_VAR_$ :-----------------------------------------:[84P]
+                                                          |[84P]
+        The[ y_axis ]is what row of data we are on.       |[84P]
+        The row stores a specific variable (attribute)    |[84P]
+        for the sprite we are concerned with.             |[84P]
+                                                          |[84P]
+    :-----------------------------------------:$_ROW_VAR_$:[84P]
+    $_GAS_LIGHTING_YOU_$ :--------------------------------:[84P]
+                                                          |[84P]
+        I swear we are eventually going to write this     |[84P]
+        code here... But while I was writing it...        |[84P]
+        I found a __BUG__ in how I was writing it.        |[84P]
+                                                          |[84P]
+        Upon further examination... I found this bug      |[84P]
+        is also in other code... We are going to fix      |[84P]
+        the __OTHER_CODE__ first... And if we fix         |[84P]
+        that... We might just end up seeing our           |[84P]
+        sprite back on screen.                            |[84P]
+                                                          |[84P]
+    :--------------------------------:$_GAS_LIGHTING_YOU_$:[84P]
+
+
+
+
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
