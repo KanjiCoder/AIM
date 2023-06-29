@@ -589,12 +589,17 @@
             #define U32 uint    //: $_OCD_U32_$ :// //::[16P]://
             #define UV4 uvec4   //: $_OCD_UV4_$ :// //::[37P]://
             #define UV2 uvec2   //: $_OCD_UV2_$ :// //::[46P]://
-            #define IV2  vec2   //: $_OCD_IV2_$ :// //::[82P]://
+            #define IV2 ivec2   //: $_OCD_IV2_$ :// //::[83P][82P]://
             #define FV2  vec2   //: $_OCD_FV2_$ :// //::[53P]://
             #define FV4  vec4   //: $_OCD_FV4_$ :// //::[53P]://
-
+                                                    //::[---]://
             precision highp usampler2D ; ////////// //::[82P]://
             #define SAM usampler2D //:SAMPLER!! :// //::[82P]://
+            #define T_F texelFetch                  //::[83P]://
+            #define SBX (  int( ${ c_sbx } ) )      //::[83P]://
+            #define SBY (  int( ${ c_sby } ) )      //::[83P]://
+            #define SID (  int( d_til_m64  ) )      //::[83P]://
+            //: NOT:SID (     gl_VertexID    )  :// //::[83P]://
                                                     //::[---]://
             #define x_0  ( uint( ${   x_0 } ) )     //::[46P]://
             #define x_1  ( uint( ${   x_1 } ) )     //::[46P]://
@@ -707,6 +712,7 @@
                 UV2 dug ; //: Discrete_Unit_Global      [50P]://
                                                     //::[---]://
                 IV2 ixy ; //: Integer_Sample_Point      [82P]://
+                UV4 tex ; //: Texel Taken From Texture  [83P]://
                 U32 gtx ; //: A_MARIONE.Global_Tile_X   [82P]://
                 U32 gty ; //: A_MARIONE.Global_Tile_Y   [82P]://
                                                     //::[---]://
@@ -719,9 +725,9 @@
                                                     //::[81P]://
                 //:------------------------:#_M64_HAK_#:[81P]://
                 //:#_GET_MARION_TILE_#:[82P]:----------------://
-                                                    //::[82P]://
-                    /** NEXT VIDEO **/              //::[82P]://
-                                                    //::[82P]://
+                                                    //::[---]://
+                    //: $_TOO_MUCH_CODE_NEXT_VIDEO_$    [83P]://
+                                                    //::[---]://
                 //:----------------:#_GET_MARION_TILE_#:[82P]://
                 //:#_GET_DUG_#:[47P]:------------------------://
                 #define _0 d_vp0  //:DESTIN_AKA_SCREEN::[   ]   [47P]://
@@ -4046,6 +4052,21 @@
         it's position on the tilemap.                     |[82P]
                                                           |[82P]
     :---------------------------------------: [ A_MARIONE ][82P]
+
+    $_TOO_MUCH_CODE_NEXT_VIDEO_$ :------------------------:[83P]
+                                                          |[83P]
+        Too many miscellanious variables happened in      |[83P]
+        this delta. And on top of that, we fixed a        |[83P]
+        bug in this video that we need to explain.        |[83P]
+                                                          |[83P]
+        All of this SETUP is going to take too long       |[83P]
+        to explain, leaving us ZERO TIME to explain       |[83P]
+        our TEXEL FETCH code. So that TEXEL FETCH         |[83P]
+        code for getting the[ gtx,gty ]of the             |[83P]
+        [ active_marionette ]has been saved for the       |[83P]
+        [ NEXT_VIDEO_AFTER_THIS_ONE ].                    |[83P]
+                                                          |[83P]
+    :------------------------:$_TOO_MUCH_CODE_NEXT_VIDEO_$:[83P]
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
