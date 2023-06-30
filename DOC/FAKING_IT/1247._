@@ -1,0 +1,42 @@
+
+
+    F_CAMROOM_PUT_R13_CAM :
+
+        //:#_ERROR_CHECK_INPUTS_R13_CAM_#:[1_247]:-------://     // [1_247]
+        if( d_eci >= 1 ){                                        // [1_247]
+                                                                 // [1_247]
+            if( ! ( i_r13 >= 0 && i_r13 <=(13-1) ) ){            // [1_247]
+                ERR( "[_THIS_IS_NOT_AN_R13_FOOL_]" );            // [1_247]
+            };;                                                  // [1_247]
+            if( i_cam != d_camroom_cam ){                        // [1_247]
+                ERR( "[_NOT_CAMROOM_SINGLETON_]" );              // [1_247]
+            };;                                                  // [1_247]
+        };;                                                      // [1_247]
+        //:-------:#_ERROR_CHECK_INPUTS_R13_CAM_#:[1_247]://     // [1_247]
+        //:[ATF]:========================================://
+        //:                                              ://
+        //:  Takes a high level[ camera_room_settings ]  ://
+        //:  object and saves it into the texture        ://
+        //:  memory for the[ r13 / room_index ]we have   ://
+        //:  supplied to[ this_function ].               ://
+        //:  ( this_function === PUT_R13_CAM )           ://
+        //:                                              ://
+        //:========================================:[ATF]://
+
+        let dpx =( d_camroom_r13_dpx[ r13 ] );;;;;;;;;;;;;;;
+        let dpy =( d_camroom_r13_dpy[ r13 ] );;;;;;;;;;;;;;;
+        let dpi =( dpx +( dpy * 2048 ) );;;;;;;;;;;;;;;;;;;;
+        let dpc =( dpi * 4 );;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        const camroom_dat =( d_pix2048 );
+
+        let a_pb2_gb6_x =( dpc + 0 );
+        let a_pb2_gb6_y =( dpc + 1 );
+        let a_un_used_x =( dpc + 2 );
+        let a_un_used_y =( dpc + 3 );
+
+        let v_pb2_gb6_x =( i_cam.m_pb2
+        let v_pb2_gb6_y =( 
+
+        camroom_dat[ a_pb2_gb6_x ]=( v_pb2_gb6_x );
+        camroom_dat[ a_pb2_gb6_y ]=( v_pb2_gb6_y );   

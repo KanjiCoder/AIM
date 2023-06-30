@@ -167,6 +167,7 @@
                                                     //::[---]://
         let d_m64_loc ; //: $_ACTIVE_M64_LOCATION_$     [81P]://
         let d_til_p2k ; //: $_TILEMAP_P2K_SAMPLER_$     [82P]://
+        let d_til_tik ; //: $_TILEMAP_GAME_TICKER_$     [86P]://
                                                     //::[---]://
     //:==============================:#__GLOBALS__#:[004_POI]://
     //:#__ERROR__#:[08P]:====================================://
@@ -634,6 +635,7 @@
             uniform UV4 d_vp1 ; //:$_TILEMAP_VP1_$      [37P]://
             uniform U32 d_til_m64 ; //:$_TIL_M64_$      [81P]://
             uniform SAM d_til_p2k ; //:$_TIL_P2K_$      [82P]://
+            uniform U32 d_til_tik ; //:$_TIL_TIK_$      [86P]://
                                                     //::[---]://
             //:#_FOR_RENDERING_TILE_GTX_GTY_#:[70P]:---------://
             U32 n10_u32[20]=U32[20](                 //:[70P]://
@@ -1175,6 +1177,7 @@
             d_vp1_loc=( GUL( d_pid , "d_vp1" ));;   //::[37P]:// NOTICE_ME_SENPAI: REFACTOR[ d_vp1 ===> d_til_vp1 ]
             d_m64_loc=( GUL( d_pid , "d_til_m64" ));//::[081]://
             d_til_p2k=( GUL( d_pid , "d_til_p2k" ));//::[082]://
+            d_til_tik=( GUL( d_pid , "d_til_tik" ));//::[86P]://
                                                     //::[---]://
             d_pid =( d_arr_pid[ 1 ] );;;;;;;;;;;;   //::[19P]://
             d_wgl.useProgram(d_pid  );;;;;;;;;;;;   //::[19P]://
@@ -1480,18 +1483,19 @@
                                                     //::[---]://
             let m64 =( d_marione );;;;;;;;;;;;;;;;  //::[81P]://
                                                     //::[---]://
+            d_tik++ ;//:$_MOVED_TO_TOP_OF_GSU_$://  //::[86P]   [MOV][19P]://
+                                                    //::[---]://
             d_wgl.useProgram( d_arr_pid[ 0 ]    );  //::[37P]://
             d_wgl.uniform4uiv(d_vpc_loc , d_vpc );  //::[37P]://
             d_wgl.uniform4uiv(d_vp0_loc , d_vp0 );  //::[37P]://
             d_wgl.uniform4uiv(d_vp1_loc , d_vp1 );  //::[37P]://
             d_wgl.uniform1ui( d_m64_loc ,   m64 );  //::[81P]://
+            d_wgl.uniform1ui( d_til_tik , d_tik );  //::[86P]://
                                                     //::[---]://
             d_wgl.useProgram( d_arr_pid[ 1 ]    );  //::[19P]://
             d_wgl.uniform4uiv(d_poi_vpc , d_vpc );  //::[41P]://
             d_wgl.uniform4uiv(d_poi_vp0 , d_vp0 );  //::[41P]://
             d_wgl.uniform4uiv(d_poi_vp1 , d_vp1 );  //::[41P]://
-                                                    //::[---]://
-                                          d_tik++;  //::[19P]://
             d_wgl.uniform1ui( d_tik_loc , d_tik );  //::[19P]://
                                                     //::[---]://
             d_sss =( d_tik % (64+1) );;;;;;;;;;;;;  //::[36P]://
@@ -4124,8 +4128,32 @@
     @SAI_DIX@ : Sprite_Attribute_Index.Discrete_Internal_X [84P]
     @SAI_DIY@ : Sprite_Attribute_Index.Discrete_Internal_Y [84P]
 
-
-
+    $_TILEMAP_GAME_TICKER_$ :-----------------------------:[86P]
+                                                          |[86P]
+         @d_til_tik@ : Tilemap's copy of "d_tik".         |[86P]
+                                                          |[86P]
+        [ d_til_tik ] : ON[ CPU ]is a[ UNIFORM_LOCATION ] |[86P]
+        [ d_til_tik ] : ON[ GPU ]is a[ UNIFORM_VALUE    ] |[86P]
+                                                          |[86P]
+    :-----------------------------:$_TILEMAP_GAME_TICKER_$:[86P]
+    $_MOVED_TO_TOP_OF_GSU_$ :-----------------------------:[86P]
+                                                          |[86P]
+        [ d_tik++ ]has been moved to the top of GSU.      |[86P]
+        ( @GSU@ : Game_State_Update )                     |[86P]
+                                                          |[86P]
+        We have done this move so both the TILEMAP        |[86P]
+        shader and POINTSPRITE shader have identical      |[86P]
+        versions of[ d_tik ]when our pair of draw calls   |[86P]
+        for the current frame is performed.               |[86P]
+                                                          |[86P]
+    :-----------------------------:$_MOVED_TO_TOP_OF_GSU_$:[86P]
+    $_TIL_TIK_$ :-----------------------------------------:[86P]
+                                                          |[86P]
+        The tilemap's uniform holding the current         |[86P]
+        game tick timer value. It is an unsigned          |[86P]
+        32-bit value.                                     |[86P]
+                                                          |[86P]
+    :-----------------------------------------:$_TIL_TIK_$:[86P]
 
                                                            [---]
 *** ******************* #__DOC_SEC__#:[004_POI]:**/ // [004_POI]
