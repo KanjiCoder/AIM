@@ -1,0 +1,27 @@
+        const d_lak_g16_hb2 =(F_ARR_U08( 32
+
+        ));;
+
+        const d_kil_g16_hb2 =(F_ARR_U08( 16
+
+        ,    0  //: $_YOU_CANNOT_COLLIDE_WITH_NOTHING_$ :://    
+
+
+
+        ));;
+        const d_liv_g16_hb2 =(F_ARR_U08( 16
+
+        ,    0  //: $_YOU_CANNOT_COLLIDE_WITH_NOTHING_$ :://     
+        ,    1
+        ,    0
+        ,    0
+        ,    0
+        ,    0
+        ,    0
+        ,    0
+        ,    0
+        ,    0
+        ,    0
+        ,    0
+
+        ));;
