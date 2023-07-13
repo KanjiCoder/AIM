@@ -101,6 +101,7 @@ Start building with AIM today. Happy game development!
     MISSING_VIDEOS_IN_LISTING_ADD_THEM_TO_LISTING
     .....
 
+    AIM_1268 : BFJ_528 : CAMGROW makes viewports proportional
     AIM_1267 : BFJ_527 : Creating EXTEN2D Constructor
     AIM_1266 : BFJ_526 : Stubbing in the CAMSIZE sub-system
 
