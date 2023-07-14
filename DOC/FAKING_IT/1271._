@@ -1,0 +1,190 @@
+        
+        //:#_CAMGROW_MISCVAR_#:[1_279]:======================:// // [1_270][--=--][--=--]
+                                                                 // [1_270][--=--][--=--]
+            let caldone =( 0x0 /**$_ARE__CALCS__DONE_$**/ );     // [1_270][--=--][--=--]
+                                                                 // [1_270][--=--][--=--]
+            let sqr_vp1 =( 0x0 /**$_SQR_MOD_INSCRIBE_$**/ );     // [1_270][--=--][--=--]
+            let sqr_vp0 =( 0x0 /**$_SQR_TAR_INSCRIBE_$**/ );     // [1_270][--=--][--=--]
+                                                                 // [1_270][--=--][--=--]
+            let lon_vp1 =( 0x0 /**$_LON_MOD_INSCRIBE_$**/ );     // [1_270][--=--][--=--]
+            let lon_vp0 =( 0x0 /**$_LON_TAR_INSCRIBE_$**/ );     // [1_270][--=--][--=--]
+
+            let ba2_vp1 =( 0xF /** Biggest_Axis : VP1 **/ );
+            let ba2_vp0 =( 0xF /** Biggest_Axis : VP0 **/ );
+                                                                 // [1_270][--=--][--=--]
+            let f32_longmul_vp0 =( 0 );//: >=1 Multiplier://     // [1_270][--=--][--=--]
+            let f32_longmul_vp1 =( 0 );//: >=1 Multiplier://     // [1_270][--=--][--=--]
+
+            let growwa2 =( 0-1 ); //:sdjflsajfdl 
+                                                                 // [1_270][--=--][--=--]
+            //:#_CGMV_WRONG_#:[1_270]:-------------------://     // [1_270][--=--][--=--]
+                const sqr_mod =( "[USE:sqr_vp1]" );;;;;;;;;;     // [1_270][--=--][--=--]
+                const sqr_src =( "[USE:sqr_vp1]" );;;;;;;;;;     // [1_270][--=--][--=--]
+                const sqr_dst =( "[USE:sqr_vp0]" );;;;;;;;;;     // [1_270][--=--][--=--]
+                const sqr_tar =( "[USE:sqr_vp0]" );;;;;;;;;;     // [1_270][--=--][--=--]
+                                                  ;;;;;;;;;;     // [1_270][--=--][--=--]
+                const lon_mod =( "[USE:lon_vp1]" );;;;;;;;;;     // [1_270][--=--][--=--]
+                const lon_src =( "[USE:lon_vp1]" );;;;;;;;;;     // [1_270][--=--][--=--]
+                const lon_dst =( "[USE:lon_vp0]" );;;;;;;;;;     // [1_270][--=--][--=--]
+                const lon_tar =( "[USE:lon_vp0]" );;;;;;;;;;     // [1_270][--=--][--=--]
+            //:-------------------:#_CGMV_WRONG_#:[1_270]://     // [1_270][--=--][--=--]
+                                                                 // [1_270][--=--][--=--]
+        //:======================:#_CAMGROW_MISCVAR_#:[1_279]:// // [1_270][--=--][--=--]
+
+
+        //: _TARGWID_GT_TARGHIG_ ://
+            sqr_vp0 =( targhig );                                // [1_270]
+            lon_vp0 =( targwid );                                // [1_270]
+            ba2_vp0 =( c_ba2_x );   //: $_LONGAXIS_INDEX_X_$ :// // [1_270]
+            caldone =( 0 );;;;;;;                                // [1_270]
+
+        //: _TARGHIG_GT_TARGWID_ ://
+            sqr_vp0 =( targwid );                                // [1_270]
+            lon_vp0 =( targhig );                                // [1_270]
+            ba2_vp0 =( c_ba2_y );   //: $_LONGAXIS_INDEX_Y_$ :// // [1_270]
+            caldone =( 0 );;;;;;;                                // [1_270]
+
+
+        //:#_BAKE_THE_CALDONES_#:[1_270]:====================://
+        if( caldone <= 0 ){
+
+            if(  i_v1w  >  i_v1h ){ 
+                sqr_vp1 =( i_v1h );
+                lon_vp1 =( i_v1w );
+                ba2_vp1 =(c_ba2_x);
+            }else
+            if(  i_v1h  >  i_v1w ){
+                sqr_vp1 =( i_v1w );
+                lon_vp1 =( i_v1h );
+                ba2_vp1 =(c_ba2_y);
+            }else{
+                sqr_vp1 =(( i_v1w | i_v1h )>>>0);
+                lon_vp1 =(( i_v1h | i_v1w )>>>0);
+                ba2_vp1 =(c_ba2_e);
+            };;
+
+            f32_longmul_vp0 =( lon_vp0 / sqr_vp0 );
+            f32_longmul_vp1 =( lon_vp1 / sqr_vp1 );
+
+            //:#_AXIS_COMPARISON_#:--------------------------://
+            if( ba2_vp1 === ba2_vp0   //: $_SAME_LONG_AXIS_$ ://
+            ||  ba2_vp1 === c_ba2_e   //: $_EQUA_EDGE_CASE_$ ://
+            ){
+            
+                if( f32_longmul_vp1 < f32_longmul_vp0 ){
+
+                    growwa2=( ba2_vp1 );
+                }else
+                if( f32_longmul_vp0 < f32_longmul_vp1 ){
+                    growwa2=F_WA2_INV( ba2_vp1 );
+                }else{
+                    growwa2=( c_ba2_e );
+                };;
+            }else{
+                /** **************************************** **/
+                /** Longest axis DONT_MATCH, so we just      **/
+                /** need to use the axis code of[ VP0 ]to    **/
+                /** lengthen the same axis on[ VP1 ]until :  **/
+                /**                                          **/
+                /**     1. Both have same LONGEST AXIS.      **/
+                /**     2. Both are proportional.            **/
+                /** **************************************** **/
+
+                    growwa2=( ba2_vp0 );
+            };;
+            //:--------------------------:#_AXIS_COMPARISON_#://
+        };;
+        //:====================:#_BAKE_THE_CALDONES_#:[1_270]://
+
+
+
+
+
+
+    #_CAMGROW_MISCVAR_# :-------------------------------------:  // [1_270]
+                                                              |  // [1_270]
+        Any extra variables we need to declare in the         |  // [1_270]
+        top-level scope of the[ cam_grow / grow_cam ]         |  // [1_270]
+        function are going to go into this section            |  // [1_270]
+        to prevent the proliferation of code sections.        |  // [1_270]
+                                                              |  // [1_270]
+    :-------------------------------------: #_CAMGROW_MISCVAR_#  // [1_270]
+    $_SQR_MOD_INSCRIBE_$ :------------------------------------:  // [1_270]
+    $_SQR_TAR_INSCRIBE_$ :------------------------------------:  // [1_270]
+    $_LON_MOD_INSCRIBE_$ :------------------------------------:  // [1_270]
+    $_LON_TAR_INSCRIBE_$ :------------------------------------:  // [1_270]
+                                                              |  // [1_270]
+            +-----------------------------------+             |  // [1_270]
+            |                                   |             |  // [1_270]
+            |  [ ][ ][ ]  [ ][ ][ ]  [ ][ ][ ]  |             |  // [1_270]
+            |  [ ][ ][ ]  [ ][ ][ ]  [ ][ ][ ]  |             |  // [1_270]
+            |  [ ][ ][ ]  [ ][ ][ ]  [ ][ ][ ]  |             |  // [1_270]
+            |                                   |             |  // [1_270]
+            +-----------------------------------+             |  // [1_270]
+                                                              |  // [1_270]
+            The "SQR" side of our rectangles is the side      |  // [1_270]
+            that we can use on both axis to create            |  // [1_270]
+            an INSCRIBED SQUARE within the rectangle.         |  // [1_270]
+                                                              |  // [1_270]
+            The "LON" side of our rectangle is the longer     |  // [1_270]
+            of the two sides. I have a huntch we need this    |  // [1_270]
+            information to do our proportion code.            |  // [1_270]
+                                                              |  // [1_270]
+            @SQR_MOD@ : Square side for VP1 , the viewport    |  // [1_270]
+                      : magnitude to MODIFY(MOD).             |  // [1_270]
+                                                              |  // [1_270]
+            @SQR_TAR@ : Square side for VP0 , the viewport    |  // [1_270]
+                      : magnitude to TARGET(TAR).             |  // [1_270]
+                                                              |  // [1_270]
+            @LON_MOD@ : _LONG_ side for VP1 , the viewport    |  // [1_270]
+                      : magnitude to MODIFY(MOD).             |  // [1_270]
+                                                              |  // [1_270]
+            @LON_TAR@ : _LONG_ side for VP0 , the viewport    |  // [1_270]
+                      : magnitude to TARGET(TAR).             |  // [1_270]
+                                                              |  // [1_270]
+                                                              |  // [1_270]
+                                                              |  // [1_270]
+    :------------------------------------: $_LON_TAR_INSCRIBE_$  // [1_270]
+    :------------------------------------: $_LON_MOD_INSCRIBE_$  // [1_270]
+    :------------------------------------: $_SQR_TAR_INSCRIBE_$  // [1_270]
+    :------------------------------------: $_SQR_MOD_INSCRIBE_$  // [1_270]
+    #_CGMV_WRONG_# :------------------------------------------:  // [1_270]
+                                                              |  // [1_270]
+        @CGMV@ ::::::: Cam_Grow_Misc_Vars                     |  // [1_270]
+        @CGMV_WRONG@ : Cam_Grow_Misc_Vars_WRONG               |  // [1_270]
+                                                              |  // [1_270]
+        Explicitly wrong variable names within this           |  // [1_270]
+        function. They were good contenders for the           |  // [1_270]
+        variables we choose and can be thought of as          |  // [1_270]
+        SYNONYMS for the variables we used.                   |  // [1_270]
+                                                              |  // [1_270]
+    :------------------------------------------: #_CGMV_WRONG_#  // [1_270]
+    $_LONGAXIS_INDEX_X_$ :------------------------------------:  // [1_270]
+    $_LONGAXIS_INDEX_Y_$ :------------------------------------:  // [1_270]
+                                           TAG[ BIGGER_AXIS_X ]  // [1_270]
+                                           TAG[ BIGGER_AXIS_Y ]  // [1_270]
+                                                              |  // [1_270]
+        @LONGAXIS_INDEX_X@ : Longer axis is the X axis.       |  // [1_270]
+        @LONGAXIS_INDEX_Y@ : Longer axis is the Y axis.       |  // [1_270]
+                                                              |  // [1_270]
+        @c_ba2_x@ : Enum of ZE_RO for indexing a 2-element    |  // [1_270]
+                  : array storing XY position.                |  // [1_270]
+                  : @ba2@ : BIGGER_Axis_of_two_axises         |  // [1_270]
+                                                              |  // [1_270]
+        @c_ba2_y@ : Enum of _ONE_ for indexing a 2-element    |  // [1_270]
+                  : array storing XY position.                |  // [1_270]
+                  : @ba2@ : BIGGER_Axis_of_two_axises         |  // [1_270]
+                                                              |  // [1_270]
+    :------------------------------------: $_LONGAXIS_INDEX_Y_$  // [1_270]
+    :------------------------------------: $_LONGAXIS_INDEX_X_$  // [1_270]
+    #_BAKE_THE_CALDONES_# :-----------------------------------:  // [1_270]
+                                                              |  // [1_270]
+        If the caldones are not ready, bake the caldones      |  // [1_270]
+        for longer in this branch of code until the           |  // [1_270]
+        steaming hot final calculations are ready.            |  // [1_270]
+                                                              |  // [1_270]
+        A pun, because "caldone" for "calculations done?"     |  // [1_270]
+        is the word "caldone" which is the best type of       |  // [1_270]
+        itallian food ever, fight me at pax.                  |  // [1_270]
+                                                              |  // [1_270]
+    :-----------------------------------: #_BAKE_THE_CALDONES_#  // [1_270]
