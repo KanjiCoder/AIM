@@ -87,8 +87,16 @@ Start building with AIM today. Happy game development!
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
+    AIM_1318 : BFJ_568 : Why Mega Man X4,X5,X6,X7,X8 SUCK
+    AIM_1317 : BFJ_567 : _________________________________
+    AIM_1316 : BFJ_566 : _________________________________
+    AIM_1315 : BFJ_565 : _________________________________
+    AIM_1314 : BFJ_564 : _________________________________
+    AIM_1313 : BFJ_563 : _________________________________
+    AIM_1312 : BFJ_562 : _________________________________
+    AIM_1311 : BFJ_561 : _________________________________
 
-    AIM_1310 : BFJ_310 : F_BOMSIMP_PROXACT_MINEGTX_MINEGTY ?
+    AIM_1310 : BFJ_560 : F_BOMSIMP_PROXACT_MINEGTX_MINEGTY ?
 
     AIM_1309 : FRABUCK : Fractal Flood Fill (FFF) Part A_V
     AIM_1308 : FRABUCK : Fractal Flood Fill (FFF) Part A_U
@@ -98,6 +106,9 @@ Start building with AIM today. Happy game development!
     AIM_1304 : FRABUCK : Fractal Flood Fill (FFF) Part A_Q
     AIM_1303 : FRABUCK : Fractal Flood Fill (FFF) Part A_P
     AIM_1302 : FRABUCK : Fractal Flood Fill (FFF) Part A_O
+
+    AIM_1301 : SUMMARY : Summary Of What Is To Come Video
+    AIM_1300 : NXT_LST : How To Get To The Next Playlist
 
     AIM_1299 : BFJ_559 : F_BOMSIMP_PROXACT_MINEGTX_MINEGTY
     AIM_1298 : BFJ_558 : F_BOMSIMP_PROXACT_MINEGTX_MINEGTY
