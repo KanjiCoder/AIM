@@ -1,0 +1,6 @@
+
+    USE_FOLDER[ PNG_VID ]for the .PNG save files that
+    were used to record our youtube short videos on
+    the main KanjiCoder channel.
+    
+    www.youtube.com/@KanjiCoder
