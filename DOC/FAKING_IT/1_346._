@@ -1,0 +1,46 @@
+
+
+
+            let       m64 =( texture_m64 );
+            d_keygame_m64 =( texture_m64 );
+            let a_blokhed ;//: Byte address sprite block ://    
+            let a_colhead ;//: Byte address sprite column://   
+
+            a_blokhed =(4*( c_sbx + ( c_sby * 2048 ) ));
+            a_colhead =(a_blokhed+( m64*4 ) );;;;;;;;;;;
+
+            //:#_SPRITE_ATTRIB_INDEXES_#:[1_345]:--------://
+
+                const sai_gtx =( c_pmemsec_pms_001_gtx );
+                const sai_gty =( c_pmemsec_pms_001_gty );
+
+                const sai_dix =( c_pmemsec_pms_001_dix );
+                const sai_diy =( c_pmemsec_pms_001_diy );
+
+                const sai_vel =( c_pmemsec_pms_001_vel );
+                const sai_acc =( c_pmemsec_pms_001_acc );
+                const sai_dra =( c_pmemsec_pms_001_dra );
+
+                const sai_cx0 =( c_pmemsec_pms_001_cx0 );
+                const sai_cx1 =( c_pmemsec_pms_001_cx1 );
+                const sai_cy0 =( c_pmemsec_pms_001_cy0 );
+                const sai_cy1 =( c_pmemsec_pms_001_cy1 );
+
+                const sai_hcx =( c_pmemsec_pms_001_hcx );
+                const sai_hcy =( c_pmemsec_pms_001_hcy );
+
+            //:--------:#_SPRITE_ATTRIB_INDEXES_#:[1_345]://
+            //:#_SPRITE_ATTRIB_ADDRESSES_#:[1_345]:------://
+
+                const sad_gtx =( a_colhead+(2048*sai_gtx) );
+
+
+
+
+
+
+            //:#_SPRITE_ATTRIB_ADDRESSES_#:[1_345]:------://
+
+            
+
+
