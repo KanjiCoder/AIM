@@ -89,7 +89,7 @@ Start building with AIM today. Happy game development!
     AIM_1408 : FFF:B_C
     AIM_1407 : FFF:B_B
     AIM_1406 : FFF:B_A
-    AIM_1405 : FFF:A_Z
+    AIM_1405 : FFF:A_Z : Collect 3 Digit Tool Index 
     AIM_1404 : FFF:A_Y
     AIM_1403 : FFF:A_X : TOOLCON && TOOL001 System Stubs
     AIM_1402 : FFF:A_W : Universal Tool Indexes
