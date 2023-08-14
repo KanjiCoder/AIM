@@ -85,6 +85,15 @@ Start building with AIM today. Happy game development!
 
  
 
+    AIM_1409 : FFF:B_D
+    AIM_1408 : FFF:B_C
+    AIM_1407 : FFF:B_B
+    AIM_1406 : FFF:B_A
+    AIM_1405 : FFF:A_Z
+    AIM_1404 : FFF:A_Y
+    AIM_1403 : FFF:A_X
+    AIM_1402 : FFF:A_W
+
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
     AIM_1318 : BFJ_568 : Why Mega Man X4,X5,X6,X7,X8 SUCK
