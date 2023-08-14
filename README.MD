@@ -91,8 +91,8 @@ Start building with AIM today. Happy game development!
     AIM_1406 : FFF:B_A
     AIM_1405 : FFF:A_Z
     AIM_1404 : FFF:A_Y
-    AIM_1403 : FFF:A_X
-    AIM_1402 : FFF:A_W
+    AIM_1403 : FFF:A_X : TOOLCON && TOOL001 System Stubs
+    AIM_1402 : FFF:A_W : Universal Tool Indexes
 
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
