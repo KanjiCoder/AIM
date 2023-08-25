@@ -1,0 +1,11 @@
+
+    This .exe is from :  S:\R\AAC\C1
+    And Requires      :  S:\R\A3        TO_COMPILE
+
+    REPOS : 
+        https://github.com/HeavyMetalCookies/C1
+        https://github.com/HeavyMetalCookies/A3
+    
+    Currently I can't get this code to compile 100%
+    because something about strict compilation warnings
+    with my new GCC compiler is halting the process.
