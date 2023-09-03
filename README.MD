@@ -85,6 +85,23 @@ Start building with AIM today. Happy game development!
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
 
+
+    AIM_1510 : BFJ_740: Bombs For Josh #740
+    
+    AIM_1509 : FFF:B_L: _____I_DONT_KNOW_YET_____
+    AIM_1508 : FFF:B_K: _____I_DONT_KNOW_YET_____
+    AIM_1507 : FFF:B_J: _____I_DONT_KNOW_YET_____
+    AIM_1506 : FFF:B_I: _____I_DONT_KNOW_YET_____
+    AIM_1505 : FFF:B_H: _____I_DONT_KNOW_YET_____
+    AIM_1504 : FFF:B_G: _____I_DONT_KNOW_YET_____
+    AIM_1503 : FFF:B_F: _____I_DONT_KNOW_YET_____
+    AIM_1502 : FFF:B_E: _____I_DONT_KNOW_YET_____
+
+    AIM_1501 : What's to come in the next 98 videos
+    AIM_1500 : NEXT 100 VIDEOS ON PLAYLIST #16
+    AIM_1499 : BFJ_739 : Marione ADD+SUB functions finished
+
+    ........MORE_NUMBERS_GO_HERE..........
  
     AIM_1410 : BFJ_650
 
