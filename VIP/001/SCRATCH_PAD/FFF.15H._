@@ -1,0 +1,72 @@
+    +--------------------------------------------------+
+    | FFF.15H._ : Fractal Flood Fill 15 Hundreds       |
+    | Fractal Flood Fill Notes For Picking Up Work On  |
+    | Videos : 1502,1503,1504,1505,1506,1507,1508,1509 |
+    +--------------------------------------------------+
+
+    1402 : Only added 3 variables this video :
+
+        d_uti <----------- Universal Tool Index
+        d_usetool_gam <--- Use tool in game mode ?
+        d_usetool_edi <--- Use tool in editor mode ?
+
+        ETI_ConvertedInto_UTI[ ................... ]
+        GIT_ConvertedInto_UTI[ ................... ]
+
+    1403 : Stubbed in 2 new systems :
+
+        1. TOOL001 <-- Tool #001 that can be routed to
+        2. TOOLCON <-- Tool Controller Router
+
+    1404 : 
+
+        1. c_keyalts_toolask =( 3 ) <-- WILL_ASK_FOR_TOOL
+        2. c_toolcon_toolask =( 0 ) <-- WAIT_4_TOOL_REQUEST
+        3. d_keyalts_lut_a_z[ 19/"T" ] ===>( c_keyalts_toolask )
+        4. F_TOOLCON_KBEVENT( i_kbevent )===>{ ... }
+           4.1 : Routes To Active Controller
+           4.2 : Used to request active controller change.
+                
+        5. F_KEYALTS_EVT_KEY : 
+           if( altproc == c_keyalts_toolask ){
+                d_toolcon_toolask =( 1 );  [ALT_PLUS_TEA] 
+            };;
+
+        6. did_toolcon ? Did tool controller consume 
+                         the keyboard event ?
+        7. kmd_keyhand
+
+    1405 :
+        Rage Refactoring
+
+        d_toolcon_arr_dig <-- 3 Digits Buffer
+        d_toolcon_arr_len <-- NOT_THE_CAPACITY !!!
+
+        F_TOOLCON_KBEVENT_TOOLASK(){ ... }
+
+        n3digit
+        toolnum =( take 3 digits, make tool index )
+
+    1406 :
+        Rage Refactoring
+
+        c_toolcon_max_uti     <-- Maximum UToolIndex
+        d_toolcon_usetool_gam <-- use in game   mode ?
+        d_toolcon_usetool_edi <-- use in editor mode ?
+        d_toolcon_cur_uti  <-- Current Universal Tool Index
+
+    1407 :
+        EVT_N10 : Added extra input error checking.
+        F_TOOLCON_KBEVENT
+        F_TOOLCON_KBEVENT_TOOLASK
+        TRY_TOOL_CONTROLLER : Disaster section.
+
+    1408 :
+        F_TOOLCON_JMEVENT_TOOLDEX <-- JoyMouseEvent
+        F_TOOLCON_KBEVENT_TOOLDEX <-- KeyboardEvent
+
+    1409 :
+        F_TOOLKEY_KBEVENT
+        
+        ( ALT+T ) ===THEN===> NUMPAD[ 0,0,1 ]
+                  ===THEN===> ANY_OTHER_KEY
