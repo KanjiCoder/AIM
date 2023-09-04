@@ -93,8 +93,8 @@ Start building with AIM today. Happy game development!
     AIM_1507 : FFF:B_J: _____I_DONT_KNOW_YET_____
     AIM_1506 : FFF:B_I: _____I_DONT_KNOW_YET_____
     AIM_1505 : FFF:B_H: _____I_DONT_KNOW_YET_____
-    AIM_1504 : FFF:B_G: _____I_DONT_KNOW_YET_____
-    AIM_1503 : FFF:B_F: _____I_DONT_KNOW_YET_____
+    AIM_1504 : FFF:B_G: ARR_TOCTERM constructor
+    AIM_1503 : FFF:B_F: TOCTERM && TOCFRAC Types
     AIM_1502 : FFF:B_E: TOOL001 basic key handling
 
     AIM_1501 : What's to come in the next 98 videos
