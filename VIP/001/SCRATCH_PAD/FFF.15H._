@@ -72,22 +72,11 @@
                   ===THEN===> ANY_OTHER_KEY
 
 
+    1503 : Created : TOCTERM && TOCFRAC
+    1504 : Created : ARR_TOCTERM
 
 TODO NOTES :
 
-    [1_503] : Stubbed in two new system types to help       :::  // [1_503]
-            : make sure our tool clicking behavior is       :::  // [1_503]
-            : more flexible than original editor clicking : :::  // [1_503]
-            :                                               :::  // [1_503]
-            :   1. TYPE_TOCTERM ( terminal toc / TERMTOC )  :::  // [1_503]
-            :   2. TYPE_TOCFRAC (  fractal toc / FRACTOC )  :::  // [1_503]
-            :                                               :::  // [1_503]
-            :   @toc@ : ToOl_Click ( type )                 :::  // [1_503]
-    :::::::::                                               :::  // [1_503]
-    ::::NEXT_VIDEO :                                        :::  // [1_503]
-    ::::                                                    :::  // [1_503]
-    ::::    DEFINE : ARR_TOCTERM                            :::  // [1_503]
-    ::::                                                    :::  // [1_503]
     ::::NEXT_NEXT_VIDEO :                                   :::  // [1_503]
     ::::                                                    :::  // [1_503]
     ::::    DEFINE : c._.tokwhat_gtx_gty_te7_la3_u32_wam    :::  // [1_503]
