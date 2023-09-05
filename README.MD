@@ -89,7 +89,7 @@ Start building with AIM today. Happy game development!
     AIM_1510 : BFJ_740: Bombs For Josh #740
     
     AIM_1509 : FFF:B_L: _____I_DONT_KNOW_YET_____
-    AIM_1508 : FFF:B_K: _____I_DONT_KNOW_YET_____
+    AIM_1508 : FFF:B_K: Tool System Mouse Handlers Stubbed In
     AIM_1507 : FFF:B_J: Creating Non-Mixable TOC**** Typedefs
     AIM_1506 : FFF:B_I: Initial Tool Click Processing System
     AIM_1505 : FFF:B_H: Terminal Tool Click Data Access Indexors
