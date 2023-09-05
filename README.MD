@@ -91,7 +91,7 @@ Start building with AIM today. Happy game development!
     AIM_1509 : FFF:B_L: _____I_DONT_KNOW_YET_____
     AIM_1508 : FFF:B_K: _____I_DONT_KNOW_YET_____
     AIM_1507 : FFF:B_J: _____I_DONT_KNOW_YET_____
-    AIM_1506 : FFF:B_I: _____I_DONT_KNOW_YET_____
+    AIM_1506 : FFF:B_I: Initial Tool Click Processing System
     AIM_1505 : FFF:B_H: Terminal Tool Click Data Access Indexors
     AIM_1504 : FFF:B_G: ARR_TOCTERM constructor
     AIM_1503 : FFF:B_F: TOCTERM && TOCFRAC Types
