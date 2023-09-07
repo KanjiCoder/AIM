@@ -86,6 +86,7 @@ Start building with AIM today. Happy game development!
 
 
 
+    AIM_1511 : BFJ_741: Stubbing In Simple Direction Vector
     AIM_1510 : BFJ_740: Bombs For Josh #740
     
     AIM_1509 : FFF:B_L: Is a tool currently active ?
