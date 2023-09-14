@@ -5,7 +5,7 @@ Thread From :
     https://www.youtube.com/watch?v=J4EhCpPNsjM
     &lc=UgyDjd2W4vCStNF_sjl4AaABAg.9ucEF4mBKz49ue0-_7AojX
 
-@TwistableGolf
+FROM: @TwistableGolf
     The fact that you can write a single line of code 
     at this point is equal parts impressive and horrifying.
     There is no logic to what you're doing, why on earth 
@@ -13,7 +13,7 @@ Thread From :
     why the hell are you deploying it to 
     a Heroku instance every time, what the fuck is happening
  
-@KanjiCoder :
+FROM: @KanjiCoder :
 
     You are 100% correct that what I am doing is insane. 
     But I do have a bit of method to the madness.
@@ -40,7 +40,7 @@ Thread From :
        I was thinking "openshift" if that still exists and 
        "IBM Cloud" .
 
-@TwistableGolf :
+FROM: @TwistableGolf :
     @KANJICODER  
     Gonna hit you back with some questions on your answers.
     Q1.
@@ -72,8 +72,15 @@ Thread From :
     afaik, you only start paying if hundreds of thousands 
     of people start requesting it.
 
-@KANJICODER :
+FROM: @KANJICODER :
 
+    Youtube comments suck and this thread is getting a bit
+    large, so I've copied this thread into a text file and
+    put it into the repo at :
+
+    github.com/KanjiCoder/AIM/tree/master
+    /DOC/YOUTUBE_COMMENTS/TwistableGolf
+    
 Q1.1 : I am reviewing the code. I actually catch a lot of
      : bugs reviewing it, but the main reason I review it
      : is to effectively comment 100% of the file.
@@ -165,3 +172,17 @@ FIREBASE :
      : seconds. I mean, this was when I was actively using
      : those platforms, I am sure that could have changed.
 
+    All things aside, I hope that we can at least agree that
+    the most important thing is that the code works. Other
+    things are of important priority, but I never formally
+    declare a priority past #1 because I would eventually
+    contradict myself if I counted past 1.
+
+    Also, I know a lot of professional game industry
+    programmers...
+
+    Appeal to authority ? Yes.
+
+    But... 100% of them would agree with _YOU_ .
+    One of them tags me on facebook with various
+    "code war crimes" memes.
