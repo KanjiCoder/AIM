@@ -158,7 +158,7 @@ Q2.2 : ( Continued )
 FIREBASE :
      : Firebase is a google product right? I was using
      : a free trial of google app engine for a bit.
-     : Then my credit card experied a week into the
+     : Then my credit card expired a week into the
      : trial and they cancelled my free trial.
      : I am kind of stubborn and didn't want to give 
      : them updated credit card info for a free trial.
