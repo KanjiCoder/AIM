@@ -1,0 +1,17 @@
+
+    I want to keep my file paths short , 
+    and "YOUTUBE_COMMENTS" / "YOU_TUBE_COMMENTS"
+    is kind of a long string...
+
+    But, it's obviously more easily readable than "YTC".
+
+    So how do we get  "The best of both worlds" ?
+
+    EASY :
+
+        Folder "YOUTUBE_COMMENTS" , we keep it, but it
+        only contains this file, and this file is
+        telling you you need to :
+
+    GO_TO[ AIM/DOC/YTC ]
+                  @YTC@ : You_Tube_Comments
