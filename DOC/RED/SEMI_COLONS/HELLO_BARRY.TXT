@@ -1,0 +1,27 @@
+    Hello Barry ,
+
+        I found your original post entertaining .
+        I will now give you serious answers to
+        the following questions :
+
+    Q_1. How would a function return early because of a missing semicolon ?
+    Q_2. If the JS is unrecognizable as JS then semicolons are not the problem .
+
+    A_1. I have inserted two example files to show you :
+
+         AIM/DOC/RED/SEMI_COLONS/SEMI_INJECTION.HTM
+         AIM/DOC/RED/SEMI_COLONS/FIXED.HTM
+
+    A_2. Problems and solutions are relative to your goals.
+         In the industry, we like to use the bus analogy a
+         lot. So let's go with that.
+         
+         I get hit by a bus tomorrow and die.
+         I wrote my code like an __INSANE__ person.
+         
+         My code base is now dead.
+         
+         I get hit by a bus tomorrow and die.
+         I wrote my code exactly how __UNCLE_BOB__ told me to.
+         
+         My code base is now dead.
