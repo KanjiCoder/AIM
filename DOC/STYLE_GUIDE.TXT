@@ -1,0 +1,94 @@
+
+    KanjiCoder Style Guide :
+
+    In General : 
+
+        In general , this code base is JavaScript written
+        in a C99 procedural (NON-OOP) style. With a whole
+        bunch of other non-industry-standard way of
+        doing things. Why a C99 style ? Well, if this
+        engine becomes successful, we want to write the
+        code so simply that it can be easily converted
+        to C99 code. Note that, by "simple" I don't mean
+        "easy" . I mean "simple" for in the "assembly code"
+        sense of the word "simple". If we can stay away
+        from JavaScript specific functionality and program
+        using only basic features, we can write code that
+        is essentially platform agnostic and can be easily
+        transpiled to any language we want.
+
+        Are we going to transpile the code ?
+
+        Only if we become a big success. 
+
+    Section Ordering :
+
+        1. ALL CONSTANTS - TOP_LEVEL
+        2. ALL DATA      - TOP_LEVEL
+        3. ALL FUNCTIONS - TOP_LEVEL
+
+        4. ALL CONSTANTS - FOR_ALL_SUB_SYSTEMS
+        5. ALL DATA      - FOR_ALL_SUB_SYSTEMS
+        6. ALL FUNCTIONS - FOR_ALL_SUB_SYSTEMS
+
+        There is more than six sections to the engine,
+        but the basic idea is that we want to avoid
+        "artificial dependency loops" by avoiding
+        tight coupling of data and functions.
+
+        Constants DEPEND_ON ___NOTHING___ so_they_come FIRST.
+        Data      DEPEND_ON __CONSTANTS__ so_they_come NEXT .
+        Functions DEPEND_ON ____BOTH_____ so_they_come LAST .
+
+    Hungarian Notation :
+
+        I use a style of Hungarian Notation that is neither
+        "apps hungarian" nor "systems hungarian" . In
+        this system, we try to limit the number of global
+        prefixes to just a few , and NEVER MIX PREFIXES.
+    
+        Example :
+            Win32 : LPWSTR  <-- Holy fuck this is a mess !
+            Kanji : STR <-- Pick most important prefix at
+                            your discretion, remove the others.
+
+    Identifiers In General :
+
+        I identifiers are always in[ snake_case / SNAKE_CASE ].
+        CamelCase is not allowed for identifiers in code,
+        but IS ALLOWED in the comments section.
+
+        The mixing of uppercase and lowercase letters
+        is prohibited for identifiers .
+
+    Constant Names :
+
+        1. In all_lowercase_letters
+        2. In snake_case
+        3. Start with "c_" for constant.
+        4. Must be expressible as simple C99 macro
+
+    Data Names :
+
+        1. In all_lowercase_letters
+        2. In snake_case
+        3. Start with "d_" for data.
+     
+    Lookup table names :
+
+        1. "l_" for lookup table seemed too fine-grain.
+           So lookup tables belong to the "d_" category.
+
+    Enumeration names :
+
+        1. "e_" for enumeration was too fine-grain.
+            So enumerations belong to the "c_" category.
+
+    Function Names :
+
+        1. In ALL_CAPITAL_LETTERS
+        2. In SNAKE_CASE
+        3. Start with "F_" for "Function" , exceptions for
+           heavily used functions like "ERR" and type
+           constructors, which start with "NEW_" .
+        
