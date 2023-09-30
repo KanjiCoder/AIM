@@ -1,0 +1,36 @@
+        let o_quarkoy =( 0-404 /** False Unless Found **/ ); 
+
+        let r15celx ; //: longer alias for[ r15_x ] :::::://
+        let r15cely ; //: longer alias for[ r15_y ] :::::://
+        r15celx=( F_BOOTLUT_ROGI225_R15CELX( i_rogi225 ) );;
+        r15cely=( F_BOOTLUT_ROGI225_R15CELY( i_rogi225 ) );;
+
+        let h3x =( F_M_F( r15celx / 5 ) );;;;;;;;;;;;;;;;;;;
+        let h3y =( F_M_F( r15cely / 5 ) );;;;;;;;;;;;;;;;;;;
+
+        if( h3x ){ /** H3X_NOT_NEEDED_FOR_QUARKOY **/ };;;;;
+
+        let r5x =(      ( r15celx % 5 ) );;;;;;;;;;;;;;;;;;;
+        let r5y =(      ( r15cely % 5 ) );;;;;;;;;;;;;;;;;;;
+
+        let g25 =( r5x +(     r5y * 5 ) );;;;;;;;;;;;;;;;;;;
+       
+        let vod =( d_g25_vod[ g25 ] );;;;;;;;;;;;;;;;;;;;;;;
+        let r4x =( d_g25_r4x[ g25 ] );;;;;;;;;;;;;;;;;;;;;;;
+        let r4y =( d_g25_r4y[ g25 ] );;;;;;;;;;;;;;;;;;;;;;;
+
+        //:#_NO_QUARK_ORIGIN_IN_THE_VOID_#:[1_584]:======://
+        if( vod >= 1 ){
+
+            o_quarkoy =( 0-1 );//:$_NO_QUARK_ORIGIN_Y_$::://      
+
+        }else
+        if( vod <= 0 ){
+
+            o_quarkoy =( ( h3y*512 )+( r4y*128 ) );
+        }else{
+            ERR( "[_DEAD_QUARK_BRANCH_Y_]" );
+        };;
+        //:======:#_NO_QUARK_ORIGIN_IN_THE_VOID_#:[1_584]://
+
+        return( o_quarkoy );//:$_RET_QUARKORIGIN_OR_NEG_$://
