@@ -19,7 +19,7 @@
         let r4x =( d_g25_r4x[ g25 ] );;;;;;;;;;;;;;;;;;;;;;;
         let r4y =( d_g25_r4y[ g25 ] );;;;;;;;;;;;;;;;;;;;;;;
 
-        //:#_NO_QUARK_ORIGIN_IN_THE_VOID_#:[1_584]:======://
+        //:#_NO_QUARK_ORIGIN_IN_THE_VOID_#:[1_594]:======://
         if( vod >= 1 ){
 
             o_quarkoy =( 0-1 );//:$_NO_QUARK_ORIGIN_Y_$::://      
@@ -31,6 +31,6 @@
         }else{
             ERR( "[_DEAD_QUARK_BRANCH_Y_]" );
         };;
-        //:======:#_NO_QUARK_ORIGIN_IN_THE_VOID_#:[1_584]://
+        //:======:#_NO_QUARK_ORIGIN_IN_THE_VOID_#:[1_594]://
 
         return( o_quarkoy );//:$_RET_QUARKORIGIN_OR_NEG_$://
