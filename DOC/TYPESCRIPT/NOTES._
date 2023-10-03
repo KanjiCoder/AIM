@@ -1,0 +1,26 @@
+
+https://www.youtube.com/watch?v=iTZ1-85I77c
+
+@00:24 : index.html , sandbox.js , styles.css
+@00:42 : iamshaunjp / typescript-tutorial
+@01:35 : index.html - invoice form
+@02:00 : best website on the internet
+@02:13 : styles.css - you should know css
+@02:20 : but if you dont ... he has a series for that !
+@02:35 : package - Live Server
+@03:10 : What the project looks like so far
+@03:18 : Basics of typescript
+@03:20 : sandbox.js
+@03:30 : new file for typescript - sandbox.ts
+@03:50 : you can type JS in TypeScript
+@04:10 : Query Selector For Dom Manipulation
+@04:20 : querySelectorAll( 'input' )
+@05:00 : wrote[ sandbox.ts ]linking to[ sandbox.js ]
+@05:10 : "The browser doesn't understand typescript"
+@05:50 : tsc ( type script compiler command )
+@06:10 : tsc sandbox.ts sandbox.js
+@06:30 : tsc sandbox.ts  ( assumes sandbox.js )
+@06:55 : looking at contents of[ sandbox.js ]
+@08:00 : seeing log messages in the console
+@08:15 : for-each loop ( begin writing )
+@08:42 : for-each loop ( done  writing )
