@@ -85,9 +85,21 @@ Start building with AIM today. Happy game development!
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
 
-    AIM_1602 : FFF_B_M : Stubbing In TOOLDAT system .
+
+    AIM_1610 : BFJ_830 <--- The Next Bombs For Josh Video
+    AIM_1609 : FFF:B_T
+    AIM_1608 : FFF:B_S
+    AIM_1607 : FFF:B_R
+    AIM_1606 : FFF:B_Q
+    AIM_1605 : FFF:B_P
+    AIM_1604 : FFF:B_O
+    AIM_1603 : FFF:B_N : Adding TOOLDAT's Static Data Members
+    AIM_1602 : FFF:B_M : Stubbing In TOOLDAT system .
     AIM_1601 : PLACEHOLDER : What's to come .   
     AIM_1600 : NEXT PLAYLIST IS SEVENTEEN
+
+    AIM_1599 : BFJ_829
+    AIM_#### : BFJ_### <-- More Numbers Go Here
 
     ....MORE_NUMBERS_GO_HERE....
 
