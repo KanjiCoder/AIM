@@ -91,8 +91,8 @@ Start building with AIM today. Happy game development!
     AIM_1608 : FFF:B_S
     AIM_1607 : FFF:B_R
     AIM_1606 : FFF:B_Q
-    AIM_1605 : FFF:B_P
-    AIM_1604 : FFF:B_O
+    AIM_1605 : FFF:B_P : Mouse To Discrete Render Space
+    AIM_1604 : FFF:B_O : Stubbing In Mouse To Render Space
     AIM_1603 : FFF:B_N : Adding TOOLDAT's Static Data Members
     AIM_1602 : FFF:B_M : Stubbing In TOOLDAT system .
     AIM_1601 : PLACEHOLDER : What's to come .   
