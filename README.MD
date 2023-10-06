@@ -87,8 +87,8 @@ Start building with AIM today. Happy game development!
 
 
     AIM_1610 : BFJ_830 <--- The Next Bombs For Josh Video
-    AIM_1609 : FFF:B_T
-    AIM_1608 : FFF:B_S
+    AIM_1609 : FFF:B_T : ESCAPEK [ abort / escape ] function
+    AIM_1608 : FFF:B_S : STUBBED : ESCDATA , ESCAPEK , ESCEXIT
     AIM_1607 : FFF:B_R : NUM_PAD[0,0,0] to EXIT TOOL MODE
     AIM_1606 : FFF:B_Q : Caching Mouse Click Tile Coordinates
     AIM_1605 : FFF:B_P : Caching Mouse Move  Tile Coordinates
