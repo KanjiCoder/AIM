@@ -1,0 +1,18 @@
+
+    @FDF@ : Fractal_Doodle_File
+
+    These doodles differ from[ WEEB_DOODLES ]
+    in that all[ WEEB_DOODLES ]are done only 
+    with[ 1X_SIZED_TILES ]because I have plans
+    to extract the tile data and pack the designs
+    into a more compact format in the future .
+
+    Here are some ideas :
+
+        WEEB_DOODLES : Could be used to procedurally generate
+                     : auto tile artwork designs or decals .
+
+        FRACTAL_DOODLES : Could be used to create animated
+                        : visualizations to music as one
+                        : levelpack[ draws_into ]another
+                        : levelpack. (levelpack==hotel)
