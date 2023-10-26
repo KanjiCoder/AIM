@@ -1,0 +1,64 @@
+<NotepadPlus>
+    <UserLang name="KANJICODER.JS" ext="JS _ gml C99 CTF _ .L" udlVersion="2.1">
+        <Settings>
+            <Global caseIgnored="no" allowFoldOfComments="no" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
+            <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+        </Settings>
+        <KeywordLists>
+            <Keywords name="Comments">00//: 01 02:// 03//# 04#//</Keywords>
+            <Keywords name="Numbers, prefix1"></Keywords>
+            <Keywords name="Numbers, prefix2"></Keywords>
+            <Keywords name="Numbers, extras1"></Keywords>
+            <Keywords name="Numbers, extras2"></Keywords>
+            <Keywords name="Numbers, suffix1"></Keywords>
+            <Keywords name="Numbers, suffix2"></Keywords>
+            <Keywords name="Numbers, range"></Keywords>
+            <Keywords name="Operators1">. ( ) [ ] { } &lt; &gt; ! , ~ + * &amp; | % @ / \ ;</Keywords>
+            <Keywords name="Operators2"></Keywords>
+            <Keywords name="Folders in code1, open"></Keywords>
+            <Keywords name="Folders in code1, middle"></Keywords>
+            <Keywords name="Folders in code1, close"></Keywords>
+            <Keywords name="Folders in code2, open"></Keywords>
+            <Keywords name="Folders in code2, middle"></Keywords>
+            <Keywords name="Folders in code2, close"></Keywords>
+            <Keywords name="Folders in comment, open"></Keywords>
+            <Keywords name="Folders in comment, middle"></Keywords>
+            <Keywords name="Folders in comment, close"></Keywords>
+            <Keywords name="Keywords1">why_&#x000D;&#x000A;</Keywords>
+            <Keywords name="Keywords2">why_dont_you_use_syntax_</Keywords>
+            <Keywords name="Keywords3">why_dont_</Keywords>
+            <Keywords name="Keywords4">why_dont_you_use_syntax_highlighting</Keywords>
+            <Keywords name="Keywords5">why_dont_you_</Keywords>
+            <Keywords name="Keywords6"></Keywords>
+            <Keywords name="Keywords7">why_dont_you_use_</Keywords>
+            <Keywords name="Keywords8"></Keywords>
+            <Keywords name="Delimiters">00//| 01 02|// 03//- 04 05-// 06//+ 07 08+// 09//[ 10 11]// 12` 13 14` 15&quot; 16 17&quot; 18/** 19 20**/ 21//! 22 23!//</Keywords>
+        </KeywordLists>
+        <Styles>
+            <WordsStyle name="DEFAULT" fgColor="BFBFBF" bgColor="202020" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="COMMENTS" fgColor="FFFFFF" bgColor="620000" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="8080FF" bgColor="202020" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="NUMBERS" fgColor="8EFF28" bgColor="202020" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="E34234" bgColor="404040" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS2" fgColor="00F406" bgColor="404040" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS3" fgColor="F64A8A" bgColor="404040" fontName="actionscript" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="FBFB00" bgColor="404040" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="0BDA51" bgColor="404040" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS6" fgColor="FF0000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS7" fgColor="FFFF00" bgColor="404040" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS8" fgColor="FF0000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="OPERATORS" fgColor="A6A6A6" bgColor="202020" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE1" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE2" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN COMMENT" fgColor="000000" bgColor="FFFFFF" fontName="&#xC290;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS1" fgColor="0080FF" bgColor="101010" fontName="&#xA1D0;&#xA979;&#x0227;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS2" fgColor="FF8600" bgColor="101010" fontName="User Defined Language" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS3" fgColor="0CE800" bgColor="101010" fontName="&#xB5E0;&#xA979;&#x0227;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS4" fgColor="FF8000" bgColor="101010" fontName="0" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS5" fgColor="BAFFB0" bgColor="202020" fontName="&#x3200;&#x2E00;&#x6400;&#x6C00;&#x0003;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS6" fgColor="C0C0C0" bgColor="202020" fontName="yes" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS7" fgColor="00CA05" bgColor="202020" fontName="691" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS8" fgColor="007079" bgColor="202020" fontName="4" fontStyle="0" nesting="0" />
+        </Styles>
+    </UserLang>
+</NotepadPlus>
