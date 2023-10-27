@@ -85,6 +85,13 @@ Start building with AIM today. Happy game development!
     //:@OPTIMIZE@ : $_V16_TO_ARMFAB_$://
 
 
+
+    AIM_1701 : SUMMARY : Summary of playlist 18 contents
+    AIM_1700 : NXT_LST : The next playlist is #18
+    AIM_1699 : BFJ_919 : Integer Map System Table Labels
+
+    ....MORE_NUMBERS_GO_HERE....
+
     AIM_1685 : BFJ_905 : NFT DRAGONBALL NECROMANCY GRAVE ROBBER
 
     ....MORE_NUMBERS_GO_HERE....
