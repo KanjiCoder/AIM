@@ -91,7 +91,7 @@ Start building with AIM today. Happy game development!
     AIM_1707 : FFF:B_Z : ___________________________________
     AIM_1706 : FFF:B_Y : ___________________________________
     AIM_1705 : FFF:B_X : ___________________________________
-    AIM_1704 : FFF:B_W : ___________________________________
+    AIM_1704 : FFF:B_W : Fixing[ TOOLCON_EXIT_ERR ]
     AIM_1703 : FFF:B_V : Escape Key Elwitch Stubbed In
     AIM_1702 : FFF:B_U : Tool Exiting And General Escaping
 
