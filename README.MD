@@ -87,9 +87,9 @@ Start building with AIM today. Happy game development!
 
     AIM_1710 : BFJ_920 : Bombs For Josh Video #920
     AIM_1709 : FFF:C_B : ___________________________________
-    AIM_1708 : FFF:C_A : ___________________________________
-    AIM_1707 : FFF:B_Z : ___________________________________
-    AIM_1706 : FFF:B_Y : ___________________________________
+    AIM_1708 : FFF:C_A : Fixed The Escape System Bug
+    AIM_1707 : FFF:B_Z : More Escape Key Bug Hunt Flags
+    AIM_1706 : FFF:B_Y : Bug Hunting Section Of Code Base
     AIM_1705 : FFF:B_X : ___________________________________
     AIM_1704 : FFF:B_W : Fixing[ TOOLCON_EXIT_ERR ]
     AIM_1703 : FFF:B_V : Escape Key Elwitch Stubbed In
