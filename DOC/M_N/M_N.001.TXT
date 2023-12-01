@@ -1,0 +1,212 @@
+
+    @M_N@ : Meeting_Notes , 2023_11_30 ( Nov11th , year 2023 AD , about 1 year into world war 3 )
+
+    1st project & 2nd project , why do they work together?
+    2nd project is the one with the potential.
+    1st project is just us finishing a game .
+    there are a million ninja platformers.
+    Josh has designed these games with the idea that
+    he will be the one to code these.
+
+    Combinations of simple elements .
+
+    NOte : Sea of theives has no competition after
+         : existing for 5 years . And there are some
+         : big problems with it that Josh had brought
+         : up before .
+
+    PVPVE Sandbox game . ( did I abbreviate that correctly )
+    Put us on the same playing level with rare.
+    Not sea of theives, it is a __BULLET_HELL__ .
+
+    You are in a shared server with other players .
+    You are collecting loot.
+    You don't get credit until you turn the loot in .
+    Loot is a NON_LIQUID_ASSET. Pun intended ?
+
+    Bullet hell is doable.
+    Space game ( like asteroids ) very easy to program.
+    It's not a AAA title. Articles will be written .
+
+    SCREWIN THE POOCH ( Sea of theives is screwing pooch ).
+    They don't know what to do to continue support for this
+    game . There is a window of opprotunity , a gap in the
+    market .
+
+    RARE is the abusive boyfriend and we are going
+    to white night this shit and rescue some players
+    from a horrible experience .
+
+    Josh is confident that he could do this .
+    But Josh hates code with the passion of 
+    1,000 burning red dwarf suns .
+
+    A problem with tutorialists :
+    They will always try to make these
+    "all in 1 games" a series that is like 
+    40 videos , and it's not like you need
+    everything in those 40 videos...
+
+    And the last video the tutorial kind of 
+    "peters out". They don't have a good
+    sense of what a "complete game" is .
+
+
+    The first game is dead simple.
+    Cater's to Josh's skillsets .
+    
+    Hopefully a month or two of simple tasks on
+    my end and then Josh can just work on level
+    design.
+
+    We need experience going through the entire
+    process. What is it like to publish a game
+    on steam ?
+
+    Josh does not enjoy producing content .
+    Josh waiting for AI to catch up .
+    Josh wants to replace me with AI , bastard .
+
+    This should be fun .
+
+    Always some type of suffering.
+    You must pick your flavor .
+    #CenobiteEDU
+
+    The tile system in the first game .
+
+    NEXT STEPS :
+
+        1. Wall Slide   : If you hit wall while airborn
+                        : you will latch to it and slide.
+                        : Doesn't require you to press
+                        : arrow key against the wall.
+                        
+        2. Wall Jump    : From wall sliding we can press
+                        : the jump button to jump away
+                        : from the wall and upward.
+
+        3. Reset Button : "R" to reset .
+
+        4. We need some type of obstacle that triggers
+           a losing state.
+
+        5. We need a pass through platform  .
+           Like the ladders in atomic alice .
+           ( like a cloud, or rooftop as Josh was )
+           ( going over in ASprite                )
+
+        6. Start Screen . Basic title/intro .
+           Don't worry about making it look nice .
+
+        7. DON'T code pause button - DONE .
+
+    Josh :
+        You are going to startup ... AH! Start screen .
+        Very fast paced . No health . No lives .
+        No save system. This is real fucking life .
+        Flappy bird, everyone cloned it , and none of
+        the clones went anywhere.
+        BECAUSE : 1ST_TO_MARKET_BITCHES
+        
+        Josh is excited to design some levels.
+        Described as a rail platformer.
+        Back in my day when there were arcades .
+        Starfox64 is quinton-essential branching system.
+        Alternate paths within the level will bring
+        you to a different level after you finish
+        the current one.
+
+        Branching level design. Good times.
+        What happens if I take this other branch ?
+        You can always merge branches back together
+        to avoid proliferation. Temporary detours
+        that all lead to the same end destination
+        level at the end .
+
+        Game : "Getting Over It"
+        Game : "That Climbing Game That All The Streamers Were Playing... oh fuck my column limit nooooo"
+        
+        It catches on if it catches on .
+        Once those game grumps answer our fucking
+        calls we will be millionaires .
+
+        I just want to make 5 dollars so I can go to 7-11
+        and flash my money at the clerk . Then get TWO
+        SLURPEES. DIABETES SIZE .
+
+        We are making a PVPE sandbox game ....
+        But can we prove that we can do anything
+        in general ?
+
+        All the good short names are taken.
+
+        "Ninja and the quest for the Jade statue"
+
+        All Josh has to do is change that asset and
+        come out with another pack of levels and then
+        you've got an expansion.
+
+        Something to keep Josh busy.
+
+        Can we get 12 players playing asteroids 
+        together on a server ?
+
+        Well... we could... but does HOW matter ?
+        I mean, kidnap 12 people , make them play .
+
+        Recommendation : Start out with 4 or 8 to figure
+                       : out how the netcode will scale .
+
+        How does the game work under :
+            SUB_OPTIMAL_CONDITIONS
+
+        If someone wants to cheat... well... probably
+        let them because this is our first game and
+        anti-cheat is going to make stuff hard as fuck.
+
+        Only the latest mario cart has 12 player races.
+        Mario Kart on switch had 8 ? 8 concurrent players .
+
+        We might need to make sure we can make a game that
+        brings in at least 5 dollars a month . Because 
+        a simple dev server is... not free anymore from
+        all of my research .
+
+        Authorative server that syncs .
+
+        Game maker may have some degree of web socket ability .
+
+        ////////////////////////////////////////////////////////
+
+    Existing solutions for collision detection in GameMaker?
+    Some type of spatial partitioning .
+
+    Saturday, Sunday, or Monday are the best days.
+    Usually around 2PM ( washington the state )
+        
+    ********************************************************
+    Lets do the 9TH . A bit extra , 
+    but it's either that or a few days from now .
+    ********************************************************
+
+    Easy on us , hard to win though .
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
