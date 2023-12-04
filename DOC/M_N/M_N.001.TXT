@@ -86,7 +86,7 @@
                         : the jump button to jump away
                         : from the wall and upward.
 
-        3. Reset Button : "R" to reset .
+DONE    3. Reset Button : "R" to reset .
 
         4. We need some type of obstacle that triggers
            a losing state.
@@ -96,10 +96,10 @@
            ( like a cloud, or rooftop as Josh was )
            ( going over in ASprite                )
 
-        6. Start Screen . Basic title/intro .
+DONE    6. Start Screen . Basic title/intro .
            Don't worry about making it look nice .
 
-        7. DON'T code pause button - DONE .
+DONE    7. DON'T code pause button - DONE .
 
     Josh :
         You are going to startup ... AH! Start screen .
