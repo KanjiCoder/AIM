@@ -1,7 +1,7 @@
 Mandatory 2FA ? I don't have time for your bullshit .
 # **BYE BYE GITHUB**
 
-MOVED TO BITBUCKET :
+MOVED TO GITLAB :
 
 www.gitlab.com/KANJICODER/AIM
 
